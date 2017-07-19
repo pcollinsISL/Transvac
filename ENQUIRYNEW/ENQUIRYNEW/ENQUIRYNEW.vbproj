@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9E36F7E-97FA-43E8-9C54-62F37630893B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ENQUIRYNEW.My.MyApplication</StartupObject>
+    <RootNamespace>ENQUIRYNEW</RootNamespace>
+    <AssemblyName>ENQUIRYNEW</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ENQUIRYNEW.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ENQUIRYNEW.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builddraftinv.Designer.vb">
+      <DependentUpon>Builddraftinv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Builddraftinv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.Designer.vb">
+      <DependentUpon>CustomerDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.vb">
+      <DependentUpon>Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceType.Designer.vb">
+      <DependentUpon>InvoiceType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selecttype.Designer.vb">
+      <DependentUpon>Selecttype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Selecttype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selstatus.Designer.vb">
+      <DependentUpon>selstatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selstatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enqmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enqmain.Designer.vb">
+      <DependentUpon>enqmain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enquiry.Designer.vb">
+      <DependentUpon>enquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="enquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findquote.Designer.vb">
+      <DependentUpon>findquote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="findquote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="quote.Designer.vb">
+      <DependentUpon>quote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="quote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quotelist.Designer.vb">
+      <DependentUpon>quotelist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="quotelist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shipping.Designer.vb">
+      <DependentUpon>shipping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shipping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransvacDataV2DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransvacDataV2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TransvacDataV2DataSetCustDisc.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransvacDataV2DataSetCustDisc.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Builddraftinv.resx">
+      <DependentUpon>Builddraftinv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceType.resx">
+      <DependentUpon>InvoiceType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selecttype.resx">
+      <DependentUpon>Selecttype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selstatus.resx">
+      <DependentUpon>selstatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enqmain.resx">
+      <DependentUpon>enqmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enquiry.resx">
+      <DependentUpon>enquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findquote.resx">
+      <DependentUpon>findquote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quote.resx">
+      <DependentUpon>quote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quotelist.resx">
+      <DependentUpon>quotelist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shipping.resx">
+      <DependentUpon>shipping.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="TransvacDataV2DataSet.xsc">
+      <DependentUpon>TransvacDataV2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TransvacDataV2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransvacDataV2DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TransvacDataV2DataSet.xss">
+      <DependentUpon>TransvacDataV2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TransvacDataV2DataSetCustDisc.xsc">
+      <DependentUpon>TransvacDataV2DataSetCustDisc.xsd</DependentUpon>
+    </None>
+    <None Include="TransvacDataV2DataSetCustDisc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransvacDataV2DataSetCustDisc.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TransvacDataV2DataSetCustDisc.xss">
+      <DependentUpon>TransvacDataV2DataSetCustDisc.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new transvac logo_Environmental.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMoveFirstItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMoveLastItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMovePreviousItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMoveNextItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoicedetail.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
