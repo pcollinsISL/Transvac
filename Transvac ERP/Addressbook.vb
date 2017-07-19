@@ -53,4 +53,8 @@
         Me.Hide()
         X.Show()
     End Sub
+
+    Private Sub NAMELabel_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

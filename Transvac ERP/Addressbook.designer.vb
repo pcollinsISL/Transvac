@@ -232,9 +232,10 @@ Partial Class form1
         NAMELabel.Location = New System.Drawing.Point(81, 89)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
-        NAMELabel.Size = New System.Drawing.Size(75, 13)
+        NAMELabel.Size = New System.Drawing.Size(84, 13)
         NAMELabel.TabIndex = 114
-        NAMELabel.Text = "Contact Name"
+        NAMELabel.Text = "Contact Name 4"
+        AddHandler NAMELabel.Click, AddressOf Me.NAMELabel_Click
         '
         'ACCOUNTLabel
         '
