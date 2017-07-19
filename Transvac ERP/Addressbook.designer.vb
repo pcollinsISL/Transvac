@@ -63,6 +63,8 @@ Partial Class form1
         Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
         Me.Tran2BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -93,8 +95,6 @@ Partial Class form1
         Me.selectbut = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         PROFORMALabel = New System.Windows.Forms.Label()
@@ -232,9 +232,9 @@ Partial Class form1
         NAMELabel.Location = New System.Drawing.Point(81, 89)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
-        NAMELabel.Size = New System.Drawing.Size(75, 13)
+        NAMELabel.Size = New System.Drawing.Size(81, 13)
         NAMELabel.TabIndex = 114
-        NAMELabel.Text = "Contact Name"
+        NAMELabel.Text = "Contact Name1"
         '
         'ACCOUNTLabel
         '
@@ -489,6 +489,16 @@ Partial Class form1
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
+        'Tran2BindingSource
+        '
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.ADDRESSBKDataSet
+        '
+        'ADDRESSBKDataSet
+        '
+        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
+        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
@@ -735,16 +745,6 @@ Partial Class form1
         'PrintDialog1
         '
         Me.PrintDialog1.UseEXDialog = True
-        '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.ADDRESSBKDataSet
-        '
-        'ADDRESSBKDataSet
-        '
-        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
-        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Tran2TableAdapter
         '
