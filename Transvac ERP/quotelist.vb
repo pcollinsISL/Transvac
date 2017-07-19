@@ -5,9 +5,7 @@
 
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.quotehead' table. You can move, or remove it, as needed.
-        Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet1.quotehead)
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.orderhead' table. You can move, or remove it, as needed.
-
+        REM Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet1.quotehead)
     End Sub
 
     Private Sub QuoteheadBindingSource_CurrentChanged(sender As Object, e As EventArgs)

@@ -57,4 +57,8 @@
     Private Sub NAMELabel_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub ADDMEMOTextBox_TextChanged(sender As Object, e As EventArgs) Handles ADDMEMOTextBox.TextChanged
+
+    End Sub
 End Class

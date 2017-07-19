@@ -13,7 +13,7 @@
         x.Show()
     End Sub
 
-    Private Sub Btnquotegen_click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Btnquotegen.Click
+    Private Sub Btnquotegen_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquotegen.Click
         'Show the forms as a modaless window.
         Dim x As quote = New quote
         x.Show()
