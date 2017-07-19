@@ -173,7 +173,7 @@ Partial Class findquote
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 13
-        Me.btnExit.Text = "EXIT"
+        Me.btnExit.Text = "ABORT"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'SelectBtn

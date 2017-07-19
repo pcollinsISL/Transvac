@@ -230,6 +230,12 @@
     <Compile Include="TransvacDataV2DataSetCustDisc.vb">
       <DependentUpon>TransvacDataV2DataSetCustDisc.xsd</DependentUpon>
     </Compile>
+    <Compile Include="updatemem.Designer.vb">
+      <DependentUpon>updatemem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatemem.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="accountsrh.resx">
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="shipping.resx">
       <DependentUpon>shipping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatemem.resx">
+      <DependentUpon>updatemem.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -687,7 +687,7 @@ Partial Class Builddraftinv
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 179
-        Me.Button8.Text = "QUIT"
+        Me.Button8.Text = "ABORT"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'TextBox11
