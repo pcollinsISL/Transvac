@@ -97,6 +97,7 @@ Partial Class form1
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         PROFORMALabel = New System.Windows.Forms.Label()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
@@ -114,6 +115,7 @@ Partial Class form1
         Me.Tran2BindingNavigator.SuspendLayout()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PROFORMALabel
@@ -259,7 +261,7 @@ Partial Class form1
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(13, 33)
+        Me.Label16.Location = New System.Drawing.Point(127, 47)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(163, 13)
         Me.Label16.TabIndex = 160
@@ -277,10 +279,10 @@ Partial Class form1
         'osequencelb
         '
         Me.osequencelb.FormattingEnabled = True
-        Me.osequencelb.Items.AddRange(New Object() {"Account", "Name", "LastUpdated", "Deleted"})
-        Me.osequencelb.Location = New System.Drawing.Point(730, 310)
+        Me.osequencelb.Items.AddRange(New Object() {"Account", "Name"})
+        Me.osequencelb.Location = New System.Drawing.Point(749, 316)
         Me.osequencelb.Name = "osequencelb"
-        Me.osequencelb.Size = New System.Drawing.Size(80, 56)
+        Me.osequencelb.Size = New System.Drawing.Size(61, 30)
         Me.osequencelb.TabIndex = 158
         '
         'findbut
@@ -736,9 +738,9 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(713, 449)
+        Me.selectbut.Location = New System.Drawing.Point(709, 435)
         Me.selectbut.Name = "selectbut"
-        Me.selectbut.Size = New System.Drawing.Size(101, 32)
+        Me.selectbut.Size = New System.Drawing.Size(101, 40)
         Me.selectbut.TabIndex = 180
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
@@ -757,12 +759,23 @@ Partial Class form1
         Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(21, 30)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 181
+        Me.PictureBox1.TabStop = False
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(860, 520)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.selectbut)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.ACCOUNTTextBox1)
@@ -825,6 +838,7 @@ Partial Class form1
         Me.Tran2BindingNavigator.PerformLayout()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -890,4 +904,5 @@ Partial Class form1
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintToolStripButton As ToolStripButton
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

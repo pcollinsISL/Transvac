@@ -32,10 +32,10 @@ Partial Class selstatus
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.CustdiscBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSetCustDisc, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CustdiscBindingSource
@@ -56,7 +56,7 @@ Partial Class selstatus
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Items.AddRange(New Object() {"ENQUIRY", "AWAITING DETAILS", "REJECTED", "SUPPLIER QUOTE", "QUOTED", "INVOICED", "STRAIGHT ORDER", "COMPLETED", "ARCHIVED"})
-        Me.ListBox1.Location = New System.Drawing.Point(86, 117)
+        Me.ListBox1.Location = New System.Drawing.Point(86, 131)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(135, 121)
         Me.ListBox1.TabIndex = 0
@@ -64,7 +64,7 @@ Partial Class selstatus
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(73, 14)
+        Me.Label1.Location = New System.Drawing.Point(114, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 13)
         Me.Label1.TabIndex = 1
@@ -73,7 +73,7 @@ Partial Class selstatus
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 82)
+        Me.Label2.Location = New System.Drawing.Point(25, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 2
@@ -81,14 +81,14 @@ Partial Class selstatus
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(86, 82)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(86, 96)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(135, 20)
         Me.DateTimePicker1.TabIndex = 3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(86, 263)
+        Me.Button1.Location = New System.Drawing.Point(86, 277)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 23)
         Me.Button1.TabIndex = 4
@@ -97,30 +97,30 @@ Partial Class selstatus
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(159, 263)
+        Me.Button2.Location = New System.Drawing.Point(159, 277)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(62, 23)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "SELECT"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'PictureBox2
         '
-        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(72, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox2.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
         '
         'selstatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(265, 315)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(304, 354)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -131,7 +131,7 @@ Partial Class selstatus
         Me.Text = "Select Status"
         CType(Me.CustdiscBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSetCustDisc, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,5 +145,5 @@ Partial Class selstatus
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

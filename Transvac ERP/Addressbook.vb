@@ -61,4 +61,8 @@
     Private Sub ADDMEMOTextBox_TextChanged(sender As Object, e As EventArgs) Handles ADDMEMOTextBox.TextChanged
 
     End Sub
+
+    Private Sub osequencelb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles osequencelb.SelectedIndexChanged
+
+    End Sub
 End Class

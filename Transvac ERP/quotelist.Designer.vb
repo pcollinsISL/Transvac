@@ -23,14 +23,13 @@ Partial Class quotelist
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.abort_but = New System.Windows.Forms.Button()
         Me.editqu_but = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -51,16 +50,17 @@ Partial Class quotelist
         Me.QdiscDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.QinitsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'abort_but
         '
-        Me.abort_but.Location = New System.Drawing.Point(29, 358)
+        Me.abort_but.Location = New System.Drawing.Point(29, 387)
         Me.abort_but.Name = "abort_but"
         Me.abort_but.Size = New System.Drawing.Size(95, 38)
         Me.abort_but.TabIndex = 0
@@ -69,27 +69,17 @@ Partial Class quotelist
         '
         'editqu_but
         '
-        Me.editqu_but.Location = New System.Drawing.Point(493, 358)
+        Me.editqu_but.Location = New System.Drawing.Point(493, 387)
         Me.editqu_but.Name = "editqu_but"
         Me.editqu_but.Size = New System.Drawing.Size(94, 38)
         Me.editqu_but.TabIndex = 1
         Me.editqu_but.Text = "EDIT QUOTE"
         Me.editqu_but.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(38, 16)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(72, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(110, 26)
+        Me.Label5.Location = New System.Drawing.Point(135, 34)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(55, 13)
         Me.Label5.TabIndex = 10
@@ -116,7 +106,7 @@ Partial Class quotelist
         '
         'newqu_but
         '
-        Me.newqu_but.Location = New System.Drawing.Point(617, 358)
+        Me.newqu_but.Location = New System.Drawing.Point(617, 387)
         Me.newqu_but.Name = "newqu_but"
         Me.newqu_but.Size = New System.Drawing.Size(94, 38)
         Me.newqu_but.TabIndex = 2
@@ -125,7 +115,7 @@ Partial Class quotelist
         '
         'delqut_but
         '
-        Me.delqut_but.Location = New System.Drawing.Point(150, 358)
+        Me.delqut_but.Location = New System.Drawing.Point(150, 387)
         Me.delqut_but.Name = "delqut_but"
         Me.delqut_but.Size = New System.Drawing.Size(118, 38)
         Me.delqut_but.TabIndex = 3
@@ -142,7 +132,7 @@ Partial Class quotelist
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotenoDataGridViewTextBoxColumn, Me.QuotesufDataGridViewTextBoxColumn, Me.QdateDataGridViewTextBoxColumn, Me.QheaderDataGridViewTextBoxColumn, Me.QwhoDataGridViewTextBoxColumn, Me.Qmemo1DataGridViewTextBoxColumn, Me.Qmemo2DataGridViewTextBoxColumn, Me.Qmemo3DataGridViewTextBoxColumn, Me.Qmemo4DataGridViewTextBoxColumn, Me.QdiscDataGridViewCheckBoxColumn, Me.QinitsDataGridViewTextBoxColumn, Me.TimestampcolumnDataGridViewImageColumn})
         Me.DataGridView1.DataSource = Me.QuoteheadBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 77)
+        Me.DataGridView1.Location = New System.Drawing.Point(29, 94)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(682, 267)
@@ -152,9 +142,9 @@ Partial Class quotelist
         '
         Me.QuotenoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.QuotenoDataGridViewTextBoxColumn.DataPropertyName = "quote_no"
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QuotenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuotenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.QuotenoDataGridViewTextBoxColumn.HeaderText = "QUOTE NO"
         Me.QuotenoDataGridViewTextBoxColumn.Name = "QuotenoDataGridViewTextBoxColumn"
         Me.QuotenoDataGridViewTextBoxColumn.ReadOnly = True
@@ -163,9 +153,9 @@ Partial Class quotelist
         'QuotesufDataGridViewTextBoxColumn
         '
         Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QuotesufDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuotesufDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "SUFFIX"
         Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
         Me.QuotesufDataGridViewTextBoxColumn.ReadOnly = True
@@ -174,9 +164,9 @@ Partial Class quotelist
         'QdateDataGridViewTextBoxColumn
         '
         Me.QdateDataGridViewTextBoxColumn.DataPropertyName = "qdate"
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QdateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QdateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
         Me.QdateDataGridViewTextBoxColumn.HeaderText = "DATE"
         Me.QdateDataGridViewTextBoxColumn.Name = "QdateDataGridViewTextBoxColumn"
         Me.QdateDataGridViewTextBoxColumn.ReadOnly = True
@@ -185,9 +175,9 @@ Partial Class quotelist
         'QheaderDataGridViewTextBoxColumn
         '
         Me.QheaderDataGridViewTextBoxColumn.DataPropertyName = "qheader"
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QheaderDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QheaderDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
         Me.QheaderDataGridViewTextBoxColumn.HeaderText = "QUOTE HEADER"
         Me.QheaderDataGridViewTextBoxColumn.Name = "QheaderDataGridViewTextBoxColumn"
         Me.QheaderDataGridViewTextBoxColumn.ReadOnly = True
@@ -196,9 +186,9 @@ Partial Class quotelist
         'QwhoDataGridViewTextBoxColumn
         '
         Me.QwhoDataGridViewTextBoxColumn.DataPropertyName = "qwho"
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QwhoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QwhoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
         Me.QwhoDataGridViewTextBoxColumn.HeaderText = "WHO"
         Me.QwhoDataGridViewTextBoxColumn.Name = "QwhoDataGridViewTextBoxColumn"
         Me.QwhoDataGridViewTextBoxColumn.ReadOnly = True
@@ -266,25 +256,35 @@ Partial Class quotelist
         Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
         Me.TimestampcolumnDataGridViewImageColumn.Visible = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox2.Location = New System.Drawing.Point(29, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 12
+        Me.PictureBox2.TabStop = False
+        '
         'quotelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(746, 416)
+        Me.ClientSize = New System.Drawing.Size(746, 456)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.delqut_but)
         Me.Controls.Add(Me.newqu_but)
         Me.Controls.Add(Me.editqu_but)
         Me.Controls.Add(Me.abort_but)
         Me.Name = "quotelist"
         Me.Text = "Quotelist"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -292,7 +292,6 @@ Partial Class quotelist
 
     Friend WithEvents abort_but As Button
     Friend WithEvents editqu_but As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TransvacDataV2DataSet1BindingSource As BindingSource
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
@@ -313,4 +312,5 @@ Partial Class quotelist
     Friend WithEvents QdiscDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents QinitsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
