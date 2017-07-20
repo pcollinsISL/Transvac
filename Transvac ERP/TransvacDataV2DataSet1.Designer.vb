@@ -53304,6 +53304,10 @@ Namespace TransvacDataV2DataSet1TableAdapters
                     ByVal Original_UniqueID As Long) As Integer
             Return Me.Update(name, account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat, vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd, peg_pact, peg_lsale, xcard, promo, ADDMEMO, Original_name, Original_account, Original_ad1, Original_ad2, Original_ad3, Original_ad4, Original_ad5, Original_phone, Original_telex, Original_fax, Original_email, Original_eurovat, Original_vatpayable, Original_ifmemo, Original_proforma, Original_udate, Original_termdays, Original_entrytype, Original_nwho, Original_inuse, Original_new_upd, Original_peg_pact, Original_peg_lsale, Original_xcard, Original_promo, Original_UniqueID, Original_UniqueID)
         End Function
+
+        Friend Sub FillByName(tran2 As TransvacDataV2DataSet1.tran2DataTable, text As Object)
+            Throw New NotImplementedException()
+        End Sub
     End Class
     
     '''<summary>

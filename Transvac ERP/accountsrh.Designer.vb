@@ -24,7 +24,7 @@ Partial Class accountsrch
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.acctabt_but = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,14 +46,14 @@ Partial Class accountsrch
         Me.TextBox1.Size = New System.Drawing.Size(220, 20)
         Me.TextBox1.TabIndex = 1
         '
-        'Button1
+        'acctabt_but
         '
-        Me.Button1.Location = New System.Drawing.Point(47, 170)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "ABORT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.acctabt_but.Location = New System.Drawing.Point(47, 170)
+        Me.acctabt_but.Name = "acctabt_but"
+        Me.acctabt_but.Size = New System.Drawing.Size(75, 23)
+        Me.acctabt_but.TabIndex = 2
+        Me.acctabt_but.Text = "ABORT"
+        Me.acctabt_but.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -81,7 +81,7 @@ Partial Class accountsrch
         Me.ClientSize = New System.Drawing.Size(551, 228)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.acctabt_but)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "accountsrch"
@@ -94,7 +94,7 @@ Partial Class accountsrch
 
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents acctabt_but As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox1 As PictureBox
 End Class
