@@ -82,4 +82,10 @@
         Dim x As namesrch = New namesrch
         x.Show()
     End Sub
+
+    Private Sub membut_Click(sender As Object, e As EventArgs) Handles membut.Click
+        Dim x As updatemem = updatemem
+        updatemem.MemoBox.Text = ADDMEMOTextBox.Text
+        x.Show()
+    End Sub
 End Class
