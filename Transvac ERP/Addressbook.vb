@@ -70,4 +70,10 @@
     Private Sub osequencelb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles osequencelb.SelectedIndexChanged
 
     End Sub
+
+    Private Sub membut_Click(sender As Object, e As EventArgs) Handles membut.Click
+        Dim x As updatemem = updatemem
+        REM updatemem.Memobox.Text = ADDMEMOTextBox.Text
+        x.Show()
+    End Sub
 End Class

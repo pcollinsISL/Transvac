@@ -43,7 +43,6 @@ Partial Class form1
         Me.osequencelb = New System.Windows.Forms.ListBox()
         Me.findbut = New System.Windows.Forms.Button()
         Me.membut = New System.Windows.Forms.Button()
-        Me.reindexbut = New System.Windows.Forms.Button()
         Me.savebut = New System.Windows.Forms.Button()
         Me.editbut = New System.Windows.Forms.Button()
         Me.abortbut = New System.Windows.Forms.Button()
@@ -313,15 +312,6 @@ Partial Class form1
         Me.membut.TabIndex = 156
         Me.membut.Text = "Memo Update"
         Me.membut.UseVisualStyleBackColor = True
-        '
-        'reindexbut
-        '
-        Me.reindexbut.Location = New System.Drawing.Point(541, 314)
-        Me.reindexbut.Name = "reindexbut"
-        Me.reindexbut.Size = New System.Drawing.Size(72, 23)
-        Me.reindexbut.TabIndex = 155
-        Me.reindexbut.Text = "Re-Index"
-        Me.reindexbut.UseVisualStyleBackColor = True
         '
         'savebut
         '
@@ -853,7 +843,6 @@ Partial Class form1
         Me.Controls.Add(Me.osequencelb)
         Me.Controls.Add(Me.findbut)
         Me.Controls.Add(Me.membut)
-        Me.Controls.Add(Me.reindexbut)
         Me.Controls.Add(Me.savebut)
         Me.Controls.Add(Me.editbut)
         Me.Controls.Add(Me.abortbut)
@@ -905,7 +894,6 @@ Partial Class form1
     Friend WithEvents osequencelb As ListBox
     Friend WithEvents findbut As Button
     Friend WithEvents membut As Button
-    Friend WithEvents reindexbut As Button
     Friend WithEvents savebut As Button
     Friend WithEvents editbut As Button
     Friend WithEvents abortbut As Button
