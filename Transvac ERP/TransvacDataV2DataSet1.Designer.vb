@@ -52586,13 +52586,21 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT name, account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat,"& _ 
                 " vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd,"& _ 
                 " peg_pact, peg_lsale, xcard, promo, UniqueID, ADDMEMO FROM dbo.tran2"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT ADDMEMO, UniqueID, account, ad1, ad2, ad3, ad4, ad5, email, entrytype, eur"& _ 
+                "ovat, fax, ifmemo, inuse, name, new_upd, nwho, peg_lsale, peg_pact, phone, profo"& _ 
+                "rma, promo, telex, termdays, udate, vatpayable, xcard FROM tran2 WHERE (name LIK"& _ 
+                "E @Param1 + '%')"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -52614,6 +52622,40 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As TransvacDataV2DataSet1.tran2DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As TransvacDataV2DataSet1.tran2DataTable = New TransvacDataV2DataSet1.tran2DataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.tran2DataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal Param1 As String) As TransvacDataV2DataSet1.tran2DataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             Dim dataTable As TransvacDataV2DataSet1.tran2DataTable = New TransvacDataV2DataSet1.tran2DataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -53304,10 +53346,6 @@ Namespace TransvacDataV2DataSet1TableAdapters
                     ByVal Original_UniqueID As Long) As Integer
             Return Me.Update(name, account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat, vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd, peg_pact, peg_lsale, xcard, promo, ADDMEMO, Original_name, Original_account, Original_ad1, Original_ad2, Original_ad3, Original_ad4, Original_ad5, Original_phone, Original_telex, Original_fax, Original_email, Original_eurovat, Original_vatpayable, Original_ifmemo, Original_proforma, Original_udate, Original_termdays, Original_entrytype, Original_nwho, Original_inuse, Original_new_upd, Original_peg_pact, Original_peg_lsale, Original_xcard, Original_promo, Original_UniqueID, Original_UniqueID)
         End Function
-
-        Friend Sub FillByName(tran2 As TransvacDataV2DataSet1.tran2DataTable, text As Object)
-            Throw New NotImplementedException()
-        End Sub
     End Class
     
     '''<summary>
