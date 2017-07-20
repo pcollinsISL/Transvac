@@ -267,7 +267,7 @@ Partial Class shipping
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(141, 174)
+        Me.TextBox7.Location = New System.Drawing.Point(138, 178)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(40, 20)
         Me.TextBox7.TabIndex = 24
@@ -329,7 +329,7 @@ Partial Class shipping
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(140, 314)
+        Me.TextBox12.Location = New System.Drawing.Point(138, 314)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(40, 20)
         Me.TextBox12.TabIndex = 32

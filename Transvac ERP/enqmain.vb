@@ -34,4 +34,8 @@
         Dim x As selstatus = New selstatus
         x.Show()
     End Sub
+
+    Private Sub enqmain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -104,6 +104,8 @@ Partial Class form1
         Me.ActmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fndact_but = New System.Windows.Forms.Button()
+        Me.fndname_but = New System.Windows.Forms.Button()
         PROFORMALabel = New System.Windows.Forms.Label()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
@@ -290,14 +292,14 @@ Partial Class form1
         Me.osequencelb.FormattingEnabled = True
         Me.osequencelb.ItemHeight = 16
         Me.osequencelb.Items.AddRange(New Object() {"Account", "Name"})
-        Me.osequencelb.Location = New System.Drawing.Point(748, 341)
+        Me.osequencelb.Location = New System.Drawing.Point(470, 470)
         Me.osequencelb.Name = "osequencelb"
         Me.osequencelb.Size = New System.Drawing.Size(74, 36)
         Me.osequencelb.TabIndex = 158
         '
         'findbut
         '
-        Me.findbut.Location = New System.Drawing.Point(748, 382)
+        Me.findbut.Location = New System.Drawing.Point(550, 483)
         Me.findbut.Name = "findbut"
         Me.findbut.Size = New System.Drawing.Size(74, 23)
         Me.findbut.TabIndex = 157
@@ -812,12 +814,32 @@ Partial Class form1
         Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
         Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'fndact_but
+        '
+        Me.fndact_but.Location = New System.Drawing.Point(721, 370)
+        Me.fndact_but.Name = "fndact_but"
+        Me.fndact_but.Size = New System.Drawing.Size(103, 23)
+        Me.fndact_but.TabIndex = 182
+        Me.fndact_but.Text = "FIND ACCOUNT"
+        Me.fndact_but.UseVisualStyleBackColor = True
+        '
+        'fndname_but
+        '
+        Me.fndname_but.Location = New System.Drawing.Point(721, 399)
+        Me.fndname_but.Name = "fndname_but"
+        Me.fndname_but.Size = New System.Drawing.Size(103, 23)
+        Me.fndname_but.TabIndex = 183
+        Me.fndname_but.Text = "FIND NAME"
+        Me.fndname_but.UseVisualStyleBackColor = True
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(870, 542)
+        Me.Controls.Add(Me.fndname_but)
+        Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.selectbut)
         Me.Controls.Add(Me.Label15)
@@ -955,4 +977,6 @@ Partial Class form1
     Friend WithEvents ActmemoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents fndact_but As Button
+    Friend WithEvents fndname_but As Button
 End Class

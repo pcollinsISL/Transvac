@@ -71,9 +71,15 @@
 
     End Sub
 
-    Private Sub membut_Click(sender As Object, e As EventArgs) Handles membut.Click
-        Dim x As updatemem = updatemem
-        REM updatemem.Memobox.Text = ADDMEMOTextBox.Text
+    Private Sub fndact_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndact_but.Click
+        'Show the forms as a modaless window.
+        Dim x As accountsrch = New accountsrch
+        x.Show()
+    End Sub
+
+    Private Sub fndname_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndname_but.Click
+        'Show the forms as a modaless window.
+        Dim x As namesrch = New namesrch
         x.Show()
     End Sub
 End Class
