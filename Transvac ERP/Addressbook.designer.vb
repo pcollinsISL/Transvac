@@ -60,7 +60,6 @@ Partial Class form1
         Me.INUSETextBox = New System.Windows.Forms.TextBox()
         Me.NWHOTextBox = New System.Windows.Forms.TextBox()
         Me.ENTRYTYPETextBox = New System.Windows.Forms.TextBox()
-        Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
         Me.Tran2BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -95,9 +94,17 @@ Partial Class form1
         Me.selectbut = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
+        Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
+        Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ActmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         PROFORMALabel = New System.Windows.Forms.Label()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
@@ -116,6 +123,8 @@ Partial Class form1
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PROFORMALabel
@@ -457,15 +466,6 @@ Partial Class form1
         Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(141, 20)
         Me.ENTRYTYPETextBox.TabIndex = 136
         '
-        'ADDMEMOTextBox
-        '
-        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(541, 135)
-        Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.ADDMEMOTextBox.Multiline = True
-        Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(281, 145)
-        Me.ADDMEMOTextBox.TabIndex = 132
-        '
         'Tran2BindingNavigator
         '
         Me.Tran2BindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -751,16 +751,6 @@ Partial Class form1
         '
         Me.PrintDialog1.UseEXDialog = True
         '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
@@ -770,6 +760,67 @@ Partial Class form1
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 181
         Me.PictureBox1.TabStop = False
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AddnotesBindingSource
+        '
+        Me.AddnotesBindingSource.DataMember = "addnotes"
+        Me.AddnotesBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'AddnotesTableAdapter
+        '
+        Me.AddnotesTableAdapter.ClearBeforeFill = True
+        '
+        'ADDMEMOTextBox
+        '
+        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource, "actmemo", True))
+        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(541, 135)
+        Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.ADDMEMOTextBox.Multiline = True
+        Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(281, 145)
+        Me.ADDMEMOTextBox.TabIndex = 132
+        '
+        'AccountDataGridViewTextBoxColumn
+        '
+        Me.AccountDataGridViewTextBoxColumn.DataPropertyName = "account"
+        Me.AccountDataGridViewTextBoxColumn.HeaderText = "account"
+        Me.AccountDataGridViewTextBoxColumn.Name = "AccountDataGridViewTextBoxColumn"
+        '
+        'ActmemoDataGridViewTextBoxColumn
+        '
+        Me.ActmemoDataGridViewTextBoxColumn.DataPropertyName = "actmemo"
+        Me.ActmemoDataGridViewTextBoxColumn.HeaderText = "actmemo"
+        Me.ActmemoDataGridViewTextBoxColumn.Name = "ActmemoDataGridViewTextBoxColumn"
+        '
+        'TimestampcolumnDataGridViewImageColumn
+        '
+        Me.TimestampcolumnDataGridViewImageColumn.DataPropertyName = "timestamp_column"
+        Me.TimestampcolumnDataGridViewImageColumn.HeaderText = "timestamp_column"
+        Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
+        Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
+        '
+        'UniqueIDDataGridViewTextBoxColumn
+        '
+        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
+        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         '
         'form1
         '
@@ -841,6 +892,8 @@ Partial Class form1
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -869,7 +922,6 @@ Partial Class form1
     Friend WithEvents INUSETextBox As TextBox
     Friend WithEvents NWHOTextBox As TextBox
     Friend WithEvents ENTRYTYPETextBox As TextBox
-    Friend WithEvents ADDMEMOTextBox As TextBox
     Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
     Friend WithEvents Tran2BindingSource As BindingSource
     Friend WithEvents Tran2TableAdapter As ADDRESSBKDataSetTableAdapters.tran2TableAdapter
@@ -907,4 +959,12 @@ Partial Class form1
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintToolStripButton As ToolStripButton
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
+    Friend WithEvents AddnotesBindingSource As BindingSource
+    Friend WithEvents AddnotesTableAdapter As TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter
+    Friend WithEvents ADDMEMOTextBox As TextBox
+    Friend WithEvents AccountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ActmemoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
+    Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

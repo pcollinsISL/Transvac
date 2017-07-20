@@ -71,5 +71,9 @@
     Private Sub EnquiryBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles EnquiryBindingSource.CurrentChanged
 
     End Sub
+
+    Private Sub QuoteNOBox_TextChanged(sender As Object, e As EventArgs) Handles QuoteNOBox.TextChanged
+
+    End Sub
 End Class
 

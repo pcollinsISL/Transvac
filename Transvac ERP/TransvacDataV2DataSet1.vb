@@ -19,3 +19,8 @@ Namespace TransvacDataV2DataSet1TableAdapters
     Partial Public Class enquiryTableAdapter
     End Class
 End Namespace
+
+Namespace TransvacDataV2DataSet1TableAdapters
+    Partial Public Class enquiryTableAdapter
+    End Class
+End Namespace

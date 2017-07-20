@@ -7,9 +7,10 @@
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.addnotes' table. You can move, or remove it, as needed.
         'TODO: This line of code loads data into the 'ADDRESSBKDataSet.tran2' table. You can move, or remove it, as needed.
         Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
-
+        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
@@ -18,18 +19,22 @@
 
     Private Sub but6_Click(sender As Object, e As EventArgs) Handles but6.Click
         Me.Tran2BindingSource.MoveNext()
+        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but4_Click(sender As Object, e As EventArgs) Handles but4.Click
         Me.Tran2BindingSource.MoveFirst()
+        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but5_Click(sender As Object, e As EventArgs) Handles but5.Click
         Me.Tran2BindingSource.MovePrevious()
+        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but7_Click(sender As Object, e As EventArgs) Handles but7.Click
         Me.Tran2BindingSource.MoveLast()
+        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub delbut_Click(sender As Object, e As EventArgs) Handles delbut.Click
@@ -59,7 +64,7 @@
     End Sub
 
     Private Sub ADDMEMOTextBox_TextChanged(sender As Object, e As EventArgs) Handles ADDMEMOTextBox.TextChanged
-
+        REM Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub osequencelb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles osequencelb.SelectedIndexChanged
