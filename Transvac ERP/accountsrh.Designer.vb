@@ -24,9 +24,9 @@ Partial Class accountsrch
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.acctextBox = New System.Windows.Forms.TextBox()
         Me.acctabt_but = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button2_but = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
@@ -34,37 +34,43 @@ Partial Class accountsrch
         Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.Tran2DataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ADDMEMODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ad1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ad2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ad3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ad4DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ad5DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FaxDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EurovatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VatpayableDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.IfmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProformaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TermdaysDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EntrytypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NwhoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NewupdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PegpactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PeglsaleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.XcardDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PromoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
+        Me.ADDRESSBKDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tran2TableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ADDRESSBKDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -76,12 +82,12 @@ Partial Class accountsrch
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Please Enter Account Number"
         '
-        'TextBox1
+        'acctextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(203, 101)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.acctextBox.Location = New System.Drawing.Point(203, 101)
+        Me.acctextBox.Name = "acctextBox"
+        Me.acctextBox.Size = New System.Drawing.Size(220, 20)
+        Me.acctextBox.TabIndex = 1
         '
         'acctabt_but
         '
@@ -92,14 +98,14 @@ Partial Class accountsrch
         Me.acctabt_but.Text = "ABORT"
         Me.acctabt_but.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button2_but
         '
-        Me.Button2.Location = New System.Drawing.Point(444, 99)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "SEARCH"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2_but.Location = New System.Drawing.Point(444, 99)
+        Me.Button2_but.Name = "Button2_but"
+        Me.Button2_but.Size = New System.Drawing.Size(75, 23)
+        Me.Button2_but.TabIndex = 3
+        Me.Button2_but.Text = "SEARCH"
+        Me.Button2_but.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -186,7 +192,7 @@ Partial Class accountsrch
         Me.Tran2DataGridView.AllowUserToDeleteRows = False
         Me.Tran2DataGridView.AutoGenerateColumns = False
         Me.Tran2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Tran2DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24})
+        Me.Tran2DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ADDMEMODataGridViewTextBoxColumn, Me.NameDataGridViewTextBoxColumn, Me.AccountDataGridViewTextBoxColumn, Me.Ad1DataGridViewTextBoxColumn, Me.Ad2DataGridViewTextBoxColumn, Me.Ad3DataGridViewTextBoxColumn, Me.Ad4DataGridViewTextBoxColumn, Me.Ad5DataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.TelexDataGridViewTextBoxColumn, Me.FaxDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.EurovatDataGridViewTextBoxColumn, Me.VatpayableDataGridViewCheckBoxColumn, Me.IfmemoDataGridViewTextBoxColumn, Me.ProformaDataGridViewTextBoxColumn, Me.UdateDataGridViewTextBoxColumn, Me.TermdaysDataGridViewTextBoxColumn, Me.EntrytypeDataGridViewTextBoxColumn, Me.NwhoDataGridViewTextBoxColumn, Me.InuseDataGridViewTextBoxColumn, Me.NewupdDataGridViewTextBoxColumn, Me.PegpactDataGridViewTextBoxColumn, Me.PeglsaleDataGridViewTextBoxColumn, Me.XcardDataGridViewCheckBoxColumn, Me.PromoDataGridViewCheckBoxColumn})
         Me.Tran2DataGridView.DataSource = Me.Tran2BindingSource
         Me.Tran2DataGridView.Location = New System.Drawing.Point(47, 141)
         Me.Tran2DataGridView.Name = "Tran2DataGridView"
@@ -194,217 +200,206 @@ Partial Class accountsrch
         Me.Tran2DataGridView.Size = New System.Drawing.Size(704, 252)
         Me.Tran2DataGridView.TabIndex = 11
         '
-        'DataGridViewTextBoxColumn1
+        'ADDMEMODataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ADDMEMODataGridViewTextBoxColumn.DataPropertyName = "ADDMEMO"
+        Me.ADDMEMODataGridViewTextBoxColumn.HeaderText = "ADDMEMO"
+        Me.ADDMEMODataGridViewTextBoxColumn.Name = "ADDMEMODataGridViewTextBoxColumn"
+        Me.ADDMEMODataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn2
+        'NameDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "account"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "account"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "name"
+        Me.NameDataGridViewTextBoxColumn.HeaderText = "name"
+        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
+        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn3
+        'AccountDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ad1"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "ad1"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Visible = False
+        Me.AccountDataGridViewTextBoxColumn.DataPropertyName = "account"
+        Me.AccountDataGridViewTextBoxColumn.HeaderText = "account"
+        Me.AccountDataGridViewTextBoxColumn.Name = "AccountDataGridViewTextBoxColumn"
+        Me.AccountDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn4
+        'Ad1DataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "ad2"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "ad2"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Visible = False
+        Me.Ad1DataGridViewTextBoxColumn.DataPropertyName = "ad1"
+        Me.Ad1DataGridViewTextBoxColumn.HeaderText = "ad1"
+        Me.Ad1DataGridViewTextBoxColumn.Name = "Ad1DataGridViewTextBoxColumn"
+        Me.Ad1DataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn5
+        'Ad2DataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "ad3"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "ad3"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Visible = False
+        Me.Ad2DataGridViewTextBoxColumn.DataPropertyName = "ad2"
+        Me.Ad2DataGridViewTextBoxColumn.HeaderText = "ad2"
+        Me.Ad2DataGridViewTextBoxColumn.Name = "Ad2DataGridViewTextBoxColumn"
+        Me.Ad2DataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn6
+        'Ad3DataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "ad4"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "ad4"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Visible = False
+        Me.Ad3DataGridViewTextBoxColumn.DataPropertyName = "ad3"
+        Me.Ad3DataGridViewTextBoxColumn.HeaderText = "ad3"
+        Me.Ad3DataGridViewTextBoxColumn.Name = "Ad3DataGridViewTextBoxColumn"
+        Me.Ad3DataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn7
+        'Ad4DataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "ad5"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "ad5"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Visible = False
+        Me.Ad4DataGridViewTextBoxColumn.DataPropertyName = "ad4"
+        Me.Ad4DataGridViewTextBoxColumn.HeaderText = "ad4"
+        Me.Ad4DataGridViewTextBoxColumn.Name = "Ad4DataGridViewTextBoxColumn"
+        Me.Ad4DataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn8
+        'Ad5DataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "phone"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "phone"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Visible = False
+        Me.Ad5DataGridViewTextBoxColumn.DataPropertyName = "ad5"
+        Me.Ad5DataGridViewTextBoxColumn.HeaderText = "ad5"
+        Me.Ad5DataGridViewTextBoxColumn.Name = "Ad5DataGridViewTextBoxColumn"
+        Me.Ad5DataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn9
+        'PhoneDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "telex"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "telex"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
+        Me.PhoneDataGridViewTextBoxColumn.DataPropertyName = "phone"
+        Me.PhoneDataGridViewTextBoxColumn.HeaderText = "phone"
+        Me.PhoneDataGridViewTextBoxColumn.Name = "PhoneDataGridViewTextBoxColumn"
+        Me.PhoneDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn10
+        'TelexDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "fax"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "fax"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Visible = False
+        Me.TelexDataGridViewTextBoxColumn.DataPropertyName = "telex"
+        Me.TelexDataGridViewTextBoxColumn.HeaderText = "telex"
+        Me.TelexDataGridViewTextBoxColumn.Name = "TelexDataGridViewTextBoxColumn"
+        Me.TelexDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn11
+        'FaxDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "email"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "email"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        Me.DataGridViewTextBoxColumn11.Visible = False
+        Me.FaxDataGridViewTextBoxColumn.DataPropertyName = "fax"
+        Me.FaxDataGridViewTextBoxColumn.HeaderText = "fax"
+        Me.FaxDataGridViewTextBoxColumn.Name = "FaxDataGridViewTextBoxColumn"
+        Me.FaxDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn12
+        'EmailDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "eurovat"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "eurovat"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        Me.DataGridViewTextBoxColumn12.Visible = False
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewCheckBoxColumn1
+        'EurovatDataGridViewTextBoxColumn
         '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "vatpayable"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "vatpayable"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
-        Me.DataGridViewCheckBoxColumn1.Visible = False
+        Me.EurovatDataGridViewTextBoxColumn.DataPropertyName = "eurovat"
+        Me.EurovatDataGridViewTextBoxColumn.HeaderText = "eurovat"
+        Me.EurovatDataGridViewTextBoxColumn.Name = "EurovatDataGridViewTextBoxColumn"
+        Me.EurovatDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn13
+        'VatpayableDataGridViewCheckBoxColumn
         '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "ifmemo"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "ifmemo"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        Me.DataGridViewTextBoxColumn13.Visible = False
+        Me.VatpayableDataGridViewCheckBoxColumn.DataPropertyName = "vatpayable"
+        Me.VatpayableDataGridViewCheckBoxColumn.HeaderText = "vatpayable"
+        Me.VatpayableDataGridViewCheckBoxColumn.Name = "VatpayableDataGridViewCheckBoxColumn"
+        Me.VatpayableDataGridViewCheckBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn14
+        'IfmemoDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "proforma"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "proforma"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        Me.IfmemoDataGridViewTextBoxColumn.DataPropertyName = "ifmemo"
+        Me.IfmemoDataGridViewTextBoxColumn.HeaderText = "ifmemo"
+        Me.IfmemoDataGridViewTextBoxColumn.Name = "IfmemoDataGridViewTextBoxColumn"
+        Me.IfmemoDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn15
+        'ProformaDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "udate"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "udate"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        Me.DataGridViewTextBoxColumn15.Visible = False
+        Me.ProformaDataGridViewTextBoxColumn.DataPropertyName = "proforma"
+        Me.ProformaDataGridViewTextBoxColumn.HeaderText = "proforma"
+        Me.ProformaDataGridViewTextBoxColumn.Name = "ProformaDataGridViewTextBoxColumn"
+        Me.ProformaDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn16
+        'UdateDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "termdays"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "termdays"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        Me.UdateDataGridViewTextBoxColumn.DataPropertyName = "udate"
+        Me.UdateDataGridViewTextBoxColumn.HeaderText = "udate"
+        Me.UdateDataGridViewTextBoxColumn.Name = "UdateDataGridViewTextBoxColumn"
+        Me.UdateDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn17
+        'TermdaysDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "entrytype"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "entrytype"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        Me.DataGridViewTextBoxColumn17.Visible = False
+        Me.TermdaysDataGridViewTextBoxColumn.DataPropertyName = "termdays"
+        Me.TermdaysDataGridViewTextBoxColumn.HeaderText = "termdays"
+        Me.TermdaysDataGridViewTextBoxColumn.Name = "TermdaysDataGridViewTextBoxColumn"
+        Me.TermdaysDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn18
+        'EntrytypeDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "nwho"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "nwho"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        Me.DataGridViewTextBoxColumn18.Visible = False
+        Me.EntrytypeDataGridViewTextBoxColumn.DataPropertyName = "entrytype"
+        Me.EntrytypeDataGridViewTextBoxColumn.HeaderText = "entrytype"
+        Me.EntrytypeDataGridViewTextBoxColumn.Name = "EntrytypeDataGridViewTextBoxColumn"
+        Me.EntrytypeDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn19
+        'NwhoDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn19.DataPropertyName = "inuse"
-        Me.DataGridViewTextBoxColumn19.HeaderText = "inuse"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        Me.DataGridViewTextBoxColumn19.ReadOnly = True
-        Me.DataGridViewTextBoxColumn19.Visible = False
+        Me.NwhoDataGridViewTextBoxColumn.DataPropertyName = "nwho"
+        Me.NwhoDataGridViewTextBoxColumn.HeaderText = "nwho"
+        Me.NwhoDataGridViewTextBoxColumn.Name = "NwhoDataGridViewTextBoxColumn"
+        Me.NwhoDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn20
+        'InuseDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn20.DataPropertyName = "new_upd"
-        Me.DataGridViewTextBoxColumn20.HeaderText = "new_upd"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        Me.DataGridViewTextBoxColumn20.ReadOnly = True
-        Me.DataGridViewTextBoxColumn20.Visible = False
+        Me.InuseDataGridViewTextBoxColumn.DataPropertyName = "inuse"
+        Me.InuseDataGridViewTextBoxColumn.HeaderText = "inuse"
+        Me.InuseDataGridViewTextBoxColumn.Name = "InuseDataGridViewTextBoxColumn"
+        Me.InuseDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn21
+        'NewupdDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn21.DataPropertyName = "peg_pact"
-        Me.DataGridViewTextBoxColumn21.HeaderText = "peg_pact"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        Me.DataGridViewTextBoxColumn21.ReadOnly = True
-        Me.DataGridViewTextBoxColumn21.Visible = False
+        Me.NewupdDataGridViewTextBoxColumn.DataPropertyName = "new_upd"
+        Me.NewupdDataGridViewTextBoxColumn.HeaderText = "new_upd"
+        Me.NewupdDataGridViewTextBoxColumn.Name = "NewupdDataGridViewTextBoxColumn"
+        Me.NewupdDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn22
+        'PegpactDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn22.DataPropertyName = "peg_lsale"
-        Me.DataGridViewTextBoxColumn22.HeaderText = "peg_lsale"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        Me.DataGridViewTextBoxColumn22.ReadOnly = True
-        Me.DataGridViewTextBoxColumn22.Visible = False
+        Me.PegpactDataGridViewTextBoxColumn.DataPropertyName = "peg_pact"
+        Me.PegpactDataGridViewTextBoxColumn.HeaderText = "peg_pact"
+        Me.PegpactDataGridViewTextBoxColumn.Name = "PegpactDataGridViewTextBoxColumn"
+        Me.PegpactDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewCheckBoxColumn2
+        'PeglsaleDataGridViewTextBoxColumn
         '
-        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "xcard"
-        Me.DataGridViewCheckBoxColumn2.HeaderText = "xcard"
-        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
-        Me.DataGridViewCheckBoxColumn2.ReadOnly = True
-        Me.DataGridViewCheckBoxColumn2.Visible = False
+        Me.PeglsaleDataGridViewTextBoxColumn.DataPropertyName = "peg_lsale"
+        Me.PeglsaleDataGridViewTextBoxColumn.HeaderText = "peg_lsale"
+        Me.PeglsaleDataGridViewTextBoxColumn.Name = "PeglsaleDataGridViewTextBoxColumn"
+        Me.PeglsaleDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewCheckBoxColumn3
+        'XcardDataGridViewCheckBoxColumn
         '
-        Me.DataGridViewCheckBoxColumn3.DataPropertyName = "promo"
-        Me.DataGridViewCheckBoxColumn3.HeaderText = "promo"
-        Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
-        Me.DataGridViewCheckBoxColumn3.ReadOnly = True
-        Me.DataGridViewCheckBoxColumn3.Visible = False
+        Me.XcardDataGridViewCheckBoxColumn.DataPropertyName = "xcard"
+        Me.XcardDataGridViewCheckBoxColumn.HeaderText = "xcard"
+        Me.XcardDataGridViewCheckBoxColumn.Name = "XcardDataGridViewCheckBoxColumn"
+        Me.XcardDataGridViewCheckBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn23
+        'PromoDataGridViewCheckBoxColumn
         '
-        Me.DataGridViewTextBoxColumn23.DataPropertyName = "UniqueID"
-        Me.DataGridViewTextBoxColumn23.HeaderText = "UniqueID"
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.ReadOnly = True
-        Me.DataGridViewTextBoxColumn23.Visible = False
+        Me.PromoDataGridViewCheckBoxColumn.DataPropertyName = "promo"
+        Me.PromoDataGridViewCheckBoxColumn.HeaderText = "promo"
+        Me.PromoDataGridViewCheckBoxColumn.Name = "PromoDataGridViewCheckBoxColumn"
+        Me.PromoDataGridViewCheckBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn24
+        'ADDRESSBKDataSet
         '
-        Me.DataGridViewTextBoxColumn24.DataPropertyName = "ADDMEMO"
-        Me.DataGridViewTextBoxColumn24.HeaderText = "ADDMEMO"
-        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
-        Me.DataGridViewTextBoxColumn24.ReadOnly = True
-        Me.DataGridViewTextBoxColumn24.Visible = False
+        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
+        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ADDRESSBKDataSetBindingSource
+        '
+        Me.ADDRESSBKDataSetBindingSource.DataSource = Me.ADDRESSBKDataSet
+        Me.ADDRESSBKDataSetBindingSource.Position = 0
+        '
+        'Tran2BindingSource1
+        '
+        Me.Tran2BindingSource1.DataMember = "tran2"
+        Me.Tran2BindingSource1.DataSource = Me.ADDRESSBKDataSetBindingSource
+        '
+        'Tran2TableAdapter1
+        '
+        Me.Tran2TableAdapter1.ClearBeforeFill = True
         '
         'accountsrch
         '
@@ -414,9 +409,9 @@ Partial Class accountsrch
         Me.Controls.Add(Me.Tran2DataGridView)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button2_but)
         Me.Controls.Add(Me.acctabt_but)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.acctextBox)
         Me.Controls.Add(Me.Label1)
         Me.Name = "accountsrch"
         Me.Text = "Account Search"
@@ -424,15 +419,18 @@ Partial Class accountsrch
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ADDRESSBKDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents acctextBox As TextBox
     Friend WithEvents acctabt_but As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Button2_but As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
@@ -440,31 +438,34 @@ Partial Class accountsrch
     Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
     Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Tran2DataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents ADDRESSBKDataSetBindingSource As BindingSource
+    Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
+    Friend WithEvents Tran2BindingSource1 As BindingSource
+    Friend WithEvents Tran2TableAdapter1 As ADDRESSBKDataSetTableAdapters.tran2TableAdapter
+    Friend WithEvents ADDMEMODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AccountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Ad1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Ad2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Ad3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Ad4DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Ad5DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelexDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FaxDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EurovatDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents VatpayableDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents IfmemoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProformaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TermdaysDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EntrytypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NwhoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents InuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NewupdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PegpactDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PeglsaleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents XcardDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents PromoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
 End Class

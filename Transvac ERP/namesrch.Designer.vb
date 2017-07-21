@@ -28,7 +28,13 @@ Partial Class namesrch
         Me.namesrch_but = New System.Windows.Forms.Button()
         Me.fndabt_but = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.FNameDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ad1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,18 +61,12 @@ Partial Class namesrch
         Me.XcardDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PromoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ADDMEMODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FNameDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -113,31 +113,65 @@ Partial Class namesrch
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'DataGridView1
+        'FNameDataGridView
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.AccountDataGridViewTextBoxColumn, Me.Ad1DataGridViewTextBoxColumn, Me.Ad2DataGridViewTextBoxColumn, Me.Ad3DataGridViewTextBoxColumn, Me.Ad4DataGridViewTextBoxColumn, Me.Ad5DataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.TelexDataGridViewTextBoxColumn, Me.FaxDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.EurovatDataGridViewTextBoxColumn, Me.VatpayableDataGridViewCheckBoxColumn, Me.IfmemoDataGridViewTextBoxColumn, Me.ProformaDataGridViewTextBoxColumn, Me.UdateDataGridViewTextBoxColumn, Me.TermdaysDataGridViewTextBoxColumn, Me.EntrytypeDataGridViewTextBoxColumn, Me.NwhoDataGridViewTextBoxColumn, Me.InuseDataGridViewTextBoxColumn, Me.NewupdDataGridViewTextBoxColumn, Me.PegpactDataGridViewTextBoxColumn, Me.PeglsaleDataGridViewTextBoxColumn, Me.XcardDataGridViewCheckBoxColumn, Me.PromoDataGridViewCheckBoxColumn, Me.ADDMEMODataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.Tran2BindingSource1
-        Me.DataGridView1.Location = New System.Drawing.Point(49, 131)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(702, 275)
-        Me.DataGridView1.TabIndex = 10
+        Me.FNameDataGridView.AllowUserToAddRows = False
+        Me.FNameDataGridView.AllowUserToDeleteRows = False
+        Me.FNameDataGridView.AutoGenerateColumns = False
+        Me.FNameDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.FNameDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.AccountDataGridViewTextBoxColumn, Me.Ad1DataGridViewTextBoxColumn, Me.Ad2DataGridViewTextBoxColumn, Me.Ad3DataGridViewTextBoxColumn, Me.Ad4DataGridViewTextBoxColumn, Me.Ad5DataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.TelexDataGridViewTextBoxColumn, Me.FaxDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.EurovatDataGridViewTextBoxColumn, Me.VatpayableDataGridViewCheckBoxColumn, Me.IfmemoDataGridViewTextBoxColumn, Me.ProformaDataGridViewTextBoxColumn, Me.UdateDataGridViewTextBoxColumn, Me.TermdaysDataGridViewTextBoxColumn, Me.EntrytypeDataGridViewTextBoxColumn, Me.NwhoDataGridViewTextBoxColumn, Me.InuseDataGridViewTextBoxColumn, Me.NewupdDataGridViewTextBoxColumn, Me.PegpactDataGridViewTextBoxColumn, Me.PeglsaleDataGridViewTextBoxColumn, Me.XcardDataGridViewCheckBoxColumn, Me.PromoDataGridViewCheckBoxColumn, Me.ADDMEMODataGridViewTextBoxColumn})
+        Me.FNameDataGridView.DataSource = Me.Tran2BindingSource
+        Me.FNameDataGridView.Location = New System.Drawing.Point(49, 131)
+        Me.FNameDataGridView.Name = "FNameDataGridView"
+        Me.FNameDataGridView.ReadOnly = True
+        Me.FNameDataGridView.Size = New System.Drawing.Size(702, 275)
+        Me.FNameDataGridView.TabIndex = 10
+        '
+        'Tran2BindingSource
+        '
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        '
+        'TransvacDataV2DataSet1BindingSource
+        '
+        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.TransvacDataV2DataSet1BindingSource.Position = 0
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tran2BindingSource1
+        '
+        Me.Tran2BindingSource1.DataMember = "tran2"
+        Me.Tran2BindingSource1.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(676, 420)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "SELECT"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
         '
         'NameDataGridViewTextBoxColumn
         '
+        Me.NameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NameDataGridViewTextBoxColumn.DataPropertyName = "name"
-        Me.NameDataGridViewTextBoxColumn.HeaderText = "name"
+        Me.NameDataGridViewTextBoxColumn.HeaderText = "NAME"
         Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
         Me.NameDataGridViewTextBoxColumn.ReadOnly = True
         '
         'AccountDataGridViewTextBoxColumn
         '
         Me.AccountDataGridViewTextBoxColumn.DataPropertyName = "account"
-        Me.AccountDataGridViewTextBoxColumn.HeaderText = "account"
+        Me.AccountDataGridViewTextBoxColumn.HeaderText = "ACCOUNT ID"
         Me.AccountDataGridViewTextBoxColumn.Name = "AccountDataGridViewTextBoxColumn"
         Me.AccountDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -240,7 +274,7 @@ Partial Class namesrch
         'ProformaDataGridViewTextBoxColumn
         '
         Me.ProformaDataGridViewTextBoxColumn.DataPropertyName = "proforma"
-        Me.ProformaDataGridViewTextBoxColumn.HeaderText = "proforma"
+        Me.ProformaDataGridViewTextBoxColumn.HeaderText = "PROFORMA"
         Me.ProformaDataGridViewTextBoxColumn.Name = "ProformaDataGridViewTextBoxColumn"
         Me.ProformaDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -255,7 +289,7 @@ Partial Class namesrch
         'TermdaysDataGridViewTextBoxColumn
         '
         Me.TermdaysDataGridViewTextBoxColumn.DataPropertyName = "termdays"
-        Me.TermdaysDataGridViewTextBoxColumn.HeaderText = "termdays"
+        Me.TermdaysDataGridViewTextBoxColumn.HeaderText = "TERMDAYS"
         Me.TermdaysDataGridViewTextBoxColumn.Name = "TermdaysDataGridViewTextBoxColumn"
         Me.TermdaysDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -331,46 +365,13 @@ Partial Class namesrch
         Me.ADDMEMODataGridViewTextBoxColumn.ReadOnly = True
         Me.ADDMEMODataGridViewTextBoxColumn.Visible = False
         '
-        'Tran2BindingSource1
-        '
-        Me.Tran2BindingSource1.DataMember = "tran2"
-        Me.Tran2BindingSource1.DataSource = Me.TransvacDataV2DataSet1BindingSource
-        '
-        'TransvacDataV2DataSet1BindingSource
-        '
-        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
-        Me.TransvacDataV2DataSet1BindingSource.Position = 0
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1BindingSource
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(676, 420)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "SELECT"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        '
         'namesrch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 468)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.FNameDataGridView)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.namesrch_but)
         Me.Controls.Add(Me.fndabt_but)
@@ -379,11 +380,11 @@ Partial Class namesrch
         Me.Name = "namesrch"
         Me.Text = "Find Name"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FNameDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -396,9 +397,11 @@ Partial Class namesrch
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents TransvacDataV2DataSet1BindingSource As BindingSource
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents FNameDataGridView As DataGridView
     Friend WithEvents Tran2BindingSource As BindingSource
     Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Tran2BindingSource1 As BindingSource
     Friend WithEvents NameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AccountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Ad1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -425,6 +428,4 @@ Partial Class namesrch
     Friend WithEvents XcardDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents PromoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents ADDMEMODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Tran2BindingSource1 As BindingSource
 End Class

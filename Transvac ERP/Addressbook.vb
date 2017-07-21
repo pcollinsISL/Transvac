@@ -67,7 +67,7 @@
         REM Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
-    Private Sub osequencelb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles osequencelb.SelectedIndexChanged
+    Private Sub osequencelb_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 

@@ -42,7 +42,7 @@ Partial Class InvoiceType
         '
         Me.TextBox1.Location = New System.Drawing.Point(190, 96)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(105, 20)
         Me.TextBox1.TabIndex = 1
         '
         'Label2

@@ -40,8 +40,6 @@ Partial Class form1
         Me.PROFORMATextBox = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.osequencelb = New System.Windows.Forms.ListBox()
-        Me.findbut = New System.Windows.Forms.Button()
         Me.membut = New System.Windows.Forms.Button()
         Me.savebut = New System.Windows.Forms.Button()
         Me.editbut = New System.Windows.Forms.Button()
@@ -151,7 +149,7 @@ Partial Class form1
         'INUSELabel
         '
         INUSELabel.AutoSize = True
-        INUSELabel.Location = New System.Drawing.Point(489, 348)
+        INUSELabel.Location = New System.Drawing.Point(498, 327)
         INUSELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         INUSELabel.Name = "INUSELabel"
         INUSELabel.Size = New System.Drawing.Size(43, 13)
@@ -171,7 +169,7 @@ Partial Class form1
         'ENTRYTYPELabel
         '
         ENTRYTYPELabel.AutoSize = True
-        ENTRYTYPELabel.Location = New System.Drawing.Point(266, 397)
+        ENTRYTYPELabel.Location = New System.Drawing.Point(269, 402)
         ENTRYTYPELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ENTRYTYPELabel.Name = "ENTRYTYPELabel"
         ENTRYTYPELabel.Size = New System.Drawing.Size(59, 13)
@@ -241,7 +239,7 @@ Partial Class form1
         'NAMELabel
         '
         NAMELabel.AutoSize = True
-        NAMELabel.Location = New System.Drawing.Point(93, 120)
+        NAMELabel.Location = New System.Drawing.Point(102, 120)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
         NAMELabel.Size = New System.Drawing.Size(84, 13)
@@ -285,26 +283,6 @@ Partial Class form1
         Me.Label3.Size = New System.Drawing.Size(88, 13)
         Me.Label3.TabIndex = 159
         Me.Label3.Text = "Address (5 Lines)"
-        '
-        'osequencelb
-        '
-        Me.osequencelb.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.osequencelb.FormattingEnabled = True
-        Me.osequencelb.ItemHeight = 16
-        Me.osequencelb.Items.AddRange(New Object() {"Account", "Name"})
-        Me.osequencelb.Location = New System.Drawing.Point(470, 470)
-        Me.osequencelb.Name = "osequencelb"
-        Me.osequencelb.Size = New System.Drawing.Size(74, 36)
-        Me.osequencelb.TabIndex = 158
-        '
-        'findbut
-        '
-        Me.findbut.Location = New System.Drawing.Point(550, 483)
-        Me.findbut.Name = "findbut"
-        Me.findbut.Size = New System.Drawing.Size(74, 23)
-        Me.findbut.TabIndex = 157
-        Me.findbut.Text = "FIND"
-        Me.findbut.UseVisualStyleBackColor = True
         '
         'membut
         '
@@ -371,36 +349,36 @@ Partial Class form1
         '
         'but5
         '
-        Me.but5.Location = New System.Drawing.Point(86, 446)
+        Me.but5.Location = New System.Drawing.Point(95, 457)
         Me.but5.Name = "but5"
-        Me.but5.Size = New System.Drawing.Size(45, 23)
+        Me.but5.Size = New System.Drawing.Size(58, 23)
         Me.but5.TabIndex = 148
         Me.but5.Text = "<"
         Me.but5.UseVisualStyleBackColor = True
         '
         'but6
         '
-        Me.but6.Location = New System.Drawing.Point(142, 446)
+        Me.but6.Location = New System.Drawing.Point(157, 457)
         Me.but6.Name = "but6"
-        Me.but6.Size = New System.Drawing.Size(45, 23)
+        Me.but6.Size = New System.Drawing.Size(58, 23)
         Me.but6.TabIndex = 147
         Me.but6.Text = ">"
         Me.but6.UseVisualStyleBackColor = True
         '
         'but7
         '
-        Me.but7.Location = New System.Drawing.Point(196, 446)
+        Me.but7.Location = New System.Drawing.Point(219, 457)
         Me.but7.Name = "but7"
-        Me.but7.Size = New System.Drawing.Size(45, 23)
+        Me.but7.Size = New System.Drawing.Size(58, 23)
         Me.but7.TabIndex = 146
         Me.but7.Text = "|>"
         Me.but7.UseVisualStyleBackColor = True
         '
         'but4
         '
-        Me.but4.Location = New System.Drawing.Point(32, 446)
+        Me.but4.Location = New System.Drawing.Point(33, 457)
         Me.but4.Name = "but4"
-        Me.but4.Size = New System.Drawing.Size(45, 23)
+        Me.but4.Size = New System.Drawing.Size(58, 23)
         Me.but4.TabIndex = 145
         Me.but4.Text = "|<"
         Me.but4.UseVisualStyleBackColor = True
@@ -436,7 +414,7 @@ Partial Class form1
         '
         'INUSETextBox
         '
-        Me.INUSETextBox.Location = New System.Drawing.Point(541, 343)
+        Me.INUSETextBox.Location = New System.Drawing.Point(541, 322)
         Me.INUSETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.INUSETextBox.Name = "INUSETextBox"
         Me.INUSETextBox.Size = New System.Drawing.Size(72, 20)
@@ -452,10 +430,10 @@ Partial Class form1
         '
         'ENTRYTYPETextBox
         '
-        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(338, 393)
+        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(338, 397)
         Me.ENTRYTYPETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ENTRYTYPETextBox.Name = "ENTRYTYPETextBox"
-        Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(141, 20)
+        Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(76, 20)
         Me.ENTRYTYPETextBox.TabIndex = 136
         '
         'Tran2BindingNavigator
@@ -473,7 +451,7 @@ Partial Class form1
         Me.Tran2BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Tran2BindingNavigator.Name = "Tran2BindingNavigator"
         Me.Tran2BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tran2BindingNavigator.Size = New System.Drawing.Size(870, 27)
+        Me.Tran2BindingNavigator.Size = New System.Drawing.Size(881, 27)
         Me.Tran2BindingNavigator.TabIndex = 163
         Me.Tran2BindingNavigator.Text = "BindingNavigator1"
         '
@@ -592,7 +570,7 @@ Partial Class form1
         'NAMETextBox1
         '
         Me.NAMETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "NAME", True))
-        Me.NAMETextBox1.Location = New System.Drawing.Point(95, 137)
+        Me.NAMETextBox1.Location = New System.Drawing.Point(105, 137)
         Me.NAMETextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.NAMETextBox1.Name = "NAMETextBox1"
         Me.NAMETextBox1.Size = New System.Drawing.Size(172, 20)
@@ -604,7 +582,7 @@ Partial Class form1
         Me.AD1TextBox1.Location = New System.Drawing.Point(32, 185)
         Me.AD1TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD1TextBox1.Name = "AD1TextBox1"
-        Me.AD1TextBox1.Size = New System.Drawing.Size(235, 20)
+        Me.AD1TextBox1.Size = New System.Drawing.Size(245, 20)
         Me.AD1TextBox1.TabIndex = 165
         '
         'AD2TextBox1
@@ -613,7 +591,7 @@ Partial Class form1
         Me.AD2TextBox1.Location = New System.Drawing.Point(32, 211)
         Me.AD2TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD2TextBox1.Name = "AD2TextBox1"
-        Me.AD2TextBox1.Size = New System.Drawing.Size(235, 20)
+        Me.AD2TextBox1.Size = New System.Drawing.Size(245, 20)
         Me.AD2TextBox1.TabIndex = 166
         '
         'AD3TextBox
@@ -622,7 +600,7 @@ Partial Class form1
         Me.AD3TextBox.Location = New System.Drawing.Point(32, 237)
         Me.AD3TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD3TextBox.Name = "AD3TextBox"
-        Me.AD3TextBox.Size = New System.Drawing.Size(235, 20)
+        Me.AD3TextBox.Size = New System.Drawing.Size(245, 20)
         Me.AD3TextBox.TabIndex = 167
         '
         'AD4TextBox
@@ -631,7 +609,7 @@ Partial Class form1
         Me.AD4TextBox.Location = New System.Drawing.Point(32, 264)
         Me.AD4TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD4TextBox.Name = "AD4TextBox"
-        Me.AD4TextBox.Size = New System.Drawing.Size(235, 20)
+        Me.AD4TextBox.Size = New System.Drawing.Size(245, 20)
         Me.AD4TextBox.TabIndex = 168
         '
         'AD5TextBox
@@ -640,7 +618,7 @@ Partial Class form1
         Me.AD5TextBox.Location = New System.Drawing.Point(32, 291)
         Me.AD5TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD5TextBox.Name = "AD5TextBox"
-        Me.AD5TextBox.Size = New System.Drawing.Size(235, 20)
+        Me.AD5TextBox.Size = New System.Drawing.Size(245, 20)
         Me.AD5TextBox.TabIndex = 169
         '
         'PHONETextBox
@@ -722,7 +700,7 @@ Partial Class form1
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(28, 493)
+        Me.Label15.Location = New System.Drawing.Point(30, 506)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(138, 13)
         Me.Label15.TabIndex = 178
@@ -732,7 +710,7 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(721, 446)
+        Me.selectbut.Location = New System.Drawing.Point(732, 444)
         Me.selectbut.Name = "selectbut"
         Me.selectbut.Size = New System.Drawing.Size(101, 49)
         Me.selectbut.TabIndex = 180
@@ -785,7 +763,7 @@ Partial Class form1
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(281, 145)
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(294, 145)
         Me.ADDMEMOTextBox.TabIndex = 132
         '
         'AccountDataGridViewTextBoxColumn
@@ -816,7 +794,7 @@ Partial Class form1
         '
         'fndact_but
         '
-        Me.fndact_but.Location = New System.Drawing.Point(721, 370)
+        Me.fndact_but.Location = New System.Drawing.Point(732, 368)
         Me.fndact_but.Name = "fndact_but"
         Me.fndact_but.Size = New System.Drawing.Size(103, 23)
         Me.fndact_but.TabIndex = 182
@@ -825,7 +803,7 @@ Partial Class form1
         '
         'fndname_but
         '
-        Me.fndname_but.Location = New System.Drawing.Point(721, 399)
+        Me.fndname_but.Location = New System.Drawing.Point(732, 397)
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(103, 23)
         Me.fndname_but.TabIndex = 183
@@ -837,7 +815,7 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(870, 542)
+        Me.ClientSize = New System.Drawing.Size(881, 555)
         Me.Controls.Add(Me.fndname_but)
         Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
@@ -862,8 +840,6 @@ Partial Class form1
         Me.Controls.Add(Me.PROFORMATextBox)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.osequencelb)
-        Me.Controls.Add(Me.findbut)
         Me.Controls.Add(Me.membut)
         Me.Controls.Add(Me.savebut)
         Me.Controls.Add(Me.editbut)
@@ -913,8 +889,6 @@ Partial Class form1
     Friend WithEvents PROFORMATextBox As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents osequencelb As ListBox
-    Friend WithEvents findbut As Button
     Friend WithEvents membut As Button
     Friend WithEvents savebut As Button
     Friend WithEvents editbut As Button
