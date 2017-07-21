@@ -9,7 +9,7 @@
         Me.Hide()
     End Sub
     Private Sub Button1_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles namesrch_but.Click
-        Me.Tran2TableAdapter.FillByName(Me.TransvacDataV2DataSet.tran2, NameBox.Text)
+        Me.Tran2TableAdapter.FillByName(Me.TransvacDataV2DataSet1.tran2, NameBox.Text)
     End Sub
 
     Private Function TransvacDataV2DataSet() As Object

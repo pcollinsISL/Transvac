@@ -15,6 +15,7 @@
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
         Me.Tran2BindingSource.AddNew()
+        rem Me.AddnotesBindingSource.AddNew()
     End Sub
 
     Private Sub but6_Click(sender As Object, e As EventArgs) Handles but6.Click
@@ -87,5 +88,13 @@
         Dim x As updatemem = updatemem
         updatemem.MemoBox.Text = ADDMEMOTextBox.Text
         x.Show()
+    End Sub
+
+    Private Sub abortbut_Click(sender As Object, e As EventArgs) Handles abortbut.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub savebtn(sender As Object, e As EventArgs) Handles savebut.Click
+        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
     End Sub
 End Class
