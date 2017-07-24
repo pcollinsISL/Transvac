@@ -27,13 +27,17 @@ Partial Class updatemem
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.MemoBox = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.AddnotesTableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
+        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AddnotesTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ExitBtn
@@ -56,6 +60,7 @@ Partial Class updatemem
         '
         'MemoBox
         '
+        Me.MemoBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource, "actmemo", True))
         Me.MemoBox.Location = New System.Drawing.Point(145, 85)
         Me.MemoBox.Multiline = True
         Me.MemoBox.Name = "MemoBox"
@@ -72,15 +77,15 @@ Partial Class updatemem
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'TransvacDataV2DataSet1
+        'ADDRESSBKDataSet
         '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
+        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AddnotesBindingSource
         '
         Me.AddnotesBindingSource.DataMember = "addnotes"
-        Me.AddnotesBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.AddnotesBindingSource.DataSource = Me.ADDRESSBKDataSet
         '
         'AddnotesTableAdapter
         '
@@ -88,49 +93,60 @@ Partial Class updatemem
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.accctlTableAdapter = Nothing
-        Me.TableAdapterManager.accountTableAdapter = Nothing
         Me.TableAdapterManager.addnotesTableAdapter = Me.AddnotesTableAdapter
-        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager.assetsTableAdapter = Nothing
-        Me.TableAdapterManager.atransTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.binallocTableAdapter = Nothing
-        Me.TableAdapterManager.catTableAdapter = Nothing
-        Me.TableAdapterManager.countryTableAdapter = Nothing
-        Me.TableAdapterManager.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager.eventTableAdapter = Nothing
-        Me.TableAdapterManager.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager.invlineTableAdapter = Nothing
-        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager.invtransTableAdapter = Nothing
-        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager.invworkTableAdapter = Nothing
-        Me.TableAdapterManager.issueTableAdapter = Nothing
-        Me.TableAdapterManager.locationTableAdapter = Nothing
-        Me.TableAdapterManager.mainTableAdapter = Nothing
-        Me.TableAdapterManager.markupTableAdapter = Nothing
-        Me.TableAdapterManager.namesTableAdapter = Nothing
-        Me.TableAdapterManager.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager.statusTableAdapter = Nothing
-        Me.TableAdapterManager.teventsTableAdapter = Nothing
         Me.TableAdapterManager.tran2TableAdapter = Nothing
-        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
-        Me.TableAdapterManager.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager.trandescTableAdapter = Nothing
-        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AddnotesTableAdapter1
+        '
+        Me.AddnotesTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Me.AddnotesTableAdapter1
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Nothing
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'updatemem
         '
@@ -144,8 +160,9 @@ Partial Class updatemem
         Me.Name = "updatemem"
         Me.Text = "Update Memo"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -155,10 +172,13 @@ Partial Class updatemem
     Friend WithEvents UpdateBtn As Button
     Friend WithEvents MemoBox As TextBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
-    Friend WithEvents AddnotesBindingSource As BindingSource
-    Friend WithEvents AddnotesTableAdapter As TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter
-    Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents AddnotesBindingNavigator As BindingNavigator
     Friend WithEvents AddnotesBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
+    Friend WithEvents AddnotesBindingSource As BindingSource
+    Friend WithEvents AddnotesTableAdapter As ADDRESSBKDataSetTableAdapters.addnotesTableAdapter
+    Friend WithEvents TableAdapterManager As ADDRESSBKDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents AddnotesBindingSource1 As BindingSource
+    Friend WithEvents AddnotesTableAdapter1 As TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter
+    Friend WithEvents TableAdapterManager1 As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
 End Class

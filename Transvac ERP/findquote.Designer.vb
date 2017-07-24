@@ -54,7 +54,7 @@ Partial Class findquote
         Me.edate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.etype = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -62,7 +62,7 @@ Partial Class findquote
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         CType(Me.EnquiryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -321,12 +321,12 @@ Partial Class findquote
         'EnquiryBindingSource
         '
         Me.EnquiryBindingSource.DataMember = "enquiry"
-        Me.EnquiryBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.EnquiryBindingSource.DataSource = Me.TransvacDataV2DataSet1
         '
-        'TransvacDataV2DataSet
+        'TransvacDataV2DataSet1
         '
-        Me.TransvacDataV2DataSet.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PictureBox1
         '
@@ -349,7 +349,7 @@ Partial Class findquote
         '
         'TransvacDataV2DataSetBindingSource
         '
-        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet1
         Me.TransvacDataV2DataSetBindingSource.Position = 0
         '
         'EnquiryTableAdapter
@@ -431,7 +431,7 @@ Partial Class findquote
         Me.Text = "Find Enquiry"
         CType(Me.EnquiryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -441,7 +441,7 @@ Partial Class findquote
 
     Friend WithEvents CustomerNameBox As TextBox
     Friend WithEvents CustomerBtn As Button
-    Friend WithEvents TransvacDataV2DataSet As TransvacDataV2DataSet1
+    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents TransvacDataV2DataSetBindingSource As BindingSource
     Friend WithEvents EnquiryBindingSource As BindingSource
     Friend WithEvents EnquiryTableAdapter As TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter

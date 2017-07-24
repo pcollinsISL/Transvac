@@ -44,7 +44,6 @@ Partial Class form1
         Me.findbut = New System.Windows.Forms.Button()
         Me.membut = New System.Windows.Forms.Button()
         Me.savebut = New System.Windows.Forms.Button()
-        Me.editbut = New System.Windows.Forms.Button()
         Me.abortbut = New System.Windows.Forms.Button()
         Me.printbutton = New System.Windows.Forms.Button()
         Me.delbut = New System.Windows.Forms.Button()
@@ -59,23 +58,9 @@ Partial Class form1
         Me.INUSETextBox = New System.Windows.Forms.TextBox()
         Me.NWHOTextBox = New System.Windows.Forms.TextBox()
         Me.ENTRYTYPETextBox = New System.Windows.Forms.TextBox()
-        Me.Tran2BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Tran2BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.NAMETextBox1 = New System.Windows.Forms.TextBox()
+        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
         Me.AD1TextBox1 = New System.Windows.Forms.TextBox()
         Me.AD2TextBox1 = New System.Windows.Forms.TextBox()
         Me.AD3TextBox = New System.Windows.Forms.TextBox()
@@ -94,18 +79,23 @@ Partial Class form1
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
+        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ActmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fndact_but = New System.Windows.Forms.Button()
         Me.fndname_but = New System.Windows.Forms.Button()
+        Me.PrintDialog2 = New System.Windows.Forms.PrintDialog()
+        Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
+        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
+        Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
         PROFORMALabel = New System.Windows.Forms.Label()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
@@ -119,12 +109,11 @@ Partial Class form1
         PHONELabel = New System.Windows.Forms.Label()
         NAMELabel = New System.Windows.Forms.Label()
         ACCOUNTLabel = New System.Windows.Forms.Label()
-        CType(Me.Tran2BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Tran2BindingNavigator.SuspendLayout()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -244,9 +233,9 @@ Partial Class form1
         NAMELabel.Location = New System.Drawing.Point(93, 120)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
-        NAMELabel.Size = New System.Drawing.Size(78, 13)
+        NAMELabel.Size = New System.Drawing.Size(90, 13)
         NAMELabel.TabIndex = 114
-        NAMELabel.Text = "Contact Name "
+        NAMELabel.Text = "Contact Name 23"
         AddHandler NAMELabel.Click, AddressOf Me.NAMELabel_Click
         '
         'ACCOUNTLabel
@@ -323,15 +312,6 @@ Partial Class form1
         Me.savebut.TabIndex = 154
         Me.savebut.Text = "SAVE"
         Me.savebut.UseVisualStyleBackColor = True
-        '
-        'editbut
-        '
-        Me.editbut.Location = New System.Drawing.Point(150, 332)
-        Me.editbut.Name = "editbut"
-        Me.editbut.Size = New System.Drawing.Size(74, 23)
-        Me.editbut.TabIndex = 153
-        Me.editbut.Text = "EDIT"
-        Me.editbut.UseVisualStyleBackColor = True
         '
         'abortbut
         '
@@ -458,149 +438,28 @@ Partial Class form1
         Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(141, 20)
         Me.ENTRYTYPETextBox.TabIndex = 136
         '
-        'Tran2BindingNavigator
-        '
-        Me.Tran2BindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.Tran2BindingNavigator.BindingSource = Me.Tran2BindingSource
-        Me.Tran2BindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.Tran2BindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.Tran2BindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.Tran2BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Tran2BindingNavigatorSaveItem, Me.PrintToolStripButton})
-        Me.Tran2BindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.Tran2BindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.Tran2BindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.Tran2BindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.Tran2BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.Tran2BindingNavigator.Name = "Tran2BindingNavigator"
-        Me.Tran2BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tran2BindingNavigator.Size = New System.Drawing.Size(870, 27)
-        Me.Tran2BindingNavigator.TabIndex = 163
-        Me.Tran2BindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.ADDRESSBKDataSet
-        '
-        'ADDRESSBKDataSet
-        '
-        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
-        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 24)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(38, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
-        '
-        'Tran2BindingNavigatorSaveItem
-        '
-        Me.Tran2BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Tran2BindingNavigatorSaveItem.Image = CType(resources.GetObject("Tran2BindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.Tran2BindingNavigatorSaveItem.Name = "Tran2BindingNavigatorSaveItem"
-        Me.Tran2BindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
-        Me.Tran2BindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'PrintToolStripButton
-        '
-        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
-        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PrintToolStripButton.Name = "PrintToolStripButton"
-        Me.PrintToolStripButton.Size = New System.Drawing.Size(24, 24)
-        Me.PrintToolStripButton.Text = "&Print"
-        '
         'NAMETextBox1
         '
-        Me.NAMETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "NAME", True))
+        Me.NAMETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "NAME", True))
         Me.NAMETextBox1.Location = New System.Drawing.Point(95, 137)
         Me.NAMETextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.NAMETextBox1.Name = "NAMETextBox1"
         Me.NAMETextBox1.Size = New System.Drawing.Size(172, 20)
         Me.NAMETextBox1.TabIndex = 164
         '
+        'Tran2BindingSource1
+        '
+        Me.Tran2BindingSource1.DataMember = "tran2"
+        Me.Tran2BindingSource1.DataSource = Me.ADDRESSBKDataSet
+        '
+        'ADDRESSBKDataSet
+        '
+        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
+        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'AD1TextBox1
         '
-        Me.AD1TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "AD1", True))
+        Me.AD1TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD1", True))
         Me.AD1TextBox1.Location = New System.Drawing.Point(32, 185)
         Me.AD1TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD1TextBox1.Name = "AD1TextBox1"
@@ -609,7 +468,7 @@ Partial Class form1
         '
         'AD2TextBox1
         '
-        Me.AD2TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "AD2", True))
+        Me.AD2TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD2", True))
         Me.AD2TextBox1.Location = New System.Drawing.Point(32, 211)
         Me.AD2TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD2TextBox1.Name = "AD2TextBox1"
@@ -618,7 +477,7 @@ Partial Class form1
         '
         'AD3TextBox
         '
-        Me.AD3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "AD3", True))
+        Me.AD3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD3", True))
         Me.AD3TextBox.Location = New System.Drawing.Point(32, 237)
         Me.AD3TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD3TextBox.Name = "AD3TextBox"
@@ -627,7 +486,7 @@ Partial Class form1
         '
         'AD4TextBox
         '
-        Me.AD4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "AD4", True))
+        Me.AD4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD4", True))
         Me.AD4TextBox.Location = New System.Drawing.Point(32, 264)
         Me.AD4TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD4TextBox.Name = "AD4TextBox"
@@ -636,7 +495,7 @@ Partial Class form1
         '
         'AD5TextBox
         '
-        Me.AD5TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "AD5", True))
+        Me.AD5TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD5", True))
         Me.AD5TextBox.Location = New System.Drawing.Point(32, 291)
         Me.AD5TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD5TextBox.Name = "AD5TextBox"
@@ -645,7 +504,7 @@ Partial Class form1
         '
         'PHONETextBox
         '
-        Me.PHONETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "PHONE", True))
+        Me.PHONETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "PHONE", True))
         Me.PHONETextBox.Location = New System.Drawing.Point(361, 137)
         Me.PHONETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PHONETextBox.Name = "PHONETextBox"
@@ -654,7 +513,7 @@ Partial Class form1
         '
         'TELEXTextBox
         '
-        Me.TELEXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "TELEX", True))
+        Me.TELEXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TELEX", True))
         Me.TELEXTextBox.Location = New System.Drawing.Point(361, 163)
         Me.TELEXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TELEXTextBox.Name = "TELEXTextBox"
@@ -663,7 +522,7 @@ Partial Class form1
         '
         'FAXTextBox
         '
-        Me.FAXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "FAX", True))
+        Me.FAXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "FAX", True))
         Me.FAXTextBox.Location = New System.Drawing.Point(361, 189)
         Me.FAXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FAXTextBox.Name = "FAXTextBox"
@@ -672,7 +531,7 @@ Partial Class form1
         '
         'EMAILTextBox
         '
-        Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "EMAIL", True))
+        Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EMAIL", True))
         Me.EMAILTextBox.Location = New System.Drawing.Point(361, 215)
         Me.EMAILTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EMAILTextBox.Name = "EMAILTextBox"
@@ -683,7 +542,7 @@ Partial Class form1
         '
         Me.VATPAYABLECheckBox1.Checked = True
         Me.VATPAYABLECheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.VATPAYABLECheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource, "VATPAYABLE", True))
+        Me.VATPAYABLECheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "VATPAYABLE", True))
         Me.VATPAYABLECheckBox1.Location = New System.Drawing.Point(361, 301)
         Me.VATPAYABLECheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.VATPAYABLECheckBox1.Name = "VATPAYABLECheckBox1"
@@ -694,7 +553,7 @@ Partial Class form1
         '
         'EUROVATTextBox
         '
-        Me.EUROVATTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "EUROVAT", True))
+        Me.EUROVATTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EUROVAT", True))
         Me.EUROVATTextBox.Location = New System.Drawing.Point(361, 267)
         Me.EUROVATTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EUROVATTextBox.Name = "EUROVATTextBox"
@@ -703,7 +562,7 @@ Partial Class form1
         '
         'TERMDAYSTextBox
         '
-        Me.TERMDAYSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "TERMDAYS", True))
+        Me.TERMDAYSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TERMDAYS", True))
         Me.TERMDAYSTextBox.Location = New System.Drawing.Point(361, 241)
         Me.TERMDAYSTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TERMDAYSTextBox.Name = "TERMDAYSTextBox"
@@ -712,7 +571,7 @@ Partial Class form1
         '
         'ACCOUNTTextBox1
         '
-        Me.ACCOUNTTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ACCOUNT", True))
+        Me.ACCOUNTTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "ACCOUNT", True))
         Me.ACCOUNTTextBox1.Location = New System.Drawing.Point(32, 137)
         Me.ACCOUNTTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ACCOUNTTextBox1.Name = "ACCOUNTTextBox1"
@@ -741,6 +600,7 @@ Partial Class form1
         '
         'PrintDialog1
         '
+        Me.PrintDialog1.Document = Me.PrintDocument1
         Me.PrintDialog1.UseEXDialog = True
         '
         'PictureBox1
@@ -753,26 +613,10 @@ Partial Class form1
         Me.PictureBox1.TabIndex = 181
         Me.PictureBox1.TabStop = False
         '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'TransvacDataV2DataSet1
         '
         Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AddnotesBindingSource
-        '
-        Me.AddnotesBindingSource.DataMember = "addnotes"
-        Me.AddnotesBindingSource.DataSource = Me.TransvacDataV2DataSet1
         '
         'AddnotesTableAdapter
         '
@@ -780,13 +624,18 @@ Partial Class form1
         '
         'ADDMEMOTextBox
         '
-        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource, "actmemo", True))
+        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource1, "actmemo", True))
         Me.ADDMEMOTextBox.Location = New System.Drawing.Point(541, 135)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
         Me.ADDMEMOTextBox.Size = New System.Drawing.Size(281, 145)
         Me.ADDMEMOTextBox.TabIndex = 132
+        '
+        'AddnotesBindingSource1
+        '
+        Me.AddnotesBindingSource1.DataMember = "addnotes"
+        Me.AddnotesBindingSource1.DataSource = Me.ADDRESSBKDataSet
         '
         'AccountDataGridViewTextBoxColumn
         '
@@ -832,6 +681,84 @@ Partial Class form1
         Me.fndname_but.Text = "FIND NAME"
         Me.fndname_but.UseVisualStyleBackColor = True
         '
+        'PrintDialog2
+        '
+        Me.PrintDialog2.UseEXDialog = True
+        '
+        'PrintForm1
+        '
+        Me.PrintForm1.DocumentName = "document"
+        Me.PrintForm1.Form = Me
+        Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
+        Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
+        Me.PrintForm1.PrintFileName = Nothing
+        '
+        'AddnotesBindingSource
+        '
+        Me.AddnotesBindingSource.DataMember = "addnotes"
+        Me.AddnotesBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Me.AddnotesTableAdapter
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Nothing
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AddnotesTableAdapter1
+        '
+        Me.AddnotesTableAdapter1.ClearBeforeFill = True
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -857,7 +784,6 @@ Partial Class form1
         Me.Controls.Add(Me.AD2TextBox1)
         Me.Controls.Add(Me.AD1TextBox1)
         Me.Controls.Add(Me.NAMETextBox1)
-        Me.Controls.Add(Me.Tran2BindingNavigator)
         Me.Controls.Add(PROFORMALabel)
         Me.Controls.Add(Me.PROFORMATextBox)
         Me.Controls.Add(Me.Label16)
@@ -866,7 +792,6 @@ Partial Class form1
         Me.Controls.Add(Me.findbut)
         Me.Controls.Add(Me.membut)
         Me.Controls.Add(Me.savebut)
-        Me.Controls.Add(Me.editbut)
         Me.Controls.Add(Me.abortbut)
         Me.Controls.Add(Me.printbutton)
         Me.Controls.Add(Me.delbut)
@@ -897,13 +822,11 @@ Partial Class form1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "form1"
         Me.Text = "ADDRESS BOOK"
-        CType(Me.Tran2BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Tran2BindingNavigator.ResumeLayout(False)
-        Me.Tran2BindingNavigator.PerformLayout()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -917,7 +840,6 @@ Partial Class form1
     Friend WithEvents findbut As Button
     Friend WithEvents membut As Button
     Friend WithEvents savebut As Button
-    Friend WithEvents editbut As Button
     Friend WithEvents abortbut As Button
     Friend WithEvents printbutton As Button
     Friend WithEvents delbut As Button
@@ -933,22 +855,9 @@ Partial Class form1
     Friend WithEvents NWHOTextBox As TextBox
     Friend WithEvents ENTRYTYPETextBox As TextBox
     Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
-    Friend WithEvents Tran2BindingSource As BindingSource
+    Friend WithEvents Tran2BindingSource1 As BindingSource
     Friend WithEvents Tran2TableAdapter As ADDRESSBKDataSetTableAdapters.tran2TableAdapter
     Friend WithEvents TableAdapterManager As ADDRESSBKDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Tran2BindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents Tran2BindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents NAMETextBox1 As TextBox
     Friend WithEvents AD1TextBox1 As TextBox
     Friend WithEvents AD2TextBox1 As TextBox
@@ -967,10 +876,8 @@ Partial Class form1
     Friend WithEvents selectbut As Button
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintDialog1 As PrintDialog
-    Friend WithEvents PrintToolStripButton As ToolStripButton
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
-    Friend WithEvents AddnotesBindingSource As BindingSource
     Friend WithEvents AddnotesTableAdapter As TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter
     Friend WithEvents ADDMEMOTextBox As TextBox
     Friend WithEvents AccountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -979,4 +886,10 @@ Partial Class form1
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents fndact_but As Button
     Friend WithEvents fndname_but As Button
+    Friend WithEvents PrintDialog2 As PrintDialog
+    Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
+    Friend WithEvents AddnotesBindingSource1 As BindingSource
+    Friend WithEvents AddnotesTableAdapter1 As ADDRESSBKDataSetTableAdapters.addnotesTableAdapter
+    Friend WithEvents AddnotesBindingSource As BindingSource
+    Friend WithEvents TableAdapterManager1 As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
 End Class

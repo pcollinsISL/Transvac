@@ -1,39 +1,40 @@
 ﻿Public Class form1
-    Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles Tran2BindingNavigatorSaveItem.Click
+    Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
-        Me.Tran2BindingSource.EndEdit()
+        Me.Tran2BindingSource1.EndEdit()
+        Me.AddnotesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
 
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
-        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
+        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
-        Me.Tran2BindingSource.AddNew()
-        rem Me.AddnotesBindingSource.AddNew()
+        Me.Tran2BindingSource1.AddNew()
+        Me.AddnotesBindingSource.AddNew()
     End Sub
 
     Private Sub but6_Click(sender As Object, e As EventArgs) Handles but6.Click
-        Me.Tran2BindingSource.MoveNext()
-        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
+        Me.Tran2BindingSource1.MoveNext()
+        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but4_Click(sender As Object, e As EventArgs) Handles but4.Click
-        Me.Tran2BindingSource.MoveFirst()
-        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
+        Me.Tran2BindingSource1.MoveFirst()
+        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but5_Click(sender As Object, e As EventArgs) Handles but5.Click
-        Me.Tran2BindingSource.MovePrevious()
-        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
+        Me.Tran2BindingSource1.MovePrevious()
+        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but7_Click(sender As Object, e As EventArgs) Handles but7.Click
-        Me.Tran2BindingSource.MoveLast()
-        Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
+        Me.Tran2BindingSource1.MoveLast()
+        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub delbut_Click(sender As Object, e As EventArgs) Handles delbut.Click
@@ -43,12 +44,11 @@
             End If
             Tran2TableAdapter.AddressDeleteQuery(ACCOUNTTextBox1.Text)
             MsgBox("Delete successful")
-            'Update the gridview on the admin form
             Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
             Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
 
         Catch ex As Exception
-            MessageBox.Show("Error while deleting record on table: " & ex.Message, "Delete Records", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Error while deleting record on table: " & ex.Message, "Deleted Address", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 
@@ -73,15 +73,6 @@
     Private Sub NAMELabel_Click(sender As Object, e As EventArgs)
 
     End Sub
-
-    Private Sub ADDMEMOTextBox_TextChanged(sender As Object, e As EventArgs) Handles ADDMEMOTextBox.TextChanged
-        REM Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
-    End Sub
-
-    Private Sub osequencelb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles osequencelb.SelectedIndexChanged
-
-    End Sub
-
     Private Sub fndact_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndact_but.Click
         'Show the forms as a modaless window.
         Dim x As accountsrch = New accountsrch
@@ -105,6 +96,15 @@
     End Sub
 
     Private Sub savebtn(sender As Object, e As EventArgs) Handles savebut.Click
+        Me.Validate()
+        Me.Tran2BindingSource1.EndEdit()
+        Me.AddnotesBindingSource1.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
+        MsgBox("Save Sucsesful")
+    End Sub
+    Private Sub printbutton_Click(sender As Object, e As EventArgs) Handles printbutton.Click
+        Me.PrintForm1.PrinterSettings.DefaultPageSettings.Landscape = True
+        Me.PrintForm1.PrintAction = Printing.PrintAction.PrintToPreview
+        Me.PrintForm1.Print()
     End Sub
 End Class

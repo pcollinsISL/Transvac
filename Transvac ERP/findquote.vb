@@ -6,18 +6,18 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
-        Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet.enquiry, CustomerNameBox.Text)
+        Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet1.enquiry, CustomerNameBox.Text)
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet.enquiry, QuoteNOBox.Text)
+        Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, QuoteNOBox.Text)
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalesPersonBtn.Click
-        Me.EnquiryTableAdapter.FillBySalePer(Me.TransvacDataV2DataSet.enquiry, SalesPersonBox.Text)
+        Me.EnquiryTableAdapter.FillBySalePer(Me.TransvacDataV2DataSet1.enquiry, SalesPersonBox.Text)
     End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StatusBtn.Click
-        Me.EnquiryTableAdapter.FillByStatus(Me.TransvacDataV2DataSet.enquiry, StatusBox.Text)
+        Me.EnquiryTableAdapter.FillByStatus(Me.TransvacDataV2DataSet1.enquiry, StatusBox.Text)
     End Sub
 
     Dim ExitYN As System.Windows.Forms.DialogResult
@@ -28,7 +28,7 @@
     End Sub
 
     Private Sub QuoteNObtn_Click(sender As Object, e As EventArgs) Handles QuoteNoBtn.Click
-        Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet.enquiry, QuoteNOBox.Text)
+        Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, QuoteNOBox.Text)
     End Sub
 
     Private Sub SalesPerson(sender As Object, e As EventArgs) Handles SalesPersonBox.TextChanged
