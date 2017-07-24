@@ -23,7 +23,7 @@
         'TODO: This line of code loads data into the 'ADDRESSBKDataSet.tran2' table. You can move, or remove it, as needed.
         Me.Tran2TableAdapter1.Fill(Me.ADDRESSBKDataSet.tran2)
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.tran2' table. You can move, or remove it, as needed.
-        Me.Tran2TableAdapter.Fill(Me.TransvacDataV2DataSet1.tran2)
+        REM Me.Tran2TableAdapter.Fill(Me.TransvacDataV2DataSet1.tran2)
 
     End Sub
 End Class

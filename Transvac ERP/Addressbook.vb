@@ -7,14 +7,13 @@
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.addnotes' table. You can move, or remove it, as needed.
-        'TODO: This line of code loads data into the 'ADDRESSBKDataSet.tran2' table. You can move, or remove it, as needed.
         Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
         Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
         Me.Tran2BindingSource.AddNew()
+        rem Me.AddnotesBindingSource.AddNew()
     End Sub
 
     Private Sub but6_Click(sender As Object, e As EventArgs) Handles but6.Click
@@ -38,7 +37,19 @@
     End Sub
 
     Private Sub delbut_Click(sender As Object, e As EventArgs) Handles delbut.Click
+        Try
+            If MessageBox.Show("Are you sure you wish to delete this Address?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.No Then
+                Exit Sub
+            End If
+            Tran2TableAdapter.AddressDeleteQuery(ACCOUNTTextBox1.Text)
+            MsgBox("Delete successful")
+            'Update the gridview on the admin form
+            Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
+            Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
 
+        Catch ex As Exception
+            MessageBox.Show("Error while deleting record on table: " & ex.Message, "Delete Records", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
     End Sub
 
     Private Sub selectbut_Click(sender As Object, e As EventArgs) Handles selectbut.Click
@@ -87,5 +98,13 @@
         Dim x As updatemem = updatemem
         updatemem.MemoBox.Text = ADDMEMOTextBox.Text
         x.Show()
+    End Sub
+
+    Private Sub abortbut_Click(sender As Object, e As EventArgs) Handles abortbut.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub savebtn(sender As Object, e As EventArgs) Handles savebut.Click
+        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
     End Sub
 End Class
