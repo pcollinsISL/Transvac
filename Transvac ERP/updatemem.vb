@@ -5,19 +5,31 @@
     End Sub
 
     Private Sub updatemem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.addnotes' table. You can move, or remove it, as needed.
-        REM Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, addressbook.ACCOUNTTextBox1)
+
 
     End Sub
 
     Private Sub AddnotesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.AddnotesBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet1)
+        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
 
     End Sub
 
     Private Sub MemoBox_TextChanged(sender As Object, e As EventArgs) Handles MemoBox.TextChanged
 
+    End Sub
+
+    Private Sub AddnotesBindingNavigator1SaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.AddnotesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
+
+    End Sub
+
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        Me.Validate()
+        Me.AddnotesBindingSource1.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
     End Sub
 End Class
