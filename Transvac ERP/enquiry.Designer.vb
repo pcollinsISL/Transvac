@@ -306,7 +306,7 @@ Partial Class enquiry
         Me.AccnoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
         Me.AccnoTextBox.Location = New System.Drawing.Point(692, 55)
         Me.AccnoTextBox.Name = "AccnoTextBox"
-        Me.AccnoTextBox.Size = New System.Drawing.Size(72, 20)
+        Me.AccnoTextBox.Size = New System.Drawing.Size(50, 20)
         Me.AccnoTextBox.TabIndex = 22
         '
         'StatusComboBox

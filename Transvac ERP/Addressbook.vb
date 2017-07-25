@@ -107,4 +107,8 @@
         Me.PrintForm1.PrintAction = Printing.PrintAction.PrintToPreview
         Me.PrintForm1.Print()
     End Sub
+
+    Private Sub ADDMEMOTextBox_TextChanged(sender As Object, e As EventArgs) Handles ADDMEMOTextBox.TextChanged
+
+    End Sub
 End Class
