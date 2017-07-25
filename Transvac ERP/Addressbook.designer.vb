@@ -59,8 +59,6 @@ Partial Class form1
         Me.NWHOTextBox = New System.Windows.Forms.TextBox()
         Me.ENTRYTYPETextBox = New System.Windows.Forms.TextBox()
         Me.NAMETextBox1 = New System.Windows.Forms.TextBox()
-        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
         Me.AD1TextBox1 = New System.Windows.Forms.TextBox()
         Me.AD2TextBox1 = New System.Windows.Forms.TextBox()
         Me.AD3TextBox = New System.Windows.Forms.TextBox()
@@ -82,7 +80,6 @@ Partial Class form1
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
-        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ActmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
@@ -93,6 +90,9 @@ Partial Class form1
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
+        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
@@ -109,12 +109,12 @@ Partial Class form1
         PHONELabel = New System.Windows.Forms.Label()
         NAMELabel = New System.Windows.Forms.Label()
         ACCOUNTLabel = New System.Windows.Forms.Label()
-        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PROFORMALabel
@@ -233,9 +233,9 @@ Partial Class form1
         NAMELabel.Location = New System.Drawing.Point(93, 120)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
-        NAMELabel.Size = New System.Drawing.Size(90, 13)
+        NAMELabel.Size = New System.Drawing.Size(78, 13)
         NAMELabel.TabIndex = 114
-        NAMELabel.Text = "Contact Name 23"
+        NAMELabel.Text = "Contact Name "
         AddHandler NAMELabel.Click, AddressOf Me.NAMELabel_Click
         '
         'ACCOUNTLabel
@@ -447,16 +447,6 @@ Partial Class form1
         Me.NAMETextBox1.Size = New System.Drawing.Size(172, 20)
         Me.NAMETextBox1.TabIndex = 164
         '
-        'Tran2BindingSource1
-        '
-        Me.Tran2BindingSource1.DataMember = "tran2"
-        Me.Tran2BindingSource1.DataSource = Me.ADDRESSBKDataSet
-        '
-        'ADDRESSBKDataSet
-        '
-        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
-        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'AD1TextBox1
         '
         Me.AD1TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD1", True))
@@ -624,18 +614,13 @@ Partial Class form1
         '
         'ADDMEMOTextBox
         '
-        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource1, "actmemo", True))
+        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "ADDMEMO", True))
         Me.ADDMEMOTextBox.Location = New System.Drawing.Point(541, 135)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
         Me.ADDMEMOTextBox.Size = New System.Drawing.Size(281, 145)
         Me.ADDMEMOTextBox.TabIndex = 132
-        '
-        'AddnotesBindingSource1
-        '
-        Me.AddnotesBindingSource1.DataMember = "addnotes"
-        Me.AddnotesBindingSource1.DataSource = Me.ADDRESSBKDataSet
         '
         'AccountDataGridViewTextBoxColumn
         '
@@ -744,6 +729,21 @@ Partial Class form1
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Tran2BindingSource1
+        '
+        Me.Tran2BindingSource1.DataMember = "tran2"
+        Me.Tran2BindingSource1.DataSource = Me.ADDRESSBKDataSet
+        '
+        'ADDRESSBKDataSet
+        '
+        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
+        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AddnotesBindingSource1
+        '
+        Me.AddnotesBindingSource1.DataMember = "addnotes"
+        Me.AddnotesBindingSource1.DataSource = Me.ADDRESSBKDataSet
+        '
         'Tran2TableAdapter
         '
         Me.Tran2TableAdapter.ClearBeforeFill = True
@@ -822,12 +822,12 @@ Partial Class form1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "form1"
         Me.Text = "ADDRESS BOOK"
-        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
