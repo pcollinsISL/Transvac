@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim PROFORMALabel As System.Windows.Forms.Label
@@ -40,8 +40,6 @@ Partial Class form1
         Me.PROFORMATextBox = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.osequencelb = New System.Windows.Forms.ListBox()
-        Me.findbut = New System.Windows.Forms.Button()
         Me.membut = New System.Windows.Forms.Button()
         Me.savebut = New System.Windows.Forms.Button()
         Me.abortbut = New System.Windows.Forms.Button()
@@ -72,13 +70,10 @@ Partial Class form1
         Me.EUROVATTextBox = New System.Windows.Forms.TextBox()
         Me.TERMDAYSTextBox = New System.Windows.Forms.TextBox()
         Me.ACCOUNTTextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.selectbut = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
         Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ActmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -90,12 +85,13 @@ Partial Class form1
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
-        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
+        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         PROFORMALabel = New System.Windows.Forms.Label()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
@@ -111,6 +107,7 @@ Partial Class form1
         ACCOUNTLabel = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,7 +117,7 @@ Partial Class form1
         'PROFORMALabel
         '
         PROFORMALabel.AutoSize = True
-        PROFORMALabel.Location = New System.Drawing.Point(268, 373)
+        PROFORMALabel.Location = New System.Drawing.Point(292, 335)
         PROFORMALabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         PROFORMALabel.Name = "PROFORMALabel"
         PROFORMALabel.Size = New System.Drawing.Size(71, 13)
@@ -140,7 +137,7 @@ Partial Class form1
         'INUSELabel
         '
         INUSELabel.AutoSize = True
-        INUSELabel.Location = New System.Drawing.Point(489, 348)
+        INUSELabel.Location = New System.Drawing.Point(510, 348)
         INUSELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         INUSELabel.Name = "INUSELabel"
         INUSELabel.Size = New System.Drawing.Size(43, 13)
@@ -160,7 +157,7 @@ Partial Class form1
         'ENTRYTYPELabel
         '
         ENTRYTYPELabel.AutoSize = True
-        ENTRYTYPELabel.Location = New System.Drawing.Point(266, 397)
+        ENTRYTYPELabel.Location = New System.Drawing.Point(290, 359)
         ENTRYTYPELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ENTRYTYPELabel.Name = "ENTRYTYPELabel"
         ENTRYTYPELabel.Size = New System.Drawing.Size(59, 13)
@@ -250,17 +247,17 @@ Partial Class form1
         '
         'PROFORMATextBox
         '
-        Me.PROFORMATextBox.Location = New System.Drawing.Point(338, 370)
+        Me.PROFORMATextBox.Location = New System.Drawing.Point(362, 332)
         Me.PROFORMATextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROFORMATextBox.Name = "PROFORMATextBox"
-        Me.PROFORMATextBox.Size = New System.Drawing.Size(76, 20)
+        Me.PROFORMATextBox.Size = New System.Drawing.Size(98, 20)
         Me.PROFORMATextBox.TabIndex = 162
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(114, 49)
+        Me.Label16.Location = New System.Drawing.Point(114, 32)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(163, 13)
         Me.Label16.TabIndex = 160
@@ -275,26 +272,6 @@ Partial Class form1
         Me.Label3.TabIndex = 159
         Me.Label3.Text = "Address (5 Lines)"
         '
-        'osequencelb
-        '
-        Me.osequencelb.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.osequencelb.FormattingEnabled = True
-        Me.osequencelb.ItemHeight = 16
-        Me.osequencelb.Items.AddRange(New Object() {"Account", "Name"})
-        Me.osequencelb.Location = New System.Drawing.Point(470, 470)
-        Me.osequencelb.Name = "osequencelb"
-        Me.osequencelb.Size = New System.Drawing.Size(74, 36)
-        Me.osequencelb.TabIndex = 158
-        '
-        'findbut
-        '
-        Me.findbut.Location = New System.Drawing.Point(550, 483)
-        Me.findbut.Name = "findbut"
-        Me.findbut.Size = New System.Drawing.Size(74, 23)
-        Me.findbut.TabIndex = 157
-        Me.findbut.Text = "FIND"
-        Me.findbut.UseVisualStyleBackColor = True
-        '
         'membut
         '
         Me.membut.Location = New System.Drawing.Point(541, 285)
@@ -306,16 +283,16 @@ Partial Class form1
         '
         'savebut
         '
-        Me.savebut.Location = New System.Drawing.Point(68, 359)
+        Me.savebut.Location = New System.Drawing.Point(113, 330)
         Me.savebut.Name = "savebut"
-        Me.savebut.Size = New System.Drawing.Size(74, 21)
+        Me.savebut.Size = New System.Drawing.Size(74, 23)
         Me.savebut.TabIndex = 154
         Me.savebut.Text = "SAVE"
         Me.savebut.UseVisualStyleBackColor = True
         '
         'abortbut
         '
-        Me.abortbut.Location = New System.Drawing.Point(150, 358)
+        Me.abortbut.Location = New System.Drawing.Point(193, 330)
         Me.abortbut.Name = "abortbut"
         Me.abortbut.Size = New System.Drawing.Size(74, 23)
         Me.abortbut.TabIndex = 152
@@ -324,7 +301,7 @@ Partial Class form1
         '
         'printbutton
         '
-        Me.printbutton.Location = New System.Drawing.Point(108, 391)
+        Me.printbutton.Location = New System.Drawing.Point(634, 49)
         Me.printbutton.Name = "printbutton"
         Me.printbutton.Size = New System.Drawing.Size(75, 23)
         Me.printbutton.TabIndex = 151
@@ -342,7 +319,7 @@ Partial Class form1
         '
         'newbut
         '
-        Me.newbut.Location = New System.Drawing.Point(68, 332)
+        Me.newbut.Location = New System.Drawing.Point(33, 330)
         Me.newbut.Name = "newbut"
         Me.newbut.Size = New System.Drawing.Size(74, 23)
         Me.newbut.TabIndex = 149
@@ -351,43 +328,43 @@ Partial Class form1
         '
         'but5
         '
-        Me.but5.Location = New System.Drawing.Point(86, 446)
+        Me.but5.Location = New System.Drawing.Point(92, 374)
         Me.but5.Name = "but5"
-        Me.but5.Size = New System.Drawing.Size(45, 23)
+        Me.but5.Size = New System.Drawing.Size(57, 23)
         Me.but5.TabIndex = 148
         Me.but5.Text = "<"
         Me.but5.UseVisualStyleBackColor = True
         '
         'but6
         '
-        Me.but6.Location = New System.Drawing.Point(142, 446)
+        Me.but6.Location = New System.Drawing.Point(151, 374)
         Me.but6.Name = "but6"
-        Me.but6.Size = New System.Drawing.Size(45, 23)
+        Me.but6.Size = New System.Drawing.Size(57, 23)
         Me.but6.TabIndex = 147
         Me.but6.Text = ">"
         Me.but6.UseVisualStyleBackColor = True
         '
         'but7
         '
-        Me.but7.Location = New System.Drawing.Point(196, 446)
+        Me.but7.Location = New System.Drawing.Point(210, 374)
         Me.but7.Name = "but7"
-        Me.but7.Size = New System.Drawing.Size(45, 23)
+        Me.but7.Size = New System.Drawing.Size(57, 23)
         Me.but7.TabIndex = 146
         Me.but7.Text = "|>"
         Me.but7.UseVisualStyleBackColor = True
         '
         'but4
         '
-        Me.but4.Location = New System.Drawing.Point(32, 446)
+        Me.but4.Location = New System.Drawing.Point(33, 374)
         Me.but4.Name = "but4"
-        Me.but4.Size = New System.Drawing.Size(45, 23)
+        Me.but4.Size = New System.Drawing.Size(57, 23)
         Me.but4.TabIndex = 145
         Me.but4.Text = "|<"
         Me.but4.UseVisualStyleBackColor = True
         '
         'PROMOCheckBox
         '
-        Me.PROMOCheckBox.Location = New System.Drawing.Point(757, 290)
+        Me.PROMOCheckBox.Location = New System.Drawing.Point(362, 392)
         Me.PROMOCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROMOCheckBox.Name = "PROMOCheckBox"
         Me.PROMOCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -397,7 +374,7 @@ Partial Class form1
         '
         'XCARDCheckBox
         '
-        Me.XCARDCheckBox.Location = New System.Drawing.Point(757, 311)
+        Me.XCARDCheckBox.Location = New System.Drawing.Point(362, 416)
         Me.XCARDCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.XCARDCheckBox.Name = "XCARDCheckBox"
         Me.XCARDCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -416,7 +393,7 @@ Partial Class form1
         '
         'INUSETextBox
         '
-        Me.INUSETextBox.Location = New System.Drawing.Point(541, 343)
+        Me.INUSETextBox.Location = New System.Drawing.Point(581, 341)
         Me.INUSETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.INUSETextBox.Name = "INUSETextBox"
         Me.INUSETextBox.Size = New System.Drawing.Size(72, 20)
@@ -432,19 +409,19 @@ Partial Class form1
         '
         'ENTRYTYPETextBox
         '
-        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(338, 393)
+        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(362, 355)
         Me.ENTRYTYPETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ENTRYTYPETextBox.Name = "ENTRYTYPETextBox"
-        Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(141, 20)
+        Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(98, 20)
         Me.ENTRYTYPETextBox.TabIndex = 136
         '
         'NAMETextBox1
         '
         Me.NAMETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "NAME", True))
-        Me.NAMETextBox1.Location = New System.Drawing.Point(95, 137)
+        Me.NAMETextBox1.Location = New System.Drawing.Point(106, 137)
         Me.NAMETextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.NAMETextBox1.Name = "NAMETextBox1"
-        Me.NAMETextBox1.Size = New System.Drawing.Size(172, 20)
+        Me.NAMETextBox1.Size = New System.Drawing.Size(161, 20)
         Me.NAMETextBox1.TabIndex = 164
         '
         'AD1TextBox1
@@ -547,7 +524,7 @@ Partial Class form1
         Me.EUROVATTextBox.Location = New System.Drawing.Point(361, 267)
         Me.EUROVATTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EUROVATTextBox.Name = "EUROVATTextBox"
-        Me.EUROVATTextBox.Size = New System.Drawing.Size(93, 20)
+        Me.EUROVATTextBox.Size = New System.Drawing.Size(96, 20)
         Me.EUROVATTextBox.TabIndex = 175
         '
         'TERMDAYSTextBox
@@ -568,22 +545,13 @@ Partial Class form1
         Me.ACCOUNTTextBox1.Size = New System.Drawing.Size(65, 20)
         Me.ACCOUNTTextBox1.TabIndex = 177
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(28, 493)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(138, 13)
-        Me.Label15.TabIndex = 178
-        Me.Label15.Text = "Sales Ledger Address Book"
-        '
         'selectbut
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(721, 446)
+        Me.selectbut.Location = New System.Drawing.Point(702, 401)
         Me.selectbut.Name = "selectbut"
-        Me.selectbut.Size = New System.Drawing.Size(101, 49)
+        Me.selectbut.Size = New System.Drawing.Size(139, 49)
         Me.selectbut.TabIndex = 180
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
@@ -596,21 +564,12 @@ Partial Class form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(7, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 181
         Me.PictureBox1.TabStop = False
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AddnotesTableAdapter
-        '
-        Me.AddnotesTableAdapter.ClearBeforeFill = True
         '
         'ADDMEMOTextBox
         '
@@ -650,7 +609,7 @@ Partial Class form1
         '
         'fndact_but
         '
-        Me.fndact_but.Location = New System.Drawing.Point(721, 370)
+        Me.fndact_but.Location = New System.Drawing.Point(719, 325)
         Me.fndact_but.Name = "fndact_but"
         Me.fndact_but.Size = New System.Drawing.Size(103, 23)
         Me.fndact_but.TabIndex = 182
@@ -659,7 +618,7 @@ Partial Class form1
         '
         'fndname_but
         '
-        Me.fndname_but.Location = New System.Drawing.Point(721, 399)
+        Me.fndname_but.Location = New System.Drawing.Point(719, 354)
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(103, 23)
         Me.fndname_but.TabIndex = 183
@@ -677,6 +636,30 @@ Partial Class form1
         Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
         Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
         Me.PrintForm1.PrintFileName = Nothing
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AddnotesTableAdapter1
+        '
+        Me.AddnotesTableAdapter1.ClearBeforeFill = True
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AddnotesTableAdapter
+        '
+        Me.AddnotesTableAdapter.ClearBeforeFill = True
         '
         'AddnotesBindingSource
         '
@@ -729,21 +712,6 @@ Partial Class form1
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Tran2BindingSource1
-        '
-        Me.Tran2BindingSource1.DataMember = "tran2"
-        Me.Tran2BindingSource1.DataSource = Me.ADDRESSBKDataSet
-        '
-        'ADDRESSBKDataSet
-        '
-        Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
-        Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AddnotesBindingSource1
-        '
-        Me.AddnotesBindingSource1.DataMember = "addnotes"
-        Me.AddnotesBindingSource1.DataSource = Me.ADDRESSBKDataSet
-        '
         'Tran2TableAdapter
         '
         Me.Tran2TableAdapter.ClearBeforeFill = True
@@ -764,12 +732,11 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(870, 542)
+        Me.ClientSize = New System.Drawing.Size(916, 510)
         Me.Controls.Add(Me.fndname_but)
         Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.selectbut)
-        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.ACCOUNTTextBox1)
         Me.Controls.Add(Me.TERMDAYSTextBox)
         Me.Controls.Add(Me.EUROVATTextBox)
@@ -788,8 +755,6 @@ Partial Class form1
         Me.Controls.Add(Me.PROFORMATextBox)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.osequencelb)
-        Me.Controls.Add(Me.findbut)
         Me.Controls.Add(Me.membut)
         Me.Controls.Add(Me.savebut)
         Me.Controls.Add(Me.abortbut)
@@ -827,7 +792,10 @@ Partial Class form1
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -836,8 +804,6 @@ Partial Class form1
     Friend WithEvents PROFORMATextBox As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents osequencelb As ListBox
-    Friend WithEvents findbut As Button
     Friend WithEvents membut As Button
     Friend WithEvents savebut As Button
     Friend WithEvents abortbut As Button
@@ -872,7 +838,6 @@ Partial Class form1
     Friend WithEvents EUROVATTextBox As TextBox
     Friend WithEvents TERMDAYSTextBox As TextBox
     Friend WithEvents ACCOUNTTextBox1 As TextBox
-    Friend WithEvents Label15 As Label
     Friend WithEvents selectbut As Button
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintDialog1 As PrintDialog

@@ -29,12 +29,6 @@ Partial Class namesrch
         Me.fndabt_but = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FNameDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ad1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,6 +55,12 @@ Partial Class namesrch
         Me.XcardDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PromoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ADDMEMODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FNameDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,41 +124,8 @@ Partial Class namesrch
         Me.FNameDataGridView.Location = New System.Drawing.Point(49, 131)
         Me.FNameDataGridView.Name = "FNameDataGridView"
         Me.FNameDataGridView.ReadOnly = True
-        Me.FNameDataGridView.Size = New System.Drawing.Size(702, 275)
+        Me.FNameDataGridView.Size = New System.Drawing.Size(655, 275)
         Me.FNameDataGridView.TabIndex = 10
-        '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1BindingSource
-        '
-        'TransvacDataV2DataSet1BindingSource
-        '
-        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
-        Me.TransvacDataV2DataSet1BindingSource.Position = 0
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tran2BindingSource1
-        '
-        Me.Tran2BindingSource1.DataMember = "tran2"
-        Me.Tran2BindingSource1.DataSource = Me.TransvacDataV2DataSet1BindingSource
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(676, 420)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "SELECT"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
         '
         'NameDataGridViewTextBoxColumn
         '
@@ -364,6 +331,39 @@ Partial Class namesrch
         Me.ADDMEMODataGridViewTextBoxColumn.Name = "ADDMEMODataGridViewTextBoxColumn"
         Me.ADDMEMODataGridViewTextBoxColumn.ReadOnly = True
         Me.ADDMEMODataGridViewTextBoxColumn.Visible = False
+        '
+        'Tran2BindingSource
+        '
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        '
+        'TransvacDataV2DataSet1BindingSource
+        '
+        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.TransvacDataV2DataSet1BindingSource.Position = 0
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tran2BindingSource1
+        '
+        Me.Tran2BindingSource1.DataMember = "tran2"
+        Me.Tran2BindingSource1.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(629, 420)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "SELECT"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
         '
         'namesrch
         '
