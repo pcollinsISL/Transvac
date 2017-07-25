@@ -111,4 +111,8 @@
     Private Sub ADDMEMOTextBox_TextChanged(sender As Object, e As EventArgs) Handles ADDMEMOTextBox.TextChanged
 
     End Sub
+
+    Private Sub AD1TextBox1_TextChanged(sender As Object, e As EventArgs) Handles AD1TextBox1.TextChanged
+
+    End Sub
 End Class

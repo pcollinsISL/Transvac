@@ -63,7 +63,6 @@ Partial Class enquiry
         Me.Add3TextBox = New System.Windows.Forms.TextBox()
         Me.Add2TextBox = New System.Windows.Forms.TextBox()
         Me.Add1TextBox = New System.Windows.Forms.TextBox()
-        Me.AcctTypeComboBox = New System.Windows.Forms.ComboBox()
         Me.DaysTextBox = New System.Windows.Forms.TextBox()
         Me.Btnquotegen = New System.Windows.Forms.Button()
         Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
@@ -71,6 +70,9 @@ Partial Class enquiry
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.qotenoLabel = New System.Windows.Forms.Label()
+        Me.qotenoTextBox = New System.Windows.Forms.TextBox()
+        Me.acctTextBox = New System.Windows.Forms.TextBox()
         EdateLabel = New System.Windows.Forms.Label()
         CnameLabel = New System.Windows.Forms.Label()
         ContactLabel = New System.Windows.Forms.Label()
@@ -94,7 +96,7 @@ Partial Class enquiry
         'EdateLabel
         '
         EdateLabel.AutoSize = True
-        EdateLabel.Location = New System.Drawing.Point(583, 87)
+        EdateLabel.Location = New System.Drawing.Point(565, 123)
         EdateLabel.Name = "EdateLabel"
         EdateLabel.Size = New System.Drawing.Size(73, 13)
         EdateLabel.TabIndex = 1
@@ -103,7 +105,7 @@ Partial Class enquiry
         'CnameLabel
         '
         CnameLabel.AutoSize = True
-        CnameLabel.Location = New System.Drawing.Point(44, 124)
+        CnameLabel.Location = New System.Drawing.Point(44, 156)
         CnameLabel.Name = "CnameLabel"
         CnameLabel.Size = New System.Drawing.Size(85, 13)
         CnameLabel.TabIndex = 3
@@ -112,7 +114,7 @@ Partial Class enquiry
         'ContactLabel
         '
         ContactLabel.AutoSize = True
-        ContactLabel.Location = New System.Drawing.Point(428, 127)
+        ContactLabel.Location = New System.Drawing.Point(428, 159)
         ContactLabel.Name = "ContactLabel"
         ContactLabel.Size = New System.Drawing.Size(47, 13)
         ContactLabel.TabIndex = 5
@@ -121,7 +123,7 @@ Partial Class enquiry
         'Ref_noLabel
         '
         Ref_noLabel.AutoSize = True
-        Ref_noLabel.Location = New System.Drawing.Point(427, 186)
+        Ref_noLabel.Location = New System.Drawing.Point(427, 218)
         Ref_noLabel.Name = "Ref_noLabel"
         Ref_noLabel.Size = New System.Drawing.Size(44, 13)
         Ref_noLabel.TabIndex = 7
@@ -130,7 +132,7 @@ Partial Class enquiry
         'Tel_noLabel
         '
         Tel_noLabel.AutoSize = True
-        Tel_noLabel.Location = New System.Drawing.Point(426, 214)
+        Tel_noLabel.Location = New System.Drawing.Point(426, 246)
         Tel_noLabel.Name = "Tel_noLabel"
         Tel_noLabel.Size = New System.Drawing.Size(40, 13)
         Tel_noLabel.TabIndex = 9
@@ -139,7 +141,7 @@ Partial Class enquiry
         'Fax_noLabel
         '
         Fax_noLabel.AutoSize = True
-        Fax_noLabel.Location = New System.Drawing.Point(426, 239)
+        Fax_noLabel.Location = New System.Drawing.Point(426, 271)
         Fax_noLabel.Name = "Fax_noLabel"
         Fax_noLabel.Size = New System.Drawing.Size(42, 13)
         Fax_noLabel.TabIndex = 11
@@ -148,7 +150,7 @@ Partial Class enquiry
         'Mobtel_noLabel
         '
         Mobtel_noLabel.AutoSize = True
-        Mobtel_noLabel.Location = New System.Drawing.Point(427, 264)
+        Mobtel_noLabel.Location = New System.Drawing.Point(427, 296)
         Mobtel_noLabel.Name = "Mobtel_noLabel"
         Mobtel_noLabel.Size = New System.Drawing.Size(58, 13)
         Mobtel_noLabel.TabIndex = 13
@@ -157,7 +159,7 @@ Partial Class enquiry
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(429, 292)
+        EmailLabel.Location = New System.Drawing.Point(429, 324)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(39, 13)
         EmailLabel.TabIndex = 15
@@ -166,7 +168,7 @@ Partial Class enquiry
         'Ship_nameLabel
         '
         Ship_nameLabel.AutoSize = True
-        Ship_nameLabel.Location = New System.Drawing.Point(427, 316)
+        Ship_nameLabel.Location = New System.Drawing.Point(427, 348)
         Ship_nameLabel.Name = "Ship_nameLabel"
         Ship_nameLabel.Size = New System.Drawing.Size(62, 13)
         Ship_nameLabel.TabIndex = 17
@@ -175,7 +177,7 @@ Partial Class enquiry
         'AccnoLabel
         '
         AccnoLabel.AutoSize = True
-        AccnoLabel.Location = New System.Drawing.Point(583, 58)
+        AccnoLabel.Location = New System.Drawing.Point(566, 58)
         AccnoLabel.Name = "AccnoLabel"
         AccnoLabel.Size = New System.Drawing.Size(96, 13)
         AccnoLabel.TabIndex = 21
@@ -184,7 +186,7 @@ Partial Class enquiry
         'StatusLabel
         '
         StatusLabel.AutoSize = True
-        StatusLabel.Location = New System.Drawing.Point(73, 497)
+        StatusLabel.Location = New System.Drawing.Point(73, 529)
         StatusLabel.Name = "StatusLabel"
         StatusLabel.Size = New System.Drawing.Size(40, 13)
         StatusLabel.TabIndex = 23
@@ -193,7 +195,7 @@ Partial Class enquiry
         'EtypeLabel
         '
         EtypeLabel.AutoSize = True
-        EtypeLabel.Location = New System.Drawing.Point(77, 525)
+        EtypeLabel.Location = New System.Drawing.Point(77, 557)
         EtypeLabel.Name = "EtypeLabel"
         EtypeLabel.Size = New System.Drawing.Size(34, 13)
         EtypeLabel.TabIndex = 28
@@ -202,7 +204,7 @@ Partial Class enquiry
         'Label1
         '
         Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(45, 347)
+        Label1.Location = New System.Drawing.Point(45, 379)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(74, 13)
         Label1.TabIndex = 48
@@ -211,7 +213,7 @@ Partial Class enquiry
         'Label2
         '
         Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(260, 347)
+        Label2.Location = New System.Drawing.Point(260, 379)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(31, 13)
         Label2.TabIndex = 49
@@ -220,7 +222,7 @@ Partial Class enquiry
         'Label3
         '
         Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(45, 219)
+        Label3.Location = New System.Drawing.Point(45, 251)
         Label3.Name = "Label3"
         Label3.Size = New System.Drawing.Size(48, 13)
         Label3.TabIndex = 51
@@ -229,7 +231,7 @@ Partial Class enquiry
         'ContactTextBox
         '
         Me.ContactTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
-        Me.ContactTextBox.Location = New System.Drawing.Point(506, 125)
+        Me.ContactTextBox.Location = New System.Drawing.Point(506, 157)
         Me.ContactTextBox.Name = "ContactTextBox"
         Me.ContactTextBox.Size = New System.Drawing.Size(258, 20)
         Me.ContactTextBox.TabIndex = 6
@@ -247,7 +249,7 @@ Partial Class enquiry
         'Ref_noTextBox
         '
         Me.Ref_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "ref_no", True))
-        Me.Ref_noTextBox.Location = New System.Drawing.Point(505, 183)
+        Me.Ref_noTextBox.Location = New System.Drawing.Point(505, 215)
         Me.Ref_noTextBox.Name = "Ref_noTextBox"
         Me.Ref_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Ref_noTextBox.TabIndex = 8
@@ -255,7 +257,7 @@ Partial Class enquiry
         'Tel_noTextBox
         '
         Me.Tel_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "tel_no", True))
-        Me.Tel_noTextBox.Location = New System.Drawing.Point(505, 209)
+        Me.Tel_noTextBox.Location = New System.Drawing.Point(505, 241)
         Me.Tel_noTextBox.Name = "Tel_noTextBox"
         Me.Tel_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Tel_noTextBox.TabIndex = 10
@@ -263,7 +265,7 @@ Partial Class enquiry
         'Fax_noTextBox
         '
         Me.Fax_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "fax_no", True))
-        Me.Fax_noTextBox.Location = New System.Drawing.Point(505, 235)
+        Me.Fax_noTextBox.Location = New System.Drawing.Point(505, 267)
         Me.Fax_noTextBox.Name = "Fax_noTextBox"
         Me.Fax_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Fax_noTextBox.TabIndex = 12
@@ -271,7 +273,7 @@ Partial Class enquiry
         'Mobtel_noTextBox
         '
         Me.Mobtel_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "mobtel_no", True))
-        Me.Mobtel_noTextBox.Location = New System.Drawing.Point(505, 261)
+        Me.Mobtel_noTextBox.Location = New System.Drawing.Point(505, 293)
         Me.Mobtel_noTextBox.Name = "Mobtel_noTextBox"
         Me.Mobtel_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Mobtel_noTextBox.TabIndex = 14
@@ -279,7 +281,7 @@ Partial Class enquiry
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "email", True))
-        Me.EmailTextBox.Location = New System.Drawing.Point(505, 287)
+        Me.EmailTextBox.Location = New System.Drawing.Point(505, 319)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(259, 20)
         Me.EmailTextBox.TabIndex = 16
@@ -287,7 +289,7 @@ Partial Class enquiry
         'Ship_nameTextBox
         '
         Me.Ship_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "ship_name", True))
-        Me.Ship_nameTextBox.Location = New System.Drawing.Point(506, 314)
+        Me.Ship_nameTextBox.Location = New System.Drawing.Point(506, 346)
         Me.Ship_nameTextBox.Name = "Ship_nameTextBox"
         Me.Ship_nameTextBox.Size = New System.Drawing.Size(258, 20)
         Me.Ship_nameTextBox.TabIndex = 18
@@ -295,7 +297,7 @@ Partial Class enquiry
         'EmemoTextBox
         '
         Me.EmemoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "ememo", True))
-        Me.EmemoTextBox.Location = New System.Drawing.Point(136, 395)
+        Me.EmemoTextBox.Location = New System.Drawing.Point(136, 427)
         Me.EmemoTextBox.Multiline = True
         Me.EmemoTextBox.Name = "EmemoTextBox"
         Me.EmemoTextBox.Size = New System.Drawing.Size(628, 80)
@@ -304,9 +306,9 @@ Partial Class enquiry
         'AccnoTextBox
         '
         Me.AccnoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
-        Me.AccnoTextBox.Location = New System.Drawing.Point(692, 55)
+        Me.AccnoTextBox.Location = New System.Drawing.Point(685, 55)
         Me.AccnoTextBox.Name = "AccnoTextBox"
-        Me.AccnoTextBox.Size = New System.Drawing.Size(50, 20)
+        Me.AccnoTextBox.Size = New System.Drawing.Size(79, 20)
         Me.AccnoTextBox.TabIndex = 22
         '
         'StatusComboBox
@@ -314,7 +316,7 @@ Partial Class enquiry
         Me.StatusComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "status", True))
         Me.StatusComboBox.FormattingEnabled = True
         Me.StatusComboBox.Items.AddRange(New Object() {"ENQUIRY", "AWAITING DETAILS", "REJECTED", "SUPPLIER QUOTE", "QUOTED", "INVOICED", "STRAIGHT ORDER", "COMPLETED", "ARCHIVED"})
-        Me.StatusComboBox.Location = New System.Drawing.Point(136, 492)
+        Me.StatusComboBox.Location = New System.Drawing.Point(136, 524)
         Me.StatusComboBox.Name = "StatusComboBox"
         Me.StatusComboBox.Size = New System.Drawing.Size(106, 21)
         Me.StatusComboBox.TabIndex = 24
@@ -324,14 +326,14 @@ Partial Class enquiry
         Me.EtypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "etype", True))
         Me.EtypeComboBox.FormattingEnabled = True
         Me.EtypeComboBox.Items.AddRange(New Object() {"TELEPHONE", "FAX", "E-MAIL", "POST", "WEBSITE"})
-        Me.EtypeComboBox.Location = New System.Drawing.Point(136, 520)
+        Me.EtypeComboBox.Location = New System.Drawing.Point(136, 552)
         Me.EtypeComboBox.Name = "EtypeComboBox"
         Me.EtypeComboBox.Size = New System.Drawing.Size(106, 21)
         Me.EtypeComboBox.TabIndex = 29
         '
         'btnabt
         '
-        Me.btnabt.Location = New System.Drawing.Point(136, 556)
+        Me.btnabt.Location = New System.Drawing.Point(136, 588)
         Me.btnabt.Name = "btnabt"
         Me.btnabt.Size = New System.Drawing.Size(75, 32)
         Me.btnabt.TabIndex = 30
@@ -340,7 +342,7 @@ Partial Class enquiry
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(217, 556)
+        Me.Button3.Location = New System.Drawing.Point(217, 588)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(74, 32)
         Me.Button3.TabIndex = 32
@@ -349,7 +351,7 @@ Partial Class enquiry
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(692, 344)
+        Me.Button4.Location = New System.Drawing.Point(692, 376)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(72, 31)
         Me.Button4.TabIndex = 33
@@ -358,7 +360,7 @@ Partial Class enquiry
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(504, 344)
+        Me.Button5.Location = New System.Drawing.Point(504, 376)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(102, 31)
         Me.Button5.TabIndex = 34
@@ -376,7 +378,7 @@ Partial Class enquiry
         '
         'Btnaddressbook
         '
-        Me.Btnaddressbook.Location = New System.Drawing.Point(136, 172)
+        Me.Btnaddressbook.Location = New System.Drawing.Point(136, 204)
         Me.Btnaddressbook.Name = "Btnaddressbook"
         Me.Btnaddressbook.Size = New System.Drawing.Size(106, 34)
         Me.Btnaddressbook.TabIndex = 37
@@ -386,7 +388,7 @@ Partial Class enquiry
         'CnameTextBox
         '
         Me.CnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "cname", True))
-        Me.CnameTextBox.Location = New System.Drawing.Point(136, 123)
+        Me.CnameTextBox.Location = New System.Drawing.Point(136, 155)
         Me.CnameTextBox.Name = "CnameTextBox"
         Me.CnameTextBox.Size = New System.Drawing.Size(237, 20)
         Me.CnameTextBox.TabIndex = 40
@@ -394,7 +396,7 @@ Partial Class enquiry
         'Add5TextBox
         '
         Me.Add5TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
-        Me.Add5TextBox.Location = New System.Drawing.Point(136, 316)
+        Me.Add5TextBox.Location = New System.Drawing.Point(136, 348)
         Me.Add5TextBox.Name = "Add5TextBox"
         Me.Add5TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add5TextBox.TabIndex = 41
@@ -402,7 +404,7 @@ Partial Class enquiry
         'Add4TextBox
         '
         Me.Add4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
-        Me.Add4TextBox.Location = New System.Drawing.Point(136, 290)
+        Me.Add4TextBox.Location = New System.Drawing.Point(136, 322)
         Me.Add4TextBox.Name = "Add4TextBox"
         Me.Add4TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add4TextBox.TabIndex = 43
@@ -410,7 +412,7 @@ Partial Class enquiry
         'Add3TextBox
         '
         Me.Add3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
-        Me.Add3TextBox.Location = New System.Drawing.Point(136, 264)
+        Me.Add3TextBox.Location = New System.Drawing.Point(136, 296)
         Me.Add3TextBox.Name = "Add3TextBox"
         Me.Add3TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add3TextBox.TabIndex = 44
@@ -418,7 +420,7 @@ Partial Class enquiry
         'Add2TextBox
         '
         Me.Add2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
-        Me.Add2TextBox.Location = New System.Drawing.Point(136, 238)
+        Me.Add2TextBox.Location = New System.Drawing.Point(136, 270)
         Me.Add2TextBox.Name = "Add2TextBox"
         Me.Add2TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add2TextBox.TabIndex = 45
@@ -426,32 +428,22 @@ Partial Class enquiry
         'Add1TextBox
         '
         Me.Add1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
-        Me.Add1TextBox.Location = New System.Drawing.Point(136, 212)
+        Me.Add1TextBox.Location = New System.Drawing.Point(136, 244)
         Me.Add1TextBox.Name = "Add1TextBox"
         Me.Add1TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add1TextBox.TabIndex = 46
         '
-        'AcctTypeComboBox
-        '
-        Me.AcctTypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "etype", True))
-        Me.AcctTypeComboBox.FormattingEnabled = True
-        Me.AcctTypeComboBox.Items.AddRange(New Object() {"TELEPHONE", "FAX", "E-MAIL", "POST", "WEBSITE"})
-        Me.AcctTypeComboBox.Location = New System.Drawing.Point(136, 342)
-        Me.AcctTypeComboBox.Name = "AcctTypeComboBox"
-        Me.AcctTypeComboBox.Size = New System.Drawing.Size(76, 21)
-        Me.AcctTypeComboBox.TabIndex = 47
-        '
         'DaysTextBox
         '
         Me.DaysTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
-        Me.DaysTextBox.Location = New System.Drawing.Point(314, 342)
+        Me.DaysTextBox.Location = New System.Drawing.Point(314, 374)
         Me.DaysTextBox.Name = "DaysTextBox"
         Me.DaysTextBox.Size = New System.Drawing.Size(59, 20)
         Me.DaysTextBox.TabIndex = 50
         '
         'Btnquotegen
         '
-        Me.Btnquotegen.Location = New System.Drawing.Point(671, 538)
+        Me.Btnquotegen.Location = New System.Drawing.Point(671, 570)
         Me.Btnquotegen.Name = "Btnquotegen"
         Me.Btnquotegen.Size = New System.Drawing.Size(93, 50)
         Me.Btnquotegen.TabIndex = 31
@@ -461,14 +453,14 @@ Partial Class enquiry
         'DateCreaTextBox
         '
         Me.DateCreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
-        Me.DateCreaTextBox.Location = New System.Drawing.Point(692, 82)
+        Me.DateCreaTextBox.Location = New System.Drawing.Point(685, 117)
         Me.DateCreaTextBox.Name = "DateCreaTextBox"
-        Me.DateCreaTextBox.Size = New System.Drawing.Size(72, 20)
+        Me.DateCreaTextBox.Size = New System.Drawing.Size(79, 20)
         Me.DateCreaTextBox.TabIndex = 52
         '
         'Btnquote
         '
-        Me.Btnquote.Location = New System.Drawing.Point(581, 548)
+        Me.Btnquote.Location = New System.Drawing.Point(581, 580)
         Me.Btnquote.Name = "Btnquote"
         Me.Btnquote.Size = New System.Drawing.Size(84, 30)
         Me.Btnquote.TabIndex = 71
@@ -536,12 +528,38 @@ Partial Class enquiry
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'qotenoLabel
+        '
+        Me.qotenoLabel.AutoSize = True
+        Me.qotenoLabel.Location = New System.Drawing.Point(566, 81)
+        Me.qotenoLabel.Name = "qotenoLabel"
+        Me.qotenoLabel.Size = New System.Drawing.Size(56, 13)
+        Me.qotenoLabel.TabIndex = 72
+        Me.qotenoLabel.Text = "Quote No:"
+        '
+        'qotenoTextBox
+        '
+        Me.qotenoTextBox.Location = New System.Drawing.Point(685, 81)
+        Me.qotenoTextBox.Name = "qotenoTextBox"
+        Me.qotenoTextBox.Size = New System.Drawing.Size(79, 20)
+        Me.qotenoTextBox.TabIndex = 73
+        '
+        'acctTextBox
+        '
+        Me.acctTextBox.Location = New System.Drawing.Point(136, 379)
+        Me.acctTextBox.Name = "acctTextBox"
+        Me.acctTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.acctTextBox.TabIndex = 74
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(801, 620)
+        Me.ClientSize = New System.Drawing.Size(813, 658)
+        Me.Controls.Add(Me.acctTextBox)
+        Me.Controls.Add(Me.qotenoTextBox)
+        Me.Controls.Add(Me.qotenoLabel)
         Me.Controls.Add(Me.Btnquote)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DateCreaTextBox)
@@ -549,7 +567,6 @@ Partial Class enquiry
         Me.Controls.Add(Me.DaysTextBox)
         Me.Controls.Add(Label2)
         Me.Controls.Add(Label1)
-        Me.Controls.Add(Me.AcctTypeComboBox)
         Me.Controls.Add(Me.Add1TextBox)
         Me.Controls.Add(Me.Add2TextBox)
         Me.Controls.Add(Me.Add3TextBox)
@@ -623,10 +640,12 @@ Partial Class enquiry
     Friend WithEvents Add3TextBox As TextBox
     Friend WithEvents Add2TextBox As TextBox
     Friend WithEvents Add1TextBox As TextBox
-    Friend WithEvents AcctTypeComboBox As ComboBox
     Friend WithEvents DaysTextBox As TextBox
     Friend WithEvents Btnquotegen As Button
     Friend WithEvents DateCreaTextBox As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Btnquote As Button
+    Friend WithEvents qotenoLabel As Label
+    Friend WithEvents qotenoTextBox As TextBox
+    Friend WithEvents acctTextBox As TextBox
 End Class
