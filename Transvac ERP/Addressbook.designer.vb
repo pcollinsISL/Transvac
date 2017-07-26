@@ -35,8 +35,8 @@ Partial Class form1
         Dim PHONELabel As System.Windows.Forms.Label
         Dim NAMELabel As System.Windows.Forms.Label
         Dim ACCOUNTLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
         Dim DAYS As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.membut = New System.Windows.Forms.Button()
@@ -246,6 +246,16 @@ Partial Class form1
         ACCOUNTLabel.Size = New System.Drawing.Size(54, 13)
         ACCOUNTLabel.TabIndex = 112
         ACCOUNTLabel.Text = "ACCT NO"
+        '
+        'DAYS
+        '
+        DAYS.AutoSize = True
+        DAYS.Location = New System.Drawing.Point(473, 245)
+        DAYS.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        DAYS.Name = "DAYS"
+        DAYS.Size = New System.Drawing.Size(36, 13)
+        DAYS.TabIndex = 201
+        DAYS.Text = "DAYS"
         '
         'Label16
         '
@@ -556,7 +566,7 @@ Partial Class form1
         '
         'ADDMEMOTextBox
         '
-        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource1, "actmemo", True))
+        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "ADDMEMO", True))
         Me.ADDMEMOTextBox.Location = New System.Drawing.Point(640, 120)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
@@ -859,22 +869,12 @@ Partial Class form1
         Me.EntrytypeComboBox.Size = New System.Drawing.Size(125, 21)
         Me.EntrytypeComboBox.TabIndex = 200
         '
-        'DAYS
-        '
-        DAYS.AutoSize = True
-        DAYS.Location = New System.Drawing.Point(473, 245)
-        DAYS.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        DAYS.Name = "DAYS"
-        DAYS.Size = New System.Drawing.Size(36, 13)
-        DAYS.TabIndex = 201
-        DAYS.Text = "DAYS"
-        '
         'New_updDateTimePicker
         '
         Me.New_updDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tran2BindingSource1, "new_upd", True))
         Me.New_updDateTimePicker.Location = New System.Drawing.Point(639, 95)
         Me.New_updDateTimePicker.Name = "New_updDateTimePicker"
-        Me.New_updDateTimePicker.Size = New System.Drawing.Size(138, 20)
+        Me.New_updDateTimePicker.Size = New System.Drawing.Size(198, 20)
         Me.New_updDateTimePicker.TabIndex = 204
         '
         'form1
