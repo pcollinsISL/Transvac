@@ -1,20 +1,16 @@
 ﻿Public Class updatemem
-    Private addressbook As Object
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
+        form1.Refresh()
+        form1.Show()
+        form1.ADDMEMOTextBox.Text = MemoBox.Text
         Me.Hide()
     End Sub
 
     Private Sub updatemem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'ADDRESSBKDataSet.tran2' table. You can move, or remove it, as needed.
-        REM Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
-
 
     End Sub
 
     Private Sub AddnotesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.Tran2BindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
 
     End Sub
 
@@ -23,15 +19,11 @@
     End Sub
 
     Private Sub AddnotesBindingNavigator1SaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.Tran2BindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
+
 
     End Sub
 
-    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
-        Me.Validate()
-        Me.Tran2BindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

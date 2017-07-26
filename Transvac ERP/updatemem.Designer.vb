@@ -24,61 +24,55 @@ Partial Class updatemem
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ExitBtn = New System.Windows.Forms.Button()
-        Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.MemoBox = New System.Windows.Forms.TextBox()
-        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
+        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.AddnotesTableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddnotesTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
-        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ExitBtn
         '
-        Me.ExitBtn.Location = New System.Drawing.Point(145, 262)
+        Me.ExitBtn.Location = New System.Drawing.Point(327, 264)
         Me.ExitBtn.Name = "ExitBtn"
         Me.ExitBtn.Size = New System.Drawing.Size(75, 23)
         Me.ExitBtn.TabIndex = 0
-        Me.ExitBtn.Text = "ABORT"
+        Me.ExitBtn.Text = "Exit"
         Me.ExitBtn.UseVisualStyleBackColor = True
-        '
-        'UpdateBtn
-        '
-        Me.UpdateBtn.Location = New System.Drawing.Point(496, 262)
-        Me.UpdateBtn.Name = "UpdateBtn"
-        Me.UpdateBtn.Size = New System.Drawing.Size(75, 23)
-        Me.UpdateBtn.TabIndex = 1
-        Me.UpdateBtn.Text = "UPDATE"
-        Me.UpdateBtn.UseVisualStyleBackColor = True
         '
         'MemoBox
         '
-        Me.MemoBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ADDMEMO", True))
         Me.MemoBox.Location = New System.Drawing.Point(145, 85)
         Me.MemoBox.Multiline = True
         Me.MemoBox.Name = "MemoBox"
         Me.MemoBox.Size = New System.Drawing.Size(426, 154)
         Me.MemoBox.TabIndex = 2
         '
-        'AddnotesBindingSource
+        'Tran2BindingSource
         '
-        Me.AddnotesBindingSource.DataMember = "addnotes"
-        Me.AddnotesBindingSource.DataSource = Me.ADDRESSBKDataSet
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.ADDRESSBKDataSet
         '
         'ADDRESSBKDataSet
         '
         Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
         Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AddnotesBindingSource
+        '
+        Me.AddnotesBindingSource.DataMember = "addnotes"
+        Me.AddnotesBindingSource.DataSource = Me.ADDRESSBKDataSet
         '
         'PictureBox1
         '
@@ -151,11 +145,6 @@ Partial Class updatemem
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.ADDRESSBKDataSet
-        '
         'Tran2TableAdapter
         '
         Me.Tran2TableAdapter.ClearBeforeFill = True
@@ -167,22 +156,20 @@ Partial Class updatemem
         Me.ClientSize = New System.Drawing.Size(776, 339)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MemoBox)
-        Me.Controls.Add(Me.UpdateBtn)
         Me.Controls.Add(Me.ExitBtn)
         Me.Name = "updatemem"
         Me.Text = "Update Memo"
-        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents ExitBtn As Button
-    Friend WithEvents UpdateBtn As Button
     Friend WithEvents MemoBox As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents AddnotesBindingNavigator As BindingNavigator

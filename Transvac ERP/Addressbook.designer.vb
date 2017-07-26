@@ -583,7 +583,7 @@ Partial Class form1
         '
         'ADDMEMOTextBox
         '
-        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource1, "actmemo", True))
+        Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "ADDMEMO", True))
         Me.ADDMEMOTextBox.Location = New System.Drawing.Point(583, 120)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True

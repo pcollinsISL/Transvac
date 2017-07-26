@@ -1,14 +1,13 @@
 ﻿Public Class form1
+
     Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.Tran2BindingSource1.EndEdit()
-        REM Me.AddnotesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
-        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
@@ -18,22 +17,18 @@
 
     Private Sub but6_Click(sender As Object, e As EventArgs) Handles but6.Click
         Me.Tran2BindingSource1.MoveNext()
-        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but4_Click(sender As Object, e As EventArgs) Handles but4.Click
         Me.Tran2BindingSource1.MoveFirst()
-        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but5_Click(sender As Object, e As EventArgs) Handles but5.Click
         Me.Tran2BindingSource1.MovePrevious()
-        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but7_Click(sender As Object, e As EventArgs) Handles but7.Click
         Me.Tran2BindingSource1.MoveLast()
-        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub delbut_Click(sender As Object, e As EventArgs) Handles delbut.Click
@@ -74,13 +69,11 @@
 
     End Sub
     Private Sub fndact_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndact_but.Click
-        'Show the forms as a modaless window.
         Dim x As accountsrch = New accountsrch
         x.Show()
     End Sub
 
     Private Sub fndname_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndname_but.Click
-        'Show the forms as a modaless window.
         Dim x As namesrch = New namesrch
         x.Show()
     End Sub
@@ -89,10 +82,17 @@
         Dim x As updatemem = updatemem
         updatemem.MemoBox.Text = ADDMEMOTextBox.Text
         x.Show()
+        Me.Hide()
     End Sub
 
     Private Sub abortbut_Click(sender As Object, e As EventArgs) Handles abortbut.Click
-        Me.Hide()
+        Dim response As Integer
+        response = MsgBox(Prompt:="All unsaved data will be lost are you sure you want to close?", Buttons:=vbYesNo)
+        If response = vbYes Then
+            Me.Hide()
+            Exit Sub
+        Else
+        End If
     End Sub
 
     Private Sub savebtn(sender As Object, e As EventArgs) Handles savebut.Click
