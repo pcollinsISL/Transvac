@@ -23,7 +23,6 @@ Partial Class form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim PROFORMALabel As System.Windows.Forms.Label
         Dim NEW_UPDLabel As System.Windows.Forms.Label
         Dim INUSELabel As System.Windows.Forms.Label
         Dim NWHOLabel As System.Windows.Forms.Label
@@ -37,7 +36,6 @@ Partial Class form1
         Dim NAMELabel As System.Windows.Forms.Label
         Dim ACCOUNTLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
-        Me.PROFORMATextBox = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.membut = New System.Windows.Forms.Button()
@@ -54,8 +52,6 @@ Partial Class form1
         Me.XCARDCheckBox = New System.Windows.Forms.CheckBox()
         Me.NEW_UPDDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.INUSETextBox = New System.Windows.Forms.TextBox()
-        Me.NWHOTextBox = New System.Windows.Forms.TextBox()
-        Me.ENTRYTYPETextBox = New System.Windows.Forms.TextBox()
         Me.NAMETextBox1 = New System.Windows.Forms.TextBox()
         Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
@@ -93,7 +89,21 @@ Partial Class form1
         Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        PROFORMALabel = New System.Windows.Forms.Label()
+        Me.proforma_but = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.NwhoTextBox1 = New System.Windows.Forms.TextBox()
+        Me.EntrytypeComboBox = New System.Windows.Forms.ComboBox()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
@@ -114,20 +124,10 @@ Partial Class form1
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PROFORMALabel
-        '
-        PROFORMALabel.AutoSize = True
-        PROFORMALabel.Location = New System.Drawing.Point(294, 414)
-        PROFORMALabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        PROFORMALabel.Name = "PROFORMALabel"
-        PROFORMALabel.Size = New System.Drawing.Size(71, 13)
-        PROFORMALabel.TabIndex = 161
-        PROFORMALabel.Text = "PROFORMA:"
-        '
         'NEW_UPDLabel
         '
         NEW_UPDLabel.AutoSize = True
-        NEW_UPDLabel.Location = New System.Drawing.Point(580, 75)
+        NEW_UPDLabel.Location = New System.Drawing.Point(619, 75)
         NEW_UPDLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NEW_UPDLabel.Name = "NEW_UPDLabel"
         NEW_UPDLabel.Size = New System.Drawing.Size(92, 13)
@@ -137,7 +137,7 @@ Partial Class form1
         'INUSELabel
         '
         INUSELabel.AutoSize = True
-        INUSELabel.Location = New System.Drawing.Point(787, 318)
+        INUSELabel.Location = New System.Drawing.Point(831, 321)
         INUSELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         INUSELabel.Name = "INUSELabel"
         INUSELabel.Size = New System.Drawing.Size(43, 13)
@@ -147,7 +147,7 @@ Partial Class form1
         'NWHOLabel
         '
         NWHOLabel.AutoSize = True
-        NWHOLabel.Location = New System.Drawing.Point(811, 75)
+        NWHOLabel.Location = New System.Drawing.Point(860, 75)
         NWHOLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NWHOLabel.Name = "NWHOLabel"
         NWHOLabel.Size = New System.Drawing.Size(24, 13)
@@ -157,17 +157,17 @@ Partial Class form1
         'ENTRYTYPELabel
         '
         ENTRYTYPELabel.AutoSize = True
-        ENTRYTYPELabel.Location = New System.Drawing.Point(294, 438)
+        ENTRYTYPELabel.Location = New System.Drawing.Point(322, 379)
         ENTRYTYPELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ENTRYTYPELabel.Name = "ENTRYTYPELabel"
-        ENTRYTYPELabel.Size = New System.Drawing.Size(59, 13)
+        ENTRYTYPELabel.Size = New System.Drawing.Size(87, 13)
         ENTRYTYPELabel.TabIndex = 135
-        ENTRYTYPELabel.Text = "PAYTYPE:"
+        ENTRYTYPELabel.Text = "RECORD TYPE:"
         '
         'TERMDAYSLabel
         '
         TERMDAYSLabel.AutoSize = True
-        TERMDAYSLabel.Location = New System.Drawing.Point(292, 246)
+        TERMDAYSLabel.Location = New System.Drawing.Point(320, 246)
         TERMDAYSLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         TERMDAYSLabel.Name = "TERMDAYSLabel"
         TERMDAYSLabel.Size = New System.Drawing.Size(48, 13)
@@ -177,7 +177,7 @@ Partial Class form1
         'EUROVATLabel
         '
         EUROVATLabel.AutoSize = True
-        EUROVATLabel.Location = New System.Drawing.Point(294, 271)
+        EUROVATLabel.Location = New System.Drawing.Point(322, 271)
         EUROVATLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         EUROVATLabel.Name = "EUROVATLabel"
         EUROVATLabel.Size = New System.Drawing.Size(62, 13)
@@ -187,7 +187,7 @@ Partial Class form1
         'EMAILLabel
         '
         EMAILLabel.AutoSize = True
-        EMAILLabel.Location = New System.Drawing.Point(294, 221)
+        EMAILLabel.Location = New System.Drawing.Point(322, 221)
         EMAILLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         EMAILLabel.Name = "EMAILLabel"
         EMAILLabel.Size = New System.Drawing.Size(45, 13)
@@ -197,7 +197,7 @@ Partial Class form1
         'FAXLabel
         '
         FAXLabel.AutoSize = True
-        FAXLabel.Location = New System.Drawing.Point(293, 194)
+        FAXLabel.Location = New System.Drawing.Point(321, 194)
         FAXLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         FAXLabel.Name = "FAXLabel"
         FAXLabel.Size = New System.Drawing.Size(49, 13)
@@ -207,7 +207,7 @@ Partial Class form1
         'TELEXLabel
         '
         TELEXLabel.AutoSize = True
-        TELEXLabel.Location = New System.Drawing.Point(291, 168)
+        TELEXLabel.Location = New System.Drawing.Point(319, 168)
         TELEXLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         TELEXLabel.Name = "TELEXLabel"
         TELEXLabel.Size = New System.Drawing.Size(89, 13)
@@ -217,7 +217,7 @@ Partial Class form1
         'PHONELabel
         '
         PHONELabel.AutoSize = True
-        PHONELabel.Location = New System.Drawing.Point(291, 140)
+        PHONELabel.Location = New System.Drawing.Point(319, 140)
         PHONELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         PHONELabel.Name = "PHONELabel"
         PHONELabel.Size = New System.Drawing.Size(56, 13)
@@ -245,23 +245,15 @@ Partial Class form1
         ACCOUNTLabel.TabIndex = 112
         ACCOUNTLabel.Text = "ACCT NO"
         '
-        'PROFORMATextBox
-        '
-        Me.PROFORMATextBox.Location = New System.Drawing.Point(388, 407)
-        Me.PROFORMATextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.PROFORMATextBox.Name = "PROFORMATextBox"
-        Me.PROFORMATextBox.Size = New System.Drawing.Size(98, 20)
-        Me.PROFORMATextBox.TabIndex = 162
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(114, 32)
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(145, 37)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(163, 13)
+        Me.Label16.Size = New System.Drawing.Size(94, 16)
         Me.Label16.TabIndex = 160
-        Me.Label16.Text = "Transvac Systems Address Book"
+        Me.Label16.Text = "Address Book"
         '
         'Label3
         '
@@ -274,9 +266,9 @@ Partial Class form1
         '
         'membut
         '
-        Me.membut.Location = New System.Drawing.Point(583, 312)
+        Me.membut.Location = New System.Drawing.Point(622, 318)
         Me.membut.Name = "membut"
-        Me.membut.Size = New System.Drawing.Size(112, 23)
+        Me.membut.Size = New System.Drawing.Size(102, 23)
         Me.membut.TabIndex = 156
         Me.membut.Text = "UPDATE MEMO"
         Me.membut.UseVisualStyleBackColor = True
@@ -310,11 +302,11 @@ Partial Class form1
         '
         'delbut
         '
-        Me.delbut.Location = New System.Drawing.Point(848, 22)
+        Me.delbut.Location = New System.Drawing.Point(905, 12)
         Me.delbut.Name = "delbut"
-        Me.delbut.Size = New System.Drawing.Size(58, 23)
+        Me.delbut.Size = New System.Drawing.Size(119, 23)
         Me.delbut.TabIndex = 150
-        Me.delbut.Text = "DELETE"
+        Me.delbut.Text = "DELETE RECORD"
         Me.delbut.UseVisualStyleBackColor = True
         '
         'newbut
@@ -328,7 +320,7 @@ Partial Class form1
         '
         'but5
         '
-        Me.but5.Location = New System.Drawing.Point(92, 374)
+        Me.but5.Location = New System.Drawing.Point(98, 374)
         Me.but5.Name = "but5"
         Me.but5.Size = New System.Drawing.Size(57, 23)
         Me.but5.TabIndex = 148
@@ -337,7 +329,7 @@ Partial Class form1
         '
         'but6
         '
-        Me.but6.Location = New System.Drawing.Point(151, 374)
+        Me.but6.Location = New System.Drawing.Point(164, 374)
         Me.but6.Name = "but6"
         Me.but6.Size = New System.Drawing.Size(57, 23)
         Me.but6.TabIndex = 147
@@ -346,7 +338,7 @@ Partial Class form1
         '
         'but7
         '
-        Me.but7.Location = New System.Drawing.Point(210, 374)
+        Me.but7.Location = New System.Drawing.Point(230, 374)
         Me.but7.Name = "but7"
         Me.but7.Size = New System.Drawing.Size(57, 23)
         Me.but7.TabIndex = 146
@@ -364,7 +356,7 @@ Partial Class form1
         '
         'PROMOCheckBox
         '
-        Me.PROMOCheckBox.Location = New System.Drawing.Point(388, 332)
+        Me.PROMOCheckBox.Location = New System.Drawing.Point(741, 321)
         Me.PROMOCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROMOCheckBox.Name = "PROMOCheckBox"
         Me.PROMOCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -374,7 +366,7 @@ Partial Class form1
         '
         'XCARDCheckBox
         '
-        Me.XCARDCheckBox.Location = New System.Drawing.Point(388, 356)
+        Me.XCARDCheckBox.Location = New System.Drawing.Point(741, 345)
         Me.XCARDCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.XCARDCheckBox.Name = "XCARDCheckBox"
         Me.XCARDCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -385,7 +377,7 @@ Partial Class form1
         'NEW_UPDDateTimePicker
         '
         Me.NEW_UPDDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.NEW_UPDDateTimePicker.Location = New System.Drawing.Point(583, 96)
+        Me.NEW_UPDDateTimePicker.Location = New System.Drawing.Point(622, 96)
         Me.NEW_UPDDateTimePicker.Margin = New System.Windows.Forms.Padding(2)
         Me.NEW_UPDDateTimePicker.Name = "NEW_UPDDateTimePicker"
         Me.NEW_UPDDateTimePicker.Size = New System.Drawing.Size(102, 20)
@@ -393,27 +385,11 @@ Partial Class form1
         '
         'INUSETextBox
         '
-        Me.INUSETextBox.Location = New System.Drawing.Point(834, 315)
+        Me.INUSETextBox.Location = New System.Drawing.Point(873, 318)
         Me.INUSETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.INUSETextBox.Name = "INUSETextBox"
         Me.INUSETextBox.Size = New System.Drawing.Size(72, 20)
         Me.INUSETextBox.TabIndex = 140
-        '
-        'NWHOTextBox
-        '
-        Me.NWHOTextBox.Location = New System.Drawing.Point(814, 96)
-        Me.NWHOTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.NWHOTextBox.Name = "NWHOTextBox"
-        Me.NWHOTextBox.Size = New System.Drawing.Size(92, 20)
-        Me.NWHOTextBox.TabIndex = 138
-        '
-        'ENTRYTYPETextBox
-        '
-        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(388, 430)
-        Me.ENTRYTYPETextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.ENTRYTYPETextBox.Name = "ENTRYTYPETextBox"
-        Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(98, 20)
-        Me.ENTRYTYPETextBox.TabIndex = 136
         '
         'NAMETextBox1
         '
@@ -421,7 +397,7 @@ Partial Class form1
         Me.NAMETextBox1.Location = New System.Drawing.Point(106, 137)
         Me.NAMETextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.NAMETextBox1.Name = "NAMETextBox1"
-        Me.NAMETextBox1.Size = New System.Drawing.Size(161, 20)
+        Me.NAMETextBox1.Size = New System.Drawing.Size(181, 20)
         Me.NAMETextBox1.TabIndex = 164
         '
         'Tran2BindingSource1
@@ -440,7 +416,7 @@ Partial Class form1
         Me.AD1TextBox1.Location = New System.Drawing.Point(32, 185)
         Me.AD1TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD1TextBox1.Name = "AD1TextBox1"
-        Me.AD1TextBox1.Size = New System.Drawing.Size(235, 20)
+        Me.AD1TextBox1.Size = New System.Drawing.Size(255, 20)
         Me.AD1TextBox1.TabIndex = 165
         '
         'AD2TextBox1
@@ -449,7 +425,7 @@ Partial Class form1
         Me.AD2TextBox1.Location = New System.Drawing.Point(32, 211)
         Me.AD2TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD2TextBox1.Name = "AD2TextBox1"
-        Me.AD2TextBox1.Size = New System.Drawing.Size(235, 20)
+        Me.AD2TextBox1.Size = New System.Drawing.Size(255, 20)
         Me.AD2TextBox1.TabIndex = 166
         '
         'AD3TextBox
@@ -458,7 +434,7 @@ Partial Class form1
         Me.AD3TextBox.Location = New System.Drawing.Point(32, 237)
         Me.AD3TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD3TextBox.Name = "AD3TextBox"
-        Me.AD3TextBox.Size = New System.Drawing.Size(235, 20)
+        Me.AD3TextBox.Size = New System.Drawing.Size(255, 20)
         Me.AD3TextBox.TabIndex = 167
         '
         'AD4TextBox
@@ -467,7 +443,7 @@ Partial Class form1
         Me.AD4TextBox.Location = New System.Drawing.Point(32, 264)
         Me.AD4TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD4TextBox.Name = "AD4TextBox"
-        Me.AD4TextBox.Size = New System.Drawing.Size(235, 20)
+        Me.AD4TextBox.Size = New System.Drawing.Size(255, 20)
         Me.AD4TextBox.TabIndex = 168
         '
         'AD5TextBox
@@ -476,13 +452,13 @@ Partial Class form1
         Me.AD5TextBox.Location = New System.Drawing.Point(32, 291)
         Me.AD5TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD5TextBox.Name = "AD5TextBox"
-        Me.AD5TextBox.Size = New System.Drawing.Size(235, 20)
+        Me.AD5TextBox.Size = New System.Drawing.Size(255, 20)
         Me.AD5TextBox.TabIndex = 169
         '
         'PHONETextBox
         '
         Me.PHONETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "PHONE", True))
-        Me.PHONETextBox.Location = New System.Drawing.Point(388, 137)
+        Me.PHONETextBox.Location = New System.Drawing.Point(416, 137)
         Me.PHONETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PHONETextBox.Name = "PHONETextBox"
         Me.PHONETextBox.Size = New System.Drawing.Size(171, 20)
@@ -491,7 +467,7 @@ Partial Class form1
         'TELEXTextBox
         '
         Me.TELEXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TELEX", True))
-        Me.TELEXTextBox.Location = New System.Drawing.Point(388, 163)
+        Me.TELEXTextBox.Location = New System.Drawing.Point(416, 163)
         Me.TELEXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TELEXTextBox.Name = "TELEXTextBox"
         Me.TELEXTextBox.Size = New System.Drawing.Size(171, 20)
@@ -500,7 +476,7 @@ Partial Class form1
         'FAXTextBox
         '
         Me.FAXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "FAX", True))
-        Me.FAXTextBox.Location = New System.Drawing.Point(388, 189)
+        Me.FAXTextBox.Location = New System.Drawing.Point(416, 189)
         Me.FAXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FAXTextBox.Name = "FAXTextBox"
         Me.FAXTextBox.Size = New System.Drawing.Size(171, 20)
@@ -509,7 +485,7 @@ Partial Class form1
         'EMAILTextBox
         '
         Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EMAIL", True))
-        Me.EMAILTextBox.Location = New System.Drawing.Point(388, 214)
+        Me.EMAILTextBox.Location = New System.Drawing.Point(416, 214)
         Me.EMAILTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EMAILTextBox.Name = "EMAILTextBox"
         Me.EMAILTextBox.Size = New System.Drawing.Size(171, 20)
@@ -520,7 +496,7 @@ Partial Class form1
         Me.VATPAYABLECheckBox1.Checked = True
         Me.VATPAYABLECheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.VATPAYABLECheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "VATPAYABLE", True))
-        Me.VATPAYABLECheckBox1.Location = New System.Drawing.Point(388, 300)
+        Me.VATPAYABLECheckBox1.Location = New System.Drawing.Point(416, 300)
         Me.VATPAYABLECheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.VATPAYABLECheckBox1.Name = "VATPAYABLECheckBox1"
         Me.VATPAYABLECheckBox1.Size = New System.Drawing.Size(122, 20)
@@ -531,7 +507,7 @@ Partial Class form1
         'EUROVATTextBox
         '
         Me.EUROVATTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EUROVAT", True))
-        Me.EUROVATTextBox.Location = New System.Drawing.Point(388, 266)
+        Me.EUROVATTextBox.Location = New System.Drawing.Point(416, 266)
         Me.EUROVATTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EUROVATTextBox.Name = "EUROVATTextBox"
         Me.EUROVATTextBox.Size = New System.Drawing.Size(96, 20)
@@ -540,7 +516,7 @@ Partial Class form1
         'TERMDAYSTextBox
         '
         Me.TERMDAYSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TERMDAYS", True))
-        Me.TERMDAYSTextBox.Location = New System.Drawing.Point(388, 240)
+        Me.TERMDAYSTextBox.Location = New System.Drawing.Point(416, 240)
         Me.TERMDAYSTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TERMDAYSTextBox.Name = "TERMDAYSTextBox"
         Me.TERMDAYSTextBox.Size = New System.Drawing.Size(171, 20)
@@ -559,9 +535,9 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(757, 374)
+        Me.selectbut.Location = New System.Drawing.Point(829, 374)
         Me.selectbut.Name = "selectbut"
-        Me.selectbut.Size = New System.Drawing.Size(149, 49)
+        Me.selectbut.Size = New System.Drawing.Size(134, 65)
         Me.selectbut.TabIndex = 180
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
@@ -574,9 +550,9 @@ Partial Class form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(127, 64)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 181
         Me.PictureBox1.TabStop = False
@@ -584,11 +560,11 @@ Partial Class form1
         'ADDMEMOTextBox
         '
         Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource1, "actmemo", True))
-        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(583, 120)
+        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(622, 120)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(323, 179)
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(341, 191)
         Me.ADDMEMOTextBox.TabIndex = 132
         '
         'AddnotesBindingSource1
@@ -624,7 +600,7 @@ Partial Class form1
         '
         'fndact_but
         '
-        Me.fndact_but.Location = New System.Drawing.Point(582, 374)
+        Me.fndact_but.Location = New System.Drawing.Point(621, 374)
         Me.fndact_but.Name = "fndact_but"
         Me.fndact_but.Size = New System.Drawing.Size(103, 23)
         Me.fndact_but.TabIndex = 182
@@ -633,7 +609,7 @@ Partial Class form1
         '
         'fndname_but
         '
-        Me.fndname_but.Location = New System.Drawing.Point(582, 403)
+        Me.fndname_but.Location = New System.Drawing.Point(621, 403)
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(103, 23)
         Me.fndname_but.TabIndex = 183
@@ -727,12 +703,186 @@ Partial Class form1
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'proforma_but
+        '
+        Me.proforma_but.Location = New System.Drawing.Point(322, 345)
+        Me.proforma_but.Name = "proforma_but"
+        Me.proforma_but.Size = New System.Drawing.Size(84, 23)
+        Me.proforma_but.TabIndex = 185
+        Me.proforma_but.Text = "PROFORMA"
+        Me.proforma_but.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(538, 373)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(25, 31)
+        Me.Label1.TabIndex = 186
+        Me.Label1.Text = "*"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(289, 184)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(25, 31)
+        Me.Label2.TabIndex = 187
+        Me.Label2.Text = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(289, 137)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 31)
+        Me.Label4.TabIndex = 188
+        Me.Label4.Text = "*"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(588, 163)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(25, 31)
+        Me.Label5.TabIndex = 189
+        Me.Label5.Text = "*"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(587, 137)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(25, 31)
+        Me.Label6.TabIndex = 190
+        Me.Label6.Text = "*"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(289, 289)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(25, 31)
+        Me.Label7.TabIndex = 191
+        Me.Label7.Text = "*"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(289, 265)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(25, 31)
+        Me.Label8.TabIndex = 192
+        Me.Label8.Text = "*"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(289, 237)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(25, 31)
+        Me.Label9.TabIndex = 193
+        Me.Label9.Text = "*"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(289, 213)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(25, 31)
+        Me.Label10.TabIndex = 194
+        Me.Label10.Text = "*"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(588, 213)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(25, 31)
+        Me.Label11.TabIndex = 195
+        Me.Label11.Text = "*"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(514, 266)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(25, 31)
+        Me.Label12.TabIndex = 196
+        Me.Label12.Text = "*"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Location = New System.Drawing.Point(588, 239)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(25, 31)
+        Me.Label14.TabIndex = 198
+        Me.Label14.Text = "*"
+        '
+        'NwhoTextBox1
+        '
+        Me.NwhoTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "nwho", True))
+        Me.NwhoTextBox1.Location = New System.Drawing.Point(863, 95)
+        Me.NwhoTextBox1.Name = "NwhoTextBox1"
+        Me.NwhoTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.NwhoTextBox1.TabIndex = 199
+        '
+        'EntrytypeComboBox
+        '
+        Me.EntrytypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "entrytype", True))
+        Me.EntrytypeComboBox.FormattingEnabled = True
+        Me.EntrytypeComboBox.Items.AddRange(New Object() {"N", "V", "P", "O", "Y"})
+        Me.EntrytypeComboBox.Location = New System.Drawing.Point(414, 374)
+        Me.EntrytypeComboBox.Name = "EntrytypeComboBox"
+        Me.EntrytypeComboBox.Size = New System.Drawing.Size(125, 21)
+        Me.EntrytypeComboBox.TabIndex = 200
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(962, 501)
+        Me.ClientSize = New System.Drawing.Size(1044, 486)
+        Me.Controls.Add(Me.EntrytypeComboBox)
+        Me.Controls.Add(Me.NwhoTextBox1)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.proforma_but)
         Me.Controls.Add(Me.fndname_but)
         Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
@@ -751,8 +901,6 @@ Partial Class form1
         Me.Controls.Add(Me.AD2TextBox1)
         Me.Controls.Add(Me.AD1TextBox1)
         Me.Controls.Add(Me.NAMETextBox1)
-        Me.Controls.Add(PROFORMALabel)
-        Me.Controls.Add(Me.PROFORMATextBox)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.membut)
@@ -772,9 +920,7 @@ Partial Class form1
         Me.Controls.Add(INUSELabel)
         Me.Controls.Add(Me.INUSETextBox)
         Me.Controls.Add(NWHOLabel)
-        Me.Controls.Add(Me.NWHOTextBox)
         Me.Controls.Add(ENTRYTYPELabel)
-        Me.Controls.Add(Me.ENTRYTYPETextBox)
         Me.Controls.Add(TERMDAYSLabel)
         Me.Controls.Add(Me.ADDMEMOTextBox)
         Me.Controls.Add(EUROVATLabel)
@@ -797,8 +943,6 @@ Partial Class form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PROFORMATextBox As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents membut As Button
@@ -815,8 +959,6 @@ Partial Class form1
     Friend WithEvents XCARDCheckBox As CheckBox
     Friend WithEvents NEW_UPDDateTimePicker As DateTimePicker
     Friend WithEvents INUSETextBox As TextBox
-    Friend WithEvents NWHOTextBox As TextBox
-    Friend WithEvents ENTRYTYPETextBox As TextBox
     Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
     Friend WithEvents Tran2BindingSource1 As BindingSource
     Friend WithEvents Tran2TableAdapter As ADDRESSBKDataSetTableAdapters.tran2TableAdapter
@@ -854,4 +996,19 @@ Partial Class form1
     Friend WithEvents AddnotesTableAdapter1 As ADDRESSBKDataSetTableAdapters.addnotesTableAdapter
     Friend WithEvents AddnotesBindingSource As BindingSource
     Friend WithEvents TableAdapterManager1 As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents proforma_but As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents NwhoTextBox1 As TextBox
+    Friend WithEvents EntrytypeComboBox As ComboBox
 End Class

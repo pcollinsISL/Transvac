@@ -65,7 +65,8 @@
         enquiry.Fax_noTextBox.Text = FAXTextBox.Text
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
         enquiry.EmemoTextBox.Text = ADDMEMOTextBox.Text
-        enquiry.acctTextBox.Text = PROFORMATextBox.Text
+        enquiry.acctTextBox.Text = EntrytypeComboBox.Text
+
         Me.Hide()
         X.Show()
     End Sub
