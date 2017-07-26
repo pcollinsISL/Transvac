@@ -63,7 +63,7 @@ Partial Class enquiry
         Me.Add3TextBox = New System.Windows.Forms.TextBox()
         Me.Add2TextBox = New System.Windows.Forms.TextBox()
         Me.Add1TextBox = New System.Windows.Forms.TextBox()
-        Me.DaysTextBox = New System.Windows.Forms.TextBox()
+        Me.termsTextBox = New System.Windows.Forms.TextBox()
         Me.Btnquotegen = New System.Windows.Forms.Button()
         Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
         Me.Btnquote = New System.Windows.Forms.Button()
@@ -213,11 +213,11 @@ Partial Class enquiry
         'Label2
         '
         Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(260, 379)
+        Label2.Location = New System.Drawing.Point(263, 382)
         Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(31, 13)
+        Label2.Size = New System.Drawing.Size(45, 13)
         Label2.TabIndex = 49
-        Label2.Text = "Days"
+        Label2.Text = "TERMS"
         '
         'Label3
         '
@@ -433,13 +433,13 @@ Partial Class enquiry
         Me.Add1TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add1TextBox.TabIndex = 46
         '
-        'DaysTextBox
+        'termsTextBox
         '
-        Me.DaysTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
-        Me.DaysTextBox.Location = New System.Drawing.Point(314, 374)
-        Me.DaysTextBox.Name = "DaysTextBox"
-        Me.DaysTextBox.Size = New System.Drawing.Size(59, 20)
-        Me.DaysTextBox.TabIndex = 50
+        Me.termsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
+        Me.termsTextBox.Location = New System.Drawing.Point(314, 377)
+        Me.termsTextBox.Name = "termsTextBox"
+        Me.termsTextBox.Size = New System.Drawing.Size(59, 20)
+        Me.termsTextBox.TabIndex = 50
         '
         'Btnquotegen
         '
@@ -546,7 +546,7 @@ Partial Class enquiry
         '
         'acctTextBox
         '
-        Me.acctTextBox.Location = New System.Drawing.Point(136, 379)
+        Me.acctTextBox.Location = New System.Drawing.Point(136, 377)
         Me.acctTextBox.Name = "acctTextBox"
         Me.acctTextBox.Size = New System.Drawing.Size(100, 20)
         Me.acctTextBox.TabIndex = 74
@@ -564,7 +564,7 @@ Partial Class enquiry
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DateCreaTextBox)
         Me.Controls.Add(Label3)
-        Me.Controls.Add(Me.DaysTextBox)
+        Me.Controls.Add(Me.termsTextBox)
         Me.Controls.Add(Label2)
         Me.Controls.Add(Label1)
         Me.Controls.Add(Me.Add1TextBox)
@@ -640,7 +640,7 @@ Partial Class enquiry
     Friend WithEvents Add3TextBox As TextBox
     Friend WithEvents Add2TextBox As TextBox
     Friend WithEvents Add1TextBox As TextBox
-    Friend WithEvents DaysTextBox As TextBox
+    Friend WithEvents termsTextBox As TextBox
     Friend WithEvents Btnquotegen As Button
     Friend WithEvents DateCreaTextBox As TextBox
     Friend WithEvents PictureBox2 As PictureBox

@@ -66,6 +66,7 @@
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
         enquiry.EmemoTextBox.Text = ADDMEMOTextBox.Text
         enquiry.acctTextBox.Text = EntrytypeComboBox.Text
+        enquiry.termsTextBox.Text = TERMDAYSTextBox.Text
 
         Me.Hide()
         X.Show()
