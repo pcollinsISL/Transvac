@@ -35,8 +35,8 @@ Partial Class form1
         Dim PHONELabel As System.Windows.Forms.Label
         Dim NAMELabel As System.Windows.Forms.Label
         Dim ACCOUNTLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
         Dim DAYS As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.membut = New System.Windows.Forms.Button()
@@ -49,8 +49,6 @@ Partial Class form1
         Me.but6 = New System.Windows.Forms.Button()
         Me.but7 = New System.Windows.Forms.Button()
         Me.but4 = New System.Windows.Forms.Button()
-        Me.PROMOCheckBox = New System.Windows.Forms.CheckBox()
-        Me.XCARDCheckBox = New System.Windows.Forms.CheckBox()
         Me.INUSETextBox = New System.Windows.Forms.TextBox()
         Me.NAMETextBox1 = New System.Windows.Forms.TextBox()
         Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -105,6 +103,8 @@ Partial Class form1
         Me.NwhoTextBox1 = New System.Windows.Forms.TextBox()
         Me.EntrytypeComboBox = New System.Windows.Forms.ComboBox()
         Me.New_updDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.XcardCheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.PROMO = New System.Windows.Forms.CheckBox()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         INUSELabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
@@ -247,6 +247,16 @@ Partial Class form1
         ACCOUNTLabel.TabIndex = 112
         ACCOUNTLabel.Text = "ACCT NO"
         '
+        'DAYS
+        '
+        DAYS.AutoSize = True
+        DAYS.Location = New System.Drawing.Point(473, 245)
+        DAYS.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        DAYS.Name = "DAYS"
+        DAYS.Size = New System.Drawing.Size(36, 13)
+        DAYS.TabIndex = 201
+        DAYS.Text = "DAYS"
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -295,7 +305,7 @@ Partial Class form1
         '
         'printbutton
         '
-        Me.printbutton.Location = New System.Drawing.Point(33, 416)
+        Me.printbutton.Location = New System.Drawing.Point(33, 430)
         Me.printbutton.Name = "printbutton"
         Me.printbutton.Size = New System.Drawing.Size(75, 23)
         Me.printbutton.TabIndex = 151
@@ -360,26 +370,6 @@ Partial Class form1
         Me.but4.TabIndex = 145
         Me.but4.UseVisualStyleBackColor = True
         '
-        'PROMOCheckBox
-        '
-        Me.PROMOCheckBox.Location = New System.Drawing.Point(759, 321)
-        Me.PROMOCheckBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.PROMOCheckBox.Name = "PROMOCheckBox"
-        Me.PROMOCheckBox.Size = New System.Drawing.Size(78, 20)
-        Me.PROMOCheckBox.TabIndex = 144
-        Me.PROMOCheckBox.Text = "PROMO:"
-        Me.PROMOCheckBox.UseVisualStyleBackColor = True
-        '
-        'XCARDCheckBox
-        '
-        Me.XCARDCheckBox.Location = New System.Drawing.Point(759, 345)
-        Me.XCARDCheckBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.XCARDCheckBox.Name = "XCARDCheckBox"
-        Me.XCARDCheckBox.Size = New System.Drawing.Size(78, 20)
-        Me.XCARDCheckBox.TabIndex = 143
-        Me.XCARDCheckBox.Text = "XCARD:"
-        Me.XCARDCheckBox.UseVisualStyleBackColor = True
-        '
         'INUSETextBox
         '
         Me.INUSETextBox.Location = New System.Drawing.Point(896, 320)
@@ -419,7 +409,7 @@ Partial Class form1
         'AD2TextBox1
         '
         Me.AD2TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD2", True))
-        Me.AD2TextBox1.Location = New System.Drawing.Point(32, 211)
+        Me.AD2TextBox1.Location = New System.Drawing.Point(32, 212)
         Me.AD2TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD2TextBox1.Name = "AD2TextBox1"
         Me.AD2TextBox1.Size = New System.Drawing.Size(255, 20)
@@ -428,7 +418,7 @@ Partial Class form1
         'AD3TextBox
         '
         Me.AD3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD3", True))
-        Me.AD3TextBox.Location = New System.Drawing.Point(32, 237)
+        Me.AD3TextBox.Location = New System.Drawing.Point(32, 238)
         Me.AD3TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD3TextBox.Name = "AD3TextBox"
         Me.AD3TextBox.Size = New System.Drawing.Size(255, 20)
@@ -437,7 +427,7 @@ Partial Class form1
         'AD4TextBox
         '
         Me.AD4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD4", True))
-        Me.AD4TextBox.Location = New System.Drawing.Point(32, 264)
+        Me.AD4TextBox.Location = New System.Drawing.Point(32, 265)
         Me.AD4TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD4TextBox.Name = "AD4TextBox"
         Me.AD4TextBox.Size = New System.Drawing.Size(255, 20)
@@ -446,7 +436,7 @@ Partial Class form1
         'AD5TextBox
         '
         Me.AD5TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "AD5", True))
-        Me.AD5TextBox.Location = New System.Drawing.Point(32, 291)
+        Me.AD5TextBox.Location = New System.Drawing.Point(32, 292)
         Me.AD5TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD5TextBox.Name = "AD5TextBox"
         Me.AD5TextBox.Size = New System.Drawing.Size(255, 20)
@@ -464,7 +454,7 @@ Partial Class form1
         'TELEXTextBox
         '
         Me.TELEXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TELEX", True))
-        Me.TELEXTextBox.Location = New System.Drawing.Point(434, 163)
+        Me.TELEXTextBox.Location = New System.Drawing.Point(434, 164)
         Me.TELEXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TELEXTextBox.Name = "TELEXTextBox"
         Me.TELEXTextBox.Size = New System.Drawing.Size(171, 20)
@@ -473,7 +463,7 @@ Partial Class form1
         'FAXTextBox
         '
         Me.FAXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "FAX", True))
-        Me.FAXTextBox.Location = New System.Drawing.Point(434, 189)
+        Me.FAXTextBox.Location = New System.Drawing.Point(434, 190)
         Me.FAXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FAXTextBox.Name = "FAXTextBox"
         Me.FAXTextBox.Size = New System.Drawing.Size(171, 20)
@@ -482,7 +472,7 @@ Partial Class form1
         'EMAILTextBox
         '
         Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EMAIL", True))
-        Me.EMAILTextBox.Location = New System.Drawing.Point(434, 214)
+        Me.EMAILTextBox.Location = New System.Drawing.Point(434, 215)
         Me.EMAILTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EMAILTextBox.Name = "EMAILTextBox"
         Me.EMAILTextBox.Size = New System.Drawing.Size(171, 20)
@@ -504,7 +494,7 @@ Partial Class form1
         'EUROVATTextBox
         '
         Me.EUROVATTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EUROVAT", True))
-        Me.EUROVATTextBox.Location = New System.Drawing.Point(434, 266)
+        Me.EUROVATTextBox.Location = New System.Drawing.Point(434, 267)
         Me.EUROVATTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EUROVATTextBox.Name = "EUROVATTextBox"
         Me.EUROVATTextBox.Size = New System.Drawing.Size(96, 20)
@@ -513,7 +503,7 @@ Partial Class form1
         'TERMDAYSTextBox
         '
         Me.TERMDAYSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TERMDAYS", True))
-        Me.TERMDAYSTextBox.Location = New System.Drawing.Point(434, 240)
+        Me.TERMDAYSTextBox.Location = New System.Drawing.Point(434, 241)
         Me.TERMDAYSTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TERMDAYSTextBox.Name = "TERMDAYSTextBox"
         Me.TERMDAYSTextBox.Size = New System.Drawing.Size(35, 20)
@@ -532,7 +522,7 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(847, 374)
+        Me.selectbut.Location = New System.Drawing.Point(875, 362)
         Me.selectbut.Name = "selectbut"
         Me.selectbut.Size = New System.Drawing.Size(134, 65)
         Me.selectbut.TabIndex = 180
@@ -859,16 +849,6 @@ Partial Class form1
         Me.EntrytypeComboBox.Size = New System.Drawing.Size(125, 21)
         Me.EntrytypeComboBox.TabIndex = 200
         '
-        'DAYS
-        '
-        DAYS.AutoSize = True
-        DAYS.Location = New System.Drawing.Point(473, 245)
-        DAYS.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        DAYS.Name = "DAYS"
-        DAYS.Size = New System.Drawing.Size(36, 13)
-        DAYS.TabIndex = 201
-        DAYS.Text = "DAYS"
-        '
         'New_updDateTimePicker
         '
         Me.New_updDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tran2BindingSource1, "new_upd", True))
@@ -877,12 +857,34 @@ Partial Class form1
         Me.New_updDateTimePicker.Size = New System.Drawing.Size(138, 20)
         Me.New_updDateTimePicker.TabIndex = 204
         '
+        'XcardCheckBox1
+        '
+        Me.XcardCheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "xcard", True))
+        Me.XcardCheckBox1.Location = New System.Drawing.Point(762, 404)
+        Me.XcardCheckBox1.Name = "XcardCheckBox1"
+        Me.XcardCheckBox1.Size = New System.Drawing.Size(104, 24)
+        Me.XcardCheckBox1.TabIndex = 205
+        Me.XcardCheckBox1.Text = "XMAS CARD"
+        Me.XcardCheckBox1.UseVisualStyleBackColor = True
+        '
+        'PROMO
+        '
+        Me.PROMO.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "promo", True))
+        Me.PROMO.Location = New System.Drawing.Point(763, 374)
+        Me.PROMO.Name = "PROMO"
+        Me.PROMO.Size = New System.Drawing.Size(104, 24)
+        Me.PROMO.TabIndex = 206
+        Me.PROMO.Text = "PROMO"
+        Me.PROMO.UseVisualStyleBackColor = True
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1039, 494)
+        Me.ClientSize = New System.Drawing.Size(1049, 491)
+        Me.Controls.Add(Me.PROMO)
+        Me.Controls.Add(Me.XcardCheckBox1)
         Me.Controls.Add(Me.New_updDateTimePicker)
         Me.Controls.Add(DAYS)
         Me.Controls.Add(Me.EntrytypeComboBox)
@@ -930,8 +932,6 @@ Partial Class form1
         Me.Controls.Add(Me.but6)
         Me.Controls.Add(Me.but7)
         Me.Controls.Add(Me.but4)
-        Me.Controls.Add(Me.PROMOCheckBox)
-        Me.Controls.Add(Me.XCARDCheckBox)
         Me.Controls.Add(NEW_UPDLabel)
         Me.Controls.Add(INUSELabel)
         Me.Controls.Add(Me.INUSETextBox)
@@ -971,8 +971,6 @@ Partial Class form1
     Friend WithEvents but6 As Button
     Friend WithEvents but7 As Button
     Friend WithEvents but4 As Button
-    Friend WithEvents PROMOCheckBox As CheckBox
-    Friend WithEvents XCARDCheckBox As CheckBox
     Friend WithEvents INUSETextBox As TextBox
     Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
     Friend WithEvents Tran2BindingSource1 As BindingSource
@@ -1027,4 +1025,6 @@ Partial Class form1
     Friend WithEvents NwhoTextBox1 As TextBox
     Friend WithEvents EntrytypeComboBox As ComboBox
     Friend WithEvents New_updDateTimePicker As DateTimePicker
+    Friend WithEvents PROMO As CheckBox
+    Friend WithEvents XcardCheckBox1 As CheckBox
 End Class
