@@ -127,17 +127,17 @@ Partial Class form1
         'NEW_UPDLabel
         '
         NEW_UPDLabel.AutoSize = True
-        NEW_UPDLabel.Location = New System.Drawing.Point(604, 90)
+        NEW_UPDLabel.Location = New System.Drawing.Point(580, 75)
         NEW_UPDLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NEW_UPDLabel.Name = "NEW_UPDLabel"
-        NEW_UPDLabel.Size = New System.Drawing.Size(71, 13)
+        NEW_UPDLabel.Size = New System.Drawing.Size(92, 13)
         NEW_UPDLabel.TabIndex = 141
-        NEW_UPDLabel.Text = "Last Updated"
+        NEW_UPDLabel.Text = "LAST UPDATED:"
         '
         'INUSELabel
         '
         INUSELabel.AutoSize = True
-        INUSELabel.Location = New System.Drawing.Point(510, 348)
+        INUSELabel.Location = New System.Drawing.Point(787, 318)
         INUSELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         INUSELabel.Name = "INUSELabel"
         INUSELabel.Size = New System.Drawing.Size(43, 13)
@@ -147,17 +147,17 @@ Partial Class form1
         'NWHOLabel
         '
         NWHOLabel.AutoSize = True
-        NWHOLabel.Location = New System.Drawing.Point(743, 90)
+        NWHOLabel.Location = New System.Drawing.Point(811, 75)
         NWHOLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NWHOLabel.Name = "NWHOLabel"
-        NWHOLabel.Size = New System.Drawing.Size(22, 13)
+        NWHOLabel.Size = New System.Drawing.Size(24, 13)
         NWHOLabel.TabIndex = 137
-        NWHOLabel.Text = "By:"
+        NWHOLabel.Text = "BY:"
         '
         'ENTRYTYPELabel
         '
         ENTRYTYPELabel.AutoSize = True
-        ENTRYTYPELabel.Location = New System.Drawing.Point(290, 359)
+        ENTRYTYPELabel.Location = New System.Drawing.Point(292, 359)
         ENTRYTYPELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ENTRYTYPELabel.Name = "ENTRYTYPELabel"
         ENTRYTYPELabel.Size = New System.Drawing.Size(59, 13)
@@ -170,9 +170,9 @@ Partial Class form1
         TERMDAYSLabel.Location = New System.Drawing.Point(292, 246)
         TERMDAYSLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         TERMDAYSLabel.Name = "TERMDAYSLabel"
-        TERMDAYSLabel.Size = New System.Drawing.Size(39, 13)
+        TERMDAYSLabel.Size = New System.Drawing.Size(48, 13)
         TERMDAYSLabel.TabIndex = 133
-        TERMDAYSLabel.Text = "Terms:"
+        TERMDAYSLabel.Text = "TERMS:"
         '
         'EUROVATLabel
         '
@@ -180,9 +180,9 @@ Partial Class form1
         EUROVATLabel.Location = New System.Drawing.Point(294, 271)
         EUROVATLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         EUROVATLabel.Name = "EUROVATLabel"
-        EUROVATLabel.Size = New System.Drawing.Size(53, 13)
+        EUROVATLabel.Size = New System.Drawing.Size(62, 13)
         EUROVATLabel.TabIndex = 129
-        EUROVATLabel.Text = "EuroVAT:"
+        EUROVATLabel.Text = "EUROVAT:"
         '
         'EMAILLabel
         '
@@ -190,9 +190,9 @@ Partial Class form1
         EMAILLabel.Location = New System.Drawing.Point(294, 221)
         EMAILLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         EMAILLabel.Name = "EMAILLabel"
-        EMAILLabel.Size = New System.Drawing.Size(39, 13)
+        EMAILLabel.Size = New System.Drawing.Size(45, 13)
         EMAILLabel.TabIndex = 127
-        EMAILLabel.Text = "E-Mail:"
+        EMAILLabel.Text = "E-MAIL:"
         '
         'FAXLabel
         '
@@ -200,9 +200,9 @@ Partial Class form1
         FAXLabel.Location = New System.Drawing.Point(293, 194)
         FAXLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         FAXLabel.Name = "FAXLabel"
-        FAXLabel.Size = New System.Drawing.Size(44, 13)
+        FAXLabel.Size = New System.Drawing.Size(49, 13)
         FAXLabel.TabIndex = 125
-        FAXLabel.Text = "Fax No:"
+        FAXLabel.Text = "FAX NO:"
         '
         'TELEXLabel
         '
@@ -210,9 +210,9 @@ Partial Class form1
         TELEXLabel.Location = New System.Drawing.Point(291, 168)
         TELEXLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         TELEXLabel.Name = "TELEXLabel"
-        TELEXLabel.Size = New System.Drawing.Size(72, 13)
+        TELEXLabel.Size = New System.Drawing.Size(89, 13)
         TELEXLabel.TabIndex = 123
-        TELEXLabel.Text = "Telex/Mobile:"
+        TELEXLabel.Text = "TELEX/MOBILE:"
         '
         'PHONELabel
         '
@@ -220,19 +220,19 @@ Partial Class form1
         PHONELabel.Location = New System.Drawing.Point(291, 140)
         PHONELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         PHONELabel.Name = "PHONELabel"
-        PHONELabel.Size = New System.Drawing.Size(48, 13)
+        PHONELabel.Size = New System.Drawing.Size(56, 13)
         PHONELabel.TabIndex = 121
-        PHONELabel.Text = "Tele No:"
+        PHONELabel.Text = "TELE NO:"
         '
         'NAMELabel
         '
         NAMELabel.AutoSize = True
-        NAMELabel.Location = New System.Drawing.Point(93, 120)
+        NAMELabel.Location = New System.Drawing.Point(106, 120)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
-        NAMELabel.Size = New System.Drawing.Size(90, 13)
+        NAMELabel.Size = New System.Drawing.Size(107, 13)
         NAMELabel.TabIndex = 114
-        NAMELabel.Text = "Contact Name 23"
+        NAMELabel.Text = "CONTACT NAME 23"
         AddHandler NAMELabel.Click, AddressOf Me.NAMELabel_Click
         '
         'ACCOUNTLabel
@@ -241,13 +241,13 @@ Partial Class form1
         ACCOUNTLabel.Location = New System.Drawing.Point(30, 120)
         ACCOUNTLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ACCOUNTLabel.Name = "ACCOUNTLabel"
-        ACCOUNTLabel.Size = New System.Drawing.Size(46, 13)
+        ACCOUNTLabel.Size = New System.Drawing.Size(54, 13)
         ACCOUNTLabel.TabIndex = 112
-        ACCOUNTLabel.Text = "Acct No"
+        ACCOUNTLabel.Text = "ACCT NO"
         '
         'PROFORMATextBox
         '
-        Me.PROFORMATextBox.Location = New System.Drawing.Point(362, 332)
+        Me.PROFORMATextBox.Location = New System.Drawing.Point(388, 328)
         Me.PROFORMATextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROFORMATextBox.Name = "PROFORMATextBox"
         Me.PROFORMATextBox.Size = New System.Drawing.Size(98, 20)
@@ -268,17 +268,17 @@ Partial Class form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(30, 168)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 13)
+        Me.Label3.Size = New System.Drawing.Size(59, 13)
         Me.Label3.TabIndex = 159
-        Me.Label3.Text = "Address (5 Lines)"
+        Me.Label3.Text = "ADDRESS"
         '
         'membut
         '
-        Me.membut.Location = New System.Drawing.Point(541, 285)
+        Me.membut.Location = New System.Drawing.Point(583, 312)
         Me.membut.Name = "membut"
         Me.membut.Size = New System.Drawing.Size(112, 23)
         Me.membut.TabIndex = 156
-        Me.membut.Text = "Memo Update"
+        Me.membut.Text = "UPDATE MEMO"
         Me.membut.UseVisualStyleBackColor = True
         '
         'savebut
@@ -301,7 +301,7 @@ Partial Class form1
         '
         'printbutton
         '
-        Me.printbutton.Location = New System.Drawing.Point(634, 49)
+        Me.printbutton.Location = New System.Drawing.Point(33, 427)
         Me.printbutton.Name = "printbutton"
         Me.printbutton.Size = New System.Drawing.Size(75, 23)
         Me.printbutton.TabIndex = 151
@@ -310,7 +310,7 @@ Partial Class form1
         '
         'delbut
         '
-        Me.delbut.Location = New System.Drawing.Point(746, 49)
+        Me.delbut.Location = New System.Drawing.Point(807, 22)
         Me.delbut.Name = "delbut"
         Me.delbut.Size = New System.Drawing.Size(76, 23)
         Me.delbut.TabIndex = 150
@@ -364,7 +364,7 @@ Partial Class form1
         '
         'PROMOCheckBox
         '
-        Me.PROMOCheckBox.Location = New System.Drawing.Point(362, 392)
+        Me.PROMOCheckBox.Location = New System.Drawing.Point(583, 383)
         Me.PROMOCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROMOCheckBox.Name = "PROMOCheckBox"
         Me.PROMOCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -374,7 +374,7 @@ Partial Class form1
         '
         'XCARDCheckBox
         '
-        Me.XCARDCheckBox.Location = New System.Drawing.Point(362, 416)
+        Me.XCARDCheckBox.Location = New System.Drawing.Point(583, 407)
         Me.XCARDCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.XCARDCheckBox.Name = "XCARDCheckBox"
         Me.XCARDCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -385,7 +385,7 @@ Partial Class form1
         'NEW_UPDDateTimePicker
         '
         Me.NEW_UPDDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.NEW_UPDDateTimePicker.Location = New System.Drawing.Point(607, 105)
+        Me.NEW_UPDDateTimePicker.Location = New System.Drawing.Point(583, 96)
         Me.NEW_UPDDateTimePicker.Margin = New System.Windows.Forms.Padding(2)
         Me.NEW_UPDDateTimePicker.Name = "NEW_UPDDateTimePicker"
         Me.NEW_UPDDateTimePicker.Size = New System.Drawing.Size(102, 20)
@@ -393,7 +393,7 @@ Partial Class form1
         '
         'INUSETextBox
         '
-        Me.INUSETextBox.Location = New System.Drawing.Point(581, 341)
+        Me.INUSETextBox.Location = New System.Drawing.Point(834, 315)
         Me.INUSETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.INUSETextBox.Name = "INUSETextBox"
         Me.INUSETextBox.Size = New System.Drawing.Size(72, 20)
@@ -401,15 +401,15 @@ Partial Class form1
         '
         'NWHOTextBox
         '
-        Me.NWHOTextBox.Location = New System.Drawing.Point(746, 105)
+        Me.NWHOTextBox.Location = New System.Drawing.Point(814, 96)
         Me.NWHOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NWHOTextBox.Name = "NWHOTextBox"
-        Me.NWHOTextBox.Size = New System.Drawing.Size(76, 20)
+        Me.NWHOTextBox.Size = New System.Drawing.Size(92, 20)
         Me.NWHOTextBox.TabIndex = 138
         '
         'ENTRYTYPETextBox
         '
-        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(362, 355)
+        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(388, 351)
         Me.ENTRYTYPETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ENTRYTYPETextBox.Name = "ENTRYTYPETextBox"
         Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(98, 20)
@@ -482,7 +482,7 @@ Partial Class form1
         'PHONETextBox
         '
         Me.PHONETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "PHONE", True))
-        Me.PHONETextBox.Location = New System.Drawing.Point(361, 137)
+        Me.PHONETextBox.Location = New System.Drawing.Point(388, 137)
         Me.PHONETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PHONETextBox.Name = "PHONETextBox"
         Me.PHONETextBox.Size = New System.Drawing.Size(171, 20)
@@ -491,7 +491,7 @@ Partial Class form1
         'TELEXTextBox
         '
         Me.TELEXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TELEX", True))
-        Me.TELEXTextBox.Location = New System.Drawing.Point(361, 163)
+        Me.TELEXTextBox.Location = New System.Drawing.Point(388, 163)
         Me.TELEXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TELEXTextBox.Name = "TELEXTextBox"
         Me.TELEXTextBox.Size = New System.Drawing.Size(171, 20)
@@ -500,7 +500,7 @@ Partial Class form1
         'FAXTextBox
         '
         Me.FAXTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "FAX", True))
-        Me.FAXTextBox.Location = New System.Drawing.Point(361, 189)
+        Me.FAXTextBox.Location = New System.Drawing.Point(388, 189)
         Me.FAXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FAXTextBox.Name = "FAXTextBox"
         Me.FAXTextBox.Size = New System.Drawing.Size(171, 20)
@@ -509,7 +509,7 @@ Partial Class form1
         'EMAILTextBox
         '
         Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EMAIL", True))
-        Me.EMAILTextBox.Location = New System.Drawing.Point(361, 215)
+        Me.EMAILTextBox.Location = New System.Drawing.Point(388, 214)
         Me.EMAILTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EMAILTextBox.Name = "EMAILTextBox"
         Me.EMAILTextBox.Size = New System.Drawing.Size(171, 20)
@@ -523,15 +523,15 @@ Partial Class form1
         Me.VATPAYABLECheckBox1.Location = New System.Drawing.Point(361, 301)
         Me.VATPAYABLECheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.VATPAYABLECheckBox1.Name = "VATPAYABLECheckBox1"
-        Me.VATPAYABLECheckBox1.Size = New System.Drawing.Size(96, 20)
+        Me.VATPAYABLECheckBox1.Size = New System.Drawing.Size(122, 20)
         Me.VATPAYABLECheckBox1.TabIndex = 174
-        Me.VATPAYABLECheckBox1.Text = "VAT Payable"
+        Me.VATPAYABLECheckBox1.Text = "VAT PAYABLE"
         Me.VATPAYABLECheckBox1.UseVisualStyleBackColor = True
         '
         'EUROVATTextBox
         '
         Me.EUROVATTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "EUROVAT", True))
-        Me.EUROVATTextBox.Location = New System.Drawing.Point(361, 267)
+        Me.EUROVATTextBox.Location = New System.Drawing.Point(388, 266)
         Me.EUROVATTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EUROVATTextBox.Name = "EUROVATTextBox"
         Me.EUROVATTextBox.Size = New System.Drawing.Size(96, 20)
@@ -540,7 +540,7 @@ Partial Class form1
         'TERMDAYSTextBox
         '
         Me.TERMDAYSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "TERMDAYS", True))
-        Me.TERMDAYSTextBox.Location = New System.Drawing.Point(361, 241)
+        Me.TERMDAYSTextBox.Location = New System.Drawing.Point(388, 240)
         Me.TERMDAYSTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TERMDAYSTextBox.Name = "TERMDAYSTextBox"
         Me.TERMDAYSTextBox.Size = New System.Drawing.Size(171, 20)
@@ -559,9 +559,9 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(702, 401)
+        Me.selectbut.Location = New System.Drawing.Point(780, 447)
         Me.selectbut.Name = "selectbut"
-        Me.selectbut.Size = New System.Drawing.Size(139, 49)
+        Me.selectbut.Size = New System.Drawing.Size(149, 49)
         Me.selectbut.TabIndex = 180
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
@@ -584,11 +584,11 @@ Partial Class form1
         'ADDMEMOTextBox
         '
         Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AddnotesBindingSource1, "actmemo", True))
-        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(541, 135)
+        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(583, 120)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(281, 145)
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(323, 179)
         Me.ADDMEMOTextBox.TabIndex = 132
         '
         'AddnotesBindingSource1
@@ -624,7 +624,7 @@ Partial Class form1
         '
         'fndact_but
         '
-        Me.fndact_but.Location = New System.Drawing.Point(719, 325)
+        Me.fndact_but.Location = New System.Drawing.Point(803, 366)
         Me.fndact_but.Name = "fndact_but"
         Me.fndact_but.Size = New System.Drawing.Size(103, 23)
         Me.fndact_but.TabIndex = 182
@@ -633,7 +633,7 @@ Partial Class form1
         '
         'fndname_but
         '
-        Me.fndname_but.Location = New System.Drawing.Point(719, 354)
+        Me.fndname_but.Location = New System.Drawing.Point(803, 395)
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(103, 23)
         Me.fndname_but.TabIndex = 183
@@ -732,7 +732,7 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(916, 510)
+        Me.ClientSize = New System.Drawing.Size(973, 541)
         Me.Controls.Add(Me.fndname_but)
         Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
