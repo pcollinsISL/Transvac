@@ -117,7 +117,7 @@ Partial Class form1
         'PROFORMALabel
         '
         PROFORMALabel.AutoSize = True
-        PROFORMALabel.Location = New System.Drawing.Point(292, 335)
+        PROFORMALabel.Location = New System.Drawing.Point(294, 414)
         PROFORMALabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         PROFORMALabel.Name = "PROFORMALabel"
         PROFORMALabel.Size = New System.Drawing.Size(71, 13)
@@ -157,7 +157,7 @@ Partial Class form1
         'ENTRYTYPELabel
         '
         ENTRYTYPELabel.AutoSize = True
-        ENTRYTYPELabel.Location = New System.Drawing.Point(292, 359)
+        ENTRYTYPELabel.Location = New System.Drawing.Point(294, 438)
         ENTRYTYPELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ENTRYTYPELabel.Name = "ENTRYTYPELabel"
         ENTRYTYPELabel.Size = New System.Drawing.Size(59, 13)
@@ -230,9 +230,9 @@ Partial Class form1
         NAMELabel.Location = New System.Drawing.Point(106, 120)
         NAMELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NAMELabel.Name = "NAMELabel"
-        NAMELabel.Size = New System.Drawing.Size(107, 13)
+        NAMELabel.Size = New System.Drawing.Size(95, 13)
         NAMELabel.TabIndex = 114
-        NAMELabel.Text = "CONTACT NAME 23"
+        NAMELabel.Text = "CONTACT NAME "
         AddHandler NAMELabel.Click, AddressOf Me.NAMELabel_Click
         '
         'ACCOUNTLabel
@@ -247,7 +247,7 @@ Partial Class form1
         '
         'PROFORMATextBox
         '
-        Me.PROFORMATextBox.Location = New System.Drawing.Point(388, 328)
+        Me.PROFORMATextBox.Location = New System.Drawing.Point(388, 407)
         Me.PROFORMATextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROFORMATextBox.Name = "PROFORMATextBox"
         Me.PROFORMATextBox.Size = New System.Drawing.Size(98, 20)
@@ -310,9 +310,9 @@ Partial Class form1
         '
         'delbut
         '
-        Me.delbut.Location = New System.Drawing.Point(807, 22)
+        Me.delbut.Location = New System.Drawing.Point(848, 22)
         Me.delbut.Name = "delbut"
-        Me.delbut.Size = New System.Drawing.Size(76, 23)
+        Me.delbut.Size = New System.Drawing.Size(58, 23)
         Me.delbut.TabIndex = 150
         Me.delbut.Text = "DELETE"
         Me.delbut.UseVisualStyleBackColor = True
@@ -364,7 +364,7 @@ Partial Class form1
         '
         'PROMOCheckBox
         '
-        Me.PROMOCheckBox.Location = New System.Drawing.Point(583, 383)
+        Me.PROMOCheckBox.Location = New System.Drawing.Point(388, 332)
         Me.PROMOCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PROMOCheckBox.Name = "PROMOCheckBox"
         Me.PROMOCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -374,7 +374,7 @@ Partial Class form1
         '
         'XCARDCheckBox
         '
-        Me.XCARDCheckBox.Location = New System.Drawing.Point(583, 407)
+        Me.XCARDCheckBox.Location = New System.Drawing.Point(388, 356)
         Me.XCARDCheckBox.Margin = New System.Windows.Forms.Padding(2)
         Me.XCARDCheckBox.Name = "XCARDCheckBox"
         Me.XCARDCheckBox.Size = New System.Drawing.Size(78, 20)
@@ -409,7 +409,7 @@ Partial Class form1
         '
         'ENTRYTYPETextBox
         '
-        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(388, 351)
+        Me.ENTRYTYPETextBox.Location = New System.Drawing.Point(388, 430)
         Me.ENTRYTYPETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ENTRYTYPETextBox.Name = "ENTRYTYPETextBox"
         Me.ENTRYTYPETextBox.Size = New System.Drawing.Size(98, 20)
@@ -520,7 +520,7 @@ Partial Class form1
         Me.VATPAYABLECheckBox1.Checked = True
         Me.VATPAYABLECheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.VATPAYABLECheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "VATPAYABLE", True))
-        Me.VATPAYABLECheckBox1.Location = New System.Drawing.Point(361, 301)
+        Me.VATPAYABLECheckBox1.Location = New System.Drawing.Point(388, 300)
         Me.VATPAYABLECheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.VATPAYABLECheckBox1.Name = "VATPAYABLECheckBox1"
         Me.VATPAYABLECheckBox1.Size = New System.Drawing.Size(122, 20)
@@ -559,7 +559,7 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(780, 447)
+        Me.selectbut.Location = New System.Drawing.Point(757, 374)
         Me.selectbut.Name = "selectbut"
         Me.selectbut.Size = New System.Drawing.Size(149, 49)
         Me.selectbut.TabIndex = 180
@@ -624,7 +624,7 @@ Partial Class form1
         '
         'fndact_but
         '
-        Me.fndact_but.Location = New System.Drawing.Point(803, 366)
+        Me.fndact_but.Location = New System.Drawing.Point(582, 374)
         Me.fndact_but.Name = "fndact_but"
         Me.fndact_but.Size = New System.Drawing.Size(103, 23)
         Me.fndact_but.TabIndex = 182
@@ -633,7 +633,7 @@ Partial Class form1
         '
         'fndname_but
         '
-        Me.fndname_but.Location = New System.Drawing.Point(803, 395)
+        Me.fndname_but.Location = New System.Drawing.Point(582, 403)
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(103, 23)
         Me.fndname_but.TabIndex = 183
@@ -732,7 +732,7 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(973, 541)
+        Me.ClientSize = New System.Drawing.Size(962, 501)
         Me.Controls.Add(Me.fndname_but)
         Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
