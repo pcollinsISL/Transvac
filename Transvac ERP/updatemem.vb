@@ -5,13 +5,15 @@
     End Sub
 
     Private Sub updatemem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ADDRESSBKDataSet.tran2' table. You can move, or remove it, as needed.
+        REM Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
 
 
     End Sub
 
     Private Sub AddnotesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
-        Me.AddnotesBindingSource.EndEdit()
+        Me.Tran2BindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
 
     End Sub
@@ -22,14 +24,14 @@
 
     Private Sub AddnotesBindingNavigator1SaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
-        Me.AddnotesBindingSource.EndEdit()
+        Me.Tran2BindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
 
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
         Me.Validate()
-        Me.AddnotesBindingSource1.EndEdit()
+        Me.Tran2BindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
     End Sub
 End Class

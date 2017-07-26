@@ -122,6 +122,7 @@
     <Compile Include="Addressbook.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Addressbook1.vb" />
     <Compile Include="Builddraftinv.Designer.vb">
       <DependentUpon>Builddraftinv.vb</DependentUpon>
     </Compile>

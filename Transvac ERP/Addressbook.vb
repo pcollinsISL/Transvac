@@ -2,14 +2,13 @@
     Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.Tran2BindingSource1.EndEdit()
-        Me.AddnotesBindingSource.EndEdit()
+        REM Me.AddnotesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
-
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
-        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
+        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
@@ -19,22 +18,22 @@
 
     Private Sub but6_Click(sender As Object, e As EventArgs) Handles but6.Click
         Me.Tran2BindingSource1.MoveNext()
-        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
+        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but4_Click(sender As Object, e As EventArgs) Handles but4.Click
         Me.Tran2BindingSource1.MoveFirst()
-        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
+        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but5_Click(sender As Object, e As EventArgs) Handles but5.Click
         Me.Tran2BindingSource1.MovePrevious()
-        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
+        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub but7_Click(sender As Object, e As EventArgs) Handles but7.Click
         Me.Tran2BindingSource1.MoveLast()
-        Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
+        REM Me.AddnotesTableAdapter1.FillByMemo(Me.ADDRESSBKDataSet.addnotes, ACCOUNTTextBox1.Text)
     End Sub
 
     Private Sub delbut_Click(sender As Object, e As EventArgs) Handles delbut.Click
@@ -66,6 +65,7 @@
         enquiry.Fax_noTextBox.Text = FAXTextBox.Text
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
         enquiry.EmemoTextBox.Text = ADDMEMOTextBox.Text
+        enquiry.acctTextBox.Text = PROFORMATextBox.Text
         Me.Hide()
         X.Show()
     End Sub
