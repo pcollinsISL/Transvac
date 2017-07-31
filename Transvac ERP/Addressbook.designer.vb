@@ -24,7 +24,6 @@ Partial Class form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim NEW_UPDLabel As System.Windows.Forms.Label
-        Dim INUSELabel As System.Windows.Forms.Label
         Dim NWHOLabel As System.Windows.Forms.Label
         Dim ENTRYTYPELabel As System.Windows.Forms.Label
         Dim TERMDAYSLabel As System.Windows.Forms.Label
@@ -49,7 +48,6 @@ Partial Class form1
         Me.but6 = New System.Windows.Forms.Button()
         Me.but7 = New System.Windows.Forms.Button()
         Me.but4 = New System.Windows.Forms.Button()
-        Me.INUSETextBox = New System.Windows.Forms.TextBox()
         Me.NAMETextBox1 = New System.Windows.Forms.TextBox()
         Me.Tran2BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ADDRESSBKDataSet = New Transvac_ERP.ADDRESSBKDataSet()
@@ -106,7 +104,6 @@ Partial Class form1
         Me.XcardCheckBox1 = New System.Windows.Forms.CheckBox()
         Me.PROMO = New System.Windows.Forms.CheckBox()
         NEW_UPDLabel = New System.Windows.Forms.Label()
-        INUSELabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
         ENTRYTYPELabel = New System.Windows.Forms.Label()
         TERMDAYSLabel = New System.Windows.Forms.Label()
@@ -135,16 +132,6 @@ Partial Class form1
         NEW_UPDLabel.Size = New System.Drawing.Size(92, 13)
         NEW_UPDLabel.TabIndex = 141
         NEW_UPDLabel.Text = "LAST UPDATED:"
-        '
-        'INUSELabel
-        '
-        INUSELabel.AutoSize = True
-        INUSELabel.Location = New System.Drawing.Point(849, 323)
-        INUSELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        INUSELabel.Name = "INUSELabel"
-        INUSELabel.Size = New System.Drawing.Size(43, 13)
-        INUSELabel.TabIndex = 139
-        INUSELabel.Text = "INUSE:"
         '
         'NWHOLabel
         '
@@ -369,14 +356,6 @@ Partial Class form1
         Me.but4.Size = New System.Drawing.Size(57, 23)
         Me.but4.TabIndex = 145
         Me.but4.UseVisualStyleBackColor = True
-        '
-        'INUSETextBox
-        '
-        Me.INUSETextBox.Location = New System.Drawing.Point(896, 320)
-        Me.INUSETextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.INUSETextBox.Name = "INUSETextBox"
-        Me.INUSETextBox.Size = New System.Drawing.Size(85, 20)
-        Me.INUSETextBox.TabIndex = 140
         '
         'NAMETextBox1
         '
@@ -933,8 +912,6 @@ Partial Class form1
         Me.Controls.Add(Me.but7)
         Me.Controls.Add(Me.but4)
         Me.Controls.Add(NEW_UPDLabel)
-        Me.Controls.Add(INUSELabel)
-        Me.Controls.Add(Me.INUSETextBox)
         Me.Controls.Add(NWHOLabel)
         Me.Controls.Add(ENTRYTYPELabel)
         Me.Controls.Add(TERMDAYSLabel)
@@ -971,7 +948,6 @@ Partial Class form1
     Friend WithEvents but6 As Button
     Friend WithEvents but7 As Button
     Friend WithEvents but4 As Button
-    Friend WithEvents INUSETextBox As TextBox
     Friend WithEvents ADDRESSBKDataSet As ADDRESSBKDataSet
     Friend WithEvents Tran2BindingSource1 As BindingSource
     Friend WithEvents Tran2TableAdapter As ADDRESSBKDataSetTableAdapters.tran2TableAdapter

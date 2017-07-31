@@ -6355,7 +6355,6 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnquote_no.AllowDBNull = false
             Me.columnquote_no.MaxLength = 6
             Me.columncname.AllowDBNull = false
-            Me.columncname.MaxLength = 40
             Me.columnref_no.AllowDBNull = false
             Me.columnref_no.MaxLength = 20
             Me.columnstatus.AllowDBNull = false
@@ -37152,7 +37151,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        cname, ref_no, quote_no, ewho, status, UniqueID, accno, ememo, ship"& _ 
@@ -37161,11 +37160,11 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (cnam"& _ 
-                "e LIKE @Param1 + '%')"
+            Me._commandCollection(1).CommandText = "SELECT        UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, "& _ 
+                "fax_no, mobtel_no, quote_no, ref_no, ship_name, status, tel_no"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            "& _ 
+                "enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (cname LIKE @PARAM1 + '%')"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
@@ -37187,6 +37186,13 @@ Namespace TransvacDataV2DataSet1TableAdapters
                 "us LIKE @Param1 + '%')"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "SELECT        cname, ref_no, quote_no, ewho, status, UniqueID, accno, ememo, ship"& _ 
+                "_name, email, mobtel_no, fax_no, tel_no, contact, edate, etype"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            "& _ 
+                "enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (cname LIKE @PARAM1 + '%')"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -37217,12 +37223,12 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal PARAM1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (PARAM1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PARAM1")
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -37235,12 +37241,12 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal Param1 As String) As TransvacDataV2DataSet1.enquiryDataTable
+        Public Overloads Overridable Function GetDataBy(ByVal PARAM1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (PARAM1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PARAM1")
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
             Dim dataTable As TransvacDataV2DataSet1.enquiryDataTable = New TransvacDataV2DataSet1.enquiryDataTable()
             Me.Adapter.Fill(dataTable)
@@ -37343,6 +37349,40 @@ Namespace TransvacDataV2DataSet1TableAdapters
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            Dim dataTable As TransvacDataV2DataSet1.enquiryDataTable = New TransvacDataV2DataSet1.enquiryDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByTest(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal PARAM1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
+            If (PARAM1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PARAM1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByTest(ByVal PARAM1 As String) As TransvacDataV2DataSet1.enquiryDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
+            If (PARAM1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PARAM1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
             Dim dataTable As TransvacDataV2DataSet1.enquiryDataTable = New TransvacDataV2DataSet1.enquiryDataTable()
             Me.Adapter.Fill(dataTable)

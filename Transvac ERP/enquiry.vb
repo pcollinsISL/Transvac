@@ -3,8 +3,7 @@
     Dim ExitYN As System.Windows.Forms.DialogResult
 
     Private Sub btnabt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnabt.Click
-        Me.Hide()
-
+        Me.Close()
     End Sub
 
     Private Sub Btnquote_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquote.click
@@ -38,7 +37,14 @@
     End Sub
 
     Private Sub Btnaddressbook_Click_1(sender As Object, e As EventArgs) Handles Btnaddressbook.Click
-        Me.Hide()
+
+        Me.Close()
+    End Sub
+
+    Private Sub enquiry_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet.tran2, AccnoTextBox.Text)
+        Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet.enquiry, CnameTextBox.Text)
     End Sub
 End Class
 

@@ -1,8 +1,6 @@
 ﻿Public Class findquote
     Private Sub findquote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.enquiry' table. You can move, or remove it, as needed.
-        REM Me.EnquiryTableAdapter.Fill(Me.TransvacDataV2DataSet.enquiry)
-
+        Me.Tran2TableAdapter.Fill(Me.TransvacDataV2DataSet1.tran2)
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
@@ -21,8 +19,6 @@
     End Sub
 
     Dim ExitYN As System.Windows.Forms.DialogResult
-    'Declare Message Box '
-
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         Me.Hide()
     End Sub
@@ -50,12 +46,13 @@
 
     Private Sub EnquiryDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles EnquiryDataGridView.CellContentClick
         Dim X As enquiry = enquiry
-
         enquiry.CnameTextBox.Text = EnquiryDataGridView.Item(0, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Ref_noTextBox.Text = EnquiryDataGridView.Item(1, EnquiryDataGridView.CurrentRow.Index).Value
-        enquiry.StatusComboBox.SelectedItem = EnquiryDataGridView.Item(4, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.qotenoTextBox.Text = EnquiryDataGridView.Item(2, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.StatusComboBox.Text = EnquiryDataGridView.Item(4, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.AccnoTextBox.Text = EnquiryDataGridView.Item(5, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EmemoTextBox.Text = EnquiryDataGridView.Item(6, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.Ship_nameTextBox.Text = EnquiryDataGridView.Item(7, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Tel_noTextBox.Text = EnquiryDataGridView.Item(7, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EmailTextBox.Text = EnquiryDataGridView.Item(8, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Mobtel_noTextBox.Text = EnquiryDataGridView.Item(9, EnquiryDataGridView.CurrentRow.Index).Value
@@ -63,7 +60,7 @@
         enquiry.Tel_noTextBox.Text = EnquiryDataGridView.Item(11, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.ContactTextBox.Text = EnquiryDataGridView.Item(12, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.DateCreaTextBox.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
-        REM enquiry.EtypeComboBox = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.EtypeComboBox.Text = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
         Me.Hide()
         X.Show()
     End Sub
