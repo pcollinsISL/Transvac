@@ -123,4 +123,8 @@
     Private Sub EntrytypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EntrytypeComboBox.SelectedIndexChanged
 
     End Sub
+
+    Private Sub TERMDAYSTextBox_TextChanged(sender As Object, e As EventArgs) Handles TERMDAYSTextBox.TextChanged
+
+    End Sub
 End Class

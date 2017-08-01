@@ -81,10 +81,6 @@ Partial Class form1
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
-        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.proforma_but = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -103,6 +99,10 @@ Partial Class form1
         Me.New_updDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.XcardCheckBox1 = New System.Windows.Forms.CheckBox()
         Me.PROMO = New System.Windows.Forms.CheckBox()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
+        Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
         ENTRYTYPELabel = New System.Windows.Forms.Label()
@@ -609,66 +609,6 @@ Partial Class form1
         '
         Me.AddnotesTableAdapter1.ClearBeforeFill = True
         '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AddnotesTableAdapter
-        '
-        Me.AddnotesTableAdapter.ClearBeforeFill = True
-        '
-        'AddnotesBindingSource
-        '
-        Me.AddnotesBindingSource.DataMember = "addnotes"
-        Me.AddnotesBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.accctlTableAdapter = Nothing
-        Me.TableAdapterManager1.accountTableAdapter = Nothing
-        Me.TableAdapterManager1.addnotesTableAdapter = Me.AddnotesTableAdapter
-        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager1.assetsTableAdapter = Nothing
-        Me.TableAdapterManager1.atransTableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.binallocTableAdapter = Nothing
-        Me.TableAdapterManager1.catTableAdapter = Nothing
-        Me.TableAdapterManager1.countryTableAdapter = Nothing
-        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager1.eventTableAdapter = Nothing
-        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager1.invlineTableAdapter = Nothing
-        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkTableAdapter = Nothing
-        Me.TableAdapterManager1.issueTableAdapter = Nothing
-        Me.TableAdapterManager1.locationTableAdapter = Nothing
-        Me.TableAdapterManager1.mainTableAdapter = Nothing
-        Me.TableAdapterManager1.markupTableAdapter = Nothing
-        Me.TableAdapterManager1.namesTableAdapter = Nothing
-        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager1.statusTableAdapter = Nothing
-        Me.TableAdapterManager1.teventsTableAdapter = Nothing
-        Me.TableAdapterManager1.tran2TableAdapter = Nothing
-        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
-        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager1.trandescTableAdapter = Nothing
-        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'proforma_but
         '
         Me.proforma_but.Location = New System.Drawing.Point(340, 345)
@@ -855,6 +795,66 @@ Partial Class form1
         Me.PROMO.TabIndex = 206
         Me.PROMO.Text = "PROMO"
         Me.PROMO.UseVisualStyleBackColor = True
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AddnotesTableAdapter
+        '
+        Me.AddnotesTableAdapter.ClearBeforeFill = True
+        '
+        'AddnotesBindingSource
+        '
+        Me.AddnotesBindingSource.DataMember = "addnotes"
+        Me.AddnotesBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Me.AddnotesTableAdapter
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Nothing
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'form1
         '

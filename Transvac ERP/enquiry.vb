@@ -1,13 +1,14 @@
 ﻿Public Class enquiry
 
     Dim ExitYN As System.Windows.Forms.DialogResult
-
+    Public addvar As String
     Private Sub btnabt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnabt.Click
         Me.Close()
     End Sub
 
-    Private Sub Btnquote_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquote.click
+    Private Sub Btnquote_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquote.Click
         'Show the fomrs as a modaless window.
+        addvar = qotenoTextBox.Text
         Dim x As quotelist = New quotelist
         x.Show()
     End Sub

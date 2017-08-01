@@ -1,6 +1,5 @@
 ﻿Public Class findquote
     Private Sub findquote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Tran2TableAdapter.Fill(Me.TransvacDataV2DataSet1.tran2)
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
