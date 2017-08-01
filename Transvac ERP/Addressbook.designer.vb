@@ -882,7 +882,7 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1049, 491)
+        Me.ClientSize = New System.Drawing.Size(1055, 491)
         Me.Controls.Add(Me.PROMO)
         Me.Controls.Add(Me.XcardCheckBox1)
         Me.Controls.Add(Me.New_updDateTimePicker)
