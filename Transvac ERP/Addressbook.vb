@@ -59,7 +59,7 @@
         enquiry.Mobtel_noTextBox.Text = TELEXTextBox.Text
         enquiry.Fax_noTextBox.Text = FAXTextBox.Text
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
-        enquiry.EmemoTextBox.Text = ADDMEMOTextBox.Text
+        REM enquiry.EmemoTextBox.Text = ADDMEMOTextBox.Text
         enquiry.acctTextBox.Text = EntrytypeComboBox.Text
         enquiry.termsTextBox.Text = TERMDAYSTextBox.Text
 
@@ -73,11 +73,13 @@
     Private Sub fndact_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndact_but.Click
         Dim x As accountsrch = New accountsrch
         x.Show()
+        Me.Hide()
     End Sub
 
     Private Sub fndname_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndname_but.Click
         Dim x As namesrch = New namesrch
         x.Show()
+        Me.Hide()
     End Sub
 
     Private Sub membut_Click(sender As Object, e As EventArgs) Handles membut.Click
@@ -115,6 +117,14 @@
     End Sub
 
     Private Sub AD1TextBox1_TextChanged(sender As Object, e As EventArgs) Handles AD1TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub EntrytypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EntrytypeComboBox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TERMDAYSTextBox_TextChanged(sender As Object, e As EventArgs) Handles TERMDAYSTextBox.TextChanged
 
     End Sub
 End Class

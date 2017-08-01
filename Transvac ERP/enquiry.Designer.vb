@@ -63,6 +63,7 @@ Partial Class enquiry
         Me.Add3TextBox = New System.Windows.Forms.TextBox()
         Me.Add2TextBox = New System.Windows.Forms.TextBox()
         Me.Add1TextBox = New System.Windows.Forms.TextBox()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.termsTextBox = New System.Windows.Forms.TextBox()
         Me.Btnquotegen = New System.Windows.Forms.Button()
         Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
@@ -73,6 +74,7 @@ Partial Class enquiry
         Me.qotenoLabel = New System.Windows.Forms.Label()
         Me.qotenoTextBox = New System.Windows.Forms.TextBox()
         Me.acctTextBox = New System.Windows.Forms.TextBox()
+        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         EdateLabel = New System.Windows.Forms.Label()
         CnameLabel = New System.Windows.Forms.Label()
         ContactLabel = New System.Windows.Forms.Label()
@@ -90,6 +92,7 @@ Partial Class enquiry
         Label3 = New System.Windows.Forms.Label()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -395,7 +398,7 @@ Partial Class enquiry
         '
         'Add5TextBox
         '
-        Me.Add5TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
+        Me.Add5TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ad5", True))
         Me.Add5TextBox.Location = New System.Drawing.Point(136, 348)
         Me.Add5TextBox.Name = "Add5TextBox"
         Me.Add5TextBox.Size = New System.Drawing.Size(237, 20)
@@ -403,7 +406,7 @@ Partial Class enquiry
         '
         'Add4TextBox
         '
-        Me.Add4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
+        Me.Add4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ad4", True))
         Me.Add4TextBox.Location = New System.Drawing.Point(136, 322)
         Me.Add4TextBox.Name = "Add4TextBox"
         Me.Add4TextBox.Size = New System.Drawing.Size(237, 20)
@@ -411,7 +414,7 @@ Partial Class enquiry
         '
         'Add3TextBox
         '
-        Me.Add3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
+        Me.Add3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ad3", True))
         Me.Add3TextBox.Location = New System.Drawing.Point(136, 296)
         Me.Add3TextBox.Name = "Add3TextBox"
         Me.Add3TextBox.Size = New System.Drawing.Size(237, 20)
@@ -419,7 +422,7 @@ Partial Class enquiry
         '
         'Add2TextBox
         '
-        Me.Add2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
+        Me.Add2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ad2", True))
         Me.Add2TextBox.Location = New System.Drawing.Point(136, 270)
         Me.Add2TextBox.Name = "Add2TextBox"
         Me.Add2TextBox.Size = New System.Drawing.Size(237, 20)
@@ -427,15 +430,20 @@ Partial Class enquiry
         '
         'Add1TextBox
         '
-        Me.Add1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
+        Me.Add1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ad1", True))
         Me.Add1TextBox.Location = New System.Drawing.Point(136, 244)
         Me.Add1TextBox.Name = "Add1TextBox"
         Me.Add1TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add1TextBox.TabIndex = 46
         '
+        'Tran2BindingSource
+        '
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet
+        '
         'termsTextBox
         '
-        Me.termsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
+        Me.termsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "termdays", True))
         Me.termsTextBox.Location = New System.Drawing.Point(314, 377)
         Me.termsTextBox.Name = "termsTextBox"
         Me.termsTextBox.Size = New System.Drawing.Size(59, 20)
@@ -452,7 +460,7 @@ Partial Class enquiry
         '
         'DateCreaTextBox
         '
-        Me.DateCreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
+        Me.DateCreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "edate", True))
         Me.DateCreaTextBox.Location = New System.Drawing.Point(685, 117)
         Me.DateCreaTextBox.Name = "DateCreaTextBox"
         Me.DateCreaTextBox.Size = New System.Drawing.Size(79, 20)
@@ -539,6 +547,7 @@ Partial Class enquiry
         '
         'qotenoTextBox
         '
+        Me.qotenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "quote_no", True))
         Me.qotenoTextBox.Location = New System.Drawing.Point(685, 81)
         Me.qotenoTextBox.Name = "qotenoTextBox"
         Me.qotenoTextBox.Size = New System.Drawing.Size(79, 20)
@@ -550,6 +559,10 @@ Partial Class enquiry
         Me.acctTextBox.Name = "acctTextBox"
         Me.acctTextBox.Size = New System.Drawing.Size(100, 20)
         Me.acctTextBox.TabIndex = 74
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
         '
         'enquiry
         '
@@ -607,6 +620,7 @@ Partial Class enquiry
         Me.Text = "Enquiry"
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -648,4 +662,6 @@ Partial Class enquiry
     Friend WithEvents qotenoLabel As Label
     Friend WithEvents qotenoTextBox As TextBox
     Friend WithEvents acctTextBox As TextBox
+    Friend WithEvents Tran2BindingSource As BindingSource
+    Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
 End Class
