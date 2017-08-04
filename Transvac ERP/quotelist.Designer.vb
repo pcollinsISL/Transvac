@@ -51,7 +51,7 @@ Partial Class quotelist
         Me.QinitsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.quotenotextbox = New System.Windows.Forms.TextBox()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -267,19 +267,20 @@ Partial Class quotelist
         Me.PictureBox2.TabIndex = 12
         Me.PictureBox2.TabStop = False
         '
-        'TextBox1
+        'quotenotextbox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(617, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 13
+        Me.quotenotextbox.Location = New System.Drawing.Point(617, 12)
+        Me.quotenotextbox.Name = "quotenotextbox"
+        Me.quotenotextbox.Size = New System.Drawing.Size(100, 20)
+        Me.quotenotextbox.TabIndex = 13
+        Me.quotenotextbox.Visible = False
         '
         'quotelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(746, 456)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.quotenotextbox)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label5)
@@ -322,5 +323,5 @@ Partial Class quotelist
     Friend WithEvents QinitsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents quotenotextbox As TextBox
 End Class

@@ -12,7 +12,7 @@
 
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet.tranmemo' table. You can move, or remove it, as needed.
-        Me.TranmemoTableAdapter.Fill(Me.TransvacDataV2DataSet.tranmemo)
+        REM Me.TranmemoTableAdapter.Fill(Me.TransvacDataV2DataSet.tranmemo)
 
     End Sub
 
