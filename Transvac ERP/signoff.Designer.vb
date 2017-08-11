@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class signoffsavebut
+Partial Class signoff
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,65 +23,71 @@ Partial Class signoffsavebut
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.savebut = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.sve_but = New System.Windows.Forms.Button()
+        Me.signoffabt_but = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(42, 42)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(34, 72)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(698, 175)
-        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Size = New System.Drawing.Size(508, 100)
+        Me.TextBox1.TabIndex = 2
+        Me.TextBox1.Text = "I hope this is to your satisfaction and if you require any further information pl" &
+    "ease do not hesitate to contact me." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Thank You and Kind Regards." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'savebut
+        'sve_but
         '
-        Me.savebut.Location = New System.Drawing.Point(344, 226)
-        Me.savebut.Name = "savebut"
-        Me.savebut.Size = New System.Drawing.Size(75, 23)
-        Me.savebut.TabIndex = 1
-        Me.savebut.Text = "SAVE"
-        Me.savebut.UseVisualStyleBackColor = True
+        Me.sve_but.Location = New System.Drawing.Point(467, 197)
+        Me.sve_but.Name = "sve_but"
+        Me.sve_but.Size = New System.Drawing.Size(75, 23)
+        Me.sve_but.TabIndex = 37
+        Me.sve_but.Text = "SAVE"
+        Me.sve_but.UseVisualStyleBackColor = True
         '
-        'Label1
+        'signoffabt_but
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(42, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Sign Off"
+        Me.signoffabt_but.Location = New System.Drawing.Point(34, 197)
+        Me.signoffabt_but.Name = "signoffabt_but"
+        Me.signoffabt_but.Size = New System.Drawing.Size(75, 23)
+        Me.signoffabt_but.TabIndex = 36
+        Me.signoffabt_but.Text = "ABORT"
+        Me.signoffabt_but.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
+        'PictureBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(42, 327)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(100, 96)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Text = ""
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(72, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 39
+        Me.PictureBox1.TabStop = False
         '
-        'signoffsavebut
+        'signoff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(784, 517)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.savebut)
+        Me.ClientSize = New System.Drawing.Size(579, 258)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.sve_but)
+        Me.Controls.Add(Me.signoffabt_but)
         Me.Controls.Add(Me.TextBox1)
-        Me.Name = "signoffsavebut"
+        Me.Name = "signoff"
         Me.Text = "Sign Off"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents savebut As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents sve_but As Button
+    Friend WithEvents signoffabt_but As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class heading
+Partial Class Heading
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,55 +22,72 @@ Partial Class heading
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.headtb = New System.Windows.Forms.TextBox()
-        Me.headsavebut = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.headsve_but = New System.Windows.Forms.Button()
+        Me.headingabt_but = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'headtb
+        'TextBox1
         '
-        Me.headtb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.headtb.Location = New System.Drawing.Point(41, 42)
-        Me.headtb.Multiline = True
-        Me.headtb.Name = "headtb"
-        Me.headtb.Size = New System.Drawing.Size(700, 175)
-        Me.headtb.TabIndex = 0
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(46, 48)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(494, 104)
+        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = "Dear Sir/Madam," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Thank you for your enquiry in which you requested price and de" &
+    "livery time for the items below"
         '
-        'headsavebut
+        'headsve_but
         '
-        Me.headsavebut.Location = New System.Drawing.Point(344, 226)
-        Me.headsavebut.Name = "headsavebut"
-        Me.headsavebut.Size = New System.Drawing.Size(75, 23)
-        Me.headsavebut.TabIndex = 2
-        Me.headsavebut.Text = "SAVE"
-        Me.headsavebut.UseVisualStyleBackColor = True
+        Me.headsve_but.Location = New System.Drawing.Point(465, 178)
+        Me.headsve_but.Name = "headsve_but"
+        Me.headsve_but.Size = New System.Drawing.Size(75, 23)
+        Me.headsve_but.TabIndex = 33
+        Me.headsve_but.Text = "SAVE"
+        Me.headsve_but.UseVisualStyleBackColor = True
         '
-        'Label1
+        'headingabt_but
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(41, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Heading"
+        Me.headingabt_but.Location = New System.Drawing.Point(46, 178)
+        Me.headingabt_but.Name = "headingabt_but"
+        Me.headingabt_but.Size = New System.Drawing.Size(75, 23)
+        Me.headingabt_but.TabIndex = 32
+        Me.headingabt_but.Text = "ABORT"
+        Me.headingabt_but.UseVisualStyleBackColor = True
         '
-        'heading
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(72, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 37
+        Me.PictureBox1.TabStop = False
+        '
+        'Heading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.ClientSize = New System.Drawing.Size(784, 261)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.headsavebut)
-        Me.Controls.Add(Me.headtb)
-        Me.Name = "heading"
+        Me.BackColor = System.Drawing.Color.SlateBlue
+        Me.ClientSize = New System.Drawing.Size(616, 250)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.headsve_but)
+        Me.Controls.Add(Me.headingabt_but)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Name = "Heading"
         Me.Text = "Heading"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents headtb As TextBox
-    Friend WithEvents headsavebut As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents headsve_but As Button
+    Friend WithEvents headingabt_but As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

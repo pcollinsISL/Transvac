@@ -24,7 +24,7 @@
         Throw New NotImplementedException()
     End Function
 
-    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles markup_but.Click
 
     End Sub
 End Class

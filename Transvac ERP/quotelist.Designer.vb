@@ -131,6 +131,7 @@ Partial Class quotelist
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotenoDataGridViewTextBoxColumn, Me.QuotesufDataGridViewTextBoxColumn, Me.QdateDataGridViewTextBoxColumn, Me.QheaderDataGridViewTextBoxColumn, Me.QwhoDataGridViewTextBoxColumn, Me.Qmemo1DataGridViewTextBoxColumn, Me.Qmemo2DataGridViewTextBoxColumn, Me.Qmemo3DataGridViewTextBoxColumn, Me.Qmemo4DataGridViewTextBoxColumn, Me.QdiscDataGridViewCheckBoxColumn, Me.QinitsDataGridViewTextBoxColumn, Me.TimestampcolumnDataGridViewImageColumn})
         Me.DataGridView1.DataSource = Me.QuoteheadBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(29, 94)

@@ -135,6 +135,12 @@
     <Compile Include="CustomerDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="delivery.Designer.vb">
+      <DependentUpon>delivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="enqmain.Designer.vb">
       <DependentUpon>enqmain.vb</DependentUpon>
     </Compile>
@@ -151,6 +157,12 @@
       <DependentUpon>findquote.vb</DependentUpon>
     </Compile>
     <Compile Include="findquote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="heading.Designer.vb">
+      <DependentUpon>heading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="heading.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory.Designer.vb">
@@ -217,6 +229,18 @@
     <Compile Include="shipping.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="signoff.Designer.vb">
+      <DependentUpon>signoff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="signoff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terms.Designer.vb">
+      <DependentUpon>terms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="terms.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransvacDataV2DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -253,6 +277,9 @@
     <EmbeddedResource Include="CustomerDetails.resx">
       <DependentUpon>CustomerDetails.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="delivery.resx">
+      <DependentUpon>delivery.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="enqmain.resx">
       <DependentUpon>enqmain.vb</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="findquote.resx">
       <DependentUpon>findquote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="heading.resx">
+      <DependentUpon>heading.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.vb</DependentUpon>
@@ -291,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="shipping.resx">
       <DependentUpon>shipping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signoff.resx">
+      <DependentUpon>signoff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terms.resx">
+      <DependentUpon>terms.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updatemem.resx">
       <DependentUpon>updatemem.vb</DependentUpon>

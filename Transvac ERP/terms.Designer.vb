@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class terms
+Partial Class Terms
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,55 +22,72 @@ Partial Class terms
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.termtb = New System.Windows.Forms.TextBox()
-        Me.termsavebut = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Terms))
+        Me.terms_tb = New System.Windows.Forms.TextBox()
+        Me.termssve_but = New System.Windows.Forms.Button()
+        Me.termsabt_but = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'termtb
+        'terms_tb
         '
-        Me.termtb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.termtb.Location = New System.Drawing.Point(42, 42)
-        Me.termtb.Multiline = True
-        Me.termtb.Name = "termtb"
-        Me.termtb.Size = New System.Drawing.Size(700, 175)
-        Me.termtb.TabIndex = 0
+        Me.terms_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.terms_tb.Location = New System.Drawing.Point(54, 55)
+        Me.terms_tb.Multiline = True
+        Me.terms_tb.Name = "terms_tb"
+        Me.terms_tb.Size = New System.Drawing.Size(857, 533)
+        Me.terms_tb.TabIndex = 2
+        Me.terms_tb.Text = resources.GetString("terms_tb.Text")
         '
-        'termsavebut
+        'termssve_but
         '
-        Me.termsavebut.Location = New System.Drawing.Point(343, 226)
-        Me.termsavebut.Name = "termsavebut"
-        Me.termsavebut.Size = New System.Drawing.Size(75, 23)
-        Me.termsavebut.TabIndex = 2
-        Me.termsavebut.Text = "SAVE"
-        Me.termsavebut.UseVisualStyleBackColor = True
+        Me.termssve_but.Location = New System.Drawing.Point(836, 610)
+        Me.termssve_but.Name = "termssve_but"
+        Me.termssve_but.Size = New System.Drawing.Size(75, 23)
+        Me.termssve_but.TabIndex = 37
+        Me.termssve_but.Text = "SAVE"
+        Me.termssve_but.UseVisualStyleBackColor = True
         '
-        'Label1
+        'termsabt_but
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(42, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Terms Of Business"
+        Me.termsabt_but.Location = New System.Drawing.Point(54, 610)
+        Me.termsabt_but.Name = "termsabt_but"
+        Me.termsabt_but.Size = New System.Drawing.Size(75, 23)
+        Me.termsabt_but.TabIndex = 36
+        Me.termsabt_but.Text = "ABORT"
+        Me.termsabt_but.UseVisualStyleBackColor = True
         '
-        'terms
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(72, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 38
+        Me.PictureBox1.TabStop = False
+        '
+        'Terms
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(784, 261)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.termsavebut)
-        Me.Controls.Add(Me.termtb)
-        Me.Name = "terms"
-        Me.Text = "Terms of Business"
+        Me.BackColor = System.Drawing.Color.LimeGreen
+        Me.ClientSize = New System.Drawing.Size(972, 670)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.termssve_but)
+        Me.Controls.Add(Me.termsabt_but)
+        Me.Controls.Add(Me.terms_tb)
+        Me.Name = "Terms"
+        Me.Text = "Terms"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents termtb As TextBox
-    Friend WithEvents termsavebut As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents terms_tb As TextBox
+    Friend WithEvents termssve_but As Button
+    Friend WithEvents termsabt_but As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

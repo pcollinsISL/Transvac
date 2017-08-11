@@ -56,26 +56,26 @@ Partial Class Inventory
         Me.but7 = New System.Windows.Forms.Button()
         Me.but4 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
+        Me.findesc_but = New System.Windows.Forms.Button()
+        Me.deldesc_but = New System.Windows.Forms.Button()
+        Me.editdesc_but = New System.Windows.Forms.Button()
+        Me.newdesc_but = New System.Windows.Forms.Button()
+        Me.quit_but = New System.Windows.Forms.Button()
+        Me.avgtotval_but = New System.Windows.Forms.Button()
+        Me.stockadj_but = New System.Windows.Forms.Button()
+        Me.bincode_but = New System.Windows.Forms.Button()
+        Me.nwbin_but = New System.Windows.Forms.Button()
+        Me.editbin_but = New System.Windows.Forms.Button()
+        Me.delbin_but = New System.Windows.Forms.Button()
+        Me.markup_but = New System.Windows.Forms.Button()
+        Me.alloc_but = New System.Windows.Forms.Button()
+        Me.stkmovmt_but = New System.Windows.Forms.Button()
+        Me.xchange_but = New System.Windows.Forms.Button()
+        Me.orderd_but = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button17 = New System.Windows.Forms.Button()
+        Me.editmem_but = New System.Windows.Forms.Button()
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -390,149 +390,149 @@ Partial Class Inventory
         Me.PictureBox1.TabIndex = 91
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'findesc_but
         '
-        Me.Button1.Location = New System.Drawing.Point(511, 171)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 41)
-        Me.Button1.TabIndex = 153
-        Me.Button1.Text = "Find Desc"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.findesc_but.Location = New System.Drawing.Point(511, 171)
+        Me.findesc_but.Name = "findesc_but"
+        Me.findesc_but.Size = New System.Drawing.Size(75, 41)
+        Me.findesc_but.TabIndex = 153
+        Me.findesc_but.Text = "Find Desc"
+        Me.findesc_but.UseVisualStyleBackColor = True
         '
-        'Button2
+        'deldesc_but
         '
-        Me.Button2.Location = New System.Drawing.Point(716, 150)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 154
-        Me.Button2.Text = "Delete Desc"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.deldesc_but.Location = New System.Drawing.Point(716, 150)
+        Me.deldesc_but.Name = "deldesc_but"
+        Me.deldesc_but.Size = New System.Drawing.Size(75, 23)
+        Me.deldesc_but.TabIndex = 154
+        Me.deldesc_but.Text = "Delete Desc"
+        Me.deldesc_but.UseVisualStyleBackColor = True
         '
-        'Button3
+        'editdesc_but
         '
-        Me.Button3.Location = New System.Drawing.Point(716, 120)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 155
-        Me.Button3.Text = "Edit Desc"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.editdesc_but.Location = New System.Drawing.Point(716, 120)
+        Me.editdesc_but.Name = "editdesc_but"
+        Me.editdesc_but.Size = New System.Drawing.Size(75, 23)
+        Me.editdesc_but.TabIndex = 155
+        Me.editdesc_but.Text = "Edit Desc"
+        Me.editdesc_but.UseVisualStyleBackColor = True
         '
-        'Button4
+        'newdesc_but
         '
-        Me.Button4.Location = New System.Drawing.Point(716, 90)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 156
-        Me.Button4.Text = "New Desc"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.newdesc_but.Location = New System.Drawing.Point(716, 90)
+        Me.newdesc_but.Name = "newdesc_but"
+        Me.newdesc_but.Size = New System.Drawing.Size(75, 23)
+        Me.newdesc_but.TabIndex = 156
+        Me.newdesc_but.Text = "New Desc"
+        Me.newdesc_but.UseVisualStyleBackColor = True
         '
-        'Button5
+        'quit_but
         '
-        Me.Button5.Location = New System.Drawing.Point(71, 449)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(70, 51)
-        Me.Button5.TabIndex = 157
-        Me.Button5.Text = "Quit"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.quit_but.Location = New System.Drawing.Point(71, 449)
+        Me.quit_but.Name = "quit_but"
+        Me.quit_but.Size = New System.Drawing.Size(70, 51)
+        Me.quit_but.TabIndex = 157
+        Me.quit_but.Text = "Quit"
+        Me.quit_but.UseVisualStyleBackColor = True
         '
-        'Button6
+        'avgtotval_but
         '
-        Me.Button6.Location = New System.Drawing.Point(236, 449)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(96, 23)
-        Me.Button6.TabIndex = 158
-        Me.Button6.Text = "Avg/Total Value"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.avgtotval_but.Location = New System.Drawing.Point(236, 449)
+        Me.avgtotval_but.Name = "avgtotval_but"
+        Me.avgtotval_but.Size = New System.Drawing.Size(96, 23)
+        Me.avgtotval_but.TabIndex = 158
+        Me.avgtotval_but.Text = "Avg/Total Value"
+        Me.avgtotval_but.UseVisualStyleBackColor = True
         '
-        'Button7
+        'stockadj_but
         '
-        Me.Button7.Location = New System.Drawing.Point(338, 449)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(107, 23)
-        Me.Button7.TabIndex = 159
-        Me.Button7.Text = "Stock Adjustment"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.stockadj_but.Location = New System.Drawing.Point(338, 449)
+        Me.stockadj_but.Name = "stockadj_but"
+        Me.stockadj_but.Size = New System.Drawing.Size(107, 23)
+        Me.stockadj_but.TabIndex = 159
+        Me.stockadj_but.Text = "Stock Adjustment"
+        Me.stockadj_but.UseVisualStyleBackColor = True
         '
-        'Button8
+        'bincode_but
         '
-        Me.Button8.Location = New System.Drawing.Point(451, 448)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(102, 23)
-        Me.Button8.TabIndex = 160
-        Me.Button8.Text = "Bin Code"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.bincode_but.Location = New System.Drawing.Point(451, 448)
+        Me.bincode_but.Name = "bincode_but"
+        Me.bincode_but.Size = New System.Drawing.Size(102, 23)
+        Me.bincode_but.TabIndex = 160
+        Me.bincode_but.Text = "Bin Code"
+        Me.bincode_but.UseVisualStyleBackColor = True
         '
-        'Button9
+        'nwbin_but
         '
-        Me.Button9.Location = New System.Drawing.Point(587, 448)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 23)
-        Me.Button9.TabIndex = 161
-        Me.Button9.Text = "New Bin"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.nwbin_but.Location = New System.Drawing.Point(587, 448)
+        Me.nwbin_but.Name = "nwbin_but"
+        Me.nwbin_but.Size = New System.Drawing.Size(75, 23)
+        Me.nwbin_but.TabIndex = 161
+        Me.nwbin_but.Text = "New Bin"
+        Me.nwbin_but.UseVisualStyleBackColor = True
         '
-        'Button10
+        'editbin_but
         '
-        Me.Button10.Location = New System.Drawing.Point(587, 506)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 162
-        Me.Button10.Text = "Edit Bin"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.editbin_but.Location = New System.Drawing.Point(587, 506)
+        Me.editbin_but.Name = "editbin_but"
+        Me.editbin_but.Size = New System.Drawing.Size(75, 23)
+        Me.editbin_but.TabIndex = 162
+        Me.editbin_but.Text = "Edit Bin"
+        Me.editbin_but.UseVisualStyleBackColor = True
         '
-        'Button11
+        'delbin_but
         '
-        Me.Button11.Location = New System.Drawing.Point(587, 477)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 23)
-        Me.Button11.TabIndex = 163
-        Me.Button11.Text = "Delete Bin"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.delbin_but.Location = New System.Drawing.Point(587, 477)
+        Me.delbin_but.Name = "delbin_but"
+        Me.delbin_but.Size = New System.Drawing.Size(75, 23)
+        Me.delbin_but.TabIndex = 163
+        Me.delbin_but.Text = "Delete Bin"
+        Me.delbin_but.UseVisualStyleBackColor = True
         '
-        'Button12
+        'markup_but
         '
-        Me.Button12.Location = New System.Drawing.Point(236, 477)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(96, 23)
-        Me.Button12.TabIndex = 164
-        Me.Button12.Text = "MarkUp"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.markup_but.Location = New System.Drawing.Point(236, 477)
+        Me.markup_but.Name = "markup_but"
+        Me.markup_but.Size = New System.Drawing.Size(96, 23)
+        Me.markup_but.TabIndex = 164
+        Me.markup_but.Text = "MarkUp"
+        Me.markup_but.UseVisualStyleBackColor = True
         '
-        'Button13
+        'alloc_but
         '
-        Me.Button13.Location = New System.Drawing.Point(520, 549)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 23)
-        Me.Button13.TabIndex = 165
-        Me.Button13.Text = "Allocated"
-        Me.Button13.UseVisualStyleBackColor = True
+        Me.alloc_but.Location = New System.Drawing.Point(520, 549)
+        Me.alloc_but.Name = "alloc_but"
+        Me.alloc_but.Size = New System.Drawing.Size(75, 23)
+        Me.alloc_but.TabIndex = 165
+        Me.alloc_but.Text = "Allocated"
+        Me.alloc_but.UseVisualStyleBackColor = True
         '
-        'Button14
+        'stkmovmt_but
         '
-        Me.Button14.Location = New System.Drawing.Point(338, 477)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(107, 23)
-        Me.Button14.TabIndex = 166
-        Me.Button14.Text = "Stock Movement"
-        Me.Button14.UseVisualStyleBackColor = True
+        Me.stkmovmt_but.Location = New System.Drawing.Point(338, 477)
+        Me.stkmovmt_but.Name = "stkmovmt_but"
+        Me.stkmovmt_but.Size = New System.Drawing.Size(107, 23)
+        Me.stkmovmt_but.TabIndex = 166
+        Me.stkmovmt_but.Text = "Stock Movement"
+        Me.stkmovmt_but.UseVisualStyleBackColor = True
         '
-        'Button15
+        'xchange_but
         '
-        Me.Button15.Location = New System.Drawing.Point(451, 477)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(102, 23)
-        Me.Button15.TabIndex = 167
-        Me.Button15.Text = "Xchange Rate"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.xchange_but.Location = New System.Drawing.Point(451, 477)
+        Me.xchange_but.Name = "xchange_but"
+        Me.xchange_but.Size = New System.Drawing.Size(102, 23)
+        Me.xchange_but.TabIndex = 167
+        Me.xchange_but.Text = "Xchange Rate"
+        Me.xchange_but.UseVisualStyleBackColor = True
         '
-        'Button16
+        'orderd_but
         '
-        Me.Button16.Location = New System.Drawing.Point(520, 578)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(75, 23)
-        Me.Button16.TabIndex = 168
-        Me.Button16.Text = "Ordered"
-        Me.Button16.UseVisualStyleBackColor = True
+        Me.orderd_but.Location = New System.Drawing.Point(520, 578)
+        Me.orderd_but.Name = "orderd_but"
+        Me.orderd_but.Size = New System.Drawing.Size(75, 23)
+        Me.orderd_but.TabIndex = 168
+        Me.orderd_but.Text = "Ordered"
+        Me.orderd_but.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
@@ -558,14 +558,14 @@ Partial Class Inventory
         Me.TextBox3.Size = New System.Drawing.Size(335, 131)
         Me.TextBox3.TabIndex = 172
         '
-        'Button17
+        'editmem_but
         '
-        Me.Button17.Location = New System.Drawing.Point(691, 554)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(76, 31)
-        Me.Button17.TabIndex = 173
-        Me.Button17.Text = "Edit Memo"
-        Me.Button17.UseVisualStyleBackColor = True
+        Me.editmem_but.Location = New System.Drawing.Point(691, 554)
+        Me.editmem_but.Name = "editmem_but"
+        Me.editmem_but.Size = New System.Drawing.Size(76, 31)
+        Me.editmem_but.TabIndex = 173
+        Me.editmem_but.Text = "Edit Memo"
+        Me.editmem_but.UseVisualStyleBackColor = True
         '
         'VScrollBar1
         '
@@ -680,26 +680,26 @@ Partial Class Inventory
         Me.Controls.Add(Label5)
         Me.Controls.Add(Label4)
         Me.Controls.Add(Me.VScrollBar1)
-        Me.Controls.Add(Me.Button17)
+        Me.Controls.Add(Me.editmem_but)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button16)
-        Me.Controls.Add(Me.Button15)
-        Me.Controls.Add(Me.Button14)
-        Me.Controls.Add(Me.Button13)
-        Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.orderd_but)
+        Me.Controls.Add(Me.xchange_but)
+        Me.Controls.Add(Me.stkmovmt_but)
+        Me.Controls.Add(Me.alloc_but)
+        Me.Controls.Add(Me.markup_but)
+        Me.Controls.Add(Me.delbin_but)
+        Me.Controls.Add(Me.editbin_but)
+        Me.Controls.Add(Me.nwbin_but)
+        Me.Controls.Add(Me.bincode_but)
+        Me.Controls.Add(Me.stockadj_but)
+        Me.Controls.Add(Me.avgtotval_but)
+        Me.Controls.Add(Me.quit_but)
+        Me.Controls.Add(Me.newdesc_but)
+        Me.Controls.Add(Me.editdesc_but)
+        Me.Controls.Add(Me.deldesc_but)
+        Me.Controls.Add(Me.findesc_but)
         Me.Controls.Add(Me.but5)
         Me.Controls.Add(Me.but6)
         Me.Controls.Add(Me.but7)
@@ -769,26 +769,26 @@ Partial Class Inventory
     Friend WithEvents but6 As Button
     Friend WithEvents but7 As Button
     Friend WithEvents but4 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button16 As Button
+    Friend WithEvents findesc_but As Button
+    Friend WithEvents deldesc_but As Button
+    Friend WithEvents editdesc_but As Button
+    Friend WithEvents newdesc_but As Button
+    Friend WithEvents quit_but As Button
+    Friend WithEvents avgtotval_but As Button
+    Friend WithEvents stockadj_but As Button
+    Friend WithEvents bincode_but As Button
+    Friend WithEvents nwbin_but As Button
+    Friend WithEvents editbin_but As Button
+    Friend WithEvents delbin_but As Button
+    Friend WithEvents markup_but As Button
+    Friend WithEvents alloc_but As Button
+    Friend WithEvents stkmovmt_but As Button
+    Friend WithEvents xchange_but As Button
+    Friend WithEvents orderd_but As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Button17 As Button
+    Friend WithEvents editmem_but As Button
     Friend WithEvents VScrollBar1 As VScrollBar
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label8 As Label

@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>If in stock at time of order, then delivery time will be approx 3-5 working days from receipt of order, Ex Works, UK (availability subject to prior sale)
+
+If NOT in stock at time of order, then delivery time will be approx 2-3 working weeks from receipt of order, Ex Works, UK  (availability subject to manufacturer's stock and/or production schedule -  To be confirmed after placement of firm order)
+</value>
+  </data>
 </root>
