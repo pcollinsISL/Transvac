@@ -127,6 +127,7 @@ Partial Class quote
         Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -183,7 +184,7 @@ Partial Class quote
         '
         'qty_tb
         '
-        Me.qty_tb.Location = New System.Drawing.Point(191, 104)
+        Me.qty_tb.Location = New System.Drawing.Point(201, 104)
         Me.qty_tb.Name = "qty_tb"
         Me.qty_tb.Size = New System.Drawing.Size(39, 20)
         Me.qty_tb.TabIndex = 10
@@ -1018,12 +1019,22 @@ Partial Class quote
         Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(1145, 229)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(82, 13)
+        Me.Label8.TabIndex = 87
+        Me.Label8.Text = "To be removed "
+        '
         'quote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1233, 767)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.CheckBox14)
         Me.Controls.Add(Me.CheckBox13)
@@ -1212,4 +1223,5 @@ Partial Class quote
     Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label8 As Label
 End Class

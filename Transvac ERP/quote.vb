@@ -61,4 +61,8 @@
     Private Sub fnd_but_Click(sender As Object, e As EventArgs) Handles fndesc_but.Click
 
     End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+        Today be removed
+    End Sub
 End Class
