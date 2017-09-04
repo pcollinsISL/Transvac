@@ -11,10 +11,13 @@
     End Function
 
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.trandesc' table. You can move, or remove it, as needed.
+        REM Me.TrandescTableAdapter.Fill(Me.TransvacDataV2DataSet1.trandesc)
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.quotehead' table. You can move, or remove it, as needed.
+        REM  Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet.quotehead)
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet.tranbins' table. You can move, or remove it, as needed.
-        Me.TranbinsTableAdapter.Fill(Me.TransvacDataV2DataSet.tranbins)
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.quotedetail' table. You can move, or remove it, as needed.
-        REM Me.QuotedetailTableAdapter.Fill(Me.TransvacDataV2DataSet.quotedetail)
+        REM Me.TranbinsTableAdapter.Fill(Me.TransvacDataV2DataSet.tranbins)
+        Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet.tranmemo' table. You can move, or remove it, as needed.
         REM Me.TranmemoTableAdapter.Fill(Me.TransvacDataV2DataSet.tranmemo)
 
@@ -63,6 +66,19 @@
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        Today be removed
+
+    End Sub
+
+    Private Sub abt_butt_Click(sender As Object, e As EventArgs) Handles abt_butt.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub Pcodelookup_Click(sender As Object, e As EventArgs) Handles Pcodelookup.Click, partno_tb.Leave
+        Me.TrandescTableAdapter.FillByPcode(Me.TransvacDataV2DataSet1.trandesc, partno_tb.Text)
+        Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet.tranbins, idcode.Text)
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
     End Sub
 End Class
