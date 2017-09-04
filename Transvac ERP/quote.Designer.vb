@@ -109,8 +109,6 @@ Partial Class quote
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
         Me.CheckBox14 = New System.Windows.Forms.CheckBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -127,6 +125,8 @@ Partial Class quote
         Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,7 +139,7 @@ Partial Class quote
         '
         'ListView2
         '
-        Me.ListView2.Location = New System.Drawing.Point(120, 245)
+        Me.ListView2.Location = New System.Drawing.Point(111, 245)
         Me.ListView2.Name = "ListView2"
         Me.ListView2.Size = New System.Drawing.Size(954, 81)
         Me.ListView2.TabIndex = 1
@@ -308,7 +308,7 @@ Partial Class quote
         '
         'abt_but
         '
-        Me.abt_but.Location = New System.Drawing.Point(126, 698)
+        Me.abt_but.Location = New System.Drawing.Point(126, 710)
         Me.abt_but.Name = "abt_but"
         Me.abt_but.Size = New System.Drawing.Size(75, 23)
         Me.abt_but.TabIndex = 29
@@ -317,7 +317,7 @@ Partial Class quote
         '
         'heading_but
         '
-        Me.heading_but.Location = New System.Drawing.Point(1025, 496)
+        Me.heading_but.Location = New System.Drawing.Point(1025, 508)
         Me.heading_but.Name = "heading_but"
         Me.heading_but.Size = New System.Drawing.Size(75, 23)
         Me.heading_but.TabIndex = 30
@@ -326,7 +326,7 @@ Partial Class quote
         '
         'sve_but
         '
-        Me.sve_but.Location = New System.Drawing.Point(231, 698)
+        Me.sve_but.Location = New System.Drawing.Point(231, 710)
         Me.sve_but.Name = "sve_but"
         Me.sve_but.Size = New System.Drawing.Size(75, 23)
         Me.sve_but.TabIndex = 31
@@ -335,7 +335,7 @@ Partial Class quote
         '
         'printqte_but
         '
-        Me.printqte_but.Location = New System.Drawing.Point(602, 698)
+        Me.printqte_but.Location = New System.Drawing.Point(602, 710)
         Me.printqte_but.Name = "printqte_but"
         Me.printqte_but.Size = New System.Drawing.Size(148, 23)
         Me.printqte_but.TabIndex = 32
@@ -344,7 +344,7 @@ Partial Class quote
         '
         'remline_but
         '
-        Me.remline_but.Location = New System.Drawing.Point(775, 698)
+        Me.remline_but.Location = New System.Drawing.Point(775, 710)
         Me.remline_but.Name = "remline_but"
         Me.remline_but.Size = New System.Drawing.Size(93, 23)
         Me.remline_but.TabIndex = 33
@@ -353,7 +353,7 @@ Partial Class quote
         '
         'delivery_but
         '
-        Me.delivery_but.Location = New System.Drawing.Point(1025, 546)
+        Me.delivery_but.Location = New System.Drawing.Point(1025, 558)
         Me.delivery_but.Name = "delivery_but"
         Me.delivery_but.Size = New System.Drawing.Size(75, 23)
         Me.delivery_but.TabIndex = 34
@@ -362,7 +362,7 @@ Partial Class quote
         '
         'terms_but
         '
-        Me.terms_but.Location = New System.Drawing.Point(1025, 596)
+        Me.terms_but.Location = New System.Drawing.Point(1025, 608)
         Me.terms_but.Name = "terms_but"
         Me.terms_but.Size = New System.Drawing.Size(75, 23)
         Me.terms_but.TabIndex = 35
@@ -371,7 +371,7 @@ Partial Class quote
         '
         'signoff_but
         '
-        Me.signoff_but.Location = New System.Drawing.Point(1025, 654)
+        Me.signoff_but.Location = New System.Drawing.Point(1025, 666)
         Me.signoff_but.Name = "signoff_but"
         Me.signoff_but.Size = New System.Drawing.Size(75, 23)
         Me.signoff_but.TabIndex = 36
@@ -381,7 +381,7 @@ Partial Class quote
         'selectall
         '
         Me.selectall.AutoSize = True
-        Me.selectall.Location = New System.Drawing.Point(948, 683)
+        Me.selectall.Location = New System.Drawing.Point(948, 695)
         Me.selectall.Name = "selectall"
         Me.selectall.Size = New System.Drawing.Size(89, 17)
         Me.selectall.TabIndex = 37
@@ -399,9 +399,9 @@ Partial Class quote
         '
         'order_but
         '
-        Me.order_but.Location = New System.Drawing.Point(948, 711)
+        Me.order_but.Location = New System.Drawing.Point(961, 721)
         Me.order_but.Name = "order_but"
-        Me.order_but.Size = New System.Drawing.Size(152, 49)
+        Me.order_but.Size = New System.Drawing.Size(139, 49)
         Me.order_but.TabIndex = 39
         Me.order_but.Text = "ORDER ITEMS"
         Me.order_but.UseVisualStyleBackColor = True
@@ -415,7 +415,7 @@ Partial Class quote
         '
         'VScrollBar1
         '
-        Me.VScrollBar1.Location = New System.Drawing.Point(966, 496)
+        Me.VScrollBar1.Location = New System.Drawing.Point(966, 508)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(11, 181)
         Me.VScrollBar1.TabIndex = 41
@@ -430,7 +430,7 @@ Partial Class quote
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(675, 480)
+        Me.Label13.Location = New System.Drawing.Point(675, 492)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(75, 13)
         Me.Label13.TabIndex = 48
@@ -439,7 +439,7 @@ Partial Class quote
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(117, 13)
+        Me.Label14.Location = New System.Drawing.Point(106, 27)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(71, 13)
         Me.Label14.TabIndex = 50
@@ -592,7 +592,7 @@ Partial Class quote
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(813, 480)
+        Me.Label31.Location = New System.Drawing.Point(813, 492)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(35, 13)
         Me.Label31.TabIndex = 67
@@ -619,7 +619,7 @@ Partial Class quote
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -629,7 +629,7 @@ Partial Class quote
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(948, 563)
+        Me.CheckBox3.Location = New System.Drawing.Point(948, 575)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox3.TabIndex = 71
@@ -640,7 +640,7 @@ Partial Class quote
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Checked = True
         Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Location = New System.Drawing.Point(948, 529)
+        Me.CheckBox4.Location = New System.Drawing.Point(948, 541)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox4.TabIndex = 72
@@ -651,7 +651,7 @@ Partial Class quote
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.Checked = True
         Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox5.Location = New System.Drawing.Point(948, 513)
+        Me.CheckBox5.Location = New System.Drawing.Point(948, 525)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox5.TabIndex = 73
@@ -662,7 +662,7 @@ Partial Class quote
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.Checked = True
         Me.CheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox6.Location = New System.Drawing.Point(948, 496)
+        Me.CheckBox6.Location = New System.Drawing.Point(948, 508)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox6.TabIndex = 74
@@ -671,7 +671,7 @@ Partial Class quote
         'CheckBox8
         '
         Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(948, 579)
+        Me.CheckBox8.Location = New System.Drawing.Point(948, 591)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox8.TabIndex = 76
@@ -680,7 +680,7 @@ Partial Class quote
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(948, 613)
+        Me.CheckBox9.Location = New System.Drawing.Point(948, 625)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox9.TabIndex = 77
@@ -689,7 +689,7 @@ Partial Class quote
         'CheckBox10
         '
         Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(948, 596)
+        Me.CheckBox10.Location = New System.Drawing.Point(948, 608)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox10.TabIndex = 78
@@ -698,7 +698,7 @@ Partial Class quote
         'CheckBox11
         '
         Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(948, 546)
+        Me.CheckBox11.Location = New System.Drawing.Point(948, 558)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox11.TabIndex = 79
@@ -707,7 +707,7 @@ Partial Class quote
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(899, 480)
+        Me.Label34.Location = New System.Drawing.Point(899, 492)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(64, 13)
         Me.Label34.TabIndex = 80
@@ -716,7 +716,7 @@ Partial Class quote
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(948, 630)
+        Me.CheckBox12.Location = New System.Drawing.Point(948, 642)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox12.TabIndex = 82
@@ -732,10 +732,10 @@ Partial Class quote
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QlinenoDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.QpartnoDataGridViewTextBoxColumn, Me.QdescDataGridViewTextBoxColumn, Me.QvalueDataGridViewTextBoxColumn, Me.QuotenoDataGridViewTextBoxColumn, Me.QlinememoDataGridViewTextBoxColumn, Me.NonstockDataGridViewCheckBoxColumn, Me.TimestampcolumnDataGridViewImageColumn, Me.QuotesufDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.QuotedetailBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(127, 496)
+        Me.DataGridView1.Location = New System.Drawing.Point(109, 508)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(818, 181)
+        Me.DataGridView1.Size = New System.Drawing.Size(836, 181)
         Me.DataGridView1.TabIndex = 83
         '
         'QlinenoDataGridViewTextBoxColumn
@@ -882,7 +882,7 @@ Partial Class quote
         'CheckBox13
         '
         Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(948, 663)
+        Me.CheckBox13.Location = New System.Drawing.Point(948, 675)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox13.TabIndex = 84
@@ -891,7 +891,7 @@ Partial Class quote
         'CheckBox14
         '
         Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(948, 648)
+        Me.CheckBox14.Location = New System.Drawing.Point(948, 660)
         Me.CheckBox14.Name = "CheckBox14"
         Me.CheckBox14.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox14.TabIndex = 85
@@ -905,17 +905,8 @@ Partial Class quote
         Me.DataGridView2.DataSource = Me.TranbinsBindingSource
         Me.DataGridView2.Location = New System.Drawing.Point(31, 332)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1154, 150)
+        Me.DataGridView2.Size = New System.Drawing.Size(1140, 150)
         Me.DataGridView2.TabIndex = 86
-        '
-        'TranbinsBindingSource
-        '
-        Me.TranbinsBindingSource.DataMember = "tranbins"
-        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
-        '
-        'TranbinsTableAdapter
-        '
-        Me.TranbinsTableAdapter.ClearBeforeFill = True
         '
         'LocatebinDataGridViewTextBoxColumn
         '
@@ -1019,10 +1010,19 @@ Partial Class quote
         Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
         '
+        'TranbinsBindingSource
+        '
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(1145, 229)
+        Me.Label8.Location = New System.Drawing.Point(1103, 270)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(82, 13)
         Me.Label8.TabIndex = 87
@@ -1033,7 +1033,7 @@ Partial Class quote
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.ClientSize = New System.Drawing.Size(1233, 767)
+        Me.ClientSize = New System.Drawing.Size(1233, 782)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.CheckBox14)

@@ -52,6 +52,7 @@ Partial Class quotelist
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.quotenotextbox = New System.Windows.Forms.TextBox()
+        Me.CustdiscTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.custdiscTableAdapter()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -276,6 +277,10 @@ Partial Class quotelist
         Me.quotenotextbox.TabIndex = 13
         Me.quotenotextbox.Visible = False
         '
+        'CustdiscTableAdapter1
+        '
+        Me.CustdiscTableAdapter1.ClearBeforeFill = True
+        '
         'quotelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -325,4 +330,5 @@ Partial Class quotelist
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents quotenotextbox As TextBox
+    Friend WithEvents CustdiscTableAdapter1 As TransvacDataV2DataSet1TableAdapters.custdiscTableAdapter
 End Class

@@ -63,6 +63,10 @@
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        Today be removed
+        '   Today be removed '
+    End Sub
+
+    Private Sub abt_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles abt_but.Click
+        Me.Hide()
     End Sub
 End Class
