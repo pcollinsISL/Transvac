@@ -81,4 +81,8 @@
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
 
     End Sub
+
+    Private Sub Label8_Click_1(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
 End Class

@@ -115,6 +115,8 @@ Partial Class quote
         Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.QuoteheadTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quoteheadTableAdapter()
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -299,6 +301,7 @@ Partial Class quote
         '
         'ListView3
         '
+        Me.ListView3.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.QuotedetailBindingSource, "qline_memo", True))
         Me.ListView3.Location = New System.Drawing.Point(113, 147)
         Me.ListView3.Name = "ListView3"
         Me.ListView3.Size = New System.Drawing.Size(872, 75)
@@ -890,12 +893,33 @@ Partial Class quote
         '
         Me.TrandescTableAdapter.ClearBeforeFill = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(35, 240)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(72, 13)
+        Me.Label8.TabIndex = 91
+        Me.Label8.Text = "DESC MEMO"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.DataSource = Me.TrandescBindingSource
+        Me.ListBox1.DisplayMember = "descmemo"
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(113, 231)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(872, 95)
+        Me.ListBox1.TabIndex = 92
+        '
         'quote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1247, 780)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.Pcodelookup)
         Me.Controls.Add(Me.DataGridView2)
@@ -1058,4 +1082,6 @@ Partial Class quote
     Friend WithEvents TrandescTableAdapter As TransvacDataV2DataSet1TableAdapters.trandescTableAdapter
     Friend WithEvents Pcodelookup As Button
     Friend WithEvents idcode As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents ListBox1 As ListBox
 End Class

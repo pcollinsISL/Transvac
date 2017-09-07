@@ -7,8 +7,10 @@
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If ACCOUNTTextBox1.Text = "" Then Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
-        If Not Me.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, ACCOUNTTextBox1.Text) Then
+        If ACCOUNTTextBox1.Text = "" Then
+            Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
+        Else
+            Me.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, ACCOUNTTextBox1.Text)
         End If
     End Sub
 
