@@ -7,7 +7,9 @@
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
+        If ACCOUNTTextBox1.Text = "" Then Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
+        If Not Me.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, ACCOUNTTextBox1.Text) Then
+        End If
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
@@ -59,7 +61,6 @@
         enquiry.Mobtel_noTextBox.Text = TELEXTextBox.Text
         enquiry.Fax_noTextBox.Text = FAXTextBox.Text
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
-        REM enquiry.EmemoTextBox.Text = ADDMEMOTextBox.Text
         enquiry.acctTextBox.Text = EntrytypeComboBox.Text
         enquiry.termsTextBox.Text = TERMDAYSTextBox.Text
 

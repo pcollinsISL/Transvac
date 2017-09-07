@@ -31,7 +31,7 @@
 
     End Sub
 
-    Private Sub chstock_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chstock_but.Click
+    Private Sub chstock_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         ' Show the form as a modaless window.
         Dim x As Inventory = New Inventory
         x.Show()
@@ -65,7 +65,7 @@
 
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+    Private Sub Label8_Click(sender As Object, e As EventArgs) 
 
     End Sub
 

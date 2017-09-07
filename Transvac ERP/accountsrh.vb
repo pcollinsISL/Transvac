@@ -13,7 +13,6 @@
 
     Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
 
-
     End Sub
 
     Private Sub accountsrch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -22,9 +21,13 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim x As form1 = form1
-
-        REM form1.ACCOUNTTextBox1.Text = Tran2DataGridView.Item(1, Tran2DataGridView.CurrentRow.Index).Value
+        form1.ACCOUNTTextBox1.Text = Tran2DataGridView.Item(1, Tran2DataGridView.CurrentRow.Index).Value
+        form1.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, form1.ACCOUNTTextBox1.Text)
         Me.Hide()
-        X.Show()
+        x.Show()
+    End Sub
+
+    Private Sub acctextBox_TextChanged(sender As Object, e As EventArgs) Handles acctextBox.TextChanged
+
     End Sub
 End Class

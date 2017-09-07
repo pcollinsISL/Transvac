@@ -23,14 +23,17 @@ Partial Class quote
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.ListView2 = New System.Windows.Forms.ListView()
         Me.header_tb = New System.Windows.Forms.TextBox()
+        Me.QuoteheadBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.qute_tb = New System.Windows.Forms.TextBox()
         Me.SuffixTB = New System.Windows.Forms.TextBox()
         Me.partno_tb = New System.Windows.Forms.TextBox()
         Me.qty_tb = New System.Windows.Forms.TextBox()
         Me.descrip_tb = New System.Windows.Forms.TextBox()
+        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.Ext_tb = New System.Windows.Forms.TextBox()
         Me.unitprice_tb = New System.Windows.Forms.TextBox()
         Me.fndesc_but = New System.Windows.Forms.Button()
@@ -40,7 +43,6 @@ Partial Class quote
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
         Me.add_but = New System.Windows.Forms.Button()
         Me.edit_but = New System.Windows.Forms.Button()
         Me.ListView3 = New System.Windows.Forms.ListView()
@@ -53,29 +55,12 @@ Partial Class quote
         Me.terms_but = New System.Windows.Forms.Button()
         Me.signoff_but = New System.Windows.Forms.Button()
         Me.selectall = New System.Windows.Forms.CheckBox()
-        Me.chstock_but = New System.Windows.Forms.Button()
         Me.order_but = New System.Windows.Forms.Button()
         Me.user_tb = New System.Windows.Forms.TextBox()
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.VScrollBar3 = New System.Windows.Forms.VScrollBar()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
@@ -91,16 +76,21 @@ Partial Class quote
         Me.Label34 = New System.Windows.Forms.Label()
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.QlinenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QpartnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QdescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuotenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QlinememoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
         Me.CheckBox14 = New System.Windows.Forms.CheckBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Pcodelookup = New System.Windows.Forms.Button()
-        Me.idcode = New System.Windows.Forms.TextBox()
-        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -117,43 +107,25 @@ Partial Class quote
         Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.QlinenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QpartnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QdescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuotenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QlinememoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuoteheadBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Pcodelookup = New System.Windows.Forms.Button()
+        Me.idcode = New System.Windows.Forms.TextBox()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.QuotedetailTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter()
         Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.QuoteheadTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quoteheadTableAdapter()
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ListView2
-        '
-        Me.ListView2.Location = New System.Drawing.Point(120, 245)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(954, 81)
-        Me.ListView2.TabIndex = 1
-        Me.ListView2.UseCompatibleStateImageBehavior = False
         '
         'header_tb
         '
@@ -162,6 +134,16 @@ Partial Class quote
         Me.header_tb.Name = "header_tb"
         Me.header_tb.Size = New System.Drawing.Size(484, 20)
         Me.header_tb.TabIndex = 3
+        '
+        'QuoteheadBindingSource
+        '
+        Me.QuoteheadBindingSource.DataMember = "quotehead"
+        Me.QuoteheadBindingSource.DataSource = Me.TransvacDataV2DataSet
+        '
+        'TransvacDataV2DataSet
+        '
+        Me.TransvacDataV2DataSet.DataSetName = "TransvacDataV2DataSet"
+        Me.TransvacDataV2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -209,6 +191,16 @@ Partial Class quote
         Me.descrip_tb.Name = "descrip_tb"
         Me.descrip_tb.Size = New System.Drawing.Size(350, 20)
         Me.descrip_tb.TabIndex = 11
+        '
+        'TrandescBindingSource
+        '
+        Me.TrandescBindingSource.DataMember = "trandesc"
+        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Ext_tb
         '
@@ -286,13 +278,6 @@ Partial Class quote
         Me.Label7.Size = New System.Drawing.Size(23, 13)
         Me.Label7.TabIndex = 20
         Me.Label7.Text = "Qty"
-        '
-        'VScrollBar2
-        '
-        Me.VScrollBar2.Location = New System.Drawing.Point(1076, 229)
-        Me.VScrollBar2.Name = "VScrollBar2"
-        Me.VScrollBar2.Size = New System.Drawing.Size(17, 97)
-        Me.VScrollBar2.TabIndex = 24
         '
         'add_but
         '
@@ -402,15 +387,6 @@ Partial Class quote
         Me.selectall.Text = "SELECT ALL"
         Me.selectall.UseVisualStyleBackColor = True
         '
-        'chstock_but
-        '
-        Me.chstock_but.Location = New System.Drawing.Point(12, 253)
-        Me.chstock_but.Name = "chstock_but"
-        Me.chstock_but.Size = New System.Drawing.Size(93, 46)
-        Me.chstock_but.TabIndex = 38
-        Me.chstock_but.Text = "CHECK STOCK"
-        Me.chstock_but.UseVisualStyleBackColor = True
-        '
         'order_but
         '
         Me.order_but.Location = New System.Drawing.Point(948, 711)
@@ -459,150 +435,6 @@ Partial Class quote
         Me.Label14.Size = New System.Drawing.Size(71, 13)
         Me.Label14.TabIndex = 50
         Me.Label14.Text = "QUOTATION"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(134, 229)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(58, 13)
-        Me.Label15.TabIndex = 51
-        Me.Label15.Text = "BIN CODE"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(117, 229)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(11, 13)
-        Me.Label16.TabIndex = 52
-        Me.Label16.Text = "*"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(198, 229)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(52, 13)
-        Me.Label17.TabIndex = 53
-        Me.Label17.Text = "SOURCE"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(418, 229)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(57, 13)
-        Me.Label18.TabIndex = 54
-        Me.Label18.Text = "SUP DISC"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(256, 229)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 13)
-        Me.Label19.TabIndex = 55
-        Me.Label19.Text = "*"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(273, 229)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(62, 13)
-        Me.Label20.TabIndex = 56
-        Me.Label20.Text = "QUANTITY"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(341, 229)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(71, 13)
-        Me.Label21.TabIndex = 57
-        Me.Label21.Text = "UNIT VALUE"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(716, 229)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(59, 13)
-        Me.Label22.TabIndex = 58
-        Me.Label22.Text = "UPDATED"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(554, 229)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(74, 13)
-        Me.Label23.TabIndex = 59
-        Me.Label23.Text = "UNIT £ COST"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(481, 229)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(67, 13)
-        Me.Label24.TabIndex = 60
-        Me.Label24.Text = "CURRENCY"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(847, 229)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(54, 13)
-        Me.Label25.TabIndex = 61
-        Me.Label25.Text = "RETAIL £"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(781, 229)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(60, 13)
-        Me.Label26.TabIndex = 62
-        Me.Label26.Text = "CAT DATE"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(634, 229)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(74, 13)
-        Me.Label27.TabIndex = 63
-        Me.Label27.Text = "UNIT £ COST"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(1022, 229)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(51, 13)
-        Me.Label28.TabIndex = 64
-        Me.Label28.Text = "WEIGHT"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(976, 229)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(40, 13)
-        Me.Label29.TabIndex = 65
-        Me.Label29.Text = "WQTY"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(906, 229)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(64, 13)
-        Me.Label30.TabIndex = 66
-        Me.Label30.Text = "MARKUP %"
         '
         'Label31
         '
@@ -753,10 +585,93 @@ Partial Class quote
         Me.DataGridView1.Size = New System.Drawing.Size(911, 181)
         Me.DataGridView1.TabIndex = 83
         '
+        'QlinenoDataGridViewTextBoxColumn
+        '
+        Me.QlinenoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.QlinenoDataGridViewTextBoxColumn.DataPropertyName = "qline_no"
+        Me.QlinenoDataGridViewTextBoxColumn.HeaderText = "QUOTE LINE"
+        Me.QlinenoDataGridViewTextBoxColumn.Name = "QlinenoDataGridViewTextBoxColumn"
+        Me.QlinenoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QlinenoDataGridViewTextBoxColumn.Width = 97
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "QTY"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QpartnoDataGridViewTextBoxColumn
+        '
+        Me.QpartnoDataGridViewTextBoxColumn.DataPropertyName = "qpart_no"
+        Me.QpartnoDataGridViewTextBoxColumn.HeaderText = "PART NO"
+        Me.QpartnoDataGridViewTextBoxColumn.Name = "QpartnoDataGridViewTextBoxColumn"
+        Me.QpartnoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QdescDataGridViewTextBoxColumn
+        '
+        Me.QdescDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.QdescDataGridViewTextBoxColumn.DataPropertyName = "qdesc"
+        Me.QdescDataGridViewTextBoxColumn.HeaderText = "DESCRIPTION"
+        Me.QdescDataGridViewTextBoxColumn.Name = "QdescDataGridViewTextBoxColumn"
+        Me.QdescDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QvalueDataGridViewTextBoxColumn
+        '
+        Me.QvalueDataGridViewTextBoxColumn.DataPropertyName = "qvalue"
+        Me.QvalueDataGridViewTextBoxColumn.HeaderText = "UNIT PRICE"
+        Me.QvalueDataGridViewTextBoxColumn.Name = "QvalueDataGridViewTextBoxColumn"
+        Me.QvalueDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuotenoDataGridViewTextBoxColumn
+        '
+        Me.QuotenoDataGridViewTextBoxColumn.DataPropertyName = "quote_no"
+        Me.QuotenoDataGridViewTextBoxColumn.HeaderText = "quote_no"
+        Me.QuotenoDataGridViewTextBoxColumn.Name = "QuotenoDataGridViewTextBoxColumn"
+        Me.QuotenoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QuotenoDataGridViewTextBoxColumn.Visible = False
+        '
+        'QlinememoDataGridViewTextBoxColumn
+        '
+        Me.QlinememoDataGridViewTextBoxColumn.DataPropertyName = "qline_memo"
+        Me.QlinememoDataGridViewTextBoxColumn.HeaderText = "qline_memo"
+        Me.QlinememoDataGridViewTextBoxColumn.Name = "QlinememoDataGridViewTextBoxColumn"
+        Me.QlinememoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QlinememoDataGridViewTextBoxColumn.Visible = False
+        '
+        'NonstockDataGridViewCheckBoxColumn
+        '
+        Me.NonstockDataGridViewCheckBoxColumn.DataPropertyName = "nonstock"
+        Me.NonstockDataGridViewCheckBoxColumn.HeaderText = "nonstock"
+        Me.NonstockDataGridViewCheckBoxColumn.Name = "NonstockDataGridViewCheckBoxColumn"
+        Me.NonstockDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.NonstockDataGridViewCheckBoxColumn.Visible = False
+        '
+        'TimestampcolumnDataGridViewImageColumn
+        '
+        Me.TimestampcolumnDataGridViewImageColumn.DataPropertyName = "timestamp_column"
+        Me.TimestampcolumnDataGridViewImageColumn.HeaderText = "timestamp_column"
+        Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
+        Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
+        Me.TimestampcolumnDataGridViewImageColumn.Visible = False
+        '
+        'QuotesufDataGridViewTextBoxColumn
+        '
+        Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
+        Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "quote_suf"
+        Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
+        Me.QuotesufDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QuotesufDataGridViewTextBoxColumn.Visible = False
+        '
         'QuotedetailBindingSource
         '
         Me.QuotedetailBindingSource.DataMember = "quotedetail"
         Me.QuotedetailBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
+        '
+        'TransvacDataV2DataSetBindingSource
+        '
+        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.TransvacDataV2DataSetBindingSource.Position = 0
         '
         'CheckBox13
         '
@@ -786,48 +701,6 @@ Partial Class quote
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(1154, 150)
         Me.DataGridView2.TabIndex = 86
-        '
-        'TranbinsBindingSource
-        '
-        Me.TranbinsBindingSource.DataMember = "tranbins"
-        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(1145, 229)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(82, 13)
-        Me.Label8.TabIndex = 87
-        Me.Label8.Text = "To be removed "
-        '
-        'Pcodelookup
-        '
-        Me.Pcodelookup.Location = New System.Drawing.Point(12, 99)
-        Me.Pcodelookup.Name = "Pcodelookup"
-        Me.Pcodelookup.Size = New System.Drawing.Size(75, 23)
-        Me.Pcodelookup.TabIndex = 88
-        Me.Pcodelookup.Text = "Pcode"
-        Me.Pcodelookup.UseVisualStyleBackColor = True
-        Me.Pcodelookup.Visible = False
-        '
-        'idcode
-        '
-        Me.idcode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "idcode", True))
-        Me.idcode.Location = New System.Drawing.Point(93, 101)
-        Me.idcode.Name = "idcode"
-        Me.idcode.Size = New System.Drawing.Size(63, 20)
-        Me.idcode.TabIndex = 89
-        '
-        'TrandescBindingSource
-        '
-        Me.TrandescBindingSource.DataMember = "trandesc"
-        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'LocatebinDataGridViewTextBoxColumn
         '
@@ -931,98 +804,28 @@ Partial Class quote
         Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
         '
-        'TransvacDataV2DataSetBindingSource
+        'TranbinsBindingSource
         '
-        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
-        Me.TransvacDataV2DataSetBindingSource.Position = 0
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
         '
-        'TransvacDataV2DataSet
+        'Pcodelookup
         '
-        Me.TransvacDataV2DataSet.DataSetName = "TransvacDataV2DataSet"
-        Me.TransvacDataV2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Pcodelookup.Location = New System.Drawing.Point(12, 99)
+        Me.Pcodelookup.Name = "Pcodelookup"
+        Me.Pcodelookup.Size = New System.Drawing.Size(75, 23)
+        Me.Pcodelookup.TabIndex = 88
+        Me.Pcodelookup.Text = "Pcode"
+        Me.Pcodelookup.UseVisualStyleBackColor = True
+        Me.Pcodelookup.Visible = False
         '
-        'QlinenoDataGridViewTextBoxColumn
+        'idcode
         '
-        Me.QlinenoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.QlinenoDataGridViewTextBoxColumn.DataPropertyName = "qline_no"
-        Me.QlinenoDataGridViewTextBoxColumn.HeaderText = "QUOTE LINE"
-        Me.QlinenoDataGridViewTextBoxColumn.Name = "QlinenoDataGridViewTextBoxColumn"
-        Me.QlinenoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QlinenoDataGridViewTextBoxColumn.Width = 97
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "QTY"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QpartnoDataGridViewTextBoxColumn
-        '
-        Me.QpartnoDataGridViewTextBoxColumn.DataPropertyName = "qpart_no"
-        Me.QpartnoDataGridViewTextBoxColumn.HeaderText = "PART NO"
-        Me.QpartnoDataGridViewTextBoxColumn.Name = "QpartnoDataGridViewTextBoxColumn"
-        Me.QpartnoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QdescDataGridViewTextBoxColumn
-        '
-        Me.QdescDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.QdescDataGridViewTextBoxColumn.DataPropertyName = "qdesc"
-        Me.QdescDataGridViewTextBoxColumn.HeaderText = "DESCRIPTION"
-        Me.QdescDataGridViewTextBoxColumn.Name = "QdescDataGridViewTextBoxColumn"
-        Me.QdescDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QvalueDataGridViewTextBoxColumn
-        '
-        Me.QvalueDataGridViewTextBoxColumn.DataPropertyName = "qvalue"
-        Me.QvalueDataGridViewTextBoxColumn.HeaderText = "UNIT PRICE"
-        Me.QvalueDataGridViewTextBoxColumn.Name = "QvalueDataGridViewTextBoxColumn"
-        Me.QvalueDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QuotenoDataGridViewTextBoxColumn
-        '
-        Me.QuotenoDataGridViewTextBoxColumn.DataPropertyName = "quote_no"
-        Me.QuotenoDataGridViewTextBoxColumn.HeaderText = "quote_no"
-        Me.QuotenoDataGridViewTextBoxColumn.Name = "QuotenoDataGridViewTextBoxColumn"
-        Me.QuotenoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QuotenoDataGridViewTextBoxColumn.Visible = False
-        '
-        'QlinememoDataGridViewTextBoxColumn
-        '
-        Me.QlinememoDataGridViewTextBoxColumn.DataPropertyName = "qline_memo"
-        Me.QlinememoDataGridViewTextBoxColumn.HeaderText = "qline_memo"
-        Me.QlinememoDataGridViewTextBoxColumn.Name = "QlinememoDataGridViewTextBoxColumn"
-        Me.QlinememoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QlinememoDataGridViewTextBoxColumn.Visible = False
-        '
-        'NonstockDataGridViewCheckBoxColumn
-        '
-        Me.NonstockDataGridViewCheckBoxColumn.DataPropertyName = "nonstock"
-        Me.NonstockDataGridViewCheckBoxColumn.HeaderText = "nonstock"
-        Me.NonstockDataGridViewCheckBoxColumn.Name = "NonstockDataGridViewCheckBoxColumn"
-        Me.NonstockDataGridViewCheckBoxColumn.ReadOnly = True
-        Me.NonstockDataGridViewCheckBoxColumn.Visible = False
-        '
-        'TimestampcolumnDataGridViewImageColumn
-        '
-        Me.TimestampcolumnDataGridViewImageColumn.DataPropertyName = "timestamp_column"
-        Me.TimestampcolumnDataGridViewImageColumn.HeaderText = "timestamp_column"
-        Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
-        Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
-        Me.TimestampcolumnDataGridViewImageColumn.Visible = False
-        '
-        'QuotesufDataGridViewTextBoxColumn
-        '
-        Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
-        Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "quote_suf"
-        Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
-        Me.QuotesufDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QuotesufDataGridViewTextBoxColumn.Visible = False
-        '
-        'QuoteheadBindingSource
-        '
-        Me.QuoteheadBindingSource.DataMember = "quotehead"
-        Me.QuoteheadBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.idcode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "idcode", True))
+        Me.idcode.Location = New System.Drawing.Point(93, 101)
+        Me.idcode.Name = "idcode"
+        Me.idcode.Size = New System.Drawing.Size(63, 20)
+        Me.idcode.TabIndex = 89
         '
         'TableAdapterManager
         '
@@ -1095,7 +898,6 @@ Partial Class quote
         Me.ClientSize = New System.Drawing.Size(1247, 780)
         Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.Pcodelookup)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.CheckBox14)
         Me.Controls.Add(Me.CheckBox13)
@@ -1113,22 +915,6 @@ Partial Class quote
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.Label32)
         Me.Controls.Add(Me.Label31)
-        Me.Controls.Add(Me.Label30)
-        Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.Label28)
-        Me.Controls.Add(Me.Label27)
-        Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label13)
@@ -1136,7 +922,6 @@ Partial Class quote
         Me.Controls.Add(Me.VScrollBar1)
         Me.Controls.Add(Me.user_tb)
         Me.Controls.Add(Me.order_but)
-        Me.Controls.Add(Me.chstock_but)
         Me.Controls.Add(Me.selectall)
         Me.Controls.Add(Me.signoff_but)
         Me.Controls.Add(Me.terms_but)
@@ -1148,7 +933,6 @@ Partial Class quote
         Me.Controls.Add(Me.abt_butt)
         Me.Controls.Add(Me.edit_but)
         Me.Controls.Add(Me.add_but)
-        Me.Controls.Add(Me.VScrollBar2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -1165,25 +949,23 @@ Partial Class quote
         Me.Controls.Add(Me.qute_tb)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.header_tb)
-        Me.Controls.Add(Me.ListView2)
         Me.Controls.Add(Me.ListView3)
         Me.Name = "quote"
         Me.Text = "Quotation"
+        CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListView2 As ListView
     Friend WithEvents TransvacDataV2DataSet As TransvacDataV2DataSet1
     Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents header_tb As TextBox
@@ -1202,7 +984,6 @@ Partial Class quote
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents VScrollBar2 As VScrollBar
     Friend WithEvents add_but As Button
     Friend WithEvents edit_but As Button
     Friend WithEvents ListView3 As ListView
@@ -1215,7 +996,6 @@ Partial Class quote
     Friend WithEvents terms_but As Button
     Friend WithEvents signoff_but As Button
     Friend WithEvents selectall As CheckBox
-    Friend WithEvents chstock_but As Button
     Friend WithEvents order_but As Button
     Friend WithEvents user_tb As TextBox
     Friend WithEvents VScrollBar1 As VScrollBar
@@ -1223,22 +1003,6 @@ Partial Class quote
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
@@ -1277,7 +1041,6 @@ Partial Class quote
     Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Label8 As Label
     Friend WithEvents QuoteheadBindingSource As BindingSource
     Friend WithEvents QuoteheadTableAdapter As TransvacDataV2DataSet1TableAdapters.quoteheadTableAdapter
     Friend WithEvents QlinenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
