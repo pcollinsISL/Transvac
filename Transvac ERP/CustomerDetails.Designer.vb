@@ -421,7 +421,7 @@ Partial Class CustomerDetails
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox3.Location = New System.Drawing.Point(12, 1)
+        Me.PictureBox3.Location = New System.Drawing.Point(7, 1)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(100, 50)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

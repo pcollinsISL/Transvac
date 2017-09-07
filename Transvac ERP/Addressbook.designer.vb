@@ -87,7 +87,6 @@ Partial Class form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -136,7 +135,7 @@ Partial Class form1
         'NWHOLabel
         '
         NWHOLabel.AutoSize = True
-        NWHOLabel.Location = New System.Drawing.Point(893, 75)
+        NWHOLabel.Location = New System.Drawing.Point(921, 77)
         NWHOLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NWHOLabel.Name = "NWHOLabel"
         NWHOLabel.Size = New System.Drawing.Size(24, 13)
@@ -501,9 +500,9 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(875, 362)
+        Me.selectbut.Location = New System.Drawing.Point(876, 373)
         Me.selectbut.Name = "selectbut"
-        Me.selectbut.Size = New System.Drawing.Size(134, 65)
+        Me.selectbut.Size = New System.Drawing.Size(134, 53)
         Me.selectbut.TabIndex = 180
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
@@ -530,7 +529,7 @@ Partial Class form1
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(341, 191)
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 191)
         Me.ADDMEMOTextBox.TabIndex = 132
         '
         'AddnotesBindingSource1
@@ -673,17 +672,6 @@ Partial Class form1
         Me.Label6.TabIndex = 190
         Me.Label6.Text = "*"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(289, 289)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(25, 31)
-        Me.Label7.TabIndex = 191
-        Me.Label7.Text = "*"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -753,7 +741,7 @@ Partial Class form1
         'NwhoTextBox1
         '
         Me.NwhoTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "nwho", True))
-        Me.NwhoTextBox1.Location = New System.Drawing.Point(896, 91)
+        Me.NwhoTextBox1.Location = New System.Drawing.Point(924, 95)
         Me.NwhoTextBox1.Name = "NwhoTextBox1"
         Me.NwhoTextBox1.Size = New System.Drawing.Size(85, 20)
         Me.NwhoTextBox1.TabIndex = 199
@@ -861,7 +849,7 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1055, 491)
+        Me.ClientSize = New System.Drawing.Size(1042, 479)
         Me.Controls.Add(Me.PROMO)
         Me.Controls.Add(Me.XcardCheckBox1)
         Me.Controls.Add(Me.New_updDateTimePicker)
@@ -874,7 +862,6 @@ Partial Class form1
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -992,7 +979,6 @@ Partial Class form1
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label

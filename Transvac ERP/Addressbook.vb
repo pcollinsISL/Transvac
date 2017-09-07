@@ -128,4 +128,8 @@
     Private Sub TERMDAYSTextBox_TextChanged(sender As Object, e As EventArgs) Handles TERMDAYSTextBox.TextChanged
 
     End Sub
+
+    Private Sub NAMETextBox1_TextChanged(sender As Object, e As EventArgs) Handles NAMETextBox1.TextChanged
+
+    End Sub
 End Class

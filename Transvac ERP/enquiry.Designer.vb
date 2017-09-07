@@ -59,11 +59,11 @@ Partial Class enquiry
         Me.Btnaddressbook = New System.Windows.Forms.Button()
         Me.CnameTextBox = New System.Windows.Forms.TextBox()
         Me.Add5TextBox = New System.Windows.Forms.TextBox()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Add4TextBox = New System.Windows.Forms.TextBox()
         Me.Add3TextBox = New System.Windows.Forms.TextBox()
         Me.Add2TextBox = New System.Windows.Forms.TextBox()
         Me.Add1TextBox = New System.Windows.Forms.TextBox()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.termsTextBox = New System.Windows.Forms.TextBox()
         Me.Btnquotegen = New System.Windows.Forms.Button()
         Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
@@ -404,6 +404,11 @@ Partial Class enquiry
         Me.Add5TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add5TextBox.TabIndex = 41
         '
+        'Tran2BindingSource
+        '
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet
+        '
         'Add4TextBox
         '
         Me.Add4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource, "ad4", True))
@@ -435,11 +440,6 @@ Partial Class enquiry
         Me.Add1TextBox.Name = "Add1TextBox"
         Me.Add1TextBox.Size = New System.Drawing.Size(237, 20)
         Me.Add1TextBox.TabIndex = 46
-        '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet
         '
         'termsTextBox
         '
@@ -617,7 +617,7 @@ Partial Class enquiry
         Me.Controls.Add(CnameLabel)
         Me.Controls.Add(EdateLabel)
         Me.Name = "enquiry"
-        Me.Text = "Enquiry"
+        Me.Text = "+"
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
