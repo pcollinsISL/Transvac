@@ -45,7 +45,8 @@ Partial Class quote
         Me.Label7 = New System.Windows.Forms.Label()
         Me.add_but = New System.Windows.Forms.Button()
         Me.edit_but = New System.Windows.Forms.Button()
-        Me.ListView3 = New System.Windows.Forms.ListView()
+        Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.abt_butt = New System.Windows.Forms.Button()
         Me.heading_but = New System.Windows.Forms.Button()
         Me.sve_but = New System.Windows.Forms.Button()
@@ -86,8 +87,6 @@ Partial Class quote
         Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
         Me.CheckBox14 = New System.Windows.Forms.CheckBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -117,14 +116,16 @@ Partial Class quote
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -299,14 +300,15 @@ Partial Class quote
         Me.edit_but.Text = "EDIT"
         Me.edit_but.UseVisualStyleBackColor = True
         '
-        'ListView3
+        'QuotedetailBindingSource
         '
-        Me.ListView3.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.QuotedetailBindingSource, "qline_memo", True))
-        Me.ListView3.Location = New System.Drawing.Point(113, 147)
-        Me.ListView3.Name = "ListView3"
-        Me.ListView3.Size = New System.Drawing.Size(872, 75)
-        Me.ListView3.TabIndex = 28
-        Me.ListView3.UseCompatibleStateImageBehavior = False
+        Me.QuotedetailBindingSource.DataMember = "quotedetail"
+        Me.QuotedetailBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
+        '
+        'TransvacDataV2DataSetBindingSource
+        '
+        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.TransvacDataV2DataSetBindingSource.Position = 0
         '
         'abt_butt
         '
@@ -666,16 +668,6 @@ Partial Class quote
         Me.QuotesufDataGridViewTextBoxColumn.ReadOnly = True
         Me.QuotesufDataGridViewTextBoxColumn.Visible = False
         '
-        'QuotedetailBindingSource
-        '
-        Me.QuotedetailBindingSource.DataMember = "quotedetail"
-        Me.QuotedetailBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
-        '
-        'TransvacDataV2DataSetBindingSource
-        '
-        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
-        Me.TransvacDataV2DataSetBindingSource.Position = 0
-        '
         'CheckBox13
         '
         Me.CheckBox13.AutoSize = True
@@ -702,7 +694,7 @@ Partial Class quote
         Me.DataGridView2.DataSource = Me.TranbinsBindingSource
         Me.DataGridView2.Location = New System.Drawing.Point(31, 332)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1154, 150)
+        Me.DataGridView2.Size = New System.Drawing.Size(1144, 150)
         Me.DataGridView2.TabIndex = 86
         '
         'LocatebinDataGridViewTextBoxColumn
@@ -912,12 +904,23 @@ Partial Class quote
         Me.ListBox1.Size = New System.Drawing.Size(872, 95)
         Me.ListBox1.TabIndex = 92
         '
+        'ListBox2
+        '
+        Me.ListBox2.DataSource = Me.QuotedetailBindingSource
+        Me.ListBox2.DisplayMember = "qline_memo"
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.Location = New System.Drawing.Point(113, 147)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(872, 82)
+        Me.ListBox2.TabIndex = 93
+        '
         'quote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1247, 780)
+        Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.idcode)
@@ -973,17 +976,16 @@ Partial Class quote
         Me.Controls.Add(Me.qute_tb)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.header_tb)
-        Me.Controls.Add(Me.ListView3)
         Me.Name = "quote"
         Me.Text = "Quotation"
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -1010,7 +1012,6 @@ Partial Class quote
     Friend WithEvents Label7 As Label
     Friend WithEvents add_but As Button
     Friend WithEvents edit_but As Button
-    Friend WithEvents ListView3 As ListView
     Friend WithEvents abt_butt As Button
     Friend WithEvents heading_but As Button
     Friend WithEvents sve_but As Button
@@ -1084,4 +1085,6 @@ Partial Class quote
     Friend WithEvents idcode As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
 End Class
