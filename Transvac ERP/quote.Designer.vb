@@ -806,7 +806,7 @@ Partial Class quote
         '
         'Pcodelookup
         '
-        Me.Pcodelookup.Location = New System.Drawing.Point(12, 99)
+        Me.Pcodelookup.Location = New System.Drawing.Point(12, 104)
         Me.Pcodelookup.Name = "Pcodelookup"
         Me.Pcodelookup.Size = New System.Drawing.Size(75, 23)
         Me.Pcodelookup.TabIndex = 88
@@ -817,7 +817,7 @@ Partial Class quote
         'idcode
         '
         Me.idcode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "idcode", True))
-        Me.idcode.Location = New System.Drawing.Point(93, 101)
+        Me.idcode.Location = New System.Drawing.Point(93, 104)
         Me.idcode.Name = "idcode"
         Me.idcode.Size = New System.Drawing.Size(63, 20)
         Me.idcode.TabIndex = 89

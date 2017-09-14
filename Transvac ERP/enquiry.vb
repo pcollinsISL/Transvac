@@ -1,5 +1,4 @@
 ﻿Public Class enquiry
-
     Dim ExitYN As System.Windows.Forms.DialogResult
     Public addvar As String
     Private Sub btnabt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnabt.Click
@@ -7,20 +6,17 @@
     End Sub
 
     Private Sub Btnquote_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquote.Click
-        'Show the fomrs as a modaless window.
         addvar = qotenoTextBox.Text
         Dim x As quotelist = New quotelist
         x.Show()
     End Sub
 
     Private Sub Btnquotegen_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquotegen.Click
-        'Show the forms as a modaless window.
         Dim x As quote = New quote
         x.Show()
     End Sub
 
-    Private Sub BtnAddressbook_click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BtnAddressbook.Click
-        'Show the forms as a modaless window.
+    Private Sub BtnAddressbook_click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Btnaddressbook.Click
         Dim x As form1 = New form1
         x.Show()
     End Sub
@@ -43,8 +39,11 @@
     End Sub
 
     Private Sub enquiry_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet.enquiry, CnameTextBox.Text)
+        If AccnoTextBox.Text = "" Then
+            Me.Tran2TableAdapter.ClearBeforeFill = True
+        Else
+            Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet.enquiry, CnameTextBox.Text)
+        End If
     End Sub
 
     Private Sub Ref_noTextBox_TextChanged(sender As Object, e As EventArgs) Handles Ref_noTextBox.TextChanged
