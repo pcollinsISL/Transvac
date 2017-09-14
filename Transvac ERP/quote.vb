@@ -85,4 +85,11 @@
     Private Sub Label8_Click_1(sender As Object, e As EventArgs) Handles Label8.Click
 
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        qty_tb.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value
+        partno_tb.Text = DataGridView1.Item(2, DataGridView1.CurrentRow.Index).Value
+        descrip_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        unitprice_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
+    End Sub
 End Class

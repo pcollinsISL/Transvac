@@ -4,7 +4,6 @@
     End Sub
 
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.quotehead' table. You can move, or remove it, as needed.
         quotenotextbox.Text = enquiry.addvar
         Me.QuoteheadTableAdapter.FillByQuotes(Me.TransvacDataV2DataSet1.quotehead, quotenotextbox.Text)
     End Sub
