@@ -241,6 +241,18 @@
     <Compile Include="terms.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransLogin.Designer.vb">
+      <DependentUpon>TransLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransPortal.Designer.vb">
+      <DependentUpon>TransPortal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransPortal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransvacDataV2DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -332,6 +344,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="terms.resx">
       <DependentUpon>terms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransLogin.resx">
+      <DependentUpon>TransLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransPortal.resx">
+      <DependentUpon>TransPortal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updatemem.resx">
       <DependentUpon>updatemem.vb</DependentUpon>
