@@ -92,4 +92,8 @@
         descrip_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
         unitprice_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
     End Sub
+
+    Private Sub header_tb_TextChanged(sender As Object, e As EventArgs) Handles header_tb.TextChanged
+
+    End Sub
 End Class
