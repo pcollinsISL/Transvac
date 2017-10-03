@@ -16,6 +16,10 @@
 
     Private Sub Inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet.trandesc' table. You can move, or remove it, as needed.
+        Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet.trandesc)
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.tranbins' table. You can move, or remove it, as needed.
+        Me.TranbinsTableAdapter.Fill(Me.TransvacDataV2DataSet.tranbins)
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.trandesc' table. You can move, or remove it, as needed.
         Me.TrandescTableAdapter.Fill(Me.TransvacDataV2DataSet.trandesc)
 
     End Sub
