@@ -8,34 +8,33 @@
     End Sub
 
     Private Sub EnquiryBTN_Click(sender As Object, e As EventArgs) Handles EnquiryBTN.Click
-        TabControl1.TabPages.Add("Enquiry")
+        TabControl1.SelectedTab = TabPage1
         Dim enqmain As New enqmain
         enqmain.TopLevel = False
         enqmain.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.TabControl1.SelectedTab = enquiry
-        Me.TabControl1.TabPages(1).Controls.Add(enqmain)
+        Me.TabControl1.TabPages(0).Controls.Add(enqmain)
         enqmain.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Newtabbtn.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         REM TabPage TabPage1 = New TabPage("Tab page")
         TabControl1.TabPages.Add(TabPage1)
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles RemoveTabbtn.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
         TabControl1.TabPages.Remove(TabControl1.SelectedTab)
     End Sub
 
-    Private Sub RemoveAllTabsbtn_Click(sender As Object, e As EventArgs) Handles RemoveAllTabsbtn.Click
+    Private Sub RemoveAllTabsbtn_Click(sender As Object, e As EventArgs)
         TabControl1.TabPages.Clear()
     End Sub
 
     Private Sub AddressbookBTN_Click(sender As Object, e As EventArgs) Handles AddressbookBTN.Click
-        TabControl1.TabPages.Add("AddressBook")
+        TabControl1.SelectedTab = TabPage2
         Dim form1 As New form1
         form1.TopLevel = False
         form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.TabControl1.TabPages(0).Controls.Add(form1)
+        Me.TabControl1.TabPages(1).Controls.Add(form1)
         form1.Show()
     End Sub
 
