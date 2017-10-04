@@ -304,7 +304,7 @@ Partial Class Builddraftinv
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(739, 366)
+        Me.Button3.Location = New System.Drawing.Point(736, 369)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(98, 23)
         Me.Button3.TabIndex = 118
@@ -313,7 +313,7 @@ Partial Class Builddraftinv
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(739, 334)
+        Me.Button4.Location = New System.Drawing.Point(736, 337)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(98, 23)
         Me.Button4.TabIndex = 119
@@ -787,7 +787,7 @@ Partial Class Builddraftinv
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.ClientSize = New System.Drawing.Size(972, 711)
+        Me.ClientSize = New System.Drawing.Size(956, 696)
         Me.Controls.Add(Me.CheckBox11)
         Me.Controls.Add(Me.CheckBox10)
         Me.Controls.Add(Me.CheckBox8)

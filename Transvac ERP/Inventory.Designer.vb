@@ -22,6 +22,7 @@ Partial Class Inventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DescriptnLabel As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
         Dim Label5 As System.Windows.Forms.Label
@@ -47,10 +48,7 @@ Partial Class Inventory
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TransvacDataV2DataSet = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.PsupplierTextBox = New System.Windows.Forms.TextBox()
-        Me.PcodeTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DescriptnTextBox = New System.Windows.Forms.TextBox()
         Me.but5 = New System.Windows.Forms.Button()
         Me.but6 = New System.Windows.Forms.Button()
         Me.but7 = New System.Windows.Forms.Button()
@@ -82,18 +80,48 @@ Partial Class Inventory
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
+        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.PsupplierTextBox1 = New System.Windows.Forms.TextBox()
+        Me.PcodeTextBox1 = New System.Windows.Forms.TextBox()
+        Me.DescriptnTextBox1 = New System.Windows.Forms.TextBox()
+        Me.IdcodeTextBox = New System.Windows.Forms.TextBox()
+        Me.MinstockTextBox = New System.Windows.Forms.TextBox()
+        Me.MinorderTextBox = New System.Windows.Forms.TextBox()
+        Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantybinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnitvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurrcycdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IicodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IiupdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RectypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SnwhoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         DescriptnLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DescriptnLabel
@@ -135,7 +163,7 @@ Partial Class Inventory
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(860, 233)
+        Me.Label30.Location = New System.Drawing.Point(842, 375)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(64, 13)
         Me.Label30.TabIndex = 85
@@ -144,7 +172,7 @@ Partial Class Inventory
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(930, 233)
+        Me.Label29.Location = New System.Drawing.Point(912, 375)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(40, 13)
         Me.Label29.TabIndex = 84
@@ -153,7 +181,7 @@ Partial Class Inventory
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(976, 233)
+        Me.Label28.Location = New System.Drawing.Point(958, 375)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(51, 13)
         Me.Label28.TabIndex = 83
@@ -162,7 +190,7 @@ Partial Class Inventory
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(588, 233)
+        Me.Label27.Location = New System.Drawing.Point(570, 375)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(74, 13)
         Me.Label27.TabIndex = 82
@@ -171,7 +199,7 @@ Partial Class Inventory
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(735, 233)
+        Me.Label26.Location = New System.Drawing.Point(717, 375)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(60, 13)
         Me.Label26.TabIndex = 81
@@ -180,7 +208,7 @@ Partial Class Inventory
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(801, 233)
+        Me.Label25.Location = New System.Drawing.Point(783, 375)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(54, 13)
         Me.Label25.TabIndex = 80
@@ -189,7 +217,7 @@ Partial Class Inventory
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(435, 233)
+        Me.Label24.Location = New System.Drawing.Point(417, 375)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(67, 13)
         Me.Label24.TabIndex = 79
@@ -198,7 +226,7 @@ Partial Class Inventory
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(508, 233)
+        Me.Label23.Location = New System.Drawing.Point(490, 375)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(74, 13)
         Me.Label23.TabIndex = 78
@@ -207,7 +235,7 @@ Partial Class Inventory
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(670, 233)
+        Me.Label22.Location = New System.Drawing.Point(652, 375)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(59, 13)
         Me.Label22.TabIndex = 77
@@ -216,7 +244,7 @@ Partial Class Inventory
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(295, 233)
+        Me.Label21.Location = New System.Drawing.Point(277, 375)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(71, 13)
         Me.Label21.TabIndex = 76
@@ -225,7 +253,7 @@ Partial Class Inventory
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(227, 233)
+        Me.Label20.Location = New System.Drawing.Point(209, 375)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(62, 13)
         Me.Label20.TabIndex = 75
@@ -234,7 +262,7 @@ Partial Class Inventory
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(210, 233)
+        Me.Label19.Location = New System.Drawing.Point(192, 375)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(11, 13)
         Me.Label19.TabIndex = 74
@@ -243,7 +271,7 @@ Partial Class Inventory
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(372, 233)
+        Me.Label18.Location = New System.Drawing.Point(354, 375)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(57, 13)
         Me.Label18.TabIndex = 73
@@ -252,7 +280,7 @@ Partial Class Inventory
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(152, 233)
+        Me.Label17.Location = New System.Drawing.Point(134, 375)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(52, 13)
         Me.Label17.TabIndex = 72
@@ -261,7 +289,7 @@ Partial Class Inventory
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(71, 233)
+        Me.Label16.Location = New System.Drawing.Point(53, 375)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(11, 13)
         Me.Label16.TabIndex = 71
@@ -270,7 +298,7 @@ Partial Class Inventory
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(88, 233)
+        Me.Label15.Location = New System.Drawing.Point(70, 375)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(58, 13)
         Me.Label15.TabIndex = 70
@@ -278,14 +306,14 @@ Partial Class Inventory
         '
         'VScrollBar2
         '
-        Me.VScrollBar2.Location = New System.Drawing.Point(1030, 233)
+        Me.VScrollBar2.Location = New System.Drawing.Point(1180, 218)
         Me.VScrollBar2.Name = "VScrollBar2"
-        Me.VScrollBar2.Size = New System.Drawing.Size(16, 132)
+        Me.VScrollBar2.Size = New System.Drawing.Size(20, 150)
         Me.VScrollBar2.TabIndex = 68
         '
         'ListView2
         '
-        Me.ListView2.Location = New System.Drawing.Point(73, 233)
+        Me.ListView2.Location = New System.Drawing.Point(70, 388)
         Me.ListView2.Name = "ListView2"
         Me.ListView2.Size = New System.Drawing.Size(954, 132)
         Me.ListView2.TabIndex = 67
@@ -314,20 +342,6 @@ Partial Class Inventory
         Me.TransvacDataV2DataSet.DataSetName = "TransvacDataV2DataSet"
         Me.TransvacDataV2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'PsupplierTextBox
-        '
-        Me.PsupplierTextBox.Location = New System.Drawing.Point(158, 98)
-        Me.PsupplierTextBox.Name = "PsupplierTextBox"
-        Me.PsupplierTextBox.Size = New System.Drawing.Size(98, 20)
-        Me.PsupplierTextBox.TabIndex = 89
-        '
-        'PcodeTextBox
-        '
-        Me.PcodeTextBox.Location = New System.Drawing.Point(158, 126)
-        Me.PcodeTextBox.Name = "PcodeTextBox"
-        Me.PcodeTextBox.Size = New System.Drawing.Size(173, 20)
-        Me.PcodeTextBox.TabIndex = 90
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -337,17 +351,10 @@ Partial Class Inventory
         Me.Label3.TabIndex = 92
         Me.Label3.Text = "INVENTORY"
         '
-        'DescriptnTextBox
-        '
-        Me.DescriptnTextBox.Location = New System.Drawing.Point(158, 182)
-        Me.DescriptnTextBox.Name = "DescriptnTextBox"
-        Me.DescriptnTextBox.Size = New System.Drawing.Size(344, 20)
-        Me.DescriptnTextBox.TabIndex = 93
-        '
         'but5
         '
         Me.but5.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMovePreviousItem_Image
-        Me.but5.Location = New System.Drawing.Point(147, 398)
+        Me.but5.Location = New System.Drawing.Point(128, 546)
         Me.but5.Name = "but5"
         Me.but5.Size = New System.Drawing.Size(68, 23)
         Me.but5.TabIndex = 152
@@ -356,7 +363,7 @@ Partial Class Inventory
         'but6
         '
         Me.but6.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveNextItem_Image
-        Me.but6.Location = New System.Drawing.Point(221, 398)
+        Me.but6.Location = New System.Drawing.Point(202, 546)
         Me.but6.Name = "but6"
         Me.but6.Size = New System.Drawing.Size(68, 23)
         Me.but6.TabIndex = 151
@@ -365,7 +372,7 @@ Partial Class Inventory
         'but7
         '
         Me.but7.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveLastItem_Image
-        Me.but7.Location = New System.Drawing.Point(295, 398)
+        Me.but7.Location = New System.Drawing.Point(276, 546)
         Me.but7.Name = "but7"
         Me.but7.Size = New System.Drawing.Size(68, 23)
         Me.but7.TabIndex = 150
@@ -374,7 +381,7 @@ Partial Class Inventory
         'but4
         '
         Me.but4.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveFirstItem_Image
-        Me.but4.Location = New System.Drawing.Point(73, 398)
+        Me.but4.Location = New System.Drawing.Point(54, 546)
         Me.but4.Name = "but4"
         Me.but4.Size = New System.Drawing.Size(68, 23)
         Me.but4.TabIndex = 149
@@ -428,7 +435,7 @@ Partial Class Inventory
         '
         'quit_but
         '
-        Me.quit_but.Location = New System.Drawing.Point(71, 449)
+        Me.quit_but.Location = New System.Drawing.Point(52, 597)
         Me.quit_but.Name = "quit_but"
         Me.quit_but.Size = New System.Drawing.Size(70, 51)
         Me.quit_but.TabIndex = 157
@@ -437,7 +444,7 @@ Partial Class Inventory
         '
         'avgtotval_but
         '
-        Me.avgtotval_but.Location = New System.Drawing.Point(236, 449)
+        Me.avgtotval_but.Location = New System.Drawing.Point(217, 597)
         Me.avgtotval_but.Name = "avgtotval_but"
         Me.avgtotval_but.Size = New System.Drawing.Size(96, 23)
         Me.avgtotval_but.TabIndex = 158
@@ -446,7 +453,7 @@ Partial Class Inventory
         '
         'stockadj_but
         '
-        Me.stockadj_but.Location = New System.Drawing.Point(338, 449)
+        Me.stockadj_but.Location = New System.Drawing.Point(319, 597)
         Me.stockadj_but.Name = "stockadj_but"
         Me.stockadj_but.Size = New System.Drawing.Size(107, 23)
         Me.stockadj_but.TabIndex = 159
@@ -455,7 +462,7 @@ Partial Class Inventory
         '
         'bincode_but
         '
-        Me.bincode_but.Location = New System.Drawing.Point(451, 448)
+        Me.bincode_but.Location = New System.Drawing.Point(432, 596)
         Me.bincode_but.Name = "bincode_but"
         Me.bincode_but.Size = New System.Drawing.Size(102, 23)
         Me.bincode_but.TabIndex = 160
@@ -464,7 +471,7 @@ Partial Class Inventory
         '
         'nwbin_but
         '
-        Me.nwbin_but.Location = New System.Drawing.Point(587, 448)
+        Me.nwbin_but.Location = New System.Drawing.Point(568, 596)
         Me.nwbin_but.Name = "nwbin_but"
         Me.nwbin_but.Size = New System.Drawing.Size(75, 23)
         Me.nwbin_but.TabIndex = 161
@@ -473,7 +480,7 @@ Partial Class Inventory
         '
         'editbin_but
         '
-        Me.editbin_but.Location = New System.Drawing.Point(587, 506)
+        Me.editbin_but.Location = New System.Drawing.Point(568, 654)
         Me.editbin_but.Name = "editbin_but"
         Me.editbin_but.Size = New System.Drawing.Size(75, 23)
         Me.editbin_but.TabIndex = 162
@@ -482,7 +489,7 @@ Partial Class Inventory
         '
         'delbin_but
         '
-        Me.delbin_but.Location = New System.Drawing.Point(587, 477)
+        Me.delbin_but.Location = New System.Drawing.Point(568, 625)
         Me.delbin_but.Name = "delbin_but"
         Me.delbin_but.Size = New System.Drawing.Size(75, 23)
         Me.delbin_but.TabIndex = 163
@@ -491,7 +498,7 @@ Partial Class Inventory
         '
         'markup_but
         '
-        Me.markup_but.Location = New System.Drawing.Point(236, 477)
+        Me.markup_but.Location = New System.Drawing.Point(217, 625)
         Me.markup_but.Name = "markup_but"
         Me.markup_but.Size = New System.Drawing.Size(96, 23)
         Me.markup_but.TabIndex = 164
@@ -500,7 +507,7 @@ Partial Class Inventory
         '
         'alloc_but
         '
-        Me.alloc_but.Location = New System.Drawing.Point(520, 549)
+        Me.alloc_but.Location = New System.Drawing.Point(501, 697)
         Me.alloc_but.Name = "alloc_but"
         Me.alloc_but.Size = New System.Drawing.Size(75, 23)
         Me.alloc_but.TabIndex = 165
@@ -509,7 +516,7 @@ Partial Class Inventory
         '
         'stkmovmt_but
         '
-        Me.stkmovmt_but.Location = New System.Drawing.Point(338, 477)
+        Me.stkmovmt_but.Location = New System.Drawing.Point(319, 625)
         Me.stkmovmt_but.Name = "stkmovmt_but"
         Me.stkmovmt_but.Size = New System.Drawing.Size(107, 23)
         Me.stkmovmt_but.TabIndex = 166
@@ -518,7 +525,7 @@ Partial Class Inventory
         '
         'xchange_but
         '
-        Me.xchange_but.Location = New System.Drawing.Point(451, 477)
+        Me.xchange_but.Location = New System.Drawing.Point(432, 625)
         Me.xchange_but.Name = "xchange_but"
         Me.xchange_but.Size = New System.Drawing.Size(102, 23)
         Me.xchange_but.TabIndex = 167
@@ -527,7 +534,7 @@ Partial Class Inventory
         '
         'orderd_but
         '
-        Me.orderd_but.Location = New System.Drawing.Point(520, 578)
+        Me.orderd_but.Location = New System.Drawing.Point(501, 726)
         Me.orderd_but.Name = "orderd_but"
         Me.orderd_but.Size = New System.Drawing.Size(75, 23)
         Me.orderd_but.TabIndex = 168
@@ -537,7 +544,7 @@ Partial Class Inventory
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.PeachPuff
-        Me.TextBox2.Location = New System.Drawing.Point(601, 551)
+        Me.TextBox2.Location = New System.Drawing.Point(582, 699)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(61, 20)
         Me.TextBox2.TabIndex = 170
@@ -545,14 +552,14 @@ Partial Class Inventory
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.PeachPuff
-        Me.TextBox1.Location = New System.Drawing.Point(601, 580)
+        Me.TextBox1.Location = New System.Drawing.Point(582, 728)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(61, 20)
         Me.TextBox1.TabIndex = 171
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(692, 412)
+        Me.TextBox3.Location = New System.Drawing.Point(673, 560)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(335, 131)
@@ -560,7 +567,7 @@ Partial Class Inventory
         '
         'editmem_but
         '
-        Me.editmem_but.Location = New System.Drawing.Point(691, 554)
+        Me.editmem_but.Location = New System.Drawing.Point(672, 702)
         Me.editmem_but.Name = "editmem_but"
         Me.editmem_but.Size = New System.Drawing.Size(76, 31)
         Me.editmem_but.TabIndex = 173
@@ -569,14 +576,14 @@ Partial Class Inventory
         '
         'VScrollBar1
         '
-        Me.VScrollBar1.Location = New System.Drawing.Point(1030, 411)
+        Me.VScrollBar1.Location = New System.Drawing.Point(1011, 559)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(16, 132)
         Me.VScrollBar1.TabIndex = 174
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(964, 378)
+        Me.TextBox5.Location = New System.Drawing.Point(945, 526)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(82, 20)
         Me.TextBox5.TabIndex = 181
@@ -584,7 +591,7 @@ Partial Class Inventory
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(879, 381)
+        Me.Label8.Location = New System.Drawing.Point(860, 529)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 13)
         Me.Label8.TabIndex = 180
@@ -592,7 +599,7 @@ Partial Class Inventory
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(773, 378)
+        Me.TextBox4.Location = New System.Drawing.Point(754, 526)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(82, 20)
         Me.TextBox4.TabIndex = 183
@@ -600,7 +607,7 @@ Partial Class Inventory
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(688, 381)
+        Me.Label7.Location = New System.Drawing.Point(669, 529)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 13)
         Me.Label7.TabIndex = 182
@@ -608,31 +615,10 @@ Partial Class Inventory
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(964, 92)
+        Me.TextBox6.Location = New System.Drawing.Point(980, 92)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(82, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(66, 20)
         Me.TextBox6.TabIndex = 184
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(993, 119)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(53, 20)
-        Me.TextBox7.TabIndex = 185
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(993, 146)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(53, 20)
-        Me.TextBox8.TabIndex = 186
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(993, 172)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(53, 20)
-        Me.TextBox9.TabIndex = 187
         '
         'Label9
         '
@@ -659,18 +645,253 @@ Partial Class Inventory
         Me.Label10.TabIndex = 189
         Me.Label10.Text = "Nato Stock No"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IicodeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TranbinsBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 218)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(1143, 150)
+        Me.DataGridView1.TabIndex = 191
+        '
+        'TransvacDataV2DataSetBindingSource
+        '
+        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.TransvacDataV2DataSetBindingSource.Position = 0
+        '
+        'TranbinsBindingSource
+        '
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
+        'TrandescBindingSource1
+        '
+        Me.TrandescBindingSource1.DataMember = "trandesc"
+        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet
+        '
+        'TrandescTableAdapter1
+        '
+        Me.TrandescTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Me.TranbinsTableAdapter
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'PsupplierTextBox1
+        '
+        Me.PsupplierTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "psupplier", True))
+        Me.PsupplierTextBox1.Location = New System.Drawing.Point(158, 100)
+        Me.PsupplierTextBox1.Name = "PsupplierTextBox1"
+        Me.PsupplierTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.PsupplierTextBox1.TabIndex = 192
+        '
+        'PcodeTextBox1
+        '
+        Me.PcodeTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "pcode", True))
+        Me.PcodeTextBox1.Location = New System.Drawing.Point(158, 129)
+        Me.PcodeTextBox1.Name = "PcodeTextBox1"
+        Me.PcodeTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.PcodeTextBox1.TabIndex = 193
+        '
+        'DescriptnTextBox1
+        '
+        Me.DescriptnTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "descriptn", True))
+        Me.DescriptnTextBox1.Location = New System.Drawing.Point(158, 186)
+        Me.DescriptnTextBox1.Name = "DescriptnTextBox1"
+        Me.DescriptnTextBox1.Size = New System.Drawing.Size(326, 20)
+        Me.DescriptnTextBox1.TabIndex = 194
+        '
+        'IdcodeTextBox
+        '
+        Me.IdcodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "idcode", True))
+        Me.IdcodeTextBox.Location = New System.Drawing.Point(980, 173)
+        Me.IdcodeTextBox.Name = "IdcodeTextBox"
+        Me.IdcodeTextBox.Size = New System.Drawing.Size(66, 20)
+        Me.IdcodeTextBox.TabIndex = 195
+        '
+        'MinstockTextBox
+        '
+        Me.MinstockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minstock", True))
+        Me.MinstockTextBox.Location = New System.Drawing.Point(980, 147)
+        Me.MinstockTextBox.Name = "MinstockTextBox"
+        Me.MinstockTextBox.Size = New System.Drawing.Size(66, 20)
+        Me.MinstockTextBox.TabIndex = 196
+        '
+        'MinorderTextBox
+        '
+        Me.MinorderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minorder", True))
+        Me.MinorderTextBox.Location = New System.Drawing.Point(980, 119)
+        Me.MinorderTextBox.Name = "MinorderTextBox"
+        Me.MinorderTextBox.Size = New System.Drawing.Size(66, 20)
+        Me.MinorderTextBox.TabIndex = 197
+        '
+        'LocatebinDataGridViewTextBoxColumn
+        '
+        Me.LocatebinDataGridViewTextBoxColumn.DataPropertyName = "locatebin"
+        Me.LocatebinDataGridViewTextBoxColumn.HeaderText = "locatebin"
+        Me.LocatebinDataGridViewTextBoxColumn.Name = "LocatebinDataGridViewTextBoxColumn"
+        '
+        'SourcecdeDataGridViewTextBoxColumn
+        '
+        Me.SourcecdeDataGridViewTextBoxColumn.DataPropertyName = "sourcecde"
+        Me.SourcecdeDataGridViewTextBoxColumn.HeaderText = "sourcecde"
+        Me.SourcecdeDataGridViewTextBoxColumn.Name = "SourcecdeDataGridViewTextBoxColumn"
+        '
+        'AssuredDataGridViewTextBoxColumn
+        '
+        Me.AssuredDataGridViewTextBoxColumn.DataPropertyName = "assured"
+        Me.AssuredDataGridViewTextBoxColumn.HeaderText = "assured"
+        Me.AssuredDataGridViewTextBoxColumn.Name = "AssuredDataGridViewTextBoxColumn"
+        '
+        'QuantybinDataGridViewTextBoxColumn
+        '
+        Me.QuantybinDataGridViewTextBoxColumn.DataPropertyName = "quantybin"
+        Me.QuantybinDataGridViewTextBoxColumn.HeaderText = "quantybin"
+        Me.QuantybinDataGridViewTextBoxColumn.Name = "QuantybinDataGridViewTextBoxColumn"
+        '
+        'UnitvalueDataGridViewTextBoxColumn
+        '
+        Me.UnitvalueDataGridViewTextBoxColumn.DataPropertyName = "unit_value"
+        Me.UnitvalueDataGridViewTextBoxColumn.HeaderText = "unit_value"
+        Me.UnitvalueDataGridViewTextBoxColumn.Name = "UnitvalueDataGridViewTextBoxColumn"
+        '
+        'CurrcycdeDataGridViewTextBoxColumn
+        '
+        Me.CurrcycdeDataGridViewTextBoxColumn.DataPropertyName = "currcy_cde"
+        Me.CurrcycdeDataGridViewTextBoxColumn.HeaderText = "currcy_cde"
+        Me.CurrcycdeDataGridViewTextBoxColumn.Name = "CurrcycdeDataGridViewTextBoxColumn"
+        '
+        'CatalogdtDataGridViewTextBoxColumn
+        '
+        Me.CatalogdtDataGridViewTextBoxColumn.DataPropertyName = "catalog_dt"
+        Me.CatalogdtDataGridViewTextBoxColumn.HeaderText = "catalog_dt"
+        Me.CatalogdtDataGridViewTextBoxColumn.Name = "CatalogdtDataGridViewTextBoxColumn"
+        '
+        'IicodeDataGridViewTextBoxColumn
+        '
+        Me.IicodeDataGridViewTextBoxColumn.DataPropertyName = "iicode"
+        Me.IicodeDataGridViewTextBoxColumn.HeaderText = "iicode"
+        Me.IicodeDataGridViewTextBoxColumn.Name = "IicodeDataGridViewTextBoxColumn"
+        '
+        'IiupdateDataGridViewTextBoxColumn
+        '
+        Me.IiupdateDataGridViewTextBoxColumn.DataPropertyName = "iiupdate"
+        Me.IiupdateDataGridViewTextBoxColumn.HeaderText = "iiupdate"
+        Me.IiupdateDataGridViewTextBoxColumn.Name = "IiupdateDataGridViewTextBoxColumn"
+        '
+        'AllocDataGridViewTextBoxColumn
+        '
+        Me.AllocDataGridViewTextBoxColumn.DataPropertyName = "alloc"
+        Me.AllocDataGridViewTextBoxColumn.HeaderText = "alloc"
+        Me.AllocDataGridViewTextBoxColumn.Name = "AllocDataGridViewTextBoxColumn"
+        Me.AllocDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AllocDataGridViewTextBoxColumn.Visible = False
+        '
+        'RectypeDataGridViewTextBoxColumn
+        '
+        Me.RectypeDataGridViewTextBoxColumn.DataPropertyName = "rec_type"
+        Me.RectypeDataGridViewTextBoxColumn.HeaderText = "rec_type"
+        Me.RectypeDataGridViewTextBoxColumn.Name = "RectypeDataGridViewTextBoxColumn"
+        Me.RectypeDataGridViewTextBoxColumn.Visible = False
+        '
+        'SnwhoDataGridViewTextBoxColumn
+        '
+        Me.SnwhoDataGridViewTextBoxColumn.DataPropertyName = "snwho"
+        Me.SnwhoDataGridViewTextBoxColumn.HeaderText = "snwho"
+        Me.SnwhoDataGridViewTextBoxColumn.Name = "SnwhoDataGridViewTextBoxColumn"
+        Me.SnwhoDataGridViewTextBoxColumn.Visible = False
+        '
+        'SinuseDataGridViewTextBoxColumn
+        '
+        Me.SinuseDataGridViewTextBoxColumn.DataPropertyName = "sinuse"
+        Me.SinuseDataGridViewTextBoxColumn.HeaderText = "sinuse"
+        Me.SinuseDataGridViewTextBoxColumn.Name = "SinuseDataGridViewTextBoxColumn"
+        Me.SinuseDataGridViewTextBoxColumn.Visible = False
+        '
+        'WeightDataGridViewTextBoxColumn
+        '
+        Me.WeightDataGridViewTextBoxColumn.DataPropertyName = "weight"
+        Me.WeightDataGridViewTextBoxColumn.HeaderText = "weight"
+        Me.WeightDataGridViewTextBoxColumn.Name = "WeightDataGridViewTextBoxColumn"
+        '
+        'WqtyDataGridViewTextBoxColumn
+        '
+        Me.WqtyDataGridViewTextBoxColumn.DataPropertyName = "wqty"
+        Me.WqtyDataGridViewTextBoxColumn.HeaderText = "wqty"
+        Me.WqtyDataGridViewTextBoxColumn.Name = "WqtyDataGridViewTextBoxColumn"
+        '
+        'UniqueIDDataGridViewTextBoxColumn
+        '
+        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
+        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
+        '
         'Inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.ClientSize = New System.Drawing.Size(1107, 638)
+        Me.ClientSize = New System.Drawing.Size(1270, 769)
+        Me.Controls.Add(Me.MinorderTextBox)
+        Me.Controls.Add(Me.MinstockTextBox)
+        Me.Controls.Add(Me.IdcodeTextBox)
+        Me.Controls.Add(Me.DescriptnTextBox1)
+        Me.Controls.Add(Me.PcodeTextBox1)
+        Me.Controls.Add(Me.PsupplierTextBox1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label7)
@@ -705,11 +926,8 @@ Partial Class Inventory
         Me.Controls.Add(Me.but7)
         Me.Controls.Add(Me.but4)
         Me.Controls.Add(DescriptnLabel)
-        Me.Controls.Add(Me.DescriptnTextBox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.PcodeTextBox)
-        Me.Controls.Add(Me.PsupplierTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label30)
@@ -734,6 +952,10 @@ Partial Class Inventory
         Me.Text = "Inventory"
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -760,11 +982,8 @@ Partial Class Inventory
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TransvacDataV2DataSet As TransvacDataV2DataSet1
-    Friend WithEvents PsupplierTextBox As TextBox
-    Friend WithEvents PcodeTextBox As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents DescriptnTextBox As TextBox
     Friend WithEvents but5 As Button
     Friend WithEvents but6 As Button
     Friend WithEvents but7 As Button
@@ -795,10 +1014,36 @@ Partial Class Inventory
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TransvacDataV2DataSetBindingSource As BindingSource
+    Friend WithEvents TranbinsBindingSource As BindingSource
+    Friend WithEvents TranbinsTableAdapter As TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter
+    Friend WithEvents TrandescBindingSource1 As BindingSource
+    Friend WithEvents TrandescTableAdapter1 As TransvacDataV2DataSet1TableAdapters.trandescTableAdapter
+    Friend WithEvents TableAdapterManager1 As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents PsupplierTextBox1 As TextBox
+    Friend WithEvents PcodeTextBox1 As TextBox
+    Friend WithEvents DescriptnTextBox1 As TextBox
+    Friend WithEvents IdcodeTextBox As TextBox
+    Friend WithEvents MinstockTextBox As TextBox
+    Friend WithEvents MinorderTextBox As TextBox
+    Friend WithEvents LocatebinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SourcecdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AssuredDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuantybinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UnitvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CurrcycdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IicodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IiupdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RectypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SnwhoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents WqtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

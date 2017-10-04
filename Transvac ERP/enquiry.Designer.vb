@@ -75,6 +75,7 @@ Partial Class enquiry
         Me.qotenoTextBox = New System.Windows.Forms.TextBox()
         Me.acctTextBox = New System.Windows.Forms.TextBox()
         Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
+        Me.AccountTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.accountTableAdapter()
         EdateLabel = New System.Windows.Forms.Label()
         CnameLabel = New System.Windows.Forms.Label()
         ContactLabel = New System.Windows.Forms.Label()
@@ -564,6 +565,10 @@ Partial Class enquiry
         '
         Me.Tran2TableAdapter.ClearBeforeFill = True
         '
+        'AccountTableAdapter1
+        '
+        Me.AccountTableAdapter1.ClearBeforeFill = True
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -664,4 +669,5 @@ Partial Class enquiry
     Friend WithEvents acctTextBox As TextBox
     Friend WithEvents Tran2BindingSource As BindingSource
     Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
+    Friend WithEvents AccountTableAdapter1 As TransvacDataV2DataSet1TableAdapters.accountTableAdapter
 End Class
