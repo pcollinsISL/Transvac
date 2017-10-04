@@ -24,20 +24,22 @@ Partial Class TransPortal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransPortal))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.AddressbookBTN = New System.Windows.Forms.Button()
+        Me.EnquiryBTN = New System.Windows.Forms.Button()
+        Me.OrdersBTN = New System.Windows.Forms.Button()
+        Me.InvoicingBTN = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Newtabbtn = New System.Windows.Forms.Button()
+        Me.RemoveTabbtn = New System.Windows.Forms.Button()
+        Me.RemoveAllTabsbtn = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -45,23 +47,15 @@ Partial Class TransPortal
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(1151, 28)
+        Me.PictureBox1.Location = New System.Drawing.Point(1396, 28)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(169, 91)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 51
         Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1078, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(67, 20)
-        Me.Button1.TabIndex = 53
-        Me.Button1.Text = "LOG OUT"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -75,41 +69,41 @@ Partial Class TransPortal
         Me.Label1.TabIndex = 54
         Me.Label1.Text = "SALES PORTAL"
         '
-        'Button2
+        'AddressbookBTN
         '
-        Me.Button2.Location = New System.Drawing.Point(13, 250)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(118, 33)
-        Me.Button2.TabIndex = 56
-        Me.Button2.Text = "ADDRESS BOOK"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.AddressbookBTN.Location = New System.Drawing.Point(13, 250)
+        Me.AddressbookBTN.Name = "AddressbookBTN"
+        Me.AddressbookBTN.Size = New System.Drawing.Size(118, 33)
+        Me.AddressbookBTN.TabIndex = 56
+        Me.AddressbookBTN.Text = "ADDRESS BOOK"
+        Me.AddressbookBTN.UseVisualStyleBackColor = True
         '
-        'Button3
+        'EnquiryBTN
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 211)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(119, 33)
-        Me.Button3.TabIndex = 57
-        Me.Button3.Text = "ENQUIRY"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.EnquiryBTN.Location = New System.Drawing.Point(12, 211)
+        Me.EnquiryBTN.Name = "EnquiryBTN"
+        Me.EnquiryBTN.Size = New System.Drawing.Size(119, 33)
+        Me.EnquiryBTN.TabIndex = 57
+        Me.EnquiryBTN.Text = "ENQUIRY"
+        Me.EnquiryBTN.UseVisualStyleBackColor = True
         '
-        'Button4
+        'OrdersBTN
         '
-        Me.Button4.Location = New System.Drawing.Point(13, 289)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(118, 33)
-        Me.Button4.TabIndex = 58
-        Me.Button4.Text = "ORDERS"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.OrdersBTN.Location = New System.Drawing.Point(13, 289)
+        Me.OrdersBTN.Name = "OrdersBTN"
+        Me.OrdersBTN.Size = New System.Drawing.Size(118, 33)
+        Me.OrdersBTN.TabIndex = 58
+        Me.OrdersBTN.Text = "ORDERS"
+        Me.OrdersBTN.UseVisualStyleBackColor = True
         '
-        'Button5
+        'InvoicingBTN
         '
-        Me.Button5.Location = New System.Drawing.Point(13, 328)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(118, 33)
-        Me.Button5.TabIndex = 59
-        Me.Button5.Text = "INVOICING"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.InvoicingBTN.Location = New System.Drawing.Point(13, 328)
+        Me.InvoicingBTN.Name = "InvoicingBTN"
+        Me.InvoicingBTN.Size = New System.Drawing.Size(118, 33)
+        Me.InvoicingBTN.TabIndex = 59
+        Me.InvoicingBTN.Text = "INVOICING"
+        Me.InvoicingBTN.UseVisualStyleBackColor = True
         '
         'Button6
         '
@@ -134,7 +128,7 @@ Partial Class TransPortal
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1331, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1581, 25)
         Me.ToolStrip1.TabIndex = 62
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -156,33 +150,61 @@ Partial Class TransPortal
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(143, 120)
+        Me.TabControl1.Location = New System.Drawing.Point(137, 125)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1176, 767)
+        Me.TabControl1.Size = New System.Drawing.Size(1432, 616)
         Me.TabControl1.TabIndex = 63
+        '
+        'Newtabbtn
+        '
+        Me.Newtabbtn.Location = New System.Drawing.Point(12, 594)
+        Me.Newtabbtn.Name = "Newtabbtn"
+        Me.Newtabbtn.Size = New System.Drawing.Size(119, 45)
+        Me.Newtabbtn.TabIndex = 64
+        Me.Newtabbtn.Text = "NEW TAB"
+        Me.Newtabbtn.UseVisualStyleBackColor = True
+        '
+        'RemoveTabbtn
+        '
+        Me.RemoveTabbtn.Location = New System.Drawing.Point(12, 645)
+        Me.RemoveTabbtn.Name = "RemoveTabbtn"
+        Me.RemoveTabbtn.Size = New System.Drawing.Size(119, 45)
+        Me.RemoveTabbtn.TabIndex = 65
+        Me.RemoveTabbtn.Text = "REMOVE TAB"
+        Me.RemoveTabbtn.UseVisualStyleBackColor = True
+        '
+        'RemoveAllTabsbtn
+        '
+        Me.RemoveAllTabsbtn.Location = New System.Drawing.Point(12, 696)
+        Me.RemoveAllTabsbtn.Name = "RemoveAllTabsbtn"
+        Me.RemoveAllTabsbtn.Size = New System.Drawing.Size(119, 45)
+        Me.RemoveAllTabsbtn.TabIndex = 66
+        Me.RemoveAllTabsbtn.Text = "REMOVE ALL TABS"
+        Me.RemoveAllTabsbtn.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(13, 747)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(119, 45)
+        Me.Button1.TabIndex = 67
+        Me.Button1.Text = "LOG OUT"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1168, 741)
+        Me.TabPage1.Size = New System.Drawing.Size(1424, 590)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1168, 741)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TransPortal
         '
@@ -191,20 +213,24 @@ Partial Class TransPortal
         Me.BackColor = System.Drawing.Color.Teal
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(1331, 899)
+        Me.ClientSize = New System.Drawing.Size(1581, 842)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.RemoveAllTabsbtn)
+        Me.Controls.Add(Me.RemoveTabbtn)
+        Me.Controls.Add(Me.Newtabbtn)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.InvoicingBTN)
+        Me.Controls.Add(Me.OrdersBTN)
+        Me.Controls.Add(Me.EnquiryBTN)
+        Me.Controls.Add(Me.AddressbookBTN)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "TransPortal"
         Me.Text = "TransPortal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
@@ -215,18 +241,20 @@ Partial Class TransPortal
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents AddressbookBTN As Button
+    Friend WithEvents EnquiryBTN As Button
+    Friend WithEvents OrdersBTN As Button
+    Friend WithEvents InvoicingBTN As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents Newtabbtn As Button
+    Friend WithEvents RemoveTabbtn As Button
+    Friend WithEvents RemoveAllTabsbtn As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
 End Class
