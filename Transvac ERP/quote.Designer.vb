@@ -55,27 +55,12 @@ Partial Class quote
         Me.delivery_but = New System.Windows.Forms.Button()
         Me.terms_but = New System.Windows.Forms.Button()
         Me.signoff_but = New System.Windows.Forms.Button()
-        Me.selectall = New System.Windows.Forms.CheckBox()
         Me.order_but = New System.Windows.Forms.Button()
         Me.user_tb = New System.Windows.Forms.TextBox()
-        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
-        Me.VScrollBar3 = New System.Windows.Forms.VScrollBar()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.QlinenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -87,8 +72,6 @@ Partial Class quote
         Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -116,8 +99,8 @@ Partial Class quote
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -321,7 +304,7 @@ Partial Class quote
         '
         'heading_but
         '
-        Me.heading_but.Location = New System.Drawing.Point(1025, 496)
+        Me.heading_but.Location = New System.Drawing.Point(1100, 496)
         Me.heading_but.Name = "heading_but"
         Me.heading_but.Size = New System.Drawing.Size(75, 23)
         Me.heading_but.TabIndex = 30
@@ -357,7 +340,7 @@ Partial Class quote
         '
         'delivery_but
         '
-        Me.delivery_but.Location = New System.Drawing.Point(1025, 546)
+        Me.delivery_but.Location = New System.Drawing.Point(1100, 544)
         Me.delivery_but.Name = "delivery_but"
         Me.delivery_but.Size = New System.Drawing.Size(75, 23)
         Me.delivery_but.TabIndex = 34
@@ -366,7 +349,7 @@ Partial Class quote
         '
         'terms_but
         '
-        Me.terms_but.Location = New System.Drawing.Point(1025, 596)
+        Me.terms_but.Location = New System.Drawing.Point(1100, 596)
         Me.terms_but.Name = "terms_but"
         Me.terms_but.Size = New System.Drawing.Size(75, 23)
         Me.terms_but.TabIndex = 35
@@ -375,22 +358,12 @@ Partial Class quote
         '
         'signoff_but
         '
-        Me.signoff_but.Location = New System.Drawing.Point(1025, 654)
+        Me.signoff_but.Location = New System.Drawing.Point(1100, 654)
         Me.signoff_but.Name = "signoff_but"
         Me.signoff_but.Size = New System.Drawing.Size(75, 23)
         Me.signoff_but.TabIndex = 36
         Me.signoff_but.Text = "SIGN OFF"
         Me.signoff_but.UseVisualStyleBackColor = True
-        '
-        'selectall
-        '
-        Me.selectall.AutoSize = True
-        Me.selectall.Location = New System.Drawing.Point(948, 683)
-        Me.selectall.Name = "selectall"
-        Me.selectall.Size = New System.Drawing.Size(89, 17)
-        Me.selectall.TabIndex = 37
-        Me.selectall.Text = "SELECT ALL"
-        Me.selectall.UseVisualStyleBackColor = True
         '
         'order_but
         '
@@ -409,29 +382,6 @@ Partial Class quote
         Me.user_tb.Size = New System.Drawing.Size(42, 20)
         Me.user_tb.TabIndex = 40
         '
-        'VScrollBar1
-        '
-        Me.VScrollBar1.Location = New System.Drawing.Point(966, 496)
-        Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(11, 181)
-        Me.VScrollBar1.TabIndex = 41
-        '
-        'VScrollBar3
-        '
-        Me.VScrollBar3.Location = New System.Drawing.Point(988, 147)
-        Me.VScrollBar3.Name = "VScrollBar3"
-        Me.VScrollBar3.Size = New System.Drawing.Size(17, 75)
-        Me.VScrollBar3.TabIndex = 42
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(675, 480)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(75, 13)
-        Me.Label13.TabIndex = 48
-        Me.Label13.Text = "EXTENDED £"
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -440,15 +390,6 @@ Partial Class quote
         Me.Label14.Size = New System.Drawing.Size(71, 13)
         Me.Label14.TabIndex = 50
         Me.Label14.Text = "QUOTATION"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(813, 480)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(35, 13)
-        Me.Label31.TabIndex = 67
-        Me.Label31.Text = "TEXT"
         '
         'Label32
         '
@@ -478,102 +419,6 @@ Partial Class quote
         Me.PictureBox1.TabIndex = 49
         Me.PictureBox1.TabStop = False
         '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(948, 563)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 71
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Checked = True
-        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Location = New System.Drawing.Point(948, 529)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox4.TabIndex = 72
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Checked = True
-        Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox5.Location = New System.Drawing.Point(948, 513)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox5.TabIndex = 73
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Checked = True
-        Me.CheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox6.Location = New System.Drawing.Point(948, 496)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox6.TabIndex = 74
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(948, 579)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox8.TabIndex = 76
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'CheckBox9
-        '
-        Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(948, 613)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox9.TabIndex = 77
-        Me.CheckBox9.UseVisualStyleBackColor = True
-        '
-        'CheckBox10
-        '
-        Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(948, 596)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox10.TabIndex = 78
-        Me.CheckBox10.UseVisualStyleBackColor = True
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(948, 546)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox11.TabIndex = 79
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(899, 480)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(64, 13)
-        Me.Label34.TabIndex = 80
-        Me.Label34.Text = "TO ORDER"
-        '
-        'CheckBox12
-        '
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(948, 630)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox12.TabIndex = 82
-        Me.CheckBox12.UseVisualStyleBackColor = True
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -587,7 +432,8 @@ Partial Class quote
         Me.DataGridView1.Location = New System.Drawing.Point(31, 496)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(911, 181)
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(1063, 181)
         Me.DataGridView1.TabIndex = 83
         '
         'QlinenoDataGridViewTextBoxColumn
@@ -667,24 +513,6 @@ Partial Class quote
         Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
         Me.QuotesufDataGridViewTextBoxColumn.ReadOnly = True
         Me.QuotesufDataGridViewTextBoxColumn.Visible = False
-        '
-        'CheckBox13
-        '
-        Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(948, 663)
-        Me.CheckBox13.Name = "CheckBox13"
-        Me.CheckBox13.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox13.TabIndex = 84
-        Me.CheckBox13.UseVisualStyleBackColor = True
-        '
-        'CheckBox14
-        '
-        Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(948, 648)
-        Me.CheckBox14.Name = "CheckBox14"
-        Me.CheckBox14.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox14.TabIndex = 85
-        Me.CheckBox14.UseVisualStyleBackColor = True
         '
         'DataGridView2
         '
@@ -904,15 +732,15 @@ Partial Class quote
         Me.ListBox1.Size = New System.Drawing.Size(872, 95)
         Me.ListBox1.TabIndex = 92
         '
-        'ListBox2
+        'TextBox1
         '
-        Me.ListBox2.DataSource = Me.QuotedetailBindingSource
-        Me.ListBox2.DisplayMember = "qline_memo"
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(113, 147)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(872, 82)
-        Me.ListBox2.TabIndex = 93
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.QuotedetailBindingSource, "qline_memo", True))
+        Me.TextBox1.Location = New System.Drawing.Point(113, 144)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(872, 81)
+        Me.TextBox1.TabIndex = 94
         '
         'quote
         '
@@ -920,36 +748,19 @@ Partial Class quote
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1202, 780)
-        Me.Controls.Add(Me.ListBox2)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.Pcodelookup)
         Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.CheckBox14)
-        Me.Controls.Add(Me.CheckBox13)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.CheckBox12)
-        Me.Controls.Add(Me.Label34)
-        Me.Controls.Add(Me.CheckBox11)
-        Me.Controls.Add(Me.CheckBox10)
-        Me.Controls.Add(Me.CheckBox9)
-        Me.Controls.Add(Me.CheckBox8)
-        Me.Controls.Add(Me.CheckBox6)
-        Me.Controls.Add(Me.CheckBox5)
-        Me.Controls.Add(Me.CheckBox4)
-        Me.Controls.Add(Me.CheckBox3)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.Label32)
-        Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.VScrollBar3)
-        Me.Controls.Add(Me.VScrollBar1)
         Me.Controls.Add(Me.user_tb)
         Me.Controls.Add(Me.order_but)
-        Me.Controls.Add(Me.selectall)
         Me.Controls.Add(Me.signoff_but)
         Me.Controls.Add(Me.terms_but)
         Me.Controls.Add(Me.delivery_but)
@@ -1020,33 +831,16 @@ Partial Class quote
     Friend WithEvents delivery_but As Button
     Friend WithEvents terms_but As Button
     Friend WithEvents signoff_but As Button
-    Friend WithEvents selectall As CheckBox
     Friend WithEvents order_but As Button
     Friend WithEvents user_tb As TextBox
-    Friend WithEvents VScrollBar1 As VScrollBar
-    Friend WithEvents VScrollBar3 As VScrollBar
-    Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
-    Friend WithEvents CheckBox9 As CheckBox
-    Friend WithEvents CheckBox10 As CheckBox
-    Friend WithEvents CheckBox11 As CheckBox
-    Friend WithEvents Label34 As Label
-    Friend WithEvents CheckBox12 As CheckBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TransvacDataV2DataSetBindingSource As BindingSource
     Friend WithEvents QuotedetailBindingSource As BindingSource
     Friend WithEvents QuotedetailTableAdapter As TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter
-    Friend WithEvents CheckBox13 As CheckBox
-    Friend WithEvents CheckBox14 As CheckBox
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents TranbinsBindingSource As BindingSource
     Friend WithEvents TranbinsTableAdapter As TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter
@@ -1085,6 +879,6 @@ Partial Class quote
     Friend WithEvents idcode As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ListBox2 As ListBox
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents TextBox1 As TextBox
 End Class
