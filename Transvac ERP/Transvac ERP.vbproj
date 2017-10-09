@@ -177,12 +177,6 @@
     <Compile Include="enqmain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="enquiry.Designer.vb">
-      <DependentUpon>enquiry.vb</DependentUpon>
-    </Compile>
-    <Compile Include="enquiry.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="EnquiryDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,6 +184,12 @@
     </Compile>
     <Compile Include="EnquiryDataSet.vb">
       <DependentUpon>EnquiryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="enquiry.Designer.vb">
+      <DependentUpon>enquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="enquiry.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="findquote.Designer.vb">
       <DependentUpon>findquote.vb</DependentUpon>

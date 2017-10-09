@@ -17,9 +17,12 @@
     End Sub
 
     Private Sub newqu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles newqu_but.Click
-        'Show the forms as a modaless window.
-        Dim x As quote = New quote
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage5
+        Dim quote As New quote
+        quote.TopLevel = False
+        quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
+        quote.Show()
         Me.Close()
     End Sub
 

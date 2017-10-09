@@ -23,21 +23,21 @@ Partial Class enquiry
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim EdateLabel As System.Windows.Forms.Label
-        Dim CnameLabel As System.Windows.Forms.Label
-        Dim ContactLabel As System.Windows.Forms.Label
-        Dim Ref_noLabel As System.Windows.Forms.Label
-        Dim Tel_noLabel As System.Windows.Forms.Label
-        Dim Fax_noLabel As System.Windows.Forms.Label
-        Dim Mobtel_noLabel As System.Windows.Forms.Label
-        Dim EmailLabel As System.Windows.Forms.Label
-        Dim Ship_nameLabel As System.Windows.Forms.Label
-        Dim AccnoLabel As System.Windows.Forms.Label
-        Dim StatusLabel As System.Windows.Forms.Label
-        Dim EtypeLabel As System.Windows.Forms.Label
-        Dim Label1 As System.Windows.Forms.Label
-        Dim Label2 As System.Windows.Forms.Label
-        Dim Label3 As System.Windows.Forms.Label
+        Me.EdateLabel = New System.Windows.Forms.Label()
+        Me.CnameLabel = New System.Windows.Forms.Label()
+        Me.ContactLabel = New System.Windows.Forms.Label()
+        Me.Ref_noLabel = New System.Windows.Forms.Label()
+        Me.Tel_noLabel = New System.Windows.Forms.Label()
+        Me.Fax_noLabel = New System.Windows.Forms.Label()
+        Me.Mobtel_noLabel = New System.Windows.Forms.Label()
+        Me.EmailLabel = New System.Windows.Forms.Label()
+        Me.Ship_nameLabel = New System.Windows.Forms.Label()
+        Me.AccnoLabel = New System.Windows.Forms.Label()
+        Me.StatusLabel = New System.Windows.Forms.Label()
+        Me.EtypeLabel = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ContactTextBox = New System.Windows.Forms.TextBox()
         Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EnquiryDataSet = New Transvac_ERP.EnquiryDataSet()
@@ -68,7 +68,6 @@ Partial Class enquiry
         Me.termsTextBox = New System.Windows.Forms.TextBox()
         Me.Btnquotegen = New System.Windows.Forms.Button()
         Me.Btnquote = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.qotenoLabel = New System.Windows.Forms.Label()
         Me.qotenoTextBox = New System.Windows.Forms.TextBox()
         Me.acctTextBox = New System.Windows.Forms.TextBox()
@@ -77,21 +76,7 @@ Partial Class enquiry
         Me.EnquiryTableAdapter = New Transvac_ERP.EnquiryDataSetTableAdapters.enquiryTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.EnquiryDataSetTableAdapters.TableAdapterManager()
         Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
-        EdateLabel = New System.Windows.Forms.Label()
-        CnameLabel = New System.Windows.Forms.Label()
-        ContactLabel = New System.Windows.Forms.Label()
-        Ref_noLabel = New System.Windows.Forms.Label()
-        Tel_noLabel = New System.Windows.Forms.Label()
-        Fax_noLabel = New System.Windows.Forms.Label()
-        Mobtel_noLabel = New System.Windows.Forms.Label()
-        EmailLabel = New System.Windows.Forms.Label()
-        Ship_nameLabel = New System.Windows.Forms.Label()
-        AccnoLabel = New System.Windows.Forms.Label()
-        StatusLabel = New System.Windows.Forms.Label()
-        EtypeLabel = New System.Windows.Forms.Label()
-        Label1 = New System.Windows.Forms.Label()
-        Label2 = New System.Windows.Forms.Label()
-        Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnquiryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,138 +86,138 @@ Partial Class enquiry
         '
         'EdateLabel
         '
-        EdateLabel.AutoSize = True
-        EdateLabel.Location = New System.Drawing.Point(565, 123)
-        EdateLabel.Name = "EdateLabel"
-        EdateLabel.Size = New System.Drawing.Size(73, 13)
-        EdateLabel.TabIndex = 1
-        EdateLabel.Text = "Date Created:"
+        Me.EdateLabel.AutoSize = True
+        Me.EdateLabel.Location = New System.Drawing.Point(565, 123)
+        Me.EdateLabel.Name = "EdateLabel"
+        Me.EdateLabel.Size = New System.Drawing.Size(73, 13)
+        Me.EdateLabel.TabIndex = 1
+        Me.EdateLabel.Text = "Date Created:"
         '
         'CnameLabel
         '
-        CnameLabel.AutoSize = True
-        CnameLabel.Location = New System.Drawing.Point(44, 156)
-        CnameLabel.Name = "CnameLabel"
-        CnameLabel.Size = New System.Drawing.Size(85, 13)
-        CnameLabel.TabIndex = 3
-        CnameLabel.Text = "Customer Name:"
+        Me.CnameLabel.AutoSize = True
+        Me.CnameLabel.Location = New System.Drawing.Point(44, 156)
+        Me.CnameLabel.Name = "CnameLabel"
+        Me.CnameLabel.Size = New System.Drawing.Size(85, 13)
+        Me.CnameLabel.TabIndex = 3
+        Me.CnameLabel.Text = "Customer Name:"
         '
         'ContactLabel
         '
-        ContactLabel.AutoSize = True
-        ContactLabel.Location = New System.Drawing.Point(428, 159)
-        ContactLabel.Name = "ContactLabel"
-        ContactLabel.Size = New System.Drawing.Size(47, 13)
-        ContactLabel.TabIndex = 5
-        ContactLabel.Text = "Contact:"
+        Me.ContactLabel.AutoSize = True
+        Me.ContactLabel.Location = New System.Drawing.Point(428, 159)
+        Me.ContactLabel.Name = "ContactLabel"
+        Me.ContactLabel.Size = New System.Drawing.Size(47, 13)
+        Me.ContactLabel.TabIndex = 5
+        Me.ContactLabel.Text = "Contact:"
         '
         'Ref_noLabel
         '
-        Ref_noLabel.AutoSize = True
-        Ref_noLabel.Location = New System.Drawing.Point(427, 218)
-        Ref_noLabel.Name = "Ref_noLabel"
-        Ref_noLabel.Size = New System.Drawing.Size(44, 13)
-        Ref_noLabel.TabIndex = 7
-        Ref_noLabel.Text = "Ref No:"
+        Me.Ref_noLabel.AutoSize = True
+        Me.Ref_noLabel.Location = New System.Drawing.Point(427, 218)
+        Me.Ref_noLabel.Name = "Ref_noLabel"
+        Me.Ref_noLabel.Size = New System.Drawing.Size(44, 13)
+        Me.Ref_noLabel.TabIndex = 7
+        Me.Ref_noLabel.Text = "Ref No:"
         '
         'Tel_noLabel
         '
-        Tel_noLabel.AutoSize = True
-        Tel_noLabel.Location = New System.Drawing.Point(426, 246)
-        Tel_noLabel.Name = "Tel_noLabel"
-        Tel_noLabel.Size = New System.Drawing.Size(40, 13)
-        Tel_noLabel.TabIndex = 9
-        Tel_noLabel.Text = "Tel no:"
+        Me.Tel_noLabel.AutoSize = True
+        Me.Tel_noLabel.Location = New System.Drawing.Point(426, 246)
+        Me.Tel_noLabel.Name = "Tel_noLabel"
+        Me.Tel_noLabel.Size = New System.Drawing.Size(40, 13)
+        Me.Tel_noLabel.TabIndex = 9
+        Me.Tel_noLabel.Text = "Tel no:"
         '
         'Fax_noLabel
         '
-        Fax_noLabel.AutoSize = True
-        Fax_noLabel.Location = New System.Drawing.Point(426, 271)
-        Fax_noLabel.Name = "Fax_noLabel"
-        Fax_noLabel.Size = New System.Drawing.Size(42, 13)
-        Fax_noLabel.TabIndex = 11
-        Fax_noLabel.Text = "Fax no:"
+        Me.Fax_noLabel.AutoSize = True
+        Me.Fax_noLabel.Location = New System.Drawing.Point(426, 271)
+        Me.Fax_noLabel.Name = "Fax_noLabel"
+        Me.Fax_noLabel.Size = New System.Drawing.Size(42, 13)
+        Me.Fax_noLabel.TabIndex = 11
+        Me.Fax_noLabel.Text = "Fax no:"
         '
         'Mobtel_noLabel
         '
-        Mobtel_noLabel.AutoSize = True
-        Mobtel_noLabel.Location = New System.Drawing.Point(427, 296)
-        Mobtel_noLabel.Name = "Mobtel_noLabel"
-        Mobtel_noLabel.Size = New System.Drawing.Size(58, 13)
-        Mobtel_noLabel.TabIndex = 13
-        Mobtel_noLabel.Text = "Mobile No:"
+        Me.Mobtel_noLabel.AutoSize = True
+        Me.Mobtel_noLabel.Location = New System.Drawing.Point(427, 296)
+        Me.Mobtel_noLabel.Name = "Mobtel_noLabel"
+        Me.Mobtel_noLabel.Size = New System.Drawing.Size(58, 13)
+        Me.Mobtel_noLabel.TabIndex = 13
+        Me.Mobtel_noLabel.Text = "Mobile No:"
         '
         'EmailLabel
         '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(429, 324)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(39, 13)
-        EmailLabel.TabIndex = 15
-        EmailLabel.Text = "E-Mail:"
+        Me.EmailLabel.AutoSize = True
+        Me.EmailLabel.Location = New System.Drawing.Point(429, 324)
+        Me.EmailLabel.Name = "EmailLabel"
+        Me.EmailLabel.Size = New System.Drawing.Size(39, 13)
+        Me.EmailLabel.TabIndex = 15
+        Me.EmailLabel.Text = "E-Mail:"
         '
         'Ship_nameLabel
         '
-        Ship_nameLabel.AutoSize = True
-        Ship_nameLabel.Location = New System.Drawing.Point(427, 348)
-        Ship_nameLabel.Name = "Ship_nameLabel"
-        Ship_nameLabel.Size = New System.Drawing.Size(62, 13)
-        Ship_nameLabel.TabIndex = 17
-        Ship_nameLabel.Text = "Ship Name:"
+        Me.Ship_nameLabel.AutoSize = True
+        Me.Ship_nameLabel.Location = New System.Drawing.Point(427, 348)
+        Me.Ship_nameLabel.Name = "Ship_nameLabel"
+        Me.Ship_nameLabel.Size = New System.Drawing.Size(62, 13)
+        Me.Ship_nameLabel.TabIndex = 17
+        Me.Ship_nameLabel.Text = "Ship Name:"
         '
         'AccnoLabel
         '
-        AccnoLabel.AutoSize = True
-        AccnoLabel.Location = New System.Drawing.Point(566, 58)
-        AccnoLabel.Name = "AccnoLabel"
-        AccnoLabel.Size = New System.Drawing.Size(96, 13)
-        AccnoLabel.TabIndex = 21
-        AccnoLabel.Text = "Customer Acct No:"
+        Me.AccnoLabel.AutoSize = True
+        Me.AccnoLabel.Location = New System.Drawing.Point(566, 58)
+        Me.AccnoLabel.Name = "AccnoLabel"
+        Me.AccnoLabel.Size = New System.Drawing.Size(96, 13)
+        Me.AccnoLabel.TabIndex = 21
+        Me.AccnoLabel.Text = "Customer Acct No:"
         '
         'StatusLabel
         '
-        StatusLabel.AutoSize = True
-        StatusLabel.Location = New System.Drawing.Point(73, 529)
-        StatusLabel.Name = "StatusLabel"
-        StatusLabel.Size = New System.Drawing.Size(40, 13)
-        StatusLabel.TabIndex = 23
-        StatusLabel.Text = "Status:"
+        Me.StatusLabel.AutoSize = True
+        Me.StatusLabel.Location = New System.Drawing.Point(73, 529)
+        Me.StatusLabel.Name = "StatusLabel"
+        Me.StatusLabel.Size = New System.Drawing.Size(40, 13)
+        Me.StatusLabel.TabIndex = 23
+        Me.StatusLabel.Text = "Status:"
         '
         'EtypeLabel
         '
-        EtypeLabel.AutoSize = True
-        EtypeLabel.Location = New System.Drawing.Point(77, 557)
-        EtypeLabel.Name = "EtypeLabel"
-        EtypeLabel.Size = New System.Drawing.Size(34, 13)
-        EtypeLabel.TabIndex = 28
-        EtypeLabel.Text = "Type:"
+        Me.EtypeLabel.AutoSize = True
+        Me.EtypeLabel.Location = New System.Drawing.Point(77, 557)
+        Me.EtypeLabel.Name = "EtypeLabel"
+        Me.EtypeLabel.Size = New System.Drawing.Size(34, 13)
+        Me.EtypeLabel.TabIndex = 28
+        Me.EtypeLabel.Text = "Type:"
         '
         'Label1
         '
-        Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(45, 379)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(74, 13)
-        Label1.TabIndex = 48
-        Label1.Text = "Account Type"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(45, 379)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.TabIndex = 48
+        Me.Label1.Text = "Account Type"
         '
         'Label2
         '
-        Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(263, 382)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(45, 13)
-        Label2.TabIndex = 49
-        Label2.Text = "TERMS"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(263, 382)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.TabIndex = 49
+        Me.Label2.Text = "TERMS"
         '
         'Label3
         '
-        Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(45, 251)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(48, 13)
-        Label3.TabIndex = 51
-        Label3.Text = "Address:"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(45, 251)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 51
+        Me.Label3.Text = "Address:"
         '
         'ContactTextBox
         '
@@ -376,6 +361,7 @@ Partial Class enquiry
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(118, 32)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 13)
@@ -475,16 +461,6 @@ Partial Class enquiry
         Me.Btnquote.Text = "QUOTE LIST"
         Me.Btnquote.UseVisualStyleBackColor = True
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 53
-        Me.PictureBox2.TabStop = False
-        '
         'qotenoLabel
         '
         Me.qotenoLabel.AutoSize = True
@@ -535,6 +511,16 @@ Partial Class enquiry
         Me.DateCreaTextBox.Size = New System.Drawing.Size(79, 20)
         Me.DateCreaTextBox.TabIndex = 52
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 53
+        Me.PictureBox2.TabStop = False
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -547,10 +533,10 @@ Partial Class enquiry
         Me.Controls.Add(Me.Btnquote)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DateCreaTextBox)
-        Me.Controls.Add(Label3)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.termsTextBox)
-        Me.Controls.Add(Label2)
-        Me.Controls.Add(Label1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Add1TextBox)
         Me.Controls.Add(Me.Add2TextBox)
         Me.Controls.Add(Me.Add3TextBox)
@@ -564,29 +550,29 @@ Partial Class enquiry
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Btnquotegen)
         Me.Controls.Add(Me.btnabt)
-        Me.Controls.Add(EtypeLabel)
+        Me.Controls.Add(Me.EtypeLabel)
         Me.Controls.Add(Me.EtypeComboBox)
-        Me.Controls.Add(StatusLabel)
+        Me.Controls.Add(Me.StatusLabel)
         Me.Controls.Add(Me.StatusComboBox)
-        Me.Controls.Add(AccnoLabel)
+        Me.Controls.Add(Me.AccnoLabel)
         Me.Controls.Add(Me.AccnoTextBox)
         Me.Controls.Add(Me.EmemoTextBox)
-        Me.Controls.Add(Ship_nameLabel)
+        Me.Controls.Add(Me.Ship_nameLabel)
         Me.Controls.Add(Me.Ship_nameTextBox)
-        Me.Controls.Add(EmailLabel)
+        Me.Controls.Add(Me.EmailLabel)
         Me.Controls.Add(Me.EmailTextBox)
-        Me.Controls.Add(Mobtel_noLabel)
+        Me.Controls.Add(Me.Mobtel_noLabel)
         Me.Controls.Add(Me.Mobtel_noTextBox)
-        Me.Controls.Add(Fax_noLabel)
+        Me.Controls.Add(Me.Fax_noLabel)
         Me.Controls.Add(Me.Fax_noTextBox)
-        Me.Controls.Add(Tel_noLabel)
+        Me.Controls.Add(Me.Tel_noLabel)
         Me.Controls.Add(Me.Tel_noTextBox)
-        Me.Controls.Add(Ref_noLabel)
+        Me.Controls.Add(Me.Ref_noLabel)
         Me.Controls.Add(Me.Ref_noTextBox)
-        Me.Controls.Add(ContactLabel)
+        Me.Controls.Add(Me.ContactLabel)
         Me.Controls.Add(Me.ContactTextBox)
-        Me.Controls.Add(CnameLabel)
-        Me.Controls.Add(EdateLabel)
+        Me.Controls.Add(Me.CnameLabel)
+        Me.Controls.Add(Me.EdateLabel)
         Me.Name = "enquiry"
         Me.Text = "+"
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -637,4 +623,19 @@ Partial Class enquiry
     Friend WithEvents TableAdapterManager As EnquiryDataSetTableAdapters.TableAdapterManager
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents DateCreaTextBox As TextBox
+    Friend WithEvents EdateLabel As Label
+    Friend WithEvents CnameLabel As Label
+    Friend WithEvents ContactLabel As Label
+    Friend WithEvents Ref_noLabel As Label
+    Friend WithEvents Tel_noLabel As Label
+    Friend WithEvents Fax_noLabel As Label
+    Friend WithEvents Mobtel_noLabel As Label
+    Friend WithEvents EmailLabel As Label
+    Friend WithEvents Ship_nameLabel As Label
+    Friend WithEvents AccnoLabel As Label
+    Friend WithEvents StatusLabel As Label
+    Friend WithEvents EtypeLabel As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class
