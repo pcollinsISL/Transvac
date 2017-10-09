@@ -1,5 +1,4 @@
 ﻿Public Class form1
-
     Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.Tran2BindingSource1.EndEdit()
@@ -74,21 +73,33 @@
 
     End Sub
     Private Sub fndact_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndact_but.Click
-        Dim x As accountsrch = New accountsrch
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage2
+        Dim accountsrch As New accountsrch
+        accountsrch.TopLevel = False
+        accountsrch.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(1).Controls.Add(accountsrch)
+        accountsrch.Show()
         Me.Hide()
     End Sub
 
     Private Sub fndname_but_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles fndname_but.Click
-        Dim x As namesrch = New namesrch
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage2
+        Dim namesrch As New namesrch
+        namesrch.TopLevel = False
+        namesrch.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(1).Controls.Add(namesrch)
+        namesrch.Show()
         Me.Hide()
     End Sub
 
     Private Sub membut_Click(sender As Object, e As EventArgs) Handles membut.Click
-        Dim x As updatemem = updatemem
         updatemem.MemoBox.Text = ADDMEMOTextBox.Text
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim x As updatemem = updatemem
+        updatemem.TopLevel = False
+        updatemem.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(updatemem)
+        updatemem.Show()
         Me.Hide()
     End Sub
 

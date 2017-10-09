@@ -5,6 +5,12 @@
     End Sub
     Private Sub acctabt_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles acctabt_but.Click
         Me.Hide()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage2
+        Dim form1 As New form1
+        form1.TopLevel = False
+        form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(1).Controls.Add(form1)
+        form1.Show()
     End Sub
 
     Private Sub Button2_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2_but.Click

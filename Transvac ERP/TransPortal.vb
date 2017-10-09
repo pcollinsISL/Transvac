@@ -16,19 +16,6 @@
         enqmain.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        REM TabPage TabPage1 = New TabPage("Tab page")
-        TabControl1.TabPages.Add(TabPage1)
-    End Sub
-
-    Private Sub Button8_Click(sender As Object, e As EventArgs)
-        TabControl1.TabPages.Remove(TabControl1.SelectedTab)
-    End Sub
-
-    Private Sub RemoveAllTabsbtn_Click(sender As Object, e As EventArgs)
-        TabControl1.TabPages.Clear()
-    End Sub
-
     Private Sub AddressbookBTN_Click(sender As Object, e As EventArgs) Handles AddressbookBTN.Click
         TabControl1.SelectedTab = TabPage2
         Dim form1 As New form1

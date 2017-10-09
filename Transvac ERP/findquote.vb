@@ -1,7 +1,6 @@
 ﻿Public Class findquote
     Private Sub findquote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
         Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet1.enquiry, CustomerNameBox.Text)
     End Sub
@@ -20,6 +19,12 @@
     Dim ExitYN As System.Windows.Forms.DialogResult
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         Me.Hide()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim enqmain As New enqmain
+        enqmain.TopLevel = False
+        enqmain.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(enqmain)
+        enqmain.Show()
     End Sub
 
     Private Sub QuoteNObtn_Click(sender As Object, e As EventArgs) Handles QuoteNoBtn.Click

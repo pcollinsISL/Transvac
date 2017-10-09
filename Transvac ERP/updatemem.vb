@@ -1,5 +1,10 @@
 ﻿Public Class updatemem
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim from1 As New form1
+        form1.TopLevel = False
+        form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(form1)
         form1.Refresh()
         form1.Show()
         form1.ADDMEMOTextBox.Text = MemoBox.Text

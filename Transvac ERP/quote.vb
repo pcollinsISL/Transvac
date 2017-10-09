@@ -96,4 +96,9 @@
     Private Sub header_tb_TextChanged(sender As Object, e As EventArgs) Handles header_tb.TextChanged
 
     End Sub
+
+    Private Sub order_but_Click(sender As Object, e As EventArgs) Handles order_but.Click
+        Dim x As InvoiceType = New InvoiceType
+        x.Show()
+    End Sub
 End Class

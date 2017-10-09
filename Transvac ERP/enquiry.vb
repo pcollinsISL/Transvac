@@ -3,22 +3,42 @@
     Public addvar As String
     Private Sub btnabt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnabt.Click
         Me.Close()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim enqmain As New enqmain
+        enqmain.TopLevel = False
+        enqmain.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(enqmain)
+        enqmain.Show()
     End Sub
 
     Private Sub Btnquote_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquote.Click
         addvar = qotenoTextBox.Text
-        Dim x As quotelist = New quotelist
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim quotelist As New quotelist
+        quotelist.TopLevel = False
+        quotelist.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(quotelist)
+        quotelist.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Btnquotegen_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquotegen.Click
-        Dim x As quote = New quote
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim quote As New quote
+        quote.TopLevel = False
+        quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(form1)
+        quote.Show()
+        Me.Hide()
     End Sub
 
     Private Sub BtnAddressbook_click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Btnaddressbook.Click
-        Dim x As form1 = New form1
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage2
+        Dim form1 As New form1
+        form1.TopLevel = False
+        form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(1).Controls.Add(form1)
+        form1.Show()
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles DateCreaTextBox.TextChanged
@@ -34,7 +54,6 @@
     End Sub
 
     Private Sub Btnaddressbook_Click_1(sender As Object, e As EventArgs) Handles Btnaddressbook.Click
-
         Me.Close()
     End Sub
 
