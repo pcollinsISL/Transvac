@@ -38,7 +38,6 @@ Partial Class form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.membut = New System.Windows.Forms.Button()
         Me.savebut = New System.Windows.Forms.Button()
         Me.abortbut = New System.Windows.Forms.Button()
         Me.printbutton = New System.Windows.Forms.Button()
@@ -102,6 +101,7 @@ Partial Class form1
         Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.Label7 = New System.Windows.Forms.Label()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
         ENTRYTYPELabel = New System.Windows.Forms.Label()
@@ -261,15 +261,6 @@ Partial Class form1
         Me.Label3.Size = New System.Drawing.Size(59, 13)
         Me.Label3.TabIndex = 159
         Me.Label3.Text = "ADDRESS"
-        '
-        'membut
-        '
-        Me.membut.Location = New System.Drawing.Point(640, 318)
-        Me.membut.Name = "membut"
-        Me.membut.Size = New System.Drawing.Size(102, 23)
-        Me.membut.TabIndex = 156
-        Me.membut.Text = "UPDATE MEMO"
-        Me.membut.UseVisualStyleBackColor = True
         '
         'savebut
         '
@@ -525,11 +516,12 @@ Partial Class form1
         'ADDMEMOTextBox
         '
         Me.ADDMEMOTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "ADDMEMO", True))
-        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(640, 120)
+        Me.ADDMEMOTextBox.Location = New System.Drawing.Point(641, 140)
         Me.ADDMEMOTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 191)
+        Me.ADDMEMOTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 228)
         Me.ADDMEMOTextBox.TabIndex = 132
         '
         'AddnotesBindingSource1
@@ -844,12 +836,22 @@ Partial Class form1
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(639, 122)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(40, 13)
+        Me.Label7.TabIndex = 207
+        Me.Label7.Text = "MEMO"
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(1042, 479)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PROMO)
         Me.Controls.Add(Me.XcardCheckBox1)
         Me.Controls.Add(Me.New_updDateTimePicker)
@@ -888,7 +890,6 @@ Partial Class form1
         Me.Controls.Add(Me.NAMETextBox1)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.membut)
         Me.Controls.Add(Me.savebut)
         Me.Controls.Add(Me.abortbut)
         Me.Controls.Add(Me.printbutton)
@@ -925,7 +926,6 @@ Partial Class form1
     End Sub
     Friend WithEvents Label16 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents membut As Button
     Friend WithEvents savebut As Button
     Friend WithEvents abortbut As Button
     Friend WithEvents printbutton As Button
@@ -989,4 +989,5 @@ Partial Class form1
     Friend WithEvents New_updDateTimePicker As DateTimePicker
     Friend WithEvents PROMO As CheckBox
     Friend WithEvents XcardCheckBox1 As CheckBox
+    Friend WithEvents Label7 As Label
 End Class

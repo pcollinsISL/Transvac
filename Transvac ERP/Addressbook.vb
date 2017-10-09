@@ -50,7 +50,12 @@
     End Sub
 
     Private Sub selectbut_Click(sender As Object, e As EventArgs) Handles selectbut.Click
-        Dim X As enquiry = enquiry
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim enquiry As New enquiry
+        enquiry.TopLevel = False
+        enquiry.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(enquiry)
+        enquiry.Show()
         enquiry.AccnoTextBox.Text = ACCOUNTTextBox1.Text
         enquiry.CnameTextBox.Text = NAMETextBox1.Text
         enquiry.Add1TextBox.Text = AD1TextBox1.Text
@@ -64,9 +69,7 @@
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
         enquiry.acctTextBox.Text = EntrytypeComboBox.Text
         enquiry.termsTextBox.Text = TERMDAYSTextBox.Text
-
         Me.Hide()
-        X.Show()
     End Sub
 
     Private Sub NAMELabel_Click(sender As Object, e As EventArgs)
@@ -92,15 +95,15 @@
         Me.Hide()
     End Sub
 
-    Private Sub membut_Click(sender As Object, e As EventArgs) Handles membut.Click
+    Private Sub membut_Click(sender As Object, e As EventArgs)
         updatemem.MemoBox.Text = ADDMEMOTextBox.Text
-        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage2
         Dim x As updatemem = updatemem
         updatemem.TopLevel = False
         updatemem.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        TransPortal.TabControl1.TabPages(0).Controls.Add(updatemem)
+        TransPortal.TabControl1.TabPages(1).Controls.Add(updatemem)
         updatemem.Show()
-        Me.Hide()
+
     End Sub
 
     Private Sub abortbut_Click(sender As Object, e As EventArgs) Handles abortbut.Click
@@ -114,6 +117,7 @@
     End Sub
 
     Private Sub savebtn(sender As Object, e As EventArgs) Handles savebut.Click
+        New_updDateTimePicker.Value = DateTime.Now
         Me.Validate()
         Me.Tran2BindingSource1.EndEdit()
         Me.AddnotesBindingSource1.EndEdit()

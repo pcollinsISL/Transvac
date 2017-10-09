@@ -24,7 +24,6 @@ Partial Class TransPortal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransPortal))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.AddressbookBTN = New System.Windows.Forms.Button()
         Me.EnquiryBTN = New System.Windows.Forms.Button()
         Me.OrdersBTN = New System.Windows.Forms.Button()
@@ -40,6 +39,7 @@ Partial Class TransPortal
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -47,31 +47,18 @@ Partial Class TransPortal
         '
         'PictureBox1
         '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(1396, 28)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 28)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(169, 91)
+        Me.PictureBox1.Size = New System.Drawing.Size(141, 63)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 51
         Me.PictureBox1.TabStop = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label1.Location = New System.Drawing.Point(2, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(243, 33)
-        Me.Label1.TabIndex = 54
-        Me.Label1.Text = "SALES PORTAL"
-        '
         'AddressbookBTN
         '
-        Me.AddressbookBTN.Location = New System.Drawing.Point(13, 250)
+        Me.AddressbookBTN.Location = New System.Drawing.Point(12, 136)
         Me.AddressbookBTN.Name = "AddressbookBTN"
         Me.AddressbookBTN.Size = New System.Drawing.Size(118, 33)
         Me.AddressbookBTN.TabIndex = 56
@@ -80,7 +67,7 @@ Partial Class TransPortal
         '
         'EnquiryBTN
         '
-        Me.EnquiryBTN.Location = New System.Drawing.Point(12, 211)
+        Me.EnquiryBTN.Location = New System.Drawing.Point(12, 97)
         Me.EnquiryBTN.Name = "EnquiryBTN"
         Me.EnquiryBTN.Size = New System.Drawing.Size(119, 33)
         Me.EnquiryBTN.TabIndex = 57
@@ -89,7 +76,7 @@ Partial Class TransPortal
         '
         'OrdersBTN
         '
-        Me.OrdersBTN.Location = New System.Drawing.Point(13, 289)
+        Me.OrdersBTN.Location = New System.Drawing.Point(12, 175)
         Me.OrdersBTN.Name = "OrdersBTN"
         Me.OrdersBTN.Size = New System.Drawing.Size(118, 33)
         Me.OrdersBTN.TabIndex = 58
@@ -98,7 +85,7 @@ Partial Class TransPortal
         '
         'InvoicingBTN
         '
-        Me.InvoicingBTN.Location = New System.Drawing.Point(13, 328)
+        Me.InvoicingBTN.Location = New System.Drawing.Point(13, 214)
         Me.InvoicingBTN.Name = "InvoicingBTN"
         Me.InvoicingBTN.Size = New System.Drawing.Size(118, 33)
         Me.InvoicingBTN.TabIndex = 59
@@ -107,7 +94,7 @@ Partial Class TransPortal
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(13, 645)
+        Me.Button6.Location = New System.Drawing.Point(13, 689)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(119, 45)
         Me.Button6.TabIndex = 60
@@ -116,7 +103,7 @@ Partial Class TransPortal
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(13, 594)
+        Me.Button7.Location = New System.Drawing.Point(13, 253)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(119, 45)
         Me.Button7.TabIndex = 61
@@ -150,7 +137,7 @@ Partial Class TransPortal
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 696)
+        Me.Button1.Location = New System.Drawing.Point(12, 740)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 45)
         Me.Button1.TabIndex = 67
@@ -159,10 +146,12 @@ Partial Class TransPortal
         '
         'TabPage1
         '
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage1.Location = New System.Drawing.Point(4, 32)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1424, 590)
+        Me.TabPage1.Size = New System.Drawing.Size(1424, 744)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Enquiry"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -172,45 +161,67 @@ Partial Class TransPortal
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Location = New System.Drawing.Point(137, 125)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.HotTrack = True
+        Me.TabControl1.Location = New System.Drawing.Point(138, 59)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1432, 616)
+        Me.TabControl1.Size = New System.Drawing.Size(1432, 780)
         Me.TabControl1.TabIndex = 63
         '
         'TabPage2
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage2.Location = New System.Drawing.Point(4, 32)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1424, 590)
+        Me.TabPage2.Size = New System.Drawing.Size(1424, 694)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Address Book"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage3.Location = New System.Drawing.Point(4, 32)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1424, 590)
+        Me.TabPage3.Size = New System.Drawing.Size(1424, 694)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Orders"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'TabPage4
         '
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage4.Location = New System.Drawing.Point(4, 32)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1424, 590)
+        Me.TabPage4.Size = New System.Drawing.Size(1424, 694)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Invoicing"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'TabPage5
+        '
+        Me.TabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage5.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(1424, 694)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Quotations"
+        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'TransPortal
         '
@@ -229,7 +240,6 @@ Partial Class TransPortal
         Me.Controls.Add(Me.OrdersBTN)
         Me.Controls.Add(Me.EnquiryBTN)
         Me.Controls.Add(Me.AddressbookBTN)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "TransPortal"
         Me.Text = "TransPortal"
@@ -244,7 +254,6 @@ Partial Class TransPortal
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents AddressbookBTN As Button
     Friend WithEvents EnquiryBTN As Button
     Friend WithEvents OrdersBTN As Button
@@ -260,4 +269,5 @@ Partial Class TransPortal
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPage5 As TabPage
 End Class

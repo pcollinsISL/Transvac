@@ -44,7 +44,13 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles SelectBtn.Click
-        Dim X As enquiry = enquiry
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+        Dim enquiry As New enquiry
+        enquiry.TopLevel = False
+        enquiry.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(0).Controls.Add(enquiry)
+        enquiry.Show()
+        Me.Hide()
         enquiry.CnameTextBox.Text = EnquiryDataGridView.Item(0, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Ref_noTextBox.Text = EnquiryDataGridView.Item(1, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.qotenoTextBox.Text = EnquiryDataGridView.Item(2, EnquiryDataGridView.CurrentRow.Index).Value
@@ -61,7 +67,6 @@
         enquiry.DateCreaTextBox.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EtypeComboBox.Text = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
         Me.Hide()
-        X.Show()
     End Sub
 
     Private Sub EnquiryDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles EnquiryDataGridView.CellContentClick

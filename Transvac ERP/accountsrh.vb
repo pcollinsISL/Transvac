@@ -26,11 +26,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim x As form1 = form1
+        Dim form1 As New form1
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage2
+        form1.TopLevel = False
+        form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(1).Controls.Add(form1)
         form1.ACCOUNTTextBox1.Text = Tran2DataGridView.Item(1, Tran2DataGridView.CurrentRow.Index).Value
-        form1.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, form1.ACCOUNTTextBox1.Text)
+        REM form1.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, form1.ACCOUNTTextBox1.Text)
+        form1.Show()
         Me.Hide()
-        x.Show()
     End Sub
 
     Private Sub acctextBox_TextChanged(sender As Object, e As EventArgs) Handles acctextBox.TextChanged
