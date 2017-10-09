@@ -367,9 +367,9 @@ Partial Class quote
         '
         'order_but
         '
-        Me.order_but.Location = New System.Drawing.Point(948, 711)
+        Me.order_but.Location = New System.Drawing.Point(942, 698)
         Me.order_but.Name = "order_but"
-        Me.order_but.Size = New System.Drawing.Size(152, 49)
+        Me.order_but.Size = New System.Drawing.Size(152, 23)
         Me.order_but.TabIndex = 39
         Me.order_but.Text = "ORDER ITEMS"
         Me.order_but.UseVisualStyleBackColor = True
@@ -747,7 +747,7 @@ Partial Class quote
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.ClientSize = New System.Drawing.Size(1202, 780)
+        Me.ClientSize = New System.Drawing.Size(1202, 730)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label8)

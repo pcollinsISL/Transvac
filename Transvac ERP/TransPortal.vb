@@ -3,7 +3,7 @@
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -17,8 +17,8 @@
     End Sub
 
     Private Sub AddressbookBTN_Click(sender As Object, e As EventArgs) Handles AddressbookBTN.Click
-        TabControl1.SelectedTab = TabPage2
         Dim form1 As New form1
+        TabControl1.SelectedTab = TabPage2
         form1.TopLevel = False
         form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.TabControl1.TabPages(1).Controls.Add(form1)
@@ -31,5 +31,9 @@
         builddraftinv.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.TabControl1.TabPages(0).Controls.Add(builddraftinv)
         builddraftinv.Show()
+    End Sub
+
+    Private Sub TabPage1_Click_1(sender As Object, e As EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class

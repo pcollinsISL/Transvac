@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        quotenotextbox.Text = enquiry.addvar
+
         Me.QuoteheadTableAdapter.FillByQuotes(Me.TransvacDataV2DataSet1.quotehead, quotenotextbox.Text)
     End Sub
 
@@ -24,12 +24,17 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles editqu_but.Click
-        Dim x As quote = quote
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage5
+        Dim quote As New quote
+        quote.TopLevel = False
+        quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
         quote.qute_tb.Text = DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value
         quote.SuffixTB.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value
         quote.header_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
         quote.user_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
-        x.Show()
+        quote.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles delqut_but.Click
