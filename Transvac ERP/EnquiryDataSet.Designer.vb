@@ -525,8 +525,8 @@ Partial Public Class EnquiryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByUniqueID(ByVal UniqueID As Long) As enquiryRow
-            Return CType(Me.Rows.Find(New Object() {UniqueID}),enquiryRow)
+        Public Function FindByquote_no(ByVal quote_no As String) As enquiryRow
+            Return CType(Me.Rows.Find(New Object() {quote_no}),enquiryRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -599,12 +599,13 @@ Partial Public Class EnquiryDataSet
             MyBase.Columns.Add(Me.columnedate)
             Me.columnetype = New Global.System.Data.DataColumn("etype", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnetype)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnUniqueID}, true))
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnquote_no}, true))
             Me.columnquote_no.AllowDBNull = false
-            Me.columnquote_no.MaxLength = 6
+            Me.columnquote_no.Unique = true
             Me.columncname.AllowDBNull = false
+            Me.columncname.MaxLength = 100
             Me.columnref_no.AllowDBNull = false
-            Me.columnref_no.MaxLength = 20
+            Me.columnref_no.MaxLength = 100
             Me.columnstatus.AllowDBNull = false
             Me.columnstatus.MaxLength = 20
             Me.columnewho.AllowDBNull = false
@@ -614,23 +615,22 @@ Partial Public Class EnquiryDataSet
             Me.columnUniqueID.AutoIncrementStep = -1
             Me.columnUniqueID.AllowDBNull = false
             Me.columnUniqueID.ReadOnly = true
-            Me.columnUniqueID.Unique = true
             Me.columnaccno.AllowDBNull = false
             Me.columnaccno.MaxLength = 6
             Me.columnememo.AllowDBNull = false
             Me.columnememo.MaxLength = 2147483647
             Me.columnship_name.AllowDBNull = false
-            Me.columnship_name.MaxLength = 20
+            Me.columnship_name.MaxLength = 100
             Me.columnemail.AllowDBNull = false
             Me.columnemail.MaxLength = 50
             Me.columnmobtel_no.AllowDBNull = false
-            Me.columnmobtel_no.MaxLength = 20
+            Me.columnmobtel_no.MaxLength = 100
             Me.columnfax_no.AllowDBNull = false
-            Me.columnfax_no.MaxLength = 20
+            Me.columnfax_no.MaxLength = 100
             Me.columntel_no.AllowDBNull = false
-            Me.columntel_no.MaxLength = 20
+            Me.columntel_no.MaxLength = 100
             Me.columncontact.AllowDBNull = false
-            Me.columncontact.MaxLength = 20
+            Me.columncontact.MaxLength = 100
             Me.columnedate.AllowDBNull = false
             Me.columnetype.AllowDBNull = false
             Me.columnetype.MaxLength = 15
@@ -1206,9 +1206,9 @@ Namespace EnquiryDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "accno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (quot"& _ 
-                "e_no LIKE @Param1 + '%')"
+            Me._commandCollection(2).CommandText = "SELECT        accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mo"& _ 
+                "btel_no, quote_no, ref_no, ship_name, status, tel_no"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
+                "HERE        (quote_no LIKE @Param1 + '%')"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
@@ -1591,6 +1591,14 @@ Namespace EnquiryDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal quote_no As String) As Integer
+            Return Me.Update(quote_no, quote_no)
         End Function
     End Class
     

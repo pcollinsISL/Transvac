@@ -809,7 +809,7 @@ Partial Public Class ADDRESSBKDataSet
             Me.columnad2.MaxLength = 30
             Me.columnad3.MaxLength = 30
             Me.columnad4.MaxLength = 30
-            Me.columnad5.MaxLength = 30
+            Me.columnad5.MaxLength = 3000
             Me.columnphone.MaxLength = 15
             Me.columntelex.MaxLength = 15
             Me.columnfax.MaxLength = 15

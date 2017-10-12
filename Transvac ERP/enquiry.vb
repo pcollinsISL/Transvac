@@ -62,6 +62,7 @@
             Me.Tran2TableAdapter.ClearBeforeFill = True
         Else
             Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet1.tran2, AccnoTextBox.Text)
+            Me.EnquiryTableAdapter.FillByQuoteNO(Me.EnquiryDataSet.enquiry, qotenoTextBox.Text)
         End If
     End Sub
 
@@ -85,7 +86,9 @@
         REM New_updDateTimePicker.Value = DateTime.Now
         Me.Validate()
         Me.EnquiryBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.EnquiryDataSet)
+        Me.Tran2BindingSource.EndEdit()
+        Me.EnquiryTableAdapter.Update(Me.EnquiryDataSet)
+        Me.Tran2TableAdapter.Update(Me.TransvacDataV2DataSet1)
         MsgBox("Save Sucsesful")
     End Sub
 
