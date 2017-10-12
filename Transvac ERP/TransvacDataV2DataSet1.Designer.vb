@@ -6045,8 +6045,6 @@ Partial Public Class TransvacDataV2DataSet1
         
         Private columnewho As Global.System.Data.DataColumn
         
-        Private columnUniqueID As Global.System.Data.DataColumn
-        
         Private columnaccno As Global.System.Data.DataColumn
         
         Private columnememo As Global.System.Data.DataColumn
@@ -6139,14 +6137,6 @@ Partial Public Class TransvacDataV2DataSet1
         Public ReadOnly Property ewhoColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnewho
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property UniqueIDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnUniqueID
             End Get
         End Property
         
@@ -6269,7 +6259,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Overloads Function AddenquiryRow(ByVal quote_no As String, ByVal cname As String, ByVal ref_no As String, ByVal status As String, ByVal ewho As String, ByVal accno As String, ByVal ememo As String, ByVal ship_name As String, ByVal email As String, ByVal mobtel_no As String, ByVal fax_no As String, ByVal tel_no As String, ByVal contact As String, ByVal edate As Date, ByVal etype As String) As enquiryRow
             Dim rowenquiryRow As enquiryRow = CType(Me.NewRow,enquiryRow)
-            Dim columnValuesArray() As Object = New Object() {quote_no, cname, ref_no, status, ewho, Nothing, accno, ememo, ship_name, email, mobtel_no, fax_no, tel_no, contact, edate, etype}
+            Dim columnValuesArray() As Object = New Object() {quote_no, cname, ref_no, status, ewho, accno, ememo, ship_name, email, mobtel_no, fax_no, tel_no, contact, edate, etype}
             rowenquiryRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowenquiryRow)
             Return rowenquiryRow
@@ -6303,7 +6293,6 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnref_no = MyBase.Columns("ref_no")
             Me.columnstatus = MyBase.Columns("status")
             Me.columnewho = MyBase.Columns("ewho")
-            Me.columnUniqueID = MyBase.Columns("UniqueID")
             Me.columnaccno = MyBase.Columns("accno")
             Me.columnememo = MyBase.Columns("ememo")
             Me.columnship_name = MyBase.Columns("ship_name")
@@ -6329,8 +6318,6 @@ Partial Public Class TransvacDataV2DataSet1
             MyBase.Columns.Add(Me.columnstatus)
             Me.columnewho = New Global.System.Data.DataColumn("ewho", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnewho)
-            Me.columnUniqueID = New Global.System.Data.DataColumn("UniqueID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUniqueID)
             Me.columnaccno = New Global.System.Data.DataColumn("accno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnaccno)
             Me.columnememo = New Global.System.Data.DataColumn("ememo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -6356,17 +6343,13 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnquote_no.Unique = true
             Me.columnquote_no.MaxLength = 6
             Me.columncname.AllowDBNull = false
+            Me.columncname.MaxLength = 40
             Me.columnref_no.AllowDBNull = false
-            Me.columnref_no.MaxLength = 20
+            Me.columnref_no.MaxLength = 40
             Me.columnstatus.AllowDBNull = false
             Me.columnstatus.MaxLength = 20
             Me.columnewho.AllowDBNull = false
             Me.columnewho.MaxLength = 5
-            Me.columnUniqueID.AutoIncrement = true
-            Me.columnUniqueID.AutoIncrementSeed = -1
-            Me.columnUniqueID.AutoIncrementStep = -1
-            Me.columnUniqueID.AllowDBNull = false
-            Me.columnUniqueID.ReadOnly = true
             Me.columnaccno.AllowDBNull = false
             Me.columnaccno.MaxLength = 6
             Me.columnememo.AllowDBNull = false
@@ -6382,7 +6365,7 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columntel_no.AllowDBNull = false
             Me.columntel_no.MaxLength = 20
             Me.columncontact.AllowDBNull = false
-            Me.columncontact.MaxLength = 20
+            Me.columncontact.MaxLength = 40
             Me.columnedate.AllowDBNull = false
             Me.columnetype.AllowDBNull = false
             Me.columnetype.MaxLength = 15
@@ -19667,6 +19650,8 @@ Partial Public Class TransvacDataV2DataSet1
         
         Private columnADDMEMO As Global.System.Data.DataColumn
         
+        Private columnUniqueID As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -19911,6 +19896,14 @@ Partial Public Class TransvacDataV2DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property UniqueIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUniqueID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -19973,9 +19966,10 @@ Partial Public Class TransvacDataV2DataSet1
                     ByVal peg_lsale As String,  _
                     ByVal xcard As Boolean,  _
                     ByVal promo As Boolean,  _
-                    ByVal ADDMEMO As String) As tran2Row
+                    ByVal ADDMEMO As String,  _
+                    ByVal UniqueID As Decimal) As tran2Row
             Dim rowtran2Row As tran2Row = CType(Me.NewRow,tran2Row)
-            Dim columnValuesArray() As Object = New Object() {name, account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat, vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd, peg_pact, peg_lsale, xcard, promo, ADDMEMO}
+            Dim columnValuesArray() As Object = New Object() {name, account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat, vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd, peg_pact, peg_lsale, xcard, promo, ADDMEMO, UniqueID}
             rowtran2Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowtran2Row)
             Return rowtran2Row
@@ -19983,8 +19977,8 @@ Partial Public Class TransvacDataV2DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByaccount(ByVal account As String) As tran2Row
-            Return CType(Me.Rows.Find(New Object() {account}),tran2Row)
+        Public Function FindByUniqueID(ByVal UniqueID As Decimal) As tran2Row
+            Return CType(Me.Rows.Find(New Object() {UniqueID}),tran2Row)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -20030,6 +20024,7 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnxcard = MyBase.Columns("xcard")
             Me.columnpromo = MyBase.Columns("promo")
             Me.columnADDMEMO = MyBase.Columns("ADDMEMO")
+            Me.columnUniqueID = MyBase.Columns("UniqueID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -20087,54 +20082,33 @@ Partial Public Class TransvacDataV2DataSet1
             MyBase.Columns.Add(Me.columnpromo)
             Me.columnADDMEMO = New Global.System.Data.DataColumn("ADDMEMO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnADDMEMO)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnaccount}, true))
-            Me.columnname.AllowDBNull = false
+            Me.columnUniqueID = New Global.System.Data.DataColumn("UniqueID", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUniqueID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnUniqueID}, true))
             Me.columnname.MaxLength = 40
             Me.columnaccount.AllowDBNull = false
-            Me.columnaccount.Unique = true
             Me.columnaccount.MaxLength = 4
-            Me.columnad1.AllowDBNull = false
             Me.columnad1.MaxLength = 30
-            Me.columnad2.AllowDBNull = false
             Me.columnad2.MaxLength = 30
-            Me.columnad3.AllowDBNull = false
             Me.columnad3.MaxLength = 30
-            Me.columnad4.AllowDBNull = false
             Me.columnad4.MaxLength = 30
-            Me.columnad5.AllowDBNull = false
-            Me.columnad5.MaxLength = 30
-            Me.columnphone.AllowDBNull = false
+            Me.columnad5.MaxLength = 3000000
             Me.columnphone.MaxLength = 15
-            Me.columntelex.AllowDBNull = false
             Me.columntelex.MaxLength = 15
-            Me.columnfax.AllowDBNull = false
             Me.columnfax.MaxLength = 15
-            Me.columnemail.AllowDBNull = false
             Me.columnemail.MaxLength = 40
-            Me.columneurovat.AllowDBNull = false
             Me.columneurovat.MaxLength = 20
-            Me.columnvatpayable.AllowDBNull = false
-            Me.columnifmemo.AllowDBNull = false
             Me.columnifmemo.MaxLength = 1
-            Me.columnproforma.AllowDBNull = false
             Me.columnproforma.MaxLength = 1
-            Me.columnudate.AllowDBNull = false
             Me.columnudate.MaxLength = 8
-            Me.columntermdays.AllowDBNull = false
-            Me.columnentrytype.AllowDBNull = false
             Me.columnentrytype.MaxLength = 1
-            Me.columnnwho.AllowDBNull = false
             Me.columnnwho.MaxLength = 5
-            Me.columninuse.AllowDBNull = false
             Me.columninuse.MaxLength = 1
-            Me.columnnew_upd.AllowDBNull = false
-            Me.columnpeg_pact.AllowDBNull = false
             Me.columnpeg_pact.MaxLength = 8
-            Me.columnpeg_lsale.AllowDBNull = false
             Me.columnpeg_lsale.MaxLength = 8
-            Me.columnxcard.AllowDBNull = false
-            Me.columnpromo.AllowDBNull = false
             Me.columnADDMEMO.MaxLength = 1073741823
+            Me.columnUniqueID.AllowDBNull = false
+            Me.columnUniqueID.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -23970,17 +23944,6 @@ Partial Public Class TransvacDataV2DataSet1
             End Get
             Set
                 Me(Me.tableenquiry.ewhoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property UniqueID() As Long
-            Get
-                Return CType(Me(Me.tableenquiry.UniqueIDColumn),Long)
-            End Get
-            Set
-                Me(Me.tableenquiry.UniqueIDColumn) = value
             End Set
         End Property
         
@@ -29558,7 +29521,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property name() As String
             Get
-                Return CType(Me(Me.tabletran2.nameColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.nameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'name' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.nameColumn) = value
@@ -29580,7 +29547,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ad1() As String
             Get
-                Return CType(Me(Me.tabletran2.ad1Column),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.ad1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ad1' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.ad1Column) = value
@@ -29591,7 +29562,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ad2() As String
             Get
-                Return CType(Me(Me.tabletran2.ad2Column),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.ad2Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ad2' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.ad2Column) = value
@@ -29602,7 +29577,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ad3() As String
             Get
-                Return CType(Me(Me.tabletran2.ad3Column),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.ad3Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ad3' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.ad3Column) = value
@@ -29613,7 +29592,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ad4() As String
             Get
-                Return CType(Me(Me.tabletran2.ad4Column),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.ad4Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ad4' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.ad4Column) = value
@@ -29624,7 +29607,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ad5() As String
             Get
-                Return CType(Me(Me.tabletran2.ad5Column),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.ad5Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ad5' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.ad5Column) = value
@@ -29635,7 +29622,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property phone() As String
             Get
-                Return CType(Me(Me.tabletran2.phoneColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.phoneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'phone' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.phoneColumn) = value
@@ -29646,7 +29637,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property telex() As String
             Get
-                Return CType(Me(Me.tabletran2.telexColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.telexColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'telex' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.telexColumn) = value
@@ -29657,7 +29652,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property fax() As String
             Get
-                Return CType(Me(Me.tabletran2.faxColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.faxColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'fax' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.faxColumn) = value
@@ -29668,7 +29667,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property email() As String
             Get
-                Return CType(Me(Me.tabletran2.emailColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.emailColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'email' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.emailColumn) = value
@@ -29679,7 +29682,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property eurovat() As String
             Get
-                Return CType(Me(Me.tabletran2.eurovatColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.eurovatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'eurovat' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.eurovatColumn) = value
@@ -29690,7 +29697,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property vatpayable() As Boolean
             Get
-                Return CType(Me(Me.tabletran2.vatpayableColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tabletran2.vatpayableColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'vatpayable' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.vatpayableColumn) = value
@@ -29701,7 +29712,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ifmemo() As String
             Get
-                Return CType(Me(Me.tabletran2.ifmemoColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.ifmemoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ifmemo' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.ifmemoColumn) = value
@@ -29712,7 +29727,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property proforma() As String
             Get
-                Return CType(Me(Me.tabletran2.proformaColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.proformaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'proforma' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.proformaColumn) = value
@@ -29723,7 +29742,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property udate() As String
             Get
-                Return CType(Me(Me.tabletran2.udateColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.udateColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'udate' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.udateColumn) = value
@@ -29734,7 +29757,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property termdays() As Decimal
             Get
-                Return CType(Me(Me.tabletran2.termdaysColumn),Decimal)
+                Try 
+                    Return CType(Me(Me.tabletran2.termdaysColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'termdays' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.termdaysColumn) = value
@@ -29745,7 +29772,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property entrytype() As String
             Get
-                Return CType(Me(Me.tabletran2.entrytypeColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.entrytypeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'entrytype' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.entrytypeColumn) = value
@@ -29756,7 +29787,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property nwho() As String
             Get
-                Return CType(Me(Me.tabletran2.nwhoColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.nwhoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nwho' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.nwhoColumn) = value
@@ -29767,7 +29802,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property inuse() As String
             Get
-                Return CType(Me(Me.tabletran2.inuseColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.inuseColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'inuse' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.inuseColumn) = value
@@ -29778,7 +29817,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property new_upd() As Date
             Get
-                Return CType(Me(Me.tabletran2.new_updColumn),Date)
+                Try 
+                    Return CType(Me(Me.tabletran2.new_updColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'new_upd' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.new_updColumn) = value
@@ -29789,7 +29832,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property peg_pact() As String
             Get
-                Return CType(Me(Me.tabletran2.peg_pactColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.peg_pactColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'peg_pact' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.peg_pactColumn) = value
@@ -29800,7 +29847,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property peg_lsale() As String
             Get
-                Return CType(Me(Me.tabletran2.peg_lsaleColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletran2.peg_lsaleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'peg_lsale' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.peg_lsaleColumn) = value
@@ -29811,7 +29862,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property xcard() As Boolean
             Get
-                Return CType(Me(Me.tabletran2.xcardColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tabletran2.xcardColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'xcard' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.xcardColumn) = value
@@ -29822,7 +29877,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property promo() As Boolean
             Get
-                Return CType(Me(Me.tabletran2.promoColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tabletran2.promoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'promo' in table 'tran2' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletran2.promoColumn) = value
@@ -29843,6 +29902,305 @@ Partial Public Class TransvacDataV2DataSet1
                 Me(Me.tabletran2.ADDMEMOColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property UniqueID() As Decimal
+            Get
+                Return CType(Me(Me.tabletran2.UniqueIDColumn),Decimal)
+            End Get
+            Set
+                Me(Me.tabletran2.UniqueIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsnameNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.nameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetnameNull()
+            Me(Me.tabletran2.nameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isad1Null() As Boolean
+            Return Me.IsNull(Me.tabletran2.ad1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setad1Null()
+            Me(Me.tabletran2.ad1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isad2Null() As Boolean
+            Return Me.IsNull(Me.tabletran2.ad2Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setad2Null()
+            Me(Me.tabletran2.ad2Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isad3Null() As Boolean
+            Return Me.IsNull(Me.tabletran2.ad3Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setad3Null()
+            Me(Me.tabletran2.ad3Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isad4Null() As Boolean
+            Return Me.IsNull(Me.tabletran2.ad4Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setad4Null()
+            Me(Me.tabletran2.ad4Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isad5Null() As Boolean
+            Return Me.IsNull(Me.tabletran2.ad5Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setad5Null()
+            Me(Me.tabletran2.ad5Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsphoneNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.phoneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetphoneNull()
+            Me(Me.tabletran2.phoneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IstelexNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.telexColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SettelexNull()
+            Me(Me.tabletran2.telexColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsfaxNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.faxColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetfaxNull()
+            Me(Me.tabletran2.faxColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsemailNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.emailColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetemailNull()
+            Me(Me.tabletran2.emailColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IseurovatNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.eurovatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SeteurovatNull()
+            Me(Me.tabletran2.eurovatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsvatpayableNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.vatpayableColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetvatpayableNull()
+            Me(Me.tabletran2.vatpayableColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsifmemoNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.ifmemoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetifmemoNull()
+            Me(Me.tabletran2.ifmemoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsproformaNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.proformaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetproformaNull()
+            Me(Me.tabletran2.proformaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsudateNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.udateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetudateNull()
+            Me(Me.tabletran2.udateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IstermdaysNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.termdaysColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SettermdaysNull()
+            Me(Me.tabletran2.termdaysColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsentrytypeNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.entrytypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetentrytypeNull()
+            Me(Me.tabletran2.entrytypeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsnwhoNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.nwhoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetnwhoNull()
+            Me(Me.tabletran2.nwhoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsinuseNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.inuseColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetinuseNull()
+            Me(Me.tabletran2.inuseColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isnew_updNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.new_updColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setnew_updNull()
+            Me(Me.tabletran2.new_updColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Ispeg_pactNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.peg_pactColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setpeg_pactNull()
+            Me(Me.tabletran2.peg_pactColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Ispeg_lsaleNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.peg_lsaleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setpeg_lsaleNull()
+            Me(Me.tabletran2.peg_lsaleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsxcardNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.xcardColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetxcardNull()
+            Me(Me.tabletran2.xcardColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IspromoNull() As Boolean
+            Return Me.IsNull(Me.tabletran2.promoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetpromoNull()
+            Me(Me.tabletran2.promoColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -37098,7 +37456,6 @@ Namespace TransvacDataV2DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("ref_no", "ref_no")
             tableMapping.ColumnMappings.Add("status", "status")
             tableMapping.ColumnMappings.Add("ewho", "ewho")
-            tableMapping.ColumnMappings.Add("UniqueID", "UniqueID")
             tableMapping.ColumnMappings.Add("accno", "accno")
             tableMapping.ColumnMappings.Add("ememo", "ememo")
             tableMapping.ColumnMappings.Add("ship_name", "ship_name")
@@ -37166,43 +37523,42 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        cname, ref_no, quote_no, ewho, status, UniqueID, accno, ememo, ship"& _ 
-                "_name, email, mobtel_no, fax_no, tel_no, contact, edate, etype"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            "& _ 
-                "enquiry"
+            Me._commandCollection(0).CommandText = "SELECT cname, ref_no, quote_no, ewho, status, accno, ememo, ship_name, email, mob"& _ 
+                "tel_no, fax_no, tel_no, contact, edate, etype FROM enquiry"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (cnam"& _ 
-                "e LIKE @PARAM1 + '%')"
+            Me._commandCollection(1).CommandText = "SELECT accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mobtel_no"& _ 
+                ", quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (cname LIKE @PA"& _ 
+                "RAM1 + '%')"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (quot"& _ 
-                "e_no LIKE @Param1 + '%')"
+            Me._commandCollection(2).CommandText = "SELECT        accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mo"& _ 
+                "btel_no, ref_no, ship_name, status, tel_no, quote_no"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
+                "HERE        (quote_no LIKE @Param1 + '%')"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (ewho"& _ 
-                " LIKE @Param1 + '%')"
+            Me._commandCollection(3).CommandText = "SELECT accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mobtel_no"& _ 
+                ", quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (ewho LIKE @Par"& _ 
+                "am1 + '%')"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "ewho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (stat"& _ 
-                "us LIKE @Param1 + '%')"
+            Me._commandCollection(4).CommandText = "SELECT accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mobtel_no"& _ 
+                ", quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (status LIKE @P"& _ 
+                "aram1 + '%')"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (cnam"& _ 
-                "e LIKE @PARAM1 + '%')"
+            Me._commandCollection(5).CommandText = "SELECT accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mobtel_no"& _ 
+                ", quote_no, ref_no, ship_name, status, tel_no FROM enquiry WHERE (cname LIKE @PA"& _ 
+                "RAM1 + '%')"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -37272,7 +37628,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function FillByQuoteNO(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -37290,7 +37646,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function GetDataByQuoteNO(ByVal Param1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -52728,7 +53084,6 @@ Namespace TransvacDataV2DataSet1TableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "tran2"
             tableMapping.ColumnMappings.Add("name", "name")
-            tableMapping.ColumnMappings.Add("account", "account")
             tableMapping.ColumnMappings.Add("ad1", "ad1")
             tableMapping.ColumnMappings.Add("ad2", "ad2")
             tableMapping.ColumnMappings.Add("ad3", "ad3")
@@ -52753,57 +53108,17 @@ Namespace TransvacDataV2DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("xcard", "xcard")
             tableMapping.ColumnMappings.Add("promo", "promo")
             tableMapping.ColumnMappings.Add("ADDMEMO", "ADDMEMO")
+            tableMapping.ColumnMappings.Add("UniqueID", "UniqueID")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tran2] WHERE (([name] = @Original_name) AND ([account] = @Orig"& _ 
-                "inal_account) AND ([ad1] = @Original_ad1) AND ([ad2] = @Original_ad2) AND ([ad3]"& _ 
-                " = @Original_ad3) AND ([ad4] = @Original_ad4) AND ([ad5] = @Original_ad5) AND (["& _ 
-                "phone] = @Original_phone) AND ([telex] = @Original_telex) AND ([fax] = @Original"& _ 
-                "_fax) AND ([email] = @Original_email) AND ([eurovat] = @Original_eurovat) AND (["& _ 
-                "vatpayable] = @Original_vatpayable) AND ([ifmemo] = @Original_ifmemo) AND ([prof"& _ 
-                "orma] = @Original_proforma) AND ([udate] = @Original_udate) AND ([termdays] = @O"& _ 
-                "riginal_termdays) AND ([entrytype] = @Original_entrytype) AND ([nwho] = @Origina"& _ 
-                "l_nwho) AND ([inuse] = @Original_inuse) AND ([new_upd] = @Original_new_upd) AND "& _ 
-                "([peg_pact] = @Original_peg_pact) AND ([peg_lsale] = @Original_peg_lsale) AND (["& _ 
-                "xcard] = @Original_xcard) AND ([promo] = @Original_promo) AND ([UniqueID] = @Ori"& _ 
-                "ginal_UniqueID))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_name", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_account", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "account", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad1", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad2", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad3", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad3", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad4", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad4", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad5", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad5", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_phone", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "phone", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telex", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telex", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fax", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fax", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_email", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_eurovat", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "eurovat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_vatpayable", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vatpayable", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ifmemo", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ifmemo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_proforma", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "proforma", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_udate", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "udate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_termdays", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 3, 0, "termdays", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_entrytype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "entrytype", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nwho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nwho", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_inuse", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "inuse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_new_upd", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "new_upd", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_peg_pact", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_pact", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_peg_lsale", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_lsale", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_xcard", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "xcard", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_promo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "promo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [tran2] ([name], [ad1], [ad2], [ad3], [ad4], [ad5], [phone], [telex],"& _ 
                 " [fax], [email], [eurovat], [vatpayable], [ifmemo], [proforma], [udate], [termda"& _ 
                 "ys], [entrytype], [nwho], [inuse], [new_upd], [peg_pact], [peg_lsale], [xcard], "& _ 
-                "[promo], [ADDMEMO]) VALUES (@name, @ad1, @ad2, @ad3, @ad4, @ad5, @phone, @telex,"& _ 
-                " @fax, @email, @eurovat, @vatpayable, @ifmemo, @proforma, @udate, @termdays, @en"& _ 
-                "trytype, @nwho, @inuse, @new_upd, @peg_pact, @peg_lsale, @xcard, @promo, @ADDMEM"& _ 
-                "O)"
+                "[promo], [ADDMEMO], [UniqueID]) VALUES (@name, @ad1, @ad2, @ad3, @ad4, @ad5, @ph"& _ 
+                "one, @telex, @fax, @email, @eurovat, @vatpayable, @ifmemo, @proforma, @udate, @t"& _ 
+                "ermdays, @entrytype, @nwho, @inuse, @new_upd, @peg_pact, @peg_lsale, @xcard, @pr"& _ 
+                "omo, @ADDMEMO, @UniqueID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@name", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ad1", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -52830,83 +53145,44 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@xcard", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "xcard", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@promo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "promo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ADDMEMO", Global.System.Data.SqlDbType.NText, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ADDMEMO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UniqueID", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "UniqueID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tran2] SET [name] = @name, [account] = @account, [ad1] = @ad1, [ad2"& _ 
-                "] = @ad2, [ad3] = @ad3, [ad4] = @ad4, [ad5] = @ad5, [phone] = @phone, [telex] = "& _ 
-                "@telex, [fax] = @fax, [email] = @email, [eurovat] = @eurovat, [vatpayable] = @va"& _ 
-                "tpayable, [ifmemo] = @ifmemo, [proforma] = @proforma, [udate] = @udate, [termday"& _ 
-                "s] = @termdays, [entrytype] = @entrytype, [nwho] = @nwho, [inuse] = @inuse, [new"& _ 
-                "_upd] = @new_upd, [peg_pact] = @peg_pact, [peg_lsale] = @peg_lsale, [xcard] = @x"& _ 
-                "card, [promo] = @promo, [ADDMEMO] = @ADDMEMO WHERE (([name] = @Original_name) AN"& _ 
-                "D ([account] = @Original_account) AND ([ad1] = @Original_ad1) AND ([ad2] = @Orig"& _ 
-                "inal_ad2) AND ([ad3] = @Original_ad3) AND ([ad4] = @Original_ad4) AND ([ad5] = @"& _ 
-                "Original_ad5) AND ([phone] = @Original_phone) AND ([telex] = @Original_telex) AN"& _ 
-                "D ([fax] = @Original_fax) AND ([email] = @Original_email) AND ([eurovat] = @Orig"& _ 
-                "inal_eurovat) AND ([vatpayable] = @Original_vatpayable) AND ([ifmemo] = @Origina"& _ 
-                "l_ifmemo) AND ([proforma] = @Original_proforma) AND ([udate] = @Original_udate) "& _ 
-                "AND ([termdays] = @Original_termdays) AND ([entrytype] = @Original_entrytype) AN"& _ 
-                "D ([nwho] = @Original_nwho) AND ([inuse] = @Original_inuse) AND ([new_upd] = @Or"& _ 
-                "iginal_new_upd) AND ([peg_pact] = @Original_peg_pact) AND ([peg_lsale] = @Origin"& _ 
-                "al_peg_lsale) AND ([xcard] = @Original_xcard) AND ([promo] = @Original_promo) AN"& _ 
-                "D ([UniqueID] = @Original_UniqueID));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT name, account, ad1, ad2, ad3, ad4,"& _ 
-                " ad5, phone, telex, fax, email, eurovat, vatpayable, ifmemo, proforma, udate, te"& _ 
-                "rmdays, entrytype, nwho, inuse, new_upd, peg_pact, peg_lsale, xcard, promo, Uniq"& _ 
-                "ueID, ADDMEMO FROM tran2 WHERE (UniqueID = @UniqueID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       tran2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                name = @Param1, ad1 = @Param2, ad2 = @Para"& _ 
+                "m3, ad3 = @Param4, ad4 = @Param5, ad5 = @Param6, phone = @Param7, telex = @Param"& _ 
+                "8, email = @Param9, fax = @Param10, eurovat = @Param11, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
+                "   vatpayable = @Param12, ifmemo = @Param13, proforma = @Param14, udate = @Param"& _ 
+                "15, termdays = @Param16, entrytype = @Param17, nwho = @Param18, inuse = @Param19"& _ 
+                ", new_upd = @Param20, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         peg_pact = @Param21, xcard = @P"& _ 
+                "aram22, peg_lsale = @Param23, promo = @Param24, ADDMEMO = @Param25"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE       "& _ 
+                " (account = @account)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@name", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@account", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "account", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ad1", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ad2", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ad3", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ad4", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad4", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ad5", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad5", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@phone", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "phone", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telex", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telex", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fax", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fax", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@email", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@eurovat", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "eurovat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@vatpayable", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vatpayable", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ifmemo", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ifmemo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@proforma", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "proforma", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@udate", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "udate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@termdays", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 3, 0, "termdays", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@entrytype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "entrytype", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nwho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nwho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@inuse", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "inuse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@new_upd", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "new_upd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@peg_pact", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_pact", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@peg_lsale", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_lsale", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@xcard", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "xcard", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@promo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "promo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ADDMEMO", Global.System.Data.SqlDbType.NText, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ADDMEMO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_name", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_account", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "account", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad1", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad2", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad3", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad3", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad4", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad4", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ad5", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ad5", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_phone", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "phone", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telex", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telex", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fax", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fax", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_email", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_eurovat", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "eurovat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_vatpayable", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vatpayable", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ifmemo", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ifmemo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_proforma", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "proforma", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_udate", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "udate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_termdays", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 3, 0, "termdays", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_entrytype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "entrytype", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nwho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nwho", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_inuse", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "inuse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_new_upd", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "new_upd", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_peg_pact", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_pact", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_peg_lsale", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_lsale", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_xcard", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "xcard", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_promo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "promo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UniqueID", Global.System.Data.SqlDbType.BigInt, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.[Char], 30, Global.System.Data.ParameterDirection.Input, 0, 0, "ad1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param3", Global.System.Data.SqlDbType.[Char], 30, Global.System.Data.ParameterDirection.Input, 0, 0, "ad2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param4", Global.System.Data.SqlDbType.[Char], 30, Global.System.Data.ParameterDirection.Input, 0, 0, "ad3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param5", Global.System.Data.SqlDbType.[Char], 30, Global.System.Data.ParameterDirection.Input, 0, 0, "ad4", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param6", Global.System.Data.SqlDbType.[Char], 30, Global.System.Data.ParameterDirection.Input, 0, 0, "ad5", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param7", Global.System.Data.SqlDbType.[Char], 15, Global.System.Data.ParameterDirection.Input, 0, 0, "phone", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param8", Global.System.Data.SqlDbType.[Char], 15, Global.System.Data.ParameterDirection.Input, 0, 0, "telex", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param9", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param10", Global.System.Data.SqlDbType.[Char], 15, Global.System.Data.ParameterDirection.Input, 0, 0, "fax", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param11", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "eurovat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param12", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "vatpayable", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param13", Global.System.Data.SqlDbType.[Char], 1, Global.System.Data.ParameterDirection.Input, 0, 0, "ifmemo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param14", Global.System.Data.SqlDbType.[Char], 1, Global.System.Data.ParameterDirection.Input, 0, 0, "proforma", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param15", Global.System.Data.SqlDbType.[Char], 8, Global.System.Data.ParameterDirection.Input, 0, 0, "udate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param16", Global.System.Data.SqlDbType.[Decimal], 5, Global.System.Data.ParameterDirection.Input, 3, 0, "termdays", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param17", Global.System.Data.SqlDbType.[Char], 1, Global.System.Data.ParameterDirection.Input, 0, 0, "entrytype", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param18", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "nwho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param19", Global.System.Data.SqlDbType.[Char], 1, Global.System.Data.ParameterDirection.Input, 0, 0, "inuse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param20", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "new_upd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param21", Global.System.Data.SqlDbType.[Char], 8, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_pact", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param22", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "xcard", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param23", Global.System.Data.SqlDbType.[Char], 8, Global.System.Data.ParameterDirection.Input, 0, 0, "peg_lsale", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param24", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "promo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param25", Global.System.Data.SqlDbType.NText, 1073741823, Global.System.Data.ParameterDirection.Input, 0, 0, "ADDMEMO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@account", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "account", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -52922,9 +53198,9 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT name, account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat,"& _ 
-                " vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd,"& _ 
-                " peg_pact, peg_lsale, xcard, promo, ADDMEMO FROM tran2"
+            Me._commandCollection(0).CommandText = "SELECT name, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat, vatpayab"& _ 
+                "le, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd, peg_pact"& _ 
+                ", peg_lsale, xcard, promo, ADDMEMO, UniqueID FROM tran2"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -52933,18 +53209,18 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 4, Global.System.Data.ParameterDirection.Input, 0, 0, "account", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT        ADDMEMO, account, ad1, ad2, ad3, ad4, ad5, email, entrytype, eurova"& _ 
-                "t, fax, ifmemo, inuse, name, new_upd, nwho, peg_lsale, peg_pact, phone, proforma"& _ 
-                ", promo, telex, termdays, udate, vatpayable, xcard"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tran2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE"& _ 
-                "        (account = @Parma1)"
+            Me._commandCollection(2).CommandText = "SELECT        ADDMEMO, UniqueID, ad1, ad2, ad3, ad4, ad5, email, entrytype, eurov"& _ 
+                "at, fax, ifmemo, inuse, name, new_upd, nwho, peg_lsale, peg_pact, phone, proform"& _ 
+                "a, promo, telex, termdays, udate, vatpayable, xcard, account"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tr"& _ 
+                "an2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (account = @Parma1)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Parma1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "account", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "SELECT ADDMEMO, account, ad1, ad2, ad3, ad4, ad5, email, entrytype, eurovat, fax,"& _ 
-                " ifmemo, inuse, name, new_upd, nwho, peg_lsale, peg_pact, phone, proforma, promo"& _ 
-                ", telex, termdays, udate, vatpayable, xcard FROM tran2 WHERE (name LIKE @Param1 "& _ 
-                "+ '%')"
+            Me._commandCollection(3).CommandText = "SELECT ADDMEMO, UniqueID, ad1, ad2, ad3, ad4, ad5, email, entrytype, eurovat, fax"& _ 
+                ", ifmemo, inuse, name, new_upd, nwho, peg_lsale, peg_pact, phone, proforma, prom"& _ 
+                "o, telex, termdays, udate, vatpayable, xcard FROM tran2 WHERE (name LIKE @Param1"& _ 
+                " + '%')"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -53006,7 +53282,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.tran2DataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -53024,7 +53300,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function GetDataBy1(ByVal Param1 As String) As TransvacDataV2DataSet1.tran2DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -53064,158 +53340,6 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete( _
-                    ByVal Original_name As String,  _
-                    ByVal Original_account As String,  _
-                    ByVal Original_ad1 As String,  _
-                    ByVal Original_ad2 As String,  _
-                    ByVal Original_ad3 As String,  _
-                    ByVal Original_ad4 As String,  _
-                    ByVal Original_ad5 As String,  _
-                    ByVal Original_phone As String,  _
-                    ByVal Original_telex As String,  _
-                    ByVal Original_fax As String,  _
-                    ByVal Original_email As String,  _
-                    ByVal Original_eurovat As String,  _
-                    ByVal Original_vatpayable As Boolean,  _
-                    ByVal Original_ifmemo As String,  _
-                    ByVal Original_proforma As String,  _
-                    ByVal Original_udate As String,  _
-                    ByVal Original_termdays As Decimal,  _
-                    ByVal Original_entrytype As String,  _
-                    ByVal Original_nwho As String,  _
-                    ByVal Original_inuse As String,  _
-                    ByVal Original_new_upd As Date,  _
-                    ByVal Original_peg_pact As String,  _
-                    ByVal Original_peg_lsale As String,  _
-                    ByVal Original_xcard As Boolean,  _
-                    ByVal Original_promo As Boolean,  _
-                    ByVal Original_UniqueID As Long) As Integer
-            If (Original_name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_name")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_name,String)
-            End If
-            If (Original_account Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_account")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_account,String)
-            End If
-            If (Original_ad1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad1")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_ad1,String)
-            End If
-            If (Original_ad2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad2")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_ad2,String)
-            End If
-            If (Original_ad3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad3")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_ad3,String)
-            End If
-            If (Original_ad4 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad4")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_ad4,String)
-            End If
-            If (Original_ad5 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad5")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_ad5,String)
-            End If
-            If (Original_phone Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_phone")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_phone,String)
-            End If
-            If (Original_telex Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_telex")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_telex,String)
-            End If
-            If (Original_fax Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_fax")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_fax,String)
-            End If
-            If (Original_email Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_email")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_email,String)
-            End If
-            If (Original_eurovat Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_eurovat")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_eurovat,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_vatpayable,Boolean)
-            If (Original_ifmemo Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ifmemo")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_ifmemo,String)
-            End If
-            If (Original_proforma Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_proforma")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_proforma,String)
-            End If
-            If (Original_udate Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_udate")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_udate,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_termdays,Decimal)
-            If (Original_entrytype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_entrytype")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_entrytype,String)
-            End If
-            If (Original_nwho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_nwho")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_nwho,String)
-            End If
-            If (Original_inuse Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_inuse")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_inuse,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_new_upd,Date)
-            If (Original_peg_pact Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_peg_pact")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_peg_pact,String)
-            End If
-            If (Original_peg_lsale Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_peg_lsale")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_peg_lsale,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_xcard,Boolean)
-            Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_promo,Boolean)
-            Me.Adapter.DeleteCommand.Parameters(25).Value = CType(Original_UniqueID,Long)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert( _
                     ByVal name As String,  _
@@ -53242,7 +53366,8 @@ Namespace TransvacDataV2DataSet1TableAdapters
                     ByVal peg_lsale As String,  _
                     ByVal xcard As Global.System.Nullable(Of Boolean),  _
                     ByVal promo As Global.System.Nullable(Of Boolean),  _
-                    ByVal ADDMEMO As String) As Integer
+                    ByVal ADDMEMO As String,  _
+                    ByVal UniqueID As Global.System.Nullable(Of Decimal)) As Integer
             If (name Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -53368,6 +53493,11 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(24).Value = CType(ADDMEMO,String)
             End If
+            If (UniqueID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(UniqueID.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -53388,276 +53518,158 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal name As String,  _
-                    ByVal account As String,  _
-                    ByVal ad1 As String,  _
-                    ByVal ad2 As String,  _
-                    ByVal ad3 As String,  _
-                    ByVal ad4 As String,  _
-                    ByVal ad5 As String,  _
-                    ByVal phone As String,  _
-                    ByVal telex As String,  _
-                    ByVal fax As String,  _
-                    ByVal email As String,  _
-                    ByVal eurovat As String,  _
-                    ByVal vatpayable As Boolean,  _
-                    ByVal ifmemo As String,  _
-                    ByVal proforma As String,  _
-                    ByVal udate As String,  _
-                    ByVal termdays As Decimal,  _
-                    ByVal entrytype As String,  _
-                    ByVal nwho As String,  _
-                    ByVal inuse As String,  _
-                    ByVal new_upd As Date,  _
-                    ByVal peg_pact As String,  _
-                    ByVal peg_lsale As String,  _
-                    ByVal xcard As Boolean,  _
-                    ByVal promo As Boolean,  _
-                    ByVal ADDMEMO As String,  _
-                    ByVal Original_name As String,  _
-                    ByVal Original_account As String,  _
-                    ByVal Original_ad1 As String,  _
-                    ByVal Original_ad2 As String,  _
-                    ByVal Original_ad3 As String,  _
-                    ByVal Original_ad4 As String,  _
-                    ByVal Original_ad5 As String,  _
-                    ByVal Original_phone As String,  _
-                    ByVal Original_telex As String,  _
-                    ByVal Original_fax As String,  _
-                    ByVal Original_email As String,  _
-                    ByVal Original_eurovat As String,  _
-                    ByVal Original_vatpayable As Boolean,  _
-                    ByVal Original_ifmemo As String,  _
-                    ByVal Original_proforma As String,  _
-                    ByVal Original_udate As String,  _
-                    ByVal Original_termdays As Decimal,  _
-                    ByVal Original_entrytype As String,  _
-                    ByVal Original_nwho As String,  _
-                    ByVal Original_inuse As String,  _
-                    ByVal Original_new_upd As Date,  _
-                    ByVal Original_peg_pact As String,  _
-                    ByVal Original_peg_lsale As String,  _
-                    ByVal Original_xcard As Boolean,  _
-                    ByVal Original_promo As Boolean,  _
-                    ByVal Original_UniqueID As Long,  _
-                    ByVal UniqueID As Long) As Integer
-            If (name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("name")
+                    ByVal Param1 As String,  _
+                    ByVal Param2 As String,  _
+                    ByVal Param3 As String,  _
+                    ByVal Param4 As String,  _
+                    ByVal Param5 As String,  _
+                    ByVal Param6 As String,  _
+                    ByVal Param7 As String,  _
+                    ByVal Param8 As String,  _
+                    ByVal Param9 As String,  _
+                    ByVal Param10 As String,  _
+                    ByVal Param11 As String,  _
+                    ByVal Param12 As Global.System.Nullable(Of Boolean),  _
+                    ByVal Param13 As String,  _
+                    ByVal Param14 As String,  _
+                    ByVal Param15 As String,  _
+                    ByVal Param16 As Global.System.Nullable(Of Decimal),  _
+                    ByVal Param17 As String,  _
+                    ByVal Param18 As String,  _
+                    ByVal Param19 As String,  _
+                    ByVal Param20 As Global.System.Nullable(Of Date),  _
+                    ByVal Param21 As String,  _
+                    ByVal Param22 As Global.System.Nullable(Of Boolean),  _
+                    ByVal Param23 As String,  _
+                    ByVal Param24 As Global.System.Nullable(Of Boolean),  _
+                    ByVal Param25 As String,  _
+                    ByVal account As Integer) As Integer
+            If (Param1 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(name,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Param1,String)
             End If
-            If (account Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("account")
+            If (Param2 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(account,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Param2,String)
             End If
-            If (ad1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ad1")
+            If (Param3 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(ad1,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Param3,String)
             End If
-            If (ad2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ad2")
+            If (Param4 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(ad2,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Param4,String)
             End If
-            If (ad3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ad3")
+            If (Param5 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(ad3,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Param5,String)
             End If
-            If (ad4 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ad4")
+            If (Param6 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(ad4,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Param6,String)
             End If
-            If (ad5 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ad5")
+            If (Param7 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(ad5,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Param7,String)
             End If
-            If (phone Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("phone")
+            If (Param8 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(phone,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Param8,String)
             End If
-            If (telex Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("telex")
+            If (Param9 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(telex,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Param9,String)
             End If
-            If (fax Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("fax")
+            If (Param10 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(fax,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Param10,String)
             End If
-            If (email Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("email")
+            If (Param11 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(email,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Param11,String)
             End If
-            If (eurovat Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("eurovat")
+            If (Param12.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Param12.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(eurovat,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(vatpayable,Boolean)
-            If (ifmemo Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ifmemo")
+            If (Param13 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(ifmemo,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Param13,String)
             End If
-            If (proforma Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("proforma")
+            If (Param14 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(proforma,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Param14,String)
             End If
-            If (udate Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("udate")
+            If (Param15 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(udate,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Param15,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(termdays,Decimal)
-            If (entrytype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("entrytype")
+            If (Param16.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Param16.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(entrytype,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
-            If (nwho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("nwho")
+            If (Param17 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(nwho,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Param17,String)
             End If
-            If (inuse Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("inuse")
+            If (Param18 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(inuse,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Param18,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(new_upd,Date)
-            If (peg_pact Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("peg_pact")
+            If (Param19 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(peg_pact,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Param19,String)
             End If
-            If (peg_lsale Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("peg_lsale")
+            If (Param20.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Param20.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(peg_lsale,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(xcard,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(promo,Boolean)
-            If (ADDMEMO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            If (Param21 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(ADDMEMO,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Param21,String)
             End If
-            If (Original_name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_name")
+            If (Param22.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Param22.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_name,String)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
-            If (Original_account Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_account")
+            If (Param23 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_account,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Param23,String)
             End If
-            If (Original_ad1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad1")
+            If (Param24.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Param24.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_ad1,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
-            If (Original_ad2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad2")
+            If (Param25 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_ad2,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Param25,String)
             End If
-            If (Original_ad3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad3")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_ad3,String)
-            End If
-            If (Original_ad4 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad4")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_ad4,String)
-            End If
-            If (Original_ad5 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ad5")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_ad5,String)
-            End If
-            If (Original_phone Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_phone")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_phone,String)
-            End If
-            If (Original_telex Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_telex")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_telex,String)
-            End If
-            If (Original_fax Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_fax")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_fax,String)
-            End If
-            If (Original_email Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_email")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_email,String)
-            End If
-            If (Original_eurovat Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_eurovat")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_eurovat,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_vatpayable,Boolean)
-            If (Original_ifmemo Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ifmemo")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_ifmemo,String)
-            End If
-            If (Original_proforma Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_proforma")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_proforma,String)
-            End If
-            If (Original_udate Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_udate")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_udate,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_termdays,Decimal)
-            If (Original_entrytype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_entrytype")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_entrytype,String)
-            End If
-            If (Original_nwho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_nwho")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_nwho,String)
-            End If
-            If (Original_inuse Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_inuse")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_inuse,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_new_upd,Date)
-            If (Original_peg_pact Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_peg_pact")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_peg_pact,String)
-            End If
-            If (Original_peg_lsale Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_peg_lsale")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_peg_lsale,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_xcard,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_promo,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_UniqueID,Long)
-            Me.Adapter.UpdateCommand.Parameters(52).Value = CType(UniqueID,Long)
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(account,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -53671,66 +53683,6 @@ Namespace TransvacDataV2DataSet1TableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal name As String,  _
-                    ByVal ad1 As String,  _
-                    ByVal ad2 As String,  _
-                    ByVal ad3 As String,  _
-                    ByVal ad4 As String,  _
-                    ByVal ad5 As String,  _
-                    ByVal phone As String,  _
-                    ByVal telex As String,  _
-                    ByVal fax As String,  _
-                    ByVal email As String,  _
-                    ByVal eurovat As String,  _
-                    ByVal vatpayable As Boolean,  _
-                    ByVal ifmemo As String,  _
-                    ByVal proforma As String,  _
-                    ByVal udate As String,  _
-                    ByVal termdays As Decimal,  _
-                    ByVal entrytype As String,  _
-                    ByVal nwho As String,  _
-                    ByVal inuse As String,  _
-                    ByVal new_upd As Date,  _
-                    ByVal peg_pact As String,  _
-                    ByVal peg_lsale As String,  _
-                    ByVal xcard As Boolean,  _
-                    ByVal promo As Boolean,  _
-                    ByVal ADDMEMO As String,  _
-                    ByVal Original_name As String,  _
-                    ByVal Original_account As String,  _
-                    ByVal Original_ad1 As String,  _
-                    ByVal Original_ad2 As String,  _
-                    ByVal Original_ad3 As String,  _
-                    ByVal Original_ad4 As String,  _
-                    ByVal Original_ad5 As String,  _
-                    ByVal Original_phone As String,  _
-                    ByVal Original_telex As String,  _
-                    ByVal Original_fax As String,  _
-                    ByVal Original_email As String,  _
-                    ByVal Original_eurovat As String,  _
-                    ByVal Original_vatpayable As Boolean,  _
-                    ByVal Original_ifmemo As String,  _
-                    ByVal Original_proforma As String,  _
-                    ByVal Original_udate As String,  _
-                    ByVal Original_termdays As Decimal,  _
-                    ByVal Original_entrytype As String,  _
-                    ByVal Original_nwho As String,  _
-                    ByVal Original_inuse As String,  _
-                    ByVal Original_new_upd As Date,  _
-                    ByVal Original_peg_pact As String,  _
-                    ByVal Original_peg_lsale As String,  _
-                    ByVal Original_xcard As Boolean,  _
-                    ByVal Original_promo As Boolean,  _
-                    ByVal Original_UniqueID As Long,  _
-                    ByVal UniqueID As Long) As Integer
-            Return Me.Update(name, Original_account, ad1, ad2, ad3, ad4, ad5, phone, telex, fax, email, eurovat, vatpayable, ifmemo, proforma, udate, termdays, entrytype, nwho, inuse, new_upd, peg_pact, peg_lsale, xcard, promo, ADDMEMO, Original_name, Original_account, Original_ad1, Original_ad2, Original_ad3, Original_ad4, Original_ad5, Original_phone, Original_telex, Original_fax, Original_email, Original_eurovat, Original_vatpayable, Original_ifmemo, Original_proforma, Original_udate, Original_termdays, Original_entrytype, Original_nwho, Original_inuse, Original_new_upd, Original_peg_pact, Original_peg_lsale, Original_xcard, Original_promo, Original_UniqueID, UniqueID)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

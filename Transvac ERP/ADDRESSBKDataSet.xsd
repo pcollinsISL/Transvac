@@ -270,7 +270,7 @@ WHERE        (account LIKE @Param1 + '%')</CommandText>
               <xs:element name="ad5" msprop:Generator_ColumnVarNameInTable="columnad5" msprop:Generator_ColumnPropNameInRow="ad5" msprop:Generator_ColumnPropNameInTable="ad5Column" msprop:Generator_UserColumnName="ad5" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
+                    <xs:maxLength value="3000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

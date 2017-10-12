@@ -8,6 +8,7 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, QuoteNOBox.Text)
     End Sub
 
@@ -30,6 +31,7 @@
     End Sub
 
     Private Sub QuoteNObtn_Click(sender As Object, e As EventArgs) Handles QuoteNoBtn.Click
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, QuoteNOBox.Text)
     End Sub
 
