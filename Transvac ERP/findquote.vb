@@ -1,8 +1,10 @@
 ﻿Public Class findquote
     Private Sub findquote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'EnquiryDataSet.enquiry' table. You can move, or remove it, as needed.
+        REM Me.EnquiryTableAdapter1.Fill(Me.EnquiryDataSet.enquiry)
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
-        Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet1.enquiry, CustomerNameBox.Text)
+        Me.EnquiryTableAdapter1.FillByName(Me.EnquiryDataSet.enquiry, CustomerNameBox.Text)
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -19,8 +21,8 @@
     Dim ExitYN As System.Windows.Forms.DialogResult
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         Me.Hide()
-        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
         Dim enqmain As New enqmain
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
         enqmain.TopLevel = False
         enqmain.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(0).Controls.Add(enqmain)
@@ -44,13 +46,11 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles SelectBtn.Click
-        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
         Dim enquiry As New enquiry
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
         enquiry.TopLevel = False
         enquiry.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(0).Controls.Add(enquiry)
-        enquiry.Show()
-        Me.Hide()
         enquiry.CnameTextBox.Text = EnquiryDataGridView.Item(0, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Ref_noTextBox.Text = EnquiryDataGridView.Item(1, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.qotenoTextBox.Text = EnquiryDataGridView.Item(2, EnquiryDataGridView.CurrentRow.Index).Value
@@ -66,6 +66,7 @@
         enquiry.ContactTextBox.Text = EnquiryDataGridView.Item(12, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.DateCreaTextBox.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EtypeComboBox.Text = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.Show()
         Me.Hide()
     End Sub
 

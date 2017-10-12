@@ -61,7 +61,7 @@
         If AccnoTextBox.Text = "" Then
             Me.Tran2TableAdapter.ClearBeforeFill = True
         Else
-            Me.EnquiryTableAdapter.FillByName(Me.EnquiryDataSet.enquiry, CnameTextBox.Text)
+            Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet1.tran2, AccnoTextBox.Text)
         End If
     End Sub
 
