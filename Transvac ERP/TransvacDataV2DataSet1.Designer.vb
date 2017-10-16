@@ -38181,14 +38181,26 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE       enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                cname = @param1, contact = @param1, ref_"& _ 
-                "no = @param1, tel_no = @param1, fax_no = @param1, mobtel_no = @param1, email = @"& _ 
-                "param1, ship_name = @param1, ememo = @param1, accno = @param1, status = @param1,"& _ 
-                " "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         etype = @param1, ewho = @param1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (quote"& _ 
-                "_no = @quote_no)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                cname = @param1, contact = @param2, ref_"& _ 
+                "no = @param3, tel_no = @param4, fax_no = @param5, mobtel_no = @param6, email = @"& _ 
+                "param7, ship_name = @param8, ememo = @param9, accno = @param10, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "           status = @param11, etype = @param12, ewho = @param13"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (q"& _ 
+                "uote_no = @quote_no)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 300, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@quote_no", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 100, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param2", Global.System.Data.SqlDbType.[Char], 100, Global.System.Data.ParameterDirection.Input, 0, 0, "contact", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param3", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "ref_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param4", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "tel_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param5", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "fax_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param6", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "mobtel_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param7", Global.System.Data.SqlDbType.[Char], 50, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param8", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "ship_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param9", Global.System.Data.SqlDbType.Text, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "ememo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param10", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "accno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param11", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param12", Global.System.Data.SqlDbType.[Char], 15, Global.System.Data.ParameterDirection.Input, 0, 0, "etype", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param13", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "ewho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@quote_no", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -38587,16 +38599,76 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal param1 As String, ByVal quote_no As String) As Integer
+        Public Overloads Overridable Function Update(ByVal param1 As String, ByVal param2 As String, ByVal param3 As String, ByVal param4 As String, ByVal param5 As String, ByVal param6 As String, ByVal param7 As String, ByVal param8 As String, ByVal param9 As String, ByVal param10 As String, ByVal param11 As String, ByVal param12 As String, ByVal param13 As String, ByVal quote_no As String) As Integer
             If (param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param1")
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(param1,String)
             End If
-            If (quote_no Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("quote_no")
+            If (param2 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(quote_no,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(param2,String)
+            End If
+            If (param3 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(param3,String)
+            End If
+            If (param4 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(param4,String)
+            End If
+            If (param5 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(param5,String)
+            End If
+            If (param6 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(param6,String)
+            End If
+            If (param7 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(param7,String)
+            End If
+            If (param8 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(param8,String)
+            End If
+            If (param9 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(param9,String)
+            End If
+            If (param10 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(param10,String)
+            End If
+            If (param11 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(param11,String)
+            End If
+            If (param12 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(param12,String)
+            End If
+            If (param13 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(param13,String)
+            End If
+            If (quote_no Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(quote_no,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _

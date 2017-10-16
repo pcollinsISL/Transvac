@@ -76,19 +76,19 @@ Partial Class enquiry
         Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.AcctComboBox = New System.Windows.Forms.ComboBox()
-        Me.TransvacDataV2DataSet11 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.TransvacDataV2DataSet11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddressRecordTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet11 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.TransvacDataV2DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddressRecordTypeTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EdateLabel
@@ -230,7 +230,7 @@ Partial Class enquiry
         '
         Me.ContactTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
         Me.ContactTextBox.Location = New System.Drawing.Point(506, 157)
-        Me.ContactTextBox.MaxLength = 20
+        Me.ContactTextBox.MaxLength = 100
         Me.ContactTextBox.Name = "ContactTextBox"
         Me.ContactTextBox.Size = New System.Drawing.Size(258, 20)
         Me.ContactTextBox.TabIndex = 6
@@ -394,8 +394,9 @@ Partial Class enquiry
         '
         'CnameTextBox
         '
+        Me.CnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "cname", True))
         Me.CnameTextBox.Location = New System.Drawing.Point(136, 155)
-        Me.CnameTextBox.MaxLength = 300
+        Me.CnameTextBox.MaxLength = 100
         Me.CnameTextBox.Name = "CnameTextBox"
         Me.CnameTextBox.Size = New System.Drawing.Size(237, 20)
         Me.CnameTextBox.TabIndex = 40
@@ -524,6 +525,7 @@ Partial Class enquiry
         Me.TableAdapterManager.accctlTableAdapter = Nothing
         Me.TableAdapterManager.accountTableAdapter = Me.AccountTableAdapter1
         Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
         Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
         Me.TableAdapterManager.assetsTableAdapter = Nothing
         Me.TableAdapterManager.atransTableAdapter = Nothing
@@ -578,26 +580,26 @@ Partial Class enquiry
         Me.AcctComboBox.TabIndex = 75
         Me.AcctComboBox.ValueMember = "RecordTypeOld"
         '
-        'TransvacDataV2DataSet11
+        'AddressRecordTypeBindingSource
         '
-        Me.TransvacDataV2DataSet11.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet11.EnforceConstraints = False
-        Me.TransvacDataV2DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.AddressRecordTypeBindingSource.DataMember = "AddressRecordType"
+        Me.AddressRecordTypeBindingSource.DataSource = Me.TransvacDataV2DataSet11BindingSource
         '
         'TransvacDataV2DataSet11BindingSource
         '
         Me.TransvacDataV2DataSet11BindingSource.DataSource = Me.TransvacDataV2DataSet11
         Me.TransvacDataV2DataSet11BindingSource.Position = 0
         '
+        'TransvacDataV2DataSet11
+        '
+        Me.TransvacDataV2DataSet11.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet11.EnforceConstraints = False
+        Me.TransvacDataV2DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TransvacDataV2DataSet11BindingSource1
         '
         Me.TransvacDataV2DataSet11BindingSource1.DataSource = Me.TransvacDataV2DataSet11
         Me.TransvacDataV2DataSet11BindingSource1.Position = 0
-        '
-        'AddressRecordTypeBindingSource
-        '
-        Me.AddressRecordTypeBindingSource.DataMember = "AddressRecordType"
-        Me.AddressRecordTypeBindingSource.DataSource = Me.TransvacDataV2DataSet11BindingSource
         '
         'AddressRecordTypeTableAdapter
         '
@@ -661,10 +663,10 @@ Partial Class enquiry
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
