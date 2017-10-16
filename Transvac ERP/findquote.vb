@@ -4,7 +4,7 @@
         REM Me.EnquiryTableAdapter1.Fill(Me.EnquiryDataSet.enquiry)
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
-        Me.EnquiryTableAdapter1.FillByName(Me.EnquiryDataSet.enquiry, CustomerNameBox.Text)
+        Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet1.enquiry, CustomerNameBox.Text)
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -31,7 +31,6 @@
     End Sub
 
     Private Sub QuoteNObtn_Click(sender As Object, e As EventArgs) Handles QuoteNoBtn.Click
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, QuoteNOBox.Text)
     End Sub
 
@@ -69,7 +68,8 @@
         enquiry.DateCreaTextBox.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EtypeComboBox.Text = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Show()
-        Me.Hide()
+        Me.EnquiryBindingSource.EndEdit()
+        Me.Close()
     End Sub
 
     Private Sub EnquiryDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles EnquiryDataGridView.CellContentClick

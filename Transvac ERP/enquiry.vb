@@ -56,13 +56,16 @@
     End Sub
 
     Private Sub enquiry_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'EnquiryDataSet.enquiry' table. You can move, or remove it, as needed.
-        REM Me.EnquiryTableAdapter.Fill(Me.EnquiryDataSet.enquiry)
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet11.AddressRecordType' table. You can move, or remove it, as needed.
+        Me.AddressRecordTypeTableAdapter.Fill(Me.TransvacDataV2DataSet11.AddressRecordType)
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.enquiry' table. You can move, or remove it, as needed.
+        REM Me.EnquiryTableAdapter.Fill(Me.TransvacDataV2DataSet1.enquiry)
         If AccnoTextBox.Text = "" Then
             Me.Tran2TableAdapter.ClearBeforeFill = True
+            Me.EnquiryTableAdapter.ClearBeforeFill = True
         Else
             Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet1.tran2, AccnoTextBox.Text)
-            Me.EnquiryTableAdapter.FillByQuoteNO(Me.EnquiryDataSet.enquiry, qotenoTextBox.Text)
+            Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, qotenoTextBox.Text)
         End If
     End Sub
 
@@ -86,9 +89,9 @@
         REM New_updDateTimePicker.Value = DateTime.Now
         Me.Validate()
         Me.EnquiryBindingSource.EndEdit()
-        Me.Tran2BindingSource.EndEdit()
-        Me.EnquiryTableAdapter.Update(Me.EnquiryDataSet)
-        Me.Tran2TableAdapter.Update(Me.TransvacDataV2DataSet1)
+        REM Me.Tran2BindingSource.EndEdit()
+        Me.EnquiryTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        REM Me.Tran2TableAdapter.Update(Me.TransvacDataV2DataSet1)
         MsgBox("Save Sucsesful")
     End Sub
 

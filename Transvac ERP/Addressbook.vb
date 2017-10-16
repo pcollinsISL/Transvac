@@ -6,11 +6,14 @@
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.AddressRecordType' table. You can move, or remove it, as needed.
+        Me.AddressRecordTypeTableAdapter.Fill(Me.TransvacDataV2DataSet1.AddressRecordType)
         If ACCOUNTTextBox1.Text = "" Then
             Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
         Else
             Me.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, ACCOUNTTextBox1.Text)
         End If
+
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
@@ -67,7 +70,7 @@
         enquiry.Mobtel_noTextBox.Text = TELEXTextBox.Text
         enquiry.Fax_noTextBox.Text = FAXTextBox.Text
         enquiry.EmailTextBox.Text = EMAILTextBox.Text
-        enquiry.acctTextBox.Text = EntrytypeComboBox.Text
+        enquiry.AcctComboBox.Text = EntrytypeComboBox.Text
         enquiry.termsTextBox.Text = TERMDAYSTextBox.Text
         Me.Hide()
     End Sub
@@ -139,6 +142,7 @@
     End Sub
 
     Private Sub EntrytypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EntrytypeComboBox.SelectedIndexChanged
+
 
     End Sub
 

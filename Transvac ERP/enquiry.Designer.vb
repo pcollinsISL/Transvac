@@ -40,7 +40,7 @@ Partial Class enquiry
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ContactTextBox = New System.Windows.Forms.TextBox()
         Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EnquiryDataSet = New Transvac_ERP.EnquiryDataSet()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.Ref_noTextBox = New System.Windows.Forms.TextBox()
         Me.Tel_noTextBox = New System.Windows.Forms.TextBox()
         Me.Fax_noTextBox = New System.Windows.Forms.TextBox()
@@ -60,7 +60,6 @@ Partial Class enquiry
         Me.CnameTextBox = New System.Windows.Forms.TextBox()
         Me.Add5TextBox = New System.Windows.Forms.TextBox()
         Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.Add4TextBox = New System.Windows.Forms.TextBox()
         Me.Add3TextBox = New System.Windows.Forms.TextBox()
         Me.Add2TextBox = New System.Windows.Forms.TextBox()
@@ -70,18 +69,26 @@ Partial Class enquiry
         Me.Btnquote = New System.Windows.Forms.Button()
         Me.qotenoLabel = New System.Windows.Forms.Label()
         Me.qotenoTextBox = New System.Windows.Forms.TextBox()
-        Me.acctTextBox = New System.Windows.Forms.TextBox()
-        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
-        Me.AccountTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.accountTableAdapter()
-        Me.EnquiryTableAdapter = New Transvac_ERP.EnquiryDataSetTableAdapters.enquiryTableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.EnquiryDataSetTableAdapters.TableAdapterManager()
         Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
+        Me.AccountTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.accountTableAdapter()
+        Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.AcctComboBox = New System.Windows.Forms.ComboBox()
+        Me.TransvacDataV2DataSet11 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.TransvacDataV2DataSet11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AddressRecordTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AddressRecordTypeTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnquiryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EdateLabel
@@ -223,6 +230,7 @@ Partial Class enquiry
         '
         Me.ContactTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "contact", True))
         Me.ContactTextBox.Location = New System.Drawing.Point(506, 157)
+        Me.ContactTextBox.MaxLength = 20
         Me.ContactTextBox.Name = "ContactTextBox"
         Me.ContactTextBox.Size = New System.Drawing.Size(258, 20)
         Me.ContactTextBox.TabIndex = 6
@@ -230,17 +238,19 @@ Partial Class enquiry
         'EnquiryBindingSource
         '
         Me.EnquiryBindingSource.DataMember = "enquiry"
-        Me.EnquiryBindingSource.DataSource = Me.EnquiryDataSet
+        Me.EnquiryBindingSource.DataSource = Me.TransvacDataV2DataSet1
         '
-        'EnquiryDataSet
+        'TransvacDataV2DataSet1
         '
-        Me.EnquiryDataSet.DataSetName = "EnquiryDataSet"
-        Me.EnquiryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Ref_noTextBox
         '
         Me.Ref_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "ref_no", True))
         Me.Ref_noTextBox.Location = New System.Drawing.Point(505, 215)
+        Me.Ref_noTextBox.MaxLength = 20
         Me.Ref_noTextBox.Name = "Ref_noTextBox"
         Me.Ref_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Ref_noTextBox.TabIndex = 8
@@ -249,6 +259,7 @@ Partial Class enquiry
         '
         Me.Tel_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "tel_no", True))
         Me.Tel_noTextBox.Location = New System.Drawing.Point(505, 241)
+        Me.Tel_noTextBox.MaxLength = 20
         Me.Tel_noTextBox.Name = "Tel_noTextBox"
         Me.Tel_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Tel_noTextBox.TabIndex = 10
@@ -257,6 +268,7 @@ Partial Class enquiry
         '
         Me.Fax_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "fax_no", True))
         Me.Fax_noTextBox.Location = New System.Drawing.Point(505, 267)
+        Me.Fax_noTextBox.MaxLength = 20
         Me.Fax_noTextBox.Name = "Fax_noTextBox"
         Me.Fax_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Fax_noTextBox.TabIndex = 12
@@ -265,6 +277,7 @@ Partial Class enquiry
         '
         Me.Mobtel_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "mobtel_no", True))
         Me.Mobtel_noTextBox.Location = New System.Drawing.Point(505, 293)
+        Me.Mobtel_noTextBox.MaxLength = 25
         Me.Mobtel_noTextBox.Name = "Mobtel_noTextBox"
         Me.Mobtel_noTextBox.Size = New System.Drawing.Size(259, 20)
         Me.Mobtel_noTextBox.TabIndex = 14
@@ -273,6 +286,7 @@ Partial Class enquiry
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "email", True))
         Me.EmailTextBox.Location = New System.Drawing.Point(505, 319)
+        Me.EmailTextBox.MaxLength = 50
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(259, 20)
         Me.EmailTextBox.TabIndex = 16
@@ -281,13 +295,13 @@ Partial Class enquiry
         '
         Me.Ship_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "ship_name", True))
         Me.Ship_nameTextBox.Location = New System.Drawing.Point(506, 346)
+        Me.Ship_nameTextBox.MaxLength = 20
         Me.Ship_nameTextBox.Name = "Ship_nameTextBox"
         Me.Ship_nameTextBox.Size = New System.Drawing.Size(258, 20)
         Me.Ship_nameTextBox.TabIndex = 18
         '
         'EmemoTextBox
         '
-        Me.EmemoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "ememo", True))
         Me.EmemoTextBox.Location = New System.Drawing.Point(136, 427)
         Me.EmemoTextBox.Multiline = True
         Me.EmemoTextBox.Name = "EmemoTextBox"
@@ -298,6 +312,7 @@ Partial Class enquiry
         '
         Me.AccnoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "accno", True))
         Me.AccnoTextBox.Location = New System.Drawing.Point(685, 55)
+        Me.AccnoTextBox.MaxLength = 6
         Me.AccnoTextBox.Name = "AccnoTextBox"
         Me.AccnoTextBox.Size = New System.Drawing.Size(79, 20)
         Me.AccnoTextBox.TabIndex = 22
@@ -379,8 +394,8 @@ Partial Class enquiry
         '
         'CnameTextBox
         '
-        Me.CnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "cname", True))
         Me.CnameTextBox.Location = New System.Drawing.Point(136, 155)
+        Me.CnameTextBox.MaxLength = 300
         Me.CnameTextBox.Name = "CnameTextBox"
         Me.CnameTextBox.Size = New System.Drawing.Size(237, 20)
         Me.CnameTextBox.TabIndex = 40
@@ -397,11 +412,6 @@ Partial Class enquiry
         '
         Me.Tran2BindingSource.DataMember = "tran2"
         Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Add4TextBox
         '
@@ -474,38 +484,14 @@ Partial Class enquiry
         '
         Me.qotenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "quote_no", True))
         Me.qotenoTextBox.Location = New System.Drawing.Point(685, 81)
+        Me.qotenoTextBox.MaxLength = 6
         Me.qotenoTextBox.Name = "qotenoTextBox"
         Me.qotenoTextBox.Size = New System.Drawing.Size(79, 20)
         Me.qotenoTextBox.TabIndex = 73
         '
-        'acctTextBox
-        '
-        Me.acctTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "etype", True))
-        Me.acctTextBox.Location = New System.Drawing.Point(136, 377)
-        Me.acctTextBox.Name = "acctTextBox"
-        Me.acctTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.acctTextBox.TabIndex = 74
-        '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        '
-        'AccountTableAdapter1
-        '
-        Me.AccountTableAdapter1.ClearBeforeFill = True
-        '
-        'EnquiryTableAdapter
-        '
-        Me.EnquiryTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.enquiryTableAdapter = Me.EnquiryTableAdapter
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.EnquiryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'DateCreaTextBox
         '
+        Me.DateCreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "edate", True))
         Me.DateCreaTextBox.Location = New System.Drawing.Point(685, 117)
         Me.DateCreaTextBox.Name = "DateCreaTextBox"
         Me.DateCreaTextBox.Size = New System.Drawing.Size(79, 20)
@@ -521,13 +507,109 @@ Partial Class enquiry
         Me.PictureBox2.TabIndex = 53
         Me.PictureBox2.TabStop = False
         '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        '
+        'AccountTableAdapter1
+        '
+        Me.AccountTableAdapter1.ClearBeforeFill = True
+        '
+        'EnquiryTableAdapter
+        '
+        Me.EnquiryTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.accctlTableAdapter = Nothing
+        Me.TableAdapterManager.accountTableAdapter = Me.AccountTableAdapter1
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager.assetsTableAdapter = Nothing
+        Me.TableAdapterManager.atransTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.binallocTableAdapter = Nothing
+        Me.TableAdapterManager.catTableAdapter = Nothing
+        Me.TableAdapterManager.countryTableAdapter = Nothing
+        Me.TableAdapterManager.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager.enquiryTableAdapter = Me.EnquiryTableAdapter
+        Me.TableAdapterManager.eventTableAdapter = Nothing
+        Me.TableAdapterManager.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager.invlineTableAdapter = Nothing
+        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager.invtransTableAdapter = Nothing
+        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager.invworkTableAdapter = Nothing
+        Me.TableAdapterManager.issueTableAdapter = Nothing
+        Me.TableAdapterManager.locationTableAdapter = Nothing
+        Me.TableAdapterManager.mainTableAdapter = Nothing
+        Me.TableAdapterManager.markupTableAdapter = Nothing
+        Me.TableAdapterManager.namesTableAdapter = Nothing
+        Me.TableAdapterManager.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager.statusTableAdapter = Nothing
+        Me.TableAdapterManager.teventsTableAdapter = Nothing
+        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
+        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager.trandescTableAdapter = Nothing
+        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AcctComboBox
+        '
+        Me.AcctComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Tran2BindingSource, "entrytype", True))
+        Me.AcctComboBox.DataSource = Me.AddressRecordTypeBindingSource
+        Me.AcctComboBox.DisplayMember = "RecordTypeNew"
+        Me.AcctComboBox.FormattingEnabled = True
+        Me.AcctComboBox.Location = New System.Drawing.Point(136, 377)
+        Me.AcctComboBox.Name = "AcctComboBox"
+        Me.AcctComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.AcctComboBox.TabIndex = 75
+        Me.AcctComboBox.ValueMember = "RecordTypeOld"
+        '
+        'TransvacDataV2DataSet11
+        '
+        Me.TransvacDataV2DataSet11.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet11.EnforceConstraints = False
+        Me.TransvacDataV2DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TransvacDataV2DataSet11BindingSource
+        '
+        Me.TransvacDataV2DataSet11BindingSource.DataSource = Me.TransvacDataV2DataSet11
+        Me.TransvacDataV2DataSet11BindingSource.Position = 0
+        '
+        'TransvacDataV2DataSet11BindingSource1
+        '
+        Me.TransvacDataV2DataSet11BindingSource1.DataSource = Me.TransvacDataV2DataSet11
+        Me.TransvacDataV2DataSet11BindingSource1.Position = 0
+        '
+        'AddressRecordTypeBindingSource
+        '
+        Me.AddressRecordTypeBindingSource.DataMember = "AddressRecordType"
+        Me.AddressRecordTypeBindingSource.DataSource = Me.TransvacDataV2DataSet11BindingSource
+        '
+        'AddressRecordTypeTableAdapter
+        '
+        Me.AddressRecordTypeTableAdapter.ClearBeforeFill = True
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(813, 640)
-        Me.Controls.Add(Me.acctTextBox)
+        Me.Controls.Add(Me.AcctComboBox)
         Me.Controls.Add(Me.qotenoTextBox)
         Me.Controls.Add(Me.qotenoLabel)
         Me.Controls.Add(Me.Btnquote)
@@ -576,10 +658,13 @@ Partial Class enquiry
         Me.Name = "enquiry"
         Me.Text = "+"
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnquiryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -613,14 +698,9 @@ Partial Class enquiry
     Friend WithEvents Btnquote As Button
     Friend WithEvents qotenoLabel As Label
     Friend WithEvents qotenoTextBox As TextBox
-    Friend WithEvents acctTextBox As TextBox
     Friend WithEvents Tran2BindingSource As BindingSource
     Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
     Friend WithEvents AccountTableAdapter1 As TransvacDataV2DataSet1TableAdapters.accountTableAdapter
-    Friend WithEvents EnquiryDataSet As EnquiryDataSet
-    Friend WithEvents EnquiryBindingSource As BindingSource
-    Friend WithEvents EnquiryTableAdapter As EnquiryDataSetTableAdapters.enquiryTableAdapter
-    Friend WithEvents TableAdapterManager As EnquiryDataSetTableAdapters.TableAdapterManager
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents DateCreaTextBox As TextBox
     Friend WithEvents EdateLabel As Label
@@ -638,4 +718,13 @@ Partial Class enquiry
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents EnquiryBindingSource As BindingSource
+    Friend WithEvents EnquiryTableAdapter As TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter
+    Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents AcctComboBox As ComboBox
+    Friend WithEvents TransvacDataV2DataSet11BindingSource1 As BindingSource
+    Friend WithEvents TransvacDataV2DataSet11 As TransvacDataV2DataSet1
+    Friend WithEvents TransvacDataV2DataSet11BindingSource As BindingSource
+    Friend WithEvents AddressRecordTypeBindingSource As BindingSource
+    Friend WithEvents AddressRecordTypeTableAdapter As TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter
 End Class

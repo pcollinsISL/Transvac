@@ -62,18 +62,12 @@ Partial Class findquote
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
-        Me.EnquiryDataSet = New Transvac_ERP.EnquiryDataSet()
-        Me.EnquiryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EnquiryTableAdapter1 = New Transvac_ERP.EnquiryDataSetTableAdapters.enquiryTableAdapter()
-        Me.TableAdapterManager1 = New Transvac_ERP.EnquiryDataSetTableAdapters.TableAdapterManager()
         CType(Me.EnquiryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnquiryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnquiryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CustomerNameBox
@@ -422,26 +416,6 @@ Partial Class findquote
         '
         Me.Tran2TableAdapter.ClearBeforeFill = True
         '
-        'EnquiryDataSet
-        '
-        Me.EnquiryDataSet.DataSetName = "EnquiryDataSet"
-        Me.EnquiryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EnquiryBindingSource1
-        '
-        Me.EnquiryBindingSource1.DataMember = "enquiry"
-        Me.EnquiryBindingSource1.DataSource = Me.EnquiryDataSet
-        '
-        'EnquiryTableAdapter1
-        '
-        Me.EnquiryTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.enquiryTableAdapter = Me.EnquiryTableAdapter1
-        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.EnquiryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'findquote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -474,8 +448,6 @@ Partial Class findquote
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnquiryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnquiryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -520,8 +492,4 @@ Partial Class findquote
     Friend WithEvents etype As DataGridViewTextBoxColumn
     Friend WithEvents Tran2BindingSource As BindingSource
     Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
-    Friend WithEvents EnquiryDataSet As EnquiryDataSet
-    Friend WithEvents EnquiryBindingSource1 As BindingSource
-    Friend WithEvents EnquiryTableAdapter1 As EnquiryDataSetTableAdapters.enquiryTableAdapter
-    Friend WithEvents TableAdapterManager1 As EnquiryDataSetTableAdapters.TableAdapterManager
 End Class

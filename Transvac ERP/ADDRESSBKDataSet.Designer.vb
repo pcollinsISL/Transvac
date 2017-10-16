@@ -226,7 +226,7 @@ Partial Public Class ADDRESSBKDataSet
         Me.DataSetName = "ADDRESSBKDataSet"
         Me.Prefix = ""
         Me.Namespace = "http://tempuri.org/ADDRESSBKDataSet.xsd"
-        Me.EnforceConstraints = true
+        Me.EnforceConstraints = false
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tabletran2 = New tran2DataTable()
         MyBase.Tables.Add(Me.tabletran2)

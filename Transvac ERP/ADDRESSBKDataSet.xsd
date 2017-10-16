@@ -219,10 +219,10 @@ WHERE        (account LIKE @Param1 + '%')</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ADDRESSBKDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ADDRESSBKDataSet" msprop:Generator_UserDSName="ADDRESSBKDataSet">
+  <xs:element name="ADDRESSBKDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ADDRESSBKDataSet" msprop:Generator_UserDSName="ADDRESSBKDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tran2" msprop:Generator_TableClassName="tran2DataTable" msprop:Generator_TableVarName="tabletran2" msprop:Generator_TablePropName="tran2" msprop:Generator_RowDeletingName="tran2RowDeleting" msprop:Generator_RowChangingName="tran2RowChanging" msprop:Generator_RowEvHandlerName="tran2RowChangeEventHandler" msprop:Generator_RowDeletedName="tran2RowDeleted" msprop:Generator_UserTableName="tran2" msprop:Generator_RowChangedName="tran2RowChanged" msprop:Generator_RowEvArgName="tran2RowChangeEvent" msprop:Generator_RowClassName="tran2Row">
+        <xs:element name="tran2" msprop:Generator_TableClassName="tran2DataTable" msprop:Generator_TableVarName="tabletran2" msprop:Generator_RowChangedName="tran2RowChanged" msprop:Generator_TablePropName="tran2" msprop:Generator_RowDeletingName="tran2RowDeleting" msprop:Generator_RowChangingName="tran2RowChanging" msprop:Generator_RowEvHandlerName="tran2RowChangeEventHandler" msprop:Generator_RowDeletedName="tran2RowDeleted" msprop:Generator_RowClassName="tran2Row" msprop:Generator_UserTableName="tran2" msprop:Generator_RowEvArgName="tran2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ADDMEMO" msprop:Generator_ColumnVarNameInTable="columnADDMEMO" msprop:Generator_ColumnPropNameInRow="ADDMEMO" msprop:Generator_ColumnPropNameInTable="ADDMEMOColumn" msprop:Generator_UserColumnName="ADDMEMO" minOccurs="0">
@@ -375,7 +375,7 @@ WHERE        (account LIKE @Param1 + '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="addnotes" msprop:Generator_TableClassName="addnotesDataTable" msprop:Generator_TableVarName="tableaddnotes" msprop:Generator_RowChangedName="addnotesRowChanged" msprop:Generator_TablePropName="addnotes" msprop:Generator_RowDeletingName="addnotesRowDeleting" msprop:Generator_RowChangingName="addnotesRowChanging" msprop:Generator_RowEvHandlerName="addnotesRowChangeEventHandler" msprop:Generator_RowDeletedName="addnotesRowDeleted" msprop:Generator_RowClassName="addnotesRow" msprop:Generator_UserTableName="addnotes" msprop:Generator_RowEvArgName="addnotesRowChangeEvent">
+        <xs:element name="addnotes" msprop:Generator_TableClassName="addnotesDataTable" msprop:Generator_TableVarName="tableaddnotes" msprop:Generator_TablePropName="addnotes" msprop:Generator_RowDeletingName="addnotesRowDeleting" msprop:Generator_RowChangingName="addnotesRowChanging" msprop:Generator_RowEvHandlerName="addnotesRowChangeEventHandler" msprop:Generator_RowDeletedName="addnotesRowDeleted" msprop:Generator_UserTableName="addnotes" msprop:Generator_RowChangedName="addnotesRowChanged" msprop:Generator_RowEvArgName="addnotesRowChangeEvent" msprop:Generator_RowClassName="addnotesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="account" msprop:Generator_ColumnVarNameInTable="columnaccount" msprop:Generator_ColumnPropNameInRow="account" msprop:Generator_ColumnPropNameInTable="accountColumn" msprop:Generator_UserColumnName="account">

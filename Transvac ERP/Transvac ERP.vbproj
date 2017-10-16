@@ -177,14 +177,6 @@
     <Compile Include="enqmain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnquiryDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EnquiryDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="EnquiryDataSet.vb">
-      <DependentUpon>EnquiryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="enquiry.Designer.vb">
       <DependentUpon>enquiry.vb</DependentUpon>
     </Compile>
@@ -425,17 +417,6 @@
       <DependentUpon>ADDRESSBKDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram2.cd" />
-    <None Include="EnquiryDataSet.xsc">
-      <DependentUpon>EnquiryDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="EnquiryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EnquiryDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EnquiryDataSet.xss">
-      <DependentUpon>EnquiryDataSet.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

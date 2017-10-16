@@ -68,7 +68,6 @@ Partial Class form1
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ADDMEMOTextBox = New System.Windows.Forms.TextBox()
-        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AccountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ActmemoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
@@ -77,9 +76,6 @@ Partial Class form1
         Me.fndname_but = New System.Windows.Forms.Button()
         Me.PrintDialog2 = New System.Windows.Forms.PrintDialog()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
-        Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
-        Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
         Me.proforma_but = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -97,11 +93,17 @@ Partial Class form1
         Me.New_updDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.XcardCheckBox1 = New System.Windows.Forms.CheckBox()
         Me.PROMO = New System.Windows.Forms.CheckBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
+        Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.AddressRecordTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AddressRecordTypeTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
         ENTRYTYPELabel = New System.Windows.Forms.Label()
@@ -120,6 +122,7 @@ Partial Class form1
         CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NEW_UPDLabel
@@ -364,6 +367,7 @@ Partial Class form1
         'ADDRESSBKDataSet
         '
         Me.ADDRESSBKDataSet.DataSetName = "ADDRESSBKDataSet"
+        Me.ADDRESSBKDataSet.EnforceConstraints = False
         Me.ADDRESSBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AD1TextBox1
@@ -524,11 +528,6 @@ Partial Class form1
         Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 228)
         Me.ADDMEMOTextBox.TabIndex = 132
         '
-        'AddnotesBindingSource1
-        '
-        Me.AddnotesBindingSource1.DataMember = "addnotes"
-        Me.AddnotesBindingSource1.DataSource = Me.ADDRESSBKDataSet
-        '
         'AccountDataGridViewTextBoxColumn
         '
         Me.AccountDataGridViewTextBoxColumn.DataPropertyName = "account"
@@ -584,21 +583,6 @@ Partial Class form1
         Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
         Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
         Me.PrintForm1.PrintFileName = Nothing
-        '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'AddnotesTableAdapter1
-        '
-        Me.AddnotesTableAdapter1.ClearBeforeFill = True
         '
         'proforma_but
         '
@@ -740,13 +724,15 @@ Partial Class form1
         '
         'EntrytypeComboBox
         '
-        Me.EntrytypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tran2BindingSource1, "entrytype", True))
+        Me.EntrytypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Tran2BindingSource1, "entrytype", True))
+        Me.EntrytypeComboBox.DataSource = Me.TransvacDataV2DataSet1
+        Me.EntrytypeComboBox.DisplayMember = "AddressRecordType.RecordTypeNew"
         Me.EntrytypeComboBox.FormattingEnabled = True
-        Me.EntrytypeComboBox.Items.AddRange(New Object() {"N", "V", "P", "O", "Y"})
         Me.EntrytypeComboBox.Location = New System.Drawing.Point(432, 374)
         Me.EntrytypeComboBox.Name = "EntrytypeComboBox"
         Me.EntrytypeComboBox.Size = New System.Drawing.Size(125, 21)
         Me.EntrytypeComboBox.TabIndex = 200
+        Me.EntrytypeComboBox.ValueMember = "AddressRecordType.RecordTypeOld"
         '
         'New_updDateTimePicker
         '
@@ -776,9 +762,39 @@ Partial Class form1
         Me.PROMO.Text = "PROMO"
         Me.PROMO.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(639, 122)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(40, 13)
+        Me.Label7.TabIndex = 207
+        Me.Label7.Text = "MEMO"
+        '
+        'AddnotesBindingSource1
+        '
+        Me.AddnotesBindingSource1.DataMember = "addnotes"
+        Me.AddnotesBindingSource1.DataSource = Me.ADDRESSBKDataSet
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tran2TableAdapter = Me.Tran2TableAdapter
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AddnotesTableAdapter1
+        '
+        Me.AddnotesTableAdapter1.ClearBeforeFill = True
+        '
         'TransvacDataV2DataSet1
         '
         Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AddnotesTableAdapter
@@ -795,6 +811,7 @@ Partial Class form1
         Me.TableAdapterManager1.accctlTableAdapter = Nothing
         Me.TableAdapterManager1.accountTableAdapter = Nothing
         Me.TableAdapterManager1.addnotesTableAdapter = Me.AddnotesTableAdapter
+        Me.TableAdapterManager1.AddressRecordTypeTableAdapter = Nothing
         Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
         Me.TableAdapterManager1.assetsTableAdapter = Nothing
         Me.TableAdapterManager1.atransTableAdapter = Nothing
@@ -804,6 +821,7 @@ Partial Class form1
         Me.TableAdapterManager1.countryTableAdapter = Nothing
         Me.TableAdapterManager1.custdiscTableAdapter = Nothing
         Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.enquiryTableAdapter = Nothing
         Me.TableAdapterManager1.eventTableAdapter = Nothing
         Me.TableAdapterManager1.foxuserTableAdapter = Nothing
         Me.TableAdapterManager1.invlineTableAdapter = Nothing
@@ -836,14 +854,14 @@ Partial Class form1
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Label7
+        'AddressRecordTypeBindingSource
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(639, 122)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(40, 13)
-        Me.Label7.TabIndex = 207
-        Me.Label7.Text = "MEMO"
+        Me.AddressRecordTypeBindingSource.DataMember = "AddressRecordType"
+        Me.AddressRecordTypeBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'AddressRecordTypeTableAdapter
+        '
+        Me.AddressRecordTypeTableAdapter.ClearBeforeFill = True
         '
         'form1
         '
@@ -920,6 +938,7 @@ Partial Class form1
         CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -990,4 +1009,6 @@ Partial Class form1
     Friend WithEvents PROMO As CheckBox
     Friend WithEvents XcardCheckBox1 As CheckBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents AddressRecordTypeBindingSource As BindingSource
+    Friend WithEvents AddressRecordTypeTableAdapter As TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter
 End Class
