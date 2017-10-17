@@ -36,4 +36,13 @@
     Private Sub TabPage1_Click_1(sender As Object, e As EventArgs) Handles TabPage1.Click
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles InventoryBttn.Click
+        TabControl1.SelectedTab = TabPage6
+        Dim Inventory As New Inventory
+        Inventory.TopLevel = False
+        Inventory.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.TabControl1.TabPages(5).Controls.Add(Inventory)
+        Inventory.Show()
+    End Sub
 End Class

@@ -84,18 +84,6 @@ Partial Class Inventory
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
-        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
-        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.PsupplierTextBox1 = New System.Windows.Forms.TextBox()
-        Me.PcodeTextBox1 = New System.Windows.Forms.TextBox()
-        Me.DescriptnTextBox1 = New System.Windows.Forms.TextBox()
-        Me.IdcodeTextBox = New System.Windows.Forms.TextBox()
-        Me.MinstockTextBox = New System.Windows.Forms.TextBox()
-        Me.MinorderTextBox = New System.Windows.Forms.TextBox()
         Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -112,6 +100,18 @@ Partial Class Inventory
         Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
+        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.PsupplierTextBox1 = New System.Windows.Forms.TextBox()
+        Me.PcodeTextBox1 = New System.Windows.Forms.TextBox()
+        Me.DescriptnTextBox1 = New System.Windows.Forms.TextBox()
+        Me.IdcodeTextBox = New System.Windows.Forms.TextBox()
+        Me.MinstockTextBox = New System.Windows.Forms.TextBox()
+        Me.MinorderTextBox = New System.Windows.Forms.TextBox()
         DescriptnLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
@@ -119,8 +119,8 @@ Partial Class Inventory
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -340,6 +340,7 @@ Partial Class Inventory
         'TransvacDataV2DataSet
         '
         Me.TransvacDataV2DataSet.DataSetName = "TransvacDataV2DataSet"
+        Me.TransvacDataV2DataSet.EnforceConstraints = False
         Me.TransvacDataV2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label3
@@ -656,123 +657,6 @@ Partial Class Inventory
         Me.DataGridView1.Size = New System.Drawing.Size(1143, 150)
         Me.DataGridView1.TabIndex = 191
         '
-        'TransvacDataV2DataSetBindingSource
-        '
-        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
-        Me.TransvacDataV2DataSetBindingSource.Position = 0
-        '
-        'TranbinsBindingSource
-        '
-        Me.TranbinsBindingSource.DataMember = "tranbins"
-        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
-        '
-        'TranbinsTableAdapter
-        '
-        Me.TranbinsTableAdapter.ClearBeforeFill = True
-        '
-        'TrandescBindingSource1
-        '
-        Me.TrandescBindingSource1.DataMember = "trandesc"
-        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet
-        '
-        'TrandescTableAdapter1
-        '
-        Me.TrandescTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.accctlTableAdapter = Nothing
-        Me.TableAdapterManager1.accountTableAdapter = Nothing
-        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager1.assetsTableAdapter = Nothing
-        Me.TableAdapterManager1.atransTableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.binallocTableAdapter = Nothing
-        Me.TableAdapterManager1.catTableAdapter = Nothing
-        Me.TableAdapterManager1.countryTableAdapter = Nothing
-        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager1.eventTableAdapter = Nothing
-        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager1.invlineTableAdapter = Nothing
-        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkTableAdapter = Nothing
-        Me.TableAdapterManager1.issueTableAdapter = Nothing
-        Me.TableAdapterManager1.locationTableAdapter = Nothing
-        Me.TableAdapterManager1.mainTableAdapter = Nothing
-        Me.TableAdapterManager1.markupTableAdapter = Nothing
-        Me.TableAdapterManager1.namesTableAdapter = Nothing
-        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager1.statusTableAdapter = Nothing
-        Me.TableAdapterManager1.teventsTableAdapter = Nothing
-        Me.TableAdapterManager1.tran2TableAdapter = Nothing
-        Me.TableAdapterManager1.tranbinsTableAdapter = Me.TranbinsTableAdapter
-        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
-        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'PsupplierTextBox1
-        '
-        Me.PsupplierTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "psupplier", True))
-        Me.PsupplierTextBox1.Location = New System.Drawing.Point(158, 100)
-        Me.PsupplierTextBox1.Name = "PsupplierTextBox1"
-        Me.PsupplierTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.PsupplierTextBox1.TabIndex = 192
-        '
-        'PcodeTextBox1
-        '
-        Me.PcodeTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "pcode", True))
-        Me.PcodeTextBox1.Location = New System.Drawing.Point(158, 129)
-        Me.PcodeTextBox1.Name = "PcodeTextBox1"
-        Me.PcodeTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.PcodeTextBox1.TabIndex = 193
-        '
-        'DescriptnTextBox1
-        '
-        Me.DescriptnTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "descriptn", True))
-        Me.DescriptnTextBox1.Location = New System.Drawing.Point(158, 186)
-        Me.DescriptnTextBox1.Name = "DescriptnTextBox1"
-        Me.DescriptnTextBox1.Size = New System.Drawing.Size(326, 20)
-        Me.DescriptnTextBox1.TabIndex = 194
-        '
-        'IdcodeTextBox
-        '
-        Me.IdcodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "idcode", True))
-        Me.IdcodeTextBox.Location = New System.Drawing.Point(980, 173)
-        Me.IdcodeTextBox.Name = "IdcodeTextBox"
-        Me.IdcodeTextBox.Size = New System.Drawing.Size(66, 20)
-        Me.IdcodeTextBox.TabIndex = 195
-        '
-        'MinstockTextBox
-        '
-        Me.MinstockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minstock", True))
-        Me.MinstockTextBox.Location = New System.Drawing.Point(980, 147)
-        Me.MinstockTextBox.Name = "MinstockTextBox"
-        Me.MinstockTextBox.Size = New System.Drawing.Size(66, 20)
-        Me.MinstockTextBox.TabIndex = 196
-        '
-        'MinorderTextBox
-        '
-        Me.MinorderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minorder", True))
-        Me.MinorderTextBox.Location = New System.Drawing.Point(980, 119)
-        Me.MinorderTextBox.Name = "MinorderTextBox"
-        Me.MinorderTextBox.Size = New System.Drawing.Size(66, 20)
-        Me.MinorderTextBox.TabIndex = 197
-        '
         'LocatebinDataGridViewTextBoxColumn
         '
         Me.LocatebinDataGridViewTextBoxColumn.DataPropertyName = "locatebin"
@@ -876,10 +760,131 @@ Partial Class Inventory
         Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
         '
+        'TranbinsBindingSource
+        '
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSetBindingSource
+        '
+        'TransvacDataV2DataSetBindingSource
+        '
+        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet
+        Me.TransvacDataV2DataSetBindingSource.Position = 0
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
+        'TrandescBindingSource1
+        '
+        Me.TrandescBindingSource1.DataMember = "trandesc"
+        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet
+        '
+        'TrandescTableAdapter1
+        '
+        Me.TrandescTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager1.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Me.TranbinsTableAdapter
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'PsupplierTextBox1
+        '
+        Me.PsupplierTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "psupplier", True))
+        Me.PsupplierTextBox1.Location = New System.Drawing.Point(158, 100)
+        Me.PsupplierTextBox1.Name = "PsupplierTextBox1"
+        Me.PsupplierTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.PsupplierTextBox1.TabIndex = 192
+        '
+        'PcodeTextBox1
+        '
+        Me.PcodeTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "pcode", True))
+        Me.PcodeTextBox1.Location = New System.Drawing.Point(158, 129)
+        Me.PcodeTextBox1.Name = "PcodeTextBox1"
+        Me.PcodeTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.PcodeTextBox1.TabIndex = 193
+        '
+        'DescriptnTextBox1
+        '
+        Me.DescriptnTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "descriptn", True))
+        Me.DescriptnTextBox1.Location = New System.Drawing.Point(158, 186)
+        Me.DescriptnTextBox1.Name = "DescriptnTextBox1"
+        Me.DescriptnTextBox1.Size = New System.Drawing.Size(326, 20)
+        Me.DescriptnTextBox1.TabIndex = 194
+        '
+        'IdcodeTextBox
+        '
+        Me.IdcodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "idcode", True))
+        Me.IdcodeTextBox.Location = New System.Drawing.Point(980, 173)
+        Me.IdcodeTextBox.Name = "IdcodeTextBox"
+        Me.IdcodeTextBox.Size = New System.Drawing.Size(66, 20)
+        Me.IdcodeTextBox.TabIndex = 195
+        '
+        'MinstockTextBox
+        '
+        Me.MinstockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minstock", True))
+        Me.MinstockTextBox.Location = New System.Drawing.Point(980, 147)
+        Me.MinstockTextBox.Name = "MinstockTextBox"
+        Me.MinstockTextBox.Size = New System.Drawing.Size(66, 20)
+        Me.MinstockTextBox.TabIndex = 196
+        '
+        'MinorderTextBox
+        '
+        Me.MinorderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minorder", True))
+        Me.MinorderTextBox.Location = New System.Drawing.Point(980, 119)
+        Me.MinorderTextBox.Name = "MinorderTextBox"
+        Me.MinorderTextBox.Size = New System.Drawing.Size(66, 20)
+        Me.MinorderTextBox.TabIndex = 197
+        '
         'Inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(1270, 769)
         Me.Controls.Add(Me.MinorderTextBox)
@@ -953,8 +958,8 @@ Partial Class Inventory
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -40,6 +40,8 @@ Partial Class TransPortal
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.InventoryBttn = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -103,7 +105,7 @@ Partial Class TransPortal
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(13, 253)
+        Me.Button7.Location = New System.Drawing.Point(12, 331)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(119, 45)
         Me.Button7.TabIndex = 61
@@ -146,6 +148,7 @@ Partial Class TransPortal
         '
         'TabPage1
         '
+        Me.TabPage1.AutoScroll = True
         Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 32)
@@ -167,6 +170,7 @@ Partial Class TransPortal
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.HotTrack = True
         Me.TabControl1.Location = New System.Drawing.Point(138, 59)
@@ -177,51 +181,76 @@ Partial Class TransPortal
         '
         'TabPage2
         '
+        Me.TabPage2.AutoScroll = True
         Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage2.Location = New System.Drawing.Point(4, 32)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1424, 694)
+        Me.TabPage2.Size = New System.Drawing.Size(1424, 744)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Address Book"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
+        Me.TabPage3.AutoScroll = True
         Me.TabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TabPage3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage3.Location = New System.Drawing.Point(4, 32)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1424, 694)
+        Me.TabPage3.Size = New System.Drawing.Size(1424, 744)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Orders"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'TabPage4
         '
+        Me.TabPage4.AutoScroll = True
         Me.TabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TabPage4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage4.Location = New System.Drawing.Point(4, 32)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1424, 694)
+        Me.TabPage4.Size = New System.Drawing.Size(1424, 744)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Invoicing"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'TabPage5
         '
+        Me.TabPage5.AutoScroll = True
         Me.TabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TabPage5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage5.Location = New System.Drawing.Point(4, 32)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1424, 694)
+        Me.TabPage5.Size = New System.Drawing.Size(1424, 744)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Quotations"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'TabPage6
+        '
+        Me.TabPage6.AutoScroll = True
+        Me.TabPage6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage6.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(1424, 744)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Inventory"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'InventoryBttn
+        '
+        Me.InventoryBttn.Location = New System.Drawing.Point(13, 253)
+        Me.InventoryBttn.Name = "InventoryBttn"
+        Me.InventoryBttn.Size = New System.Drawing.Size(118, 33)
+        Me.InventoryBttn.TabIndex = 68
+        Me.InventoryBttn.Text = "INVENTORY"
+        Me.InventoryBttn.UseVisualStyleBackColor = True
         '
         'TransPortal
         '
@@ -231,6 +260,7 @@ Partial Class TransPortal
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1581, 842)
+        Me.Controls.Add(Me.InventoryBttn)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -270,4 +300,6 @@ Partial Class TransPortal
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents InventoryBttn As Button
 End Class
