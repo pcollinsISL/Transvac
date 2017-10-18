@@ -1,5 +1,5 @@
 ﻿Public Class quote
-    Private Sub TranmemoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+    Private Sub TranmemoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.TranmemoBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet)
@@ -11,15 +11,8 @@
     End Function
 
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.trandesc' table. You can move, or remove it, as needed.
-        REM Me.TrandescTableAdapter.Fill(Me.TransvacDataV2DataSet1.trandesc)
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.quotehead' table. You can move, or remove it, as needed.
-        REM  Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet.quotehead)
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.tranbins' table. You can move, or remove it, as needed.
-        REM Me.TranbinsTableAdapter.Fill(Me.TransvacDataV2DataSet.tranbins)
         Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet.tranmemo' table. You can move, or remove it, as needed.
-        REM Me.TranmemoTableAdapter.Fill(Me.TransvacDataV2DataSet.tranmemo)
+        idcode.Visible = False
 
     End Sub
 
@@ -100,5 +93,10 @@
     Private Sub order_but_Click(sender As Object, e As EventArgs) Handles order_but.Click
         Dim x As InvoiceType = New InvoiceType
         x.Show()
+    End Sub
+
+    Private Sub add_but_Click(sender As Object, e As EventArgs) Handles add_but.Click
+
+
     End Sub
 End Class
