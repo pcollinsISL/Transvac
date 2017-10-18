@@ -73,7 +73,7 @@ Partial Class delivery
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SandyBrown
-        Me.ClientSize = New System.Drawing.Size(643, 330)
+        Me.ClientSize = New System.Drawing.Size(643, 317)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.deliverysve_but)
         Me.Controls.Add(Me.delabt_but)
