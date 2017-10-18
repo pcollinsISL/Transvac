@@ -138,6 +138,12 @@
     <Compile Include="accountsrh.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ADDRESS.Designer.vb">
+      <DependentUpon>ADDRESS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ADDRESS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ADDRESSBKDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -153,6 +159,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Addressbook1.vb" />
+    <Compile Include="BAEFORM.designer.vb">
+      <DependentUpon>BAEFORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BAEFORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Builddraftinv.Designer.vb">
       <DependentUpon>Builddraftinv.vb</DependentUpon>
     </Compile>
@@ -187,6 +199,36 @@
       <DependentUpon>findquote.vb</DependentUpon>
     </Compile>
     <Compile Include="findquote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FREEFORM.designer.vb">
+      <DependentUpon>FREEFORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FREEFORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODFORM.designer.vb">
+      <DependentUpon>MODFORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MODFORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.designer.vb">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders.designer.vb">
+      <DependentUpon>Orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PARTLABEL.designer.vb">
+      <DependentUpon>PARTLABEL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PARTLABEL.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuotationRPT.Designer.vb">
@@ -277,6 +319,12 @@
     <Compile Include="terms.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TRANLABLE.designer.vb">
+      <DependentUpon>TRANLABLE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TRANLABLE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransLogin.Designer.vb">
       <DependentUpon>TransLogin.vb</DependentUpon>
     </Compile>
@@ -327,8 +375,14 @@
     <EmbeddedResource Include="accountsrh.resx">
       <DependentUpon>accountsrh.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ADDRESS.resx">
+      <DependentUpon>ADDRESS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Addressbook.resx">
       <DependentUpon>Addressbook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAEFORM.resx">
+      <DependentUpon>BAEFORM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Builddraftinv.resx">
       <DependentUpon>Builddraftinv.vb</DependentUpon>
@@ -347,6 +401,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="findquote.resx">
       <DependentUpon>findquote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FREEFORM.resx">
+      <DependentUpon>FREEFORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODFORM.resx">
+      <DependentUpon>MODFORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders.resx">
+      <DependentUpon>Orders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PARTLABEL.resx">
+      <DependentUpon>PARTLABEL.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuotationRPT.resx">
       <DependentUpon>QuotationRPT.vb</DependentUpon>
@@ -390,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="terms.resx">
       <DependentUpon>terms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANLABLE.resx">
+      <DependentUpon>TRANLABLE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransLogin.resx">
       <DependentUpon>TransLogin.vb</DependentUpon>
