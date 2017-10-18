@@ -3,8 +3,8 @@
                           ByVal e As System.EventArgs) _
                           Handles addbut.Click
         ' Show the form as a modaless window.
-        Dim x As addressbk.Form1 = New addressbk.Form1
-        x.Show()
+        REM Dim x As address = New address
+        REM x.Show()
     End Sub
 
     Dim ExitYN As System.Windows.Forms.DialogResult

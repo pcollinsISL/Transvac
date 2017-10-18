@@ -1,4 +1,5 @@
-﻿Public Class form1
+﻿Public Class BAEFORM
+
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles rdddt.ValueChanged
 
     End Sub

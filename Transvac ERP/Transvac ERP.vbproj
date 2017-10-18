@@ -408,12 +408,6 @@
     <EmbeddedResource Include="MODFORM.resx">
       <DependentUpon>MODFORM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Orders.resx">
-      <DependentUpon>Orders.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PARTLABEL.resx">
       <DependentUpon>PARTLABEL.vb</DependentUpon>
     </EmbeddedResource>
