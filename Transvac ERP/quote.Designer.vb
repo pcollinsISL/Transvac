@@ -665,7 +665,6 @@ Partial Class quote
         Me.TableAdapterManager.countryTableAdapter = Nothing
         Me.TableAdapterManager.custdiscTableAdapter = Nothing
         Me.TableAdapterManager.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager.enquiryTableAdapter = Nothing
         Me.TableAdapterManager.eventTableAdapter = Nothing
         Me.TableAdapterManager.foxuserTableAdapter = Nothing
         Me.TableAdapterManager.invlineTableAdapter = Nothing
@@ -748,7 +747,7 @@ Partial Class quote
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.ClientSize = New System.Drawing.Size(1443, 730)
+        Me.ClientSize = New System.Drawing.Size(1202, 730)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label8)
