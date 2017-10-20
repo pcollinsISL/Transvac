@@ -6339,8 +6339,8 @@ Partial Public Class TransvacDataV2DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByquote_no(ByVal quote_no As String) As enquiryRow
-            Return CType(Me.Rows.Find(New Object() {quote_no}),enquiryRow)
+        Public Function FindByUniqueID(ByVal UniqueID As Long) As enquiryRow
+            Return CType(Me.Rows.Find(New Object() {UniqueID}),enquiryRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6416,24 +6416,40 @@ Partial Public Class TransvacDataV2DataSet1
             MyBase.Columns.Add(Me.columntimestamp_column)
             Me.columnUniqueID = New Global.System.Data.DataColumn("UniqueID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUniqueID)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnquote_no}, true))
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnUniqueID}, true))
+            Me.columnquote_no.AutoIncrementSeed = -1
+            Me.columnquote_no.AutoIncrementStep = -1
             Me.columnquote_no.AllowDBNull = false
-            Me.columnquote_no.Unique = true
-            Me.columnquote_no.MaxLength = 20
+            Me.columncname.AllowDBNull = false
             Me.columncname.MaxLength = 300
+            Me.columnref_no.AllowDBNull = false
             Me.columnref_no.MaxLength = 300
+            Me.columnstatus.AllowDBNull = false
             Me.columnstatus.MaxLength = 80
+            Me.columnewho.AllowDBNull = false
             Me.columnewho.MaxLength = 80
+            Me.columnaccno.AllowDBNull = false
             Me.columnaccno.MaxLength = 20
+            Me.columnememo.AllowDBNull = false
             Me.columnememo.MaxLength = 2147483647
+            Me.columnship_name.AllowDBNull = false
             Me.columnship_name.MaxLength = 300
+            Me.columnemail.AllowDBNull = false
             Me.columnemail.MaxLength = 300
+            Me.columnmobtel_no.AllowDBNull = false
             Me.columnmobtel_no.MaxLength = 300
+            Me.columnfax_no.AllowDBNull = false
             Me.columnfax_no.MaxLength = 300
+            Me.columntel_no.AllowDBNull = false
             Me.columntel_no.MaxLength = 300
+            Me.columncontact.AllowDBNull = false
             Me.columncontact.MaxLength = 300
+            Me.columnedate.AllowDBNull = false
+            Me.columnetype.AllowDBNull = false
             Me.columnetype.MaxLength = 90
             Me.columntimestamp_column.ReadOnly = true
+            Me.columnUniqueID.AllowDBNull = false
+            Me.columnUniqueID.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -24241,11 +24257,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property cname() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.cnameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'cname' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.cnameColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.cnameColumn) = value
@@ -24256,11 +24268,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ref_no() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.ref_noColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ref_no' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.ref_noColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.ref_noColumn) = value
@@ -24271,11 +24279,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property status() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.statusColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'status' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.statusColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.statusColumn) = value
@@ -24286,11 +24290,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ewho() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.ewhoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ewho' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.ewhoColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.ewhoColumn) = value
@@ -24301,11 +24301,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property accno() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.accnoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'accno' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.accnoColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.accnoColumn) = value
@@ -24316,11 +24312,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ememo() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.ememoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ememo' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.ememoColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.ememoColumn) = value
@@ -24331,11 +24323,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ship_name() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.ship_nameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ship_name' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.ship_nameColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.ship_nameColumn) = value
@@ -24346,11 +24334,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property email() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.emailColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'email' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.emailColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.emailColumn) = value
@@ -24361,11 +24345,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property mobtel_no() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.mobtel_noColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'mobtel_no' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.mobtel_noColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.mobtel_noColumn) = value
@@ -24376,11 +24356,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property fax_no() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.fax_noColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'fax_no' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.fax_noColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.fax_noColumn) = value
@@ -24391,11 +24367,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property tel_no() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.tel_noColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'tel_no' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.tel_noColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.tel_noColumn) = value
@@ -24406,11 +24378,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property contact() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.contactColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'contact' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.contactColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.contactColumn) = value
@@ -24421,11 +24389,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property edate() As Date
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.edateColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'edate' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.edateColumn),Date)
             End Get
             Set
                 Me(Me.tableenquiry.edateColumn) = value
@@ -24436,11 +24400,7 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property etype() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.etypeColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'etype' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.etypeColumn),String)
             End Get
             Set
                 Me(Me.tableenquiry.etypeColumn) = value
@@ -24466,184 +24426,12 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property UniqueID() As Long
             Get
-                Try 
-                    Return CType(Me(Me.tableenquiry.UniqueIDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'UniqueID' in table 'enquiry' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableenquiry.UniqueIDColumn),Long)
             End Get
             Set
                 Me(Me.tableenquiry.UniqueIDColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IscnameNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.cnameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetcnameNull()
-            Me(Me.tableenquiry.cnameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Isref_noNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.ref_noColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setref_noNull()
-            Me(Me.tableenquiry.ref_noColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsstatusNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.statusColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetstatusNull()
-            Me(Me.tableenquiry.statusColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsewhoNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.ewhoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetewhoNull()
-            Me(Me.tableenquiry.ewhoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsaccnoNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.accnoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetaccnoNull()
-            Me(Me.tableenquiry.accnoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsememoNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.ememoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetememoNull()
-            Me(Me.tableenquiry.ememoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Isship_nameNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.ship_nameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setship_nameNull()
-            Me(Me.tableenquiry.ship_nameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsemailNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.emailColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetemailNull()
-            Me(Me.tableenquiry.emailColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Ismobtel_noNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.mobtel_noColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setmobtel_noNull()
-            Me(Me.tableenquiry.mobtel_noColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Isfax_noNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.fax_noColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setfax_noNull()
-            Me(Me.tableenquiry.fax_noColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Istel_noNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.tel_noColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Settel_noNull()
-            Me(Me.tableenquiry.tel_noColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IscontactNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.contactColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetcontactNull()
-            Me(Me.tableenquiry.contactColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsedateNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.edateColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetedateNull()
-            Me(Me.tableenquiry.edateColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsetypeNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.etypeColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetetypeNull()
-            Me(Me.tableenquiry.etypeColumn) = Global.System.Convert.DBNull
-        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -24655,18 +24443,6 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub Settimestamp_columnNull()
             Me(Me.tableenquiry.timestamp_columnColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsUniqueIDNull() As Boolean
-            Return Me.IsNull(Me.tableenquiry.UniqueIDColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetUniqueIDNull()
-            Me(Me.tableenquiry.UniqueIDColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -38155,17 +37931,22 @@ Namespace TransvacDataV2DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("timestamp_column", "timestamp_column")
             tableMapping.ColumnMappings.Add("UniqueID", "UniqueID")
             Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [enquiry] WHERE (([timestamp_column] = @Original_timestamp_column) AN"& _ 
+                "D ([UniqueID] = @Original_UniqueID))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_timestamp_column", Global.System.Data.SqlDbType.Timestamp, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "timestamp_column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [enquiry] ([cname], [ref_no], [quote_no], [ewho], [status], [accno], "& _ 
-                "[ememo], [ship_name], [email], [mobtel_no], [fax_no], [tel_no], [contact], [edat"& _ 
-                "e], [etype], [UniqueID]) VALUES (@cname, @ref_no, @quote_no, @ewho, @status, @ac"& _ 
-                "cno, @ememo, @ship_name, @email, @mobtel_no, @fax_no, @tel_no, @contact, @edate,"& _ 
-                " @etype, @UniqueID)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [enquiry] ([cname], [ref_no], [ewho], [status], [accno], [ememo], [sh"& _ 
+                "ip_name], [email], [mobtel_no], [fax_no], [tel_no], [contact], [edate], [etype],"& _ 
+                " [UniqueID]) VALUES (@cname, @ref_no, @ewho, @status, @accno, @ememo, @ship_name"& _ 
+                ", @email, @mobtel_no, @fax_no, @tel_no, @contact, @edate, @etype, @UniqueID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cname", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ref_no", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ref_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@quote_no", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ewho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ewho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@status", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@accno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "accno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -38181,26 +37962,30 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE       enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                cname = @param1, contact = @param2, ref_"& _ 
-                "no = @param3, tel_no = @param4, fax_no = @param5, mobtel_no = @param6, email = @"& _ 
-                "param7, ship_name = @param8, ememo = @param9, accno = @param10, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
-                "           status = @param11, etype = @param12, ewho = @param13"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (q"& _ 
-                "uote_no = @quote_no)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [enquiry] SET [cname] = @cname, [ref_no] = @ref_no, [ewho] = @ewho, [statu"& _ 
+                "s] = @status, [accno] = @accno, [ememo] = @ememo, [ship_name] = @ship_name, [ema"& _ 
+                "il] = @email, [mobtel_no] = @mobtel_no, [fax_no] = @fax_no, [tel_no] = @tel_no, "& _ 
+                "[contact] = @contact, [edate] = @edate, [etype] = @etype, [UniqueID] = @UniqueID"& _ 
+                " WHERE (([timestamp_column] = @Original_timestamp_column) AND ([UniqueID] = @Ori"& _ 
+                "ginal_UniqueID))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 100, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param2", Global.System.Data.SqlDbType.[Char], 100, Global.System.Data.ParameterDirection.Input, 0, 0, "contact", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param3", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "ref_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param4", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "tel_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param5", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "fax_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param6", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "mobtel_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param7", Global.System.Data.SqlDbType.[Char], 50, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param8", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "ship_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param9", Global.System.Data.SqlDbType.Text, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "ememo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param10", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "accno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param11", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param12", Global.System.Data.SqlDbType.[Char], 15, Global.System.Data.ParameterDirection.Input, 0, 0, "etype", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param13", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "ewho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@quote_no", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cname", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ref_no", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ref_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ewho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ewho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@status", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@accno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "accno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ememo", Global.System.Data.SqlDbType.Text, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ememo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ship_name", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ship_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@email", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mobtel_no", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "mobtel_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fax_no", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fax_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tel_no", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tel_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@contact", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contact", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@edate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "edate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@etype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "etype", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_timestamp_column", Global.System.Data.SqlDbType.Timestamp, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "timestamp_column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -38229,11 +38014,11 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT        accno, cname, contact, edate, email, ememo, etype, ewho, fax_no, mo"& _ 
-                "btel_no, quote_no, ref_no, ship_name, status, tel_no, timestamp_column"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM    "& _ 
-                "        enquiry"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (quote_no LIKE @Param1 + '%')"
+            Me._commandCollection(2).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
+                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no, timestamp_column FROM e"& _ 
+                "nquiry WHERE (quote_no LIKE @Param1 + '%')"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.BigInt, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
@@ -38288,7 +38073,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal PARAM1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (PARAM1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("PARAM1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
@@ -38306,7 +38091,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function GetDataBy(ByVal PARAM1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (PARAM1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("PARAM1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
@@ -38319,13 +38104,9 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByQuoteNO(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillByQuoteNO(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal Param1 As Long) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
-            End If
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Long)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -38337,13 +38118,9 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByQuoteNO(ByVal Param1 As String) As TransvacDataV2DataSet1.enquiryDataTable
+        Public Overloads Overridable Function GetDataByQuoteNO(ByVal Param1 As Long) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
-            End If
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Long)
             Dim dataTable As TransvacDataV2DataSet1.enquiryDataTable = New TransvacDataV2DataSet1.enquiryDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -38356,7 +38133,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function FillBySalePer(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -38374,7 +38151,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function GetDataBySalesPer(ByVal Param1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -38390,7 +38167,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function FillByStatus(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -38408,7 +38185,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function GetDataByStatus(ByVal Param1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
@@ -38424,7 +38201,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function FillByTest(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal PARAM1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(5)
             If (PARAM1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("PARAM1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
@@ -38442,7 +38219,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         Public Overloads Overridable Function GetDataByTest(ByVal PARAM1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(5)
             If (PARAM1 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("PARAM1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
             End If
@@ -38482,104 +38259,101 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_timestamp_column() As Byte, ByVal Original_UniqueID As Long) As Integer
+            If (Original_timestamp_column Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_timestamp_column")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_timestamp_column,Byte())
+            End If
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_UniqueID,Long)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert( _
-                    ByVal cname As String,  _
-                    ByVal ref_no As String,  _
-                    ByVal quote_no As String,  _
-                    ByVal ewho As String,  _
-                    ByVal status As String,  _
-                    ByVal accno As String,  _
-                    ByVal ememo As String,  _
-                    ByVal ship_name As String,  _
-                    ByVal email As String,  _
-                    ByVal mobtel_no As String,  _
-                    ByVal fax_no As String,  _
-                    ByVal tel_no As String,  _
-                    ByVal contact As String,  _
-                    ByVal edate As Global.System.Nullable(Of Date),  _
-                    ByVal etype As String,  _
-                    ByVal UniqueID As Global.System.Nullable(Of Long)) As Integer
+        Public Overloads Overridable Function Insert(ByVal cname As String, ByVal ref_no As String, ByVal ewho As String, ByVal status As String, ByVal accno As String, ByVal ememo As String, ByVal ship_name As String, ByVal email As String, ByVal mobtel_no As String, ByVal fax_no As String, ByVal tel_no As String, ByVal contact As String, ByVal edate As Date, ByVal etype As String, ByVal UniqueID As Long) As Integer
             If (cname Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("cname")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(cname,String)
             End If
             If (ref_no Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("ref_no")
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(ref_no,String)
             End If
-            If (quote_no Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("quote_no")
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(quote_no,String)
-            End If
             If (ewho Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("ewho")
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(ewho,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(ewho,String)
             End If
             If (status Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("status")
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(status,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(status,String)
             End If
             If (accno Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("accno")
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(accno,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(accno,String)
             End If
             If (ememo Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("ememo")
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(ememo,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(ememo,String)
             End If
             If (ship_name Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("ship_name")
             Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(ship_name,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(ship_name,String)
             End If
             If (email Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("email")
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(email,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(email,String)
             End If
             If (mobtel_no Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("mobtel_no")
             Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(mobtel_no,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(mobtel_no,String)
             End If
             If (fax_no Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("fax_no")
             Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(fax_no,String)
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(fax_no,String)
             End If
             If (tel_no Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("tel_no")
             Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(tel_no,String)
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(tel_no,String)
             End If
             If (contact Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("contact")
             Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(contact,String)
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(contact,String)
             End If
-            If (edate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(edate.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(12).Value = CType(edate,Date)
             If (etype Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("etype")
             Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(etype,String)
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(etype,String)
             End If
-            If (UniqueID.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(UniqueID.Value,Long)
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(14).Value = CType(UniqueID,Long)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -38599,77 +38373,97 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal param1 As String, ByVal param2 As String, ByVal param3 As String, ByVal param4 As String, ByVal param5 As String, ByVal param6 As String, ByVal param7 As String, ByVal param8 As String, ByVal param9 As String, ByVal param10 As String, ByVal param11 As String, ByVal param12 As String, ByVal param13 As String, ByVal quote_no As String) As Integer
-            If (param1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+        Public Overloads Overridable Function Update( _
+                    ByVal cname As String,  _
+                    ByVal ref_no As String,  _
+                    ByVal ewho As String,  _
+                    ByVal status As String,  _
+                    ByVal accno As String,  _
+                    ByVal ememo As String,  _
+                    ByVal ship_name As String,  _
+                    ByVal email As String,  _
+                    ByVal mobtel_no As String,  _
+                    ByVal fax_no As String,  _
+                    ByVal tel_no As String,  _
+                    ByVal contact As String,  _
+                    ByVal edate As Date,  _
+                    ByVal etype As String,  _
+                    ByVal UniqueID As Long,  _
+                    ByVal Original_timestamp_column() As Byte,  _
+                    ByVal Original_UniqueID As Long) As Integer
+            If (cname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("cname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(param1,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(cname,String)
             End If
-            If (param2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            If (ref_no Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ref_no")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(param2,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(ref_no,String)
             End If
-            If (param3 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            If (ewho Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ewho")
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(param3,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(ewho,String)
             End If
-            If (param4 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            If (status Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("status")
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(param4,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(status,String)
             End If
-            If (param5 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            If (accno Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("accno")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(param5,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(accno,String)
             End If
-            If (param6 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            If (ememo Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ememo")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(param6,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(ememo,String)
             End If
-            If (param7 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            If (ship_name Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ship_name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(param7,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(ship_name,String)
             End If
-            If (param8 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            If (email Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("email")
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(param8,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(email,String)
             End If
-            If (param9 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            If (mobtel_no Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("mobtel_no")
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(param9,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(mobtel_no,String)
             End If
-            If (param10 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            If (fax_no Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("fax_no")
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(param10,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(fax_no,String)
             End If
-            If (param11 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            If (tel_no Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tel_no")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(param11,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(tel_no,String)
             End If
-            If (param12 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            If (contact Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("contact")
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(param12,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(contact,String)
             End If
-            If (param13 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(edate,Date)
+            If (etype Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("etype")
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(param13,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(etype,String)
             End If
-            If (quote_no Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(UniqueID,Long)
+            If (Original_timestamp_column Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_timestamp_column")
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(quote_no,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_timestamp_column,Byte())
             End If
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_UniqueID,Long)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -38683,6 +38477,30 @@ Namespace TransvacDataV2DataSet1TableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal cname As String,  _
+                    ByVal ref_no As String,  _
+                    ByVal ewho As String,  _
+                    ByVal status As String,  _
+                    ByVal accno As String,  _
+                    ByVal ememo As String,  _
+                    ByVal ship_name As String,  _
+                    ByVal email As String,  _
+                    ByVal mobtel_no As String,  _
+                    ByVal fax_no As String,  _
+                    ByVal tel_no As String,  _
+                    ByVal contact As String,  _
+                    ByVal edate As Date,  _
+                    ByVal etype As String,  _
+                    ByVal Original_timestamp_column() As Byte,  _
+                    ByVal Original_UniqueID As Long) As Integer
+            Return Me.Update(cname, ref_no, ewho, status, accno, ememo, ship_name, email, mobtel_no, fax_no, tel_no, contact, edate, etype, Original_UniqueID, Original_timestamp_column, Original_UniqueID)
         End Function
     End Class
     

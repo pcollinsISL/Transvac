@@ -1,18 +1,27 @@
 ﻿Public Class quote
+    Dim dt As New DataTable
+
     Private Sub TranmemoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.TranmemoBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet)
-
     End Sub
 
     Private Function TranmemoBindingSource() As Object
         Throw New NotImplementedException()
     End Function
-
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
         idcode.Visible = False
+        dt.Columns.Add("qline_no")
+        dt.Columns.Add("quantity")
+        dt.Columns.Add("qpart_no")
+        dt.Columns.Add("qdesc")
+        dt.Columns.Add("qvalue")
+        dt.Columns(0).AutoIncrement = True
+        dt.Columns(0).AutoIncrementStep = 1
+        dt.Columns(0).AutoIncrementSeed = 1
+
 
     End Sub
 
@@ -24,7 +33,7 @@
 
     End Sub
 
-    Private Sub chstock_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+    Private Sub chstock_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ' Show the form as a modaless window.
         Dim x As Inventory = New Inventory
         x.Show()
@@ -58,7 +67,7 @@
 
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) 
+    Private Sub Label8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -96,7 +105,27 @@
     End Sub
 
     Private Sub add_but_Click(sender As Object, e As EventArgs) Handles add_but.Click
+        Dim r As DataRow = dt.NewRow
+        r("quantity") = qty_tb.Text
+        r("qpart_no") = partno_tb.Text
+        r("qdesc") = descrip_tb.Text
+        r("qvalue") = unitprice_tb.Text
+        dt.Rows.Add(r)
+        DataGridView1.DataSource = dt
+    End Sub
 
+    Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) Handles chkstockbtn.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Inventory As New Inventory
+        Inventory.TopLevel = False
+        Inventory.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Inventory)
+        Inventory.Show()
+    End Sub
 
+    Private Sub remline_but_Click(sender As Object, e As EventArgs) Handles remline_but.Click
+        For Each row As DataGridViewRow In DataGridView1.SelectedRows
+            DataGridView1.Rows.Remove(row)
+        Next
     End Sub
 End Class

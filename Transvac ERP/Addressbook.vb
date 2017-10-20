@@ -6,14 +6,12 @@
     End Sub
 
     Private Sub Addressbook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.AddressRecordType' table. You can move, or remove it, as needed.
         Me.AddressRecordTypeTableAdapter.Fill(Me.TransvacDataV2DataSet1.AddressRecordType)
         If ACCOUNTTextBox1.Text = "" Then
             Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
         Else
             Me.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, ACCOUNTTextBox1.Text)
         End If
-
     End Sub
 
     Private Sub newbut_Click(sender As Object, e As EventArgs) Handles newbut.Click
