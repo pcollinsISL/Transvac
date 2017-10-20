@@ -23,24 +23,24 @@ Partial Class OrderForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim OSUPPLIERLabel As System.Windows.Forms.Label
-        Dim OCURRLabel As System.Windows.Forms.Label
-        Dim OSEMAILLabel As System.Windows.Forms.Label
-        Dim OSTELNOLabel As System.Windows.Forms.Label
-        Dim OSFAXNOLabel As System.Windows.Forms.Label
-        Dim OSCONTACTLabel As System.Windows.Forms.Label
-        Dim OSNAMELabel As System.Windows.Forms.Label
-        Dim OHEADERLabel As System.Windows.Forms.Label
-        Dim LODATELabel As System.Windows.Forms.Label
-        Dim LQTYORDLabel As System.Windows.Forms.Label
-        Dim LPRICELabel As System.Windows.Forms.Label
-        Dim LEPRICELabel As System.Windows.Forms.Label
-        Dim LPARTNOLabel As System.Windows.Forms.Label
-        Dim LDESCLabel As System.Windows.Forms.Label
-        Dim LOLINEMEMOLabel2 As System.Windows.Forms.Label
-        Dim Label1 As System.Windows.Forms.Label
-        Dim Label2 As System.Windows.Forms.Label
-        Dim Label3 As System.Windows.Forms.Label
+        Me.OSUPPLIERLabel = New System.Windows.Forms.Label()
+        Me.OCURRLabel = New System.Windows.Forms.Label()
+        Me.OSEMAILLabel = New System.Windows.Forms.Label()
+        Me.OSTELNOLabel = New System.Windows.Forms.Label()
+        Me.OSFAXNOLabel = New System.Windows.Forms.Label()
+        Me.OSCONTACTLabel = New System.Windows.Forms.Label()
+        Me.OSNAMELabel = New System.Windows.Forms.Label()
+        Me.OHEADERLabel = New System.Windows.Forms.Label()
+        Me.LODATELabel = New System.Windows.Forms.Label()
+        Me.LQTYORDLabel = New System.Windows.Forms.Label()
+        Me.LPRICELabel = New System.Windows.Forms.Label()
+        Me.LEPRICELabel = New System.Windows.Forms.Label()
+        Me.LPARTNOLabel = New System.Windows.Forms.Label()
+        Me.LDESCLabel = New System.Windows.Forms.Label()
+        Me.LOLINEMEMOLabel2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.cosupplier = New System.Windows.Forms.TextBox()
         Me.cocurr = New System.Windows.Forms.TextBox()
         Me.cosemail = New System.Windows.Forms.TextBox()
@@ -82,196 +82,180 @@ Partial Class OrderForm
         Me.Button13 = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        OSUPPLIERLabel = New System.Windows.Forms.Label()
-        OCURRLabel = New System.Windows.Forms.Label()
-        OSEMAILLabel = New System.Windows.Forms.Label()
-        OSTELNOLabel = New System.Windows.Forms.Label()
-        OSFAXNOLabel = New System.Windows.Forms.Label()
-        OSCONTACTLabel = New System.Windows.Forms.Label()
-        OSNAMELabel = New System.Windows.Forms.Label()
-        OHEADERLabel = New System.Windows.Forms.Label()
-        LODATELabel = New System.Windows.Forms.Label()
-        LQTYORDLabel = New System.Windows.Forms.Label()
-        LPRICELabel = New System.Windows.Forms.Label()
-        LEPRICELabel = New System.Windows.Forms.Label()
-        LPARTNOLabel = New System.Windows.Forms.Label()
-        LDESCLabel = New System.Windows.Forms.Label()
-        LOLINEMEMOLabel2 = New System.Windows.Forms.Label()
-        Label1 = New System.Windows.Forms.Label()
-        Label2 = New System.Windows.Forms.Label()
-        Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OSUPPLIERLabel
         '
-        OSUPPLIERLabel.AutoSize = True
-        OSUPPLIERLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OSUPPLIERLabel.Location = New System.Drawing.Point(31, 66)
-        OSUPPLIERLabel.Name = "OSUPPLIERLabel"
-        OSUPPLIERLabel.Size = New System.Drawing.Size(68, 13)
-        OSUPPLIERLabel.TabIndex = 1
-        OSUPPLIERLabel.Text = "SUPPLIER"
+        Me.OSUPPLIERLabel.AutoSize = True
+        Me.OSUPPLIERLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OSUPPLIERLabel.Location = New System.Drawing.Point(31, 66)
+        Me.OSUPPLIERLabel.Name = "OSUPPLIERLabel"
+        Me.OSUPPLIERLabel.Size = New System.Drawing.Size(68, 13)
+        Me.OSUPPLIERLabel.TabIndex = 1
+        Me.OSUPPLIERLabel.Text = "SUPPLIER"
         '
         'OCURRLabel
         '
-        OCURRLabel.AutoSize = True
-        OCURRLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OCURRLabel.Location = New System.Drawing.Point(311, 67)
-        OCURRLabel.Name = "OCURRLabel"
-        OCURRLabel.Size = New System.Drawing.Size(75, 13)
-        OCURRLabel.TabIndex = 3
-        OCURRLabel.Text = "CURRENCY"
+        Me.OCURRLabel.AutoSize = True
+        Me.OCURRLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OCURRLabel.Location = New System.Drawing.Point(311, 67)
+        Me.OCURRLabel.Name = "OCURRLabel"
+        Me.OCURRLabel.Size = New System.Drawing.Size(75, 13)
+        Me.OCURRLabel.TabIndex = 3
+        Me.OCURRLabel.Text = "CURRENCY"
         '
         'OSEMAILLabel
         '
-        OSEMAILLabel.AutoSize = True
-        OSEMAILLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OSEMAILLabel.Location = New System.Drawing.Point(31, 105)
-        OSEMAILLabel.Name = "OSEMAILLabel"
-        OSEMAILLabel.Size = New System.Drawing.Size(48, 13)
-        OSEMAILLabel.TabIndex = 5
-        OSEMAILLabel.Text = "E-MAIL"
+        Me.OSEMAILLabel.AutoSize = True
+        Me.OSEMAILLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OSEMAILLabel.Location = New System.Drawing.Point(31, 105)
+        Me.OSEMAILLabel.Name = "OSEMAILLabel"
+        Me.OSEMAILLabel.Size = New System.Drawing.Size(48, 13)
+        Me.OSEMAILLabel.TabIndex = 5
+        Me.OSEMAILLabel.Text = "E-MAIL"
         '
         'OSTELNOLabel
         '
-        OSTELNOLabel.AutoSize = True
-        OSTELNOLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OSTELNOLabel.Location = New System.Drawing.Point(31, 133)
-        OSTELNOLabel.Name = "OSTELNOLabel"
-        OSTELNOLabel.Size = New System.Drawing.Size(81, 13)
-        OSTELNOLabel.TabIndex = 7
-        OSTELNOLabel.Text = "TELEPHONE"
+        Me.OSTELNOLabel.AutoSize = True
+        Me.OSTELNOLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OSTELNOLabel.Location = New System.Drawing.Point(31, 133)
+        Me.OSTELNOLabel.Name = "OSTELNOLabel"
+        Me.OSTELNOLabel.Size = New System.Drawing.Size(81, 13)
+        Me.OSTELNOLabel.TabIndex = 7
+        Me.OSTELNOLabel.Text = "TELEPHONE"
         '
         'OSFAXNOLabel
         '
-        OSFAXNOLabel.AutoSize = True
-        OSFAXNOLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OSFAXNOLabel.Location = New System.Drawing.Point(31, 160)
-        OSFAXNOLabel.Name = "OSFAXNOLabel"
-        OSFAXNOLabel.Size = New System.Drawing.Size(52, 13)
-        OSFAXNOLabel.TabIndex = 9
-        OSFAXNOLabel.Text = "FAX NO"
+        Me.OSFAXNOLabel.AutoSize = True
+        Me.OSFAXNOLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OSFAXNOLabel.Location = New System.Drawing.Point(31, 160)
+        Me.OSFAXNOLabel.Name = "OSFAXNOLabel"
+        Me.OSFAXNOLabel.Size = New System.Drawing.Size(52, 13)
+        Me.OSFAXNOLabel.TabIndex = 9
+        Me.OSFAXNOLabel.Text = "FAX NO"
         '
         'OSCONTACTLabel
         '
-        OSCONTACTLabel.AutoSize = True
-        OSCONTACTLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OSCONTACTLabel.Location = New System.Drawing.Point(31, 189)
-        OSCONTACTLabel.Name = "OSCONTACTLabel"
-        OSCONTACTLabel.Size = New System.Drawing.Size(65, 13)
-        OSCONTACTLabel.TabIndex = 11
-        OSCONTACTLabel.Text = "CONTACT"
+        Me.OSCONTACTLabel.AutoSize = True
+        Me.OSCONTACTLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OSCONTACTLabel.Location = New System.Drawing.Point(31, 189)
+        Me.OSCONTACTLabel.Name = "OSCONTACTLabel"
+        Me.OSCONTACTLabel.Size = New System.Drawing.Size(65, 13)
+        Me.OSCONTACTLabel.TabIndex = 11
+        Me.OSCONTACTLabel.Text = "CONTACT"
         '
         'OSNAMELabel
         '
-        OSNAMELabel.AutoSize = True
-        OSNAMELabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        OSNAMELabel.Location = New System.Drawing.Point(694, 72)
-        OSNAMELabel.Name = "OSNAMELabel"
-        OSNAMELabel.Size = New System.Drawing.Size(66, 13)
-        OSNAMELabel.TabIndex = 13
-        OSNAMELabel.Text = "ADDRESS"
+        Me.OSNAMELabel.AutoSize = True
+        Me.OSNAMELabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OSNAMELabel.Location = New System.Drawing.Point(694, 72)
+        Me.OSNAMELabel.Name = "OSNAMELabel"
+        Me.OSNAMELabel.Size = New System.Drawing.Size(66, 13)
+        Me.OSNAMELabel.TabIndex = 13
+        Me.OSNAMELabel.Text = "ADDRESS"
         '
         'OHEADERLabel
         '
-        OHEADERLabel.AutoSize = True
-        OHEADERLabel.Location = New System.Drawing.Point(31, 247)
-        OHEADERLabel.Name = "OHEADERLabel"
-        OHEADERLabel.Size = New System.Drawing.Size(52, 13)
-        OHEADERLabel.TabIndex = 24
-        OHEADERLabel.Text = "HEADER"
+        Me.OHEADERLabel.AutoSize = True
+        Me.OHEADERLabel.Location = New System.Drawing.Point(31, 247)
+        Me.OHEADERLabel.Name = "OHEADERLabel"
+        Me.OHEADERLabel.Size = New System.Drawing.Size(52, 13)
+        Me.OHEADERLabel.TabIndex = 24
+        Me.OHEADERLabel.Text = "HEADER"
         '
         'LODATELabel
         '
-        LODATELabel.AutoSize = True
-        LODATELabel.Location = New System.Drawing.Point(603, 247)
-        LODATELabel.Name = "LODATELabel"
-        LODATELabel.Size = New System.Drawing.Size(65, 13)
-        LODATELabel.TabIndex = 26
-        LODATELabel.Text = "ORDER NO"
+        Me.LODATELabel.AutoSize = True
+        Me.LODATELabel.Location = New System.Drawing.Point(603, 247)
+        Me.LODATELabel.Name = "LODATELabel"
+        Me.LODATELabel.Size = New System.Drawing.Size(65, 13)
+        Me.LODATELabel.TabIndex = 26
+        Me.LODATELabel.Text = "ORDER NO"
         '
         'LQTYORDLabel
         '
-        LQTYORDLabel.AutoSize = True
-        LQTYORDLabel.Location = New System.Drawing.Point(31, 288)
-        LQTYORDLabel.Name = "LQTYORDLabel"
-        LQTYORDLabel.Size = New System.Drawing.Size(62, 13)
-        LQTYORDLabel.TabIndex = 34
-        LQTYORDLabel.Text = "LQTYORD:"
+        Me.LQTYORDLabel.AutoSize = True
+        Me.LQTYORDLabel.Location = New System.Drawing.Point(31, 288)
+        Me.LQTYORDLabel.Name = "LQTYORDLabel"
+        Me.LQTYORDLabel.Size = New System.Drawing.Size(62, 13)
+        Me.LQTYORDLabel.TabIndex = 34
+        Me.LQTYORDLabel.Text = "LQTYORD:"
         '
         'LPRICELabel
         '
-        LPRICELabel.AutoSize = True
-        LPRICELabel.Location = New System.Drawing.Point(767, 288)
-        LPRICELabel.Name = "LPRICELabel"
-        LPRICELabel.Size = New System.Drawing.Size(77, 13)
-        LPRICELabel.TabIndex = 37
-        LPRICELabel.Text = "UNIT PRICE £"
+        Me.LPRICELabel.AutoSize = True
+        Me.LPRICELabel.Location = New System.Drawing.Point(767, 288)
+        Me.LPRICELabel.Name = "LPRICELabel"
+        Me.LPRICELabel.Size = New System.Drawing.Size(77, 13)
+        Me.LPRICELabel.TabIndex = 37
+        Me.LPRICELabel.Text = "UNIT PRICE £"
         '
         'LEPRICELabel
         '
-        LEPRICELabel.AutoSize = True
-        LEPRICELabel.Location = New System.Drawing.Point(935, 286)
-        LEPRICELabel.Name = "LEPRICELabel"
-        LEPRICELabel.Size = New System.Drawing.Size(110, 13)
-        LEPRICELabel.TabIndex = 39
-        LEPRICELabel.Text = "EXTENDED PRICE £"
+        Me.LEPRICELabel.AutoSize = True
+        Me.LEPRICELabel.Location = New System.Drawing.Point(935, 286)
+        Me.LEPRICELabel.Name = "LEPRICELabel"
+        Me.LEPRICELabel.Size = New System.Drawing.Size(110, 13)
+        Me.LEPRICELabel.TabIndex = 39
+        Me.LEPRICELabel.Text = "EXTENDED PRICE £"
         '
         'LPARTNOLabel
         '
-        LPARTNOLabel.AutoSize = True
-        LPARTNOLabel.Location = New System.Drawing.Point(159, 286)
-        LPARTNOLabel.Name = "LPARTNOLabel"
-        LPARTNOLabel.Size = New System.Drawing.Size(61, 13)
-        LPARTNOLabel.TabIndex = 40
-        LPARTNOLabel.Text = "LPARTNO:"
+        Me.LPARTNOLabel.AutoSize = True
+        Me.LPARTNOLabel.Location = New System.Drawing.Point(159, 286)
+        Me.LPARTNOLabel.Name = "LPARTNOLabel"
+        Me.LPARTNOLabel.Size = New System.Drawing.Size(61, 13)
+        Me.LPARTNOLabel.TabIndex = 40
+        Me.LPARTNOLabel.Text = "LPARTNO:"
         '
         'LDESCLabel
         '
-        LDESCLabel.AutoSize = True
-        LDESCLabel.Location = New System.Drawing.Point(337, 286)
-        LDESCLabel.Name = "LDESCLabel"
-        LDESCLabel.Size = New System.Drawing.Size(45, 13)
-        LDESCLabel.TabIndex = 41
-        LDESCLabel.Text = "LDESC:"
+        Me.LDESCLabel.AutoSize = True
+        Me.LDESCLabel.Location = New System.Drawing.Point(337, 286)
+        Me.LDESCLabel.Name = "LDESCLabel"
+        Me.LDESCLabel.Size = New System.Drawing.Size(45, 13)
+        Me.LDESCLabel.TabIndex = 41
+        Me.LDESCLabel.Text = "LDESC:"
         '
         'LOLINEMEMOLabel2
         '
-        LOLINEMEMOLabel2.AutoSize = True
-        LOLINEMEMOLabel2.Location = New System.Drawing.Point(30, 366)
-        LOLINEMEMOLabel2.Name = "LOLINEMEMOLabel2"
-        LOLINEMEMOLabel2.Size = New System.Drawing.Size(81, 13)
-        LOLINEMEMOLabel2.TabIndex = 54
-        LOLINEMEMOLabel2.Text = "LOLINEMEMO:"
+        Me.LOLINEMEMOLabel2.AutoSize = True
+        Me.LOLINEMEMOLabel2.Location = New System.Drawing.Point(30, 366)
+        Me.LOLINEMEMOLabel2.Name = "LOLINEMEMOLabel2"
+        Me.LOLINEMEMOLabel2.Size = New System.Drawing.Size(81, 13)
+        Me.LOLINEMEMOLabel2.TabIndex = 54
+        Me.LOLINEMEMOLabel2.Text = "LOLINEMEMO:"
         '
         'Label1
         '
-        Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(1034, 244)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(116, 13)
-        Label1.TabIndex = 57
-        Label1.Text = "REQUIRED BY DATE:"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(1034, 244)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(116, 13)
+        Me.Label1.TabIndex = 57
+        Me.Label1.Text = "REQUIRED BY DATE:"
         '
         'Label2
         '
-        Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(1067, 709)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(93, 13)
-        Label2.TabIndex = 91
-        Label2.Text = "ORDER VALUE ="
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(1067, 709)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(93, 13)
+        Me.Label2.TabIndex = 91
+        Me.Label2.Text = "ORDER VALUE ="
         '
         'Label3
         '
-        Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(996, 323)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(75, 13)
-        Label3.TabIndex = 94
-        Label3.Text = "DESC MEMO:"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(996, 323)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 13)
+        Me.Label3.TabIndex = 94
+        Me.Label3.Text = "DESC MEMO:"
         '
         'cosupplier
         '
@@ -595,16 +579,27 @@ Partial Class OrderForm
         Me.ListBox1.Size = New System.Drawing.Size(241, 69)
         Me.ListBox1.TabIndex = 93
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 95
+        Me.PictureBox1.TabStop = False
+        '
         'OrderForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(1266, 740)
-        Me.Controls.Add(Label3)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button13)
-        Me.Controls.Add(Label2)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
@@ -620,49 +615,50 @@ Partial Class OrderForm
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Label1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(LOLINEMEMOLabel2)
+        Me.Controls.Add(Me.LOLINEMEMOLabel2)
         Me.Controls.Add(Me.LOLINEMEMOTextBox2)
         Me.Controls.Add(Me.ORDERNOTextBox)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(LDESCLabel)
+        Me.Controls.Add(Me.LDESCLabel)
         Me.Controls.Add(Me.LDESCTextBox)
-        Me.Controls.Add(LPARTNOLabel)
+        Me.Controls.Add(Me.LPARTNOLabel)
         Me.Controls.Add(Me.LPARTNOTextBox)
-        Me.Controls.Add(LEPRICELabel)
+        Me.Controls.Add(Me.LEPRICELabel)
         Me.Controls.Add(Me.LEPRICETextBox)
-        Me.Controls.Add(LPRICELabel)
+        Me.Controls.Add(Me.LPRICELabel)
         Me.Controls.Add(Me.LPRICETextBox)
-        Me.Controls.Add(LQTYORDLabel)
+        Me.Controls.Add(Me.LQTYORDLabel)
         Me.Controls.Add(Me.LQTYORDTextBox)
-        Me.Controls.Add(LODATELabel)
+        Me.Controls.Add(Me.LODATELabel)
         Me.Controls.Add(Me.LODATEDateTimePicker)
-        Me.Controls.Add(OHEADERLabel)
+        Me.Controls.Add(Me.OHEADERLabel)
         Me.Controls.Add(Me.cOHeader)
         Me.Controls.Add(Me.coadd5)
         Me.Controls.Add(Me.coadd4)
         Me.Controls.Add(Me.coadd3)
         Me.Controls.Add(Me.coadd2)
         Me.Controls.Add(Me.coadd1)
-        Me.Controls.Add(OSNAMELabel)
+        Me.Controls.Add(Me.OSNAMELabel)
         Me.Controls.Add(Me.cosname)
-        Me.Controls.Add(OSCONTACTLabel)
+        Me.Controls.Add(Me.OSCONTACTLabel)
         Me.Controls.Add(Me.coscontact)
-        Me.Controls.Add(OSFAXNOLabel)
+        Me.Controls.Add(Me.OSFAXNOLabel)
         Me.Controls.Add(Me.cosfaxno)
-        Me.Controls.Add(OSTELNOLabel)
+        Me.Controls.Add(Me.OSTELNOLabel)
         Me.Controls.Add(Me.costelno)
-        Me.Controls.Add(OSEMAILLabel)
+        Me.Controls.Add(Me.OSEMAILLabel)
         Me.Controls.Add(Me.cosemail)
-        Me.Controls.Add(OCURRLabel)
+        Me.Controls.Add(Me.OCURRLabel)
         Me.Controls.Add(Me.cocurr)
-        Me.Controls.Add(OSUPPLIERLabel)
+        Me.Controls.Add(Me.OSUPPLIERLabel)
         Me.Controls.Add(Me.cosupplier)
         Me.Name = "OrderForm"
         Me.Text = "Order Form"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -708,4 +704,23 @@ Partial Class OrderForm
     Friend WithEvents Button13 As Button
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents OSUPPLIERLabel As Label
+    Friend WithEvents OCURRLabel As Label
+    Friend WithEvents OSEMAILLabel As Label
+    Friend WithEvents OSTELNOLabel As Label
+    Friend WithEvents OSFAXNOLabel As Label
+    Friend WithEvents OSCONTACTLabel As Label
+    Friend WithEvents OSNAMELabel As Label
+    Friend WithEvents OHEADERLabel As Label
+    Friend WithEvents LODATELabel As Label
+    Friend WithEvents LQTYORDLabel As Label
+    Friend WithEvents LPRICELabel As Label
+    Friend WithEvents LEPRICELabel As Label
+    Friend WithEvents LPARTNOLabel As Label
+    Friend WithEvents LDESCLabel As Label
+    Friend WithEvents LOLINEMEMOLabel2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

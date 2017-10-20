@@ -282,6 +282,12 @@
     <Compile Include="quote.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Quotefdesc.Designer.vb">
+      <DependentUpon>Quotefdesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quotefdesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="quotelist.Designer.vb">
       <DependentUpon>quotelist.vb</DependentUpon>
     </Compile>
@@ -408,6 +414,12 @@
     <EmbeddedResource Include="MODFORM.resx">
       <DependentUpon>MODFORM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders.resx">
+      <DependentUpon>Orders.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PARTLABEL.resx">
       <DependentUpon>PARTLABEL.vb</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="quote.resx">
       <DependentUpon>quote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quotefdesc.resx">
+      <DependentUpon>Quotefdesc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="quotelist.resx">
       <DependentUpon>quotelist.vb</DependentUpon>

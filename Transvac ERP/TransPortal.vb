@@ -45,4 +45,18 @@
         Me.TabControl1.TabPages(5).Controls.Add(Inventory)
         Inventory.Show()
     End Sub
+
+
+    Private Sub orders_but_Click(sender As Object, e As EventArgs) Handles OrdersBTN.Click
+        TabControl1.SelectedTab = TabPage7()
+        Dim quote As New quote
+        OrderForm.TopLevel = False
+        OrderForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.TabControl1.TabPages(6).Controls.Add(OrderForm)
+        OrderForm.Show()
+    End Sub
+
+    Private Function TabPage7() As TabPage
+        Throw New NotImplementedException()
+    End Function
 End Class

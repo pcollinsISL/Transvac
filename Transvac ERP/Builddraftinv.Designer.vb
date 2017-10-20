@@ -787,7 +787,7 @@ Partial Class Builddraftinv
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.ClientSize = New System.Drawing.Size(956, 696)
+        Me.ClientSize = New System.Drawing.Size(1001, 696)
         Me.Controls.Add(Me.CheckBox11)
         Me.Controls.Add(Me.CheckBox10)
         Me.Controls.Add(Me.CheckBox8)
