@@ -90,6 +90,7 @@ Partial Class form1
         Me.Label14 = New System.Windows.Forms.Label()
         Me.NwhoTextBox1 = New System.Windows.Forms.TextBox()
         Me.EntrytypeComboBox = New System.Windows.Forms.ComboBox()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.New_updDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.XcardCheckBox1 = New System.Windows.Forms.CheckBox()
         Me.PROMO = New System.Windows.Forms.CheckBox()
@@ -98,7 +99,6 @@ Partial Class form1
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.TableAdapterManager()
         Me.AddnotesTableAdapter1 = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.addnotesTableAdapter()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.AddnotesTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.addnotesTableAdapter()
         Me.AddnotesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
@@ -119,8 +119,8 @@ Partial Class form1
         CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -734,6 +734,12 @@ Partial Class form1
         Me.EntrytypeComboBox.TabIndex = 200
         Me.EntrytypeComboBox.ValueMember = "AddressRecordType.RecordTypeOld"
         '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'New_updDateTimePicker
         '
         Me.New_updDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tran2BindingSource1, "new_upd", True))
@@ -790,12 +796,6 @@ Partial Class form1
         'AddnotesTableAdapter1
         '
         Me.AddnotesTableAdapter1.ClearBeforeFill = True
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AddnotesTableAdapter
         '
@@ -935,8 +935,8 @@ Partial Class form1
         CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddnotesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddnotesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddressRecordTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

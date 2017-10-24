@@ -1,7 +1,5 @@
 ﻿Public Class findquote
     Private Sub findquote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'EnquiryDataSet.enquiry' table. You can move, or remove it, as needed.
-        REM Me.EnquiryTableAdapter1.Fill(Me.EnquiryDataSet.enquiry)
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerBtn.Click
         Me.EnquiryTableAdapter.FillByName(Me.TransvacDataV2DataSet1.enquiry, CustomerNameBox.Text)
@@ -65,7 +63,7 @@
         enquiry.Fax_noTextBox.Text = EnquiryDataGridView.Item(10, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Tel_noTextBox.Text = EnquiryDataGridView.Item(11, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.ContactTextBox.Text = EnquiryDataGridView.Item(12, EnquiryDataGridView.CurrentRow.Index).Value
-        enquiry.DateCreaTextBox.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.DateTimePicker.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EtypeComboBox.Text = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Show()
         Me.EnquiryBindingSource.EndEdit()
@@ -87,7 +85,7 @@
         enquiry.Fax_noTextBox.Text = EnquiryDataGridView.Item(10, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.Tel_noTextBox.Text = EnquiryDataGridView.Item(11, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.ContactTextBox.Text = EnquiryDataGridView.Item(12, EnquiryDataGridView.CurrentRow.Index).Value
-        enquiry.DateCreaTextBox.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
+        enquiry.DateTimePicker.Text = EnquiryDataGridView.Item(13, EnquiryDataGridView.CurrentRow.Index).Value
         enquiry.EtypeComboBox.Text = EnquiryDataGridView.Item(14, EnquiryDataGridView.CurrentRow.Index).Value
         Me.Hide()
         X.Show()

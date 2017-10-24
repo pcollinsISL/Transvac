@@ -32,7 +32,6 @@
         form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(1).Controls.Add(form1)
         form1.ACCOUNTTextBox1.Text = Tran2DataGridView.Item(1, Tran2DataGridView.CurrentRow.Index).Value
-        REM form1.Tran2TableAdapter.FillByAccountNumber(Me.ADDRESSBKDataSet.tran2, form1.ACCOUNTTextBox1.Text)
         form1.Show()
         Me.Hide()
     End Sub
