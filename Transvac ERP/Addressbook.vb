@@ -151,4 +151,8 @@
     Private Sub NAMETextBox1_TextChanged(sender As Object, e As EventArgs) Handles NAMETextBox1.TextChanged
 
     End Sub
+
+    Private Sub New_updDateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles New_updDateTimePicker.ValueChanged
+
+    End Sub
 End Class

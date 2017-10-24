@@ -26,6 +26,7 @@
         quote.TopLevel = False
         quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
+        quote.qute_tb.Text = qotenoTextBox.Text
         quote.Show()
     End Sub
 
@@ -39,7 +40,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles DateCreaTextBox.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -60,10 +61,12 @@
         If AccnoTextBox.Text = "" Then
             Me.Tran2TableAdapter.ClearBeforeFill = True
             Me.EnquiryTableAdapter.ClearBeforeFill = True
+            EnquiryBindingSource.AddNew()
         Else
             Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet1.tran2, AccnoTextBox.Text)
             Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, qotenoTextBox.Text)
         End If
+
     End Sub
 
     Private Sub Ref_noTextBox_TextChanged(sender As Object, e As EventArgs) Handles Ref_noTextBox.TextChanged
@@ -83,7 +86,7 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        REM New_updDateTimePicker.Value = DateTime.Now
+        DateTimePicker.Value = DateTime.Now
         Me.Validate()
         Me.EnquiryBindingSource.EndEdit()
         Me.Tran2BindingSource.EndEdit()
@@ -93,6 +96,10 @@
     End Sub
 
     Private Sub qotenoTextBox_TextChanged(sender As Object, e As EventArgs) Handles qotenoTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Newbtn_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -502,6 +502,7 @@ Partial Class quote
         Me.TimestampcolumnDataGridViewImageColumn.DataPropertyName = "timestamp_column"
         Me.TimestampcolumnDataGridViewImageColumn.HeaderText = "timestamp_column"
         Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
+        Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
         Me.TimestampcolumnDataGridViewImageColumn.Visible = False
         '
         'QuotesufDataGridViewTextBoxColumn

@@ -69,7 +69,6 @@ Partial Class enquiry
         Me.Btnquote = New System.Windows.Forms.Button()
         Me.qotenoLabel = New System.Windows.Forms.Label()
         Me.qotenoTextBox = New System.Windows.Forms.TextBox()
-        Me.DateCreaTextBox = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
         Me.AccountTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.accountTableAdapter()
@@ -81,6 +80,7 @@ Partial Class enquiry
         Me.TransvacDataV2DataSet11 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TransvacDataV2DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddressRecordTypeTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter()
+        Me.DateTimePicker = New System.Windows.Forms.DateTimePicker()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,7 +94,7 @@ Partial Class enquiry
         'EdateLabel
         '
         Me.EdateLabel.AutoSize = True
-        Me.EdateLabel.Location = New System.Drawing.Point(565, 123)
+        Me.EdateLabel.Location = New System.Drawing.Point(429, 129)
         Me.EdateLabel.Name = "EdateLabel"
         Me.EdateLabel.Size = New System.Drawing.Size(73, 13)
         Me.EdateLabel.TabIndex = 1
@@ -490,14 +490,6 @@ Partial Class enquiry
         Me.qotenoTextBox.Size = New System.Drawing.Size(79, 20)
         Me.qotenoTextBox.TabIndex = 73
         '
-        'DateCreaTextBox
-        '
-        Me.DateCreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "edate", True))
-        Me.DateCreaTextBox.Location = New System.Drawing.Point(685, 117)
-        Me.DateCreaTextBox.Name = "DateCreaTextBox"
-        Me.DateCreaTextBox.Size = New System.Drawing.Size(79, 20)
-        Me.DateCreaTextBox.TabIndex = 52
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
@@ -605,18 +597,26 @@ Partial Class enquiry
         '
         Me.AddressRecordTypeTableAdapter.ClearBeforeFill = True
         '
+        'DateTimePicker
+        '
+        Me.DateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EnquiryBindingSource, "edate", True))
+        Me.DateTimePicker.Location = New System.Drawing.Point(506, 123)
+        Me.DateTimePicker.Name = "DateTimePicker"
+        Me.DateTimePicker.Size = New System.Drawing.Size(258, 20)
+        Me.DateTimePicker.TabIndex = 77
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(813, 640)
+        Me.Controls.Add(Me.DateTimePicker)
         Me.Controls.Add(Me.AcctComboBox)
         Me.Controls.Add(Me.qotenoTextBox)
         Me.Controls.Add(Me.qotenoLabel)
         Me.Controls.Add(Me.Btnquote)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.DateCreaTextBox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.termsTextBox)
         Me.Controls.Add(Me.Label2)
@@ -704,7 +704,6 @@ Partial Class enquiry
     Friend WithEvents Tran2TableAdapter As TransvacDataV2DataSet1TableAdapters.tran2TableAdapter
     Friend WithEvents AccountTableAdapter1 As TransvacDataV2DataSet1TableAdapters.accountTableAdapter
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
-    Friend WithEvents DateCreaTextBox As TextBox
     Friend WithEvents EdateLabel As Label
     Friend WithEvents CnameLabel As Label
     Friend WithEvents ContactLabel As Label
@@ -729,4 +728,5 @@ Partial Class enquiry
     Friend WithEvents TransvacDataV2DataSet11BindingSource As BindingSource
     Friend WithEvents AddressRecordTypeBindingSource As BindingSource
     Friend WithEvents AddressRecordTypeTableAdapter As TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter
+    Friend WithEvents DateTimePicker As DateTimePicker
 End Class

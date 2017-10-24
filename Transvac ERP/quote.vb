@@ -21,8 +21,10 @@
         dt.Columns(0).AutoIncrement = True
         dt.Columns(0).AutoIncrementStep = 1
         dt.Columns(0).AutoIncrementSeed = 1
+        If SuffixTB.Text = "" Then
+            SuffixTB.Text = "01"
 
-
+        End If
     End Sub
 
     Private Function TranmemoTableAdapter() As Object
@@ -127,5 +129,14 @@
         For Each row As DataGridViewRow In DataGridView1.SelectedRows
             DataGridView1.Rows.Remove(row)
         Next
+    End Sub
+
+    Private Sub sve_but_Click(sender As Object, e As EventArgs) Handles sve_but.Click
+        Me.Validate()
+        Me.QuoteheadBindingSource.EndEdit()
+        Me.QuotedetailBindingSource.EndEdit()
+        Me.QuoteheadTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        MsgBox("Save Sucsesful")
     End Sub
 End Class
