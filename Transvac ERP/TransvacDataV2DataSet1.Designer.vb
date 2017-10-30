@@ -52377,14 +52377,14 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qinits", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "qinits", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE       quotehead"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                quote_no = @quote_no, quote_suf = @quo"& _ 
-                "te_suf, qdate = @qdate, qheader = @qheader, qmemo1 = @qmemo1, qmemo2 = @qmemo2, "& _ 
-                "qmemo3 = @qmemo3, qmemo4 = @qmemo4, qdisc = @qdisc, qwho = @qwho, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
-                "             qinits = @qinits; "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT quote_no, quote_suf, qdate, qheader, qme"& _ 
-                "mo1, qmemo2, qmemo3, qmemo4, qdisc, qwho, qinits, timestamp_column, UniqueID FRO"& _ 
-                "M quotehead WHERE (UniqueID = @UniqueID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       quotehead"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                quote_no = @param1, quote_suf = @quote"& _ 
+                "_suf, qdate = @qdate, qheader = @qheader, qmemo1 = @qmemo1, qmemo2 = @qmemo2, qm"& _ 
+                "emo3 = @qmemo3, qmemo4 = @qmemo4, qdisc = @qdisc, qwho = @qwho, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "           qinits = @qinits;  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT quote_no, quote_suf, qdate, qheader, qmem"& _ 
+                "o1, qmemo2, qmemo3, qmemo4, qdisc, qwho, qinits, timestamp_column, UniqueID FROM"& _ 
+                " quotehead WHERE (UniqueID = @UniqueID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@quote_no", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@quote_suf", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_suf", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qdate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "qdate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qheader", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "qheader", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -52635,11 +52635,11 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal quote_no As String, ByVal quote_suf As String, ByVal qdate As Date, ByVal qheader As String, ByVal qmemo1 As String, ByVal qmemo2 As String, ByVal qmemo3 As String, ByVal qmemo4 As String, ByVal qdisc As Boolean, ByVal qwho As String, ByVal qinits As String, ByVal UniqueID As Long) As Integer
-            If (quote_no Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("quote_no")
+        Public Overloads Overridable Function Update(ByVal param1 As String, ByVal quote_suf As String, ByVal qdate As Date, ByVal qheader As String, ByVal qmemo1 As String, ByVal qmemo2 As String, ByVal qmemo3 As String, ByVal qmemo4 As String, ByVal qdisc As Boolean, ByVal qwho As String, ByVal qinits As String, ByVal UniqueID As Long) As Integer
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(quote_no,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(param1,String)
             End If
             If (quote_suf Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("quote_suf")
@@ -55811,7 +55811,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT pcode, psupplier, descriptn, minstock, minorder, ifmemo, idupdate, idcode,"& _ 
@@ -55822,10 +55822,18 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT        descriptn, pcode, psupplier, minstock, minorder, ifmemo, idcode, nw"& _ 
                 "ho, idupdate, inuse, descmemo, memodate, obsolete, obmessage, timestamp_column, "& _ 
+                "ccode, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            trandesc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE         (descriptn LIKE @Param1"& _ 
+                " + '%')"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "descriptn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT        descriptn, pcode, psupplier, minstock, minorder, ifmemo, idcode, nw"& _ 
+                "ho, idupdate, inuse, descmemo, memodate, obsolete, obmessage, timestamp_column, "& _ 
                 "ccode, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            trandesc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE         (pcode LIKE @Param1 + '"& _ 
                 "%')"
-            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "pcode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "pcode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -55856,7 +55864,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByPcode(ByVal dataTable As TransvacDataV2DataSet1.trandescDataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillByDesc(ByVal dataTable As TransvacDataV2DataSet1.trandescDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
@@ -55874,8 +55882,42 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByPcode(ByVal Param1 As String) As TransvacDataV2DataSet1.trandescDataTable
+        Public Overloads Overridable Function GetDataByDesc(ByVal Param1 As String) As TransvacDataV2DataSet1.trandescDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            Dim dataTable As TransvacDataV2DataSet1.trandescDataTable = New TransvacDataV2DataSet1.trandescDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByPcode(ByVal dataTable As TransvacDataV2DataSet1.trandescDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByPcode(ByVal Param1 As String) As TransvacDataV2DataSet1.trandescDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else

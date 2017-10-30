@@ -11,6 +11,7 @@
         Throw New NotImplementedException()
     End Function
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        QuoteheadBindingSource.AddNew()
         Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
         idcode.Visible = False
         dt.Columns.Add("qline_no")
@@ -23,7 +24,6 @@
         dt.Columns(0).AutoIncrementSeed = 1
         If SuffixTB.Text = "" Then
             SuffixTB.Text = "01"
-
         End If
     End Sub
 
@@ -66,7 +66,13 @@
     End Sub
 
     Private Sub fnd_but_Click(sender As Object, e As EventArgs) Handles fndesc_but.Click
-
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage5
+        Dim quotefdesc As New Quotefdesc
+        quotefdesc.TopLevel = False
+        quotefdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(4).Controls.Add(quotefdesc)
+        quotefdesc.Show()
+        Me.Close()
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs)

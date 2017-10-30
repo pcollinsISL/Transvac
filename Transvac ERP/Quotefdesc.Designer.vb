@@ -27,17 +27,20 @@ Partial Class Quotefdesc
         Me.acctextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.acctabt_but = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.PcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PsupplierDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,25 +71,34 @@ Partial Class Quotefdesc
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PcodeDataGridViewTextBoxColumn, Me.PsupplierDataGridViewTextBoxColumn, Me.DescriptnDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TrandescBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(63, 154)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(536, 273)
         Me.DataGridView1.TabIndex = 7
+        '
+        'TrandescBindingSource
+        '
+        Me.TrandescBindingSource.DataMember = "trandesc"
+        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        '
+        'TransvacDataV2DataSet1BindingSource
+        '
+        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.TransvacDataV2DataSet1BindingSource.Position = 0
         '
         'TransvacDataV2DataSet1
         '
         Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
         Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TransvacDataV2DataSet1BindingSource
-        '
-        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
-        Me.TransvacDataV2DataSet1BindingSource.Position = 0
         '
         'PictureBox1
         '
@@ -116,32 +128,33 @@ Partial Class Quotefdesc
         Me.acctabt_but.Text = "ABORT"
         Me.acctabt_but.UseVisualStyleBackColor = True
         '
-        'Label2
+        'TrandescTableAdapter
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(62, 154)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 13)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "PART NUMBER"
+        Me.TrandescTableAdapter.ClearBeforeFill = True
         '
-        'Label3
+        'PcodeDataGridViewTextBoxColumn
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(314, 154)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 13)
-        Me.Label3.TabIndex = 14
-        Me.Label3.Text = "DESCRIPTION"
+        Me.PcodeDataGridViewTextBoxColumn.DataPropertyName = "pcode"
+        Me.PcodeDataGridViewTextBoxColumn.HeaderText = "Part Code"
+        Me.PcodeDataGridViewTextBoxColumn.MinimumWidth = 50
+        Me.PcodeDataGridViewTextBoxColumn.Name = "PcodeDataGridViewTextBoxColumn"
+        Me.PcodeDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'Label4
+        'PsupplierDataGridViewTextBoxColumn
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(192, 154)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 13)
-        Me.Label4.TabIndex = 15
-        Me.Label4.Text = "SUPPLIER"
+        Me.PsupplierDataGridViewTextBoxColumn.DataPropertyName = "psupplier"
+        Me.PsupplierDataGridViewTextBoxColumn.HeaderText = "Supplier"
+        Me.PsupplierDataGridViewTextBoxColumn.Name = "PsupplierDataGridViewTextBoxColumn"
+        Me.PsupplierDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescriptnDataGridViewTextBoxColumn
+        '
+        Me.DescriptnDataGridViewTextBoxColumn.DataPropertyName = "descriptn"
+        Me.DescriptnDataGridViewTextBoxColumn.FillWeight = 1000.0!
+        Me.DescriptnDataGridViewTextBoxColumn.HeaderText = "Descripton"
+        Me.DescriptnDataGridViewTextBoxColumn.Name = "DescriptnDataGridViewTextBoxColumn"
+        Me.DescriptnDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescriptnDataGridViewTextBoxColumn.Width = 400
         '
         'Quotefdesc
         '
@@ -149,9 +162,6 @@ Partial Class Quotefdesc
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaGreen
         Me.ClientSize = New System.Drawing.Size(661, 502)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.acctabt_but)
         Me.Controls.Add(Me.PictureBox1)
@@ -162,8 +172,9 @@ Partial Class Quotefdesc
         Me.Name = "Quotefdesc"
         Me.Text = "Quotefdesc"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -179,7 +190,9 @@ Partial Class Quotefdesc
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents acctabt_but As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents TrandescBindingSource As BindingSource
+    Friend WithEvents TrandescTableAdapter As TransvacDataV2DataSet1TableAdapters.trandescTableAdapter
+    Friend WithEvents PcodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PsupplierDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescriptnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
