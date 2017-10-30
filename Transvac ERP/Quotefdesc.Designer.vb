@@ -27,8 +27,8 @@ Partial Class Quotefdesc
         Me.acctextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TransvacDataV2DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.acctabt_but = New System.Windows.Forms.Button()
@@ -36,8 +36,8 @@ Partial Class Quotefdesc
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,16 +77,16 @@ Partial Class Quotefdesc
         Me.DataGridView1.Size = New System.Drawing.Size(536, 273)
         Me.DataGridView1.TabIndex = 7
         '
+        'TransvacDataV2DataSet1BindingSource
+        '
+        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.TransvacDataV2DataSet1BindingSource.Position = 0
+        '
         'TransvacDataV2DataSet1
         '
         Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
         Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TransvacDataV2DataSet1BindingSource
-        '
-        Me.TransvacDataV2DataSet1BindingSource.DataSource = Me.TransvacDataV2DataSet1
-        Me.TransvacDataV2DataSet1BindingSource.Position = 0
         '
         'PictureBox1
         '
@@ -148,7 +148,7 @@ Partial Class Quotefdesc
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaGreen
-        Me.ClientSize = New System.Drawing.Size(661, 502)
+        Me.ClientSize = New System.Drawing.Size(646, 502)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -162,8 +162,8 @@ Partial Class Quotefdesc
         Me.Name = "Quotefdesc"
         Me.Text = "Quotefdesc"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

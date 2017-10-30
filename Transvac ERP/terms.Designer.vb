@@ -27,13 +27,14 @@ Partial Class Terms
         Me.termssve_but = New System.Windows.Forms.Button()
         Me.termsabt_but = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.OrddetailTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.orddetailTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'terms_tb
         '
         Me.terms_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.terms_tb.Location = New System.Drawing.Point(54, 55)
+        Me.terms_tb.Location = New System.Drawing.Point(54, 52)
         Me.terms_tb.Multiline = True
         Me.terms_tb.Name = "terms_tb"
         Me.terms_tb.Size = New System.Drawing.Size(857, 533)
@@ -68,6 +69,10 @@ Partial Class Terms
         Me.PictureBox1.TabIndex = 38
         Me.PictureBox1.TabStop = False
         '
+        'OrddetailTableAdapter1
+        '
+        Me.OrddetailTableAdapter1.ClearBeforeFill = True
+        '
         'Terms
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -90,4 +95,5 @@ Partial Class Terms
     Friend WithEvents termssve_but As Button
     Friend WithEvents termsabt_but As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents OrddetailTableAdapter1 As TransvacDataV2DataSet1TableAdapters.orddetailTableAdapter
 End Class

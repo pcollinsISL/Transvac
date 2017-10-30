@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="terms_tb.Text" xml:space="preserve">
-    <value>Prices exclude charges for VAT, Packing &amp; Carriage
+    <value>Please note that any quotation for any parts listed above is subject to confirmation of both vessel name and IMO number. 
+Any guarantee/warranty that may be offered on the parts quoted is invalid unless you advise the vessel name and IMO number of the vessel with your order.
+
+Prices exclude charges for VAT, Packing &amp; Carriage
 
 Carriage and Packing will be charged at cost, and can only be confirmed after receipt of firm and final delivery address.
 
@@ -141,4 +144,7 @@ Charges are as follows:
 Please note that Transvac Systems terms and conditions will apply to any resulting order to the exclusion of customer terms, except following negotiation and agreement.
 </value>
   </data>
+  <metadata name="OrddetailTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
