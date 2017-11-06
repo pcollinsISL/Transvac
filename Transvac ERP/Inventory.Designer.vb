@@ -658,7 +658,7 @@ Partial Class Inventory
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IicodeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn})
         Me.DataGridView1.Location = New System.Drawing.Point(34, 218)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1143, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(1124, 150)
         Me.DataGridView1.TabIndex = 191
         '
         'PsupplierTextBox1

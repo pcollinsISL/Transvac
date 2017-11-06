@@ -7,6 +7,10 @@
         Me.TrandescTableAdapter.FillByDesc(Me.TransvacDataV2DataSet1.trandesc, acctextBox.Text)
     End Sub
 
+    Private Function TrandescTableAdapter() As Object
+        Throw New NotImplementedException()
+    End Function
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim quote As New quote
         TransPortal.TabControl1.SelectedTab = TransPortal.TabPage4
