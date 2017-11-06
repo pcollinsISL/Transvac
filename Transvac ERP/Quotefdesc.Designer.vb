@@ -160,7 +160,7 @@ Partial Class Quotefdesc
         Me.Controls.Add(Me.acctextBox)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Quotefdesc"
-        Me.Text = "Quotefdesc"
+        Me.Text = "Quote Find Description"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()

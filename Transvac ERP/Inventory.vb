@@ -31,4 +31,19 @@
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles markup_but.Click
 
     End Sub
+
+    Private Sub newdesc_but_Click(sender As Object, e As EventArgs) Handles newdesc_but.Click
+        Dim x As invnewdesc = New invnewdesc
+        x.Show()
+    End Sub
+
+    Private Sub editdesc_but_Click(sender As Object, e As EventArgs) Handles editdesc_but.Click
+        Dim x As inveditdesc = New inveditdesc
+        x.Show()
+    End Sub
+
+    Private Sub findesc_but_Click(sender As Object, e As EventArgs) Handles findesc_but.Click
+        Dim x As Invfdesc = New Invfdesc
+        x.Show()
+    End Sub
 End Class

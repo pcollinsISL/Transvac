@@ -195,6 +195,18 @@
     <Compile Include="enquiry.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="inveditdesc.Designer.vb">
+      <DependentUpon>inveditdesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inveditdesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invfdesc.Designer.vb">
+      <DependentUpon>Invfdesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Invfdesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="findquote.Designer.vb">
       <DependentUpon>findquote.vb</DependentUpon>
     </Compile>
@@ -205,6 +217,12 @@
       <DependentUpon>FREEFORM.vb</DependentUpon>
     </Compile>
     <Compile Include="FREEFORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invnewdesc.Designer.vb">
+      <DependentUpon>invnewdesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invnewdesc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODFORM.designer.vb">
@@ -405,11 +423,20 @@
     <EmbeddedResource Include="enquiry.resx">
       <DependentUpon>enquiry.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="inveditdesc.resx">
+      <DependentUpon>inveditdesc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invfdesc.resx">
+      <DependentUpon>Invfdesc.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="findquote.resx">
       <DependentUpon>findquote.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FREEFORM.resx">
       <DependentUpon>FREEFORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invnewdesc.resx">
+      <DependentUpon>invnewdesc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODFORM.resx">
       <DependentUpon>MODFORM.vb</DependentUpon>
