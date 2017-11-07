@@ -44,7 +44,6 @@ Partial Class Inventory
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
         Me.ListView2 = New System.Windows.Forms.ListView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -85,55 +84,59 @@ Partial Class Inventory
         Me.Label10 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PsupplierTextBox1 = New System.Windows.Forms.TextBox()
+        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.PcodeTextBox1 = New System.Windows.Forms.TextBox()
         Me.DescriptnTextBox1 = New System.Windows.Forms.TextBox()
         Me.IdcodeTextBox = New System.Windows.Forms.TextBox()
         Me.MinstockTextBox = New System.Windows.Forms.TextBox()
         Me.MinorderTextBox = New System.Windows.Forms.TextBox()
-        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SnwhoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RectypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IiupdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IicodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CurrcycdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnitvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantybinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PcodeLook = New System.Windows.Forms.Button()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.TrandescBindingSource1BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.TrandescBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.idcode = New System.Windows.Forms.TextBox()
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
+        Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantybinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnitvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurrcycdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IicodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IiupdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RectypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SnwhoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         DescriptnLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TrandescBindingSource1BindingNavigator.SuspendLayout()
+        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DescriptnLabel
@@ -315,13 +318,6 @@ Partial Class Inventory
         Me.Label15.Size = New System.Drawing.Size(58, 13)
         Me.Label15.TabIndex = 70
         Me.Label15.Text = "BIN CODE"
-        '
-        'VScrollBar2
-        '
-        Me.VScrollBar2.Location = New System.Drawing.Point(1180, 218)
-        Me.VScrollBar2.Name = "VScrollBar2"
-        Me.VScrollBar2.Size = New System.Drawing.Size(20, 150)
-        Me.VScrollBar2.TabIndex = 68
         '
         'ListView2
         '
@@ -566,6 +562,7 @@ Partial Class Inventory
         '
         'TextBox3
         '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "descmemo", True))
         Me.TextBox3.Location = New System.Drawing.Point(673, 560)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
@@ -654,10 +651,15 @@ Partial Class Inventory
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IicodeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IicodeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TranbinsBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(34, 218)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(1124, 150)
         Me.DataGridView1.TabIndex = 191
         '
@@ -668,6 +670,17 @@ Partial Class Inventory
         Me.PsupplierTextBox1.Name = "PsupplierTextBox1"
         Me.PsupplierTextBox1.Size = New System.Drawing.Size(100, 20)
         Me.PsupplierTextBox1.TabIndex = 192
+        '
+        'TrandescBindingSource1
+        '
+        Me.TrandescBindingSource1.DataMember = "trandesc"
+        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PcodeTextBox1
         '
@@ -694,6 +707,7 @@ Partial Class Inventory
         '
         'MinstockTextBox
         '
+        Me.MinstockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minstock", True))
         Me.MinstockTextBox.Location = New System.Drawing.Point(980, 147)
         Me.MinstockTextBox.Name = "MinstockTextBox"
         Me.MinstockTextBox.Size = New System.Drawing.Size(66, 20)
@@ -701,113 +715,11 @@ Partial Class Inventory
         '
         'MinorderTextBox
         '
+        Me.MinorderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minorder", True))
         Me.MinorderTextBox.Location = New System.Drawing.Point(980, 119)
         Me.MinorderTextBox.Name = "MinorderTextBox"
         Me.MinorderTextBox.Size = New System.Drawing.Size(66, 20)
         Me.MinorderTextBox.TabIndex = 197
-        '
-        'UniqueIDDataGridViewTextBoxColumn
-        '
-        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
-        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
-        '
-        'WqtyDataGridViewTextBoxColumn
-        '
-        Me.WqtyDataGridViewTextBoxColumn.DataPropertyName = "wqty"
-        Me.WqtyDataGridViewTextBoxColumn.HeaderText = "wqty"
-        Me.WqtyDataGridViewTextBoxColumn.Name = "WqtyDataGridViewTextBoxColumn"
-        '
-        'WeightDataGridViewTextBoxColumn
-        '
-        Me.WeightDataGridViewTextBoxColumn.DataPropertyName = "weight"
-        Me.WeightDataGridViewTextBoxColumn.HeaderText = "weight"
-        Me.WeightDataGridViewTextBoxColumn.Name = "WeightDataGridViewTextBoxColumn"
-        '
-        'SinuseDataGridViewTextBoxColumn
-        '
-        Me.SinuseDataGridViewTextBoxColumn.DataPropertyName = "sinuse"
-        Me.SinuseDataGridViewTextBoxColumn.HeaderText = "sinuse"
-        Me.SinuseDataGridViewTextBoxColumn.Name = "SinuseDataGridViewTextBoxColumn"
-        Me.SinuseDataGridViewTextBoxColumn.Visible = False
-        '
-        'SnwhoDataGridViewTextBoxColumn
-        '
-        Me.SnwhoDataGridViewTextBoxColumn.DataPropertyName = "snwho"
-        Me.SnwhoDataGridViewTextBoxColumn.HeaderText = "snwho"
-        Me.SnwhoDataGridViewTextBoxColumn.Name = "SnwhoDataGridViewTextBoxColumn"
-        Me.SnwhoDataGridViewTextBoxColumn.Visible = False
-        '
-        'RectypeDataGridViewTextBoxColumn
-        '
-        Me.RectypeDataGridViewTextBoxColumn.DataPropertyName = "rec_type"
-        Me.RectypeDataGridViewTextBoxColumn.HeaderText = "rec_type"
-        Me.RectypeDataGridViewTextBoxColumn.Name = "RectypeDataGridViewTextBoxColumn"
-        Me.RectypeDataGridViewTextBoxColumn.Visible = False
-        '
-        'AllocDataGridViewTextBoxColumn
-        '
-        Me.AllocDataGridViewTextBoxColumn.DataPropertyName = "alloc"
-        Me.AllocDataGridViewTextBoxColumn.HeaderText = "alloc"
-        Me.AllocDataGridViewTextBoxColumn.Name = "AllocDataGridViewTextBoxColumn"
-        Me.AllocDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AllocDataGridViewTextBoxColumn.Visible = False
-        '
-        'IiupdateDataGridViewTextBoxColumn
-        '
-        Me.IiupdateDataGridViewTextBoxColumn.DataPropertyName = "iiupdate"
-        Me.IiupdateDataGridViewTextBoxColumn.HeaderText = "iiupdate"
-        Me.IiupdateDataGridViewTextBoxColumn.Name = "IiupdateDataGridViewTextBoxColumn"
-        '
-        'IicodeDataGridViewTextBoxColumn
-        '
-        Me.IicodeDataGridViewTextBoxColumn.DataPropertyName = "iicode"
-        Me.IicodeDataGridViewTextBoxColumn.HeaderText = "iicode"
-        Me.IicodeDataGridViewTextBoxColumn.Name = "IicodeDataGridViewTextBoxColumn"
-        '
-        'CatalogdtDataGridViewTextBoxColumn
-        '
-        Me.CatalogdtDataGridViewTextBoxColumn.DataPropertyName = "catalog_dt"
-        Me.CatalogdtDataGridViewTextBoxColumn.HeaderText = "catalog_dt"
-        Me.CatalogdtDataGridViewTextBoxColumn.Name = "CatalogdtDataGridViewTextBoxColumn"
-        '
-        'CurrcycdeDataGridViewTextBoxColumn
-        '
-        Me.CurrcycdeDataGridViewTextBoxColumn.DataPropertyName = "currcy_cde"
-        Me.CurrcycdeDataGridViewTextBoxColumn.HeaderText = "currcy_cde"
-        Me.CurrcycdeDataGridViewTextBoxColumn.Name = "CurrcycdeDataGridViewTextBoxColumn"
-        '
-        'UnitvalueDataGridViewTextBoxColumn
-        '
-        Me.UnitvalueDataGridViewTextBoxColumn.DataPropertyName = "unit_value"
-        Me.UnitvalueDataGridViewTextBoxColumn.HeaderText = "unit_value"
-        Me.UnitvalueDataGridViewTextBoxColumn.Name = "UnitvalueDataGridViewTextBoxColumn"
-        '
-        'QuantybinDataGridViewTextBoxColumn
-        '
-        Me.QuantybinDataGridViewTextBoxColumn.DataPropertyName = "quantybin"
-        Me.QuantybinDataGridViewTextBoxColumn.HeaderText = "quantybin"
-        Me.QuantybinDataGridViewTextBoxColumn.Name = "QuantybinDataGridViewTextBoxColumn"
-        '
-        'AssuredDataGridViewTextBoxColumn
-        '
-        Me.AssuredDataGridViewTextBoxColumn.DataPropertyName = "assured"
-        Me.AssuredDataGridViewTextBoxColumn.HeaderText = "assured"
-        Me.AssuredDataGridViewTextBoxColumn.Name = "AssuredDataGridViewTextBoxColumn"
-        '
-        'SourcecdeDataGridViewTextBoxColumn
-        '
-        Me.SourcecdeDataGridViewTextBoxColumn.DataPropertyName = "sourcecde"
-        Me.SourcecdeDataGridViewTextBoxColumn.HeaderText = "sourcecde"
-        Me.SourcecdeDataGridViewTextBoxColumn.Name = "SourcecdeDataGridViewTextBoxColumn"
-        '
-        'LocatebinDataGridViewTextBoxColumn
-        '
-        Me.LocatebinDataGridViewTextBoxColumn.DataPropertyName = "locatebin"
-        Me.LocatebinDataGridViewTextBoxColumn.HeaderText = "locatebin"
-        Me.LocatebinDataGridViewTextBoxColumn.Name = "LocatebinDataGridViewTextBoxColumn"
         '
         'PcodeLook
         '
@@ -817,17 +729,7 @@ Partial Class Inventory
         Me.PcodeLook.TabIndex = 198
         Me.PcodeLook.Text = "PcodeLook"
         Me.PcodeLook.UseVisualStyleBackColor = True
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TrandescBindingSource1
-        '
-        Me.TrandescBindingSource1.DataMember = "trandesc"
-        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
+        Me.PcodeLook.Visible = False
         '
         'TrandescTableAdapter1
         '
@@ -899,6 +801,31 @@ Partial Class Inventory
         Me.TrandescBindingSource1BindingNavigator.TabIndex = 199
         Me.TrandescBindingSource1BindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -931,16 +858,9 @@ Partial Class Inventory
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -963,26 +883,8 @@ Partial Class Inventory
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'TrandescBindingSource1BindingNavigatorSaveItem
         '
@@ -992,6 +894,141 @@ Partial Class Inventory
         Me.TrandescBindingSource1BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.TrandescBindingSource1BindingNavigatorSaveItem.Text = "Save Data"
         '
+        'idcode
+        '
+        Me.idcode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "idcode", True))
+        Me.idcode.Location = New System.Drawing.Point(347, 129)
+        Me.idcode.Name = "idcode"
+        Me.idcode.Size = New System.Drawing.Size(79, 20)
+        Me.idcode.TabIndex = 200
+        '
+        'TranbinsBindingSource
+        '
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
+        'LocatebinDataGridViewTextBoxColumn
+        '
+        Me.LocatebinDataGridViewTextBoxColumn.DataPropertyName = "locatebin"
+        Me.LocatebinDataGridViewTextBoxColumn.HeaderText = "BIN CODE"
+        Me.LocatebinDataGridViewTextBoxColumn.Name = "LocatebinDataGridViewTextBoxColumn"
+        Me.LocatebinDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SourcecdeDataGridViewTextBoxColumn
+        '
+        Me.SourcecdeDataGridViewTextBoxColumn.DataPropertyName = "sourcecde"
+        Me.SourcecdeDataGridViewTextBoxColumn.HeaderText = "SOURCE"
+        Me.SourcecdeDataGridViewTextBoxColumn.Name = "SourcecdeDataGridViewTextBoxColumn"
+        Me.SourcecdeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuantybinDataGridViewTextBoxColumn
+        '
+        Me.QuantybinDataGridViewTextBoxColumn.DataPropertyName = "quantybin"
+        Me.QuantybinDataGridViewTextBoxColumn.HeaderText = "QUANTITY"
+        Me.QuantybinDataGridViewTextBoxColumn.Name = "QuantybinDataGridViewTextBoxColumn"
+        Me.QuantybinDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UnitvalueDataGridViewTextBoxColumn
+        '
+        Me.UnitvalueDataGridViewTextBoxColumn.DataPropertyName = "unit_value"
+        Me.UnitvalueDataGridViewTextBoxColumn.HeaderText = "UNIT VALUE"
+        Me.UnitvalueDataGridViewTextBoxColumn.Name = "UnitvalueDataGridViewTextBoxColumn"
+        Me.UnitvalueDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CurrcycdeDataGridViewTextBoxColumn
+        '
+        Me.CurrcycdeDataGridViewTextBoxColumn.DataPropertyName = "currcy_cde"
+        Me.CurrcycdeDataGridViewTextBoxColumn.HeaderText = "CURRENCY"
+        Me.CurrcycdeDataGridViewTextBoxColumn.Name = "CurrcycdeDataGridViewTextBoxColumn"
+        Me.CurrcycdeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AssuredDataGridViewTextBoxColumn
+        '
+        Me.AssuredDataGridViewTextBoxColumn.DataPropertyName = "assured"
+        Me.AssuredDataGridViewTextBoxColumn.HeaderText = "assured"
+        Me.AssuredDataGridViewTextBoxColumn.Name = "AssuredDataGridViewTextBoxColumn"
+        Me.AssuredDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CatalogdtDataGridViewTextBoxColumn
+        '
+        Me.CatalogdtDataGridViewTextBoxColumn.DataPropertyName = "catalog_dt"
+        Me.CatalogdtDataGridViewTextBoxColumn.HeaderText = "catalog_dt"
+        Me.CatalogdtDataGridViewTextBoxColumn.Name = "CatalogdtDataGridViewTextBoxColumn"
+        Me.CatalogdtDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IicodeDataGridViewTextBoxColumn
+        '
+        Me.IicodeDataGridViewTextBoxColumn.DataPropertyName = "iicode"
+        Me.IicodeDataGridViewTextBoxColumn.HeaderText = "iicode"
+        Me.IicodeDataGridViewTextBoxColumn.Name = "IicodeDataGridViewTextBoxColumn"
+        Me.IicodeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IiupdateDataGridViewTextBoxColumn
+        '
+        Me.IiupdateDataGridViewTextBoxColumn.DataPropertyName = "iiupdate"
+        Me.IiupdateDataGridViewTextBoxColumn.HeaderText = "iiupdate"
+        Me.IiupdateDataGridViewTextBoxColumn.Name = "IiupdateDataGridViewTextBoxColumn"
+        Me.IiupdateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AllocDataGridViewTextBoxColumn
+        '
+        Me.AllocDataGridViewTextBoxColumn.DataPropertyName = "alloc"
+        Me.AllocDataGridViewTextBoxColumn.HeaderText = "alloc"
+        Me.AllocDataGridViewTextBoxColumn.Name = "AllocDataGridViewTextBoxColumn"
+        Me.AllocDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AllocDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AllocDataGridViewTextBoxColumn.Visible = False
+        '
+        'RectypeDataGridViewTextBoxColumn
+        '
+        Me.RectypeDataGridViewTextBoxColumn.DataPropertyName = "rec_type"
+        Me.RectypeDataGridViewTextBoxColumn.HeaderText = "rec_type"
+        Me.RectypeDataGridViewTextBoxColumn.Name = "RectypeDataGridViewTextBoxColumn"
+        Me.RectypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RectypeDataGridViewTextBoxColumn.Visible = False
+        '
+        'SnwhoDataGridViewTextBoxColumn
+        '
+        Me.SnwhoDataGridViewTextBoxColumn.DataPropertyName = "snwho"
+        Me.SnwhoDataGridViewTextBoxColumn.HeaderText = "snwho"
+        Me.SnwhoDataGridViewTextBoxColumn.Name = "SnwhoDataGridViewTextBoxColumn"
+        Me.SnwhoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SnwhoDataGridViewTextBoxColumn.Visible = False
+        '
+        'SinuseDataGridViewTextBoxColumn
+        '
+        Me.SinuseDataGridViewTextBoxColumn.DataPropertyName = "sinuse"
+        Me.SinuseDataGridViewTextBoxColumn.HeaderText = "sinuse"
+        Me.SinuseDataGridViewTextBoxColumn.Name = "SinuseDataGridViewTextBoxColumn"
+        Me.SinuseDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SinuseDataGridViewTextBoxColumn.Visible = False
+        '
+        'WqtyDataGridViewTextBoxColumn
+        '
+        Me.WqtyDataGridViewTextBoxColumn.DataPropertyName = "wqty"
+        Me.WqtyDataGridViewTextBoxColumn.HeaderText = "WGTY"
+        Me.WqtyDataGridViewTextBoxColumn.Name = "WqtyDataGridViewTextBoxColumn"
+        Me.WqtyDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'WeightDataGridViewTextBoxColumn
+        '
+        Me.WeightDataGridViewTextBoxColumn.DataPropertyName = "weight"
+        Me.WeightDataGridViewTextBoxColumn.HeaderText = "WEIGHT"
+        Me.WeightDataGridViewTextBoxColumn.Name = "WeightDataGridViewTextBoxColumn"
+        Me.WeightDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UniqueIDDataGridViewTextBoxColumn
+        '
+        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
+        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
+        '
         'Inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1000,6 +1037,7 @@ Partial Class Inventory
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(1270, 769)
+        Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.TrandescBindingSource1BindingNavigator)
         Me.Controls.Add(Me.PcodeLook)
         Me.Controls.Add(Me.MinorderTextBox)
@@ -1066,17 +1104,17 @@ Partial Class Inventory
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.VScrollBar2)
         Me.Controls.Add(Me.ListView2)
         Me.Name = "Inventory"
         Me.Text = "Inventory"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TrandescBindingSource1BindingNavigator.ResumeLayout(False)
         Me.TrandescBindingSource1BindingNavigator.PerformLayout()
+        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1098,7 +1136,6 @@ Partial Class Inventory
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents VScrollBar2 As VScrollBar
     Friend WithEvents ListView2 As ListView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -1144,22 +1181,6 @@ Partial Class Inventory
     Friend WithEvents IdcodeTextBox As TextBox
     Friend WithEvents MinstockTextBox As TextBox
     Friend WithEvents MinorderTextBox As TextBox
-    Friend WithEvents LocatebinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SourcecdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AssuredDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuantybinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UnitvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CurrcycdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IicodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IiupdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RectypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SnwhoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents WqtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PcodeLook As Button
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents TrandescBindingSource1 As BindingSource
@@ -1178,4 +1199,23 @@ Partial Class Inventory
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents TrandescBindingSource1BindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents idcode As TextBox
+    Friend WithEvents TranbinsBindingSource As BindingSource
+    Friend WithEvents TranbinsTableAdapter As TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter
+    Friend WithEvents LocatebinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SourcecdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuantybinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UnitvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CurrcycdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AssuredDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IicodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IiupdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RectypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SnwhoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents WqtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

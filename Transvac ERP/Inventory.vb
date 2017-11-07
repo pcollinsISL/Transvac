@@ -14,7 +14,10 @@
     End Function
 
     Private Sub Inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.tranbins' table. You can move, or remove it, as needed.
+        Me.TranbinsTableAdapter.Fill(Me.TransvacDataV2DataSet1.tranbins)
         Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
+        idcode.Visible = False
     End Sub
 
     Private Function TrandescTableAdapter() As Object
@@ -26,7 +29,8 @@
     End Sub
 
     Private Sub PcodeLook_Click(sender As Object, e As EventArgs) Handles PcodeLook.Click, PcodeTextBox1.TextChanged
-        Me.TrandescTableAdapter1.FillByPcodelookup(Me.TransvacDataV2DataSet1.trandesc, PcodeTextBox1.Text)
+        REM Me.TrandescTableAdapter1.FillByPcodelookup(Me.TransvacDataV2DataSet1.trandesc, PcodeTextBox1.Text)
+        Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
     End Sub
 
     Private Sub TrandescBindingSource1BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles TrandescBindingSource1BindingNavigatorSaveItem.Click
@@ -49,5 +53,32 @@
 
     Private Sub MoveEnd_Click(sender As Object, e As EventArgs) Handles MoveEnd.Click
         Me.TrandescBindingSource1.MoveLast()
+    End Sub
+
+    Private Sub findesc_but_Click(sender As Object, e As EventArgs) Handles findesc_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Invfdesc As New Invfdesc
+        Invfdesc.TopLevel = False
+        Invfdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Invfdesc)
+        Invfdesc.Show()
+    End Sub
+
+    Private Sub editdesc_but_Click(sender As Object, e As EventArgs) Handles editdesc_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Inveditdesc As New inveditdesc
+        Inveditdesc.TopLevel = False
+        Inveditdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Inveditdesc)
+        Inveditdesc.Show()
+    End Sub
+
+    Private Sub newdesc_but_Click(sender As Object, e As EventArgs) Handles newdesc_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Invnewdesc As New invnewdesc
+        Invnewdesc.TopLevel = False
+        Invnewdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Invnewdesc)
+        Invnewdesc.Show()
     End Sub
 End Class
