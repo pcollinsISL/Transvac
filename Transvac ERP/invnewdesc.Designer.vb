@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class invnewdesc
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class invnewdesc
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DescriptnLabel As System.Windows.Forms.Label
@@ -38,7 +38,7 @@ Partial Class invnewdesc
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.SaveBTN = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -52,6 +52,7 @@ Partial Class invnewdesc
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         DescriptnLabel = New System.Windows.Forms.Label()
         MinorderLabel = New System.Windows.Forms.Label()
         MinstockLabel = New System.Windows.Forms.Label()
@@ -205,14 +206,14 @@ Partial Class invnewdesc
         Me.PictureBox1.TabIndex = 26
         Me.PictureBox1.TabStop = False
         '
-        'Button3
+        'SaveBTN
         '
-        Me.Button3.Location = New System.Drawing.Point(696, 361)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 64
-        Me.Button3.Text = "SAVE"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.SaveBTN.Location = New System.Drawing.Point(696, 361)
+        Me.SaveBTN.Name = "SaveBTN"
+        Me.SaveBTN.Size = New System.Drawing.Size(75, 23)
+        Me.SaveBTN.TabIndex = 64
+        Me.SaveBTN.Text = "SAVE"
+        Me.SaveBTN.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -225,6 +226,7 @@ Partial Class invnewdesc
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TrandescBindingSource, "timestamp_column", True))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(611, 100)
         Me.DateTimePicker1.Name = "DateTimePicker1"
@@ -240,6 +242,7 @@ Partial Class invnewdesc
         '
         'TextBox2
         '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "descriptn", True))
         Me.TextBox2.Location = New System.Drawing.Point(126, 132)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(324, 20)
@@ -256,6 +259,7 @@ Partial Class invnewdesc
         '
         'TextBox3
         '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "ifmemo", True))
         Me.TextBox3.Location = New System.Drawing.Point(248, 182)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
@@ -264,6 +268,7 @@ Partial Class invnewdesc
         '
         'TextBox4
         '
+        Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "minorder", True))
         Me.TextBox4.Location = New System.Drawing.Point(124, 218)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
@@ -271,6 +276,7 @@ Partial Class invnewdesc
         '
         'TextBox5
         '
+        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "minstock", True))
         Me.TextBox5.Location = New System.Drawing.Point(126, 182)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
@@ -278,6 +284,7 @@ Partial Class invnewdesc
         '
         'ListBox1
         '
+        Me.ListBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TrandescBindingSource, "psupplier", True))
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(651, 198)
         Me.ListBox1.Name = "ListBox1"
@@ -297,6 +304,7 @@ Partial Class invnewdesc
         '
         'TextBox6
         '
+        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource, "pcode", True))
         Me.TextBox6.Location = New System.Drawing.Point(126, 99)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(182, 20)
@@ -306,12 +314,60 @@ Partial Class invnewdesc
         '
         Me.TrandescTableAdapter.ClearBeforeFill = True
         '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.accctlTableAdapter = Nothing
+        Me.TableAdapterManager.accountTableAdapter = Nothing
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager.assetsTableAdapter = Nothing
+        Me.TableAdapterManager.atransTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.binallocTableAdapter = Nothing
+        Me.TableAdapterManager.catTableAdapter = Nothing
+        Me.TableAdapterManager.countryTableAdapter = Nothing
+        Me.TableAdapterManager.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager.eventTableAdapter = Nothing
+        Me.TableAdapterManager.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager.invlineTableAdapter = Nothing
+        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager.invtransTableAdapter = Nothing
+        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager.invworkTableAdapter = Nothing
+        Me.TableAdapterManager.issueTableAdapter = Nothing
+        Me.TableAdapterManager.locationTableAdapter = Nothing
+        Me.TableAdapterManager.mainTableAdapter = Nothing
+        Me.TableAdapterManager.markupTableAdapter = Nothing
+        Me.TableAdapterManager.namesTableAdapter = Nothing
+        Me.TableAdapterManager.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager.statusTableAdapter = Nothing
+        Me.TableAdapterManager.teventsTableAdapter = Nothing
+        Me.TableAdapterManager.tran2TableAdapter = Nothing
+        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager.trandescTableAdapter = Me.TrandescTableAdapter
+        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'invnewdesc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(820, 412)
-        Me.Controls.Add(Me.Button3)
+        Me.ClientSize = New System.Drawing.Size(820, 604)
+        Me.Controls.Add(Me.SaveBTN)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Label2)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -351,7 +407,7 @@ Partial Class invnewdesc
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents SaveBTN As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents TextBox1 As TextBox
@@ -365,4 +421,5 @@ Partial Class invnewdesc
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents TrandescBindingSource As BindingSource
     Friend WithEvents TrandescTableAdapter As TransvacDataV2DataSet1TableAdapters.trandescTableAdapter
+    Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
 End Class

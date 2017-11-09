@@ -22,57 +22,37 @@ Partial Class Invfdesc
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
+        Me.Selectbtn = New System.Windows.Forms.Button()
         Me.acctabt_but = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2_but = New System.Windows.Forms.Button()
+        Me.searchbutt = New System.Windows.Forms.Button()
         Me.acctextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.PcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PsupplierDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label4
+        'Selectbtn
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(216, 114)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 13)
-        Me.Label4.TabIndex = 25
-        Me.Label4.Text = "SUPPLIER"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(338, 114)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 13)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "DESCRIPTION"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(86, 114)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 13)
-        Me.Label2.TabIndex = 23
-        Me.Label2.Text = "PART NUMBER"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(629, 402)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 34)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "SELECT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Selectbtn.Location = New System.Drawing.Point(629, 402)
+        Me.Selectbtn.Name = "Selectbtn"
+        Me.Selectbtn.Size = New System.Drawing.Size(75, 34)
+        Me.Selectbtn.TabIndex = 22
+        Me.Selectbtn.Text = "SELECT"
+        Me.Selectbtn.UseVisualStyleBackColor = True
         '
         'acctabt_but
         '
@@ -95,21 +75,27 @@ Partial Class Invfdesc
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PcodeDataGridViewTextBoxColumn, Me.PsupplierDataGridViewTextBoxColumn, Me.DescriptnDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TrandescBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(87, 114)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(617, 273)
         Me.DataGridView1.TabIndex = 19
         '
-        'Button2_but
+        'searchbutt
         '
-        Me.Button2_but.Location = New System.Drawing.Point(629, 55)
-        Me.Button2_but.Name = "Button2_but"
-        Me.Button2_but.Size = New System.Drawing.Size(75, 36)
-        Me.Button2_but.TabIndex = 18
-        Me.Button2_but.Text = "SEARCH"
-        Me.Button2_but.UseVisualStyleBackColor = True
+        Me.searchbutt.Location = New System.Drawing.Point(629, 55)
+        Me.searchbutt.Name = "searchbutt"
+        Me.searchbutt.Size = New System.Drawing.Size(75, 36)
+        Me.searchbutt.TabIndex = 18
+        Me.searchbutt.Text = "SEARCH"
+        Me.searchbutt.UseVisualStyleBackColor = True
         '
         'acctextBox
         '
@@ -137,20 +123,105 @@ Partial Class Invfdesc
         Me.PictureBox2.TabIndex = 92
         Me.PictureBox2.TabStop = False
         '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TrandescBindingSource
+        '
+        Me.TrandescBindingSource.DataMember = "trandesc"
+        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TrandescTableAdapter
+        '
+        Me.TrandescTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.accctlTableAdapter = Nothing
+        Me.TableAdapterManager.accountTableAdapter = Nothing
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager.assetsTableAdapter = Nothing
+        Me.TableAdapterManager.atransTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.binallocTableAdapter = Nothing
+        Me.TableAdapterManager.catTableAdapter = Nothing
+        Me.TableAdapterManager.countryTableAdapter = Nothing
+        Me.TableAdapterManager.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager.eventTableAdapter = Nothing
+        Me.TableAdapterManager.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager.invlineTableAdapter = Nothing
+        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager.invtransTableAdapter = Nothing
+        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager.invworkTableAdapter = Nothing
+        Me.TableAdapterManager.issueTableAdapter = Nothing
+        Me.TableAdapterManager.locationTableAdapter = Nothing
+        Me.TableAdapterManager.mainTableAdapter = Nothing
+        Me.TableAdapterManager.markupTableAdapter = Nothing
+        Me.TableAdapterManager.namesTableAdapter = Nothing
+        Me.TableAdapterManager.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager.statusTableAdapter = Nothing
+        Me.TableAdapterManager.teventsTableAdapter = Nothing
+        Me.TableAdapterManager.tran2TableAdapter = Nothing
+        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager.trandescTableAdapter = Me.TrandescTableAdapter
+        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'PcodeDataGridViewTextBoxColumn
+        '
+        Me.PcodeDataGridViewTextBoxColumn.DataPropertyName = "pcode"
+        Me.PcodeDataGridViewTextBoxColumn.HeaderText = "PART NUMBER"
+        Me.PcodeDataGridViewTextBoxColumn.MinimumWidth = 15
+        Me.PcodeDataGridViewTextBoxColumn.Name = "PcodeDataGridViewTextBoxColumn"
+        Me.PcodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PcodeDataGridViewTextBoxColumn.Width = 125
+        '
+        'PsupplierDataGridViewTextBoxColumn
+        '
+        Me.PsupplierDataGridViewTextBoxColumn.DataPropertyName = "psupplier"
+        Me.PsupplierDataGridViewTextBoxColumn.HeaderText = "SUPPLIER"
+        Me.PsupplierDataGridViewTextBoxColumn.Name = "PsupplierDataGridViewTextBoxColumn"
+        Me.PsupplierDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PsupplierDataGridViewTextBoxColumn.Width = 145
+        '
+        'DescriptnDataGridViewTextBoxColumn
+        '
+        Me.DescriptnDataGridViewTextBoxColumn.DataPropertyName = "descriptn"
+        Me.DescriptnDataGridViewTextBoxColumn.HeaderText = "DESCRIPTION"
+        Me.DescriptnDataGridViewTextBoxColumn.Name = "DescriptnDataGridViewTextBoxColumn"
+        Me.DescriptnDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescriptnDataGridViewTextBoxColumn.Width = 275
+        '
         'Invfdesc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(746, 476)
+        Me.ClientSize = New System.Drawing.Size(746, 675)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Selectbtn)
         Me.Controls.Add(Me.acctabt_but)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button2_but)
+        Me.Controls.Add(Me.searchbutt)
         Me.Controls.Add(Me.acctextBox)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Invfdesc"
@@ -158,20 +229,25 @@ Partial Class Invfdesc
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Selectbtn As Button
     Friend WithEvents acctabt_but As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button2_but As Button
+    Friend WithEvents searchbutt As Button
     Friend WithEvents acctextBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
+    Friend WithEvents TrandescBindingSource As BindingSource
+    Friend WithEvents TrandescTableAdapter As TransvacDataV2DataSet1TableAdapters.trandescTableAdapter
+    Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents PcodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PsupplierDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescriptnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -14,9 +14,13 @@
     End Function
 
     Private Sub Inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.tranbins' table. You can move, or remove it, as needed.
-        Me.TranbinsTableAdapter.Fill(Me.TransvacDataV2DataSet1.tranbins)
-        Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
+        If PcodeTextBox1.Text = "" Then
+            Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
+            Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
+        Else
+            Me.TrandescTableAdapter1.FillByPcodelookup(Me.TransvacDataV2DataSet1.trandesc, PcodeTextBox1.Text)
+        End If
+        Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
         idcode.Visible = False
     End Sub
 
@@ -62,6 +66,7 @@
         Invfdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(5).Controls.Add(Invfdesc)
         Invfdesc.Show()
+        Me.Hide()
     End Sub
 
     Private Sub editdesc_but_Click(sender As Object, e As EventArgs) Handles editdesc_but.Click
@@ -70,7 +75,9 @@
         Inveditdesc.TopLevel = False
         Inveditdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(5).Controls.Add(Inveditdesc)
+        Inveditdesc.PcodeTextBox.Text = PcodeTextBox1.Text
         Inveditdesc.Show()
+        Me.Hide()
     End Sub
 
     Private Sub newdesc_but_Click(sender As Object, e As EventArgs) Handles newdesc_but.Click
@@ -80,5 +87,19 @@
         Invnewdesc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(5).Controls.Add(Invnewdesc)
         Invnewdesc.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub deldesc_but_Click(sender As Object, e As EventArgs) Handles deldesc_but.Click
+        Try
+            If MessageBox.Show("Are you sure you wish to delete this Address?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.No Then
+                Exit Sub
+            End If
+            TrandescTableAdapter1.trandescDeleteQuery(PcodeTextBox1.Text)
+            MsgBox("Delete successful")
+            Me.TrandescTableAdapter.Fill(Me.TransvacDataV2DataSet1.trandesc)
+        Catch ex As Exception
+            MessageBox.Show("Error while deleting record on table: " & ex.Message, "Deleted Address", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
     End Sub
 End Class

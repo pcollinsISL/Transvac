@@ -44,7 +44,6 @@ Partial Class Inventory
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.ListView2 = New System.Windows.Forms.ListView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -78,22 +77,17 @@ Partial Class Inventory
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PsupplierTextBox1 = New System.Windows.Forms.TextBox()
-        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.PcodeTextBox1 = New System.Windows.Forms.TextBox()
         Me.DescriptnTextBox1 = New System.Windows.Forms.TextBox()
         Me.IdcodeTextBox = New System.Windows.Forms.TextBox()
         Me.MinstockTextBox = New System.Windows.Forms.TextBox()
         Me.MinorderTextBox = New System.Windows.Forms.TextBox()
         Me.PcodeLook = New System.Windows.Forms.Button()
-        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
-        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.TrandescBindingSource1BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -108,34 +102,33 @@ Partial Class Inventory
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TrandescBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.idcode = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuantybinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UnitvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CurrcycdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IicodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IiupdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AllocDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RectypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SnwhoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SinuseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ListView2 = New System.Windows.Forms.ListView()
         DescriptnLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TrandescBindingSource1BindingNavigator.SuspendLayout()
+        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -318,14 +311,6 @@ Partial Class Inventory
         Me.Label15.Size = New System.Drawing.Size(58, 13)
         Me.Label15.TabIndex = 70
         Me.Label15.Text = "BIN CODE"
-        '
-        'ListView2
-        '
-        Me.ListView2.Location = New System.Drawing.Point(70, 388)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(954, 132)
-        Me.ListView2.TabIndex = 67
-        Me.ListView2.UseCompatibleStateImageBehavior = False
         '
         'Label1
         '
@@ -617,13 +602,6 @@ Partial Class Inventory
         Me.Label7.TabIndex = 182
         Me.Label7.Text = "Avg/Total Cost"
         '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(980, 92)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(66, 20)
-        Me.TextBox6.TabIndex = 184
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -655,12 +633,12 @@ Partial Class Inventory
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IicodeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.TranbinsBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(34, 218)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1124, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(1204, 150)
         Me.DataGridView1.TabIndex = 191
         '
         'PsupplierTextBox1
@@ -670,17 +648,6 @@ Partial Class Inventory
         Me.PsupplierTextBox1.Name = "PsupplierTextBox1"
         Me.PsupplierTextBox1.Size = New System.Drawing.Size(100, 20)
         Me.PsupplierTextBox1.TabIndex = 192
-        '
-        'TrandescBindingSource1
-        '
-        Me.TrandescBindingSource1.DataMember = "trandesc"
-        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PcodeTextBox1
         '
@@ -730,58 +697,6 @@ Partial Class Inventory
         Me.PcodeLook.Text = "PcodeLook"
         Me.PcodeLook.UseVisualStyleBackColor = True
         Me.PcodeLook.Visible = False
-        '
-        'TrandescTableAdapter1
-        '
-        Me.TrandescTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.accctlTableAdapter = Nothing
-        Me.TableAdapterManager1.accountTableAdapter = Nothing
-        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager1.AddressRecordTypeTableAdapter = Nothing
-        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager1.assetsTableAdapter = Nothing
-        Me.TableAdapterManager1.atransTableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.binallocTableAdapter = Nothing
-        Me.TableAdapterManager1.catTableAdapter = Nothing
-        Me.TableAdapterManager1.countryTableAdapter = Nothing
-        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager1.enquiryTableAdapter = Nothing
-        Me.TableAdapterManager1.eventTableAdapter = Nothing
-        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager1.invlineTableAdapter = Nothing
-        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkTableAdapter = Nothing
-        Me.TableAdapterManager1.issueTableAdapter = Nothing
-        Me.TableAdapterManager1.locationTableAdapter = Nothing
-        Me.TableAdapterManager1.mainTableAdapter = Nothing
-        Me.TableAdapterManager1.markupTableAdapter = Nothing
-        Me.TableAdapterManager1.namesTableAdapter = Nothing
-        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager1.statusTableAdapter = Nothing
-        Me.TableAdapterManager1.teventsTableAdapter = Nothing
-        Me.TableAdapterManager1.tran2TableAdapter = Nothing
-        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
-        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
-        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TrandescBindingSource1BindingNavigator
         '
@@ -902,10 +817,81 @@ Partial Class Inventory
         Me.idcode.Size = New System.Drawing.Size(79, 20)
         Me.idcode.TabIndex = 200
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TrandescBindingSource1, "idupdate", True))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(980, 93)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 201
+        '
+        'TrandescBindingSource1
+        '
+        Me.TrandescBindingSource1.DataMember = "trandesc"
+        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TranbinsBindingSource
         '
         Me.TranbinsBindingSource.DataMember = "tranbins"
         Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TrandescTableAdapter1
+        '
+        Me.TrandescTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager1.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TranbinsTableAdapter
         '
@@ -946,66 +932,19 @@ Partial Class Inventory
         Me.CurrcycdeDataGridViewTextBoxColumn.Name = "CurrcycdeDataGridViewTextBoxColumn"
         Me.CurrcycdeDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'AssuredDataGridViewTextBoxColumn
+        'IiupdateDataGridViewTextBoxColumn
         '
-        Me.AssuredDataGridViewTextBoxColumn.DataPropertyName = "assured"
-        Me.AssuredDataGridViewTextBoxColumn.HeaderText = "assured"
-        Me.AssuredDataGridViewTextBoxColumn.Name = "AssuredDataGridViewTextBoxColumn"
-        Me.AssuredDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IiupdateDataGridViewTextBoxColumn.DataPropertyName = "iiupdate"
+        Me.IiupdateDataGridViewTextBoxColumn.HeaderText = "UPDATED"
+        Me.IiupdateDataGridViewTextBoxColumn.Name = "IiupdateDataGridViewTextBoxColumn"
+        Me.IiupdateDataGridViewTextBoxColumn.ReadOnly = True
         '
         'CatalogdtDataGridViewTextBoxColumn
         '
         Me.CatalogdtDataGridViewTextBoxColumn.DataPropertyName = "catalog_dt"
-        Me.CatalogdtDataGridViewTextBoxColumn.HeaderText = "catalog_dt"
+        Me.CatalogdtDataGridViewTextBoxColumn.HeaderText = "CAT DATE"
         Me.CatalogdtDataGridViewTextBoxColumn.Name = "CatalogdtDataGridViewTextBoxColumn"
         Me.CatalogdtDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IicodeDataGridViewTextBoxColumn
-        '
-        Me.IicodeDataGridViewTextBoxColumn.DataPropertyName = "iicode"
-        Me.IicodeDataGridViewTextBoxColumn.HeaderText = "iicode"
-        Me.IicodeDataGridViewTextBoxColumn.Name = "IicodeDataGridViewTextBoxColumn"
-        Me.IicodeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IiupdateDataGridViewTextBoxColumn
-        '
-        Me.IiupdateDataGridViewTextBoxColumn.DataPropertyName = "iiupdate"
-        Me.IiupdateDataGridViewTextBoxColumn.HeaderText = "iiupdate"
-        Me.IiupdateDataGridViewTextBoxColumn.Name = "IiupdateDataGridViewTextBoxColumn"
-        Me.IiupdateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AllocDataGridViewTextBoxColumn
-        '
-        Me.AllocDataGridViewTextBoxColumn.DataPropertyName = "alloc"
-        Me.AllocDataGridViewTextBoxColumn.HeaderText = "alloc"
-        Me.AllocDataGridViewTextBoxColumn.Name = "AllocDataGridViewTextBoxColumn"
-        Me.AllocDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AllocDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AllocDataGridViewTextBoxColumn.Visible = False
-        '
-        'RectypeDataGridViewTextBoxColumn
-        '
-        Me.RectypeDataGridViewTextBoxColumn.DataPropertyName = "rec_type"
-        Me.RectypeDataGridViewTextBoxColumn.HeaderText = "rec_type"
-        Me.RectypeDataGridViewTextBoxColumn.Name = "RectypeDataGridViewTextBoxColumn"
-        Me.RectypeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.RectypeDataGridViewTextBoxColumn.Visible = False
-        '
-        'SnwhoDataGridViewTextBoxColumn
-        '
-        Me.SnwhoDataGridViewTextBoxColumn.DataPropertyName = "snwho"
-        Me.SnwhoDataGridViewTextBoxColumn.HeaderText = "snwho"
-        Me.SnwhoDataGridViewTextBoxColumn.Name = "SnwhoDataGridViewTextBoxColumn"
-        Me.SnwhoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.SnwhoDataGridViewTextBoxColumn.Visible = False
-        '
-        'SinuseDataGridViewTextBoxColumn
-        '
-        Me.SinuseDataGridViewTextBoxColumn.DataPropertyName = "sinuse"
-        Me.SinuseDataGridViewTextBoxColumn.HeaderText = "sinuse"
-        Me.SinuseDataGridViewTextBoxColumn.Name = "SinuseDataGridViewTextBoxColumn"
-        Me.SinuseDataGridViewTextBoxColumn.ReadOnly = True
-        Me.SinuseDataGridViewTextBoxColumn.Visible = False
         '
         'WqtyDataGridViewTextBoxColumn
         '
@@ -1021,13 +960,13 @@ Partial Class Inventory
         Me.WeightDataGridViewTextBoxColumn.Name = "WeightDataGridViewTextBoxColumn"
         Me.WeightDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'UniqueIDDataGridViewTextBoxColumn
+        'ListView2
         '
-        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
-        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
+        Me.ListView2.Location = New System.Drawing.Point(70, 388)
+        Me.ListView2.Name = "ListView2"
+        Me.ListView2.Size = New System.Drawing.Size(954, 132)
+        Me.ListView2.TabIndex = 67
+        Me.ListView2.UseCompatibleStateImageBehavior = False
         '
         'Inventory
         '
@@ -1037,6 +976,7 @@ Partial Class Inventory
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(1270, 769)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.TrandescBindingSource1BindingNavigator)
         Me.Controls.Add(Me.PcodeLook)
@@ -1050,7 +990,6 @@ Partial Class Inventory
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox5)
@@ -1109,11 +1048,11 @@ Partial Class Inventory
         Me.Text = "Inventory"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TrandescBindingSource1BindingNavigator.ResumeLayout(False)
         Me.TrandescBindingSource1BindingNavigator.PerformLayout()
+        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1136,7 +1075,6 @@ Partial Class Inventory
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents ListView2 As ListView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
@@ -1170,7 +1108,6 @@ Partial Class Inventory
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label10 As Label
@@ -1202,20 +1139,15 @@ Partial Class Inventory
     Friend WithEvents idcode As TextBox
     Friend WithEvents TranbinsBindingSource As BindingSource
     Friend WithEvents TranbinsTableAdapter As TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter
+    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents LocatebinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SourcecdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QuantybinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UnitvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CurrcycdeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AssuredDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IicodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IiupdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RectypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SnwhoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WqtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ListView2 As ListView
 End Class
