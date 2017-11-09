@@ -11,7 +11,7 @@
         Throw New NotImplementedException()
     End Function
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        QuoteheadBindingSource.AddNew()
+        REM QuoteheadBindingSource.AddNew()
         Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
         idcode.Visible = False
         dt.Columns.Add("qline_no")
@@ -22,9 +22,11 @@
         dt.Columns(0).AutoIncrement = True
         dt.Columns(0).AutoIncrementStep = 1
         dt.Columns(0).AutoIncrementSeed = 1
-        If SuffixTB.Text = "" Then
-            SuffixTB.Text = "01"
-        End If
+        Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text)
+
+        REM If SuffixTB.Text = "" Then
+        REM SuffixTB.Text = "01"
+        REM End If
     End Sub
 
     Private Function TranmemoTableAdapter() As Object
@@ -140,9 +142,13 @@
     Private Sub sve_but_Click(sender As Object, e As EventArgs) Handles sve_but.Click
         Me.Validate()
         Me.QuoteheadBindingSource.EndEdit()
-        Me.QuotedetailBindingSource.EndEdit()
+        REM  Me.QuotedetailBindingSource.EndEdit()
         Me.QuoteheadTableAdapter.Update(Me.TransvacDataV2DataSet1)
-        Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        REM Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
         MsgBox("Save Sucsesful")
+    End Sub
+
+    Private Sub SuffixTB_TextChanged(sender As Object, e As EventArgs) Handles SuffixTB.TextChanged
+
     End Sub
 End Class
