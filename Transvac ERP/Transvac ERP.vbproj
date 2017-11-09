@@ -195,6 +195,12 @@
     <Compile Include="enquiry.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="inveditbin.Designer.vb">
+      <DependentUpon>inveditbin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inveditbin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inveditdesc.Designer.vb">
       <DependentUpon>inveditdesc.vb</DependentUpon>
     </Compile>
@@ -394,6 +400,12 @@
     <Compile Include="UserControl1.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="XChangeRate.Designer.vb">
+      <DependentUpon>XChangeRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XChangeRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="accountsrh.resx">
@@ -422,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="enquiry.resx">
       <DependentUpon>enquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inveditbin.resx">
+      <DependentUpon>inveditbin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inveditdesc.resx">
       <DependentUpon>inveditdesc.vb</DependentUpon>
@@ -510,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XChangeRate.resx">
+      <DependentUpon>XChangeRate.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
