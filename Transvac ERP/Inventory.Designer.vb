@@ -28,22 +28,6 @@ Partial Class Inventory
         Dim Label5 As System.Windows.Forms.Label
         Dim Label6 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventory))
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -103,12 +87,17 @@ Partial Class Inventory
         Me.TrandescBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.idcode = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.supdiscbox = New System.Windows.Forms.TextBox()
+        Me.markupbox = New System.Windows.Forms.TextBox()
+        Me.unitcostbox = New System.Windows.Forms.TextBox()
+        Me.retailbox = New System.Windows.Forms.TextBox()
+        Me.SupDisc = New System.Windows.Forms.Label()
+        Me.unitcost = New System.Windows.Forms.Label()
+        Me.retail = New System.Windows.Forms.Label()
+        Me.markup = New System.Windows.Forms.Label()
+        Me.MarkupBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
-        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
+        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuantybinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -118,7 +107,17 @@ Partial Class Inventory
         Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ListView2 = New System.Windows.Forms.ListView()
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
+        Me.MarkupTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.markupTableAdapter()
+        Me.unitvaluebox = New System.Windows.Forms.TextBox()
+        Me.unitvalue = New System.Windows.Forms.Label()
+        Me.markupDecimail = New System.Windows.Forms.TextBox()
+        Me.unitcostsum = New System.Windows.Forms.TextBox()
+        Me.markupsum = New System.Windows.Forms.TextBox()
+        Me.retailsum = New System.Windows.Forms.TextBox()
         DescriptnLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
@@ -127,8 +126,9 @@ Partial Class Inventory
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TrandescBindingSource1BindingNavigator.SuspendLayout()
-        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MarkupBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -167,150 +167,6 @@ Partial Class Inventory
         Label6.Size = New System.Drawing.Size(81, 13)
         Label6.TabIndex = 177
         Label6.Text = "Stock Checked"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(842, 375)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(64, 13)
-        Me.Label30.TabIndex = 85
-        Me.Label30.Text = "MARKUP %"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(912, 375)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(40, 13)
-        Me.Label29.TabIndex = 84
-        Me.Label29.Text = "WQTY"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(958, 375)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(51, 13)
-        Me.Label28.TabIndex = 83
-        Me.Label28.Text = "WEIGHT"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(570, 375)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(74, 13)
-        Me.Label27.TabIndex = 82
-        Me.Label27.Text = "UNIT £ COST"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(717, 375)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(60, 13)
-        Me.Label26.TabIndex = 81
-        Me.Label26.Text = "CAT DATE"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(783, 375)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(54, 13)
-        Me.Label25.TabIndex = 80
-        Me.Label25.Text = "RETAIL £"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(417, 375)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(67, 13)
-        Me.Label24.TabIndex = 79
-        Me.Label24.Text = "CURRENCY"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(490, 375)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(74, 13)
-        Me.Label23.TabIndex = 78
-        Me.Label23.Text = "UNIT £ COST"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(652, 375)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(59, 13)
-        Me.Label22.TabIndex = 77
-        Me.Label22.Text = "UPDATED"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(277, 375)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(71, 13)
-        Me.Label21.TabIndex = 76
-        Me.Label21.Text = "UNIT VALUE"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(209, 375)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(62, 13)
-        Me.Label20.TabIndex = 75
-        Me.Label20.Text = "QUANTITY"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(192, 375)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 13)
-        Me.Label19.TabIndex = 74
-        Me.Label19.Text = "*"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(354, 375)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(57, 13)
-        Me.Label18.TabIndex = 73
-        Me.Label18.Text = "SUP DISC"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(134, 375)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(52, 13)
-        Me.Label17.TabIndex = 72
-        Me.Label17.Text = "SOURCE"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(53, 375)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(11, 13)
-        Me.Label16.TabIndex = 71
-        Me.Label16.Text = "*"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(70, 375)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(58, 13)
-        Me.Label15.TabIndex = 70
-        Me.Label15.Text = "BIN CODE"
         '
         'Label1
         '
@@ -638,7 +494,7 @@ Partial Class Inventory
         Me.DataGridView1.Location = New System.Drawing.Point(34, 218)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1204, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(1232, 150)
         Me.DataGridView1.TabIndex = 191
         '
         'PsupplierTextBox1
@@ -712,7 +568,7 @@ Partial Class Inventory
         Me.TrandescBindingSource1BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.TrandescBindingSource1BindingNavigator.Name = "TrandescBindingSource1BindingNavigator"
         Me.TrandescBindingSource1BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.TrandescBindingSource1BindingNavigator.Size = New System.Drawing.Size(1270, 25)
+        Me.TrandescBindingSource1BindingNavigator.Size = New System.Drawing.Size(1394, 25)
         Me.TrandescBindingSource1BindingNavigator.TabIndex = 199
         Me.TrandescBindingSource1BindingNavigator.Text = "BindingNavigator1"
         '
@@ -825,10 +681,76 @@ Partial Class Inventory
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 201
         '
-        'TrandescBindingSource1
+        'supdiscbox
         '
-        Me.TrandescBindingSource1.DataMember = "trandesc"
-        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
+        Me.supdiscbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarkupBindingSource, "sup_discpc", True))
+        Me.supdiscbox.Location = New System.Drawing.Point(87, 387)
+        Me.supdiscbox.Name = "supdiscbox"
+        Me.supdiscbox.Size = New System.Drawing.Size(100, 20)
+        Me.supdiscbox.TabIndex = 202
+        '
+        'markupbox
+        '
+        Me.markupbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarkupBindingSource, "mupercent", True))
+        Me.markupbox.Location = New System.Drawing.Point(244, 387)
+        Me.markupbox.Name = "markupbox"
+        Me.markupbox.Size = New System.Drawing.Size(100, 20)
+        Me.markupbox.TabIndex = 203
+        '
+        'unitcostbox
+        '
+        Me.unitcostbox.Location = New System.Drawing.Point(607, 387)
+        Me.unitcostbox.Name = "unitcostbox"
+        Me.unitcostbox.Size = New System.Drawing.Size(100, 20)
+        Me.unitcostbox.TabIndex = 204
+        '
+        'retailbox
+        '
+        Me.retailbox.Location = New System.Drawing.Point(767, 387)
+        Me.retailbox.Name = "retailbox"
+        Me.retailbox.Size = New System.Drawing.Size(100, 20)
+        Me.retailbox.TabIndex = 205
+        '
+        'SupDisc
+        '
+        Me.SupDisc.AutoSize = True
+        Me.SupDisc.Location = New System.Drawing.Point(31, 390)
+        Me.SupDisc.Name = "SupDisc"
+        Me.SupDisc.Size = New System.Drawing.Size(50, 13)
+        Me.SupDisc.TabIndex = 206
+        Me.SupDisc.Text = "Sup Disc"
+        '
+        'unitcost
+        '
+        Me.unitcost.AutoSize = True
+        Me.unitcost.Location = New System.Drawing.Point(551, 390)
+        Me.unitcost.Name = "unitcost"
+        Me.unitcost.Size = New System.Drawing.Size(50, 13)
+        Me.unitcost.TabIndex = 207
+        Me.unitcost.Text = "Unit Cost"
+        '
+        'retail
+        '
+        Me.retail.AutoSize = True
+        Me.retail.Location = New System.Drawing.Point(727, 390)
+        Me.retail.Name = "retail"
+        Me.retail.Size = New System.Drawing.Size(34, 13)
+        Me.retail.TabIndex = 208
+        Me.retail.Text = "Retail"
+        '
+        'markup
+        '
+        Me.markup.AutoSize = True
+        Me.markup.Location = New System.Drawing.Point(199, 390)
+        Me.markup.Name = "markup"
+        Me.markup.Size = New System.Drawing.Size(43, 13)
+        Me.markup.TabIndex = 209
+        Me.markup.Text = "Markup"
+        '
+        'MarkupBindingSource
+        '
+        Me.MarkupBindingSource.DataMember = "markup"
+        Me.MarkupBindingSource.DataSource = Me.TransvacDataV2DataSet1
         '
         'TransvacDataV2DataSet1
         '
@@ -836,66 +758,10 @@ Partial Class Inventory
         Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TranbinsBindingSource
+        'TrandescBindingSource1
         '
-        Me.TranbinsBindingSource.DataMember = "tranbins"
-        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TrandescTableAdapter1
-        '
-        Me.TrandescTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.accctlTableAdapter = Nothing
-        Me.TableAdapterManager1.accountTableAdapter = Nothing
-        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager1.AddressRecordTypeTableAdapter = Nothing
-        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager1.assetsTableAdapter = Nothing
-        Me.TableAdapterManager1.atransTableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.binallocTableAdapter = Nothing
-        Me.TableAdapterManager1.catTableAdapter = Nothing
-        Me.TableAdapterManager1.countryTableAdapter = Nothing
-        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager1.enquiryTableAdapter = Nothing
-        Me.TableAdapterManager1.eventTableAdapter = Nothing
-        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager1.invlineTableAdapter = Nothing
-        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invtransTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager1.invworkTableAdapter = Nothing
-        Me.TableAdapterManager1.issueTableAdapter = Nothing
-        Me.TableAdapterManager1.locationTableAdapter = Nothing
-        Me.TableAdapterManager1.mainTableAdapter = Nothing
-        Me.TableAdapterManager1.markupTableAdapter = Nothing
-        Me.TableAdapterManager1.namesTableAdapter = Nothing
-        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager1.statusTableAdapter = Nothing
-        Me.TableAdapterManager1.teventsTableAdapter = Nothing
-        Me.TableAdapterManager1.tran2TableAdapter = Nothing
-        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
-        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
-        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'TranbinsTableAdapter
-        '
-        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        Me.TrandescBindingSource1.DataMember = "trandesc"
+        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
         '
         'LocatebinDataGridViewTextBoxColumn
         '
@@ -960,13 +826,114 @@ Partial Class Inventory
         Me.WeightDataGridViewTextBoxColumn.Name = "WeightDataGridViewTextBoxColumn"
         Me.WeightDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ListView2
+        'TranbinsBindingSource
         '
-        Me.ListView2.Location = New System.Drawing.Point(70, 388)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(954, 132)
-        Me.ListView2.TabIndex = 67
-        Me.ListView2.UseCompatibleStateImageBehavior = False
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TrandescTableAdapter1
+        '
+        Me.TrandescTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.accctlTableAdapter = Nothing
+        Me.TableAdapterManager1.accountTableAdapter = Nothing
+        Me.TableAdapterManager1.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager1.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager1.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager1.assetsTableAdapter = Nothing
+        Me.TableAdapterManager1.atransTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.binallocTableAdapter = Nothing
+        Me.TableAdapterManager1.catTableAdapter = Nothing
+        Me.TableAdapterManager1.countryTableAdapter = Nothing
+        Me.TableAdapterManager1.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager1.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager1.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager1.eventTableAdapter = Nothing
+        Me.TableAdapterManager1.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager1.invlineTableAdapter = Nothing
+        Me.TableAdapterManager1.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager1.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invtransTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager1.invworkTableAdapter = Nothing
+        Me.TableAdapterManager1.issueTableAdapter = Nothing
+        Me.TableAdapterManager1.locationTableAdapter = Nothing
+        Me.TableAdapterManager1.mainTableAdapter = Nothing
+        Me.TableAdapterManager1.markupTableAdapter = Nothing
+        Me.TableAdapterManager1.namesTableAdapter = Nothing
+        Me.TableAdapterManager1.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager1.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager1.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager1.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager1.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager1.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager1.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager1.statusTableAdapter = Nothing
+        Me.TableAdapterManager1.teventsTableAdapter = Nothing
+        Me.TableAdapterManager1.tran2TableAdapter = Nothing
+        Me.TableAdapterManager1.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager1.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager1.trandescTableAdapter = Me.TrandescTableAdapter1
+        Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
+        'MarkupTableAdapter
+        '
+        Me.MarkupTableAdapter.ClearBeforeFill = True
+        '
+        'unitvaluebox
+        '
+        Me.unitvaluebox.Location = New System.Drawing.Point(426, 387)
+        Me.unitvaluebox.Name = "unitvaluebox"
+        Me.unitvaluebox.Size = New System.Drawing.Size(100, 20)
+        Me.unitvaluebox.TabIndex = 210
+        '
+        'unitvalue
+        '
+        Me.unitvalue.AutoSize = True
+        Me.unitvalue.Location = New System.Drawing.Point(364, 390)
+        Me.unitvalue.Name = "unitvalue"
+        Me.unitvalue.Size = New System.Drawing.Size(56, 13)
+        Me.unitvalue.TabIndex = 211
+        Me.unitvalue.Text = "Unit Value"
+        '
+        'markupDecimail
+        '
+        Me.markupDecimail.Location = New System.Drawing.Point(87, 413)
+        Me.markupDecimail.Name = "markupDecimail"
+        Me.markupDecimail.Size = New System.Drawing.Size(100, 20)
+        Me.markupDecimail.TabIndex = 212
+        '
+        'unitcostsum
+        '
+        Me.unitcostsum.Location = New System.Drawing.Point(607, 413)
+        Me.unitcostsum.Name = "unitcostsum"
+        Me.unitcostsum.Size = New System.Drawing.Size(100, 20)
+        Me.unitcostsum.TabIndex = 213
+        '
+        'markupsum
+        '
+        Me.markupsum.Location = New System.Drawing.Point(244, 413)
+        Me.markupsum.Name = "markupsum"
+        Me.markupsum.Size = New System.Drawing.Size(100, 20)
+        Me.markupsum.TabIndex = 214
+        '
+        'retailsum
+        '
+        Me.retailsum.Location = New System.Drawing.Point(767, 412)
+        Me.retailsum.Name = "retailsum"
+        Me.retailsum.Size = New System.Drawing.Size(100, 20)
+        Me.retailsum.TabIndex = 215
         '
         'Inventory
         '
@@ -975,7 +942,21 @@ Partial Class Inventory
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.ClientSize = New System.Drawing.Size(1270, 769)
+        Me.ClientSize = New System.Drawing.Size(1394, 769)
+        Me.Controls.Add(Me.retailsum)
+        Me.Controls.Add(Me.markupsum)
+        Me.Controls.Add(Me.unitcostsum)
+        Me.Controls.Add(Me.markupDecimail)
+        Me.Controls.Add(Me.unitvalue)
+        Me.Controls.Add(Me.unitvaluebox)
+        Me.Controls.Add(Me.markup)
+        Me.Controls.Add(Me.retail)
+        Me.Controls.Add(Me.unitcost)
+        Me.Controls.Add(Me.SupDisc)
+        Me.Controls.Add(Me.retailbox)
+        Me.Controls.Add(Me.unitcostbox)
+        Me.Controls.Add(Me.markupbox)
+        Me.Controls.Add(Me.supdiscbox)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.TrandescBindingSource1BindingNavigator)
@@ -1027,23 +1008,6 @@ Partial Class Inventory
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label30)
-        Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.Label28)
-        Me.Controls.Add(Me.Label27)
-        Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.ListView2)
         Me.Name = "Inventory"
         Me.Text = "Inventory"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1051,30 +1015,14 @@ Partial Class Inventory
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TrandescBindingSource1BindingNavigator.ResumeLayout(False)
         Me.TrandescBindingSource1BindingNavigator.PerformLayout()
-        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MarkupBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
@@ -1149,5 +1097,20 @@ Partial Class Inventory
     Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WqtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ListView2 As ListView
+    Friend WithEvents MarkupBindingSource As BindingSource
+    Friend WithEvents MarkupTableAdapter As TransvacDataV2DataSet1TableAdapters.markupTableAdapter
+    Friend WithEvents supdiscbox As TextBox
+    Friend WithEvents markupbox As TextBox
+    Friend WithEvents unitcostbox As TextBox
+    Friend WithEvents retailbox As TextBox
+    Friend WithEvents SupDisc As Label
+    Friend WithEvents unitcost As Label
+    Friend WithEvents retail As Label
+    Friend WithEvents markup As Label
+    Friend WithEvents unitvaluebox As TextBox
+    Friend WithEvents unitvalue As Label
+    Friend WithEvents markupDecimail As TextBox
+    Friend WithEvents unitcostsum As TextBox
+    Friend WithEvents markupsum As TextBox
+    Friend WithEvents retailsum As TextBox
 End Class
