@@ -343,6 +343,18 @@
     <Compile Include="signoff.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StockAdjustment.Designer.vb">
+      <DependentUpon>StockAdjustment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockAdjustment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockMovement.Designer.vb">
+      <DependentUpon>StockMovement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockMovement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="terms.Designer.vb">
       <DependentUpon>terms.vb</DependentUpon>
     </Compile>
@@ -507,6 +519,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signoff.resx">
       <DependentUpon>signoff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockAdjustment.resx">
+      <DependentUpon>StockAdjustment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockMovement.resx">
+      <DependentUpon>StockMovement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="terms.resx">
       <DependentUpon>terms.vb</DependentUpon>
