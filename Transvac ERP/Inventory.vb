@@ -14,6 +14,8 @@
     End Function
 
     Private Sub Inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.markup' table. You can move, or remove it, as needed.
+        Me.MarkupTableAdapter.Fill(Me.TransvacDataV2DataSet1.markup)
         If PcodeTextBox1.Text = "" Then
             Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
             Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
@@ -21,7 +23,19 @@
             Me.TrandescTableAdapter1.FillByPcodelookup(Me.TransvacDataV2DataSet1.trandesc, PcodeTextBox1.Text)
         End If
         Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
+        Me.MarkupTableAdapter.FillBySupplier(Me.TransvacDataV2DataSet1.markup, PsupplierTextBox1.Text)
+        unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        markupDecimail.Text = Val(supdiscbox.Text) / 100
+        unitcostsum.Text = Val(unitvaluebox.Text) * Val(markupDecimail.Text)
+        unitcostbox.Text = Val(unitvaluebox.Text) - Val(unitcostsum.Text)
+        markupsum.Text = Val(markupbox.Text) / 100
+        retailsum.Text = Val(unitcostbox.Text) * Val(markupsum.Text)
+        retailbox.Text = Val(unitcostbox.Text) + Val(retailsum.Text)
         idcode.Visible = False
+        markupDecimail.Visible = False
+        markupsum.Visible = False
+        unitcostsum.Visible = False
+        retailsum.Visible = False
     End Sub
 
     Private Function TrandescTableAdapter() As Object
@@ -45,20 +59,50 @@
 
     Private Sub Movenxt_Click(sender As Object, e As EventArgs) Handles Movenxt.Click
         Me.TrandescBindingSource1.MoveNext()
+        Me.MarkupTableAdapter.FillBySupplier(Me.TransvacDataV2DataSet1.markup, PsupplierTextBox1.Text)
+        unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        markupDecimail.Text = Val(supdiscbox.Text) / 100
+        unitcostsum.Text = Val(unitvaluebox.Text) * Val(markupDecimail.Text)
+        unitcostbox.Text = Val(unitvaluebox.Text) - Val(unitcostsum.Text)
+        markupsum.Text = Val(markupbox.Text) / 100
+        retailsum.Text = Val(unitcostbox.Text) * Val(markupsum.Text)
+        retailbox.Text = Val(unitcostbox.Text) + Val(retailsum.Text)
     End Sub
 
     Private Sub MovePrev_Click(sender As Object, e As EventArgs) Handles MovePrev.Click
         Me.TrandescBindingSource1.MovePrevious()
+        Me.MarkupTableAdapter.FillBySupplier(Me.TransvacDataV2DataSet1.markup, PsupplierTextBox1.Text)
+        unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        markupDecimail.Text = Val(supdiscbox.Text) / 100
+        unitcostsum.Text = Val(unitvaluebox.Text) * Val(markupDecimail.Text)
+        unitcostbox.Text = Val(unitvaluebox.Text) - Val(unitcostsum.Text)
+        markupsum.Text = Val(markupbox.Text) / 100
+        retailsum.Text = Val(unitcostbox.Text) * Val(markupsum.Text)
+        retailbox.Text = Val(unitcostbox.Text) + Val(retailsum.Text)
     End Sub
-
     Private Sub MoveStr_Click(sender As Object, e As EventArgs) Handles MoveStr.Click
         Me.TrandescBindingSource1.MoveFirst()
+        Me.MarkupTableAdapter.FillBySupplier(Me.TransvacDataV2DataSet1.markup, PsupplierTextBox1.Text)
+        unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        markupDecimail.Text = Val(supdiscbox.Text) / 100
+        unitcostsum.Text = Val(unitvaluebox.Text) * Val(markupDecimail.Text)
+        unitcostbox.Text = Val(unitvaluebox.Text) - Val(unitcostsum.Text)
+        markupsum.Text = Val(markupbox.Text) / 100
+        retailsum.Text = Val(unitcostbox.Text) * Val(markupsum.Text)
+        retailbox.Text = Val(unitcostbox.Text) + Val(retailsum.Text)
     End Sub
 
     Private Sub MoveEnd_Click(sender As Object, e As EventArgs) Handles MoveEnd.Click
         Me.TrandescBindingSource1.MoveLast()
+        Me.MarkupTableAdapter.FillBySupplier(Me.TransvacDataV2DataSet1.markup, PsupplierTextBox1.Text)
+        unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        markupDecimail.Text = Val(supdiscbox.Text) / 100
+        unitcostsum.Text = Val(unitvaluebox.Text) * Val(markupDecimail.Text)
+        unitcostbox.Text = Val(unitvaluebox.Text) - Val(unitcostsum.Text)
+        markupsum.Text = Val(markupbox.Text) / 100
+        retailsum.Text = Val(unitcostbox.Text) * Val(markupsum.Text)
+        retailbox.Text = Val(unitcostbox.Text) + Val(retailsum.Text)
     End Sub
-
     Private Sub findesc_but_Click(sender As Object, e As EventArgs) Handles findesc_but.Click
         TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
         Dim Invfdesc As New Invfdesc
