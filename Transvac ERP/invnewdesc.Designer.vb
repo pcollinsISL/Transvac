@@ -41,6 +41,8 @@ Partial Class invnewdesc
         Me.SaveBTN = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -48,8 +50,6 @@ Partial Class invnewdesc
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
@@ -233,6 +233,17 @@ Partial Class invnewdesc
         Me.DateTimePicker1.Size = New System.Drawing.Size(160, 20)
         Me.DateTimePicker1.TabIndex = 62
         '
+        'TrandescBindingSource
+        '
+        Me.TrandescBindingSource.DataMember = "trandesc"
+        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(611, 139)
@@ -290,17 +301,6 @@ Partial Class invnewdesc
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(120, 147)
         Me.ListBox1.TabIndex = 50
-        '
-        'TrandescBindingSource
-        '
-        Me.TrandescBindingSource.DataMember = "trandesc"
-        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TextBox6
         '
@@ -366,7 +366,7 @@ Partial Class invnewdesc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(820, 604)
+        Me.ClientSize = New System.Drawing.Size(820, 417)
         Me.Controls.Add(Me.SaveBTN)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Label2)

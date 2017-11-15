@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Inventory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Inventory
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DescriptnLabel As System.Windows.Forms.Label
@@ -40,7 +40,6 @@ Partial Class Inventory
         Me.bincode_but = New System.Windows.Forms.Button()
         Me.nwbin_but = New System.Windows.Forms.Button()
         Me.editbin_but = New System.Windows.Forms.Button()
-        Me.delbin_but = New System.Windows.Forms.Button()
         Me.markup_but = New System.Windows.Forms.Button()
         Me.alloc_but = New System.Windows.Forms.Button()
         Me.xchange_but = New System.Windows.Forms.Button()
@@ -78,49 +77,55 @@ Partial Class Inventory
         Me.MinorderTextBox = New System.Windows.Forms.TextBox()
         Me.PcodeLook = New System.Windows.Forms.Button()
         Me.TrandescBindingSource1BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.TrandescBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.idcode = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TrandescBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.supdiscbox = New System.Windows.Forms.TextBox()
+        Me.MarkupBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.markupbox = New System.Windows.Forms.TextBox()
+        Me.unitcostbox = New System.Windows.Forms.TextBox()
+        Me.retailbox = New System.Windows.Forms.TextBox()
+        Me.SupDisc = New System.Windows.Forms.Label()
+        Me.unitcost = New System.Windows.Forms.Label()
+        Me.retail = New System.Windows.Forms.Label()
+        Me.markup = New System.Windows.Forms.Label()
         Me.TrandescTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
-        Me.LocatebinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantybinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnitvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CurrcycdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IiupdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CatalogdtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ListView2 = New System.Windows.Forms.ListView()
+        Me.MarkupTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.markupTableAdapter()
+        Me.unitvaluebox = New System.Windows.Forms.TextBox()
+        Me.unitvalue = New System.Windows.Forms.Label()
+        Me.markupDecimail = New System.Windows.Forms.TextBox()
+        Me.unitcostsum = New System.Windows.Forms.TextBox()
+        Me.markupsum = New System.Windows.Forms.TextBox()
+        Me.retailsum = New System.Windows.Forms.TextBox()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.TrandescBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.MovePrev = New System.Windows.Forms.Button()
+        Me.Movenxt = New System.Windows.Forms.Button()
+        Me.MoveEnd = New System.Windows.Forms.Button()
+        Me.MoveStr = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         DescriptnLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TrandescBindingSource1BindingNavigator.SuspendLayout()
         CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TrandescBindingSource1BindingNavigator.SuspendLayout()
+        CType(Me.MarkupBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -136,7 +141,7 @@ Partial Class Inventory
         'Label4
         '
         Label4.AutoSize = True
-        Label4.Location = New System.Drawing.Point(803, 122)
+        Label4.Location = New System.Drawing.Point(779, 103)
         Label4.Name = "Label4"
         Label4.Size = New System.Drawing.Size(107, 13)
         Label4.TabIndex = 175
@@ -145,7 +150,7 @@ Partial Class Inventory
         'Label5
         '
         Label5.AutoSize = True
-        Label5.Location = New System.Drawing.Point(803, 149)
+        Label5.Location = New System.Drawing.Point(779, 130)
         Label5.Name = "Label5"
         Label5.Size = New System.Drawing.Size(55, 13)
         Label5.TabIndex = 176
@@ -154,155 +159,11 @@ Partial Class Inventory
         'Label6
         '
         Label6.AutoSize = True
-        Label6.Location = New System.Drawing.Point(803, 95)
+        Label6.Location = New System.Drawing.Point(779, 76)
         Label6.Name = "Label6"
         Label6.Size = New System.Drawing.Size(81, 13)
         Label6.TabIndex = 177
         Label6.Text = "Stock Checked"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(842, 375)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(64, 13)
-        Me.Label30.TabIndex = 85
-        Me.Label30.Text = "MARKUP %"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(912, 375)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(40, 13)
-        Me.Label29.TabIndex = 84
-        Me.Label29.Text = "WQTY"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(958, 375)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(51, 13)
-        Me.Label28.TabIndex = 83
-        Me.Label28.Text = "WEIGHT"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(570, 375)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(74, 13)
-        Me.Label27.TabIndex = 82
-        Me.Label27.Text = "UNIT £ COST"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(717, 375)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(60, 13)
-        Me.Label26.TabIndex = 81
-        Me.Label26.Text = "CAT DATE"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(783, 375)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(54, 13)
-        Me.Label25.TabIndex = 80
-        Me.Label25.Text = "RETAIL £"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(417, 375)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(67, 13)
-        Me.Label24.TabIndex = 79
-        Me.Label24.Text = "CURRENCY"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(490, 375)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(74, 13)
-        Me.Label23.TabIndex = 78
-        Me.Label23.Text = "UNIT £ COST"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(652, 375)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(59, 13)
-        Me.Label22.TabIndex = 77
-        Me.Label22.Text = "UPDATED"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(277, 375)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(71, 13)
-        Me.Label21.TabIndex = 76
-        Me.Label21.Text = "UNIT VALUE"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(209, 375)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(62, 13)
-        Me.Label20.TabIndex = 75
-        Me.Label20.Text = "QUANTITY"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(192, 375)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 13)
-        Me.Label19.TabIndex = 74
-        Me.Label19.Text = "*"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(354, 375)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(57, 13)
-        Me.Label18.TabIndex = 73
-        Me.Label18.Text = "SUP DISC"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(134, 375)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(52, 13)
-        Me.Label17.TabIndex = 72
-        Me.Label17.Text = "SOURCE"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(53, 375)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(11, 13)
-        Me.Label16.TabIndex = 71
-        Me.Label16.Text = "*"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(70, 375)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(58, 13)
-        Me.Label15.TabIndex = 70
-        Me.Label15.Text = "BIN CODE"
         '
         'Label1
         '
@@ -333,61 +194,61 @@ Partial Class Inventory
         '
         'findesc_but
         '
-        Me.findesc_but.Location = New System.Drawing.Point(511, 171)
+        Me.findesc_but.Location = New System.Drawing.Point(490, 175)
         Me.findesc_but.Name = "findesc_but"
-        Me.findesc_but.Size = New System.Drawing.Size(75, 41)
+        Me.findesc_but.Size = New System.Drawing.Size(94, 41)
         Me.findesc_but.TabIndex = 153
         Me.findesc_but.Text = "Find Desc"
         Me.findesc_but.UseVisualStyleBackColor = True
         '
         'deldesc_but
         '
-        Me.deldesc_but.Location = New System.Drawing.Point(713, 164)
+        Me.deldesc_but.Location = New System.Drawing.Point(632, 131)
         Me.deldesc_but.Name = "deldesc_but"
-        Me.deldesc_but.Size = New System.Drawing.Size(75, 35)
+        Me.deldesc_but.Size = New System.Drawing.Size(75, 23)
         Me.deldesc_but.TabIndex = 154
         Me.deldesc_but.Text = "Delete Desc"
         Me.deldesc_but.UseVisualStyleBackColor = True
         '
         'editdesc_but
         '
-        Me.editdesc_but.Location = New System.Drawing.Point(713, 128)
+        Me.editdesc_but.Location = New System.Drawing.Point(632, 101)
         Me.editdesc_but.Name = "editdesc_but"
-        Me.editdesc_but.Size = New System.Drawing.Size(75, 31)
+        Me.editdesc_but.Size = New System.Drawing.Size(75, 23)
         Me.editdesc_but.TabIndex = 155
         Me.editdesc_but.Text = "Edit Desc"
         Me.editdesc_but.UseVisualStyleBackColor = True
         '
         'newdesc_but
         '
-        Me.newdesc_but.Location = New System.Drawing.Point(713, 88)
+        Me.newdesc_but.Location = New System.Drawing.Point(632, 71)
         Me.newdesc_but.Name = "newdesc_but"
-        Me.newdesc_but.Size = New System.Drawing.Size(75, 35)
+        Me.newdesc_but.Size = New System.Drawing.Size(75, 23)
         Me.newdesc_but.TabIndex = 156
         Me.newdesc_but.Text = "New Desc"
         Me.newdesc_but.UseVisualStyleBackColor = True
         '
         'quit_but
         '
-        Me.quit_but.Location = New System.Drawing.Point(68, 508)
+        Me.quit_but.Location = New System.Drawing.Point(32, 526)
         Me.quit_but.Name = "quit_but"
-        Me.quit_but.Size = New System.Drawing.Size(70, 51)
+        Me.quit_but.Size = New System.Drawing.Size(70, 37)
         Me.quit_but.TabIndex = 157
         Me.quit_but.Text = "Quit"
         Me.quit_but.UseVisualStyleBackColor = True
         '
         'avgtotval_but
         '
-        Me.avgtotval_but.Location = New System.Drawing.Point(144, 508)
+        Me.avgtotval_but.Location = New System.Drawing.Point(238, 526)
         Me.avgtotval_but.Name = "avgtotval_but"
-        Me.avgtotval_but.Size = New System.Drawing.Size(107, 23)
+        Me.avgtotval_but.Size = New System.Drawing.Size(102, 23)
         Me.avgtotval_but.TabIndex = 158
         Me.avgtotval_but.Text = "Avg/Total Value"
         Me.avgtotval_but.UseVisualStyleBackColor = True
         '
         'bincode_but
         '
-        Me.bincode_but.Location = New System.Drawing.Point(258, 508)
+        Me.bincode_but.Location = New System.Drawing.Point(238, 583)
         Me.bincode_but.Name = "bincode_but"
         Me.bincode_but.Size = New System.Drawing.Size(102, 23)
         Me.bincode_but.TabIndex = 160
@@ -396,7 +257,7 @@ Partial Class Inventory
         '
         'nwbin_but
         '
-        Me.nwbin_but.Location = New System.Drawing.Point(508, 481)
+        Me.nwbin_but.Location = New System.Drawing.Point(546, 504)
         Me.nwbin_but.Name = "nwbin_but"
         Me.nwbin_but.Size = New System.Drawing.Size(75, 23)
         Me.nwbin_but.TabIndex = 161
@@ -405,34 +266,25 @@ Partial Class Inventory
         '
         'editbin_but
         '
-        Me.editbin_but.Location = New System.Drawing.Point(508, 539)
+        Me.editbin_but.Location = New System.Drawing.Point(546, 533)
         Me.editbin_but.Name = "editbin_but"
         Me.editbin_but.Size = New System.Drawing.Size(75, 23)
         Me.editbin_but.TabIndex = 162
         Me.editbin_but.Text = "Edit Bin"
         Me.editbin_but.UseVisualStyleBackColor = True
         '
-        'delbin_but
-        '
-        Me.delbin_but.Location = New System.Drawing.Point(508, 510)
-        Me.delbin_but.Name = "delbin_but"
-        Me.delbin_but.Size = New System.Drawing.Size(75, 23)
-        Me.delbin_but.TabIndex = 163
-        Me.delbin_but.Text = "Delete Bin"
-        Me.delbin_but.UseVisualStyleBackColor = True
-        '
         'markup_but
         '
-        Me.markup_but.Location = New System.Drawing.Point(144, 536)
+        Me.markup_but.Location = New System.Drawing.Point(238, 554)
         Me.markup_but.Name = "markup_but"
-        Me.markup_but.Size = New System.Drawing.Size(107, 23)
+        Me.markup_but.Size = New System.Drawing.Size(102, 23)
         Me.markup_but.TabIndex = 164
         Me.markup_but.Text = "MarkUp"
         Me.markup_but.UseVisualStyleBackColor = True
         '
         'alloc_but
         '
-        Me.alloc_but.Location = New System.Drawing.Point(593, 618)
+        Me.alloc_but.Location = New System.Drawing.Point(839, 658)
         Me.alloc_but.Name = "alloc_but"
         Me.alloc_but.Size = New System.Drawing.Size(75, 23)
         Me.alloc_but.TabIndex = 165
@@ -441,7 +293,7 @@ Partial Class Inventory
         '
         'xchange_but
         '
-        Me.xchange_but.Location = New System.Drawing.Point(258, 538)
+        Me.xchange_but.Location = New System.Drawing.Point(238, 612)
         Me.xchange_but.Name = "xchange_but"
         Me.xchange_but.Size = New System.Drawing.Size(102, 23)
         Me.xchange_but.TabIndex = 167
@@ -450,7 +302,7 @@ Partial Class Inventory
         '
         'orderd_but
         '
-        Me.orderd_but.Location = New System.Drawing.Point(593, 647)
+        Me.orderd_but.Location = New System.Drawing.Point(839, 687)
         Me.orderd_but.Name = "orderd_but"
         Me.orderd_but.Size = New System.Drawing.Size(75, 23)
         Me.orderd_but.TabIndex = 168
@@ -460,7 +312,7 @@ Partial Class Inventory
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.PeachPuff
-        Me.TextBox2.Location = New System.Drawing.Point(674, 620)
+        Me.TextBox2.Location = New System.Drawing.Point(920, 660)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(61, 20)
         Me.TextBox2.TabIndex = 170
@@ -468,7 +320,7 @@ Partial Class Inventory
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.PeachPuff
-        Me.TextBox1.Location = New System.Drawing.Point(674, 649)
+        Me.TextBox1.Location = New System.Drawing.Point(920, 689)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(61, 20)
         Me.TextBox1.TabIndex = 171
@@ -476,10 +328,10 @@ Partial Class Inventory
         'TextBox3
         '
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "descmemo", True))
-        Me.TextBox3.Location = New System.Drawing.Point(593, 481)
+        Me.TextBox3.Location = New System.Drawing.Point(627, 504)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(438, 131)
+        Me.TextBox3.Size = New System.Drawing.Size(335, 131)
         Me.TextBox3.TabIndex = 172
         '
         'TrandescBindingSource1
@@ -495,31 +347,31 @@ Partial Class Inventory
         '
         'editmem_but
         '
-        Me.editmem_but.Location = New System.Drawing.Point(508, 587)
+        Me.editmem_but.Location = New System.Drawing.Point(627, 638)
         Me.editmem_but.Name = "editmem_but"
-        Me.editmem_but.Size = New System.Drawing.Size(76, 25)
+        Me.editmem_but.Size = New System.Drawing.Size(76, 46)
         Me.editmem_but.TabIndex = 173
         Me.editmem_but.Text = "Edit Memo"
         Me.editmem_but.UseVisualStyleBackColor = True
         '
         'VScrollBar1
         '
-        Me.VScrollBar1.Location = New System.Drawing.Point(1034, 480)
+        Me.VScrollBar1.Location = New System.Drawing.Point(965, 503)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(16, 132)
         Me.VScrollBar1.TabIndex = 174
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(968, 453)
+        Me.TextBox5.Location = New System.Drawing.Point(785, 466)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(82, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(86, 20)
         Me.TextBox5.TabIndex = 181
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(883, 455)
+        Me.Label8.Location = New System.Drawing.Point(709, 469)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 13)
         Me.Label8.TabIndex = 180
@@ -527,15 +379,15 @@ Partial Class Inventory
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(675, 453)
+        Me.TextBox4.Location = New System.Drawing.Point(607, 466)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(82, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
         Me.TextBox4.TabIndex = 183
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(590, 457)
+        Me.Label7.Location = New System.Drawing.Point(522, 469)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 13)
         Me.Label7.TabIndex = 182
@@ -544,7 +396,7 @@ Partial Class Inventory
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(805, 180)
+        Me.Label9.Location = New System.Drawing.Point(781, 161)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 13)
         Me.Label9.TabIndex = 188
@@ -552,7 +404,7 @@ Partial Class Inventory
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(158, 154)
+        Me.TextBox10.Location = New System.Drawing.Point(158, 157)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(173, 20)
         Me.TextBox10.TabIndex = 190
@@ -574,10 +426,10 @@ Partial Class Inventory
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LocatebinDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.TranbinsBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(70, 218)
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 226)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1204, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(948, 150)
         Me.DataGridView1.TabIndex = 191
         '
         'LocatebinDataGridViewTextBoxColumn
@@ -674,7 +526,7 @@ Partial Class Inventory
         '
         'IdcodeTextBox
         '
-        Me.IdcodeTextBox.Location = New System.Drawing.Point(920, 173)
+        Me.IdcodeTextBox.Location = New System.Drawing.Point(896, 154)
         Me.IdcodeTextBox.Name = "IdcodeTextBox"
         Me.IdcodeTextBox.Size = New System.Drawing.Size(66, 20)
         Me.IdcodeTextBox.TabIndex = 195
@@ -682,7 +534,7 @@ Partial Class Inventory
         'MinstockTextBox
         '
         Me.MinstockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minstock", True))
-        Me.MinstockTextBox.Location = New System.Drawing.Point(920, 147)
+        Me.MinstockTextBox.Location = New System.Drawing.Point(896, 128)
         Me.MinstockTextBox.Name = "MinstockTextBox"
         Me.MinstockTextBox.Size = New System.Drawing.Size(66, 20)
         Me.MinstockTextBox.TabIndex = 196
@@ -690,7 +542,7 @@ Partial Class Inventory
         'MinorderTextBox
         '
         Me.MinorderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TrandescBindingSource1, "minorder", True))
-        Me.MinorderTextBox.Location = New System.Drawing.Point(920, 119)
+        Me.MinorderTextBox.Location = New System.Drawing.Point(896, 100)
         Me.MinorderTextBox.Name = "MinorderTextBox"
         Me.MinorderTextBox.Size = New System.Drawing.Size(66, 20)
         Me.MinorderTextBox.TabIndex = 197
@@ -719,18 +571,9 @@ Partial Class Inventory
         Me.TrandescBindingSource1BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.TrandescBindingSource1BindingNavigator.Name = "TrandescBindingSource1BindingNavigator"
         Me.TrandescBindingSource1BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.TrandescBindingSource1BindingNavigator.Size = New System.Drawing.Size(1270, 25)
+        Me.TrandescBindingSource1BindingNavigator.Size = New System.Drawing.Size(1068, 25)
         Me.TrandescBindingSource1BindingNavigator.TabIndex = 199
         Me.TrandescBindingSource1BindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
         'BindingNavigatorCountItem
         '
@@ -738,33 +581,6 @@ Partial Class Inventory
         Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
         'BindingNavigatorSeparator
         '
@@ -785,36 +601,10 @@ Partial Class Inventory
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'TrandescBindingSource1BindingNavigatorSaveItem
-        '
-        Me.TrandescBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TrandescBindingSource1BindingNavigatorSaveItem.Image = CType(resources.GetObject("TrandescBindingSource1BindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.TrandescBindingSource1BindingNavigatorSaveItem.Name = "TrandescBindingSource1BindingNavigatorSaveItem"
-        Me.TrandescBindingSource1BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.TrandescBindingSource1BindingNavigatorSaveItem.Text = "Save Data"
         '
         'idcode
         '
@@ -827,26 +617,82 @@ Partial Class Inventory
         'DateTimePicker1
         '
         Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TrandescBindingSource1, "idupdate", True))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(920, 93)
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(896, 74)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(130, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker1.TabIndex = 201
         '
-        'TrandescBindingSource1
+        'supdiscbox
         '
-        Me.TrandescBindingSource1.DataMember = "trandesc"
-        Me.TrandescBindingSource1.DataSource = Me.TransvacDataV2DataSet1
+        Me.supdiscbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarkupBindingSource, "sup_discpc", True))
+        Me.supdiscbox.Location = New System.Drawing.Point(87, 387)
+        Me.supdiscbox.Name = "supdiscbox"
+        Me.supdiscbox.Size = New System.Drawing.Size(100, 20)
+        Me.supdiscbox.TabIndex = 202
         '
-        'TransvacDataV2DataSet1
+        'MarkupBindingSource
         '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.MarkupBindingSource.DataMember = "markup"
+        Me.MarkupBindingSource.DataSource = Me.TransvacDataV2DataSet1
         '
-        'TranbinsBindingSource
+        'markupbox
         '
-        Me.TranbinsBindingSource.DataMember = "tranbins"
-        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.markupbox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarkupBindingSource, "mupercent", True))
+        Me.markupbox.Location = New System.Drawing.Point(244, 387)
+        Me.markupbox.Name = "markupbox"
+        Me.markupbox.Size = New System.Drawing.Size(100, 20)
+        Me.markupbox.TabIndex = 203
+        '
+        'unitcostbox
+        '
+        Me.unitcostbox.Location = New System.Drawing.Point(607, 387)
+        Me.unitcostbox.Name = "unitcostbox"
+        Me.unitcostbox.Size = New System.Drawing.Size(100, 20)
+        Me.unitcostbox.TabIndex = 204
+        '
+        'retailbox
+        '
+        Me.retailbox.Location = New System.Drawing.Point(771, 387)
+        Me.retailbox.Name = "retailbox"
+        Me.retailbox.Size = New System.Drawing.Size(100, 20)
+        Me.retailbox.TabIndex = 205
+        '
+        'SupDisc
+        '
+        Me.SupDisc.AutoSize = True
+        Me.SupDisc.Location = New System.Drawing.Point(31, 390)
+        Me.SupDisc.Name = "SupDisc"
+        Me.SupDisc.Size = New System.Drawing.Size(50, 13)
+        Me.SupDisc.TabIndex = 206
+        Me.SupDisc.Text = "Sup Disc"
+        '
+        'unitcost
+        '
+        Me.unitcost.AutoSize = True
+        Me.unitcost.Location = New System.Drawing.Point(551, 390)
+        Me.unitcost.Name = "unitcost"
+        Me.unitcost.Size = New System.Drawing.Size(50, 13)
+        Me.unitcost.TabIndex = 207
+        Me.unitcost.Text = "Unit Cost"
+        '
+        'retail
+        '
+        Me.retail.AutoSize = True
+        Me.retail.Location = New System.Drawing.Point(727, 390)
+        Me.retail.Name = "retail"
+        Me.retail.Size = New System.Drawing.Size(34, 13)
+        Me.retail.TabIndex = 208
+        Me.retail.Text = "Retail"
+        '
+        'markup
+        '
+        Me.markup.AutoSize = True
+        Me.markup.Location = New System.Drawing.Point(199, 390)
+        Me.markup.Name = "markup"
+        Me.markup.Size = New System.Drawing.Size(43, 13)
+        Me.markup.TabIndex = 209
+        Me.markup.Text = "Markup"
         '
         'TrandescTableAdapter1
         '
@@ -904,76 +750,161 @@ Partial Class Inventory
         '
         Me.TranbinsTableAdapter.ClearBeforeFill = True
         '
-        'LocatebinDataGridViewTextBoxColumn
+        'MarkupTableAdapter
         '
-        Me.LocatebinDataGridViewTextBoxColumn.DataPropertyName = "locatebin"
-        Me.LocatebinDataGridViewTextBoxColumn.HeaderText = "BIN CODE"
-        Me.LocatebinDataGridViewTextBoxColumn.Name = "LocatebinDataGridViewTextBoxColumn"
-        Me.LocatebinDataGridViewTextBoxColumn.ReadOnly = True
+        Me.MarkupTableAdapter.ClearBeforeFill = True
         '
-        'SourcecdeDataGridViewTextBoxColumn
+        'unitvaluebox
         '
-        Me.SourcecdeDataGridViewTextBoxColumn.DataPropertyName = "sourcecde"
-        Me.SourcecdeDataGridViewTextBoxColumn.HeaderText = "SOURCE"
-        Me.SourcecdeDataGridViewTextBoxColumn.Name = "SourcecdeDataGridViewTextBoxColumn"
-        Me.SourcecdeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.unitvaluebox.Location = New System.Drawing.Point(426, 387)
+        Me.unitvaluebox.Name = "unitvaluebox"
+        Me.unitvaluebox.Size = New System.Drawing.Size(100, 20)
+        Me.unitvaluebox.TabIndex = 210
         '
-        'QuantybinDataGridViewTextBoxColumn
+        'unitvalue
         '
-        Me.QuantybinDataGridViewTextBoxColumn.DataPropertyName = "quantybin"
-        Me.QuantybinDataGridViewTextBoxColumn.HeaderText = "QUANTITY"
-        Me.QuantybinDataGridViewTextBoxColumn.Name = "QuantybinDataGridViewTextBoxColumn"
-        Me.QuantybinDataGridViewTextBoxColumn.ReadOnly = True
+        Me.unitvalue.AutoSize = True
+        Me.unitvalue.Location = New System.Drawing.Point(364, 390)
+        Me.unitvalue.Name = "unitvalue"
+        Me.unitvalue.Size = New System.Drawing.Size(56, 13)
+        Me.unitvalue.TabIndex = 211
+        Me.unitvalue.Text = "Unit Value"
         '
-        'UnitvalueDataGridViewTextBoxColumn
+        'markupDecimail
         '
-        Me.UnitvalueDataGridViewTextBoxColumn.DataPropertyName = "unit_value"
-        Me.UnitvalueDataGridViewTextBoxColumn.HeaderText = "UNIT VALUE"
-        Me.UnitvalueDataGridViewTextBoxColumn.Name = "UnitvalueDataGridViewTextBoxColumn"
-        Me.UnitvalueDataGridViewTextBoxColumn.ReadOnly = True
+        Me.markupDecimail.Location = New System.Drawing.Point(87, 409)
+        Me.markupDecimail.Name = "markupDecimail"
+        Me.markupDecimail.Size = New System.Drawing.Size(100, 20)
+        Me.markupDecimail.TabIndex = 212
         '
-        'CurrcycdeDataGridViewTextBoxColumn
+        'unitcostsum
         '
-        Me.CurrcycdeDataGridViewTextBoxColumn.DataPropertyName = "currcy_cde"
-        Me.CurrcycdeDataGridViewTextBoxColumn.HeaderText = "CURRENCY"
-        Me.CurrcycdeDataGridViewTextBoxColumn.Name = "CurrcycdeDataGridViewTextBoxColumn"
-        Me.CurrcycdeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.unitcostsum.Location = New System.Drawing.Point(607, 409)
+        Me.unitcostsum.Name = "unitcostsum"
+        Me.unitcostsum.Size = New System.Drawing.Size(100, 20)
+        Me.unitcostsum.TabIndex = 213
         '
-        'IiupdateDataGridViewTextBoxColumn
+        'markupsum
         '
-        Me.IiupdateDataGridViewTextBoxColumn.DataPropertyName = "iiupdate"
-        Me.IiupdateDataGridViewTextBoxColumn.HeaderText = "UPDATED"
-        Me.IiupdateDataGridViewTextBoxColumn.Name = "IiupdateDataGridViewTextBoxColumn"
-        Me.IiupdateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.markupsum.Location = New System.Drawing.Point(244, 409)
+        Me.markupsum.Name = "markupsum"
+        Me.markupsum.Size = New System.Drawing.Size(100, 20)
+        Me.markupsum.TabIndex = 214
         '
-        'CatalogdtDataGridViewTextBoxColumn
+        'retailsum
         '
-        Me.CatalogdtDataGridViewTextBoxColumn.DataPropertyName = "catalog_dt"
-        Me.CatalogdtDataGridViewTextBoxColumn.HeaderText = "CAT DATE"
-        Me.CatalogdtDataGridViewTextBoxColumn.Name = "CatalogdtDataGridViewTextBoxColumn"
-        Me.CatalogdtDataGridViewTextBoxColumn.ReadOnly = True
+        Me.retailsum.Location = New System.Drawing.Point(771, 409)
+        Me.retailsum.Name = "retailsum"
+        Me.retailsum.Size = New System.Drawing.Size(100, 20)
+        Me.retailsum.TabIndex = 215
         '
-        'WqtyDataGridViewTextBoxColumn
+        'BindingNavigatorAddNewItem
         '
-        Me.WqtyDataGridViewTextBoxColumn.DataPropertyName = "wqty"
-        Me.WqtyDataGridViewTextBoxColumn.HeaderText = "WGTY"
-        Me.WqtyDataGridViewTextBoxColumn.Name = "WqtyDataGridViewTextBoxColumn"
-        Me.WqtyDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
-        'WeightDataGridViewTextBoxColumn
+        'BindingNavigatorDeleteItem
         '
-        Me.WeightDataGridViewTextBoxColumn.DataPropertyName = "weight"
-        Me.WeightDataGridViewTextBoxColumn.HeaderText = "WEIGHT"
-        Me.WeightDataGridViewTextBoxColumn.Name = "WeightDataGridViewTextBoxColumn"
-        Me.WeightDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
-        'ListView2
+        'BindingNavigatorMoveFirstItem
         '
-        Me.ListView2.Location = New System.Drawing.Point(70, 388)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(954, 132)
-        Me.ListView2.TabIndex = 67
-        Me.ListView2.UseCompatibleStateImageBehavior = False
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'TrandescBindingSource1BindingNavigatorSaveItem
+        '
+        Me.TrandescBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TrandescBindingSource1BindingNavigatorSaveItem.Image = CType(resources.GetObject("TrandescBindingSource1BindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.TrandescBindingSource1BindingNavigatorSaveItem.Name = "TrandescBindingSource1BindingNavigatorSaveItem"
+        Me.TrandescBindingSource1BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.TrandescBindingSource1BindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'MovePrev
+        '
+        Me.MovePrev.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMovePreviousItem_Image
+        Me.MovePrev.Location = New System.Drawing.Point(108, 466)
+        Me.MovePrev.Name = "MovePrev"
+        Me.MovePrev.Size = New System.Drawing.Size(68, 33)
+        Me.MovePrev.TabIndex = 152
+        Me.MovePrev.UseVisualStyleBackColor = True
+        '
+        'Movenxt
+        '
+        Me.Movenxt.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveNextItem_Image
+        Me.Movenxt.Location = New System.Drawing.Point(182, 466)
+        Me.Movenxt.Name = "Movenxt"
+        Me.Movenxt.Size = New System.Drawing.Size(68, 33)
+        Me.Movenxt.TabIndex = 151
+        Me.Movenxt.UseVisualStyleBackColor = True
+        '
+        'MoveEnd
+        '
+        Me.MoveEnd.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveLastItem_Image
+        Me.MoveEnd.Location = New System.Drawing.Point(256, 466)
+        Me.MoveEnd.Name = "MoveEnd"
+        Me.MoveEnd.Size = New System.Drawing.Size(68, 33)
+        Me.MoveEnd.TabIndex = 150
+        Me.MoveEnd.UseVisualStyleBackColor = True
+        '
+        'MoveStr
+        '
+        Me.MoveStr.Image = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveFirstItem_Image
+        Me.MoveStr.Location = New System.Drawing.Point(34, 466)
+        Me.MoveStr.Name = "MoveStr"
+        Me.MoveStr.Size = New System.Drawing.Size(68, 33)
+        Me.MoveStr.TabIndex = 149
+        Me.MoveStr.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 91
+        Me.PictureBox1.TabStop = False
         '
         'Inventory
         '
@@ -982,7 +913,21 @@ Partial Class Inventory
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.ClientSize = New System.Drawing.Size(1270, 769)
+        Me.ClientSize = New System.Drawing.Size(1068, 769)
+        Me.Controls.Add(Me.retailsum)
+        Me.Controls.Add(Me.markupsum)
+        Me.Controls.Add(Me.unitcostsum)
+        Me.Controls.Add(Me.markupDecimail)
+        Me.Controls.Add(Me.unitvalue)
+        Me.Controls.Add(Me.unitvaluebox)
+        Me.Controls.Add(Me.markup)
+        Me.Controls.Add(Me.retail)
+        Me.Controls.Add(Me.unitcost)
+        Me.Controls.Add(Me.SupDisc)
+        Me.Controls.Add(Me.retailbox)
+        Me.Controls.Add(Me.unitcostbox)
+        Me.Controls.Add(Me.markupbox)
+        Me.Controls.Add(Me.supdiscbox)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.TrandescBindingSource1BindingNavigator)
@@ -1013,7 +958,6 @@ Partial Class Inventory
         Me.Controls.Add(Me.xchange_but)
         Me.Controls.Add(Me.alloc_but)
         Me.Controls.Add(Me.markup_but)
-        Me.Controls.Add(Me.delbin_but)
         Me.Controls.Add(Me.editbin_but)
         Me.Controls.Add(Me.nwbin_but)
         Me.Controls.Add(Me.bincode_but)
@@ -1032,23 +976,6 @@ Partial Class Inventory
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label30)
-        Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.Label28)
-        Me.Controls.Add(Me.Label27)
-        Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.ListView2)
         Me.Name = "Inventory"
         Me.Text = "Inventory"
         CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1058,9 +985,8 @@ Partial Class Inventory
         CType(Me.TrandescBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TrandescBindingSource1BindingNavigator.ResumeLayout(False)
         Me.TrandescBindingSource1BindingNavigator.PerformLayout()
-        CType(Me.TrandescBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MarkupBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1082,7 +1008,6 @@ Partial Class Inventory
     Friend WithEvents bincode_but As Button
     Friend WithEvents nwbin_but As Button
     Friend WithEvents editbin_but As Button
-    Friend WithEvents delbin_but As Button
     Friend WithEvents markup_but As Button
     Friend WithEvents alloc_but As Button
     Friend WithEvents xchange_but As Button
@@ -1137,5 +1062,20 @@ Partial Class Inventory
     Friend WithEvents CatalogdtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WqtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ListView2 As ListView
+    Friend WithEvents MarkupBindingSource As BindingSource
+    Friend WithEvents MarkupTableAdapter As TransvacDataV2DataSet1TableAdapters.markupTableAdapter
+    Friend WithEvents supdiscbox As TextBox
+    Friend WithEvents markupbox As TextBox
+    Friend WithEvents unitcostbox As TextBox
+    Friend WithEvents retailbox As TextBox
+    Friend WithEvents SupDisc As Label
+    Friend WithEvents unitcost As Label
+    Friend WithEvents retail As Label
+    Friend WithEvents markup As Label
+    Friend WithEvents unitvaluebox As TextBox
+    Friend WithEvents unitvalue As Label
+    Friend WithEvents markupDecimail As TextBox
+    Friend WithEvents unitcostsum As TextBox
+    Friend WithEvents markupsum As TextBox
+    Friend WithEvents retailsum As TextBox
 End Class

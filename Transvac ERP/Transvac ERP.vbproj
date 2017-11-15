@@ -195,6 +195,12 @@
     <Compile Include="enquiry.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="invallocated.Designer.vb">
+      <DependentUpon>invallocated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invallocated.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inveditbin.Designer.vb">
       <DependentUpon>inveditbin.vb</DependentUpon>
     </Compile>
@@ -225,10 +231,34 @@
     <Compile Include="FREEFORM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="invnewbin.Designer.vb">
+      <DependentUpon>invnewbin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invnewbin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invnewcode.Designer.vb">
+      <DependentUpon>invnewcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invnewcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="invnewdesc.Designer.vb">
       <DependentUpon>invnewdesc.vb</DependentUpon>
     </Compile>
     <Compile Include="invnewdesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invordered.Designer.vb">
+      <DependentUpon>invordered.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invordered.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="markup.Designer.vb">
+      <DependentUpon>markup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="markup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODFORM.designer.vb">
@@ -447,6 +477,9 @@
     <EmbeddedResource Include="enquiry.resx">
       <DependentUpon>enquiry.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="invallocated.resx">
+      <DependentUpon>invallocated.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inveditbin.resx">
       <DependentUpon>inveditbin.vb</DependentUpon>
     </EmbeddedResource>
@@ -462,8 +495,20 @@
     <EmbeddedResource Include="FREEFORM.resx">
       <DependentUpon>FREEFORM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="invnewbin.resx">
+      <DependentUpon>invnewbin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invnewcode.resx">
+      <DependentUpon>invnewcode.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="invnewdesc.resx">
       <DependentUpon>invnewdesc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invordered.resx">
+      <DependentUpon>invordered.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="markup.resx">
+      <DependentUpon>markup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODFORM.resx">
       <DependentUpon>MODFORM.vb</DependentUpon>
