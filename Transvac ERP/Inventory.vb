@@ -56,7 +56,7 @@
         Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
     End Sub
 
-    Private Sub TrandescBindingSource1BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles TrandescBindingSource1BindingNavigatorSaveItem.Click
+    Private Sub TrandescBindingSource1BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.TrandescBindingSource1.EndEdit()
         Me.TableAdapterManager1.UpdateAll(Me.TransvacDataV2DataSet1)
@@ -185,6 +185,26 @@
         TransPortal.TabControl1.TabPages(5).Controls.Add(Inveditbin)
         Inveditbin.idcode.Text = idcode.Text
         Inveditbin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub alloc_but_Click(sender As Object, e As EventArgs) Handles alloc_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Invallocated As New invallocated
+        Invallocated.TopLevel = False
+        Invallocated.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Invallocated)
+        Invallocated.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub orderd_but_Click(sender As Object, e As EventArgs) Handles orderd_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim invordered As New invordered
+        invordered.TopLevel = False
+        invordered.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(invordered)
+        invordered.Show()
         Me.Hide()
     End Sub
 End Class

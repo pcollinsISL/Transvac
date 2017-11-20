@@ -41,7 +41,7 @@ Partial Class invallocated
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.closebtn = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BinallocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -213,21 +213,21 @@ Partial Class invallocated
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
         Me.DataGridViewTextBoxColumn12.Visible = False
         '
-        'Button1
+        'closebtn
         '
-        Me.Button1.Location = New System.Drawing.Point(212, 454)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "CLOSE"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.closebtn.Location = New System.Drawing.Point(212, 454)
+        Me.closebtn.Name = "closebtn"
+        Me.closebtn.Size = New System.Drawing.Size(75, 23)
+        Me.closebtn.TabIndex = 12
+        Me.closebtn.Text = "CLOSE"
+        Me.closebtn.UseVisualStyleBackColor = True
         '
         'invallocated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(557, 513)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.closebtn)
         Me.Controls.Add(Me.BinallocDataGridView)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "invallocated"
@@ -258,5 +258,5 @@ Partial Class invallocated
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
+    Friend WithEvents closebtn As Button
 End Class

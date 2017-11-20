@@ -27,11 +27,9 @@ Partial Class invordered
         Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.QuotedetailTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.OrddetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrddetailTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.orddetailTableAdapter()
+        Me.OrddetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrddetailDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,6 +48,8 @@ Partial Class invordered
         Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.closebtn = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrddetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,14 +120,14 @@ Partial Class invordered
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'OrddetailTableAdapter
+        '
+        Me.OrddetailTableAdapter.ClearBeforeFill = True
+        '
         'OrddetailBindingSource
         '
         Me.OrddetailBindingSource.DataMember = "orddetail"
         Me.OrddetailBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'OrddetailTableAdapter
-        '
-        Me.OrddetailTableAdapter.ClearBeforeFill = True
         '
         'OrddetailDataGridView
         '
@@ -139,25 +139,6 @@ Partial Class invordered
         Me.OrddetailDataGridView.Name = "OrddetailDataGridView"
         Me.OrddetailDataGridView.Size = New System.Drawing.Size(533, 371)
         Me.OrddetailDataGridView.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(293, 460)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "CLOSE"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
         '
         'DataGridViewTextBoxColumn1
         '
@@ -283,12 +264,31 @@ Partial Class invordered
         Me.DataGridViewTextBoxColumn17.ReadOnly = True
         Me.DataGridViewTextBoxColumn17.Visible = False
         '
+        'closebtn
+        '
+        Me.closebtn.Location = New System.Drawing.Point(293, 460)
+        Me.closebtn.Name = "closebtn"
+        Me.closebtn.Size = New System.Drawing.Size(75, 23)
+        Me.closebtn.TabIndex = 11
+        Me.closebtn.Text = "CLOSE"
+        Me.closebtn.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
         'invordered
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(658, 498)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.closebtn)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.OrddetailDataGridView)
         Me.Name = "invordered"
@@ -311,7 +311,7 @@ Partial Class invordered
     Friend WithEvents OrddetailBindingSource As BindingSource
     Friend WithEvents OrddetailDataGridView As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents closebtn As Button
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn

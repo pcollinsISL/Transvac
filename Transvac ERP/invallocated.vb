@@ -11,4 +11,14 @@
         Me.BinallocTableAdapter.Fill(Me.TransvacDataV2DataSet1.binalloc)
 
     End Sub
+
+    Private Sub closebtn_Click(sender As Object, e As EventArgs) Handles closebtn.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Inventory As New Inventory
+        Inventory.TopLevel = False
+        Inventory.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Inventory)
+        Inventory.Show()
+        Me.Close()
+    End Sub
 End Class

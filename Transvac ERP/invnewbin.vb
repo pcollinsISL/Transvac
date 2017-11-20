@@ -16,6 +16,6 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles savebtn.Click
         Me.Validate()
         Me.TranbinsBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet1)
+        Me.TranbinsTableAdapter.Update(Me.TransvacDataV2DataSet1)
     End Sub
 End Class
