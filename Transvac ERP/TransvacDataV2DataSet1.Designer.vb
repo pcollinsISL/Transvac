@@ -45720,9 +45720,8 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        supplier, countrycde, sup_discpc, mupercent, who, lupdate, account,"& _ 
-                " multi, ddays, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            markup"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (supplier = @param"& _ 
-                "1)"
+            Me._commandCollection(1).CommandText = "SELECT UniqueID, account, countrycde, ddays, lupdate, multi, mupercent, sup_discp"& _ 
+                "c, supplier, who FROM markup WHERE (supplier = @param1)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "supplier", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub

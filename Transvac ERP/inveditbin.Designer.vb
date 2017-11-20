@@ -48,8 +48,9 @@ Partial Class inveditbin
         Me.WqtyTextBox = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.QuantybinTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.abortbtn = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.idcode = New System.Windows.Forms.TextBox()
         LocatebinLabel = New System.Windows.Forms.Label()
         AssuredLabel = New System.Windows.Forms.Label()
         SourcecdeLabel = New System.Windows.Forms.Label()
@@ -64,6 +65,96 @@ Partial Class inveditbin
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'LocatebinLabel
+        '
+        LocatebinLabel.AutoSize = True
+        LocatebinLabel.Location = New System.Drawing.Point(258, 168)
+        LocatebinLabel.Name = "LocatebinLabel"
+        LocatebinLabel.Size = New System.Drawing.Size(53, 13)
+        LocatebinLabel.TabIndex = 1
+        LocatebinLabel.Text = "Bin Code:"
+        '
+        'AssuredLabel
+        '
+        AssuredLabel.AutoSize = True
+        AssuredLabel.Location = New System.Drawing.Point(445, 117)
+        AssuredLabel.Name = "AssuredLabel"
+        AssuredLabel.Size = New System.Drawing.Size(45, 13)
+        AssuredLabel.TabIndex = 3
+        AssuredLabel.Text = "Assured"
+        '
+        'SourcecdeLabel
+        '
+        SourcecdeLabel.AutoSize = True
+        SourcecdeLabel.Location = New System.Drawing.Point(37, 121)
+        SourcecdeLabel.Name = "SourcecdeLabel"
+        SourcecdeLabel.Size = New System.Drawing.Size(41, 13)
+        SourcecdeLabel.TabIndex = 5
+        SourcecdeLabel.Text = "Source"
+        '
+        'AllocLabel
+        '
+        AllocLabel.AutoSize = True
+        AllocLabel.Location = New System.Drawing.Point(445, 228)
+        AllocLabel.Name = "AllocLabel"
+        AllocLabel.Size = New System.Drawing.Size(73, 13)
+        AllocLabel.TabIndex = 7
+        AllocLabel.Text = "Allocated Qty:"
+        '
+        'Currcy_cdeLabel
+        '
+        Currcy_cdeLabel.AutoSize = True
+        Currcy_cdeLabel.Location = New System.Drawing.Point(237, 121)
+        Currcy_cdeLabel.Name = "Currcy_cdeLabel"
+        Currcy_cdeLabel.Size = New System.Drawing.Size(80, 13)
+        Currcy_cdeLabel.TabIndex = 9
+        Currcy_cdeLabel.Text = "Currency Code:"
+        '
+        'Unit_valueLabel
+        '
+        Unit_valueLabel.AutoSize = True
+        Unit_valueLabel.Location = New System.Drawing.Point(445, 168)
+        Unit_valueLabel.Name = "Unit_valueLabel"
+        Unit_valueLabel.Size = New System.Drawing.Size(59, 13)
+        Unit_valueLabel.TabIndex = 11
+        Unit_valueLabel.Text = "Unit Value:"
+        '
+        'Catalog_dtLabel
+        '
+        Catalog_dtLabel.AutoSize = True
+        Catalog_dtLabel.Location = New System.Drawing.Point(521, 58)
+        Catalog_dtLabel.Name = "Catalog_dtLabel"
+        Catalog_dtLabel.Size = New System.Drawing.Size(72, 13)
+        Catalog_dtLabel.TabIndex = 13
+        Catalog_dtLabel.Text = "Catalog Date:"
+        '
+        'WeightLabel
+        '
+        WeightLabel.AutoSize = True
+        WeightLabel.Location = New System.Drawing.Point(276, 279)
+        WeightLabel.Name = "WeightLabel"
+        WeightLabel.Size = New System.Drawing.Size(44, 13)
+        WeightLabel.TabIndex = 17
+        WeightLabel.Text = "Weight:"
+        '
+        'WqtyLabel
+        '
+        WqtyLabel.AutoSize = True
+        WqtyLabel.Location = New System.Drawing.Point(445, 279)
+        WqtyLabel.Name = "WqtyLabel"
+        WqtyLabel.Size = New System.Drawing.Size(37, 13)
+        WqtyLabel.TabIndex = 19
+        WqtyLabel.Text = "WQty:"
+        '
+        'QuantybinLabel
+        '
+        QuantybinLabel.AutoSize = True
+        QuantybinLabel.Location = New System.Drawing.Point(260, 224)
+        QuantybinLabel.Name = "QuantybinLabel"
+        QuantybinLabel.Size = New System.Drawing.Size(57, 13)
+        QuantybinLabel.TabIndex = 21
+        QuantybinLabel.Text = "Stock Qty:"
         '
         'TransvacDataV2DataSet1
         '
@@ -128,15 +219,6 @@ Partial Class inveditbin
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'LocatebinLabel
-        '
-        LocatebinLabel.AutoSize = True
-        LocatebinLabel.Location = New System.Drawing.Point(258, 168)
-        LocatebinLabel.Name = "LocatebinLabel"
-        LocatebinLabel.Size = New System.Drawing.Size(53, 13)
-        LocatebinLabel.TabIndex = 1
-        LocatebinLabel.Text = "Bin Code:"
-        '
         'LocatebinTextBox
         '
         Me.LocatebinTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "locatebin", True))
@@ -144,15 +226,6 @@ Partial Class inveditbin
         Me.LocatebinTextBox.Name = "LocatebinTextBox"
         Me.LocatebinTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LocatebinTextBox.TabIndex = 2
-        '
-        'AssuredLabel
-        '
-        AssuredLabel.AutoSize = True
-        AssuredLabel.Location = New System.Drawing.Point(445, 117)
-        AssuredLabel.Name = "AssuredLabel"
-        AssuredLabel.Size = New System.Drawing.Size(45, 13)
-        AssuredLabel.TabIndex = 3
-        AssuredLabel.Text = "Assured"
         '
         'AssuredTextBox
         '
@@ -162,15 +235,6 @@ Partial Class inveditbin
         Me.AssuredTextBox.Size = New System.Drawing.Size(40, 20)
         Me.AssuredTextBox.TabIndex = 4
         '
-        'SourcecdeLabel
-        '
-        SourcecdeLabel.AutoSize = True
-        SourcecdeLabel.Location = New System.Drawing.Point(37, 121)
-        SourcecdeLabel.Name = "SourcecdeLabel"
-        SourcecdeLabel.Size = New System.Drawing.Size(41, 13)
-        SourcecdeLabel.TabIndex = 5
-        SourcecdeLabel.Text = "Source"
-        '
         'SourcecdeTextBox
         '
         Me.SourcecdeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "sourcecde", True))
@@ -178,15 +242,6 @@ Partial Class inveditbin
         Me.SourcecdeTextBox.Name = "SourcecdeTextBox"
         Me.SourcecdeTextBox.Size = New System.Drawing.Size(129, 20)
         Me.SourcecdeTextBox.TabIndex = 6
-        '
-        'AllocLabel
-        '
-        AllocLabel.AutoSize = True
-        AllocLabel.Location = New System.Drawing.Point(445, 228)
-        AllocLabel.Name = "AllocLabel"
-        AllocLabel.Size = New System.Drawing.Size(73, 13)
-        AllocLabel.TabIndex = 7
-        AllocLabel.Text = "Allocated Qty:"
         '
         'AllocTextBox
         '
@@ -196,15 +251,6 @@ Partial Class inveditbin
         Me.AllocTextBox.Size = New System.Drawing.Size(100, 20)
         Me.AllocTextBox.TabIndex = 8
         '
-        'Currcy_cdeLabel
-        '
-        Currcy_cdeLabel.AutoSize = True
-        Currcy_cdeLabel.Location = New System.Drawing.Point(237, 121)
-        Currcy_cdeLabel.Name = "Currcy_cdeLabel"
-        Currcy_cdeLabel.Size = New System.Drawing.Size(80, 13)
-        Currcy_cdeLabel.TabIndex = 9
-        Currcy_cdeLabel.Text = "Currency Code:"
-        '
         'Currcy_cdeTextBox
         '
         Me.Currcy_cdeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "currcy_cde", True))
@@ -212,15 +258,6 @@ Partial Class inveditbin
         Me.Currcy_cdeTextBox.Name = "Currcy_cdeTextBox"
         Me.Currcy_cdeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Currcy_cdeTextBox.TabIndex = 10
-        '
-        'Unit_valueLabel
-        '
-        Unit_valueLabel.AutoSize = True
-        Unit_valueLabel.Location = New System.Drawing.Point(445, 168)
-        Unit_valueLabel.Name = "Unit_valueLabel"
-        Unit_valueLabel.Size = New System.Drawing.Size(59, 13)
-        Unit_valueLabel.TabIndex = 11
-        Unit_valueLabel.Text = "Unit Value:"
         '
         'Unit_valueTextBox
         '
@@ -230,15 +267,6 @@ Partial Class inveditbin
         Me.Unit_valueTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Unit_valueTextBox.TabIndex = 12
         '
-        'Catalog_dtLabel
-        '
-        Catalog_dtLabel.AutoSize = True
-        Catalog_dtLabel.Location = New System.Drawing.Point(521, 58)
-        Catalog_dtLabel.Name = "Catalog_dtLabel"
-        Catalog_dtLabel.Size = New System.Drawing.Size(72, 13)
-        Catalog_dtLabel.TabIndex = 13
-        Catalog_dtLabel.Text = "Catalog Date:"
-        '
         'Catalog_dtDateTimePicker
         '
         Me.Catalog_dtDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TranbinsBindingSource, "catalog_dt", True))
@@ -247,15 +275,6 @@ Partial Class inveditbin
         Me.Catalog_dtDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Catalog_dtDateTimePicker.TabIndex = 14
         '
-        'WeightLabel
-        '
-        WeightLabel.AutoSize = True
-        WeightLabel.Location = New System.Drawing.Point(276, 279)
-        WeightLabel.Name = "WeightLabel"
-        WeightLabel.Size = New System.Drawing.Size(44, 13)
-        WeightLabel.TabIndex = 17
-        WeightLabel.Text = "Weight:"
-        '
         'WeightTextBox
         '
         Me.WeightTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "weight", True))
@@ -263,15 +282,6 @@ Partial Class inveditbin
         Me.WeightTextBox.Name = "WeightTextBox"
         Me.WeightTextBox.Size = New System.Drawing.Size(100, 20)
         Me.WeightTextBox.TabIndex = 18
-        '
-        'WqtyLabel
-        '
-        WqtyLabel.AutoSize = True
-        WqtyLabel.Location = New System.Drawing.Point(445, 279)
-        WqtyLabel.Name = "WqtyLabel"
-        WqtyLabel.Size = New System.Drawing.Size(37, 13)
-        WqtyLabel.TabIndex = 19
-        WqtyLabel.Text = "WQty:"
         '
         'WqtyTextBox
         '
@@ -291,15 +301,6 @@ Partial Class inveditbin
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
         '
-        'QuantybinLabel
-        '
-        QuantybinLabel.AutoSize = True
-        QuantybinLabel.Location = New System.Drawing.Point(260, 224)
-        QuantybinLabel.Name = "QuantybinLabel"
-        QuantybinLabel.Size = New System.Drawing.Size(57, 13)
-        QuantybinLabel.TabIndex = 21
-        QuantybinLabel.Text = "Stock Qty:"
-        '
         'QuantybinTextBox
         '
         Me.QuantybinTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "quantybin", True))
@@ -308,14 +309,14 @@ Partial Class inveditbin
         Me.QuantybinTextBox.Size = New System.Drawing.Size(100, 20)
         Me.QuantybinTextBox.TabIndex = 22
         '
-        'Button1
+        'abortbtn
         '
-        Me.Button1.Location = New System.Drawing.Point(103, 330)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "ABORT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.abortbtn.Location = New System.Drawing.Point(103, 330)
+        Me.abortbtn.Name = "abortbtn"
+        Me.abortbtn.Size = New System.Drawing.Size(75, 23)
+        Me.abortbtn.TabIndex = 23
+        Me.abortbtn.Text = "ABORT"
+        Me.abortbtn.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -326,13 +327,21 @@ Partial Class inveditbin
         Me.Button2.Text = "SAVE"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'idcode
+        '
+        Me.idcode.Location = New System.Drawing.Point(119, 168)
+        Me.idcode.Name = "idcode"
+        Me.idcode.Size = New System.Drawing.Size(100, 20)
+        Me.idcode.TabIndex = 25
+        '
         'inveditbin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(831, 393)
+        Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.abortbtn)
         Me.Controls.Add(QuantybinLabel)
         Me.Controls.Add(Me.QuantybinTextBox)
         Me.Controls.Add(Me.PictureBox1)
@@ -379,6 +388,7 @@ Partial Class inveditbin
     Friend WithEvents WqtyTextBox As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents QuantybinTextBox As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents abortbtn As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents idcode As TextBox
 End Class

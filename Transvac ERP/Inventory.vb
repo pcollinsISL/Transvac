@@ -42,7 +42,13 @@
     End Function
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles markup_but.Click
-
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim markup As New markup
+        markup.TopLevel = False
+        markup.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(markup)
+        markup.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PcodeLook_Click(sender As Object, e As EventArgs) Handles PcodeLook.Click, PcodeTextBox1.TextChanged
@@ -144,5 +150,41 @@
         Catch ex As Exception
             MessageBox.Show("Error while deleting record on table: " & ex.Message, "Deleted Address", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
+    End Sub
+
+    Private Sub bincode_but_Click(sender As Object, e As EventArgs) Handles bincode_but.Click
+
+    End Sub
+
+    Private Sub xchange_but_Click(sender As Object, e As EventArgs) Handles xchange_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim xchangerate As New XChangeRate
+        xchangerate.TopLevel = False
+        xchangerate.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(xchangerate)
+        xchangerate.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub nwbin_but_Click(sender As Object, e As EventArgs) Handles nwbin_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim invnewbin As New invnewbin
+        invnewbin.TopLevel = False
+        invnewbin.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(invnewbin)
+        invnewbin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub editbin_but_Click(sender As Object, e As EventArgs) Handles editbin_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim Inveditbin As New inveditbin
+        Inveditbin.TopLevel = False
+        Inveditbin.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(Inveditbin)
+        Inveditbin.idcode.Text = idcode.Text
+        Inveditbin.Show()
+        Me.Hide()
     End Sub
 End Class
