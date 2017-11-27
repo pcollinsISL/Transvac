@@ -29,14 +29,24 @@ Partial Class invnewcode
         Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.SourcecdeTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.abortbtn = New System.Windows.Forms.Button()
+        Me.savebtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.idcode = New System.Windows.Forms.TextBox()
         SourcecdeLabel = New System.Windows.Forms.Label()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SourcecdeLabel
+        '
+        SourcecdeLabel.AutoSize = True
+        SourcecdeLabel.Location = New System.Drawing.Point(57, 93)
+        SourcecdeLabel.Name = "SourcecdeLabel"
+        SourcecdeLabel.Size = New System.Drawing.Size(78, 13)
+        SourcecdeLabel.TabIndex = 1
+        SourcecdeLabel.Text = "New Bin Code:"
         '
         'TransvacDataV2DataSet1
         '
@@ -101,40 +111,31 @@ Partial Class invnewcode
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'SourcecdeLabel
-        '
-        SourcecdeLabel.AutoSize = True
-        SourcecdeLabel.Location = New System.Drawing.Point(57, 93)
-        SourcecdeLabel.Name = "SourcecdeLabel"
-        SourcecdeLabel.Size = New System.Drawing.Size(78, 13)
-        SourcecdeLabel.TabIndex = 1
-        SourcecdeLabel.Text = "New Bin Code:"
-        '
         'SourcecdeTextBox
         '
-        Me.SourcecdeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "sourcecde", True))
+        Me.SourcecdeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TranbinsBindingSource, "locatebin", True))
         Me.SourcecdeTextBox.Location = New System.Drawing.Point(162, 93)
         Me.SourcecdeTextBox.Name = "SourcecdeTextBox"
         Me.SourcecdeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SourcecdeTextBox.TabIndex = 2
         '
-        'Button1
+        'abortbtn
         '
-        Me.Button1.Location = New System.Drawing.Point(60, 181)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "ABORT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.abortbtn.Location = New System.Drawing.Point(60, 181)
+        Me.abortbtn.Name = "abortbtn"
+        Me.abortbtn.Size = New System.Drawing.Size(75, 23)
+        Me.abortbtn.TabIndex = 3
+        Me.abortbtn.Text = "ABORT"
+        Me.abortbtn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'savebtn
         '
-        Me.Button2.Location = New System.Drawing.Point(187, 181)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "SAVE"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.savebtn.Location = New System.Drawing.Point(187, 181)
+        Me.savebtn.Name = "savebtn"
+        Me.savebtn.Size = New System.Drawing.Size(75, 23)
+        Me.savebtn.TabIndex = 4
+        Me.savebtn.Text = "SAVE"
+        Me.savebtn.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -146,14 +147,22 @@ Partial Class invnewcode
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
+        'idcode
+        '
+        Me.idcode.Location = New System.Drawing.Point(162, 67)
+        Me.idcode.Name = "idcode"
+        Me.idcode.Size = New System.Drawing.Size(100, 20)
+        Me.idcode.TabIndex = 23
+        '
         'invnewcode
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(307, 235)
+        Me.Controls.Add(Me.idcode)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.savebtn)
+        Me.Controls.Add(Me.abortbtn)
         Me.Controls.Add(SourcecdeLabel)
         Me.Controls.Add(Me.SourcecdeTextBox)
         Me.Name = "invnewcode"
@@ -171,7 +180,8 @@ Partial Class invnewcode
     Friend WithEvents TranbinsTableAdapter As TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter
     Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents SourcecdeTextBox As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents abortbtn As Button
+    Friend WithEvents savebtn As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents idcode As TextBox
 End Class

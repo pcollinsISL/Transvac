@@ -29,6 +29,8 @@ Partial Class invallocated
         Me.BinallocTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.binallocTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.BinallocDataGridView = New System.Windows.Forms.DataGridView()
+        Me.closebtn = New System.Windows.Forms.Button()
+        Me.pcode = New System.Windows.Forms.TextBox()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,8 +42,8 @@ Partial Class invallocated
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.closebtn = New System.Windows.Forms.Button()
+        Me.allocatedtotal = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BinallocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,95 +125,17 @@ Partial Class invallocated
         '
         'BinallocDataGridView
         '
+        Me.BinallocDataGridView.AllowUserToAddRows = False
+        Me.BinallocDataGridView.AllowUserToDeleteRows = False
         Me.BinallocDataGridView.AutoGenerateColumns = False
         Me.BinallocDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BinallocDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12})
+        Me.BinallocDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
         Me.BinallocDataGridView.DataSource = Me.BinallocBindingSource
         Me.BinallocDataGridView.Location = New System.Drawing.Point(57, 77)
         Me.BinallocDataGridView.Name = "BinallocDataGridView"
+        Me.BinallocDataGridView.ReadOnly = True
         Me.BinallocDataGridView.Size = New System.Drawing.Size(445, 354)
         Me.BinallocDataGridView.TabIndex = 11
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "bininvno"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Draft Inv No"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "binalloc"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Allocated"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "binwho"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Who"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "bindate"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Date"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "binpart"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "binpart"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "bincode"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "bincode"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Visible = False
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "binref"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "binref"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "binsup"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "binsup"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Visible = False
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "binrecno"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "binrecno"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Visible = False
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "binordno"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "binordno"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.Visible = False
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "bline"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "bline"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.Visible = False
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UniqueID"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "UniqueID"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        Me.DataGridViewTextBoxColumn12.Visible = False
         '
         'closebtn
         '
@@ -222,11 +146,121 @@ Partial Class invallocated
         Me.closebtn.Text = "CLOSE"
         Me.closebtn.UseVisualStyleBackColor = True
         '
+        'pcode
+        '
+        Me.pcode.Location = New System.Drawing.Point(402, 12)
+        Me.pcode.Name = "pcode"
+        Me.pcode.Size = New System.Drawing.Size(100, 20)
+        Me.pcode.TabIndex = 13
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "bininvno"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Draft Inv No"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "binalloc"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Allocated"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "binwho"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Who"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "bindate"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "binpart"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "binpart"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "bincode"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "bincode"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Visible = False
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "binref"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "binref"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "binsup"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "binsup"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Visible = False
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "binrecno"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "binrecno"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "binordno"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "binordno"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "bline"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "bline"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        Me.DataGridViewTextBoxColumn11.Visible = False
+        '
+        'allocatedtotal
+        '
+        Me.allocatedtotal.Location = New System.Drawing.Point(402, 454)
+        Me.allocatedtotal.Name = "allocatedtotal"
+        Me.allocatedtotal.Size = New System.Drawing.Size(100, 20)
+        Me.allocatedtotal.TabIndex = 14
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(318, 459)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Total Allocated"
+        '
         'invallocated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(557, 513)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.allocatedtotal)
+        Me.Controls.Add(Me.pcode)
         Me.Controls.Add(Me.closebtn)
         Me.Controls.Add(Me.BinallocDataGridView)
         Me.Controls.Add(Me.PictureBox1)
@@ -237,6 +271,7 @@ Partial Class invallocated
         CType(Me.BinallocBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BinallocDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -246,6 +281,8 @@ Partial Class invallocated
     Friend WithEvents BinallocTableAdapter As TransvacDataV2DataSet1TableAdapters.binallocTableAdapter
     Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents BinallocDataGridView As DataGridView
+    Friend WithEvents closebtn As Button
+    Friend WithEvents pcode As TextBox
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
@@ -257,6 +294,6 @@ Partial Class invallocated
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents closebtn As Button
+    Friend WithEvents allocatedtotal As TextBox
+    Friend WithEvents Label1 As Label
 End Class

@@ -8,8 +8,13 @@
 
     Private Sub invallocated_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.binalloc' table. You can move, or remove it, as needed.
-        Me.BinallocTableAdapter.Fill(Me.TransvacDataV2DataSet1.binalloc)
-
+        Me.BinallocTableAdapter.FillByPcode(Me.TransvacDataV2DataSet1.binalloc, pcode.Text)
+        pcode.Visible = False
+        Dim total As Integer
+        For Each row As DataGridViewRow In BinallocDataGridView.Rows
+            total += row.Cells("Allocated").Value
+        Next
+        allocatedtotal.Text = total
     End Sub
 
     Private Sub closebtn_Click(sender As Object, e As EventArgs) Handles closebtn.Click

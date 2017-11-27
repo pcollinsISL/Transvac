@@ -14,6 +14,8 @@
     End Function
 
     Private Sub Inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.orddetail' table. You can move, or remove it, as needed.
+        REM Me.OrddetailTableAdapter.Fill(Me.TransvacDataV2DataSet1.orddetail)
         Me.MarkupTableAdapter.Fill(Me.TransvacDataV2DataSet1.markup)
         If PcodeTextBox1.Text = "" Then
             Me.TrandescTableAdapter1.Fill(Me.TransvacDataV2DataSet1.trandesc)
@@ -153,6 +155,14 @@
     End Sub
 
     Private Sub bincode_but_Click(sender As Object, e As EventArgs) Handles bincode_but.Click
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+        Dim invnewcode As New invnewcode
+        invnewcode.TopLevel = False
+        invnewcode.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(5).Controls.Add(invnewcode)
+        invnewcode.idcode.Text = idcode.Text
+        invnewcode.Show()
+        Me.Hide()
 
     End Sub
 
@@ -194,6 +204,7 @@
         Invallocated.TopLevel = False
         Invallocated.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(5).Controls.Add(Invallocated)
+        Invallocated.pcode.Text = PcodeTextBox1.Text
         Invallocated.Show()
         Me.Hide()
     End Sub
@@ -204,7 +215,12 @@
         invordered.TopLevel = False
         invordered.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(5).Controls.Add(invordered)
+        invordered.pcode.Text = PcodeTextBox1.Text
         invordered.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub quit_but_Click(sender As Object, e As EventArgs) Handles quit_but.Click
+        Me.Close()
     End Sub
 End Class

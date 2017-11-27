@@ -12719,7 +12719,7 @@ Partial Public Class TransvacDataV2DataSet1
         
         Private columnpartno As Global.System.Data.DataColumn
         
-        Private columndesc_ As Global.System.Data.DataColumn
+        Private columndesc As Global.System.Data.DataColumn
         
         Private columnqtyord As Global.System.Data.DataColumn
         
@@ -12744,8 +12744,6 @@ Partial Public Class TransvacDataV2DataSet1
         Private columnacode As Global.System.Data.DataColumn
         
         Private columnback2back As Global.System.Data.DataColumn
-        
-        Private columnUniqueID As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -12816,9 +12814,9 @@ Partial Public Class TransvacDataV2DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property desc_Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property descColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columndesc_
+                Return Me.columndesc
             End Get
         End Property
         
@@ -12919,14 +12917,6 @@ Partial Public Class TransvacDataV2DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property UniqueIDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnUniqueID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -12968,7 +12958,7 @@ Partial Public Class TransvacDataV2DataSet1
                     ByVal dinvno As String,  _
                     ByVal supplier As String,  _
                     ByVal partno As String,  _
-                    ByVal desc_ As String,  _
+                    ByVal desc As String,  _
                     ByVal qtyord As Decimal,  _
                     ByVal qtyrec As Decimal,  _
                     ByVal iicode As String,  _
@@ -12982,16 +12972,10 @@ Partial Public Class TransvacDataV2DataSet1
                     ByVal acode As String,  _
                     ByVal back2back As Boolean) As orddetailRow
             Dim roworddetailRow As orddetailRow = CType(Me.NewRow,orddetailRow)
-            Dim columnValuesArray() As Object = New Object() {orderno, dinvno, supplier, partno, desc_, qtyord, qtyrec, iicode, locatebin, price, owho, ddate, otype, recno, oline, acode, back2back, Nothing}
+            Dim columnValuesArray() As Object = New Object() {orderno, dinvno, supplier, partno, desc, qtyord, qtyrec, iicode, locatebin, price, owho, ddate, otype, recno, oline, acode, back2back}
             roworddetailRow.ItemArray = columnValuesArray
             Me.Rows.Add(roworddetailRow)
             Return roworddetailRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByUniqueID(ByVal UniqueID As Long) As orddetailRow
-            Return CType(Me.Rows.Find(New Object() {UniqueID}),orddetailRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13015,7 +12999,7 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columndinvno = MyBase.Columns("dinvno")
             Me.columnsupplier = MyBase.Columns("supplier")
             Me.columnpartno = MyBase.Columns("partno")
-            Me.columndesc_ = MyBase.Columns("desc_")
+            Me.columndesc = MyBase.Columns("desc")
             Me.columnqtyord = MyBase.Columns("qtyord")
             Me.columnqtyrec = MyBase.Columns("qtyrec")
             Me.columniicode = MyBase.Columns("iicode")
@@ -13028,7 +13012,6 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnoline = MyBase.Columns("oline")
             Me.columnacode = MyBase.Columns("acode")
             Me.columnback2back = MyBase.Columns("back2back")
-            Me.columnUniqueID = MyBase.Columns("UniqueID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13042,8 +13025,8 @@ Partial Public Class TransvacDataV2DataSet1
             MyBase.Columns.Add(Me.columnsupplier)
             Me.columnpartno = New Global.System.Data.DataColumn("partno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpartno)
-            Me.columndesc_ = New Global.System.Data.DataColumn("desc_", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndesc_)
+            Me.columndesc = New Global.System.Data.DataColumn("desc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndesc)
             Me.columnqtyord = New Global.System.Data.DataColumn("qtyord", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnqtyord)
             Me.columnqtyrec = New Global.System.Data.DataColumn("qtyrec", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
@@ -13068,9 +13051,6 @@ Partial Public Class TransvacDataV2DataSet1
             MyBase.Columns.Add(Me.columnacode)
             Me.columnback2back = New Global.System.Data.DataColumn("back2back", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnback2back)
-            Me.columnUniqueID = New Global.System.Data.DataColumn("UniqueID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUniqueID)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnUniqueID}, true))
             Me.columnorderno.AllowDBNull = false
             Me.columnorderno.MaxLength = 6
             Me.columndinvno.AllowDBNull = false
@@ -13079,8 +13059,8 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnsupplier.MaxLength = 7
             Me.columnpartno.AllowDBNull = false
             Me.columnpartno.MaxLength = 20
-            Me.columndesc_.AllowDBNull = false
-            Me.columndesc_.MaxLength = 40
+            Me.columndesc.AllowDBNull = false
+            Me.columndesc.MaxLength = 40
             Me.columnqtyord.AllowDBNull = false
             Me.columnqtyrec.AllowDBNull = false
             Me.columniicode.AllowDBNull = false
@@ -13090,7 +13070,6 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnprice.AllowDBNull = false
             Me.columnowho.AllowDBNull = false
             Me.columnowho.MaxLength = 5
-            Me.columnddate.AllowDBNull = false
             Me.columnotype.AllowDBNull = false
             Me.columnotype.MaxLength = 1
             Me.columnrecno.AllowDBNull = false
@@ -13099,12 +13078,6 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnacode.AllowDBNull = false
             Me.columnacode.MaxLength = 4
             Me.columnback2back.AllowDBNull = false
-            Me.columnUniqueID.AutoIncrement = true
-            Me.columnUniqueID.AutoIncrementSeed = -1
-            Me.columnUniqueID.AutoIncrementStep = -1
-            Me.columnUniqueID.AllowDBNull = false
-            Me.columnUniqueID.ReadOnly = true
-            Me.columnUniqueID.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -26867,12 +26840,12 @@ Partial Public Class TransvacDataV2DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property desc_() As String
+        Public Property desc() As String
             Get
-                Return CType(Me(Me.tableorddetail.desc_Column),String)
+                Return CType(Me(Me.tableorddetail.descColumn),String)
             End Get
             Set
-                Me(Me.tableorddetail.desc_Column) = value
+                Me(Me.tableorddetail.descColumn) = value
             End Set
         End Property
         
@@ -26946,7 +26919,11 @@ Partial Public Class TransvacDataV2DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ddate() As Date
             Get
-                Return CType(Me(Me.tableorddetail.ddateColumn),Date)
+                Try 
+                    Return CType(Me(Me.tableorddetail.ddateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ddate' in table 'orddetail' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableorddetail.ddateColumn) = value
@@ -27010,14 +26987,15 @@ Partial Public Class TransvacDataV2DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property UniqueID() As Long
-            Get
-                Return CType(Me(Me.tableorddetail.UniqueIDColumn),Long)
-            End Get
-            Set
-                Me(Me.tableorddetail.UniqueIDColumn) = value
-            End Set
-        End Property
+        Public Function IsddateNull() As Boolean
+            Return Me.IsNull(Me.tableorddetail.ddateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetddateNull()
+            Me(Me.tableorddetail.ddateColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -36149,12 +36127,19 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT binpart, binsup, binref, bincode, binrecno, binalloc, bininvno, binwho, bi"& _ 
                 "ndate, binordno, bline, UniqueID FROM dbo.binalloc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        binpart, binsup, binref, bincode, binrecno, binalloc, bininvno, bin"& _ 
+                "who, bindate, binordno, bline, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            binalloc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        "& _ 
+                "(binpart = @param1)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "binpart", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -36176,6 +36161,40 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As TransvacDataV2DataSet1.binallocDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As TransvacDataV2DataSet1.binallocDataTable = New TransvacDataV2DataSet1.binallocDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByPcode(ByVal dataTable As TransvacDataV2DataSet1.binallocDataTable, ByVal param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByPcode(ByVal param1 As String) As TransvacDataV2DataSet1.binallocDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
             Dim dataTable As TransvacDataV2DataSet1.binallocDataTable = New TransvacDataV2DataSet1.binallocDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -46470,7 +46489,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("dinvno", "dinvno")
             tableMapping.ColumnMappings.Add("supplier", "supplier")
             tableMapping.ColumnMappings.Add("partno", "partno")
-            tableMapping.ColumnMappings.Add("desc_", "desc_")
+            tableMapping.ColumnMappings.Add("desc_", "desc")
             tableMapping.ColumnMappings.Add("qtyord", "qtyord")
             tableMapping.ColumnMappings.Add("qtyrec", "qtyrec")
             tableMapping.ColumnMappings.Add("iicode", "iicode")
@@ -46483,54 +46502,20 @@ Namespace TransvacDataV2DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("oline", "oline")
             tableMapping.ColumnMappings.Add("acode", "acode")
             tableMapping.ColumnMappings.Add("back2back", "back2back")
-            tableMapping.ColumnMappings.Add("UniqueID", "UniqueID")
+            tableMapping.ColumnMappings.Add("desc", "desc")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[orddetail] WHERE (([orderno] = @Original_orderno) AND ([dinvno"& _ 
-                "] = @Original_dinvno) AND ([supplier] = @Original_supplier) AND ([partno] = @Ori"& _ 
-                "ginal_partno) AND ([desc_] = @Original_desc_) AND ([qtyord] = @Original_qtyord) "& _ 
-                "AND ([qtyrec] = @Original_qtyrec) AND ([iicode] = @Original_iicode) AND ([locate"& _ 
-                "bin] = @Original_locatebin) AND ([price] = @Original_price) AND ([owho] = @Origi"& _ 
-                "nal_owho) AND ([ddate] = @Original_ddate) AND ([otype] = @Original_otype) AND (["& _ 
-                "recno] = @Original_recno) AND ([oline] = @Original_oline) AND ([acode] = @Origin"& _ 
-                "al_acode) AND ([back2back] = @Original_back2back) AND ([UniqueID] = @Original_Un"& _ 
-                "iqueID))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_orderno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "orderno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dinvno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dinvno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_supplier", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "supplier", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_partno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "partno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_desc_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "desc_", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_qtyord", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyord", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_qtyrec", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyrec", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_iicode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "iicode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_locatebin", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "locatebin", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_price", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "price", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_owho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "owho", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ddate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ddate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_otype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "otype", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_recno", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 6, 0, "recno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_oline", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "oline", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_acode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "acode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_back2back", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "back2back", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[orddetail] ([orderno], [dinvno], [supplier], [partno], [desc_]"& _ 
-                ", [qtyord], [qtyrec], [iicode], [locatebin], [price], [owho], [ddate], [otype], "& _ 
-                "[recno], [oline], [acode], [back2back]) VALUES (@orderno, @dinvno, @supplier, @p"& _ 
-                "artno, @desc_, @qtyord, @qtyrec, @iicode, @locatebin, @price, @owho, @ddate, @ot"& _ 
-                "ype, @recno, @oline, @acode, @back2back);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT orderno, dinvno, supplier, par"& _ 
-                "tno, desc_, qtyord, qtyrec, iicode, locatebin, price, owho, ddate, otype, recno,"& _ 
-                " oline, acode, back2back, UniqueID FROM orddetail WHERE (UniqueID = SCOPE_IDENTI"& _ 
-                "TY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [orddetail] ([orderno], [dinvno], [supplier], [partno], [qtyord], [qt"& _ 
+                "yrec], [iicode], [locatebin], [price], [owho], [ddate], [otype], [recno], [oline"& _ 
+                "], [acode], [back2back], [desc]) VALUES (@orderno, @dinvno, @supplier, @partno, "& _ 
+                "@qtyord, @qtyrec, @iicode, @locatebin, @price, @owho, @ddate, @otype, @recno, @o"& _ 
+                "line, @acode, @back2back, @desc)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@orderno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "orderno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dinvno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dinvno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@supplier", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "supplier", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@partno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "partno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@desc_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "desc_", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qtyord", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyord", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qtyrec", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyrec", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@iicode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "iicode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -46543,60 +46528,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@oline", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "oline", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@acode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "acode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@back2back", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "back2back", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[orddetail] SET [orderno] = @orderno, [dinvno] = @dinvno, [supplier]"& _ 
-                " = @supplier, [partno] = @partno, [desc_] = @desc_, [qtyord] = @qtyord, [qtyrec]"& _ 
-                " = @qtyrec, [iicode] = @iicode, [locatebin] = @locatebin, [price] = @price, [owh"& _ 
-                "o] = @owho, [ddate] = @ddate, [otype] = @otype, [recno] = @recno, [oline] = @oli"& _ 
-                "ne, [acode] = @acode, [back2back] = @back2back WHERE (([orderno] = @Original_ord"& _ 
-                "erno) AND ([dinvno] = @Original_dinvno) AND ([supplier] = @Original_supplier) AN"& _ 
-                "D ([partno] = @Original_partno) AND ([desc_] = @Original_desc_) AND ([qtyord] = "& _ 
-                "@Original_qtyord) AND ([qtyrec] = @Original_qtyrec) AND ([iicode] = @Original_ii"& _ 
-                "code) AND ([locatebin] = @Original_locatebin) AND ([price] = @Original_price) AN"& _ 
-                "D ([owho] = @Original_owho) AND ([ddate] = @Original_ddate) AND ([otype] = @Orig"& _ 
-                "inal_otype) AND ([recno] = @Original_recno) AND ([oline] = @Original_oline) AND "& _ 
-                "([acode] = @Original_acode) AND ([back2back] = @Original_back2back) AND ([Unique"& _ 
-                "ID] = @Original_UniqueID));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT orderno, dinvno, supplier, partno, desc_, qt"& _ 
-                "yord, qtyrec, iicode, locatebin, price, owho, ddate, otype, recno, oline, acode,"& _ 
-                " back2back, UniqueID FROM orddetail WHERE (UniqueID = @UniqueID)"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@orderno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "orderno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dinvno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dinvno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@supplier", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "supplier", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@partno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "partno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@desc_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "desc_", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qtyord", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyord", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qtyrec", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyrec", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@iicode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "iicode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@locatebin", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "locatebin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@price", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "price", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@owho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "owho", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ddate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ddate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@otype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "otype", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@recno", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 6, 0, "recno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@oline", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "oline", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@acode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "acode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@back2back", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "back2back", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_orderno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "orderno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dinvno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dinvno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_supplier", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "supplier", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_partno", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "partno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_desc_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "desc_", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_qtyord", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyord", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_qtyrec", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 5, 0, "qtyrec", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_iicode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "iicode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_locatebin", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "locatebin", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_price", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "price", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_owho", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "owho", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ddate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ddate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_otype", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "otype", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_recno", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 6, 0, "recno", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_oline", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "oline", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_acode", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "acode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_back2back", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "back2back", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UniqueID", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UniqueID", Global.System.Data.SqlDbType.BigInt, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "UniqueID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@desc", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "desc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -46609,13 +46541,19 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT orderno, dinvno, supplier, partno, desc_, qtyord, qtyrec, iicode, locatebi"& _ 
-                "n, price, owho, ddate, otype, recno, oline, acode, back2back, UniqueID FROM dbo."& _ 
-                "orddetail"
+            Me._commandCollection(0).CommandText = "SELECT orderno, dinvno, supplier, partno,  qtyord, qtyrec, iicode, locatebin, pri"& _ 
+                "ce, owho, ddate, otype, recno, oline, acode, back2back, [desc] FROM orddetail"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        acode, back2back, ddate, dinvno, iicode, locatebin, oline, orderno,"& _ 
+                " otype, owho, partno, price, qtyord, qtyrec, recno, supplier, [desc]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM      "& _ 
+                "      orddetail"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (partno = @param1)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "partno", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -46637,6 +46575,40 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As TransvacDataV2DataSet1.orddetailDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As TransvacDataV2DataSet1.orddetailDataTable = New TransvacDataV2DataSet1.orddetailDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByPcode(ByVal dataTable As TransvacDataV2DataSet1.orddetailDataTable, ByVal param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByPcode(ByVal param1 As String) As TransvacDataV2DataSet1.orddetailDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
             Dim dataTable As TransvacDataV2DataSet1.orddetailDataTable = New TransvacDataV2DataSet1.orddetailDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -46668,427 +46640,6 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
             Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete( _
-                    ByVal Original_orderno As String,  _
-                    ByVal Original_dinvno As String,  _
-                    ByVal Original_supplier As String,  _
-                    ByVal Original_partno As String,  _
-                    ByVal Original_desc_ As String,  _
-                    ByVal Original_qtyord As Decimal,  _
-                    ByVal Original_qtyrec As Decimal,  _
-                    ByVal Original_iicode As String,  _
-                    ByVal Original_locatebin As String,  _
-                    ByVal Original_price As Decimal,  _
-                    ByVal Original_owho As String,  _
-                    ByVal Original_ddate As Date,  _
-                    ByVal Original_otype As String,  _
-                    ByVal Original_recno As Decimal,  _
-                    ByVal Original_oline As String,  _
-                    ByVal Original_acode As String,  _
-                    ByVal Original_back2back As Boolean,  _
-                    ByVal Original_UniqueID As Long) As Integer
-            If (Original_orderno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_orderno")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_orderno,String)
-            End If
-            If (Original_dinvno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_dinvno")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_dinvno,String)
-            End If
-            If (Original_supplier Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_supplier")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_supplier,String)
-            End If
-            If (Original_partno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_partno")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_partno,String)
-            End If
-            If (Original_desc_ Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_desc_")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_desc_,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_qtyord,Decimal)
-            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_qtyrec,Decimal)
-            If (Original_iicode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_iicode")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_iicode,String)
-            End If
-            If (Original_locatebin Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_locatebin")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_locatebin,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_price,Decimal)
-            If (Original_owho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_owho")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_owho,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_ddate,Date)
-            If (Original_otype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_otype")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_otype,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_recno,Decimal)
-            If (Original_oline Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_oline")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_oline,String)
-            End If
-            If (Original_acode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_acode")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_acode,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_back2back,Boolean)
-            Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_UniqueID,Long)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert( _
-                    ByVal orderno As String,  _
-                    ByVal dinvno As String,  _
-                    ByVal supplier As String,  _
-                    ByVal partno As String,  _
-                    ByVal desc_ As String,  _
-                    ByVal qtyord As Decimal,  _
-                    ByVal qtyrec As Decimal,  _
-                    ByVal iicode As String,  _
-                    ByVal locatebin As String,  _
-                    ByVal price As Decimal,  _
-                    ByVal owho As String,  _
-                    ByVal ddate As Date,  _
-                    ByVal otype As String,  _
-                    ByVal recno As Decimal,  _
-                    ByVal oline As String,  _
-                    ByVal acode As String,  _
-                    ByVal back2back As Boolean) As Integer
-            If (orderno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("orderno")
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(orderno,String)
-            End If
-            If (dinvno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("dinvno")
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(dinvno,String)
-            End If
-            If (supplier Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("supplier")
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(supplier,String)
-            End If
-            If (partno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("partno")
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(partno,String)
-            End If
-            If (desc_ Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("desc_")
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(desc_,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(5).Value = CType(qtyord,Decimal)
-            Me.Adapter.InsertCommand.Parameters(6).Value = CType(qtyrec,Decimal)
-            If (iicode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("iicode")
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(iicode,String)
-            End If
-            If (locatebin Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("locatebin")
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(locatebin,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(9).Value = CType(price,Decimal)
-            If (owho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("owho")
-            Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(owho,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(11).Value = CType(ddate,Date)
-            If (otype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("otype")
-            Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(otype,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(13).Value = CType(recno,Decimal)
-            If (oline Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("oline")
-            Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(oline,String)
-            End If
-            If (acode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("acode")
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(acode,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(16).Value = CType(back2back,Boolean)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal orderno As String,  _
-                    ByVal dinvno As String,  _
-                    ByVal supplier As String,  _
-                    ByVal partno As String,  _
-                    ByVal desc_ As String,  _
-                    ByVal qtyord As Decimal,  _
-                    ByVal qtyrec As Decimal,  _
-                    ByVal iicode As String,  _
-                    ByVal locatebin As String,  _
-                    ByVal price As Decimal,  _
-                    ByVal owho As String,  _
-                    ByVal ddate As Date,  _
-                    ByVal otype As String,  _
-                    ByVal recno As Decimal,  _
-                    ByVal oline As String,  _
-                    ByVal acode As String,  _
-                    ByVal back2back As Boolean,  _
-                    ByVal Original_orderno As String,  _
-                    ByVal Original_dinvno As String,  _
-                    ByVal Original_supplier As String,  _
-                    ByVal Original_partno As String,  _
-                    ByVal Original_desc_ As String,  _
-                    ByVal Original_qtyord As Decimal,  _
-                    ByVal Original_qtyrec As Decimal,  _
-                    ByVal Original_iicode As String,  _
-                    ByVal Original_locatebin As String,  _
-                    ByVal Original_price As Decimal,  _
-                    ByVal Original_owho As String,  _
-                    ByVal Original_ddate As Date,  _
-                    ByVal Original_otype As String,  _
-                    ByVal Original_recno As Decimal,  _
-                    ByVal Original_oline As String,  _
-                    ByVal Original_acode As String,  _
-                    ByVal Original_back2back As Boolean,  _
-                    ByVal Original_UniqueID As Long,  _
-                    ByVal UniqueID As Long) As Integer
-            If (orderno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("orderno")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(orderno,String)
-            End If
-            If (dinvno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("dinvno")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(dinvno,String)
-            End If
-            If (supplier Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("supplier")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(supplier,String)
-            End If
-            If (partno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("partno")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(partno,String)
-            End If
-            If (desc_ Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("desc_")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(desc_,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(qtyord,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(qtyrec,Decimal)
-            If (iicode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("iicode")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(iicode,String)
-            End If
-            If (locatebin Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("locatebin")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(locatebin,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(price,Decimal)
-            If (owho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("owho")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(owho,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(ddate,Date)
-            If (otype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("otype")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(otype,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(recno,Decimal)
-            If (oline Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("oline")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(oline,String)
-            End If
-            If (acode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("acode")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(acode,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(back2back,Boolean)
-            If (Original_orderno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_orderno")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_orderno,String)
-            End If
-            If (Original_dinvno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_dinvno")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_dinvno,String)
-            End If
-            If (Original_supplier Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_supplier")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_supplier,String)
-            End If
-            If (Original_partno Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_partno")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_partno,String)
-            End If
-            If (Original_desc_ Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_desc_")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_desc_,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_qtyord,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_qtyrec,Decimal)
-            If (Original_iicode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_iicode")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_iicode,String)
-            End If
-            If (Original_locatebin Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_locatebin")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_locatebin,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_price,Decimal)
-            If (Original_owho Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_owho")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_owho,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_ddate,Date)
-            If (Original_otype Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_otype")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_otype,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_recno,Decimal)
-            If (Original_oline Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_oline")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_oline,String)
-            End If
-            If (Original_acode Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_acode")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_acode,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_back2back,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_UniqueID,Long)
-            Me.Adapter.UpdateCommand.Parameters(35).Value = CType(UniqueID,Long)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal orderno As String,  _
-                    ByVal dinvno As String,  _
-                    ByVal supplier As String,  _
-                    ByVal partno As String,  _
-                    ByVal desc_ As String,  _
-                    ByVal qtyord As Decimal,  _
-                    ByVal qtyrec As Decimal,  _
-                    ByVal iicode As String,  _
-                    ByVal locatebin As String,  _
-                    ByVal price As Decimal,  _
-                    ByVal owho As String,  _
-                    ByVal ddate As Date,  _
-                    ByVal otype As String,  _
-                    ByVal recno As Decimal,  _
-                    ByVal oline As String,  _
-                    ByVal acode As String,  _
-                    ByVal back2back As Boolean,  _
-                    ByVal Original_orderno As String,  _
-                    ByVal Original_dinvno As String,  _
-                    ByVal Original_supplier As String,  _
-                    ByVal Original_partno As String,  _
-                    ByVal Original_desc_ As String,  _
-                    ByVal Original_qtyord As Decimal,  _
-                    ByVal Original_qtyrec As Decimal,  _
-                    ByVal Original_iicode As String,  _
-                    ByVal Original_locatebin As String,  _
-                    ByVal Original_price As Decimal,  _
-                    ByVal Original_owho As String,  _
-                    ByVal Original_ddate As Date,  _
-                    ByVal Original_otype As String,  _
-                    ByVal Original_recno As Decimal,  _
-                    ByVal Original_oline As String,  _
-                    ByVal Original_acode As String,  _
-                    ByVal Original_back2back As Boolean,  _
-                    ByVal Original_UniqueID As Long) As Integer
-            Return Me.Update(orderno, dinvno, supplier, partno, desc_, qtyord, qtyrec, iicode, locatebin, price, owho, ddate, otype, recno, oline, acode, back2back, Original_orderno, Original_dinvno, Original_supplier, Original_partno, Original_desc_, Original_qtyord, Original_qtyrec, Original_iicode, Original_locatebin, Original_price, Original_owho, Original_ddate, Original_otype, Original_recno, Original_oline, Original_acode, Original_back2back, Original_UniqueID, Original_UniqueID)
         End Function
     End Class
     
@@ -51967,7 +51518,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT quote_no, quote_suf, qline_no, quantity, qpart_no, qdesc, qline_memo, qval"& _ 
@@ -51977,17 +51528,24 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT        quote_no, quote_suf, qline_no, quantity, qpart_no, qdesc, qline_mem"& _ 
                 "o, qvalue, nonstock, timestamp_column, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            quotedetail"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
-                "ERE        (quote_no LIKE @Param1 + '%')"
+                "ERE        (qpart_no = @parma1)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@parma1", Global.System.Data.SqlDbType.[Char], 20, Global.System.Data.ParameterDirection.Input, 0, 0, "qpart_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        quote_no, quote_suf, qline_no, quantity, qpart_no, qdesc, qline_mem"& _ 
                 "o, qvalue, nonstock, timestamp_column, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            quotedetail"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
-                "ERE        (quote_no = @Param1) AND (quote_suf = @Param2)"
+                "ERE        (quote_no LIKE @Param1 + '%')"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_suf", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT        quote_no, quote_suf, qline_no, quantity, qpart_no, qdesc, qline_mem"& _ 
+                "o, qvalue, nonstock, timestamp_column, UniqueID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            quotedetail"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
+                "ERE        (quote_no = @Param1) AND (quote_suf = @Param2)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_suf", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -52018,8 +51576,42 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByQuotesDetail(ByVal dataTable As TransvacDataV2DataSet1.quotedetailDataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillByPcode(ByVal dataTable As TransvacDataV2DataSet1.quotedetailDataTable, ByVal parma1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (parma1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("parma1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(parma1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByPcode(ByVal parma1 As String) As TransvacDataV2DataSet1.quotedetailDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (parma1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("parma1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(parma1,String)
+            End If
+            Dim dataTable As TransvacDataV2DataSet1.quotedetailDataTable = New TransvacDataV2DataSet1.quotedetailDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByQuotesDetail(ByVal dataTable As TransvacDataV2DataSet1.quotedetailDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -52037,7 +51629,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataByQuotesDetail(ByVal Param1 As String) As TransvacDataV2DataSet1.quotedetailDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -52053,7 +51645,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByQuoteSuf(ByVal dataTable As TransvacDataV2DataSet1.quotedetailDataTable, ByVal Param1 As String, ByVal Param2 As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -52446,7 +52038,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT quote_no, quote_suf, qdate, qheader, qmemo1, qmemo2, qmemo3, qmemo4, qdisc"& _ 
@@ -52459,17 +52051,23 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT UniqueID, qdate, qdisc, qheader, qinits, qmemo1, qmemo2, qmemo3, qmemo4, q"& _ 
-                "uote_no, quote_suf, qwho, timestamp_column FROM quotehead WHERE (quote_no LIKE @"& _ 
-                "Param1 + '%')"
+            Me._commandCollection(2).CommandText = "SELECT        quote_suf"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            quotehead"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (quote_no = @par"& _ 
+                "am1)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "SELECT        quote_suf"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            quotehead"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (quote_no = @Par"& _ 
-                "am1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY quote_suf"
+            Me._commandCollection(3).CommandText = "SELECT UniqueID, qdate, qdisc, qheader, qinits, qmemo1, qmemo2, qmemo3, qmemo4, q"& _ 
+                "uote_no, quote_suf, qwho, timestamp_column FROM quotehead WHERE (quote_no LIKE @"& _ 
+                "Param1 + '%')"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "SELECT        quote_suf"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            quotehead"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (quote_no = @Par"& _ 
+                "am1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY quote_suf"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "quote_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -52524,8 +52122,42 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByQuotes(ByVal dataTable As TransvacDataV2DataSet1.quoteheadDataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillByQsurfix(ByVal dataTable As TransvacDataV2DataSet1.quoteheadDataTable, ByVal param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByQsurfix(ByVal param1 As String) As TransvacDataV2DataSet1.quoteheadDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
+            Dim dataTable As TransvacDataV2DataSet1.quoteheadDataTable = New TransvacDataV2DataSet1.quoteheadDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByQuotes(ByVal dataTable As TransvacDataV2DataSet1.quoteheadDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -52543,7 +52175,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataByQuotes(ByVal Param1 As String) As TransvacDataV2DataSet1.quoteheadDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -52559,7 +52191,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByQuotesuf(ByVal dataTable As TransvacDataV2DataSet1.quoteheadDataTable, ByVal Param1 As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -52577,7 +52209,7 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataByQuotesuf(ByVal Param1 As String) As TransvacDataV2DataSet1.quoteheadDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
