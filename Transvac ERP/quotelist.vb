@@ -4,8 +4,8 @@
     End Sub
 
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Me.QuoteheadTableAdapter.FillByQuotes(Me.TransvacDataV2DataSet1.quotehead, quotenotextbox.Text)
+        quotenotextbox.Visible = False
     End Sub
 
     Private Sub QuoteheadBindingSource_CurrentChanged(sender As Object, e As EventArgs)

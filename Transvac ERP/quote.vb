@@ -23,10 +23,6 @@
         dt.Columns(0).AutoIncrementStep = 1
         dt.Columns(0).AutoIncrementSeed = 1
         Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text)
-
-        REM If SuffixTB.Text = "" Then
-        REM SuffixTB.Text = "01"
-        REM End If
     End Sub
 
     Private Function TranmemoTableAdapter() As Object
@@ -38,31 +34,26 @@
     End Sub
 
     Private Sub chstock_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        ' Show the form as a modaless window.
         Dim x As Inventory = New Inventory
         x.Show()
     End Sub
 
     Private Sub heading_but_Click(sender As Object, e As EventArgs) Handles heading_but.Click
-        ' Show the form as a modaless window.
         Dim x As Heading = New Heading
         x.Show()
     End Sub
 
     Private Sub delivery_but_Click(sender As Object, e As EventArgs) Handles delivery_but.Click
-        ' Show the form as a modaless window.
         Dim x As delivery = New delivery
         x.Show()
     End Sub
 
     Private Sub terms_but_Click(sender As Object, e As EventArgs) Handles terms_but.Click
-        ' Show the form as a modaless window.
         Dim x As Terms = New Terms
         x.Show()
     End Sub
 
     Private Sub signoff_but_Click(sender As Object, e As EventArgs) Handles signoff_but.Click
-        ' Show the form as a modaless window.
         Dim x As signoff = New signoff
         x.Show()
     End Sub
@@ -140,11 +131,30 @@
     End Sub
 
     Private Sub sve_but_Click(sender As Object, e As EventArgs) Handles sve_but.Click
+        If SuffixTB.Text = "" Then
+            SuffixTB.Text = "01"
+        ElseIf SuffixTB.Text = "01" Then
+            SuffixTB.Text = "02"
+        ElseIf SuffixTB.Text = "03" Then
+            SuffixTB.Text = "04"
+        ElseIf SuffixTB.Text = "04" Then
+            SuffixTB.Text = "05"
+        ElseIf SuffixTB.Text = "05" Then
+            SuffixTB.Text = "06"
+        ElseIf SuffixTB.Text = "06" Then
+            SuffixTB.Text = "07"
+        ElseIf SuffixTB.Text = "07" Then
+            SuffixTB.Text = "08"
+        ElseIf SuffixTB.Text = "08" Then
+            SuffixTB.Text = "09"
+        ElseIf SuffixTB.Text = "09" Then
+            SuffixTB.Text = "10"
+        End If
         Me.Validate()
         Me.QuoteheadBindingSource.EndEdit()
-        REM  Me.QuotedetailBindingSource.EndEdit()
+        Me.QuotedetailBindingSource.EndEdit()
         Me.QuoteheadTableAdapter.Update(Me.TransvacDataV2DataSet1)
-        REM Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
         MsgBox("Save Sucsesful")
     End Sub
 
