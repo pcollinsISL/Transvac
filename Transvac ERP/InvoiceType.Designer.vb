@@ -23,9 +23,10 @@ Partial Class InvoiceType
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Accountnum = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Nextbtn = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,12 +39,12 @@ Partial Class InvoiceType
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "New (Draft) Invoice/Credit Note"
         '
-        'TextBox1
+        'Accountnum
         '
-        Me.TextBox1.Location = New System.Drawing.Point(190, 96)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(105, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.Accountnum.Location = New System.Drawing.Point(190, 96)
+        Me.Accountnum.Name = "Accountnum"
+        Me.Accountnum.Size = New System.Drawing.Size(105, 20)
+        Me.Accountnum.TabIndex = 1
         '
         'Label2
         '
@@ -64,14 +65,24 @@ Partial Class InvoiceType
         Me.PictureBox2.TabIndex = 11
         Me.PictureBox2.TabStop = False
         '
+        'Nextbtn
+        '
+        Me.Nextbtn.Location = New System.Drawing.Point(270, 180)
+        Me.Nextbtn.Name = "Nextbtn"
+        Me.Nextbtn.Size = New System.Drawing.Size(75, 23)
+        Me.Nextbtn.TabIndex = 12
+        Me.Nextbtn.Text = "Next"
+        Me.Nextbtn.UseVisualStyleBackColor = True
+        '
         'InvoiceType
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(357, 215)
+        Me.Controls.Add(Me.Nextbtn)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Accountnum)
         Me.Controls.Add(Me.Label1)
         Me.Name = "InvoiceType"
         Me.Text = "InvoiceType"
@@ -82,7 +93,8 @@ Partial Class InvoiceType
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Accountnum As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Nextbtn As Button
 End Class

@@ -14,6 +14,7 @@
         REM QuoteheadBindingSource.AddNew()
         Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
         idcode.Visible = False
+        accountno.Visible = False
         dt.Columns.Add("qline_no")
         dt.Columns.Add("quantity")
         dt.Columns.Add("qpart_no")
@@ -101,8 +102,14 @@
     End Sub
 
     Private Sub order_but_Click(sender As Object, e As EventArgs) Handles order_but.Click
-        Dim x As InvoiceType = New InvoiceType
-        x.Show()
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage4
+        Dim invoicetype As New InvoiceType
+        invoicetype.TopLevel = False
+        invoicetype.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        TransPortal.TabControl1.TabPages(3).Controls.Add(invoicetype)
+        invoicetype.Accountnum.Text = accountno.Text
+        invoicetype.Show()
+        Me.Close()
     End Sub
 
     Private Sub add_but_Click(sender As Object, e As EventArgs) Handles add_but.Click

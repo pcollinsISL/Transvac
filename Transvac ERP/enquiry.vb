@@ -17,6 +17,7 @@
         quotelist.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quotelist)
         quotelist.quotenotextbox.Text = qotenoTextBox.Text
+        quotelist.accountno.Text = AccnoTextBox.Text
         quotelist.Show()
     End Sub
 
@@ -27,6 +28,7 @@
         quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
         quote.qute_tb.Text = qotenoTextBox.Text
+        quote.accountno.Text = AccnoTextBox.Text
         quote.Show()
     End Sub
 
@@ -100,6 +102,10 @@
     End Sub
 
     Private Sub Newbtn_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker.ValueChanged
 
     End Sub
 End Class

@@ -6,6 +6,7 @@
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.QuoteheadTableAdapter.FillByQuotes(Me.TransvacDataV2DataSet1.quotehead, quotenotextbox.Text)
         quotenotextbox.Visible = False
+        accountno.Visible = False
     End Sub
 
     Private Sub QuoteheadBindingSource_CurrentChanged(sender As Object, e As EventArgs)
@@ -22,6 +23,7 @@
         quote.TopLevel = False
         quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
+        quote.accountno.Text = accountno.Text
         quote.Show()
         Me.Close()
     End Sub
@@ -36,6 +38,7 @@
         quote.SuffixTB.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value
         quote.header_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
         quote.user_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
+        quote.accountno.Text = accountno.Text
         quote.Show()
         Me.Hide()
     End Sub

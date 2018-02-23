@@ -28,6 +28,8 @@ Partial Class Selecttype
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Accountno = New System.Windows.Forms.TextBox()
+        Me.click = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -94,11 +96,29 @@ Partial Class Selecttype
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
+        'Accountno
+        '
+        Me.Accountno.Location = New System.Drawing.Point(68, 42)
+        Me.Accountno.Name = "Accountno"
+        Me.Accountno.Size = New System.Drawing.Size(100, 20)
+        Me.Accountno.TabIndex = 9
+        '
+        'click
+        '
+        Me.click.Location = New System.Drawing.Point(138, 208)
+        Me.click.Name = "click"
+        Me.click.Size = New System.Drawing.Size(75, 23)
+        Me.click.TabIndex = 10
+        Me.click.Text = "click"
+        Me.click.UseVisualStyleBackColor = True
+        '
         'Selecttype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(225, 235)
+        Me.Controls.Add(Me.click)
+        Me.Controls.Add(Me.Accountno)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.RadioButton3)
@@ -119,4 +139,6 @@ Partial Class Selecttype
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Accountno As TextBox
+    Friend WithEvents click As Button
 End Class

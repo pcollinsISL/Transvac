@@ -40,11 +40,10 @@
             If MessageBox.Show("Are you sure you wish to delete this Address?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.No Then
                 Exit Sub
             End If
-            Tran2TableAdapter.AddressDeleteQuery(ACCOUNTTextBox1.Text)
+            Me.Tran2TableAdapter.AddressDeleteQuery(ACCOUNTTextBox1.Text)
             MsgBox("Delete successful")
             Me.Tran2TableAdapter.Fill(Me.ADDRESSBKDataSet.tran2)
             Me.AddnotesTableAdapter.FillByMemo(Me.TransvacDataV2DataSet1.addnotes, ACCOUNTTextBox1.Text)
-
         Catch ex As Exception
             MessageBox.Show("Error while deleting record on table: " & ex.Message, "Deleted Address", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
@@ -123,7 +122,7 @@
         Me.Tran2BindingSource1.EndEdit()
         Me.AddnotesBindingSource1.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
-        MsgBox("Save Sucsesful")
+        MsgBox("Save Succsesful")
     End Sub
     Private Sub printbutton_Click(sender As Object, e As EventArgs) Handles printbutton.Click
         Me.PrintForm1.PrinterSettings.DefaultPageSettings.Landscape = True
@@ -139,8 +138,7 @@
 
     End Sub
 
-    Private Sub EntrytypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EntrytypeComboBox.SelectedIndexChanged
-
+    Private Sub EntrytypeComboBox_textChanged(sender As Object, e As EventArgs) Handles EntrytypeComboBox.TextChanged
 
     End Sub
 

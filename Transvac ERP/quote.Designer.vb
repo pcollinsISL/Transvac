@@ -102,6 +102,7 @@ Partial Class quote
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.chkstockbtn = New System.Windows.Forms.Button()
+        Me.accountno = New System.Windows.Forms.TextBox()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -746,12 +747,20 @@ Partial Class quote
         Me.chkstockbtn.Text = "CHECK STOCK"
         Me.chkstockbtn.UseVisualStyleBackColor = True
         '
+        'accountno
+        '
+        Me.accountno.Location = New System.Drawing.Point(191, 13)
+        Me.accountno.Name = "accountno"
+        Me.accountno.Size = New System.Drawing.Size(100, 20)
+        Me.accountno.TabIndex = 96
+        '
         'quote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1202, 730)
+        Me.Controls.Add(Me.accountno)
         Me.Controls.Add(Me.chkstockbtn)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
@@ -887,4 +896,5 @@ Partial Class quote
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents QuotesufDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents chkstockbtn As Button
+    Friend WithEvents accountno As TextBox
 End Class

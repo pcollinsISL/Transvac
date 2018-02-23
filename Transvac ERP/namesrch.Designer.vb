@@ -137,6 +137,7 @@ Partial Class namesrch
         '
         'AccountDataGridViewTextBoxColumn
         '
+        Me.AccountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.AccountDataGridViewTextBoxColumn.DataPropertyName = "account"
         Me.AccountDataGridViewTextBoxColumn.HeaderText = "ACCOUNT ID"
         Me.AccountDataGridViewTextBoxColumn.Name = "AccountDataGridViewTextBoxColumn"
@@ -345,6 +346,7 @@ Partial Class namesrch
         'TransvacDataV2DataSet1
         '
         Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Tran2BindingSource1

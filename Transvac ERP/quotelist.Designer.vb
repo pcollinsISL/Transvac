@@ -53,6 +53,7 @@ Partial Class quotelist
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.quotenotextbox = New System.Windows.Forms.TextBox()
         Me.CustdiscTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.custdiscTableAdapter()
+        Me.accountno = New System.Windows.Forms.TextBox()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +91,7 @@ Partial Class quotelist
         'TransvacDataV2DataSet1
         '
         Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
         Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TransvacDataV2DataSet1BindingSource
@@ -280,11 +282,19 @@ Partial Class quotelist
         '
         Me.CustdiscTableAdapter1.ClearBeforeFill = True
         '
+        'accountno
+        '
+        Me.accountno.Location = New System.Drawing.Point(487, 12)
+        Me.accountno.Name = "accountno"
+        Me.accountno.Size = New System.Drawing.Size(100, 20)
+        Me.accountno.TabIndex = 14
+        '
         'quotelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(746, 456)
+        Me.Controls.Add(Me.accountno)
         Me.Controls.Add(Me.quotenotextbox)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DataGridView1)
@@ -330,4 +340,5 @@ Partial Class quotelist
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents quotenotextbox As TextBox
     Friend WithEvents CustdiscTableAdapter1 As TransvacDataV2DataSet1TableAdapters.custdiscTableAdapter
+    Friend WithEvents accountno As TextBox
 End Class

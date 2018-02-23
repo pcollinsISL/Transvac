@@ -76,7 +76,6 @@ Partial Class form1
         Me.fndname_but = New System.Windows.Forms.Button()
         Me.PrintDialog2 = New System.Windows.Forms.PrintDialog()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
-        Me.proforma_but = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -584,15 +583,6 @@ Partial Class form1
         Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
         Me.PrintForm1.PrintFileName = Nothing
         '
-        'proforma_but
-        '
-        Me.proforma_but.Location = New System.Drawing.Point(340, 345)
-        Me.proforma_but.Name = "proforma_but"
-        Me.proforma_but.Size = New System.Drawing.Size(84, 23)
-        Me.proforma_but.TabIndex = 185
-        Me.proforma_but.Text = "PROFORMA"
-        Me.proforma_but.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -868,7 +858,7 @@ Partial Class form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1042, 479)
+        Me.ClientSize = New System.Drawing.Size(1025, 478)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PROMO)
         Me.Controls.Add(Me.XcardCheckBox1)
@@ -887,7 +877,6 @@ Partial Class form1
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.proforma_but)
         Me.Controls.Add(Me.fndname_but)
         Me.Controls.Add(Me.fndact_but)
         Me.Controls.Add(Me.PictureBox1)
@@ -991,7 +980,6 @@ Partial Class form1
     Friend WithEvents AddnotesTableAdapter1 As ADDRESSBKDataSetTableAdapters.addnotesTableAdapter
     Friend WithEvents AddnotesBindingSource As BindingSource
     Friend WithEvents TableAdapterManager1 As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents proforma_but As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
