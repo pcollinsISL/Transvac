@@ -255,6 +255,12 @@
     <Compile Include="invnewdesc.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="invoicemain.Designer.vb">
+      <DependentUpon>invoicemain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invoicemain.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="invordered.Designer.vb">
       <DependentUpon>invordered.vb</DependentUpon>
     </Compile>
@@ -509,6 +515,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="invnewdesc.resx">
       <DependentUpon>invnewdesc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoicemain.resx">
+      <DependentUpon>invoicemain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="invordered.resx">
       <DependentUpon>invordered.vb</DependentUpon>
