@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TransLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,23 @@ Partial Class TransLogin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransLogin))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.username = New System.Windows.Forms.TextBox()
+        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.password = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.UsersTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.usersTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,19 +62,33 @@ Partial Class TransLogin
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Password"
         '
-        'TextBox1
+        'username
         '
-        Me.TextBox1.Location = New System.Drawing.Point(169, 90)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.username.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "username", True))
+        Me.username.Location = New System.Drawing.Point(169, 90)
+        Me.username.Name = "username"
+        Me.username.Size = New System.Drawing.Size(182, 20)
+        Me.username.TabIndex = 2
         '
-        'TextBox2
+        'UsersBindingSource
         '
-        Me.TextBox2.Location = New System.Drawing.Point(169, 130)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.UsersBindingSource.DataMember = "users"
+        Me.UsersBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'password
+        '
+        Me.password.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "password", True))
+        Me.password.Location = New System.Drawing.Point(169, 130)
+        Me.password.Name = "password"
+        Me.password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.password.Size = New System.Drawing.Size(182, 20)
+        Me.password.TabIndex = 3
         '
         'PictureBox1
         '
@@ -100,6 +121,59 @@ Partial Class TransLogin
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'UsersTableAdapter
+        '
+        Me.UsersTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.accctlTableAdapter = Nothing
+        Me.TableAdapterManager.accountTableAdapter = Nothing
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager.assetsTableAdapter = Nothing
+        Me.TableAdapterManager.atransTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.binallocTableAdapter = Nothing
+        Me.TableAdapterManager.catTableAdapter = Nothing
+        Me.TableAdapterManager.countryTableAdapter = Nothing
+        Me.TableAdapterManager.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager.eventTableAdapter = Nothing
+        Me.TableAdapterManager.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager.invlineTableAdapter = Nothing
+        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager.invtransTableAdapter = Nothing
+        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager.invworkTableAdapter = Nothing
+        Me.TableAdapterManager.issueTableAdapter = Nothing
+        Me.TableAdapterManager.locationTableAdapter = Nothing
+        Me.TableAdapterManager.mainTableAdapter = Nothing
+        Me.TableAdapterManager.markupTableAdapter = Nothing
+        Me.TableAdapterManager.namesTableAdapter = Nothing
+        Me.TableAdapterManager.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager.statusTableAdapter = Nothing
+        Me.TableAdapterManager.teventsTableAdapter = Nothing
+        Me.TableAdapterManager.tran2TableAdapter = Nothing
+        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager.trandescTableAdapter = Nothing
+        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usersTableAdapter = Me.UsersTableAdapter
+        '
         'TransLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -107,16 +181,18 @@ Partial Class TransLogin
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(391, 288)
+        Me.ClientSize = New System.Drawing.Size(421, 310)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.password)
+        Me.Controls.Add(Me.username)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "TransLogin"
         Me.Text = "TransLogin"
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -125,9 +201,13 @@ Partial Class TransLogin
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents username As TextBox
+    Friend WithEvents password As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
+    Friend WithEvents UsersBindingSource As BindingSource
+    Friend WithEvents UsersTableAdapter As TransvacDataV2DataSet1TableAdapters.usersTableAdapter
+    Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
 End Class
