@@ -26,11 +26,9 @@ Public Class TransLogin
 
             'MessageBox.Show("Login Successfully")
 
-            Dim frm As New TransPortal()
-
+            Dim Transportal As New TransPortal()
             Me.Hide()
-
-            frm.Show()
+            Transportal.Show()
 
         End If
     End Sub

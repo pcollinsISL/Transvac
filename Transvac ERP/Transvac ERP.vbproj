@@ -421,11 +421,6 @@
     <Compile Include="TransPortal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransvacDataV2DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TransvacDataV2DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="TransvacDataV2DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -633,17 +628,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Transvac ERP_TemporaryKey.pfx" />
-    <None Include="TransvacDataV2DataSet.xsc">
-      <DependentUpon>TransvacDataV2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TransvacDataV2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TransvacDataV2DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TransvacDataV2DataSet.xss">
-      <DependentUpon>TransvacDataV2DataSet.xsd</DependentUpon>
-    </None>
     <None Include="TransvacDataV2DataSet1.xsc">
       <DependentUpon>TransvacDataV2DataSet1.xsd</DependentUpon>
     </None>

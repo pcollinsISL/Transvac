@@ -94,10 +94,11 @@
         Me.Tran2BindingSource.EndEdit()
         Me.EnquiryTableAdapter.Update(Me.TransvacDataV2DataSet1)
         Me.Tran2TableAdapter.Update(Me.TransvacDataV2DataSet1)
-        MsgBox("Save Sucsesful")
+        MsgBox("Save Successful")
+        Me.EnquiryTableAdapter.FillByTimeStamp(Me.TransvacDataV2DataSet1.enquiry)
     End Sub
 
-    Private Sub qotenoTextBox_TextChanged(sender As Object, e As EventArgs) Handles qotenoTextBox.TextChanged
+    Private Sub qotenoTextBox_TextChanged(sender As Object, e As EventArgs) Handles qotenoTextBox.TextChanged, qotenoTextBox.Validated
 
     End Sub
 

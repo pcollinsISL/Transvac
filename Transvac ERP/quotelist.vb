@@ -4,6 +4,8 @@
     End Sub
 
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.quotehead' table. You can move, or remove it, as needed.
+        Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet1.quotehead)
         Me.QuoteheadTableAdapter.FillByQuotes(Me.TransvacDataV2DataSet1.quotehead, quotenotextbox.Text)
         quotenotextbox.Visible = False
         accountno.Visible = False

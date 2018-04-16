@@ -4,15 +4,16 @@
     Private Sub TranmemoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.TranmemoBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet)
+        Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet1)
     End Sub
 
     Private Function TranmemoBindingSource() As Object
         Throw New NotImplementedException()
     End Function
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        REM QuoteheadBindingSource.AddNew()
-        Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet.quotedetail, qute_tb.Text, SuffixTB.Text)
+        REM Me.QuoteheadBindingSource1.AddNew()
+        Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text)
+        Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet1.quotedetail, qute_tb.Text, SuffixTB.Text)
         idcode.Visible = False
         accountno.Visible = False
         dt.Columns.Add("qline_no")
@@ -23,7 +24,7 @@
         dt.Columns(0).AutoIncrement = True
         dt.Columns(0).AutoIncrementStep = 1
         dt.Columns(0).AutoIncrementSeed = 1
-        Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text)
+
     End Sub
 
     Private Function TranmemoTableAdapter() As Object
@@ -79,7 +80,7 @@
 
     Private Sub Pcodelookup_Click(sender As Object, e As EventArgs) Handles Pcodelookup.Click, partno_tb.Leave
         Me.TrandescTableAdapter.FillByPcode(Me.TransvacDataV2DataSet1.trandesc, partno_tb.Text)
-        Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet.tranbins, idcode.Text)
+        Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
@@ -138,6 +139,19 @@
     End Sub
 
     Private Sub sve_but_Click(sender As Object, e As EventArgs) Handles sve_but.Click
+        Me.Validate()
+        Me.QuoteheadBindingSource1.EndEdit()
+        Me.QuotedetailBindingSource1.EndEdit()
+        Me.QuoteheadTableAdapter.Update(Me.TransvacDataV2DataSet1.quotehead)
+        Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        MsgBox("Save Sucsesful")
+    End Sub
+
+    Private Sub SuffixTB_TextChanged(sender As Object, e As EventArgs) Handles SuffixTB.TextChanged
+
+    End Sub
+
+    Private Sub New1_Click(sender As Object, e As EventArgs) Handles New1.Click
         If SuffixTB.Text = "" Then
             SuffixTB.Text = "01"
         ElseIf SuffixTB.Text = "01" Then
@@ -157,15 +171,8 @@
         ElseIf SuffixTB.Text = "09" Then
             SuffixTB.Text = "10"
         End If
-        Me.Validate()
-        Me.QuoteheadBindingSource.EndEdit()
-        Me.QuotedetailBindingSource.EndEdit()
-        Me.QuoteheadTableAdapter.Update(Me.TransvacDataV2DataSet1)
-        Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
+        Me.QuoteheadBindingSource1.AddNew()
+        Me.QuotedetailBindingSource1.AddNew()
         MsgBox("Save Sucsesful")
-    End Sub
-
-    Private Sub SuffixTB_TextChanged(sender As Object, e As EventArgs) Handles SuffixTB.TextChanged
-
     End Sub
 End Class

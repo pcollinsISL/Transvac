@@ -23,11 +23,11 @@ Partial Class quotelist
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.abort_but = New System.Windows.Forms.Button()
         Me.editqu_but = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -54,11 +54,13 @@ Partial Class quotelist
         Me.quotenotextbox = New System.Windows.Forms.TextBox()
         Me.CustdiscTableAdapter1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.custdiscTableAdapter()
         Me.accountno = New System.Windows.Forms.TextBox()
+        Me.QuoteheadBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.QuoteheadBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'abort_but
@@ -136,7 +138,7 @@ Partial Class quotelist
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotenoDataGridViewTextBoxColumn, Me.QuotesufDataGridViewTextBoxColumn, Me.QdateDataGridViewTextBoxColumn, Me.QheaderDataGridViewTextBoxColumn, Me.QwhoDataGridViewTextBoxColumn, Me.Qmemo1DataGridViewTextBoxColumn, Me.Qmemo2DataGridViewTextBoxColumn, Me.Qmemo3DataGridViewTextBoxColumn, Me.Qmemo4DataGridViewTextBoxColumn, Me.QdiscDataGridViewCheckBoxColumn, Me.QinitsDataGridViewTextBoxColumn, Me.TimestampcolumnDataGridViewImageColumn})
-        Me.DataGridView1.DataSource = Me.QuoteheadBindingSource
+        Me.DataGridView1.DataSource = Me.QuoteheadBindingSource1
         Me.DataGridView1.Location = New System.Drawing.Point(29, 94)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -147,9 +149,9 @@ Partial Class quotelist
         '
         Me.QuotenoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.QuotenoDataGridViewTextBoxColumn.DataPropertyName = "quote_no"
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QuotenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuotenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
         Me.QuotenoDataGridViewTextBoxColumn.HeaderText = "QUOTE NO"
         Me.QuotenoDataGridViewTextBoxColumn.Name = "QuotenoDataGridViewTextBoxColumn"
         Me.QuotenoDataGridViewTextBoxColumn.ReadOnly = True
@@ -158,9 +160,9 @@ Partial Class quotelist
         'QuotesufDataGridViewTextBoxColumn
         '
         Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QuotesufDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuotesufDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
         Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "SUFFIX"
         Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
         Me.QuotesufDataGridViewTextBoxColumn.ReadOnly = True
@@ -169,9 +171,9 @@ Partial Class quotelist
         'QdateDataGridViewTextBoxColumn
         '
         Me.QdateDataGridViewTextBoxColumn.DataPropertyName = "qdate"
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QdateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QdateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle8
         Me.QdateDataGridViewTextBoxColumn.HeaderText = "DATE"
         Me.QdateDataGridViewTextBoxColumn.Name = "QdateDataGridViewTextBoxColumn"
         Me.QdateDataGridViewTextBoxColumn.ReadOnly = True
@@ -180,9 +182,9 @@ Partial Class quotelist
         'QheaderDataGridViewTextBoxColumn
         '
         Me.QheaderDataGridViewTextBoxColumn.DataPropertyName = "qheader"
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QheaderDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QheaderDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
         Me.QheaderDataGridViewTextBoxColumn.HeaderText = "QUOTE HEADER"
         Me.QheaderDataGridViewTextBoxColumn.Name = "QheaderDataGridViewTextBoxColumn"
         Me.QheaderDataGridViewTextBoxColumn.ReadOnly = True
@@ -191,9 +193,9 @@ Partial Class quotelist
         'QwhoDataGridViewTextBoxColumn
         '
         Me.QwhoDataGridViewTextBoxColumn.DataPropertyName = "qwho"
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QwhoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QwhoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
         Me.QwhoDataGridViewTextBoxColumn.HeaderText = "WHO"
         Me.QwhoDataGridViewTextBoxColumn.Name = "QwhoDataGridViewTextBoxColumn"
         Me.QwhoDataGridViewTextBoxColumn.ReadOnly = True
@@ -289,6 +291,11 @@ Partial Class quotelist
         Me.accountno.Size = New System.Drawing.Size(100, 20)
         Me.accountno.TabIndex = 14
         '
+        'QuoteheadBindingSource1
+        '
+        Me.QuoteheadBindingSource1.DataMember = "quotehead"
+        Me.QuoteheadBindingSource1.DataSource = Me.TransvacDataV2DataSet1BindingSource
+        '
         'quotelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,6 +317,7 @@ Partial Class quotelist
         CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.QuoteheadBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -341,4 +349,5 @@ Partial Class quotelist
     Friend WithEvents quotenotextbox As TextBox
     Friend WithEvents CustdiscTableAdapter1 As TransvacDataV2DataSet1TableAdapters.custdiscTableAdapter
     Friend WithEvents accountno As TextBox
+    Friend WithEvents QuoteheadBindingSource1 As BindingSource
 End Class

@@ -14,10 +14,9 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnfindeq_Click(ByVal sender As System.Object,
-                          ByVal e As System.EventArgs) Handles btnfindeq.Click
-        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
+    Private Sub btnfindeq_Click(sender As Object, e As EventArgs) Handles btnfindeq.Click
         Dim findquote As New findquote
+        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
         findquote.TopLevel = False
         findquote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(0).Controls.Add(findquote)

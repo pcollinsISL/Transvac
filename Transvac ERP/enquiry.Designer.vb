@@ -483,7 +483,7 @@ Partial Class enquiry
         '
         'qotenoTextBox
         '
-        Me.qotenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "quote_no", True))
+        Me.qotenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnquiryBindingSource, "quote_no", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.qotenoTextBox.Location = New System.Drawing.Point(685, 81)
         Me.qotenoTextBox.MaxLength = 6
         Me.qotenoTextBox.Name = "qotenoTextBox"
@@ -559,6 +559,7 @@ Partial Class enquiry
         Me.TableAdapterManager.trandescTableAdapter = Nothing
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usersTableAdapter = Nothing
         '
         'AcctComboBox
         '
