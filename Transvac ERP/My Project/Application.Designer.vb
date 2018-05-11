@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Transvac_ERP.invoicemain
+            Me.MainForm = Global.Transvac_ERP.TransLogin
         End Sub
     End Class
 End Namespace

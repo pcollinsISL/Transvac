@@ -30,8 +30,8 @@
         TabControl1.SelectedTab = TabPage4
         invoicemain.TopLevel = False
         invoicemain.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.TabControl1.TabPages(0).Controls.Add(invoicemain)
-        builddraftinv.Show()
+        Me.TabControl1.TabPages(3).Controls.Add(invoicemain)
+        invoicemain.Show()
     End Sub
 
     Private Sub TabPage1_Click_1(sender As Object, e As EventArgs) Handles TabPage1.Click

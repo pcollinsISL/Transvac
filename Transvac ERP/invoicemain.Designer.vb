@@ -22,7 +22,6 @@ Partial Class invoicemain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.cwkdftbtn = New System.Windows.Forms.Button()
         Me.dltbtn = New System.Windows.Forms.Button()
         Me.bkinvbtn = New System.Windows.Forms.Button()
@@ -32,10 +31,6 @@ Partial Class invoicemain
         Me.srvebtn = New System.Windows.Forms.Button()
         Me.quitbtn = New System.Windows.Forms.Button()
         Me.sltdftbtn = New System.Windows.Forms.Button()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.InvworkBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.InvworkTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.invworkTableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -50,8 +45,6 @@ Partial Class invoicemain
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -136,70 +129,6 @@ Partial Class invoicemain
         Me.sltdftbtn.TabIndex = 93
         Me.sltdftbtn.Text = "GENERATE A CREDIT NOTE"
         Me.sltdftbtn.UseVisualStyleBackColor = True
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'InvworkBindingSource
-        '
-        Me.InvworkBindingSource.DataMember = "invwork"
-        Me.InvworkBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'InvworkTableAdapter
-        '
-        Me.InvworkTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.accctlTableAdapter = Nothing
-        Me.TableAdapterManager.accountTableAdapter = Nothing
-        Me.TableAdapterManager.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
-        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager.assetsTableAdapter = Nothing
-        Me.TableAdapterManager.atransTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.binallocTableAdapter = Nothing
-        Me.TableAdapterManager.catTableAdapter = Nothing
-        Me.TableAdapterManager.countryTableAdapter = Nothing
-        Me.TableAdapterManager.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager.enquiryTableAdapter = Nothing
-        Me.TableAdapterManager.eventTableAdapter = Nothing
-        Me.TableAdapterManager.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager.invlineTableAdapter = Nothing
-        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager.invtransTableAdapter = Nothing
-        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager.invworkTableAdapter = Me.InvworkTableAdapter
-        Me.TableAdapterManager.issueTableAdapter = Nothing
-        Me.TableAdapterManager.locationTableAdapter = Nothing
-        Me.TableAdapterManager.mainTableAdapter = Nothing
-        Me.TableAdapterManager.markupTableAdapter = Nothing
-        Me.TableAdapterManager.namesTableAdapter = Nothing
-        Me.TableAdapterManager.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager.statusTableAdapter = Nothing
-        Me.TableAdapterManager.teventsTableAdapter = Nothing
-        Me.TableAdapterManager.tran2TableAdapter = Nothing
-        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
-        Me.TableAdapterManager.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager.trandescTableAdapter = Nothing
-        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.usersTableAdapter = Nothing
         '
         'Button1
         '
@@ -360,8 +289,6 @@ Partial Class invoicemain
         Me.Controls.Add(Me.cwkdftbtn)
         Me.Name = "invoicemain"
         Me.Text = "Sales Invoicing & Credit Notes"
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -378,10 +305,6 @@ Partial Class invoicemain
     Friend WithEvents quitbtn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents sltdftbtn As Button
-    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
-    Friend WithEvents InvworkBindingSource As BindingSource
-    Friend WithEvents InvworkTableAdapter As TransvacDataV2DataSet1TableAdapters.invworkTableAdapter
-    Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
