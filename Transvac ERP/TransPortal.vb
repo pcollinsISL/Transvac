@@ -26,10 +26,11 @@
     End Sub
 
     Private Sub InvoicingBTN_Click(sender As Object, e As EventArgs) Handles InvoicingBTN.Click
-        Dim builddraftinv As New Builddraftinv
-        builddraftinv.TopLevel = False
-        builddraftinv.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.TabControl1.TabPages(0).Controls.Add(builddraftinv)
+        Dim invoicemain As New invoicemain
+        TabControl1.SelectedTab = TabPage4
+        invoicemain.TopLevel = False
+        invoicemain.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.TabControl1.TabPages(0).Controls.Add(invoicemain)
         builddraftinv.Show()
     End Sub
 

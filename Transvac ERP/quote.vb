@@ -1,6 +1,6 @@
 ﻿Public Class quote
-    Dim dt As New DataTable
-
+    Dim table As New DataTable("table")
+    Dim index As Integer
     Private Sub TranmemoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.TranmemoBindingSource.EndEdit()
@@ -11,20 +11,26 @@
         Throw New NotImplementedException()
     End Function
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        REM Me.QuoteheadBindingSource1.AddNew()
-        Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text)
-        Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet1.quotedetail, qute_tb.Text, SuffixTB.Text)
+        If SuffixTB.Text = "" Then
+            Me.QuoteheadBindingSource1.AddNew()
+            REM Me.QuotedetailBindingSource1.AddNew()
+            qute_tb.Text = quote_nu.Text
+        ElseIf Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text) Then
+            Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet1.quotedetail, qute_tb.Text, SuffixTB.Text)
+        End If
+        quote_nu.Visible = False
         idcode.Visible = False
         accountno.Visible = False
-        dt.Columns.Add("qline_no")
-        dt.Columns.Add("quantity")
-        dt.Columns.Add("qpart_no")
-        dt.Columns.Add("qdesc")
-        dt.Columns.Add("qvalue")
-        dt.Columns(0).AutoIncrement = True
-        dt.Columns(0).AutoIncrementStep = 1
-        dt.Columns(0).AutoIncrementSeed = 1
-
+        REM table.Columns.Add("qline_no")
+        REM table.Columns.Add("quantity")
+        REM line_but  table.Columns.Add("qpart_no")
+        REM  table.Columns.Add("qdesc")
+        REM  table.Columns.Add("qvalue")
+        REM table.Columns.Add("quote_no")
+        REM table.Columns.Add("quote_suf")
+        REM table.Columns(0).AutoIncrement = True
+        REM table.Columns(0).AutoIncrementSeed = 1
+        REM DataGridView1.DataSource = table
     End Sub
 
     Private Function TranmemoTableAdapter() As Object
@@ -96,6 +102,7 @@
         partno_tb.Text = DataGridView1.Item(2, DataGridView1.CurrentRow.Index).Value
         descrip_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
         unitprice_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
+        qute_tb.Text = DataGridView1.Item(5, DataGridView1.CurrentRow.Index).Value
     End Sub
 
     Private Sub header_tb_TextChanged(sender As Object, e As EventArgs) Handles header_tb.TextChanged
@@ -114,13 +121,45 @@
     End Sub
 
     Private Sub add_but_Click(sender As Object, e As EventArgs) Handles add_but.Click
-        Dim r As DataRow = dt.NewRow
-        r("quantity") = qty_tb.Text
-        r("qpart_no") = partno_tb.Text
-        r("qdesc") = descrip_tb.Text
-        r("qvalue") = unitprice_tb.Text
-        dt.Rows.Add(r)
-        DataGridView1.DataSource = dt
+        Dim rowcount As Integer = DataGridView1.Rows.Count
+        Dim count As Integer = 0
+        DataGridView1.DataSource.AddNew()
+        REM If e.rowIndex >= 0 Then
+        REM DataGridView1.Rows(e.rowindex).Cells(0).Value = e.RowIndex + 1
+        REM  End If
+        DataGridView1.Rows(rowcount - 1).Cells(1).Value = qty_tb.Text
+        DataGridView1.Rows(rowcount - 1).Cells(2).Value = partno_tb.Text
+        DataGridView1.Rows(rowcount - 1).Cells(3).Value = descrip_tb.Text
+        DataGridView1.Rows(rowcount - 1).Cells(4).Value = unitprice_tb.Text
+        DataGridView1.Rows(rowcount - 1).Cells(5).Value = SuffixTB.Text
+        DataGridView1.Rows(rowcount - 1).Cells(6).Value = quote_nu.Text
+        DataGridView1.DataSource.endedit()
+
+        REM Me.QuotedetailBindingSource1.AddNew()
+        REM DataGridView1.Rows(qdesc)
+        REM Dim r As DataRow = CType(DataGridView1.DataSource, DataTable).NewRow
+        REM r("quantity") = qty_tb.Text
+        REM r("qpart_no") = partno_tb.Text
+        REM r("qdesc") = descrip_tb.Text
+        REM  r("qvalue") = unitprice_tb.Text
+        REM table.Rows.Add(r)
+        REM DataGridView1.DataSource = table
+        REM DataGridView1.DataSource.endedit()
+        REM  CType(DataGridView1.DataSource, DataTable).Rows.Add(r)
+        REM Dim newRow As DataRowView = DirectCast(QuotedetailBindingSource1.AddNew(), DataRowView)
+        REM newRow.BeginEdit()
+        REM newRow.Row.BeginEdit()
+        REM Dim r As DataRow = table.NewRow
+        REM newRow("quantity") = qty_tb.Text
+        REM QuotedetailBindingSource1.EndEdit()
+        REM newRow("qpart_no") = partno_tb.Text
+        REM newRow("qdesc") = descrip_tb.Text
+        REM newRow("qvalue") = unitprice_tb.Text
+        REM newRow("quote_no") = qute_tb.Text
+        REM newRow("quote_suf") = SuffixTB.Text
+        REM Rows.Add(newRow)
+        REM newRow.Row.EndEdit()
+        REM newRow.DataView.Table.Rows.Add(newRow.Row)
     End Sub
 
     Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) Handles chkstockbtn.Click
@@ -139,23 +178,12 @@
     End Sub
 
     Private Sub sve_but_Click(sender As Object, e As EventArgs) Handles sve_but.Click
-        Me.Validate()
-        Me.QuoteheadBindingSource1.EndEdit()
-        Me.QuotedetailBindingSource1.EndEdit()
-        Me.QuoteheadTableAdapter.Update(Me.TransvacDataV2DataSet1.quotehead)
-        Me.QuotedetailTableAdapter.Update(Me.TransvacDataV2DataSet1)
-        MsgBox("Save Sucsesful")
-    End Sub
-
-    Private Sub SuffixTB_TextChanged(sender As Object, e As EventArgs) Handles SuffixTB.TextChanged
-
-    End Sub
-
-    Private Sub New1_Click(sender As Object, e As EventArgs) Handles New1.Click
         If SuffixTB.Text = "" Then
             SuffixTB.Text = "01"
         ElseIf SuffixTB.Text = "01" Then
             SuffixTB.Text = "02"
+        ElseIf SuffixTB.Text = "02" Then
+            SuffixTB.Text = "03"
         ElseIf SuffixTB.Text = "03" Then
             SuffixTB.Text = "04"
         ElseIf SuffixTB.Text = "04" Then
@@ -171,8 +199,16 @@
         ElseIf SuffixTB.Text = "09" Then
             SuffixTB.Text = "10"
         End If
-        Me.QuoteheadBindingSource1.AddNew()
-        Me.QuotedetailBindingSource1.AddNew()
+        Validate()
+        Me.QuoteheadBindingSource1.EndEdit()
+        Me.QuotedetailBindingSource1.EndEdit()
+        Me.QuoteheadTableAdapter.Update(TransvacDataV2DataSet1)
+        Me.QuotedetailTableAdapter.Update(TransvacDataV2DataSet1)
         MsgBox("Save Sucsesful")
     End Sub
+
+    Private Sub SuffixTB_TextChanged(sender As Object, e As EventArgs) Handles SuffixTB.TextChanged
+
+    End Sub
+
 End Class

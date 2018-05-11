@@ -27,7 +27,7 @@
         quote.TopLevel = False
         quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
-        quote.qute_tb.Text = qotenoTextBox.Text
+        quote.quote_nu.Text = qotenoTextBox.Text
         quote.accountno.Text = AccnoTextBox.Text
         quote.Show()
     End Sub

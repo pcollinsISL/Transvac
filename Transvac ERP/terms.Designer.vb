@@ -37,13 +37,13 @@ Partial Class Terms
         Me.terms_tb.Location = New System.Drawing.Point(54, 52)
         Me.terms_tb.Multiline = True
         Me.terms_tb.Name = "terms_tb"
-        Me.terms_tb.Size = New System.Drawing.Size(857, 533)
+        Me.terms_tb.Size = New System.Drawing.Size(857, 493)
         Me.terms_tb.TabIndex = 2
         Me.terms_tb.Text = resources.GetString("terms_tb.Text")
         '
         'termssve_but
         '
-        Me.termssve_but.Location = New System.Drawing.Point(836, 610)
+        Me.termssve_but.Location = New System.Drawing.Point(836, 570)
         Me.termssve_but.Name = "termssve_but"
         Me.termssve_but.Size = New System.Drawing.Size(75, 23)
         Me.termssve_but.TabIndex = 37
@@ -52,7 +52,7 @@ Partial Class Terms
         '
         'termsabt_but
         '
-        Me.termsabt_but.Location = New System.Drawing.Point(54, 610)
+        Me.termsabt_but.Location = New System.Drawing.Point(54, 570)
         Me.termsabt_but.Name = "termsabt_but"
         Me.termsabt_but.Size = New System.Drawing.Size(75, 23)
         Me.termsabt_but.TabIndex = 36
@@ -78,7 +78,7 @@ Partial Class Terms
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LimeGreen
-        Me.ClientSize = New System.Drawing.Size(972, 670)
+        Me.ClientSize = New System.Drawing.Size(967, 611)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.termssve_but)
         Me.Controls.Add(Me.termsabt_but)

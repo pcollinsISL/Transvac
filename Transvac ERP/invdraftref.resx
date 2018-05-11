@@ -117,27 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="terms_tb.Text" xml:space="preserve">
-    <value>Please note that any quotation for any parts listed above is subject to confirmation of both vessel name and IMO number. 
-Any guarantee/warranty that may be offered on the parts quoted is invalid unless you advise the vessel name and IMO number of the vessel with your order.
-
-Prices exclude charges for VAT, Packing &amp; Carriage
-
-Carriage and Packing will be charged at cost, and can only be confirmed after receipt of firm and final delivery address.
-
-Validity is 30 days
-
-Quoted delivery times are estimates made at time of quotation. These can only be confirmed AFTER placement of firm order and goods remain available only subject to either manufacturer's or Transvac Systems’ stock and/or production schedule.
-
-Strictly 100% prepayment upon presentation of proforma invoice, to be issued immediately upon receipt of your written order. Please note that the order will not be processed until we have received your payment in full, therefore any delay in making your payment will result in an equivalent delay in the delivery time(s). 
-
-Important: Please note that if a proforma invoice remains unpaid 30 days after being issued, then the proforma invoice will be cancelled and the items reserved by that process will be returned to our general stock. A new proforma invoice will then be issued upon confirmation in writing that, 1) Goods are still required, and 2) That payment will be made within 7 days of issue of the new proforma invoice. 
-
-If you choose to pay by Credit or Debit Card, then a charge may be added to the payment for the total invoice value.
-
-Please note that Transvac Systems terms and conditions will apply to any resulting order to the exclusion of customer terms, except following negotiation and agreement.</value>
-  </data>
-  <metadata name="OrddetailTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

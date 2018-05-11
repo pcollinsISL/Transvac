@@ -25,7 +25,7 @@
         End If
         Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
         Me.MarkupTableAdapter.FillBySupplier(Me.TransvacDataV2DataSet1.markup, PsupplierTextBox1.Text)
-        unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
+        REM  unitvaluebox.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
         markupDecimail.Text = Val(supdiscbox.Text) / 100
         unitcostsum.Text = Val(unitvaluebox.Text) * Val(markupDecimail.Text)
         unitcostbox.Text = Val(unitvaluebox.Text) - Val(unitcostsum.Text)

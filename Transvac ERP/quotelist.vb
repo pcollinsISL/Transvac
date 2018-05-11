@@ -39,7 +39,7 @@
         quote.qute_tb.Text = DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value
         quote.SuffixTB.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value
         quote.header_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
-        quote.user_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
+        REM quote.user_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
         quote.accountno.Text = accountno.Text
         quote.Show()
         Me.Hide()

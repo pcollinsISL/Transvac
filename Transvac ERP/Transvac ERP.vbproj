@@ -17,14 +17,15 @@
     <PublishUrl>C:\Users\paulc\Desktop\Trans\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>13</ApplicationRevision>
+    <UpdateUrl>\\SBS2011\ERPInstall\</UpdateUrl>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -72,10 +73,10 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Transvac ERP_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
@@ -207,6 +208,30 @@
     <Compile Include="invallocated.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="invbkcreditnote.Designer.vb">
+      <DependentUpon>invbkcreditnote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invbkcreditnote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invcurstatacc.Designer.vb">
+      <DependentUpon>invcurstatacc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invcurstatacc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invcustpeg.Designer.vb">
+      <DependentUpon>invcustpeg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invcustpeg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invdeldraft.Designer.vb">
+      <DependentUpon>invdeldraft.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invdeldraft.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inveditbin.Designer.vb">
       <DependentUpon>inveditbin.vb</DependentUpon>
     </Compile>
@@ -217,6 +242,12 @@
       <DependentUpon>inveditdesc.vb</DependentUpon>
     </Compile>
     <Compile Include="inveditdesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invdraftref.Designer.vb">
+      <DependentUpon>invdraftref.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invdraftref.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Invfdesc.Designer.vb">
@@ -235,6 +266,12 @@
       <DependentUpon>FREEFORM.vb</DependentUpon>
     </Compile>
     <Compile Include="FREEFORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invgencredit.Designer.vb">
+      <DependentUpon>invgencredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invgencredit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="invnewbin.Designer.vb">
@@ -265,6 +302,24 @@
       <DependentUpon>invordered.vb</DependentUpon>
     </Compile>
     <Compile Include="invordered.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invrevbookinv.Designer.vb">
+      <DependentUpon>invrevbookinv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invrevbookinv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invrevcredit.Designer.vb">
+      <DependentUpon>invrevcredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invrevcredit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invsercust.Designer.vb">
+      <DependentUpon>invsercust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invsercust.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="markup.Designer.vb">
@@ -487,11 +542,26 @@
     <EmbeddedResource Include="invallocated.resx">
       <DependentUpon>invallocated.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="invbkcreditnote.resx">
+      <DependentUpon>invbkcreditnote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invcurstatacc.resx">
+      <DependentUpon>invcurstatacc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invcustpeg.resx">
+      <DependentUpon>invcustpeg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invdeldraft.resx">
+      <DependentUpon>invdeldraft.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inveditbin.resx">
       <DependentUpon>inveditbin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inveditdesc.resx">
       <DependentUpon>inveditdesc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invdraftref.resx">
+      <DependentUpon>invdraftref.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invfdesc.resx">
       <DependentUpon>Invfdesc.vb</DependentUpon>
@@ -501,6 +571,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FREEFORM.resx">
       <DependentUpon>FREEFORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invgencredit.resx">
+      <DependentUpon>invgencredit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="invnewbin.resx">
       <DependentUpon>invnewbin.vb</DependentUpon>
@@ -516,6 +589,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="invordered.resx">
       <DependentUpon>invordered.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invrevbookinv.resx">
+      <DependentUpon>invrevbookinv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invrevcredit.resx">
+      <DependentUpon>invrevcredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invsercust.resx">
+      <DependentUpon>invsercust.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="markup.resx">
       <DependentUpon>markup.vb</DependentUpon>
@@ -698,6 +780,296 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <PublishFile Include="Microsoft.VisualStudio.CoreUtility">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Data.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.DataDesign.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.DataDesign.DataSetDesigner">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.DataDesign.Interfaces">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Debugger.Interop.Internal">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Diagnostics.Assert">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Diagnostics.PerformanceProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Editor">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.ExtensibilityHosting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.GraphModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.ImageCatalog">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Imaging">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Language.Intellisense">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Package.LanguageService.14.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.14.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.Logic">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.UI.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Threading">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Utilities">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Validation">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.WizardFramework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VSDesigner">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VSDesigner.ExceptionAssistant.SmartTag">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Collections.Immutable">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Threading.Tasks.Dataflow">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
     <PublishFile Include="zh-CHS\Microsoft.ReportViewer.Common.resources">
       <Visible>False</Visible>
       <Group>
