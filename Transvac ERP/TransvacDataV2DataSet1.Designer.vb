@@ -18436,7 +18436,7 @@ Partial Public Class TransvacDataV2DataSet1
             Me.columnquote_no.AllowDBNull = false
             Me.columnquote_no.MaxLength = 6
             Me.columnquote_suf.AllowDBNull = false
-            Me.columnquote_suf.MaxLength = 2
+            Me.columnquote_suf.MaxLength = 6
             Me.columnqline_no.AllowDBNull = false
             Me.columnqline_no.MaxLength = 3
             Me.columnquantity.AllowDBNull = false

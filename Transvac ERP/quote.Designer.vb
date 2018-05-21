@@ -66,9 +66,8 @@ Partial Class quote
         Me.QpartnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QdescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QlinenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quote_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.quote_sufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QlinememoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
@@ -105,6 +104,7 @@ Partial Class quote
         Me.QuoteheadTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quoteheadTableAdapter()
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.quote_nu = New System.Windows.Forms.TextBox()
+        Me.quotesfx = New System.Windows.Forms.TextBox()
         CType(Me.QuoteheadBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,7 +154,6 @@ Partial Class quote
         '
         'SuffixTB
         '
-        Me.SuffixTB.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.QuotedetailBindingSource1, "quote_suf", True))
         Me.SuffixTB.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.QuoteheadBindingSource1, "quote_suf", True))
         Me.SuffixTB.Location = New System.Drawing.Point(889, 51)
         Me.SuffixTB.Name = "SuffixTB"
@@ -426,7 +425,7 @@ Partial Class quote
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotenoDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.QpartnoDataGridViewTextBoxColumn, Me.QdescDataGridViewTextBoxColumn, Me.QvalueDataGridViewTextBoxColumn, Me.QuotesufDataGridViewTextBoxColumn, Me.QlinenoDataGridViewTextBoxColumn, Me.quote_no, Me.QlinememoDataGridViewTextBoxColumn, Me.NonstockDataGridViewCheckBoxColumn, Me.TimestampcolumnDataGridViewImageColumn, Me.UniqueIDDataGridViewTextBoxColumn1})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotenoDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.QpartnoDataGridViewTextBoxColumn, Me.QdescDataGridViewTextBoxColumn, Me.QvalueDataGridViewTextBoxColumn, Me.quote_no, Me.quote_sufDataGridViewTextBoxColumn, Me.QlinememoDataGridViewTextBoxColumn, Me.NonstockDataGridViewCheckBoxColumn, Me.TimestampcolumnDataGridViewImageColumn, Me.UniqueIDDataGridViewTextBoxColumn1})
         Me.DataGridView1.DataSource = Me.QuotedetailBindingSource1
         Me.DataGridView1.Location = New System.Drawing.Point(31, 488)
         Me.DataGridView1.Name = "DataGridView1"
@@ -466,24 +465,17 @@ Partial Class quote
         Me.QvalueDataGridViewTextBoxColumn.HeaderText = "UNIT PRICE"
         Me.QvalueDataGridViewTextBoxColumn.Name = "QvalueDataGridViewTextBoxColumn"
         '
-        'QuotesufDataGridViewTextBoxColumn
-        '
-        Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
-        Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "quote_suf"
-        Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
-        '
-        'QlinenoDataGridViewTextBoxColumn
-        '
-        Me.QlinenoDataGridViewTextBoxColumn.DataPropertyName = "qline_no"
-        Me.QlinenoDataGridViewTextBoxColumn.HeaderText = "qline_no"
-        Me.QlinenoDataGridViewTextBoxColumn.Name = "QlinenoDataGridViewTextBoxColumn"
-        Me.QlinenoDataGridViewTextBoxColumn.Visible = False
-        '
         'quote_no
         '
         Me.quote_no.DataPropertyName = "quote_no"
-        Me.quote_no.HeaderText = "quote_no"
+        Me.quote_no.HeaderText = "QUOTENO"
         Me.quote_no.Name = "quote_no"
+        '
+        'quote_sufDataGridViewTextBoxColumn
+        '
+        Me.quote_sufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
+        Me.quote_sufDataGridViewTextBoxColumn.HeaderText = "Quote SUF"
+        Me.quote_sufDataGridViewTextBoxColumn.Name = "quote_sufDataGridViewTextBoxColumn"
         '
         'QlinememoDataGridViewTextBoxColumn
         '
@@ -770,12 +762,20 @@ Partial Class quote
         Me.quote_nu.Size = New System.Drawing.Size(100, 20)
         Me.quote_nu.TabIndex = 99
         '
+        'quotesfx
+        '
+        Me.quotesfx.Location = New System.Drawing.Point(404, 13)
+        Me.quotesfx.Name = "quotesfx"
+        Me.quotesfx.Size = New System.Drawing.Size(100, 20)
+        Me.quotesfx.TabIndex = 100
+        '
         'quote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1202, 741)
+        Me.Controls.Add(Me.quotesfx)
         Me.Controls.Add(Me.quote_nu)
         Me.Controls.Add(Me.accountno)
         Me.Controls.Add(Me.chkstockbtn)
@@ -901,18 +901,18 @@ Partial Class quote
     Friend WithEvents AllocDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SinuseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents quote_nu As TextBox
+    Public WithEvents DataGridView1 As DataGridView
+    Friend WithEvents quotesfx As TextBox
     Friend WithEvents QuotenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QpartnoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QdescDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuotesufDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QlinenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents quote_no As DataGridViewTextBoxColumn
+    Friend WithEvents quote_sufDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QlinememoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NonstockDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents quote_nu As TextBox
-    Public WithEvents DataGridView1 As DataGridView
 End Class

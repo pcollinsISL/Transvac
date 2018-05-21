@@ -4,7 +4,6 @@
     End Sub
 
     Private Sub quotelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TransvacDataV2DataSet1.quotehead' table. You can move, or remove it, as needed.
         Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet1.quotehead)
         Me.QuoteheadTableAdapter.FillByQuotes(Me.TransvacDataV2DataSet1.quotehead, quotenotextbox.Text)
         quotenotextbox.Visible = False
@@ -37,9 +36,10 @@
         quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
         quote.qute_tb.Text = DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value
+        quote.quote_nu.Text = DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value
         quote.SuffixTB.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value
+        quote.quotesfx.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value
         quote.header_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
-        REM quote.user_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
         quote.accountno.Text = accountno.Text
         quote.Show()
         Me.Hide()
