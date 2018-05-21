@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Selecttype
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Selecttype
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
@@ -36,7 +36,7 @@ Partial Class Selecttype
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(74, 13)
+        Me.Label1.Location = New System.Drawing.Point(76, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(114, 13)
         Me.Label1.TabIndex = 0
@@ -45,7 +45,7 @@ Partial Class Selecttype
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(54, 77)
+        Me.RadioButton1.Location = New System.Drawing.Point(55, 100)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(112, 17)
         Me.RadioButton1.TabIndex = 1
@@ -56,7 +56,7 @@ Partial Class Selecttype
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(54, 112)
+        Me.RadioButton2.Location = New System.Drawing.Point(55, 143)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(123, 17)
         Me.RadioButton2.TabIndex = 2
@@ -67,7 +67,7 @@ Partial Class Selecttype
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(54, 148)
+        Me.RadioButton3.Location = New System.Drawing.Point(55, 182)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(114, 17)
         Me.RadioButton3.TabIndex = 3
@@ -78,7 +78,7 @@ Partial Class Selecttype
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(54, 185)
+        Me.RadioButton4.Location = New System.Drawing.Point(55, 217)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(130, 17)
         Me.RadioButton4.TabIndex = 4
@@ -89,7 +89,7 @@ Partial Class Selecttype
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(1, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(72, 34)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -98,25 +98,25 @@ Partial Class Selecttype
         '
         'Accountno
         '
-        Me.Accountno.Location = New System.Drawing.Point(68, 42)
+        Me.Accountno.Location = New System.Drawing.Point(54, 55)
         Me.Accountno.Name = "Accountno"
-        Me.Accountno.Size = New System.Drawing.Size(100, 20)
+        Me.Accountno.Size = New System.Drawing.Size(146, 20)
         Me.Accountno.TabIndex = 9
         '
         'click
         '
-        Me.click.Location = New System.Drawing.Point(138, 208)
+        Me.click.Location = New System.Drawing.Point(125, 268)
         Me.click.Name = "click"
         Me.click.Size = New System.Drawing.Size(75, 23)
         Me.click.TabIndex = 10
-        Me.click.Text = "click"
+        Me.click.Text = "SELECT"
         Me.click.UseVisualStyleBackColor = True
         '
         'Selecttype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(225, 235)
+        Me.ClientSize = New System.Drawing.Size(254, 319)
         Me.Controls.Add(Me.click)
         Me.Controls.Add(Me.Accountno)
         Me.Controls.Add(Me.PictureBox1)

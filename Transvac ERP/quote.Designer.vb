@@ -122,7 +122,7 @@ Partial Class quote
         Me.header_tb.Location = New System.Drawing.Point(253, 51)
         Me.header_tb.Name = "header_tb"
         Me.header_tb.Size = New System.Drawing.Size(484, 20)
-        Me.header_tb.TabIndex = 3
+        Me.header_tb.TabIndex = 1
         '
         'QuoteheadBindingSource1
         '
@@ -171,14 +171,14 @@ Partial Class quote
         Me.partno_tb.Location = New System.Drawing.Point(253, 104)
         Me.partno_tb.Name = "partno_tb"
         Me.partno_tb.Size = New System.Drawing.Size(112, 20)
-        Me.partno_tb.TabIndex = 9
+        Me.partno_tb.TabIndex = 3
         '
         'qty_tb
         '
         Me.qty_tb.Location = New System.Drawing.Point(201, 104)
         Me.qty_tb.Name = "qty_tb"
         Me.qty_tb.Size = New System.Drawing.Size(39, 20)
-        Me.qty_tb.TabIndex = 10
+        Me.qty_tb.TabIndex = 2
         '
         'descrip_tb
         '
@@ -186,7 +186,7 @@ Partial Class quote
         Me.descrip_tb.Location = New System.Drawing.Point(387, 104)
         Me.descrip_tb.Name = "descrip_tb"
         Me.descrip_tb.Size = New System.Drawing.Size(350, 20)
-        Me.descrip_tb.TabIndex = 11
+        Me.descrip_tb.TabIndex = 4
         '
         'TrandescBindingSource
         '
@@ -198,7 +198,7 @@ Partial Class quote
         Me.Ext_tb.Location = New System.Drawing.Point(840, 104)
         Me.Ext_tb.Name = "Ext_tb"
         Me.Ext_tb.Size = New System.Drawing.Size(91, 20)
-        Me.Ext_tb.TabIndex = 12
+        Me.Ext_tb.TabIndex = 6
         '
         'unitprice_tb
         '
@@ -206,7 +206,7 @@ Partial Class quote
         Me.unitprice_tb.Location = New System.Drawing.Point(743, 104)
         Me.unitprice_tb.Name = "unitprice_tb"
         Me.unitprice_tb.Size = New System.Drawing.Size(91, 20)
-        Me.unitprice_tb.TabIndex = 13
+        Me.unitprice_tb.TabIndex = 5
         '
         'TranbinsBindingSource1
         '
@@ -218,7 +218,7 @@ Partial Class quote
         Me.fndesc_but.Location = New System.Drawing.Point(950, 59)
         Me.fndesc_but.Name = "fndesc_but"
         Me.fndesc_but.Size = New System.Drawing.Size(137, 58)
-        Me.fndesc_but.TabIndex = 14
+        Me.fndesc_but.TabIndex = 7
         Me.fndesc_but.Text = "FIND DESCRIPTION"
         Me.fndesc_but.UseVisualStyleBackColor = True
         '
@@ -281,7 +281,7 @@ Partial Class quote
         Me.add_but.Location = New System.Drawing.Point(1012, 147)
         Me.add_but.Name = "add_but"
         Me.add_but.Size = New System.Drawing.Size(75, 23)
-        Me.add_but.TabIndex = 26
+        Me.add_but.TabIndex = 8
         Me.add_but.Text = "ADD"
         Me.add_but.UseVisualStyleBackColor = True
         '
@@ -290,7 +290,7 @@ Partial Class quote
         Me.edit_but.Location = New System.Drawing.Point(1012, 199)
         Me.edit_but.Name = "edit_but"
         Me.edit_but.Size = New System.Drawing.Size(75, 23)
-        Me.edit_but.TabIndex = 27
+        Me.edit_but.TabIndex = 9
         Me.edit_but.Text = "EDIT"
         Me.edit_but.UseVisualStyleBackColor = True
         '
@@ -299,7 +299,7 @@ Partial Class quote
         Me.abt_butt.Location = New System.Drawing.Point(52, 698)
         Me.abt_butt.Name = "abt_butt"
         Me.abt_butt.Size = New System.Drawing.Size(75, 23)
-        Me.abt_butt.TabIndex = 29
+        Me.abt_butt.TabIndex = 14
         Me.abt_butt.Text = "ABORT"
         Me.abt_butt.UseVisualStyleBackColor = True
         '
@@ -308,7 +308,7 @@ Partial Class quote
         Me.heading_but.Location = New System.Drawing.Point(1100, 496)
         Me.heading_but.Name = "heading_but"
         Me.heading_but.Size = New System.Drawing.Size(75, 23)
-        Me.heading_but.TabIndex = 30
+        Me.heading_but.TabIndex = 10
         Me.heading_but.Text = "HEADING"
         Me.heading_but.UseVisualStyleBackColor = True
         '
@@ -317,7 +317,7 @@ Partial Class quote
         Me.sve_but.Location = New System.Drawing.Point(231, 698)
         Me.sve_but.Name = "sve_but"
         Me.sve_but.Size = New System.Drawing.Size(75, 23)
-        Me.sve_but.TabIndex = 31
+        Me.sve_but.TabIndex = 15
         Me.sve_but.Text = "SAVE"
         Me.sve_but.UseVisualStyleBackColor = True
         '
@@ -326,7 +326,7 @@ Partial Class quote
         Me.printqte_but.Location = New System.Drawing.Point(602, 698)
         Me.printqte_but.Name = "printqte_but"
         Me.printqte_but.Size = New System.Drawing.Size(148, 23)
-        Me.printqte_but.TabIndex = 32
+        Me.printqte_but.TabIndex = 17
         Me.printqte_but.Text = "PRINT QUOTATION (PDF)"
         Me.printqte_but.UseVisualStyleBackColor = True
         '
@@ -335,7 +335,7 @@ Partial Class quote
         Me.remline_but.Location = New System.Drawing.Point(775, 698)
         Me.remline_but.Name = "remline_but"
         Me.remline_but.Size = New System.Drawing.Size(93, 23)
-        Me.remline_but.TabIndex = 33
+        Me.remline_but.TabIndex = 18
         Me.remline_but.Text = "REMOVE LINE"
         Me.remline_but.UseVisualStyleBackColor = True
         '
@@ -344,7 +344,7 @@ Partial Class quote
         Me.delivery_but.Location = New System.Drawing.Point(1100, 544)
         Me.delivery_but.Name = "delivery_but"
         Me.delivery_but.Size = New System.Drawing.Size(75, 23)
-        Me.delivery_but.TabIndex = 34
+        Me.delivery_but.TabIndex = 11
         Me.delivery_but.Text = "DELIVERY"
         Me.delivery_but.UseVisualStyleBackColor = True
         '
@@ -353,7 +353,7 @@ Partial Class quote
         Me.terms_but.Location = New System.Drawing.Point(1100, 596)
         Me.terms_but.Name = "terms_but"
         Me.terms_but.Size = New System.Drawing.Size(75, 23)
-        Me.terms_but.TabIndex = 35
+        Me.terms_but.TabIndex = 12
         Me.terms_but.Text = "TERMS"
         Me.terms_but.UseVisualStyleBackColor = True
         '
@@ -362,7 +362,7 @@ Partial Class quote
         Me.signoff_but.Location = New System.Drawing.Point(1100, 654)
         Me.signoff_but.Name = "signoff_but"
         Me.signoff_but.Size = New System.Drawing.Size(75, 23)
-        Me.signoff_but.TabIndex = 36
+        Me.signoff_but.TabIndex = 13
         Me.signoff_but.Text = "SIGN OFF"
         Me.signoff_but.UseVisualStyleBackColor = True
         '
@@ -371,7 +371,7 @@ Partial Class quote
         Me.order_but.Location = New System.Drawing.Point(942, 698)
         Me.order_but.Name = "order_but"
         Me.order_but.Size = New System.Drawing.Size(152, 23)
-        Me.order_but.TabIndex = 39
+        Me.order_but.TabIndex = 19
         Me.order_but.Text = "ORDER ITEMS"
         Me.order_but.UseVisualStyleBackColor = True
         '
@@ -663,7 +663,7 @@ Partial Class quote
         Me.ListBox1.Location = New System.Drawing.Point(113, 231)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(872, 95)
-        Me.ListBox1.TabIndex = 92
+        Me.ListBox1.TabIndex = 8
         '
         'TextBox1
         '
@@ -673,14 +673,14 @@ Partial Class quote
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox1.Size = New System.Drawing.Size(872, 81)
-        Me.TextBox1.TabIndex = 94
+        Me.TextBox1.TabIndex = 7
         '
         'chkstockbtn
         '
         Me.chkstockbtn.Location = New System.Drawing.Point(329, 698)
         Me.chkstockbtn.Name = "chkstockbtn"
         Me.chkstockbtn.Size = New System.Drawing.Size(101, 23)
-        Me.chkstockbtn.TabIndex = 95
+        Me.chkstockbtn.TabIndex = 16
         Me.chkstockbtn.Text = "CHECK STOCK"
         Me.chkstockbtn.UseVisualStyleBackColor = True
         '
@@ -775,7 +775,7 @@ Partial Class quote
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.ClientSize = New System.Drawing.Size(1202, 741)
+        Me.ClientSize = New System.Drawing.Size(1292, 741)
         Me.Controls.Add(Me.quote_nu)
         Me.Controls.Add(Me.accountno)
         Me.Controls.Add(Me.chkstockbtn)

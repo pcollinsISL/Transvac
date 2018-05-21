@@ -262,8 +262,8 @@ Partial Class invoicemain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.SeaGreen
-        Me.ClientSize = New System.Drawing.Size(715, 602)
+        Me.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.ClientSize = New System.Drawing.Size(755, 653)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)

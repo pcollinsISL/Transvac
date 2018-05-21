@@ -1,5 +1,5 @@
 ﻿Public Class CustomerDetails
-    Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles Tran2BindingNavigatorSaveItem.Click
+    Private Sub Tran2BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.Tran2BindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet1)

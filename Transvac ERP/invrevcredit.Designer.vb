@@ -88,7 +88,7 @@ Partial Class invrevcredit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(383, 258)
+        Me.ClientSize = New System.Drawing.Size(363, 258)
         Me.Controls.Add(Me.qut_btn)
         Me.Controls.Add(Me.sel_btn)
         Me.Controls.Add(Me.PictureBox2)

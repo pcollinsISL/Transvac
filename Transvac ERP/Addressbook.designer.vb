@@ -269,7 +269,7 @@ Partial Class form1
         Me.savebut.Location = New System.Drawing.Point(123, 330)
         Me.savebut.Name = "savebut"
         Me.savebut.Size = New System.Drawing.Size(74, 23)
-        Me.savebut.TabIndex = 154
+        Me.savebut.TabIndex = 20
         Me.savebut.Text = "SAVE"
         Me.savebut.UseVisualStyleBackColor = True
         '
@@ -278,7 +278,7 @@ Partial Class form1
         Me.abortbut.Location = New System.Drawing.Point(213, 330)
         Me.abortbut.Name = "abortbut"
         Me.abortbut.Size = New System.Drawing.Size(74, 23)
-        Me.abortbut.TabIndex = 152
+        Me.abortbut.TabIndex = 21
         Me.abortbut.Text = "ABORT"
         Me.abortbut.UseVisualStyleBackColor = True
         '
@@ -287,7 +287,7 @@ Partial Class form1
         Me.printbutton.Location = New System.Drawing.Point(33, 430)
         Me.printbutton.Name = "printbutton"
         Me.printbutton.Size = New System.Drawing.Size(75, 23)
-        Me.printbutton.TabIndex = 151
+        Me.printbutton.TabIndex = 26
         Me.printbutton.Text = "PRINT"
         Me.printbutton.UseVisualStyleBackColor = True
         '
@@ -296,7 +296,7 @@ Partial Class form1
         Me.delbut.Location = New System.Drawing.Point(891, 12)
         Me.delbut.Name = "delbut"
         Me.delbut.Size = New System.Drawing.Size(119, 23)
-        Me.delbut.TabIndex = 150
+        Me.delbut.TabIndex = 32
         Me.delbut.Text = "DELETE RECORD"
         Me.delbut.UseVisualStyleBackColor = True
         '
@@ -305,7 +305,7 @@ Partial Class form1
         Me.newbut.Location = New System.Drawing.Point(33, 330)
         Me.newbut.Name = "newbut"
         Me.newbut.Size = New System.Drawing.Size(74, 23)
-        Me.newbut.TabIndex = 149
+        Me.newbut.TabIndex = 19
         Me.newbut.Text = "NEW"
         Me.newbut.UseVisualStyleBackColor = True
         '
@@ -316,7 +316,7 @@ Partial Class form1
         Me.but5.Location = New System.Drawing.Point(98, 374)
         Me.but5.Name = "but5"
         Me.but5.Size = New System.Drawing.Size(57, 23)
-        Me.but5.TabIndex = 148
+        Me.but5.TabIndex = 23
         Me.but5.UseVisualStyleBackColor = True
         '
         'but6
@@ -326,7 +326,7 @@ Partial Class form1
         Me.but6.Location = New System.Drawing.Point(164, 374)
         Me.but6.Name = "but6"
         Me.but6.Size = New System.Drawing.Size(57, 23)
-        Me.but6.TabIndex = 147
+        Me.but6.TabIndex = 24
         Me.but6.UseVisualStyleBackColor = True
         '
         'but7
@@ -336,7 +336,7 @@ Partial Class form1
         Me.but7.Location = New System.Drawing.Point(230, 374)
         Me.but7.Name = "but7"
         Me.but7.Size = New System.Drawing.Size(57, 23)
-        Me.but7.TabIndex = 146
+        Me.but7.TabIndex = 25
         Me.but7.UseVisualStyleBackColor = True
         '
         'but4
@@ -346,7 +346,7 @@ Partial Class form1
         Me.but4.Location = New System.Drawing.Point(33, 374)
         Me.but4.Name = "but4"
         Me.but4.Size = New System.Drawing.Size(57, 23)
-        Me.but4.TabIndex = 145
+        Me.but4.TabIndex = 22
         Me.but4.UseVisualStyleBackColor = True
         '
         'NAMETextBox1
@@ -356,7 +356,7 @@ Partial Class form1
         Me.NAMETextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.NAMETextBox1.Name = "NAMETextBox1"
         Me.NAMETextBox1.Size = New System.Drawing.Size(181, 20)
-        Me.NAMETextBox1.TabIndex = 164
+        Me.NAMETextBox1.TabIndex = 2
         '
         'Tran2BindingSource1
         '
@@ -376,7 +376,7 @@ Partial Class form1
         Me.AD1TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD1TextBox1.Name = "AD1TextBox1"
         Me.AD1TextBox1.Size = New System.Drawing.Size(255, 20)
-        Me.AD1TextBox1.TabIndex = 165
+        Me.AD1TextBox1.TabIndex = 3
         '
         'AD2TextBox1
         '
@@ -385,7 +385,7 @@ Partial Class form1
         Me.AD2TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.AD2TextBox1.Name = "AD2TextBox1"
         Me.AD2TextBox1.Size = New System.Drawing.Size(255, 20)
-        Me.AD2TextBox1.TabIndex = 166
+        Me.AD2TextBox1.TabIndex = 4
         '
         'AD3TextBox
         '
@@ -394,7 +394,7 @@ Partial Class form1
         Me.AD3TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD3TextBox.Name = "AD3TextBox"
         Me.AD3TextBox.Size = New System.Drawing.Size(255, 20)
-        Me.AD3TextBox.TabIndex = 167
+        Me.AD3TextBox.TabIndex = 5
         '
         'AD4TextBox
         '
@@ -403,7 +403,7 @@ Partial Class form1
         Me.AD4TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD4TextBox.Name = "AD4TextBox"
         Me.AD4TextBox.Size = New System.Drawing.Size(255, 20)
-        Me.AD4TextBox.TabIndex = 168
+        Me.AD4TextBox.TabIndex = 6
         '
         'AD5TextBox
         '
@@ -412,7 +412,7 @@ Partial Class form1
         Me.AD5TextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AD5TextBox.Name = "AD5TextBox"
         Me.AD5TextBox.Size = New System.Drawing.Size(255, 20)
-        Me.AD5TextBox.TabIndex = 169
+        Me.AD5TextBox.TabIndex = 7
         '
         'PHONETextBox
         '
@@ -421,7 +421,7 @@ Partial Class form1
         Me.PHONETextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PHONETextBox.Name = "PHONETextBox"
         Me.PHONETextBox.Size = New System.Drawing.Size(171, 20)
-        Me.PHONETextBox.TabIndex = 170
+        Me.PHONETextBox.TabIndex = 8
         '
         'TELEXTextBox
         '
@@ -430,7 +430,7 @@ Partial Class form1
         Me.TELEXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TELEXTextBox.Name = "TELEXTextBox"
         Me.TELEXTextBox.Size = New System.Drawing.Size(171, 20)
-        Me.TELEXTextBox.TabIndex = 171
+        Me.TELEXTextBox.TabIndex = 9
         '
         'FAXTextBox
         '
@@ -439,7 +439,7 @@ Partial Class form1
         Me.FAXTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FAXTextBox.Name = "FAXTextBox"
         Me.FAXTextBox.Size = New System.Drawing.Size(171, 20)
-        Me.FAXTextBox.TabIndex = 172
+        Me.FAXTextBox.TabIndex = 10
         '
         'EMAILTextBox
         '
@@ -448,7 +448,7 @@ Partial Class form1
         Me.EMAILTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EMAILTextBox.Name = "EMAILTextBox"
         Me.EMAILTextBox.Size = New System.Drawing.Size(171, 20)
-        Me.EMAILTextBox.TabIndex = 173
+        Me.EMAILTextBox.TabIndex = 11
         '
         'VATPAYABLECheckBox1
         '
@@ -459,7 +459,7 @@ Partial Class form1
         Me.VATPAYABLECheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.VATPAYABLECheckBox1.Name = "VATPAYABLECheckBox1"
         Me.VATPAYABLECheckBox1.Size = New System.Drawing.Size(122, 20)
-        Me.VATPAYABLECheckBox1.TabIndex = 174
+        Me.VATPAYABLECheckBox1.TabIndex = 14
         Me.VATPAYABLECheckBox1.Text = "VAT PAYABLE"
         Me.VATPAYABLECheckBox1.UseVisualStyleBackColor = True
         '
@@ -470,7 +470,7 @@ Partial Class form1
         Me.EUROVATTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.EUROVATTextBox.Name = "EUROVATTextBox"
         Me.EUROVATTextBox.Size = New System.Drawing.Size(96, 20)
-        Me.EUROVATTextBox.TabIndex = 175
+        Me.EUROVATTextBox.TabIndex = 13
         '
         'TERMDAYSTextBox
         '
@@ -479,7 +479,7 @@ Partial Class form1
         Me.TERMDAYSTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TERMDAYSTextBox.Name = "TERMDAYSTextBox"
         Me.TERMDAYSTextBox.Size = New System.Drawing.Size(35, 20)
-        Me.TERMDAYSTextBox.TabIndex = 176
+        Me.TERMDAYSTextBox.TabIndex = 12
         '
         'ACCOUNTTextBox1
         '
@@ -488,7 +488,7 @@ Partial Class form1
         Me.ACCOUNTTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ACCOUNTTextBox1.Name = "ACCOUNTTextBox1"
         Me.ACCOUNTTextBox1.Size = New System.Drawing.Size(65, 20)
-        Me.ACCOUNTTextBox1.TabIndex = 177
+        Me.ACCOUNTTextBox1.TabIndex = 1
         '
         'selectbut
         '
@@ -497,7 +497,7 @@ Partial Class form1
         Me.selectbut.Location = New System.Drawing.Point(876, 373)
         Me.selectbut.Name = "selectbut"
         Me.selectbut.Size = New System.Drawing.Size(134, 53)
-        Me.selectbut.TabIndex = 180
+        Me.selectbut.TabIndex = 31
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
         '
@@ -525,7 +525,7 @@ Partial Class form1
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
         Me.ADDMEMOTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 228)
-        Me.ADDMEMOTextBox.TabIndex = 132
+        Me.ADDMEMOTextBox.TabIndex = 18
         '
         'AccountDataGridViewTextBoxColumn
         '
@@ -558,7 +558,7 @@ Partial Class form1
         Me.fndact_but.Location = New System.Drawing.Point(639, 374)
         Me.fndact_but.Name = "fndact_but"
         Me.fndact_but.Size = New System.Drawing.Size(103, 23)
-        Me.fndact_but.TabIndex = 182
+        Me.fndact_but.TabIndex = 27
         Me.fndact_but.Text = "FIND ACCOUNT"
         Me.fndact_but.UseVisualStyleBackColor = True
         '
@@ -567,7 +567,7 @@ Partial Class form1
         Me.fndname_but.Location = New System.Drawing.Point(639, 403)
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(103, 23)
-        Me.fndname_but.TabIndex = 183
+        Me.fndname_but.TabIndex = 28
         Me.fndname_but.Text = "FIND NAME"
         Me.fndname_but.UseVisualStyleBackColor = True
         '
@@ -710,7 +710,7 @@ Partial Class form1
         Me.NwhoTextBox1.Location = New System.Drawing.Point(924, 95)
         Me.NwhoTextBox1.Name = "NwhoTextBox1"
         Me.NwhoTextBox1.Size = New System.Drawing.Size(85, 20)
-        Me.NwhoTextBox1.TabIndex = 199
+        Me.NwhoTextBox1.TabIndex = 17
         '
         'EntrytypeComboBox
         '
@@ -721,7 +721,7 @@ Partial Class form1
         Me.EntrytypeComboBox.Location = New System.Drawing.Point(432, 374)
         Me.EntrytypeComboBox.Name = "EntrytypeComboBox"
         Me.EntrytypeComboBox.Size = New System.Drawing.Size(125, 21)
-        Me.EntrytypeComboBox.TabIndex = 200
+        Me.EntrytypeComboBox.TabIndex = 15
         Me.EntrytypeComboBox.ValueMember = "AddressRecordType.RecordTypeOld"
         '
         'TransvacDataV2DataSet1
@@ -736,7 +736,7 @@ Partial Class form1
         Me.New_updDateTimePicker.Location = New System.Drawing.Point(639, 95)
         Me.New_updDateTimePicker.Name = "New_updDateTimePicker"
         Me.New_updDateTimePicker.Size = New System.Drawing.Size(198, 20)
-        Me.New_updDateTimePicker.TabIndex = 204
+        Me.New_updDateTimePicker.TabIndex = 16
         '
         'XcardCheckBox1
         '
@@ -744,7 +744,7 @@ Partial Class form1
         Me.XcardCheckBox1.Location = New System.Drawing.Point(762, 404)
         Me.XcardCheckBox1.Name = "XcardCheckBox1"
         Me.XcardCheckBox1.Size = New System.Drawing.Size(104, 24)
-        Me.XcardCheckBox1.TabIndex = 205
+        Me.XcardCheckBox1.TabIndex = 30
         Me.XcardCheckBox1.Text = "XMAS CARD"
         Me.XcardCheckBox1.UseVisualStyleBackColor = True
         '
@@ -754,7 +754,7 @@ Partial Class form1
         Me.PROMO.Location = New System.Drawing.Point(763, 374)
         Me.PROMO.Name = "PROMO"
         Me.PROMO.Size = New System.Drawing.Size(104, 24)
-        Me.PROMO.TabIndex = 206
+        Me.PROMO.TabIndex = 29
         Me.PROMO.Text = "PROMO"
         Me.PROMO.UseVisualStyleBackColor = True
         '
@@ -843,6 +843,7 @@ Partial Class form1
         Me.TableAdapterManager1.trandescTableAdapter = Nothing
         Me.TableAdapterManager1.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.usersTableAdapter = Nothing
         '
         'AddressRecordTypeBindingSource
         '
