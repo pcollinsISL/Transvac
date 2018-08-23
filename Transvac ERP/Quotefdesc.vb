@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub Button2_but_Click(sender As Object, e As EventArgs) Handles Button2_but.Click
-        Me.TrandescTableAdapter.FillByDesc(Me.TransvacDataV2DataSet1.trandesc, acctextBox.Text)
+        Me.TrandescTableAdapter1.FillByDesc(Me.TransvacDataV2DataSet1.trandesc, acctextBox.Text)
     End Sub
 
     Private Function TrandescTableAdapter() As Object
@@ -21,5 +21,9 @@
         quote.descrip_tb.Text = DataGridView1.Item(2, DataGridView1.CurrentRow.Index).Value
         quote.Show()
         Me.Close()
+    End Sub
+
+    Private Sub acctabt_but_Click(sender As Object, e As EventArgs) Handles acctabt_but.Click
+        Me.Hide()
     End Sub
 End Class

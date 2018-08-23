@@ -50,7 +50,7 @@ Partial Class CustomerDetails
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.custref = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -59,12 +59,12 @@ Partial Class CustomerDetails
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Quit = New System.Windows.Forms.Button()
+        Me.Save = New System.Windows.Forms.Button()
+        Me.shipment = New System.Windows.Forms.Button()
+        Me.PrintDraft = New System.Windows.Forms.Button()
+        Me.Compose = New System.Windows.Forms.Button()
+        Me.Seestatement = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
@@ -298,12 +298,12 @@ Partial Class CustomerDetails
         Me.Label11.TabIndex = 34
         Me.Label11.Text = "Customer Req Delivery:"
         '
-        'TextBox16
+        'custref
         '
-        Me.TextBox16.Location = New System.Drawing.Point(264, 329)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox16.TabIndex = 33
+        Me.custref.Location = New System.Drawing.Point(264, 329)
+        Me.custref.Name = "custref"
+        Me.custref.Size = New System.Drawing.Size(200, 20)
+        Me.custref.TabIndex = 33
         '
         'Label12
         '
@@ -371,59 +371,59 @@ Partial Class CustomerDetails
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 44
         '
-        'Button1
+        'Quit
         '
-        Me.Button1.Location = New System.Drawing.Point(38, 570)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "QUIT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Quit.Location = New System.Drawing.Point(38, 570)
+        Me.Quit.Name = "Quit"
+        Me.Quit.Size = New System.Drawing.Size(75, 23)
+        Me.Quit.TabIndex = 45
+        Me.Quit.Text = "QUIT"
+        Me.Quit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Save
         '
-        Me.Button2.Location = New System.Drawing.Point(184, 570)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 23)
-        Me.Button2.TabIndex = 46
-        Me.Button2.Text = "SAVE WORK"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Save.Location = New System.Drawing.Point(184, 570)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(100, 23)
+        Me.Save.TabIndex = 46
+        Me.Save.Text = "SAVE WORK"
+        Me.Save.UseVisualStyleBackColor = True
         '
-        'Button3
+        'shipment
         '
-        Me.Button3.Location = New System.Drawing.Point(38, 446)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(83, 23)
-        Me.Button3.TabIndex = 47
-        Me.Button3.Text = "SHIPMENT"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.shipment.Location = New System.Drawing.Point(38, 446)
+        Me.shipment.Name = "shipment"
+        Me.shipment.Size = New System.Drawing.Size(83, 23)
+        Me.shipment.TabIndex = 47
+        Me.shipment.Text = "SHIPMENT"
+        Me.shipment.UseVisualStyleBackColor = True
         '
-        'Button4
+        'PrintDraft
         '
-        Me.Button4.Location = New System.Drawing.Point(355, 570)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 23)
-        Me.Button4.TabIndex = 48
-        Me.Button4.Text = "PRINT DRAFT"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.PrintDraft.Location = New System.Drawing.Point(355, 570)
+        Me.PrintDraft.Name = "PrintDraft"
+        Me.PrintDraft.Size = New System.Drawing.Size(100, 23)
+        Me.PrintDraft.TabIndex = 48
+        Me.PrintDraft.Text = "PRINT DRAFT"
+        Me.PrintDraft.UseVisualStyleBackColor = True
         '
-        'Button5
+        'Compose
         '
-        Me.Button5.Location = New System.Drawing.Point(523, 570)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 49
-        Me.Button5.Text = "COMPOSE"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Compose.Location = New System.Drawing.Point(523, 570)
+        Me.Compose.Name = "Compose"
+        Me.Compose.Size = New System.Drawing.Size(75, 23)
+        Me.Compose.TabIndex = 49
+        Me.Compose.Text = "COMPOSE"
+        Me.Compose.UseVisualStyleBackColor = True
         '
-        'Button6
+        'Seestatement
         '
-        Me.Button6.Location = New System.Drawing.Point(40, 482)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(112, 23)
-        Me.Button6.TabIndex = 50
-        Me.Button6.Text = "SEE STATEMENT"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Seestatement.Location = New System.Drawing.Point(40, 482)
+        Me.Seestatement.Name = "Seestatement"
+        Me.Seestatement.Size = New System.Drawing.Size(112, 23)
+        Me.Seestatement.TabIndex = 50
+        Me.Seestatement.Text = "SEE STATEMENT"
+        Me.Seestatement.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -520,12 +520,12 @@ Partial Class CustomerDetails
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Seestatement)
+        Me.Controls.Add(Me.Compose)
+        Me.Controls.Add(Me.PrintDraft)
+        Me.Controls.Add(Me.shipment)
+        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.Quit)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TextBox20)
@@ -535,7 +535,7 @@ Partial Class CustomerDetails
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBox14)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBox16)
+        Me.Controls.Add(Me.custref)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label9)
@@ -596,7 +596,7 @@ Partial Class CustomerDetails
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents custref As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
@@ -605,12 +605,12 @@ Partial Class CustomerDetails
     Friend WithEvents Label16 As Label
     Friend WithEvents TextBox20 As TextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Quit As Button
+    Friend WithEvents Save As Button
+    Friend WithEvents shipment As Button
+    Friend WithEvents PrintDraft As Button
+    Friend WithEvents Compose As Button
+    Friend WithEvents Seestatement As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1

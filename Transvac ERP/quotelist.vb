@@ -25,6 +25,7 @@
         quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
         quote.accountno.Text = accountno.Text
+        quote.quote_nu.Text = quotenotextbox.Text
         quote.Show()
         Me.Close()
     End Sub

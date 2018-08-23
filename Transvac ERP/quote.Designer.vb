@@ -105,6 +105,7 @@ Partial Class quote
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.quote_nu = New System.Windows.Forms.TextBox()
         Me.quotesfx = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.QuoteheadBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -769,12 +770,21 @@ Partial Class quote
         Me.quotesfx.Size = New System.Drawing.Size(100, 20)
         Me.quotesfx.TabIndex = 100
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.QuoteheadBindingSource1, "timestamp_column", True))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(511, 13)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 101
+        '
         'quote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(1202, 741)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.quotesfx)
         Me.Controls.Add(Me.quote_nu)
         Me.Controls.Add(Me.accountno)
@@ -915,4 +925,5 @@ Partial Class quote
     Friend WithEvents NonstockDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
