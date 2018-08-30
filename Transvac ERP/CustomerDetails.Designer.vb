@@ -418,7 +418,7 @@ Partial Class CustomerDetails
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(40, 482)
+        Me.Button6.Location = New System.Drawing.Point(38, 482)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(112, 23)
         Me.Button6.TabIndex = 50
@@ -515,7 +515,7 @@ Partial Class CustomerDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(666, 646)
+        Me.ClientSize = New System.Drawing.Size(651, 630)
         Me.Controls.Add(Me.DateTimePicker3)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.PictureBox3)

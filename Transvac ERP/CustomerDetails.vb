@@ -11,4 +11,8 @@
         Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet1.tran2, accountnum.Text)
 
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+    End Sub
 End Class

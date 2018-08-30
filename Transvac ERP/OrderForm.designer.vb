@@ -73,13 +73,11 @@ Partial Class OrderForm
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
-        Me.SuffixTB = New System.Windows.Forms.TextBox()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -92,7 +90,7 @@ Partial Class OrderForm
         '
         Me.OSUPPLIERLabel.AutoSize = True
         Me.OSUPPLIERLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OSUPPLIERLabel.Location = New System.Drawing.Point(31, 66)
+        Me.OSUPPLIERLabel.Location = New System.Drawing.Point(31, 70)
         Me.OSUPPLIERLabel.Name = "OSUPPLIERLabel"
         Me.OSUPPLIERLabel.Size = New System.Drawing.Size(68, 13)
         Me.OSUPPLIERLabel.TabIndex = 1
@@ -102,7 +100,7 @@ Partial Class OrderForm
         '
         Me.OCURRLabel.AutoSize = True
         Me.OCURRLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OCURRLabel.Location = New System.Drawing.Point(311, 67)
+        Me.OCURRLabel.Location = New System.Drawing.Point(364, 70)
         Me.OCURRLabel.Name = "OCURRLabel"
         Me.OCURRLabel.Size = New System.Drawing.Size(75, 13)
         Me.OCURRLabel.TabIndex = 3
@@ -112,7 +110,7 @@ Partial Class OrderForm
         '
         Me.OSEMAILLabel.AutoSize = True
         Me.OSEMAILLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OSEMAILLabel.Location = New System.Drawing.Point(31, 105)
+        Me.OSEMAILLabel.Location = New System.Drawing.Point(31, 109)
         Me.OSEMAILLabel.Name = "OSEMAILLabel"
         Me.OSEMAILLabel.Size = New System.Drawing.Size(48, 13)
         Me.OSEMAILLabel.TabIndex = 5
@@ -122,7 +120,7 @@ Partial Class OrderForm
         '
         Me.OSTELNOLabel.AutoSize = True
         Me.OSTELNOLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OSTELNOLabel.Location = New System.Drawing.Point(31, 133)
+        Me.OSTELNOLabel.Location = New System.Drawing.Point(31, 137)
         Me.OSTELNOLabel.Name = "OSTELNOLabel"
         Me.OSTELNOLabel.Size = New System.Drawing.Size(81, 13)
         Me.OSTELNOLabel.TabIndex = 7
@@ -132,7 +130,7 @@ Partial Class OrderForm
         '
         Me.OSFAXNOLabel.AutoSize = True
         Me.OSFAXNOLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OSFAXNOLabel.Location = New System.Drawing.Point(31, 160)
+        Me.OSFAXNOLabel.Location = New System.Drawing.Point(31, 164)
         Me.OSFAXNOLabel.Name = "OSFAXNOLabel"
         Me.OSFAXNOLabel.Size = New System.Drawing.Size(52, 13)
         Me.OSFAXNOLabel.TabIndex = 9
@@ -142,7 +140,7 @@ Partial Class OrderForm
         '
         Me.OSCONTACTLabel.AutoSize = True
         Me.OSCONTACTLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OSCONTACTLabel.Location = New System.Drawing.Point(31, 189)
+        Me.OSCONTACTLabel.Location = New System.Drawing.Point(31, 193)
         Me.OSCONTACTLabel.Name = "OSCONTACTLabel"
         Me.OSCONTACTLabel.Size = New System.Drawing.Size(65, 13)
         Me.OSCONTACTLabel.TabIndex = 11
@@ -152,7 +150,7 @@ Partial Class OrderForm
         '
         Me.OSNAMELabel.AutoSize = True
         Me.OSNAMELabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OSNAMELabel.Location = New System.Drawing.Point(694, 72)
+        Me.OSNAMELabel.Location = New System.Drawing.Point(722, 90)
         Me.OSNAMELabel.Name = "OSNAMELabel"
         Me.OSNAMELabel.Size = New System.Drawing.Size(66, 13)
         Me.OSNAMELabel.TabIndex = 13
@@ -170,7 +168,7 @@ Partial Class OrderForm
         'LODATELabel
         '
         Me.LODATELabel.AutoSize = True
-        Me.LODATELabel.Location = New System.Drawing.Point(603, 247)
+        Me.LODATELabel.Location = New System.Drawing.Point(978, 20)
         Me.LODATELabel.Name = "LODATELabel"
         Me.LODATELabel.Size = New System.Drawing.Size(65, 13)
         Me.LODATELabel.TabIndex = 26
@@ -181,14 +179,14 @@ Partial Class OrderForm
         Me.LQTYORDLabel.AutoSize = True
         Me.LQTYORDLabel.Location = New System.Drawing.Point(31, 288)
         Me.LQTYORDLabel.Name = "LQTYORDLabel"
-        Me.LQTYORDLabel.Size = New System.Drawing.Size(62, 13)
+        Me.LQTYORDLabel.Size = New System.Drawing.Size(92, 13)
         Me.LQTYORDLabel.TabIndex = 34
-        Me.LQTYORDLabel.Text = "LQTYORD:"
+        Me.LQTYORDLabel.Text = "QTY TO ORDER:"
         '
         'LPRICELabel
         '
         Me.LPRICELabel.AutoSize = True
-        Me.LPRICELabel.Location = New System.Drawing.Point(767, 288)
+        Me.LPRICELabel.Location = New System.Drawing.Point(967, 258)
         Me.LPRICELabel.Name = "LPRICELabel"
         Me.LPRICELabel.Size = New System.Drawing.Size(77, 13)
         Me.LPRICELabel.TabIndex = 37
@@ -197,7 +195,7 @@ Partial Class OrderForm
         'LEPRICELabel
         '
         Me.LEPRICELabel.AutoSize = True
-        Me.LEPRICELabel.Location = New System.Drawing.Point(935, 286)
+        Me.LEPRICELabel.Location = New System.Drawing.Point(933, 283)
         Me.LEPRICELabel.Name = "LEPRICELabel"
         Me.LEPRICELabel.Size = New System.Drawing.Size(110, 13)
         Me.LEPRICELabel.TabIndex = 39
@@ -206,20 +204,20 @@ Partial Class OrderForm
         'LPARTNOLabel
         '
         Me.LPARTNOLabel.AutoSize = True
-        Me.LPARTNOLabel.Location = New System.Drawing.Point(159, 286)
+        Me.LPARTNOLabel.Location = New System.Drawing.Point(170, 288)
         Me.LPARTNOLabel.Name = "LPARTNOLabel"
-        Me.LPARTNOLabel.Size = New System.Drawing.Size(61, 13)
+        Me.LPARTNOLabel.Size = New System.Drawing.Size(55, 13)
         Me.LPARTNOLabel.TabIndex = 40
-        Me.LPARTNOLabel.Text = "LPARTNO:"
+        Me.LPARTNOLabel.Text = "PARTNO:"
         '
         'LDESCLabel
         '
         Me.LDESCLabel.AutoSize = True
-        Me.LDESCLabel.Location = New System.Drawing.Point(337, 286)
+        Me.LDESCLabel.Location = New System.Drawing.Point(347, 291)
         Me.LDESCLabel.Name = "LDESCLabel"
-        Me.LDESCLabel.Size = New System.Drawing.Size(45, 13)
+        Me.LDESCLabel.Size = New System.Drawing.Size(80, 13)
         Me.LDESCLabel.TabIndex = 41
-        Me.LDESCLabel.Text = "LDESC:"
+        Me.LDESCLabel.Text = "DESCRIPTION"
         '
         'LOLINEMEMOLabel2
         '
@@ -233,7 +231,7 @@ Partial Class OrderForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1034, 244)
+        Me.Label1.Location = New System.Drawing.Point(927, 52)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(116, 13)
         Me.Label1.TabIndex = 57
@@ -242,16 +240,17 @@ Partial Class OrderForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1067, 709)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(978, 678)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 13)
+        Me.Label2.Size = New System.Drawing.Size(106, 13)
         Me.Label2.TabIndex = 91
         Me.Label2.Text = "ORDER VALUE ="
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(996, 323)
+        Me.Label3.Location = New System.Drawing.Point(968, 312)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 13)
         Me.Label3.TabIndex = 94
@@ -259,171 +258,171 @@ Partial Class OrderForm
         '
         'cosupplier
         '
-        Me.cosupplier.Location = New System.Drawing.Point(119, 63)
+        Me.cosupplier.Location = New System.Drawing.Point(129, 66)
         Me.cosupplier.Name = "cosupplier"
         Me.cosupplier.Size = New System.Drawing.Size(187, 20)
         Me.cosupplier.TabIndex = 2
         '
         'cocurr
         '
-        Me.cocurr.Location = New System.Drawing.Point(386, 65)
+        Me.cocurr.Location = New System.Drawing.Point(465, 67)
         Me.cocurr.Name = "cocurr"
-        Me.cocurr.Size = New System.Drawing.Size(43, 20)
+        Me.cocurr.Size = New System.Drawing.Size(55, 20)
         Me.cocurr.TabIndex = 4
         '
         'cosemail
         '
-        Me.cosemail.Location = New System.Drawing.Point(118, 102)
+        Me.cosemail.Location = New System.Drawing.Point(128, 105)
         Me.cosemail.Name = "cosemail"
         Me.cosemail.Size = New System.Drawing.Size(311, 20)
         Me.cosemail.TabIndex = 6
         '
         'costelno
         '
-        Me.costelno.Location = New System.Drawing.Point(118, 128)
+        Me.costelno.Location = New System.Drawing.Point(128, 131)
         Me.costelno.Name = "costelno"
         Me.costelno.Size = New System.Drawing.Size(311, 20)
         Me.costelno.TabIndex = 8
         '
         'cosfaxno
         '
-        Me.cosfaxno.Location = New System.Drawing.Point(118, 155)
+        Me.cosfaxno.Location = New System.Drawing.Point(128, 158)
         Me.cosfaxno.Name = "cosfaxno"
         Me.cosfaxno.Size = New System.Drawing.Size(311, 20)
         Me.cosfaxno.TabIndex = 10
         '
         'coscontact
         '
-        Me.coscontact.Location = New System.Drawing.Point(118, 182)
+        Me.coscontact.Location = New System.Drawing.Point(128, 185)
         Me.coscontact.Name = "coscontact"
         Me.coscontact.Size = New System.Drawing.Size(209, 20)
         Me.coscontact.TabIndex = 12
         '
         'cosname
         '
-        Me.cosname.Location = New System.Drawing.Point(768, 68)
+        Me.cosname.Location = New System.Drawing.Point(796, 86)
         Me.cosname.Name = "cosname"
         Me.cosname.Size = New System.Drawing.Size(367, 20)
         Me.cosname.TabIndex = 14
         '
         'coadd1
         '
-        Me.coadd1.Location = New System.Drawing.Point(768, 95)
+        Me.coadd1.Location = New System.Drawing.Point(796, 113)
         Me.coadd1.Name = "coadd1"
         Me.coadd1.Size = New System.Drawing.Size(367, 20)
         Me.coadd1.TabIndex = 16
         '
         'coadd2
         '
-        Me.coadd2.Location = New System.Drawing.Point(768, 121)
+        Me.coadd2.Location = New System.Drawing.Point(796, 139)
         Me.coadd2.Name = "coadd2"
         Me.coadd2.Size = New System.Drawing.Size(367, 20)
         Me.coadd2.TabIndex = 18
         '
         'coadd3
         '
-        Me.coadd3.Location = New System.Drawing.Point(768, 148)
+        Me.coadd3.Location = New System.Drawing.Point(796, 166)
         Me.coadd3.Name = "coadd3"
         Me.coadd3.Size = New System.Drawing.Size(367, 20)
         Me.coadd3.TabIndex = 20
         '
         'coadd4
         '
-        Me.coadd4.Location = New System.Drawing.Point(768, 174)
+        Me.coadd4.Location = New System.Drawing.Point(796, 192)
         Me.coadd4.Name = "coadd4"
         Me.coadd4.Size = New System.Drawing.Size(367, 20)
         Me.coadd4.TabIndex = 22
         '
         'coadd5
         '
-        Me.coadd5.Location = New System.Drawing.Point(768, 201)
+        Me.coadd5.Location = New System.Drawing.Point(797, 221)
         Me.coadd5.Name = "coadd5"
         Me.coadd5.Size = New System.Drawing.Size(367, 20)
         Me.coadd5.TabIndex = 24
         '
         'cOHeader
         '
-        Me.cOHeader.Location = New System.Drawing.Point(118, 244)
+        Me.cOHeader.Location = New System.Drawing.Point(129, 243)
         Me.cOHeader.Name = "cOHeader"
         Me.cOHeader.Size = New System.Drawing.Size(429, 20)
         Me.cOHeader.TabIndex = 25
         '
         'LODATEDateTimePicker
         '
-        Me.LODATEDateTimePicker.Location = New System.Drawing.Point(769, 245)
+        Me.LODATEDateTimePicker.Location = New System.Drawing.Point(643, 20)
         Me.LODATEDateTimePicker.Name = "LODATEDateTimePicker"
         Me.LODATEDateTimePicker.Size = New System.Drawing.Size(116, 20)
         Me.LODATEDateTimePicker.TabIndex = 27
         '
         'LQTYORDTextBox
         '
-        Me.LQTYORDTextBox.Location = New System.Drawing.Point(118, 283)
+        Me.LQTYORDTextBox.Location = New System.Drawing.Point(129, 285)
         Me.LQTYORDTextBox.Name = "LQTYORDTextBox"
         Me.LQTYORDTextBox.Size = New System.Drawing.Size(35, 20)
         Me.LQTYORDTextBox.TabIndex = 35
         '
         'LPRICETextBox
         '
-        Me.LPRICETextBox.Location = New System.Drawing.Point(850, 283)
+        Me.LPRICETextBox.Location = New System.Drawing.Point(1060, 251)
         Me.LPRICETextBox.Name = "LPRICETextBox"
-        Me.LPRICETextBox.Size = New System.Drawing.Size(79, 20)
+        Me.LPRICETextBox.Size = New System.Drawing.Size(103, 20)
         Me.LPRICETextBox.TabIndex = 38
         '
         'LEPRICETextBox
         '
-        Me.LEPRICETextBox.Location = New System.Drawing.Point(1051, 282)
+        Me.LEPRICETextBox.Location = New System.Drawing.Point(1060, 277)
         Me.LEPRICETextBox.Name = "LEPRICETextBox"
-        Me.LEPRICETextBox.Size = New System.Drawing.Size(79, 20)
+        Me.LEPRICETextBox.Size = New System.Drawing.Size(103, 20)
         Me.LEPRICETextBox.TabIndex = 40
         '
         'LPARTNOTextBox
         '
-        Me.LPARTNOTextBox.Location = New System.Drawing.Point(226, 283)
+        Me.LPARTNOTextBox.Location = New System.Drawing.Point(231, 285)
         Me.LPARTNOTextBox.Name = "LPARTNOTextBox"
-        Me.LPARTNOTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.LPARTNOTextBox.Size = New System.Drawing.Size(110, 20)
         Me.LPARTNOTextBox.TabIndex = 41
         '
         'LDESCTextBox
         '
-        Me.LDESCTextBox.Location = New System.Drawing.Point(386, 283)
+        Me.LDESCTextBox.Location = New System.Drawing.Point(435, 285)
         Me.LDESCTextBox.Name = "LDESCTextBox"
-        Me.LDESCTextBox.Size = New System.Drawing.Size(374, 20)
+        Me.LDESCTextBox.Size = New System.Drawing.Size(408, 20)
         Me.LDESCTextBox.TabIndex = 42
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(876, 347)
+        Me.Button1.Location = New System.Drawing.Point(849, 336)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(83, 51)
+        Me.Button1.Size = New System.Drawing.Size(68, 59)
         Me.Button1.TabIndex = 44
         Me.Button1.Text = "NON STOCK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ORDERNOTextBox
         '
-        Me.ORDERNOTextBox.Location = New System.Drawing.Point(671, 245)
+        Me.ORDERNOTextBox.Location = New System.Drawing.Point(1047, 20)
         Me.ORDERNOTextBox.Name = "ORDERNOTextBox"
-        Me.ORDERNOTextBox.Size = New System.Drawing.Size(89, 20)
+        Me.ORDERNOTextBox.Size = New System.Drawing.Size(120, 20)
         Me.ORDERNOTextBox.TabIndex = 45
         '
         'LOLINEMEMOTextBox2
         '
-        Me.LOLINEMEMOTextBox2.Location = New System.Drawing.Point(117, 325)
+        Me.LOLINEMEMOTextBox2.Location = New System.Drawing.Point(128, 334)
         Me.LOLINEMEMOTextBox2.Multiline = True
         Me.LOLINEMEMOTextBox2.Name = "LOLINEMEMOTextBox2"
-        Me.LOLINEMEMOTextBox2.Size = New System.Drawing.Size(642, 78)
+        Me.LOLINEMEMOTextBox2.Size = New System.Drawing.Size(631, 75)
         Me.LOLINEMEMOTextBox2.TabIndex = 55
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(1152, 244)
+        Me.TextBox1.Location = New System.Drawing.Point(1046, 47)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(79, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(122, 20)
         Me.TextBox1.TabIndex = 58
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(37, 664)
+        Me.Button2.Location = New System.Drawing.Point(33, 668)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 59
@@ -432,7 +431,7 @@ Partial Class OrderForm
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(152, 664)
+        Me.Button3.Location = New System.Drawing.Point(152, 668)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(107, 23)
         Me.Button3.TabIndex = 60
@@ -441,7 +440,7 @@ Partial Class OrderForm
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(288, 663)
+        Me.Button4.Location = New System.Drawing.Point(435, 668)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(107, 23)
         Me.Button4.TabIndex = 61
@@ -450,7 +449,7 @@ Partial Class OrderForm
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(748, 663)
+        Me.Button5.Location = New System.Drawing.Point(565, 668)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(107, 23)
         Me.Button5.TabIndex = 62
@@ -459,55 +458,48 @@ Partial Class OrderForm
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(951, 663)
+        Me.Button6.Location = New System.Drawing.Point(831, 668)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.Size = New System.Drawing.Size(101, 23)
         Me.Button6.TabIndex = 63
         Me.Button6.Text = "SAVE"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(1156, 537)
+        Me.Button7.Location = New System.Drawing.Point(1037, 537)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.Size = New System.Drawing.Size(171, 23)
         Me.Button7.TabIndex = 64
         Me.Button7.Text = "HEADING"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(1156, 596)
+        Me.Button8.Location = New System.Drawing.Point(1037, 596)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.Size = New System.Drawing.Size(171, 23)
         Me.Button8.TabIndex = 65
         Me.Button8.Text = "DESPATCH"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(1156, 567)
+        Me.Button9.Location = New System.Drawing.Point(1037, 567)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.Size = New System.Drawing.Size(171, 23)
         Me.Button9.TabIndex = 66
         Me.Button9.Text = "INSTRUCT"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(1156, 625)
+        Me.Button10.Location = New System.Drawing.Point(1037, 625)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.Size = New System.Drawing.Size(171, 23)
         Me.Button10.TabIndex = 67
         Me.Button10.Text = "DELIVERY"
         Me.Button10.UseVisualStyleBackColor = True
-        '
-        'SuffixTB
-        '
-        Me.SuffixTB.Location = New System.Drawing.Point(887, 245)
-        Me.SuffixTB.Name = "SuffixTB"
-        Me.SuffixTB.Size = New System.Drawing.Size(42, 20)
-        Me.SuffixTB.TabIndex = 70
         '
         'Button11
         '
@@ -546,24 +538,16 @@ Partial Class OrderForm
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(34, 429)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1197, 102)
+        Me.DataGridView2.Size = New System.Drawing.Size(1174, 102)
         Me.DataGridView2.TabIndex = 89
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(1166, 702)
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Info
+        Me.TextBox2.Location = New System.Drawing.Point(1090, 671)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(65, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(114, 20)
         Me.TextBox2.TabIndex = 90
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(1136, 270)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(95, 53)
-        Me.Button13.TabIndex = 92
-        Me.Button13.Text = "FIND DESC"
-        Me.Button13.UseVisualStyleBackColor = True
         '
         'ImageList1
         '
@@ -574,17 +558,17 @@ Partial Class OrderForm
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(990, 337)
+        Me.ListBox1.Location = New System.Drawing.Point(967, 328)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(241, 69)
+        Me.ListBox1.Size = New System.Drawing.Size(241, 95)
         Me.ListBox1.TabIndex = 93
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(109, 55)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 95
         Me.PictureBox1.TabStop = False
@@ -594,18 +578,16 @@ Partial Class OrderForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.ClientSize = New System.Drawing.Size(1266, 740)
+        Me.ClientSize = New System.Drawing.Size(1265, 740)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.SuffixTB)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
@@ -655,7 +637,7 @@ Partial Class OrderForm
         Me.Controls.Add(Me.OSUPPLIERLabel)
         Me.Controls.Add(Me.cosupplier)
         Me.Name = "OrderForm"
-        Me.Text = "Order Form"
+        Me.Text = "Orders Form"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -695,13 +677,11 @@ Partial Class OrderForm
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
-    Friend WithEvents SuffixTB As TextBox
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button13 As Button
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents OSUPPLIERLabel As Label

@@ -8,4 +8,8 @@
         Else
         End If
     End Sub
+
+    Private Sub sve_but_Click(sender As Object, e As EventArgs) Handles sve_but.Click
+        Me.Close()
+    End Sub
 End Class

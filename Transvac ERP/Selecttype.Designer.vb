@@ -25,11 +25,10 @@ Partial Class Selecttype
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Accountno = New System.Windows.Forms.TextBox()
         Me.click = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,35 +55,13 @@ Partial Class Selecttype
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(55, 143)
+        Me.RadioButton2.Location = New System.Drawing.Point(54, 123)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(123, 17)
         Me.RadioButton2.TabIndex = 2
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Transvac Bathrooms"
         Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(55, 182)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(114, 17)
-        Me.RadioButton3.TabIndex = 3
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Transvac Services"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(55, 217)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(130, 17)
-        Me.RadioButton4.TabIndex = 4
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Transvac Fabrications"
-        Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -98,30 +75,38 @@ Partial Class Selecttype
         '
         'Accountno
         '
-        Me.Accountno.Location = New System.Drawing.Point(54, 55)
+        Me.Accountno.Location = New System.Drawing.Point(55, 60)
         Me.Accountno.Name = "Accountno"
-        Me.Accountno.Size = New System.Drawing.Size(146, 20)
+        Me.Accountno.Size = New System.Drawing.Size(60, 20)
         Me.Accountno.TabIndex = 9
         '
         'click
         '
-        Me.click.Location = New System.Drawing.Point(125, 268)
+        Me.click.Location = New System.Drawing.Point(157, 179)
         Me.click.Name = "click"
-        Me.click.Size = New System.Drawing.Size(75, 23)
+        Me.click.Size = New System.Drawing.Size(85, 35)
         Me.click.TabIndex = 10
         Me.click.Text = "SELECT"
         Me.click.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(28, 179)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(86, 35)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "ABORT"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Selecttype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(254, 319)
+        Me.ClientSize = New System.Drawing.Size(270, 259)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.click)
         Me.Controls.Add(Me.Accountno)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.RadioButton4)
-        Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Label1)
@@ -136,9 +121,8 @@ Partial Class Selecttype
     Friend WithEvents Label1 As Label
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Accountno As TextBox
     Friend WithEvents click As Button
+    Friend WithEvents Button6 As Button
 End Class

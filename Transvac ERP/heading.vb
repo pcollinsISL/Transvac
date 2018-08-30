@@ -10,5 +10,6 @@
     End Sub
 
     Private Sub headsve_but_Click(sender As Object, e As EventArgs) Handles headsve_but.Click
+        Me.Close()
     End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class Builddraftinv
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -68,7 +69,6 @@ Partial Class Builddraftinv
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
@@ -98,7 +98,46 @@ Partial Class Builddraftinv
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.InvworkBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvworkTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.invworkTableAdapter()
+        Me.InvtransBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvtransTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.invtransTableAdapter()
+        Me.BinallocBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BinallocTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.binallocTableAdapter()
+        Me.InvlineBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvlineTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.invlineTableAdapter()
+        Me.QictrlBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.QictrlTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.qictrlTableAdapter()
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
+        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
+        Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.QuotedetailTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QpartnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuotenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QlinenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QdescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QlinememoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InvtransBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BinallocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InvlineBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.QictrlBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label15
@@ -437,9 +476,9 @@ Partial Class Builddraftinv
         '
         'VScrollBar3
         '
-        Me.VScrollBar3.Location = New System.Drawing.Point(836, 414)
+        Me.VScrollBar3.Location = New System.Drawing.Point(901, 444)
         Me.VScrollBar3.Name = "VScrollBar3"
-        Me.VScrollBar3.Size = New System.Drawing.Size(16, 132)
+        Me.VScrollBar3.Size = New System.Drawing.Size(17, 150)
         Me.VScrollBar3.TabIndex = 143
         '
         'Label23
@@ -502,19 +541,11 @@ Partial Class Builddraftinv
         Me.Label34.TabIndex = 135
         Me.Label34.Text = "PART NO"
         '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(50, 413)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(783, 132)
-        Me.ListView1.TabIndex = 134
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
         'Label35
         '
         Me.Label35.AutoSize = True
         Me.Label35.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label35.Location = New System.Drawing.Point(781, 414)
+        Me.Label35.Location = New System.Drawing.Point(847, 413)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(51, 13)
         Me.Label35.TabIndex = 148
@@ -554,7 +585,7 @@ Partial Class Builddraftinv
         '
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label12.Location = New System.Drawing.Point(563, 553)
+        Me.Label12.Location = New System.Drawing.Point(560, 605)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(39, 13)
         Me.Label12.TabIndex = 160
@@ -564,7 +595,7 @@ Partial Class Builddraftinv
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label14.Location = New System.Drawing.Point(400, 553)
+        Me.Label14.Location = New System.Drawing.Point(397, 605)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(102, 13)
         Me.Label14.TabIndex = 159
@@ -574,7 +605,7 @@ Partial Class Builddraftinv
         '
         Me.Label32.AutoSize = True
         Me.Label32.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label32.Location = New System.Drawing.Point(279, 553)
+        Me.Label32.Location = New System.Drawing.Point(276, 605)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(54, 13)
         Me.Label32.TabIndex = 157
@@ -584,7 +615,7 @@ Partial Class Builddraftinv
         '
         Me.Label39.AutoSize = True
         Me.Label39.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label39.Location = New System.Drawing.Point(187, 553)
+        Me.Label39.Location = New System.Drawing.Point(184, 605)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(62, 13)
         Me.Label39.TabIndex = 155
@@ -594,7 +625,7 @@ Partial Class Builddraftinv
         '
         Me.Label41.AutoSize = True
         Me.Label41.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label41.Location = New System.Drawing.Point(53, 553)
+        Me.Label41.Location = New System.Drawing.Point(50, 605)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(108, 13)
         Me.Label41.TabIndex = 153
@@ -602,9 +633,9 @@ Partial Class Builddraftinv
         '
         'ListView3
         '
-        Me.ListView3.Location = New System.Drawing.Point(52, 553)
+        Me.ListView3.Location = New System.Drawing.Point(49, 605)
         Me.ListView3.Name = "ListView3"
-        Me.ListView3.Size = New System.Drawing.Size(782, 46)
+        Me.ListView3.Size = New System.Drawing.Size(849, 46)
         Me.ListView3.TabIndex = 152
         Me.ListView3.UseCompatibleStateImageBehavior = False
         '
@@ -612,7 +643,7 @@ Partial Class Builddraftinv
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label11.Location = New System.Drawing.Point(628, 553)
+        Me.Label11.Location = New System.Drawing.Point(625, 605)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(78, 13)
         Me.Label11.TabIndex = 162
@@ -622,7 +653,7 @@ Partial Class Builddraftinv
         '
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label22.Location = New System.Drawing.Point(732, 553)
+        Me.Label22.Location = New System.Drawing.Point(797, 605)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(101, 13)
         Me.Label22.TabIndex = 163
@@ -630,7 +661,7 @@ Partial Class Builddraftinv
         '
         'ListView4
         '
-        Me.ListView4.Location = New System.Drawing.Point(668, 608)
+        Me.ListView4.Location = New System.Drawing.Point(665, 660)
         Me.ListView4.Name = "ListView4"
         Me.ListView4.Size = New System.Drawing.Size(166, 25)
         Me.ListView4.TabIndex = 164
@@ -640,7 +671,7 @@ Partial Class Builddraftinv
         '
         Me.Label49.AutoSize = True
         Me.Label49.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label49.Location = New System.Drawing.Point(678, 614)
+        Me.Label49.Location = New System.Drawing.Point(675, 666)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(51, 13)
         Me.Label49.TabIndex = 167
@@ -648,7 +679,7 @@ Partial Class Builddraftinv
         '
         'ListView5
         '
-        Me.ListView5.Location = New System.Drawing.Point(739, 608)
+        Me.ListView5.Location = New System.Drawing.Point(736, 660)
         Me.ListView5.Name = "ListView5"
         Me.ListView5.Size = New System.Drawing.Size(95, 25)
         Me.ListView5.TabIndex = 178
@@ -656,7 +687,7 @@ Partial Class Builddraftinv
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(739, 657)
+        Me.Button1.Location = New System.Drawing.Point(850, 662)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 23)
         Me.Button1.TabIndex = 182
@@ -665,7 +696,7 @@ Partial Class Builddraftinv
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(591, 657)
+        Me.Button6.Location = New System.Drawing.Point(547, 656)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(100, 23)
         Me.Button6.TabIndex = 181
@@ -706,9 +737,9 @@ Partial Class Builddraftinv
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(872, 455)
+        Me.Button9.Location = New System.Drawing.Point(948, 477)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(60, 57)
+        Me.Button9.Size = New System.Drawing.Size(61, 75)
         Me.Button9.TabIndex = 185
         Me.Button9.Text = "PRINT LABLES"
         Me.Button9.UseVisualStyleBackColor = True
@@ -716,7 +747,7 @@ Partial Class Builddraftinv
         'CheckBox11
         '
         Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(855, 477)
+        Me.CheckBox11.Location = New System.Drawing.Point(932, 517)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox11.TabIndex = 194
@@ -725,7 +756,7 @@ Partial Class Builddraftinv
         'CheckBox10
         '
         Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(855, 527)
+        Me.CheckBox10.Location = New System.Drawing.Point(932, 567)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox10.TabIndex = 193
@@ -734,7 +765,7 @@ Partial Class Builddraftinv
         'CheckBox8
         '
         Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(855, 510)
+        Me.CheckBox8.Location = New System.Drawing.Point(932, 550)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox8.TabIndex = 191
@@ -745,7 +776,7 @@ Partial Class Builddraftinv
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.Checked = True
         Me.CheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox6.Location = New System.Drawing.Point(855, 427)
+        Me.CheckBox6.Location = New System.Drawing.Point(932, 467)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox6.TabIndex = 190
@@ -756,7 +787,7 @@ Partial Class Builddraftinv
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.Checked = True
         Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox5.Location = New System.Drawing.Point(855, 444)
+        Me.CheckBox5.Location = New System.Drawing.Point(932, 484)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox5.TabIndex = 189
@@ -767,7 +798,7 @@ Partial Class Builddraftinv
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Checked = True
         Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Location = New System.Drawing.Point(855, 460)
+        Me.CheckBox4.Location = New System.Drawing.Point(932, 500)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox4.TabIndex = 188
@@ -776,18 +807,177 @@ Partial Class Builddraftinv
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(855, 494)
+        Me.CheckBox3.Location = New System.Drawing.Point(932, 534)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox3.TabIndex = 187
         Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'InvworkBindingSource
+        '
+        Me.InvworkBindingSource.DataMember = "invwork"
+        Me.InvworkBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'InvworkTableAdapter
+        '
+        Me.InvworkTableAdapter.ClearBeforeFill = True
+        '
+        'InvtransBindingSource
+        '
+        Me.InvtransBindingSource.DataMember = "invtrans"
+        Me.InvtransBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'InvtransTableAdapter
+        '
+        Me.InvtransTableAdapter.ClearBeforeFill = True
+        '
+        'BinallocBindingSource
+        '
+        Me.BinallocBindingSource.DataMember = "binalloc"
+        Me.BinallocBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'BinallocTableAdapter
+        '
+        Me.BinallocTableAdapter.ClearBeforeFill = True
+        '
+        'InvlineBindingSource
+        '
+        Me.InvlineBindingSource.DataMember = "invline"
+        Me.InvlineBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'InvlineTableAdapter
+        '
+        Me.InvlineTableAdapter.ClearBeforeFill = True
+        '
+        'QictrlBindingSource
+        '
+        Me.QictrlBindingSource.DataMember = "qictrl"
+        Me.QictrlBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'QictrlTableAdapter
+        '
+        Me.QictrlTableAdapter.ClearBeforeFill = True
+        '
+        'TranbinsBindingSource
+        '
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
+        'TrandescBindingSource
+        '
+        Me.TrandescBindingSource.DataMember = "trandesc"
+        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TrandescTableAdapter
+        '
+        Me.TrandescTableAdapter.ClearBeforeFill = True
+        '
+        'QuotedetailBindingSource
+        '
+        Me.QuotedetailBindingSource.DataMember = "quotedetail"
+        Me.QuotedetailBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'QuotedetailTableAdapter
+        '
+        Me.QuotedetailTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotesufDataGridViewTextBoxColumn, Me.QpartnoDataGridViewTextBoxColumn, Me.QuotenoDataGridViewTextBoxColumn, Me.QlinenoDataGridViewTextBoxColumn, Me.QdescDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.QvalueDataGridViewTextBoxColumn, Me.QlinememoDataGridViewTextBoxColumn, Me.NonstockDataGridViewCheckBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn, Me.TimestampcolumnDataGridViewImageColumn})
+        Me.DataGridView1.DataSource = Me.QuotedetailBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(49, 444)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(849, 150)
+        Me.DataGridView1.TabIndex = 195
+        '
+        'QuotesufDataGridViewTextBoxColumn
+        '
+        Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
+        Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "quote_suf"
+        Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
+        '
+        'QpartnoDataGridViewTextBoxColumn
+        '
+        Me.QpartnoDataGridViewTextBoxColumn.DataPropertyName = "qpart_no"
+        Me.QpartnoDataGridViewTextBoxColumn.HeaderText = "qpart_no"
+        Me.QpartnoDataGridViewTextBoxColumn.Name = "QpartnoDataGridViewTextBoxColumn"
+        '
+        'QuotenoDataGridViewTextBoxColumn
+        '
+        Me.QuotenoDataGridViewTextBoxColumn.DataPropertyName = "quote_no"
+        Me.QuotenoDataGridViewTextBoxColumn.HeaderText = "quote_no"
+        Me.QuotenoDataGridViewTextBoxColumn.Name = "QuotenoDataGridViewTextBoxColumn"
+        '
+        'QlinenoDataGridViewTextBoxColumn
+        '
+        Me.QlinenoDataGridViewTextBoxColumn.DataPropertyName = "qline_no"
+        Me.QlinenoDataGridViewTextBoxColumn.HeaderText = "qline_no"
+        Me.QlinenoDataGridViewTextBoxColumn.Name = "QlinenoDataGridViewTextBoxColumn"
+        '
+        'QdescDataGridViewTextBoxColumn
+        '
+        Me.QdescDataGridViewTextBoxColumn.DataPropertyName = "qdesc"
+        Me.QdescDataGridViewTextBoxColumn.HeaderText = "qdesc"
+        Me.QdescDataGridViewTextBoxColumn.Name = "QdescDataGridViewTextBoxColumn"
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "quantity"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        '
+        'QvalueDataGridViewTextBoxColumn
+        '
+        Me.QvalueDataGridViewTextBoxColumn.DataPropertyName = "qvalue"
+        Me.QvalueDataGridViewTextBoxColumn.HeaderText = "qvalue"
+        Me.QvalueDataGridViewTextBoxColumn.Name = "QvalueDataGridViewTextBoxColumn"
+        '
+        'QlinememoDataGridViewTextBoxColumn
+        '
+        Me.QlinememoDataGridViewTextBoxColumn.DataPropertyName = "qline_memo"
+        Me.QlinememoDataGridViewTextBoxColumn.HeaderText = "qline_memo"
+        Me.QlinememoDataGridViewTextBoxColumn.Name = "QlinememoDataGridViewTextBoxColumn"
+        '
+        'NonstockDataGridViewCheckBoxColumn
+        '
+        Me.NonstockDataGridViewCheckBoxColumn.DataPropertyName = "nonstock"
+        Me.NonstockDataGridViewCheckBoxColumn.HeaderText = "nonstock"
+        Me.NonstockDataGridViewCheckBoxColumn.Name = "NonstockDataGridViewCheckBoxColumn"
+        '
+        'UniqueIDDataGridViewTextBoxColumn
+        '
+        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
+        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
+        '
+        'TimestampcolumnDataGridViewImageColumn
+        '
+        Me.TimestampcolumnDataGridViewImageColumn.DataPropertyName = "timestamp_column"
+        Me.TimestampcolumnDataGridViewImageColumn.HeaderText = "timestamp_column"
+        Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
+        Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
         '
         'Builddraftinv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.ClientSize = New System.Drawing.Size(1001, 696)
+        Me.ClientSize = New System.Drawing.Size(1292, 733)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CheckBox11)
         Me.Controls.Add(Me.CheckBox10)
         Me.Controls.Add(Me.CheckBox8)
@@ -824,7 +1014,6 @@ Partial Class Builddraftinv
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.Label34)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
@@ -867,6 +1056,16 @@ Partial Class Builddraftinv
         Me.Name = "Builddraftinv"
         Me.Text = "Builddraftinv"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InvtransBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BinallocBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InvlineBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.QictrlBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -917,7 +1116,6 @@ Partial Class Builddraftinv
     Friend WithEvents Label30 As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents Label35 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label37 As Label
@@ -947,4 +1145,33 @@ Partial Class Builddraftinv
     Friend WithEvents CheckBox5 As CheckBox
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
+    Friend WithEvents InvworkBindingSource As BindingSource
+    Friend WithEvents InvworkTableAdapter As TransvacDataV2DataSet1TableAdapters.invworkTableAdapter
+    Friend WithEvents InvtransBindingSource As BindingSource
+    Friend WithEvents InvtransTableAdapter As TransvacDataV2DataSet1TableAdapters.invtransTableAdapter
+    Friend WithEvents BinallocBindingSource As BindingSource
+    Friend WithEvents BinallocTableAdapter As TransvacDataV2DataSet1TableAdapters.binallocTableAdapter
+    Friend WithEvents InvlineBindingSource As BindingSource
+    Friend WithEvents InvlineTableAdapter As TransvacDataV2DataSet1TableAdapters.invlineTableAdapter
+    Friend WithEvents QictrlBindingSource As BindingSource
+    Friend WithEvents QictrlTableAdapter As TransvacDataV2DataSet1TableAdapters.qictrlTableAdapter
+    Friend WithEvents TranbinsBindingSource As BindingSource
+    Friend WithEvents TranbinsTableAdapter As TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter
+    Friend WithEvents TrandescBindingSource As BindingSource
+    Friend WithEvents TrandescTableAdapter As TransvacDataV2DataSet1TableAdapters.trandescTableAdapter
+    Friend WithEvents QuotedetailBindingSource As BindingSource
+    Friend WithEvents QuotedetailTableAdapter As TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents QuotesufDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QpartnoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuotenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QlinenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QdescDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QlinememoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NonstockDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
 End Class

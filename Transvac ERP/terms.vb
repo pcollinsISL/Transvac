@@ -10,8 +10,8 @@
     End Sub
 
     Private Sub termssve_but_Click(sender As Object, e As EventArgs) Handles termssve_but.Click
-
-End Sub
+        Me.Close()
+    End Sub
 
     Private Sub terms_tb_TextChanged(sender As Object, e As EventArgs) Handles terms_tb.TextChanged
 

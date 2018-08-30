@@ -88,7 +88,7 @@ Partial Class invcustpeg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(366, 246)
+        Me.ClientSize = New System.Drawing.Size(366, 229)
         Me.Controls.Add(Me.qut_btn)
         Me.Controls.Add(Me.sel_btn)
         Me.Controls.Add(Me.PictureBox2)

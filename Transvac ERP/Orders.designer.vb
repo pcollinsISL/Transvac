@@ -23,7 +23,6 @@ Partial Class Orders
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Orders))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -48,25 +47,23 @@ Partial Class Orders
         Me.OrderheadBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrderheadTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.orderheadTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.OrderheadBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.OrderheadBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.OsupplierComboBox = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Button12 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OrderheadBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.OrderheadBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -80,9 +77,9 @@ Partial Class Orders
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(383, 92)
+        Me.Button2.Location = New System.Drawing.Point(383, 99)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(142, 45)
+        Me.Button2.Size = New System.Drawing.Size(142, 35)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "CREATE NEW ORDER"
         Me.Button2.UseVisualStyleBackColor = True
@@ -90,14 +87,14 @@ Partial Class Orders
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(531, 105)
+        Me.ComboBox2.Location = New System.Drawing.Point(555, 106)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(223, 21)
         Me.ComboBox2.TabIndex = 3
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(612, 422)
+        Me.Button5.Location = New System.Drawing.Point(636, 624)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(142, 35)
         Me.Button5.TabIndex = 7
@@ -106,16 +103,16 @@ Partial Class Orders
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(43, 422)
+        Me.Button6.Location = New System.Drawing.Point(43, 624)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(142, 35)
+        Me.Button6.Size = New System.Drawing.Size(158, 35)
         Me.Button6.TabIndex = 8
         Me.Button6.Text = "ABORT"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(310, 355)
+        Me.Button8.Location = New System.Drawing.Point(383, 332)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(142, 33)
         Me.Button8.TabIndex = 10
@@ -124,7 +121,7 @@ Partial Class Orders
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(310, 316)
+        Me.Button9.Location = New System.Drawing.Point(383, 293)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(142, 33)
         Me.Button9.TabIndex = 11
@@ -133,7 +130,7 @@ Partial Class Orders
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(310, 254)
+        Me.Button10.Location = New System.Drawing.Point(383, 254)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(142, 33)
         Me.Button10.TabIndex = 12
@@ -142,9 +139,9 @@ Partial Class Orders
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(152, 261)
+        Me.TextBox1.Location = New System.Drawing.Point(383, 228)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(142, 20)
         Me.TextBox1.TabIndex = 13
         '
         'Label1
@@ -176,7 +173,7 @@ Partial Class Orders
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(294, 106)
+        Me.TextBox3.Location = New System.Drawing.Point(294, 107)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(57, 20)
         Me.TextBox3.TabIndex = 20
@@ -193,7 +190,7 @@ Partial Class Orders
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(42, 264)
+        Me.Label3.Location = New System.Drawing.Point(253, 231)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(105, 13)
         Me.Label3.TabIndex = 22
@@ -202,7 +199,7 @@ Partial Class Orders
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(531, 85)
+        Me.Label5.Location = New System.Drawing.Point(552, 85)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(131, 13)
         Me.Label5.TabIndex = 23
@@ -230,7 +227,7 @@ Partial Class Orders
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(533, 195)
+        Me.Label7.Location = New System.Drawing.Point(552, 169)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(129, 13)
         Me.Label7.TabIndex = 26
@@ -239,7 +236,7 @@ Partial Class Orders
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(531, 211)
+        Me.ComboBox4.Location = New System.Drawing.Point(555, 190)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(223, 21)
         Me.ComboBox4.TabIndex = 27
@@ -306,117 +303,7 @@ Partial Class Orders
         Me.TableAdapterManager.trandescTableAdapter = Nothing
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'OrderheadBindingNavigator
-        '
-        Me.OrderheadBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.OrderheadBindingNavigator.BindingSource = Me.OrderheadBindingSource
-        Me.OrderheadBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.OrderheadBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.OrderheadBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.OrderheadBindingNavigatorSaveItem})
-        Me.OrderheadBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.OrderheadBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.OrderheadBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.OrderheadBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.OrderheadBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.OrderheadBindingNavigator.Name = "OrderheadBindingNavigator"
-        Me.OrderheadBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.OrderheadBindingNavigator.Size = New System.Drawing.Size(797, 25)
-        Me.OrderheadBindingNavigator.TabIndex = 28
-        Me.OrderheadBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'OrderheadBindingNavigatorSaveItem
-        '
-        Me.OrderheadBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OrderheadBindingNavigatorSaveItem.Image = CType(resources.GetObject("OrderheadBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.OrderheadBindingNavigatorSaveItem.Name = "OrderheadBindingNavigatorSaveItem"
-        Me.OrderheadBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.OrderheadBindingNavigatorSaveItem.Text = "Save Data"
+        Me.TableAdapterManager.usersTableAdapter = Nothing
         '
         'OsupplierComboBox
         '
@@ -427,14 +314,135 @@ Partial Class Orders
         Me.OsupplierComboBox.Size = New System.Drawing.Size(158, 21)
         Me.OsupplierComboBox.TabIndex = 29
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(79, 393)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(92, 13)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "CUSTOMER REF"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(198, 393)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(136, 20)
+        Me.TextBox2.TabIndex = 30
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(79, 434)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(110, 13)
+        Me.Label9.TabIndex = 33
+        Me.Label9.Text = "DRAFT/INVOICE NO"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(198, 434)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(136, 20)
+        Me.TextBox4.TabIndex = 32
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(79, 482)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.TabIndex = 35
+        Me.Label10.Text = "PART NO"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(198, 479)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(136, 20)
+        Me.TextBox5.TabIndex = 34
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(383, 393)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(142, 25)
+        Me.Button3.TabIndex = 36
+        Me.Button3.Text = "Customer Report"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(383, 436)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(142, 25)
+        Me.Button4.TabIndex = 37
+        Me.Button4.Text = "Invoice Report"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(198, 505)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(136, 39)
+        Me.Button7.TabIndex = 38
+        Me.Button7.Text = "Part No Outstanding"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(340, 505)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(120, 39)
+        Me.Button11.TabIndex = 39
+        Me.Button11.Text = "Part No Ordered"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(79, 561)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(69, 13)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "INVOICE NO"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(198, 561)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(136, 20)
+        Me.TextBox6.TabIndex = 40
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(340, 558)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(120, 25)
+        Me.Button12.TabIndex = 42
+        Me.Button12.Text = "Invoice Orders"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
         'Orders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.ClientSize = New System.Drawing.Size(797, 490)
+        Me.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.ClientSize = New System.Drawing.Size(859, 683)
+        Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.OsupplierComboBox)
-        Me.Controls.Add(Me.OrderheadBindingNavigator)
         Me.Controls.Add(Me.ComboBox4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -456,13 +464,10 @@ Partial Class Orders
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Orders"
-        Me.Text = "1"
+        Me.Text = "ORDERING"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OrderheadBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.OrderheadBindingNavigator.ResumeLayout(False)
-        Me.OrderheadBindingNavigator.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -491,18 +496,18 @@ Partial Class Orders
     Friend WithEvents OrderheadBindingSource As BindingSource
     Friend WithEvents OrderheadTableAdapter As TransvacDataV2DataSet1TableAdapters.orderheadTableAdapter
     Friend WithEvents TableAdapterManager As TransvacDataV2DataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents OrderheadBindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents OrderheadBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents OsupplierComboBox As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Button12 As Button
 End Class

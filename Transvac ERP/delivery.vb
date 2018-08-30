@@ -10,6 +10,6 @@
     End Sub
 
     Private Sub deliverysve_but_Click(sender As Object, e As EventArgs) Handles deliverysve_but.Click
-
+        Me.Close()
     End Sub
 End Class
