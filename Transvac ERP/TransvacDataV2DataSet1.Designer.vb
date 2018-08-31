@@ -54660,9 +54660,13 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        iicode, sourcecde, assured, locatebin, quantybin, alloc, currcy_cde"& _ 
-                ", unit_value, catalog_dt, iiupdate, rec_type, snwho, sinuse, weight, wqty, Uniqu"& _ 
-                "eID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tranbins"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (iicode LIKE @Param1 + '%')"
+            Me._commandCollection(1).CommandText = "SELECT        tranbins.iicode, tranbins.sourcecde, tranbins.assured, tranbins.loc"& _ 
+                "atebin, tranbins.quantybin, tranbins.alloc, tranbins.currcy_cde, tranbins.unit_v"& _ 
+                "alue, tranbins.catalog_dt, tranbins.iiupdate, tranbins.rec_type, tranbins.snwho,"& _ 
+                " "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         tranbins.sinuse, tranbins.weight, tranbins.wqty, tra"& _ 
+                "nbins.UniqueID, markup.supplier, markup.mupercent, markup.sup_discpc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM      "& _ 
+                "      tranbins INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         markup ON tranbins.sourcecde"& _ 
+                " = markup.supplier"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tranbins.iicode LIKE @Param1 + '%')"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "iicode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
