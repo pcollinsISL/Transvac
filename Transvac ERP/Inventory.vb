@@ -273,4 +273,8 @@
     Private Sub quit_but_Click(sender As Object, e As EventArgs) Handles quit_but.Click
         Me.Close()
     End Sub
+
+    Private Sub retailbox_TextChanged(sender As Object, e As EventArgs) Handles retailbox.TextChanged
+
+    End Sub
 End Class

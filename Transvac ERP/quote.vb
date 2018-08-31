@@ -40,6 +40,7 @@
         quotesfx.Visible = False
         idcode.Visible = False
         accountno.Visible = False
+        DateTimePicker1.Visible = False
     End Sub
     Private Function TranmemoTableAdapter() As Object
         Throw New NotImplementedException()
@@ -83,6 +84,10 @@
     Private Sub Pcodelookup_Click(sender As Object, e As EventArgs) Handles Pcodelookup.Click, partno_tb.Leave
         Me.TrandescTableAdapter.FillByPcode(Me.TransvacDataV2DataSet1.trandesc, partno_tb.Text)
         Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
+        DataGridView2.Item(6, DataGridView2.CurrentRow.Index).Value = Val(DataGridView2.Item(4, DataGridView2.CurrentRow.Index).Value)
+        DataGridView2.Item(9, DataGridView2.CurrentRow.Index).Value = Val(DataGridView2.Item(3, DataGridView2.CurrentRow.Index).Value) * Val(DataGridView2.Item(4, DataGridView2.CurrentRow.Index).Value)
+        Ext_tb.Text = qty_tb.Text * unitprice_tb.Text
+
     End Sub
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
     End Sub
@@ -95,6 +100,7 @@
         unitprice_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
         qute_tb.Text = DataGridView1.Item(5, DataGridView1.CurrentRow.Index).Value
         quotesfx.Text = DataGridView1.Item(6, DataGridView1.CurrentRow.Index).Value
+        REM DataGridView1.Item(7, DataGridView1.CurrentRow.Index).Value = Val(DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value) * Val(DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value)
     End Sub
     Private Sub header_tb_TextChanged(sender As Object, e As EventArgs) Handles header_tb.TextChanged
     End Sub
@@ -128,7 +134,7 @@
         Next
         DataGridView1.DataSource.endedit()
     End Sub
-    Private Sub chkstockbtn_Click(sender As Object, e As EventArgs)
+    Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) Handles chkstockbtn.Click
         TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
         Dim Inventory As New Inventory
         Inventory.TopLevel = False
@@ -169,5 +175,9 @@
         Me.QuoteheadTableAdapter.Update(TransvacDataV2DataSet1)
         Me.QuotedetailTableAdapter.Update(TransvacDataV2DataSet1)
         MsgBox("Save Sucsesful")
+    End Sub
+
+    Private Sub partno_tb_TextChanged(sender As Object, e As EventArgs) Handles partno_tb.TextChanged
+
     End Sub
 End Class
