@@ -81,6 +81,11 @@ Partial Class enquiry
         Me.TransvacDataV2DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddressRecordTypeTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter()
         Me.DateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -314,6 +319,7 @@ Partial Class enquiry
         Me.AccnoTextBox.Location = New System.Drawing.Point(685, 55)
         Me.AccnoTextBox.MaxLength = 6
         Me.AccnoTextBox.Name = "AccnoTextBox"
+        Me.AccnoTextBox.ReadOnly = True
         Me.AccnoTextBox.Size = New System.Drawing.Size(79, 20)
         Me.AccnoTextBox.TabIndex = 22
         '
@@ -606,12 +612,72 @@ Partial Class enquiry
         Me.DateTimePicker.Size = New System.Drawing.Size(258, 20)
         Me.DateTimePicker.TabIndex = 77
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(763, 215)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(25, 31)
+        Me.Label6.TabIndex = 191
+        Me.Label6.Text = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(762, 347)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 31)
+        Me.Label4.TabIndex = 192
+        Me.Label4.Text = "*"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(763, 156)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(25, 31)
+        Me.Label7.TabIndex = 193
+        Me.Label7.Text = "*"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(248, 524)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(25, 31)
+        Me.Label8.TabIndex = 194
+        Me.Label8.Text = "*"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(248, 552)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(25, 31)
+        Me.Label9.TabIndex = 195
+        Me.Label9.Text = "*"
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(813, 640)
+        Me.ClientSize = New System.Drawing.Size(813, 671)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DateTimePicker)
         Me.Controls.Add(Me.AcctComboBox)
         Me.Controls.Add(Me.qotenoTextBox)
@@ -659,7 +725,7 @@ Partial Class enquiry
         Me.Controls.Add(Me.CnameLabel)
         Me.Controls.Add(Me.EdateLabel)
         Me.Name = "enquiry"
-        Me.Text = "+"
+        Me.Text = "Enquiry Form"
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -730,4 +796,9 @@ Partial Class enquiry
     Friend WithEvents AddressRecordTypeBindingSource As BindingSource
     Friend WithEvents AddressRecordTypeTableAdapter As TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter
     Friend WithEvents DateTimePicker As DateTimePicker
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class

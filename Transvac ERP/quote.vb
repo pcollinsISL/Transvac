@@ -134,7 +134,7 @@
         Next
         DataGridView1.DataSource.endedit()
     End Sub
-    Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) 
+    Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) Handles chkstockbtn.Click
         TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
         Dim Inventory As New Inventory
         Inventory.TopLevel = False

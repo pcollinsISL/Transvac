@@ -20,7 +20,7 @@
 
     End Sub
 
-    Private Sub OrderheadBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles OrderheadBindingNavigatorSaveItem.Click
+    Private Sub OrderheadBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.OrderheadBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TransvacDataV2DataSet1)

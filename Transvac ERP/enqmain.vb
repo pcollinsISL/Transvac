@@ -29,7 +29,7 @@
         Me.Hide()
     End Sub
     Private Sub btnrptby_Click(ByVal sender As System.Object,
-                               ByVal e As System.EventArgs) Handles btnrptby.Click
+                               ByVal e As System.EventArgs)
         TransPortal.TabControl1.SelectedTab = TransPortal.TabPage1
         Dim selstatus As New selstatus
         selstatus.TopLevel = False

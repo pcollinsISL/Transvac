@@ -91,8 +91,6 @@ Partial Class form1
         Me.EntrytypeComboBox = New System.Windows.Forms.ComboBox()
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.New_updDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.XcardCheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.PROMO = New System.Windows.Forms.CheckBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.AddnotesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tran2TableAdapter = New Transvac_ERP.ADDRESSBKDataSetTableAdapters.tran2TableAdapter()
@@ -103,6 +101,7 @@ Partial Class form1
         Me.TableAdapterManager1 = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
         Me.AddressRecordTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AddressRecordTypeTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         NEW_UPDLabel = New System.Windows.Forms.Label()
         NWHOLabel = New System.Windows.Forms.Label()
         ENTRYTYPELabel = New System.Windows.Forms.Label()
@@ -147,7 +146,7 @@ Partial Class form1
         'ENTRYTYPELabel
         '
         ENTRYTYPELabel.AutoSize = True
-        ENTRYTYPELabel.Location = New System.Drawing.Point(340, 379)
+        ENTRYTYPELabel.Location = New System.Drawing.Point(337, 340)
         ENTRYTYPELabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ENTRYTYPELabel.Name = "ENTRYTYPELabel"
         ENTRYTYPELabel.Size = New System.Drawing.Size(87, 13)
@@ -251,9 +250,8 @@ Partial Class form1
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(134, 28)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(94, 16)
+        Me.Label16.Size = New System.Drawing.Size(0, 16)
         Me.Label16.TabIndex = 160
-        Me.Label16.Text = "Address Book"
         '
         'Label3
         '
@@ -284,16 +282,16 @@ Partial Class form1
         '
         'printbutton
         '
-        Me.printbutton.Location = New System.Drawing.Point(33, 430)
+        Me.printbutton.Location = New System.Drawing.Point(33, 535)
         Me.printbutton.Name = "printbutton"
-        Me.printbutton.Size = New System.Drawing.Size(75, 23)
+        Me.printbutton.Size = New System.Drawing.Size(118, 23)
         Me.printbutton.TabIndex = 26
-        Me.printbutton.Text = "PRINT"
+        Me.printbutton.Text = "PRINT VIEW"
         Me.printbutton.UseVisualStyleBackColor = True
         '
         'delbut
         '
-        Me.delbut.Location = New System.Drawing.Point(891, 12)
+        Me.delbut.Location = New System.Drawing.Point(32, 510)
         Me.delbut.Name = "delbut"
         Me.delbut.Size = New System.Drawing.Size(119, 23)
         Me.delbut.TabIndex = 32
@@ -313,7 +311,7 @@ Partial Class form1
         '
         Me.but5.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMovePreviousItem_Image
         Me.but5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but5.Location = New System.Drawing.Point(98, 374)
+        Me.but5.Location = New System.Drawing.Point(97, 377)
         Me.but5.Name = "but5"
         Me.but5.Size = New System.Drawing.Size(57, 23)
         Me.but5.TabIndex = 23
@@ -323,7 +321,7 @@ Partial Class form1
         '
         Me.but6.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveNextItem_Image
         Me.but6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but6.Location = New System.Drawing.Point(164, 374)
+        Me.but6.Location = New System.Drawing.Point(163, 377)
         Me.but6.Name = "but6"
         Me.but6.Size = New System.Drawing.Size(57, 23)
         Me.but6.TabIndex = 24
@@ -333,7 +331,7 @@ Partial Class form1
         '
         Me.but7.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveLastItem_Image
         Me.but7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but7.Location = New System.Drawing.Point(230, 374)
+        Me.but7.Location = New System.Drawing.Point(229, 377)
         Me.but7.Name = "but7"
         Me.but7.Size = New System.Drawing.Size(57, 23)
         Me.but7.TabIndex = 25
@@ -343,7 +341,7 @@ Partial Class form1
         '
         Me.but4.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveFirstItem_Image
         Me.but4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but4.Location = New System.Drawing.Point(33, 374)
+        Me.but4.Location = New System.Drawing.Point(32, 377)
         Me.but4.Name = "but4"
         Me.but4.Size = New System.Drawing.Size(57, 23)
         Me.but4.TabIndex = 22
@@ -494,9 +492,9 @@ Partial Class form1
         '
         Me.selectbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectbut.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.selectbut.Location = New System.Drawing.Point(876, 373)
+        Me.selectbut.Location = New System.Drawing.Point(899, 412)
         Me.selectbut.Name = "selectbut"
-        Me.selectbut.Size = New System.Drawing.Size(134, 53)
+        Me.selectbut.Size = New System.Drawing.Size(111, 53)
         Me.selectbut.TabIndex = 31
         Me.selectbut.Text = "SELECT"
         Me.selectbut.UseVisualStyleBackColor = True
@@ -524,7 +522,7 @@ Partial Class form1
         Me.ADDMEMOTextBox.Multiline = True
         Me.ADDMEMOTextBox.Name = "ADDMEMOTextBox"
         Me.ADDMEMOTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 228)
+        Me.ADDMEMOTextBox.Size = New System.Drawing.Size(369, 260)
         Me.ADDMEMOTextBox.TabIndex = 18
         '
         'AccountDataGridViewTextBoxColumn
@@ -555,18 +553,18 @@ Partial Class form1
         '
         'fndact_but
         '
-        Me.fndact_but.Location = New System.Drawing.Point(639, 374)
+        Me.fndact_but.Location = New System.Drawing.Point(642, 413)
         Me.fndact_but.Name = "fndact_but"
-        Me.fndact_but.Size = New System.Drawing.Size(103, 23)
+        Me.fndact_but.Size = New System.Drawing.Size(123, 43)
         Me.fndact_but.TabIndex = 27
         Me.fndact_but.Text = "FIND ACCOUNT"
         Me.fndact_but.UseVisualStyleBackColor = True
         '
         'fndname_but
         '
-        Me.fndname_but.Location = New System.Drawing.Point(639, 403)
+        Me.fndname_but.Location = New System.Drawing.Point(642, 475)
         Me.fndname_but.Name = "fndname_but"
-        Me.fndname_but.Size = New System.Drawing.Size(103, 23)
+        Me.fndname_but.Size = New System.Drawing.Size(123, 46)
         Me.fndname_but.TabIndex = 28
         Me.fndname_but.Text = "FIND NAME"
         Me.fndname_but.UseVisualStyleBackColor = True
@@ -588,7 +586,7 @@ Partial Class form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(556, 373)
+        Me.Label1.Location = New System.Drawing.Point(572, 339)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(25, 31)
         Me.Label1.TabIndex = 186
@@ -718,9 +716,9 @@ Partial Class form1
         Me.EntrytypeComboBox.DataSource = Me.TransvacDataV2DataSet1
         Me.EntrytypeComboBox.DisplayMember = "AddressRecordType.RecordTypeNew"
         Me.EntrytypeComboBox.FormattingEnabled = True
-        Me.EntrytypeComboBox.Location = New System.Drawing.Point(432, 374)
+        Me.EntrytypeComboBox.Location = New System.Drawing.Point(434, 340)
         Me.EntrytypeComboBox.Name = "EntrytypeComboBox"
-        Me.EntrytypeComboBox.Size = New System.Drawing.Size(125, 21)
+        Me.EntrytypeComboBox.Size = New System.Drawing.Size(140, 21)
         Me.EntrytypeComboBox.TabIndex = 15
         Me.EntrytypeComboBox.ValueMember = "AddressRecordType.RecordTypeOld"
         '
@@ -737,26 +735,6 @@ Partial Class form1
         Me.New_updDateTimePicker.Name = "New_updDateTimePicker"
         Me.New_updDateTimePicker.Size = New System.Drawing.Size(198, 20)
         Me.New_updDateTimePicker.TabIndex = 16
-        '
-        'XcardCheckBox1
-        '
-        Me.XcardCheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "xcard", True))
-        Me.XcardCheckBox1.Location = New System.Drawing.Point(762, 404)
-        Me.XcardCheckBox1.Name = "XcardCheckBox1"
-        Me.XcardCheckBox1.Size = New System.Drawing.Size(104, 24)
-        Me.XcardCheckBox1.TabIndex = 30
-        Me.XcardCheckBox1.Text = "XMAS CARD"
-        Me.XcardCheckBox1.UseVisualStyleBackColor = True
-        '
-        'PROMO
-        '
-        Me.PROMO.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.Tran2BindingSource1, "promo", True))
-        Me.PROMO.Location = New System.Drawing.Point(763, 374)
-        Me.PROMO.Name = "PROMO"
-        Me.PROMO.Size = New System.Drawing.Size(104, 24)
-        Me.PROMO.TabIndex = 29
-        Me.PROMO.Text = "PROMO"
-        Me.PROMO.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -854,15 +832,23 @@ Partial Class form1
         '
         Me.AddressRecordTypeTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(32, 442)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(121, 23)
+        Me.Button1.TabIndex = 208
+        Me.Button1.Text = "CLOSE RECORD"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1025, 478)
+        Me.ClientSize = New System.Drawing.Size(1042, 570)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.PROMO)
-        Me.Controls.Add(Me.XcardCheckBox1)
         Me.Controls.Add(Me.New_updDateTimePicker)
         Me.Controls.Add(DAYS)
         Me.Controls.Add(Me.EntrytypeComboBox)
@@ -921,7 +907,7 @@ Partial Class form1
         Me.Controls.Add(ACCOUNTLabel)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "form1"
-        Me.Text = "ADDRESS BOOK"
+        Me.Text = "CONTACTS & ADDRESS DIRECTORY"
         CType(Me.Tran2BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ADDRESSBKDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -995,9 +981,8 @@ Partial Class form1
     Friend WithEvents NwhoTextBox1 As TextBox
     Friend WithEvents EntrytypeComboBox As ComboBox
     Friend WithEvents New_updDateTimePicker As DateTimePicker
-    Friend WithEvents PROMO As CheckBox
-    Friend WithEvents XcardCheckBox1 As CheckBox
     Friend WithEvents Label7 As Label
     Friend WithEvents AddressRecordTypeBindingSource As BindingSource
     Friend WithEvents AddressRecordTypeTableAdapter As TransvacDataV2DataSet1TableAdapters.AddressRecordTypeTableAdapter
+    Friend WithEvents Button1 As Button
 End Class
