@@ -32,7 +32,7 @@ Partial Class enqmain
         '
         'btnfindeq
         '
-        Me.btnfindeq.Location = New System.Drawing.Point(56, 135)
+        Me.btnfindeq.Location = New System.Drawing.Point(56, 148)
         Me.btnfindeq.Name = "btnfindeq"
         Me.btnfindeq.Size = New System.Drawing.Size(156, 33)
         Me.btnfindeq.TabIndex = 1
@@ -41,7 +41,7 @@ Partial Class enqmain
         '
         'btnexit
         '
-        Me.btnexit.Location = New System.Drawing.Point(56, 220)
+        Me.btnexit.Location = New System.Drawing.Point(56, 239)
         Me.btnexit.Name = "btnexit"
         Me.btnexit.Size = New System.Drawing.Size(59, 27)
         Me.btnexit.TabIndex = 4
@@ -59,7 +59,7 @@ Partial Class enqmain
         '
         'btnneweq
         '
-        Me.btnneweq.Location = New System.Drawing.Point(56, 87)
+        Me.btnneweq.Location = New System.Drawing.Point(56, 100)
         Me.btnneweq.Name = "btnneweq"
         Me.btnneweq.Size = New System.Drawing.Size(156, 33)
         Me.btnneweq.TabIndex = 7
@@ -81,7 +81,7 @@ Partial Class enqmain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(247, 283)
+        Me.ClientSize = New System.Drawing.Size(272, 283)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnneweq)
         Me.Controls.Add(Me.Label1)

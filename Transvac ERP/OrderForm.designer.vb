@@ -402,7 +402,7 @@ Partial Class OrderForm
         '
         Me.ORDERNOTextBox.Location = New System.Drawing.Point(1047, 20)
         Me.ORDERNOTextBox.Name = "ORDERNOTextBox"
-        Me.ORDERNOTextBox.Size = New System.Drawing.Size(120, 20)
+        Me.ORDERNOTextBox.Size = New System.Drawing.Size(117, 20)
         Me.ORDERNOTextBox.TabIndex = 45
         '
         'LOLINEMEMOTextBox2
@@ -417,7 +417,7 @@ Partial Class OrderForm
         '
         Me.TextBox1.Location = New System.Drawing.Point(1046, 47)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(122, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(117, 20)
         Me.TextBox1.TabIndex = 58
         '
         'Button2
@@ -578,7 +578,7 @@ Partial Class OrderForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.ClientSize = New System.Drawing.Size(1265, 740)
+        Me.ClientSize = New System.Drawing.Size(1244, 715)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ListBox1)
