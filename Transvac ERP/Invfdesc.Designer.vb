@@ -27,22 +27,23 @@ Partial Class Invfdesc
         Me.acctabt_but = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PsupplierDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.searchbutt = New System.Windows.Forms.Button()
         Me.acctextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.TrandescBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TrandescTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.trandescTableAdapter()
         Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.PcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PsupplierDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescriptnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Selectbtn
@@ -80,13 +81,49 @@ Partial Class Invfdesc
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PcodeDataGridViewTextBoxColumn, Me.PsupplierDataGridViewTextBoxColumn, Me.DescriptnDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PcodeDataGridViewTextBoxColumn, Me.PsupplierDataGridViewTextBoxColumn, Me.DescriptnDataGridViewTextBoxColumn, Me.Column1})
         Me.DataGridView1.DataSource = Me.TrandescBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(87, 114)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(617, 273)
         Me.DataGridView1.TabIndex = 19
+        '
+        'PcodeDataGridViewTextBoxColumn
+        '
+        Me.PcodeDataGridViewTextBoxColumn.DataPropertyName = "pcode"
+        Me.PcodeDataGridViewTextBoxColumn.HeaderText = "PART NUMBER"
+        Me.PcodeDataGridViewTextBoxColumn.MinimumWidth = 15
+        Me.PcodeDataGridViewTextBoxColumn.Name = "PcodeDataGridViewTextBoxColumn"
+        Me.PcodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PcodeDataGridViewTextBoxColumn.Width = 125
+        '
+        'PsupplierDataGridViewTextBoxColumn
+        '
+        Me.PsupplierDataGridViewTextBoxColumn.DataPropertyName = "psupplier"
+        Me.PsupplierDataGridViewTextBoxColumn.HeaderText = "SUPPLIER"
+        Me.PsupplierDataGridViewTextBoxColumn.Name = "PsupplierDataGridViewTextBoxColumn"
+        Me.PsupplierDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PsupplierDataGridViewTextBoxColumn.Width = 145
+        '
+        'DescriptnDataGridViewTextBoxColumn
+        '
+        Me.DescriptnDataGridViewTextBoxColumn.DataPropertyName = "descriptn"
+        Me.DescriptnDataGridViewTextBoxColumn.HeaderText = "DESCRIPTION"
+        Me.DescriptnDataGridViewTextBoxColumn.Name = "DescriptnDataGridViewTextBoxColumn"
+        Me.DescriptnDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescriptnDataGridViewTextBoxColumn.Width = 275
+        '
+        'TrandescBindingSource
+        '
+        Me.TrandescBindingSource.DataMember = "trandesc"
+        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'searchbutt
         '
@@ -122,17 +159,6 @@ Partial Class Invfdesc
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 92
         Me.PictureBox2.TabStop = False
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TrandescBindingSource
-        '
-        Me.TrandescBindingSource.DataMember = "trandesc"
-        Me.TrandescBindingSource.DataSource = Me.TransvacDataV2DataSet1
         '
         'TrandescTableAdapter
         '
@@ -185,31 +211,14 @@ Partial Class Invfdesc
         Me.TableAdapterManager.trandescTableAdapter = Me.TrandescTableAdapter
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usersTableAdapter = Nothing
         '
-        'PcodeDataGridViewTextBoxColumn
+        'Column1
         '
-        Me.PcodeDataGridViewTextBoxColumn.DataPropertyName = "pcode"
-        Me.PcodeDataGridViewTextBoxColumn.HeaderText = "PART NUMBER"
-        Me.PcodeDataGridViewTextBoxColumn.MinimumWidth = 15
-        Me.PcodeDataGridViewTextBoxColumn.Name = "PcodeDataGridViewTextBoxColumn"
-        Me.PcodeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PcodeDataGridViewTextBoxColumn.Width = 125
-        '
-        'PsupplierDataGridViewTextBoxColumn
-        '
-        Me.PsupplierDataGridViewTextBoxColumn.DataPropertyName = "psupplier"
-        Me.PsupplierDataGridViewTextBoxColumn.HeaderText = "SUPPLIER"
-        Me.PsupplierDataGridViewTextBoxColumn.Name = "PsupplierDataGridViewTextBoxColumn"
-        Me.PsupplierDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PsupplierDataGridViewTextBoxColumn.Width = 145
-        '
-        'DescriptnDataGridViewTextBoxColumn
-        '
-        Me.DescriptnDataGridViewTextBoxColumn.DataPropertyName = "descriptn"
-        Me.DescriptnDataGridViewTextBoxColumn.HeaderText = "DESCRIPTION"
-        Me.DescriptnDataGridViewTextBoxColumn.Name = "DescriptnDataGridViewTextBoxColumn"
-        Me.DescriptnDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DescriptnDataGridViewTextBoxColumn.Width = 275
+        Me.Column1.DataPropertyName = "pcode"
+        Me.Column1.HeaderText = "Column1"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Invfdesc
         '
@@ -228,9 +237,9 @@ Partial Class Invfdesc
         Me.Text = "Find Description"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -250,4 +259,5 @@ Partial Class Invfdesc
     Friend WithEvents PcodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PsupplierDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescriptnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
 End Class
