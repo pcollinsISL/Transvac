@@ -64,7 +64,6 @@ Partial Class CustomerDetails
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
@@ -416,15 +415,6 @@ Partial Class CustomerDetails
         Me.Button5.Text = "COMPOSE"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(38, 482)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(112, 23)
-        Me.Button6.TabIndex = 50
-        Me.Button6.Text = "SEE STATEMENT"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Transvac_ERP.My.Resources.Resources.invoicedetail
@@ -520,7 +510,6 @@ Partial Class CustomerDetails
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -610,7 +599,6 @@ Partial Class CustomerDetails
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1

@@ -282,7 +282,7 @@ Partial Class form1
         '
         'printbutton
         '
-        Me.printbutton.Location = New System.Drawing.Point(33, 535)
+        Me.printbutton.Location = New System.Drawing.Point(36, 498)
         Me.printbutton.Name = "printbutton"
         Me.printbutton.Size = New System.Drawing.Size(118, 23)
         Me.printbutton.TabIndex = 26
@@ -291,7 +291,7 @@ Partial Class form1
         '
         'delbut
         '
-        Me.delbut.Location = New System.Drawing.Point(32, 510)
+        Me.delbut.Location = New System.Drawing.Point(890, 25)
         Me.delbut.Name = "delbut"
         Me.delbut.Size = New System.Drawing.Size(119, 23)
         Me.delbut.TabIndex = 32
@@ -311,7 +311,7 @@ Partial Class form1
         '
         Me.but5.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMovePreviousItem_Image
         Me.but5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but5.Location = New System.Drawing.Point(97, 377)
+        Me.but5.Location = New System.Drawing.Point(97, 395)
         Me.but5.Name = "but5"
         Me.but5.Size = New System.Drawing.Size(57, 23)
         Me.but5.TabIndex = 23
@@ -321,7 +321,7 @@ Partial Class form1
         '
         Me.but6.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveNextItem_Image
         Me.but6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but6.Location = New System.Drawing.Point(163, 377)
+        Me.but6.Location = New System.Drawing.Point(163, 395)
         Me.but6.Name = "but6"
         Me.but6.Size = New System.Drawing.Size(57, 23)
         Me.but6.TabIndex = 24
@@ -331,7 +331,7 @@ Partial Class form1
         '
         Me.but7.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveLastItem_Image
         Me.but7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but7.Location = New System.Drawing.Point(229, 377)
+        Me.but7.Location = New System.Drawing.Point(229, 395)
         Me.but7.Name = "but7"
         Me.but7.Size = New System.Drawing.Size(57, 23)
         Me.but7.TabIndex = 25
@@ -341,7 +341,7 @@ Partial Class form1
         '
         Me.but4.BackgroundImage = Global.Transvac_ERP.My.Resources.Resources.bindingNavigatorMoveFirstItem_Image
         Me.but4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.but4.Location = New System.Drawing.Point(32, 377)
+        Me.but4.Location = New System.Drawing.Point(32, 395)
         Me.but4.Name = "but4"
         Me.but4.Size = New System.Drawing.Size(57, 23)
         Me.but4.TabIndex = 22
@@ -509,7 +509,7 @@ Partial Class form1
         Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
         Me.PictureBox1.Location = New System.Drawing.Point(4, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(127, 64)
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 76)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 181
         Me.PictureBox1.TabStop = False
@@ -834,9 +834,9 @@ Partial Class form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 442)
+        Me.Button1.Location = New System.Drawing.Point(123, 359)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(121, 23)
+        Me.Button1.Size = New System.Drawing.Size(163, 23)
         Me.Button1.TabIndex = 208
         Me.Button1.Text = "CLOSE RECORD"
         Me.Button1.UseVisualStyleBackColor = True
