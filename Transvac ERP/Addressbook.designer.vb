@@ -566,7 +566,7 @@ Partial Class form1
         Me.fndname_but.Name = "fndname_but"
         Me.fndname_but.Size = New System.Drawing.Size(123, 46)
         Me.fndname_but.TabIndex = 28
-        Me.fndname_but.Text = "FIND NAME"
+        Me.fndname_but.Text = "FIND CONTACT"
         Me.fndname_but.UseVisualStyleBackColor = True
         '
         'PrintDialog2
