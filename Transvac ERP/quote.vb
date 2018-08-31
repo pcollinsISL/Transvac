@@ -134,14 +134,14 @@
         Next
         DataGridView1.DataSource.endedit()
     End Sub
-    Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) Handles chkstockbtn.Click
-        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
-        Dim Inventory As New Inventory
-        Inventory.TopLevel = False
-        Inventory.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        TransPortal.TabControl1.TabPages(5).Controls.Add(Inventory)
-        Inventory.Show()
-    End Sub
+    REM Private Sub chkstockbtn_Click(sender As Object, e As EventArgs) Handles chkstockbtn.Click
+    REM   TransPortal.TabControl1.SelectedTab = TransPortal.TabPage6
+    REM Dim Inventory As New Inventory
+    REM  Inventory.TopLevel = False
+    REM Inventory.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+    REM TransPortal.TabControl1.TabPages(5).Controls.Add(Inventory)
+    REM Inventory.Show()
+    REM End Sub
     Private Sub remline_but_Click(sender As Object, e As EventArgs) Handles remline_but.Click
         For Each row As DataGridViewRow In DataGridView1.SelectedRows
             DataGridView1.Rows.Remove(row)
