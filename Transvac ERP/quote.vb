@@ -52,7 +52,7 @@
         x.Show()
     End Sub
     Private Sub heading_but_Click(sender As Object, e As EventArgs) Handles heading_but.Click
-        Dim x As Heading = New Heading
+        Dim x As qheading = New qheading
         x.Show()
     End Sub
     Private Sub delivery_but_Click(sender As Object, e As EventArgs) Handles delivery_but.Click

@@ -1,6 +1,6 @@
 ﻿Public Class OrderForm
 
-    Private Sub OrderheadBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+    Private Sub OrderheadBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
 
 
@@ -28,5 +28,25 @@
 
     Private Sub BindingSource1_CurrentChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub ordhead_but_Click(sender As Object, e As EventArgs) Handles ordhead_but.Click
+        Dim x As oheading = New oheading
+        x.Show()
+    End Sub
+
+    Private Sub ordinstr_but_Click(sender As Object, e As EventArgs) Handles ordinstr_but.Click
+        Dim x As oinstructions = New oinstructions
+        x.Show()
+    End Sub
+
+    Private Sub orddel_but_Click(sender As Object, e As EventArgs) Handles orddel_but.Click
+        Dim x As odelivery = New odelivery
+        x.Show()
+    End Sub
+
+    Private Sub orddesp_but_Click(sender As Object, e As EventArgs) Handles orddesp_but.Click
+        Dim x As odespatch = New odespatch
+        x.Show()
     End Sub
 End Class

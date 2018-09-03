@@ -475,7 +475,7 @@ Partial Class rorderform
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(1223, 758)
+        Me.ClientSize = New System.Drawing.Size(1223, 770)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)

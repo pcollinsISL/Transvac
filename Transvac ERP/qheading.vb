@@ -1,4 +1,4 @@
-﻿Public Class Heading
+﻿Public Class qheading
     Private Sub headingabt_but_Click(sender As Object, e As EventArgs) Handles headingabt_but.Click
         Dim response As Integer
         response = MsgBox(Prompt:="All changes to wording will be lost. Are you sure you want to Abort?", Buttons:=vbYesNo)

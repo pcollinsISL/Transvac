@@ -69,24 +69,16 @@ Partial Class OrderForm
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.ordhead_but = New System.Windows.Forms.Button()
+        Me.orddesp_but = New System.Windows.Forms.Button()
+        Me.ordinstr_but = New System.Windows.Forms.Button()
+        Me.orddel_but = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.sup_discpcDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnitCost = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Retail = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.mupercentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.IicodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourcecdeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AssuredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -103,6 +95,13 @@ Partial Class OrderForm
         Me.WeightDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WqtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sup_discpcDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnitCost = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Retail = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.mupercentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TranbinsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.TranbinsTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tranbinsTableAdapter()
         Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.QuotedetailTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter()
         Me.OrderlineBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -110,19 +109,20 @@ Partial Class OrderForm
         Me.OrderheadBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrderheadTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.orderheadTableAdapter()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.UniqueIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExtendedPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qpart_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quote_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quote_sufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UniqueIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderlineBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OSUPPLIERLabel
@@ -198,7 +198,7 @@ Partial Class OrderForm
         'OHEADERLabel
         '
         Me.OHEADERLabel.AutoSize = True
-        Me.OHEADERLabel.Location = New System.Drawing.Point(31, 247)
+        Me.OHEADERLabel.Location = New System.Drawing.Point(31, 258)
         Me.OHEADERLabel.Name = "OHEADERLabel"
         Me.OHEADERLabel.Size = New System.Drawing.Size(52, 13)
         Me.OHEADERLabel.TabIndex = 24
@@ -381,7 +381,7 @@ Partial Class OrderForm
         '
         'cOHeader
         '
-        Me.cOHeader.Location = New System.Drawing.Point(129, 243)
+        Me.cOHeader.Location = New System.Drawing.Point(128, 255)
         Me.cOHeader.Name = "cOHeader"
         Me.cOHeader.Size = New System.Drawing.Size(429, 20)
         Me.cOHeader.TabIndex = 25
@@ -504,41 +504,41 @@ Partial Class OrderForm
         Me.Button6.Text = "SAVE"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'Button7
+        'ordhead_but
         '
-        Me.Button7.Location = New System.Drawing.Point(1037, 582)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(141, 23)
-        Me.Button7.TabIndex = 64
-        Me.Button7.Text = "HEADING"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.ordhead_but.Location = New System.Drawing.Point(1037, 582)
+        Me.ordhead_but.Name = "ordhead_but"
+        Me.ordhead_but.Size = New System.Drawing.Size(141, 23)
+        Me.ordhead_but.TabIndex = 64
+        Me.ordhead_but.Text = "HEADING"
+        Me.ordhead_but.UseVisualStyleBackColor = True
         '
-        'Button8
+        'orddesp_but
         '
-        Me.Button8.Location = New System.Drawing.Point(1037, 641)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(141, 23)
-        Me.Button8.TabIndex = 65
-        Me.Button8.Text = "DESPATCH"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.orddesp_but.Location = New System.Drawing.Point(1037, 641)
+        Me.orddesp_but.Name = "orddesp_but"
+        Me.orddesp_but.Size = New System.Drawing.Size(141, 23)
+        Me.orddesp_but.TabIndex = 65
+        Me.orddesp_but.Text = "DESPATCH"
+        Me.orddesp_but.UseVisualStyleBackColor = True
         '
-        'Button9
+        'ordinstr_but
         '
-        Me.Button9.Location = New System.Drawing.Point(1037, 612)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(141, 23)
-        Me.Button9.TabIndex = 66
-        Me.Button9.Text = "INSTRUCT"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.ordinstr_but.Location = New System.Drawing.Point(1037, 612)
+        Me.ordinstr_but.Name = "ordinstr_but"
+        Me.ordinstr_but.Size = New System.Drawing.Size(141, 23)
+        Me.ordinstr_but.TabIndex = 66
+        Me.ordinstr_but.Text = "INSTRUCT"
+        Me.ordinstr_but.UseVisualStyleBackColor = True
         '
-        'Button10
+        'orddel_but
         '
-        Me.Button10.Location = New System.Drawing.Point(1037, 670)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(141, 23)
-        Me.Button10.TabIndex = 67
-        Me.Button10.Text = "DELIVERY"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.orddel_but.Location = New System.Drawing.Point(1037, 670)
+        Me.orddel_but.Name = "orddel_but"
+        Me.orddel_but.Size = New System.Drawing.Size(141, 23)
+        Me.orddel_but.TabIndex = 67
+        Me.orddel_but.Text = "DELIVERY"
+        Me.orddel_but.UseVisualStyleBackColor = True
         '
         'Button11
         '
@@ -580,73 +580,19 @@ Partial Class OrderForm
         Me.ListBox1.Size = New System.Drawing.Size(211, 95)
         Me.ListBox1.TabIndex = 93
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(109, 55)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 95
-        Me.PictureBox1.TabStop = False
-        '
         'DataGridView3
         '
         Me.DataGridView3.AllowUserToAddRows = False
         Me.DataGridView3.AllowUserToDeleteRows = False
         Me.DataGridView3.AutoGenerateColumns = False
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.sup_discpcDataGridViewTextBoxColumn, Me.UnitCost, Me.Retail, Me.mupercentDataGridViewTextBoxColumn, Me.IicodeDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.LocatebinDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn})
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IicodeDataGridViewTextBoxColumn, Me.SourcecdeDataGridViewTextBoxColumn, Me.AssuredDataGridViewTextBoxColumn, Me.LocatebinDataGridViewTextBoxColumn, Me.QuantybinDataGridViewTextBoxColumn, Me.AllocDataGridViewTextBoxColumn, Me.CurrcycdeDataGridViewTextBoxColumn, Me.UnitvalueDataGridViewTextBoxColumn, Me.CatalogdtDataGridViewTextBoxColumn, Me.IiupdateDataGridViewTextBoxColumn, Me.RectypeDataGridViewTextBoxColumn, Me.SnwhoDataGridViewTextBoxColumn, Me.SinuseDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WqtyDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn, Me.sup_discpcDataGridViewTextBoxColumn, Me.UnitCost, Me.Retail, Me.mupercentDataGridViewTextBoxColumn})
         Me.DataGridView3.DataSource = Me.TranbinsBindingSource
         Me.DataGridView3.Location = New System.Drawing.Point(34, 426)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(1144, 150)
         Me.DataGridView3.TabIndex = 100
-        '
-        'sup_discpcDataGridViewTextBoxColumn
-        '
-        Me.sup_discpcDataGridViewTextBoxColumn.DataPropertyName = "sup_discpc"
-        Me.sup_discpcDataGridViewTextBoxColumn.HeaderText = "Sup Disc"
-        Me.sup_discpcDataGridViewTextBoxColumn.Name = "sup_discpcDataGridViewTextBoxColumn"
-        Me.sup_discpcDataGridViewTextBoxColumn.ReadOnly = True
-        Me.sup_discpcDataGridViewTextBoxColumn.Width = 50
-        '
-        'UnitCost
-        '
-        Me.UnitCost.HeaderText = "Unit Cost"
-        Me.UnitCost.Name = "UnitCost"
-        Me.UnitCost.ReadOnly = True
-        Me.UnitCost.Width = 80
-        '
-        'Retail
-        '
-        Me.Retail.HeaderText = "Retail "
-        Me.Retail.Name = "Retail"
-        Me.Retail.ReadOnly = True
-        Me.Retail.Width = 80
-        '
-        'mupercentDataGridViewTextBoxColumn
-        '
-        Me.mupercentDataGridViewTextBoxColumn.DataPropertyName = "mupercent"
-        Me.mupercentDataGridViewTextBoxColumn.HeaderText = "Markup"
-        Me.mupercentDataGridViewTextBoxColumn.Name = "mupercentDataGridViewTextBoxColumn"
-        Me.mupercentDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TranbinsBindingSource
-        '
-        Me.TranbinsBindingSource.DataMember = "tranbins"
-        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TranbinsTableAdapter
-        '
-        Me.TranbinsTableAdapter.ClearBeforeFill = True
         '
         'IicodeDataGridViewTextBoxColumn
         '
@@ -760,6 +706,50 @@ Partial Class OrderForm
         Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
         Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'sup_discpcDataGridViewTextBoxColumn
+        '
+        Me.sup_discpcDataGridViewTextBoxColumn.DataPropertyName = "sup_discpc"
+        Me.sup_discpcDataGridViewTextBoxColumn.HeaderText = "Sup Disc"
+        Me.sup_discpcDataGridViewTextBoxColumn.Name = "sup_discpcDataGridViewTextBoxColumn"
+        Me.sup_discpcDataGridViewTextBoxColumn.ReadOnly = True
+        Me.sup_discpcDataGridViewTextBoxColumn.Width = 50
+        '
+        'UnitCost
+        '
+        Me.UnitCost.HeaderText = "Unit Cost"
+        Me.UnitCost.Name = "UnitCost"
+        Me.UnitCost.ReadOnly = True
+        Me.UnitCost.Width = 80
+        '
+        'Retail
+        '
+        Me.Retail.HeaderText = "Retail "
+        Me.Retail.Name = "Retail"
+        Me.Retail.ReadOnly = True
+        Me.Retail.Width = 80
+        '
+        'mupercentDataGridViewTextBoxColumn
+        '
+        Me.mupercentDataGridViewTextBoxColumn.DataPropertyName = "mupercent"
+        Me.mupercentDataGridViewTextBoxColumn.HeaderText = "Markup"
+        Me.mupercentDataGridViewTextBoxColumn.Name = "mupercentDataGridViewTextBoxColumn"
+        Me.mupercentDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TranbinsBindingSource
+        '
+        Me.TranbinsBindingSource.DataMember = "tranbins"
+        Me.TranbinsBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TranbinsTableAdapter
+        '
+        Me.TranbinsTableAdapter.ClearBeforeFill = True
+        '
         'QuotedetailBindingSource
         '
         Me.QuotedetailBindingSource.DataMember = "quotedetail"
@@ -794,13 +784,20 @@ Partial Class OrderForm
         Me.DataGridView2.AutoGenerateColumns = False
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ExtendedPrice, Me.qpart_no, Me.quote_no, Me.quote_sufDataGridViewTextBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn1})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UniqueIDDataGridViewTextBoxColumn1, Me.ExtendedPrice, Me.qpart_no, Me.quote_no, Me.quote_sufDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.OrderlineBindingSource
         Me.DataGridView2.Location = New System.Drawing.Point(33, 582)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(981, 123)
         Me.DataGridView2.TabIndex = 101
+        '
+        'UniqueIDDataGridViewTextBoxColumn1
+        '
+        Me.UniqueIDDataGridViewTextBoxColumn1.DataPropertyName = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn1.HeaderText = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn1.Name = "UniqueIDDataGridViewTextBoxColumn1"
+        Me.UniqueIDDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'ExtendedPrice
         '
@@ -825,12 +822,15 @@ Partial Class OrderForm
         Me.quote_sufDataGridViewTextBoxColumn.HeaderText = "Quote SUF"
         Me.quote_sufDataGridViewTextBoxColumn.Name = "quote_sufDataGridViewTextBoxColumn"
         '
-        'UniqueIDDataGridViewTextBoxColumn1
+        'PictureBox1
         '
-        Me.UniqueIDDataGridViewTextBoxColumn1.DataPropertyName = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn1.HeaderText = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn1.Name = "UniqueIDDataGridViewTextBoxColumn1"
-        Me.UniqueIDDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(109, 55)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 95
+        Me.PictureBox1.TabStop = False
         '
         'OrderForm
         '
@@ -847,10 +847,10 @@ Partial Class OrderForm
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.orddel_but)
+        Me.Controls.Add(Me.ordinstr_but)
+        Me.Controls.Add(Me.orddesp_but)
+        Me.Controls.Add(Me.ordhead_but)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -897,14 +897,14 @@ Partial Class OrderForm
         Me.Controls.Add(Me.cosupplier)
         Me.Name = "OrderForm"
         Me.Text = "Orders Form"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TranbinsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderlineBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -937,10 +937,10 @@ Partial Class OrderForm
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
+    Friend WithEvents ordhead_but As Button
+    Friend WithEvents orddesp_but As Button
+    Friend WithEvents ordinstr_but As Button
+    Friend WithEvents orddel_but As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents TextBox2 As TextBox
