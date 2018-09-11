@@ -38,15 +38,6 @@ Partial Class findquote
         Me.btnExit = New System.Windows.Forms.Button()
         Me.SelectBtn = New System.Windows.Forms.Button()
         Me.EnquiryDataGridView = New System.Windows.Forms.DataGridView()
-        Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,6 +53,15 @@ Partial Class findquote
         Me.contact = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.edate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.etype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.EnquiryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,104 +205,6 @@ Partial Class findquote
         Me.EnquiryDataGridView.Size = New System.Drawing.Size(638, 305)
         Me.EnquiryDataGridView.TabIndex = 14
         '
-        'EnquiryBindingSource
-        '
-        Me.EnquiryBindingSource.DataMember = "enquiry"
-        Me.EnquiryBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'TransvacDataV2DataSet1
-        '
-        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
-        Me.TransvacDataV2DataSet1.EnforceConstraints = False
-        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(125, 25)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(84, 13)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "FIND ENQUIRY"
-        '
-        'TransvacDataV2DataSetBindingSource
-        '
-        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet1
-        Me.TransvacDataV2DataSetBindingSource.Position = 0
-        '
-        'EnquiryTableAdapter
-        '
-        Me.EnquiryTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.accctlTableAdapter = Nothing
-        Me.TableAdapterManager.accountTableAdapter = Nothing
-        Me.TableAdapterManager.addnotesTableAdapter = Nothing
-        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
-        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
-        Me.TableAdapterManager.assetsTableAdapter = Nothing
-        Me.TableAdapterManager.atransTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.binallocTableAdapter = Nothing
-        Me.TableAdapterManager.catTableAdapter = Nothing
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.countryTableAdapter = Nothing
-        Me.TableAdapterManager.custdiscTableAdapter = Nothing
-        Me.TableAdapterManager.dummy_TableAdapter = Nothing
-        Me.TableAdapterManager.enquiryTableAdapter = Nothing
-        Me.TableAdapterManager.eventTableAdapter = Nothing
-        Me.TableAdapterManager.foxuserTableAdapter = Nothing
-        Me.TableAdapterManager.invlineTableAdapter = Nothing
-        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
-        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
-        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
-        Me.TableAdapterManager.invtransTableAdapter = Nothing
-        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
-        Me.TableAdapterManager.invworkTableAdapter = Nothing
-        Me.TableAdapterManager.issueTableAdapter = Nothing
-        Me.TableAdapterManager.locationTableAdapter = Nothing
-        Me.TableAdapterManager.mainTableAdapter = Nothing
-        Me.TableAdapterManager.markupTableAdapter = Nothing
-        Me.TableAdapterManager.namesTableAdapter = Nothing
-        Me.TableAdapterManager.orddetailTableAdapter = Nothing
-        Me.TableAdapterManager.orderheadTableAdapter = Nothing
-        Me.TableAdapterManager.orderlineTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
-        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
-        Me.TableAdapterManager.qictrlTableAdapter = Nothing
-        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
-        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
-        Me.TableAdapterManager.statusTableAdapter = Nothing
-        Me.TableAdapterManager.teventsTableAdapter = Nothing
-        Me.TableAdapterManager.tran2TableAdapter = Nothing
-        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
-        Me.TableAdapterManager.tranctlTableAdapter = Nothing
-        Me.TableAdapterManager.trandescTableAdapter = Nothing
-        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.usersTableAdapter = Nothing
-        '
-        'Tran2BindingSource
-        '
-        Me.Tran2BindingSource.DataMember = "tran2"
-        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1
-        '
-        'Tran2TableAdapter
-        '
-        Me.Tran2TableAdapter.ClearBeforeFill = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
-        '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -320,7 +222,7 @@ Partial Class findquote
         Me.DataGridViewTextBoxColumn5.HeaderText = "CUST REF"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Width = 85
+        Me.DataGridViewTextBoxColumn5.Width = 78
         '
         'DataGridViewTextBoxColumn1
         '
@@ -330,7 +232,7 @@ Partial Class findquote
         Me.DataGridViewTextBoxColumn1.HeaderText = "QUOTE NO"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 89
+        Me.DataGridViewTextBoxColumn1.Width = 82
         '
         'DataGridViewTextBoxColumn15
         '
@@ -432,13 +334,111 @@ Partial Class findquote
         Me.etype.ReadOnly = True
         Me.etype.Visible = False
         '
+        'EnquiryBindingSource
+        '
+        Me.EnquiryBindingSource.DataMember = "enquiry"
+        Me.EnquiryBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'TransvacDataV2DataSet1
+        '
+        Me.TransvacDataV2DataSet1.DataSetName = "TransvacDataV2DataSet1"
+        Me.TransvacDataV2DataSet1.EnforceConstraints = False
+        Me.TransvacDataV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(125, 25)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(84, 13)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "FIND ENQUIRY"
+        '
+        'TransvacDataV2DataSetBindingSource
+        '
+        Me.TransvacDataV2DataSetBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        Me.TransvacDataV2DataSetBindingSource.Position = 0
+        '
+        'EnquiryTableAdapter
+        '
+        Me.EnquiryTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.accctlTableAdapter = Nothing
+        Me.TableAdapterManager.accountTableAdapter = Nothing
+        Me.TableAdapterManager.addnotesTableAdapter = Nothing
+        Me.TableAdapterManager.AddressRecordTypeTableAdapter = Nothing
+        Me.TableAdapterManager.ASSETSNEWTableAdapter = Nothing
+        Me.TableAdapterManager.assetsTableAdapter = Nothing
+        Me.TableAdapterManager.atransTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.binallocTableAdapter = Nothing
+        Me.TableAdapterManager.catTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.countryTableAdapter = Nothing
+        Me.TableAdapterManager.custdiscTableAdapter = Nothing
+        Me.TableAdapterManager.dummy_TableAdapter = Nothing
+        Me.TableAdapterManager.enquiryTableAdapter = Nothing
+        Me.TableAdapterManager.eventTableAdapter = Nothing
+        Me.TableAdapterManager.foxuserTableAdapter = Nothing
+        Me.TableAdapterManager.invlineTableAdapter = Nothing
+        Me.TableAdapterManager.invoiceheadTableAdapter = Nothing
+        Me.TableAdapterManager.invtransold6TableAdapter = Nothing
+        Me.TableAdapterManager.invtransoldTableAdapter = Nothing
+        Me.TableAdapterManager.invtransTableAdapter = Nothing
+        Me.TableAdapterManager.invworkoldTableAdapter = Nothing
+        Me.TableAdapterManager.invworkTableAdapter = Nothing
+        Me.TableAdapterManager.issueTableAdapter = Nothing
+        Me.TableAdapterManager.locationTableAdapter = Nothing
+        Me.TableAdapterManager.mainTableAdapter = Nothing
+        Me.TableAdapterManager.markupTableAdapter = Nothing
+        Me.TableAdapterManager.namesTableAdapter = Nothing
+        Me.TableAdapterManager.orddetailTableAdapter = Nothing
+        Me.TableAdapterManager.orderheadTableAdapter = Nothing
+        Me.TableAdapterManager.orderlineTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlnewTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlold6TableAdapter = Nothing
+        Me.TableAdapterManager.qictrloldTableAdapter = Nothing
+        Me.TableAdapterManager.qictrlTableAdapter = Nothing
+        Me.TableAdapterManager.quotedetailTableAdapter = Nothing
+        Me.TableAdapterManager.quoteheadTableAdapter = Nothing
+        Me.TableAdapterManager.statusTableAdapter = Nothing
+        Me.TableAdapterManager.teventsTableAdapter = Nothing
+        Me.TableAdapterManager.tran2TableAdapter = Nothing
+        Me.TableAdapterManager.tranbinsTableAdapter = Nothing
+        Me.TableAdapterManager.tranctlTableAdapter = Nothing
+        Me.TableAdapterManager.trandescTableAdapter = Nothing
+        Me.TableAdapterManager.tranmemoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usersTableAdapter = Nothing
+        '
+        'Tran2BindingSource
+        '
+        Me.Tran2BindingSource.DataMember = "tran2"
+        Me.Tran2BindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'Tran2TableAdapter
+        '
+        Me.Tran2TableAdapter.ClearBeforeFill = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
         'findquote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1063, 606)
+        Me.ClientSize = New System.Drawing.Size(720, 606)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.EnquiryDataGridView)

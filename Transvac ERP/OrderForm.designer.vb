@@ -60,21 +60,21 @@ Partial Class OrderForm
         Me.LEPRICETextBox = New System.Windows.Forms.TextBox()
         Me.LPARTNOTextBox = New System.Windows.Forms.TextBox()
         Me.LDESCTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.nonstk_but = New System.Windows.Forms.Button()
         Me.ORDERNOTextBox = New System.Windows.Forms.TextBox()
         Me.LOLINEMEMOTextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ordabort_but = New System.Windows.Forms.Button()
+        Me.deline_but = New System.Windows.Forms.Button()
+        Me.orddet_but = New System.Windows.Forms.Button()
+        Me.vwsave_but = New System.Windows.Forms.Button()
+        Me.ordsave_but = New System.Windows.Forms.Button()
         Me.ordhead_but = New System.Windows.Forms.Button()
         Me.orddesp_but = New System.Windows.Forms.Button()
         Me.ordinstr_but = New System.Windows.Forms.Button()
         Me.orddel_but = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.ord_but = New System.Windows.Forms.Button()
+        Me.edt_but = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -374,7 +374,7 @@ Partial Class OrderForm
         '
         'coadd5
         '
-        Me.coadd5.Location = New System.Drawing.Point(797, 221)
+        Me.coadd5.Location = New System.Drawing.Point(796, 218)
         Me.coadd5.Name = "coadd5"
         Me.coadd5.Size = New System.Drawing.Size(367, 20)
         Me.coadd5.TabIndex = 24
@@ -428,14 +428,14 @@ Partial Class OrderForm
         Me.LDESCTextBox.Size = New System.Drawing.Size(408, 20)
         Me.LDESCTextBox.TabIndex = 42
         '
-        'Button1
+        'nonstk_but
         '
-        Me.Button1.Location = New System.Drawing.Point(849, 328)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(68, 59)
-        Me.Button1.TabIndex = 44
-        Me.Button1.Text = "NON STOCK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.nonstk_but.Location = New System.Drawing.Point(849, 328)
+        Me.nonstk_but.Name = "nonstk_but"
+        Me.nonstk_but.Size = New System.Drawing.Size(68, 59)
+        Me.nonstk_but.TabIndex = 44
+        Me.nonstk_but.Text = "NON STOCK"
+        Me.nonstk_but.UseVisualStyleBackColor = True
         '
         'ORDERNOTextBox
         '
@@ -459,50 +459,50 @@ Partial Class OrderForm
         Me.TextBox1.Size = New System.Drawing.Size(117, 20)
         Me.TextBox1.TabIndex = 58
         '
-        'Button2
+        'ordabort_but
         '
-        Me.Button2.Location = New System.Drawing.Point(33, 715)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 59
-        Me.Button2.Text = "ABORT"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ordabort_but.Location = New System.Drawing.Point(33, 715)
+        Me.ordabort_but.Name = "ordabort_but"
+        Me.ordabort_but.Size = New System.Drawing.Size(75, 23)
+        Me.ordabort_but.TabIndex = 59
+        Me.ordabort_but.Text = "ABORT"
+        Me.ordabort_but.UseVisualStyleBackColor = True
         '
-        'Button3
+        'deline_but
         '
-        Me.Button3.Location = New System.Drawing.Point(152, 715)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(107, 23)
-        Me.Button3.TabIndex = 60
-        Me.Button3.Text = "DELETE LINE"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.deline_but.Location = New System.Drawing.Point(152, 715)
+        Me.deline_but.Name = "deline_but"
+        Me.deline_but.Size = New System.Drawing.Size(107, 23)
+        Me.deline_but.TabIndex = 60
+        Me.deline_but.Text = "DELETE LINE"
+        Me.deline_but.UseVisualStyleBackColor = True
         '
-        'Button4
+        'orddet_but
         '
-        Me.Button4.Location = New System.Drawing.Point(435, 715)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(107, 23)
-        Me.Button4.TabIndex = 61
-        Me.Button4.Text = "ORDER DETAIL"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.orddet_but.Location = New System.Drawing.Point(435, 715)
+        Me.orddet_but.Name = "orddet_but"
+        Me.orddet_but.Size = New System.Drawing.Size(107, 23)
+        Me.orddet_but.TabIndex = 61
+        Me.orddet_but.Text = "ORDER DETAIL"
+        Me.orddet_but.UseVisualStyleBackColor = True
         '
-        'Button5
+        'vwsave_but
         '
-        Me.Button5.Location = New System.Drawing.Point(565, 715)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(107, 23)
-        Me.Button5.TabIndex = 62
-        Me.Button5.Text = "VIEW ORDER"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.vwsave_but.Location = New System.Drawing.Point(565, 715)
+        Me.vwsave_but.Name = "vwsave_but"
+        Me.vwsave_but.Size = New System.Drawing.Size(107, 23)
+        Me.vwsave_but.TabIndex = 62
+        Me.vwsave_but.Text = "VIEW ORDER"
+        Me.vwsave_but.UseVisualStyleBackColor = True
         '
-        'Button6
+        'ordsave_but
         '
-        Me.Button6.Location = New System.Drawing.Point(831, 715)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(101, 23)
-        Me.Button6.TabIndex = 63
-        Me.Button6.Text = "SAVE"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.ordsave_but.Location = New System.Drawing.Point(833, 715)
+        Me.ordsave_but.Name = "ordsave_but"
+        Me.ordsave_but.Size = New System.Drawing.Size(101, 23)
+        Me.ordsave_but.TabIndex = 63
+        Me.ordsave_but.Text = "SAVE"
+        Me.ordsave_but.UseVisualStyleBackColor = True
         '
         'ordhead_but
         '
@@ -540,28 +540,28 @@ Partial Class OrderForm
         Me.orddel_but.Text = "DELIVERY"
         Me.orddel_but.UseVisualStyleBackColor = True
         '
-        'Button11
+        'ord_but
         '
-        Me.Button11.Location = New System.Drawing.Point(768, 320)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 31)
-        Me.Button11.TabIndex = 73
-        Me.Button11.Text = "ADD"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.ord_but.Location = New System.Drawing.Point(768, 320)
+        Me.ord_but.Name = "ord_but"
+        Me.ord_but.Size = New System.Drawing.Size(75, 31)
+        Me.ord_but.TabIndex = 73
+        Me.ord_but.Text = "ADD"
+        Me.ord_but.UseVisualStyleBackColor = True
         '
-        'Button12
+        'edt_but
         '
-        Me.Button12.Location = New System.Drawing.Point(767, 365)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(75, 30)
-        Me.Button12.TabIndex = 74
-        Me.Button12.Text = "EDIT"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.edt_but.Location = New System.Drawing.Point(767, 365)
+        Me.edt_but.Name = "edt_but"
+        Me.edt_but.Size = New System.Drawing.Size(75, 30)
+        Me.edt_but.TabIndex = 74
+        Me.edt_but.Text = "EDIT"
+        Me.edt_but.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.SystemColors.Info
-        Me.TextBox2.Location = New System.Drawing.Point(1090, 708)
+        Me.TextBox2.Location = New System.Drawing.Point(1091, 712)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(114, 20)
         Me.TextBox2.TabIndex = 90
@@ -845,23 +845,23 @@ Partial Class OrderForm
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.edt_but)
+        Me.Controls.Add(Me.ord_but)
         Me.Controls.Add(Me.orddel_but)
         Me.Controls.Add(Me.ordinstr_but)
         Me.Controls.Add(Me.orddesp_but)
         Me.Controls.Add(Me.ordhead_but)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ordsave_but)
+        Me.Controls.Add(Me.vwsave_but)
+        Me.Controls.Add(Me.orddet_but)
+        Me.Controls.Add(Me.deline_but)
+        Me.Controls.Add(Me.ordabort_but)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.LOLINEMEMOLabel2)
         Me.Controls.Add(Me.LOLINEMEMOTextBox2)
         Me.Controls.Add(Me.ORDERNOTextBox)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.nonstk_but)
         Me.Controls.Add(Me.LDESCLabel)
         Me.Controls.Add(Me.LDESCTextBox)
         Me.Controls.Add(Me.LPARTNOLabel)
@@ -928,21 +928,21 @@ Partial Class OrderForm
     Friend WithEvents LEPRICETextBox As System.Windows.Forms.TextBox
     Friend WithEvents LPARTNOTextBox As System.Windows.Forms.TextBox
     Friend WithEvents LDESCTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents nonstk_but As System.Windows.Forms.Button
     Friend WithEvents ORDERNOTextBox As System.Windows.Forms.TextBox
     Friend WithEvents LOLINEMEMOTextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents ordabort_but As Button
+    Friend WithEvents deline_but As Button
+    Friend WithEvents orddet_but As Button
+    Friend WithEvents vwsave_but As Button
+    Friend WithEvents ordsave_but As Button
     Friend WithEvents ordhead_but As Button
     Friend WithEvents orddesp_but As Button
     Friend WithEvents ordinstr_but As Button
     Friend WithEvents orddel_but As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
+    Friend WithEvents ord_but As Button
+    Friend WithEvents edt_but As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ListBox1 As ListBox

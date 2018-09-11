@@ -61,7 +61,6 @@ Partial Class Builddraftinv
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.VScrollBar3 = New System.Windows.Forms.VScrollBar()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -127,7 +126,7 @@ Partial Class Builddraftinv
         Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvtransBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,6 +137,7 @@ Partial Class Builddraftinv
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label15
@@ -172,9 +172,10 @@ Partial Class Builddraftinv
         '
         'ListView2
         '
-        Me.ListView2.Location = New System.Drawing.Point(49, 176)
+        Me.ListView2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListView2.Location = New System.Drawing.Point(0, 0)
         Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(452, 132)
+        Me.ListView2.Size = New System.Drawing.Size(1039, 708)
         Me.ListView2.TabIndex = 86
         Me.ListView2.UseCompatibleStateImageBehavior = False
         '
@@ -463,16 +464,6 @@ Partial Class Builddraftinv
         Me.Label10.Size = New System.Drawing.Size(126, 13)
         Me.Label10.TabIndex = 133
         Me.Label10.Text = "BUILD INVOICE DETAIL"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 132
-        Me.PictureBox1.TabStop = False
         '
         'VScrollBar3
         '
@@ -971,11 +962,21 @@ Partial Class Builddraftinv
         Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
         Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Transvac_ERP.My.Resources.Resources.new_transvac_logo_Environmental
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 132
+        Me.PictureBox1.TabStop = False
+        '
         'Builddraftinv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(1039, 708)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CheckBox11)
@@ -1055,7 +1056,6 @@ Partial Class Builddraftinv
         Me.Controls.Add(Me.ListView2)
         Me.Name = "Builddraftinv"
         Me.Text = "Builddraftinv"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvtransBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1066,6 +1066,7 @@ Partial Class Builddraftinv
         CType(Me.TrandescBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuotedetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
