@@ -68,6 +68,7 @@ Partial Class rorderform
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -433,9 +434,9 @@ Partial Class rorderform
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(1090, 295)
+        Me.Button3.Location = New System.Drawing.Point(1090, 309)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(86, 67)
+        Me.Button3.Size = New System.Drawing.Size(86, 53)
         Me.Button3.TabIndex = 156
         Me.Button3.Text = "RECEIVE ALL"
         Me.Button3.UseVisualStyleBackColor = True
@@ -454,18 +455,28 @@ Partial Class rorderform
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(932, 401)
+        Me.Label4.Location = New System.Drawing.Point(880, 401)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(102, 16)
         Me.Label4.TabIndex = 158
         Me.Label4.Text = "BACK 2 BACK"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(1039, 401)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(136, 59)
+        Me.Button5.TabIndex = 159
+        Me.Button5.Text = "SEND EMAIL TO NOTIFY ORDER NOW IN STOCK"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'rorderform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(1223, 758)
+        Me.ClientSize = New System.Drawing.Size(1223, 770)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button3)
@@ -513,7 +524,7 @@ Partial Class rorderform
         Me.Controls.Add(Me.OSUPPLIERLabel)
         Me.Controls.Add(Me.cosupplier)
         Me.Name = "rorderform"
-        Me.Text = "Recieve Order Form"
+        Me.Text = "Receive Order Form"
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -568,4 +579,5 @@ Partial Class rorderform
     Friend WithEvents Button3 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Button5 As Button
 End Class

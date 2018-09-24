@@ -81,7 +81,7 @@ Partial Class enqmain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(272, 283)
+        Me.ClientSize = New System.Drawing.Size(265, 283)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnneweq)
         Me.Controls.Add(Me.Label1)

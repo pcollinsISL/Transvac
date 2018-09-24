@@ -38,15 +38,6 @@ Partial Class findquote
         Me.btnExit = New System.Windows.Forms.Button()
         Me.SelectBtn = New System.Windows.Forms.Button()
         Me.EnquiryDataGridView = New System.Windows.Forms.DataGridView()
-        Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
-        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
-        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,6 +53,15 @@ Partial Class findquote
         Me.contact = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.edate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.etype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EnquiryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TransvacDataV2DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EnquiryTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.enquiryTableAdapter()
+        Me.TableAdapterManager = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager()
+        Me.Tran2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tran2TableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.tran2TableAdapter()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.EnquiryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,8 +202,137 @@ Partial Class findquote
         Me.EnquiryDataGridView.Location = New System.Drawing.Point(37, 243)
         Me.EnquiryDataGridView.Name = "EnquiryDataGridView"
         Me.EnquiryDataGridView.ReadOnly = True
-        Me.EnquiryDataGridView.Size = New System.Drawing.Size(844, 305)
+        Me.EnquiryDataGridView.Size = New System.Drawing.Size(638, 305)
         Me.EnquiryDataGridView.TabIndex = 14
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "cname"
+        Me.DataGridViewTextBoxColumn3.FillWeight = 449.2386!
+        Me.DataGridViewTextBoxColumn3.HeaderText = "CUSTOMER NAME"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "ref_no"
+        Me.DataGridViewTextBoxColumn5.FillWeight = 18.88221!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "CUST REF"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Width = 78
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "quote_no"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 19.94671!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "QUOTE NO"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 82
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "ewho"
+        Me.DataGridViewTextBoxColumn15.FillWeight = 5.966253!
+        Me.DataGridViewTextBoxColumn15.HeaderText = "SALES PERSON"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
+        Me.DataGridViewTextBoxColumn15.Width = 105
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "status"
+        Me.DataGridViewTextBoxColumn13.FillWeight = 5.966253!
+        Me.DataGridViewTextBoxColumn13.HeaderText = "STATUS"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Width = 75
+        '
+        'accno
+        '
+        Me.accno.DataPropertyName = "accno"
+        Me.accno.HeaderText = "accno"
+        Me.accno.Name = "accno"
+        Me.accno.ReadOnly = True
+        Me.accno.Visible = False
+        '
+        'ememo
+        '
+        Me.ememo.DataPropertyName = "ememo"
+        Me.ememo.HeaderText = "ememo"
+        Me.ememo.Name = "ememo"
+        Me.ememo.ReadOnly = True
+        Me.ememo.Visible = False
+        '
+        'ship_name
+        '
+        Me.ship_name.DataPropertyName = "ship_name"
+        Me.ship_name.HeaderText = "ship_name"
+        Me.ship_name.Name = "ship_name"
+        Me.ship_name.ReadOnly = True
+        Me.ship_name.Visible = False
+        '
+        'email
+        '
+        Me.email.DataPropertyName = "email"
+        Me.email.HeaderText = "email"
+        Me.email.Name = "email"
+        Me.email.ReadOnly = True
+        Me.email.Visible = False
+        '
+        'mobtel_no
+        '
+        Me.mobtel_no.DataPropertyName = "mobtel_no"
+        Me.mobtel_no.HeaderText = "mobtel_no"
+        Me.mobtel_no.Name = "mobtel_no"
+        Me.mobtel_no.ReadOnly = True
+        Me.mobtel_no.Visible = False
+        '
+        'fax_no
+        '
+        Me.fax_no.DataPropertyName = "fax_no"
+        Me.fax_no.HeaderText = "fax_no"
+        Me.fax_no.Name = "fax_no"
+        Me.fax_no.ReadOnly = True
+        Me.fax_no.Visible = False
+        '
+        'tel_no
+        '
+        Me.tel_no.DataPropertyName = "tel_no"
+        Me.tel_no.HeaderText = "tel_no"
+        Me.tel_no.Name = "tel_no"
+        Me.tel_no.ReadOnly = True
+        Me.tel_no.Visible = False
+        '
+        'contact
+        '
+        Me.contact.DataPropertyName = "contact"
+        Me.contact.HeaderText = "contact"
+        Me.contact.Name = "contact"
+        Me.contact.ReadOnly = True
+        Me.contact.Visible = False
+        '
+        'edate
+        '
+        Me.edate.DataPropertyName = "edate"
+        Me.edate.HeaderText = "edate"
+        Me.edate.Name = "edate"
+        Me.edate.ReadOnly = True
+        Me.edate.Visible = False
+        '
+        'etype
+        '
+        Me.etype.DataPropertyName = "etype"
+        Me.etype.HeaderText = "etype"
+        Me.etype.Name = "etype"
+        Me.etype.ReadOnly = True
+        Me.etype.Visible = False
         '
         'EnquiryBindingSource
         '
@@ -303,135 +432,13 @@ Partial Class findquote
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "cname"
-        Me.DataGridViewTextBoxColumn3.FillWeight = 449.2386!
-        Me.DataGridViewTextBoxColumn3.HeaderText = "CUSTOMER NAME"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 116
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "ref_no"
-        Me.DataGridViewTextBoxColumn5.FillWeight = 18.88221!
-        Me.DataGridViewTextBoxColumn5.HeaderText = "CUST REF"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "quote_no"
-        Me.DataGridViewTextBoxColumn1.FillWeight = 19.94671!
-        Me.DataGridViewTextBoxColumn1.HeaderText = "QUOTE NO"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "ewho"
-        Me.DataGridViewTextBoxColumn15.FillWeight = 5.966253!
-        Me.DataGridViewTextBoxColumn15.HeaderText = "SALES PERSON"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "status"
-        Me.DataGridViewTextBoxColumn13.FillWeight = 5.966253!
-        Me.DataGridViewTextBoxColumn13.HeaderText = "STATUS"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        '
-        'accno
-        '
-        Me.accno.DataPropertyName = "accno"
-        Me.accno.HeaderText = "accno"
-        Me.accno.Name = "accno"
-        Me.accno.ReadOnly = True
-        Me.accno.Visible = False
-        '
-        'ememo
-        '
-        Me.ememo.DataPropertyName = "ememo"
-        Me.ememo.HeaderText = "ememo"
-        Me.ememo.Name = "ememo"
-        Me.ememo.ReadOnly = True
-        Me.ememo.Visible = False
-        '
-        'ship_name
-        '
-        Me.ship_name.DataPropertyName = "ship_name"
-        Me.ship_name.HeaderText = "ship_name"
-        Me.ship_name.Name = "ship_name"
-        Me.ship_name.ReadOnly = True
-        Me.ship_name.Visible = False
-        '
-        'email
-        '
-        Me.email.DataPropertyName = "email"
-        Me.email.HeaderText = "email"
-        Me.email.Name = "email"
-        Me.email.ReadOnly = True
-        Me.email.Visible = False
-        '
-        'mobtel_no
-        '
-        Me.mobtel_no.DataPropertyName = "mobtel_no"
-        Me.mobtel_no.HeaderText = "mobtel_no"
-        Me.mobtel_no.Name = "mobtel_no"
-        Me.mobtel_no.ReadOnly = True
-        Me.mobtel_no.Visible = False
-        '
-        'fax_no
-        '
-        Me.fax_no.DataPropertyName = "fax_no"
-        Me.fax_no.HeaderText = "fax_no"
-        Me.fax_no.Name = "fax_no"
-        Me.fax_no.ReadOnly = True
-        Me.fax_no.Visible = False
-        '
-        'tel_no
-        '
-        Me.tel_no.DataPropertyName = "tel_no"
-        Me.tel_no.HeaderText = "tel_no"
-        Me.tel_no.Name = "tel_no"
-        Me.tel_no.ReadOnly = True
-        Me.tel_no.Visible = False
-        '
-        'contact
-        '
-        Me.contact.DataPropertyName = "contact"
-        Me.contact.HeaderText = "contact"
-        Me.contact.Name = "contact"
-        Me.contact.ReadOnly = True
-        Me.contact.Visible = False
-        '
-        'edate
-        '
-        Me.edate.DataPropertyName = "edate"
-        Me.edate.HeaderText = "edate"
-        Me.edate.Name = "edate"
-        Me.edate.ReadOnly = True
-        Me.edate.Visible = False
-        '
-        'etype
-        '
-        Me.etype.DataPropertyName = "etype"
-        Me.etype.HeaderText = "etype"
-        Me.etype.Name = "etype"
-        Me.etype.ReadOnly = True
-        Me.etype.Visible = False
-        '
         'findquote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(928, 606)
+        Me.ClientSize = New System.Drawing.Size(720, 606)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.EnquiryDataGridView)

@@ -428,7 +428,7 @@ Partial Class Orders
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.ClientSize = New System.Drawing.Size(859, 683)
+        Me.ClientSize = New System.Drawing.Size(816, 683)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.TextBox6)

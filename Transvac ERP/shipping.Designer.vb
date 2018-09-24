@@ -59,8 +59,6 @@ Partial Class shipping
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -98,7 +96,7 @@ Partial Class shipping
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(42, 174)
+        Me.Label3.Location = New System.Drawing.Point(42, 180)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 13)
         Me.Label3.TabIndex = 3
@@ -107,7 +105,7 @@ Partial Class shipping
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(42, 208)
+        Me.Label4.Location = New System.Drawing.Point(42, 209)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 4
@@ -116,7 +114,7 @@ Partial Class shipping
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(41, 244)
+        Me.Label5.Location = New System.Drawing.Point(41, 245)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 5
@@ -134,7 +132,7 @@ Partial Class shipping
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(41, 349)
+        Me.Label7.Location = New System.Drawing.Point(41, 353)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 13)
         Me.Label7.TabIndex = 7
@@ -170,7 +168,7 @@ Partial Class shipping
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(364, 62)
+        Me.Label11.Location = New System.Drawing.Point(429, 55)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(33, 13)
         Me.Label11.TabIndex = 11
@@ -378,24 +376,6 @@ Partial Class shipping
         Me.TextBox14.Size = New System.Drawing.Size(109, 20)
         Me.TextBox14.TabIndex = 38
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(491, 518)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 53
-        Me.Button5.Text = "COMPOSE"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(374, 518)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 23)
-        Me.Button4.TabIndex = 52
-        Me.Button4.Text = "PRINT DRAFT"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(254, 518)
@@ -411,16 +391,16 @@ Partial Class shipping
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 50
-        Me.Button1.Text = "QUIT"
+        Me.Button1.Text = "ABORT"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(138, 518)
+        Me.Button3.Location = New System.Drawing.Point(486, 518)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 23)
         Me.Button3.TabIndex = 54
-        Me.Button3.Text = "ACCOUNT"
+        Me.Button3.Text = "SAVE/CLOSE"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'TextBox15
@@ -451,13 +431,12 @@ Partial Class shipping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(638, 571)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(650, 571)
         Me.Controls.Add(Me.VScrollBar3)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.TextBox15)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox14)
@@ -542,8 +521,6 @@ Partial Class shipping
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button

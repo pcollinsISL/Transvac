@@ -18,7 +18,7 @@
 
     End Sub
 
-    Private Sub newqu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles newqu_but.Click
+    Private Sub newqu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         TransPortal.TabControl1.SelectedTab = TransPortal.TabPage5
         Dim quote As New quote
         quote.TopLevel = False

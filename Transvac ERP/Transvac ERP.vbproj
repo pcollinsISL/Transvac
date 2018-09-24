@@ -334,6 +334,30 @@
     <Compile Include="MODFORM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="odelivery.Designer.vb">
+      <DependentUpon>odelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="odelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="odespatch.Designer.vb">
+      <DependentUpon>odespatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="odespatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oheading.Designer.vb">
+      <DependentUpon>oheading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oheading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oinstructions.Designer.vb">
+      <DependentUpon>oinstructions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oinstructions.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OrderForm.designer.vb">
       <DependentUpon>OrderForm.vb</DependentUpon>
     </Compile>
@@ -352,10 +376,10 @@
     <Compile Include="PARTLABEL.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="heading.Designer.vb">
-      <DependentUpon>heading.vb</DependentUpon>
+    <Compile Include="qheading.Designer.vb">
+      <DependentUpon>qheading.vb</DependentUpon>
     </Compile>
-    <Compile Include="heading.vb">
+    <Compile Include="qheading.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory.Designer.vb">
@@ -606,6 +630,18 @@
     <EmbeddedResource Include="MODFORM.resx">
       <DependentUpon>MODFORM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="odelivery.resx">
+      <DependentUpon>odelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="odespatch.resx">
+      <DependentUpon>odespatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oheading.resx">
+      <DependentUpon>oheading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oinstructions.resx">
+      <DependentUpon>oinstructions.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -615,8 +651,8 @@
     <EmbeddedResource Include="PARTLABEL.resx">
       <DependentUpon>PARTLABEL.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="heading.resx">
-      <DependentUpon>heading.vb</DependentUpon>
+    <EmbeddedResource Include="qheading.resx">
+      <DependentUpon>qheading.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.vb</DependentUpon>
