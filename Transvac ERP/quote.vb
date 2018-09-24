@@ -85,7 +85,7 @@
         Me.TrandescTableAdapter.FillByPcode(Me.TransvacDataV2DataSet1.trandesc, partno_tb.Text)
         Me.TranbinsTableAdapter.FillByIDCode(Me.TransvacDataV2DataSet1.tranbins, idcode.Text)
         DataGridView2.Item(6, DataGridView2.CurrentRow.Index).Value = Val(DataGridView2.Item(4, DataGridView2.CurrentRow.Index).Value)
-        DataGridView2.Item(9, DataGridView2.CurrentRow.Index).Value = Val(DataGridView2.Item(3, DataGridView2.CurrentRow.Index).Value) * Val(DataGridView2.Item(4, DataGridView2.CurrentRow.Index).Value)
+        DataGridView2.Item(13, DataGridView2.CurrentRow.Index).Value = Val(DataGridView2.Item(3, DataGridView2.CurrentRow.Index).Value) * Val(DataGridView2.Item(4, DataGridView2.CurrentRow.Index).Value)
         Ext_tb.Text = qty_tb.Text * unitprice_tb.Text
 
     End Sub
@@ -98,9 +98,8 @@
         partno_tb.Text = DataGridView1.Item(2, DataGridView1.CurrentRow.Index).Value
         descrip_tb.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value
         unitprice_tb.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value
-        qute_tb.Text = DataGridView1.Item(5, DataGridView1.CurrentRow.Index).Value
-        quotesfx.Text = DataGridView1.Item(6, DataGridView1.CurrentRow.Index).Value
-        REM DataGridView1.Item(7, DataGridView1.CurrentRow.Index).Value = Val(DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value) * Val(DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value)
+        qute_tb.Text = DataGridView1.Item(6, DataGridView1.CurrentRow.Index).Value
+        quotesfx.Text = DataGridView1.Item(7, DataGridView1.CurrentRow.Index).Value
     End Sub
     Private Sub header_tb_TextChanged(sender As Object, e As EventArgs) Handles header_tb.TextChanged
     End Sub
@@ -127,10 +126,11 @@
         DataGridView1.Rows(rowcount - 1).Cells(2).Value = partno_tb.Text
         DataGridView1.Rows(rowcount - 1).Cells(3).Value = descrip_tb.Text
         DataGridView1.Rows(rowcount - 1).Cells(4).Value = unitprice_tb.Text
-        DataGridView1.Rows(rowcount - 1).Cells(5).Value = quote_nu.Text
-        DataGridView1.Rows(rowcount - 1).Cells(6).Value = quotesfx.Text
+        DataGridView1.Rows(rowcount - 1).Cells(5).Value = Ext_tb.Text
+        DataGridView1.Rows(rowcount - 1).Cells(6).Value = quote_nu.Text
+        DataGridView1.Rows(rowcount - 1).Cells(7).Value = quotesfx.Text
         For Each line As DataGridViewRow In DataGridView1.Rows
-            line.Cells(6).Value = quotesfx.Text
+            line.Cells(7).Value = quotesfx.Text
         Next
         DataGridView1.DataSource.endedit()
     End Sub

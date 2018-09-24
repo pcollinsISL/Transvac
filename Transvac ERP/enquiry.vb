@@ -22,14 +22,20 @@
     End Sub
 
     Private Sub Btnquotegen_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnquotegen.Click
-        TransPortal.TabControl1.SelectedTab = TransPortal.TabPage5
-        Dim quote As New quote
-        quote.TopLevel = False
-        quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
-        quote.quote_nu.Text = qotenoTextBox.Text
-        quote.accountno.Text = AccnoTextBox.Text
-        quote.Show()
+        If qotenoTextBox.Text = "" Then
+            Dim response As Integer
+            MessageBox.Show("Please save the Enquiry before generating a quotation")
+        Else
+            Me.Hide()
+            TransPortal.TabControl1.SelectedTab = TransPortal.TabPage5
+            Dim quote As New quote
+            quote.TopLevel = False
+            quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+            TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
+            quote.quote_nu.Text = qotenoTextBox.Text
+            quote.accountno.Text = AccnoTextBox.Text
+            quote.Show()
+        End If
     End Sub
 
     Private Sub BtnAddressbook_click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Btnaddressbook.Click

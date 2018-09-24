@@ -38666,10 +38666,10 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
-                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no, timestamp_column FROM e"& _ 
-                "nquiry WHERE (cname LIKE @PARAM1 + '%')"
+                " mobtel_no, quote_no, ref_no, ship_name, status, tel_no, timestamp_column "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM"& _ 
+                " enquiry "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (cname  LIKE @param1 + N'%')"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PARAM1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "cname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT UniqueID, accno, cname, contact, edate, email, ememo, etype, ewho, fax_no,"& _ 
@@ -38734,12 +38734,12 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal PARAM1 As String) As Integer
+        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.enquiryDataTable, ByVal param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (PARAM1 Is Nothing) Then
+            If (param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -38752,12 +38752,12 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal PARAM1 As String) As TransvacDataV2DataSet1.enquiryDataTable
+        Public Overloads Overridable Function GetDataBy(ByVal param1 As String) As TransvacDataV2DataSet1.enquiryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (PARAM1 Is Nothing) Then
+            If (param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(PARAM1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
             End If
             Dim dataTable As TransvacDataV2DataSet1.enquiryDataTable = New TransvacDataV2DataSet1.enquiryDataTable()
             Me.Adapter.Fill(dataTable)
@@ -53903,9 +53903,9 @@ Namespace TransvacDataV2DataSet1TableAdapters
             Me._commandCollection(3).CommandText = "SELECT        ADDMEMO, UniqueID, ad1, ad2, ad3, ad4, ad5, email, entrytype, eurov"& _ 
                 "at, fax, ifmemo, inuse, name, new_upd, nwho, peg_lsale, peg_pact, phone, proform"& _ 
                 "a, promo, telex, termdays, udate, vatpayable, xcard, account"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tr"& _ 
-                "an2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (name LIKE @Param1 + '%')"
+                "an2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (name  LIKE @param1 + N'%')"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.[Char], 40, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -53962,12 +53962,12 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.tran2DataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillByName(ByVal dataTable As TransvacDataV2DataSet1.tran2DataTable, ByVal param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
-            If (Param1 Is Nothing) Then
+            If (param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -53980,12 +53980,12 @@ Namespace TransvacDataV2DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy1(ByVal Param1 As String) As TransvacDataV2DataSet1.tran2DataTable
+        Public Overloads Overridable Function GetDataBy1(ByVal param1 As String) As TransvacDataV2DataSet1.tran2DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
-            If (Param1 Is Nothing) Then
+            If (param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
             End If
             Dim dataTable As TransvacDataV2DataSet1.tran2DataTable = New TransvacDataV2DataSet1.tran2DataTable()
             Me.Adapter.Fill(dataTable)

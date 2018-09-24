@@ -117,12 +117,26 @@
     End Sub
 
     Private Sub savebtn(sender As Object, e As EventArgs) Handles savebut.Click
-        New_updDateTimePicker.Value = DateTime.Now
-        Me.Validate()
-        Me.Tran2BindingSource1.EndEdit()
-        Me.AddnotesBindingSource1.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
-        MsgBox("Save Succsesful")
+        If NAMETextBox1.Text = "" Or
+                AD1TextBox1.Text = "" Or
+                AD2TextBox1.Text = "" Or
+                AD3TextBox.Text = "" Or
+                AD4TextBox.Text = "" Or
+                PHONETextBox.Text = "" Or
+                TELEXTextBox.Text = "" Or
+                EMAILTextBox.Text = "" Or
+                TERMDAYSTextBox.Text = "" Or
+                EUROVATTextBox.Text = "" Or
+                EntrytypeComboBox.Text = "" Then
+            MessageBox.Show("Please complete all required fields")
+        Else
+            New_updDateTimePicker.Value = DateTime.Now
+            Me.Validate()
+            Me.Tran2BindingSource1.EndEdit()
+            Me.AddnotesBindingSource1.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.ADDRESSBKDataSet)
+            MsgBox("Save Succsesful")
+        End If
     End Sub
     Private Sub printbutton_Click(sender As Object, e As EventArgs) Handles printbutton.Click
         Me.PrintForm1.PrinterSettings.DefaultPageSettings.Landscape = True
@@ -152,5 +166,9 @@
 
     Private Sub New_updDateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles New_updDateTimePicker.ValueChanged
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
     End Sub
 End Class
