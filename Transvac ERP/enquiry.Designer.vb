@@ -86,6 +86,9 @@ Partial Class enquiry
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.QuoteSuffix = New System.Windows.Forms.TextBox()
+        Me.QuoteheadBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.QuoteheadTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quoteheadTableAdapter()
         CType(Me.EnquiryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tran2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,6 +97,7 @@ Partial Class enquiry
         CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EdateLabel
@@ -667,12 +671,30 @@ Partial Class enquiry
         Me.Label9.TabIndex = 195
         Me.Label9.Text = "*"
         '
+        'QuoteSuffix
+        '
+        Me.QuoteSuffix.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.QuoteheadBindingSource, "quote_suf", True))
+        Me.QuoteSuffix.Location = New System.Drawing.Point(685, 25)
+        Me.QuoteSuffix.Name = "QuoteSuffix"
+        Me.QuoteSuffix.Size = New System.Drawing.Size(79, 20)
+        Me.QuoteSuffix.TabIndex = 196
+        '
+        'QuoteheadBindingSource
+        '
+        Me.QuoteheadBindingSource.DataMember = "quotehead"
+        Me.QuoteheadBindingSource.DataSource = Me.TransvacDataV2DataSet1
+        '
+        'QuoteheadTableAdapter
+        '
+        Me.QuoteheadTableAdapter.ClearBeforeFill = True
+        '
         'enquiry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(813, 657)
+        Me.Controls.Add(Me.QuoteSuffix)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -734,6 +756,7 @@ Partial Class enquiry
         CType(Me.TransvacDataV2DataSet11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransvacDataV2DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.QuoteheadBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -801,4 +824,7 @@ Partial Class enquiry
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents QuoteSuffix As TextBox
+    Friend WithEvents QuoteheadBindingSource As BindingSource
+    Friend WithEvents QuoteheadTableAdapter As TransvacDataV2DataSet1TableAdapters.quoteheadTableAdapter
 End Class

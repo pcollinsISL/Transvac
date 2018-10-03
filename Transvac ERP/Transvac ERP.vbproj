@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\SBS2011\ERPInstall\</UpdateUrl>
-    <ApplicationRevision>27</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -415,6 +415,12 @@
     <Compile Include="namesrch.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="quoteedit.Designer.vb">
+      <DependentUpon>quoteedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="quoteedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="quote.Designer.vb">
       <DependentUpon>quote.vb</DependentUpon>
     </Compile>
@@ -669,6 +675,9 @@
     <EmbeddedResource Include="namesrch.resx">
       <DependentUpon>namesrch.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="quoteedit.resx">
+      <DependentUpon>quoteedit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="quote.resx">
       <DependentUpon>quote.vb</DependentUpon>
     </EmbeddedResource>
@@ -735,6 +744,7 @@
       <DependentUpon>ADDRESSBKDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

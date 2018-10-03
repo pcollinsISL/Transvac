@@ -32,6 +32,7 @@
             quote.TopLevel = False
             quote.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
             TransPortal.TabControl1.TabPages(4).Controls.Add(quote)
+            quote.quotesfx.Text = QuoteSuffix.Text
             quote.quote_nu.Text = qotenoTextBox.Text
             quote.accountno.Text = AccnoTextBox.Text
             quote.Show()
@@ -65,7 +66,9 @@
     End Sub
 
     Private Sub enquiry_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.QuoteheadTableAdapter.Fill(Me.TransvacDataV2DataSet1.quotehead)
         Me.AddressRecordTypeTableAdapter.Fill(Me.TransvacDataV2DataSet11.AddressRecordType)
+        Me.QuoteheadTableAdapter.FillByQuotesuf(Me.TransvacDataV2DataSet1.quotehead, qotenoTextBox.Text)
         If AccnoTextBox.Text = "" Then
             Me.Tran2TableAdapter.ClearBeforeFill = True
             Me.EnquiryTableAdapter.ClearBeforeFill = True
@@ -74,7 +77,7 @@
             Me.Tran2TableAdapter.FillByAccountID(Me.TransvacDataV2DataSet1.tran2, AccnoTextBox.Text)
             Me.EnquiryTableAdapter.FillByQuoteNO(Me.TransvacDataV2DataSet1.enquiry, qotenoTextBox.Text)
         End If
-
+        QuoteSuffix.Visible = False
     End Sub
 
     Private Sub Ref_noTextBox_TextChanged(sender As Object, e As EventArgs) Handles Ref_noTextBox.TextChanged
@@ -94,14 +97,22 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        DateTimePicker.Value = DateTime.Now
-        Me.Validate()
-        Me.EnquiryBindingSource.EndEdit()
-        Me.Tran2BindingSource.EndEdit()
-        Me.EnquiryTableAdapter.Update(Me.TransvacDataV2DataSet1)
-        Me.Tran2TableAdapter.Update(Me.TransvacDataV2DataSet1)
-        MsgBox("Save Successful")
-        Me.EnquiryTableAdapter.FillByTimeStamp(Me.TransvacDataV2DataSet1.enquiry)
+        If ContactTextBox.Text = "" Or
+                Ref_noTextBox.Text = "" Or
+                Ship_nameTextBox.Text = "" Or
+                StatusComboBox.Text = "" Or
+                EtypeComboBox.Text = "" Then
+            MessageBox.Show("Please complete all required fields")
+        Else
+            DateTimePicker.Value = DateTime.Now
+            Me.Validate()
+            Me.EnquiryBindingSource.EndEdit()
+            Me.Tran2BindingSource.EndEdit()
+            Me.EnquiryTableAdapter.Update(Me.TransvacDataV2DataSet1)
+            Me.Tran2TableAdapter.Update(Me.TransvacDataV2DataSet1)
+            MsgBox("Save Successful")
+            Me.EnquiryTableAdapter.FillByTimeStamp(Me.TransvacDataV2DataSet1.enquiry)
+        End If
     End Sub
 
     Private Sub qotenoTextBox_TextChanged(sender As Object, e As EventArgs) Handles qotenoTextBox.TextChanged, qotenoTextBox.Validated

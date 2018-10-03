@@ -1,4 +1,4 @@
-﻿Public Class quote
+﻿Public Class quoteedit
     Private Sub TranmemoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.TranmemoBindingSource.EndEdit()
@@ -8,30 +8,8 @@
         Throw New NotImplementedException()
     End Function
     Private Sub quote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.QuoteheadBindingSource1.AddNew()
-        If quotesfx.Text = "" Then
-            quotesfx.Text = "01"
-        ElseIf quotesfx.Text = "01" Then
-            quotesfx.Text = "02"
-        ElseIf quotesfx.Text = "02" Then
-            quotesfx.Text = "03"
-        ElseIf quotesfx.Text = "03" Then
-            quotesfx.Text = "04"
-        ElseIf quotesfx.Text = "04" Then
-            quotesfx.Text = "05"
-        ElseIf quotesfx.Text = "05" Then
-            quotesfx.Text = "06"
-        ElseIf quotesfx.Text = "06" Then
-            quotesfx.Text = "07"
-        ElseIf quotesfx.Text = "07" Then
-            quotesfx.Text = "08"
-        ElseIf quotesfx.Text = "08" Then
-            quotesfx.Text = "09"
-        ElseIf quotesfx.Text = "09" Then
-            quotesfx.Text = "10"
-        End If
-        qute_tb.Text = quote_nu.Text
-        SuffixTB.Text = quotesfx.Text
+        Me.QuoteheadTableAdapter.FillByQuoteSufnosort(Me.TransvacDataV2DataSet1.quotehead, qute_tb.Text, SuffixTB.Text)
+        Me.QuotedetailTableAdapter.FillByQuoteSuf(Me.TransvacDataV2DataSet1.quotedetail, qute_tb.Text, SuffixTB.Text)
         quote_nu.Visible = False
         quotesfx.Visible = False
         idcode.Visible = False
@@ -115,6 +93,8 @@
         Next
     End Sub
     Private Sub add_but_Click(sender As Object, e As EventArgs) Handles add_but.Click
+        qute_tb.Text = quote_nu.Text
+        SuffixTB.Text = quotesfx.Text
         Dim rowcount As Integer = DataGridView1.Rows.Count
         Dim count As Integer = 0
         DataGridView1.DataSource.AddNew()
