@@ -26,4 +26,8 @@
     Private Sub QuotedetailBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles QuotedetailBindingSource.CurrentChanged
 
     End Sub
+
+    Private Sub ListView2_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

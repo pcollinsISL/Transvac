@@ -23,16 +23,6 @@ Partial Class Builddraftinv
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.ListView2 = New System.Windows.Forms.ListView()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -45,10 +35,6 @@ Partial Class Builddraftinv
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -62,27 +48,15 @@ Partial Class Builddraftinv
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.VScrollBar3 = New System.Windows.Forms.VScrollBar()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
-        Me.ListView3 = New System.Windows.Forms.ListView()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ListView4 = New System.Windows.Forms.ListView()
         Me.Label49 = New System.Windows.Forms.Label()
-        Me.ListView5 = New System.Windows.Forms.ListView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -90,13 +64,6 @@ Partial Class Builddraftinv
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.VScrollBar5 = New System.Windows.Forms.VScrollBar()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.TransvacDataV2DataSet1 = New Transvac_ERP.TransvacDataV2DataSet1()
         Me.InvworkBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InvworkTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.invworkTableAdapter()
@@ -115,18 +82,21 @@ Partial Class Builddraftinv
         Me.QuotedetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.QuotedetailTableAdapter = New Transvac_ERP.TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.QuotesufDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QpartnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuotenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QlinenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QdescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QvalueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QlinememoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NonstockDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimestampcolumnDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.partid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.qty_ord = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.qty_sent = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.desc_area = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.uprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UniqueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvworkBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvtransBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,102 +109,6 @@ Partial Class Builddraftinv
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label15.Location = New System.Drawing.Point(66, 176)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(58, 13)
-        Me.Label15.TabIndex = 88
-        Me.Label15.Text = "BIN CODE"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label16.Location = New System.Drawing.Point(50, 176)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(11, 13)
-        Me.Label16.TabIndex = 89
-        Me.Label16.Text = "*"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label17.Location = New System.Drawing.Point(130, 176)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(52, 13)
-        Me.Label17.TabIndex = 90
-        Me.Label17.Text = "SOURCE"
-        '
-        'ListView2
-        '
-        Me.ListView2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView2.Location = New System.Drawing.Point(0, 0)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(1039, 708)
-        Me.ListView2.TabIndex = 86
-        Me.ListView2.UseCompatibleStateImageBehavior = False
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label19.Location = New System.Drawing.Point(188, 176)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 13)
-        Me.Label19.TabIndex = 92
-        Me.Label19.Text = "*"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label20.Location = New System.Drawing.Point(204, 176)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(62, 13)
-        Me.Label20.TabIndex = 93
-        Me.Label20.Text = "QUANTITY"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label21.Location = New System.Drawing.Point(272, 176)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(71, 13)
-        Me.Label21.TabIndex = 94
-        Me.Label21.Text = "UNIT VALUE"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label24.Location = New System.Drawing.Point(348, 176)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(67, 13)
-        Me.Label24.TabIndex = 97
-        Me.Label24.Text = "CURRENCY"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label27.Location = New System.Drawing.Point(420, 176)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(80, 13)
-        Me.Label27.TabIndex = 100
-        Me.Label27.Text = "COST PRICE £"
-        '
-        'VScrollBar1
-        '
-        Me.VScrollBar1.Location = New System.Drawing.Point(503, 176)
-        Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(16, 132)
-        Me.VScrollBar1.TabIndex = 103
         '
         'TextBox1
         '
@@ -332,42 +206,6 @@ Partial Class Builddraftinv
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(286, 135)
         Me.TextBox6.TabIndex = 115
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(547, 366)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(98, 23)
-        Me.Button2.TabIndex = 117
-        Me.Button2.Text = "<< - ADD TEXT"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(736, 366)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(98, 23)
-        Me.Button3.TabIndex = 118
-        Me.Button3.Text = "DELETE A LINE"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(736, 334)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(98, 23)
-        Me.Button4.TabIndex = 119
-        Me.Button4.Text = "INSERT A LINE"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(547, 335)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(98, 23)
-        Me.Button5.TabIndex = 120
-        Me.Button5.Text = "<< - ADD PART"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'TextBox7
         '
@@ -472,106 +310,6 @@ Partial Class Builddraftinv
         Me.VScrollBar3.Size = New System.Drawing.Size(17, 150)
         Me.VScrollBar3.TabIndex = 143
         '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label23.Location = New System.Drawing.Point(279, 413)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(11, 13)
-        Me.Label23.TabIndex = 142
-        Me.Label23.Text = "*"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label25.Location = New System.Drawing.Point(171, 414)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(62, 13)
-        Me.Label25.TabIndex = 141
-        Me.Label25.Text = "QUANTITY"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label26.Location = New System.Drawing.Point(204, 427)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(46, 13)
-        Me.Label26.TabIndex = 140
-        Me.Label26.Text = "/ALLOC"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label30.Location = New System.Drawing.Point(152, 427)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(46, 13)
-        Me.Label30.TabIndex = 139
-        Me.Label30.Text = "ORDER"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label33.Location = New System.Drawing.Point(51, 414)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(14, 13)
-        Me.Label33.TabIndex = 136
-        Me.Label33.Text = "#"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label34.Location = New System.Drawing.Point(75, 414)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(55, 13)
-        Me.Label34.TabIndex = 135
-        Me.Label34.Text = "PART NO"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label35.Location = New System.Drawing.Point(847, 413)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(51, 13)
-        Me.Label35.TabIndex = 148
-        Me.Label35.Text = "TOTAL £"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label36.Location = New System.Drawing.Point(487, 414)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(33, 13)
-        Me.Label36.TabIndex = 149
-        Me.Label36.Text = "UNIT"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label37.Location = New System.Drawing.Point(306, 413)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(80, 13)
-        Me.Label37.TabIndex = 150
-        Me.Label37.Text = "DESCRIPTION"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Label31.Location = New System.Drawing.Point(563, 415)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(64, 13)
-        Me.Label31.TabIndex = 151
-        Me.Label31.Text = "% MARKUP"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -622,14 +360,6 @@ Partial Class Builddraftinv
         Me.Label41.TabIndex = 153
         Me.Label41.Text = "GLOBAL DISCOUNT"
         '
-        'ListView3
-        '
-        Me.ListView3.Location = New System.Drawing.Point(49, 605)
-        Me.ListView3.Name = "ListView3"
-        Me.ListView3.Size = New System.Drawing.Size(849, 46)
-        Me.ListView3.TabIndex = 152
-        Me.ListView3.UseCompatibleStateImageBehavior = False
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -667,14 +397,6 @@ Partial Class Builddraftinv
         Me.Label49.Size = New System.Drawing.Size(51, 13)
         Me.Label49.TabIndex = 167
         Me.Label49.Text = "TOTAL £"
-        '
-        'ListView5
-        '
-        Me.ListView5.Location = New System.Drawing.Point(736, 660)
-        Me.ListView5.Name = "ListView5"
-        Me.ListView5.Size = New System.Drawing.Size(95, 25)
-        Me.ListView5.TabIndex = 178
-        Me.ListView5.UseCompatibleStateImageBehavior = False
         '
         'Button1
         '
@@ -734,75 +456,6 @@ Partial Class Builddraftinv
         Me.Button9.TabIndex = 185
         Me.Button9.Text = "PRINT LABLES"
         Me.Button9.UseVisualStyleBackColor = True
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(932, 517)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox11.TabIndex = 194
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox10
-        '
-        Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(932, 567)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox10.TabIndex = 193
-        Me.CheckBox10.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(932, 550)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox8.TabIndex = 191
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Checked = True
-        Me.CheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox6.Location = New System.Drawing.Point(932, 467)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox6.TabIndex = 190
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Checked = True
-        Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox5.Location = New System.Drawing.Point(932, 484)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox5.TabIndex = 189
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Checked = True
-        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Location = New System.Drawing.Point(932, 500)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox4.TabIndex = 188
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(932, 534)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 187
-        Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'TransvacDataV2DataSet1
         '
@@ -886,81 +539,12 @@ Partial Class Builddraftinv
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuotesufDataGridViewTextBoxColumn, Me.QpartnoDataGridViewTextBoxColumn, Me.QuotenoDataGridViewTextBoxColumn, Me.QlinenoDataGridViewTextBoxColumn, Me.QdescDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.QvalueDataGridViewTextBoxColumn, Me.QlinememoDataGridViewTextBoxColumn, Me.NonstockDataGridViewCheckBoxColumn, Me.UniqueIDDataGridViewTextBoxColumn, Me.TimestampcolumnDataGridViewImageColumn})
-        Me.DataGridView1.DataSource = Me.QuotedetailBindingSource
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partid, Me.qty_ord, Me.qty_sent, Me.desc_area, Me.uprice, Me.UniqueIDDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.InvworkBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(49, 444)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(849, 150)
         Me.DataGridView1.TabIndex = 195
-        '
-        'QuotesufDataGridViewTextBoxColumn
-        '
-        Me.QuotesufDataGridViewTextBoxColumn.DataPropertyName = "quote_suf"
-        Me.QuotesufDataGridViewTextBoxColumn.HeaderText = "quote_suf"
-        Me.QuotesufDataGridViewTextBoxColumn.Name = "QuotesufDataGridViewTextBoxColumn"
-        '
-        'QpartnoDataGridViewTextBoxColumn
-        '
-        Me.QpartnoDataGridViewTextBoxColumn.DataPropertyName = "qpart_no"
-        Me.QpartnoDataGridViewTextBoxColumn.HeaderText = "qpart_no"
-        Me.QpartnoDataGridViewTextBoxColumn.Name = "QpartnoDataGridViewTextBoxColumn"
-        '
-        'QuotenoDataGridViewTextBoxColumn
-        '
-        Me.QuotenoDataGridViewTextBoxColumn.DataPropertyName = "quote_no"
-        Me.QuotenoDataGridViewTextBoxColumn.HeaderText = "quote_no"
-        Me.QuotenoDataGridViewTextBoxColumn.Name = "QuotenoDataGridViewTextBoxColumn"
-        '
-        'QlinenoDataGridViewTextBoxColumn
-        '
-        Me.QlinenoDataGridViewTextBoxColumn.DataPropertyName = "qline_no"
-        Me.QlinenoDataGridViewTextBoxColumn.HeaderText = "qline_no"
-        Me.QlinenoDataGridViewTextBoxColumn.Name = "QlinenoDataGridViewTextBoxColumn"
-        '
-        'QdescDataGridViewTextBoxColumn
-        '
-        Me.QdescDataGridViewTextBoxColumn.DataPropertyName = "qdesc"
-        Me.QdescDataGridViewTextBoxColumn.HeaderText = "qdesc"
-        Me.QdescDataGridViewTextBoxColumn.Name = "QdescDataGridViewTextBoxColumn"
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "quantity"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        '
-        'QvalueDataGridViewTextBoxColumn
-        '
-        Me.QvalueDataGridViewTextBoxColumn.DataPropertyName = "qvalue"
-        Me.QvalueDataGridViewTextBoxColumn.HeaderText = "qvalue"
-        Me.QvalueDataGridViewTextBoxColumn.Name = "QvalueDataGridViewTextBoxColumn"
-        '
-        'QlinememoDataGridViewTextBoxColumn
-        '
-        Me.QlinememoDataGridViewTextBoxColumn.DataPropertyName = "qline_memo"
-        Me.QlinememoDataGridViewTextBoxColumn.HeaderText = "qline_memo"
-        Me.QlinememoDataGridViewTextBoxColumn.Name = "QlinememoDataGridViewTextBoxColumn"
-        '
-        'NonstockDataGridViewCheckBoxColumn
-        '
-        Me.NonstockDataGridViewCheckBoxColumn.DataPropertyName = "nonstock"
-        Me.NonstockDataGridViewCheckBoxColumn.HeaderText = "nonstock"
-        Me.NonstockDataGridViewCheckBoxColumn.Name = "NonstockDataGridViewCheckBoxColumn"
-        '
-        'UniqueIDDataGridViewTextBoxColumn
-        '
-        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
-        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
-        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
-        '
-        'TimestampcolumnDataGridViewImageColumn
-        '
-        Me.TimestampcolumnDataGridViewImageColumn.DataPropertyName = "timestamp_column"
-        Me.TimestampcolumnDataGridViewImageColumn.HeaderText = "timestamp_column"
-        Me.TimestampcolumnDataGridViewImageColumn.Name = "TimestampcolumnDataGridViewImageColumn"
-        Me.TimestampcolumnDataGridViewImageColumn.ReadOnly = True
         '
         'PictureBox1
         '
@@ -972,20 +556,115 @@ Partial Class Builddraftinv
         Me.PictureBox1.TabIndex = 132
         Me.PictureBox1.TabStop = False
         '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(50, 621)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(108, 20)
+        Me.TextBox12.TabIndex = 196
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(166, 621)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox13.TabIndex = 197
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(272, 621)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox14.TabIndex = 198
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(399, 621)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox15.TabIndex = 199
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Location = New System.Drawing.Point(515, 621)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox18.TabIndex = 200
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Location = New System.Drawing.Point(621, 621)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(112, 20)
+        Me.TextBox19.TabIndex = 201
+        '
+        'TextBox20
+        '
+        Me.TextBox20.Location = New System.Drawing.Point(798, 621)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox20.TabIndex = 202
+        '
+        'TextBox21
+        '
+        Me.TextBox21.Location = New System.Drawing.Point(731, 662)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox21.TabIndex = 203
+        '
+        'partid
+        '
+        Me.partid.DataPropertyName = "partid"
+        Me.partid.HeaderText = "Part No"
+        Me.partid.Name = "partid"
+        '
+        'qty_ord
+        '
+        Me.qty_ord.DataPropertyName = "qty_ord"
+        Me.qty_ord.HeaderText = "Quantity Order"
+        Me.qty_ord.Name = "qty_ord"
+        '
+        'qty_sent
+        '
+        Me.qty_sent.DataPropertyName = "qty_sent"
+        Me.qty_sent.HeaderText = "Quantity Alloc"
+        Me.qty_sent.Name = "qty_sent"
+        '
+        'desc_area
+        '
+        Me.desc_area.DataPropertyName = "desc_area"
+        Me.desc_area.HeaderText = "Description"
+        Me.desc_area.Name = "desc_area"
+        '
+        'uprice
+        '
+        Me.uprice.DataPropertyName = "uprice"
+        Me.uprice.HeaderText = "Unit"
+        Me.uprice.Name = "uprice"
+        '
+        'UniqueIDDataGridViewTextBoxColumn
+        '
+        Me.UniqueIDDataGridViewTextBoxColumn.DataPropertyName = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.HeaderText = "UniqueID"
+        Me.UniqueIDDataGridViewTextBoxColumn.Name = "UniqueIDDataGridViewTextBoxColumn"
+        Me.UniqueIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UniqueIDDataGridViewTextBoxColumn.Visible = False
+        '
         'Builddraftinv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(1039, 708)
+        Me.Controls.Add(Me.TextBox21)
+        Me.Controls.Add(Me.TextBox20)
+        Me.Controls.Add(Me.TextBox19)
+        Me.Controls.Add(Me.TextBox18)
+        Me.Controls.Add(Me.TextBox15)
+        Me.Controls.Add(Me.TextBox14)
+        Me.Controls.Add(Me.TextBox13)
+        Me.Controls.Add(Me.TextBox12)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.CheckBox11)
-        Me.Controls.Add(Me.CheckBox10)
-        Me.Controls.Add(Me.CheckBox8)
-        Me.Controls.Add(Me.CheckBox6)
-        Me.Controls.Add(Me.CheckBox5)
-        Me.Controls.Add(Me.CheckBox4)
-        Me.Controls.Add(Me.CheckBox3)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.VScrollBar5)
         Me.Controls.Add(Me.TextBox11)
@@ -993,7 +672,6 @@ Partial Class Builddraftinv
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.ListView5)
         Me.Controls.Add(Me.Label49)
         Me.Controls.Add(Me.ListView4)
         Me.Controls.Add(Me.Label22)
@@ -1003,18 +681,7 @@ Partial Class Builddraftinv
         Me.Controls.Add(Me.Label32)
         Me.Controls.Add(Me.Label39)
         Me.Controls.Add(Me.Label41)
-        Me.Controls.Add(Me.ListView3)
-        Me.Controls.Add(Me.Label31)
-        Me.Controls.Add(Me.Label37)
-        Me.Controls.Add(Me.Label36)
-        Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.VScrollBar3)
-        Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label30)
-        Me.Controls.Add(Me.Label33)
-        Me.Controls.Add(Me.Label34)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
@@ -1028,10 +695,6 @@ Partial Class Builddraftinv
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -1044,16 +707,6 @@ Partial Class Builddraftinv
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.VScrollBar1)
-        Me.Controls.Add(Me.Label27)
-        Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.ListView2)
         Me.Name = "Builddraftinv"
         Me.Text = "Builddraftinv"
         CType(Me.TransvacDataV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1071,16 +724,6 @@ Partial Class Builddraftinv
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents ListView2 As ListView
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents VScrollBar1 As VScrollBar
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -1093,10 +736,6 @@ Partial Class Builddraftinv
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Label7 As Label
@@ -1111,27 +750,15 @@ Partial Class Builddraftinv
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents VScrollBar3 As VScrollBar
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label31 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents Label41 As Label
-    Friend WithEvents ListView3 As ListView
     Friend WithEvents Label11 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents ListView4 As ListView
     Friend WithEvents Label49 As Label
-    Friend WithEvents ListView5 As ListView
     Friend WithEvents Button1 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
@@ -1139,13 +766,6 @@ Partial Class Builddraftinv
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents VScrollBar5 As VScrollBar
     Friend WithEvents Button9 As Button
-    Friend WithEvents CheckBox11 As CheckBox
-    Friend WithEvents CheckBox10 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents TransvacDataV2DataSet1 As TransvacDataV2DataSet1
     Friend WithEvents InvworkBindingSource As BindingSource
     Friend WithEvents InvworkTableAdapter As TransvacDataV2DataSet1TableAdapters.invworkTableAdapter
@@ -1164,15 +784,18 @@ Partial Class Builddraftinv
     Friend WithEvents QuotedetailBindingSource As BindingSource
     Friend WithEvents QuotedetailTableAdapter As TransvacDataV2DataSet1TableAdapters.quotedetailTableAdapter
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents QuotesufDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QpartnoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuotenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QlinenoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QdescDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QvalueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QlinememoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NonstockDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents partid As DataGridViewTextBoxColumn
+    Friend WithEvents qty_ord As DataGridViewTextBoxColumn
+    Friend WithEvents qty_sent As DataGridViewTextBoxColumn
+    Friend WithEvents desc_area As DataGridViewTextBoxColumn
+    Friend WithEvents uprice As DataGridViewTextBoxColumn
     Friend WithEvents UniqueIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimestampcolumnDataGridViewImageColumn As DataGridViewImageColumn
 End Class

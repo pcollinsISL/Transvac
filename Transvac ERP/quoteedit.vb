@@ -109,6 +109,11 @@
             line.Cells(7).Value = SuffixTB.Text
         Next
         DataGridView1.DataSource.endedit()
+        qty_tb.Text = ""
+        partno_tb.Text = ""
+        descrip_tb.Text = ""
+        unitprice_tb.Text = ""
+        Ext_tb.Text = ""
     End Sub
     Private Sub remline_but_Click(sender As Object, e As EventArgs) Handles remline_but.Click
         For Each row As DataGridViewRow In DataGridView1.SelectedRows

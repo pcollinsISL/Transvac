@@ -32,11 +32,11 @@
         End If
         qute_tb.Text = quote_nu.Text
         SuffixTB.Text = quotesfx.Text
-        quote_nu.Visible = True
-        quotesfx.Visible = True
-        idcode.Visible = True
-        accountno.Visible = True
-        DateTimePicker1.Visible = True
+        quote_nu.Visible = False
+        quotesfx.Visible = False
+        idcode.Visible = False
+        accountno.Visible = False
+        DateTimePicker1.Visible = False
     End Sub
     Private Function TranmemoTableAdapter() As Object
         Throw New NotImplementedException()
@@ -129,6 +129,11 @@
             line.Cells(7).Value = SuffixTB.Text
         Next
         DataGridView1.DataSource.endedit()
+        qty_tb.Text = ""
+        partno_tb.Text = ""
+        descrip_tb.Text = ""
+        unitprice_tb.Text = ""
+        Ext_tb.Text = ""
     End Sub
     Private Sub remline_but_Click(sender As Object, e As EventArgs) Handles remline_but.Click
         For Each row As DataGridViewRow In DataGridView1.SelectedRows
