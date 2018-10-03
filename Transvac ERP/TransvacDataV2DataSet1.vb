@@ -70,3 +70,8 @@ Namespace TransvacDataV2DataSet1TableAdapters
     Partial Public Class tran2TableAdapter
     End Class
 End Namespace
+
+Namespace TransvacDataV2DataSet1TableAdapters
+    Partial Public Class quotedetailTableAdapter
+    End Class
+End Namespace
