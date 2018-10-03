@@ -137,6 +137,7 @@ Partial Class StockMovement
         Me.TableAdapterManager.trandescTableAdapter = Nothing
         Me.TableAdapterManager.tranmemoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Transvac_ERP.TransvacDataV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usersTableAdapter = Nothing
         '
         'TranbinsDataGridView
         '
@@ -432,7 +433,7 @@ Partial Class StockMovement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1140, 608)
+        Me.ClientSize = New System.Drawing.Size(1140, 615)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)

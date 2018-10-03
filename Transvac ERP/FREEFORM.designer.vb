@@ -39,25 +39,28 @@ Partial Class FREEFORM
         '
         Me.alighcb.FormattingEnabled = True
         Me.alighcb.Items.AddRange(New Object() {"Centre", "Left", "Right"})
-        Me.alighcb.Location = New System.Drawing.Point(236, 335)
+        Me.alighcb.Location = New System.Drawing.Point(178, 268)
+        Me.alighcb.Margin = New System.Windows.Forms.Padding(2)
         Me.alighcb.Name = "alighcb"
-        Me.alighcb.Size = New System.Drawing.Size(85, 24)
+        Me.alighcb.Size = New System.Drawing.Size(65, 21)
         Me.alighcb.TabIndex = 12
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(262, 288)
+        Me.Label1.Location = New System.Drawing.Point(221, 224)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 17)
+        Me.Label1.Size = New System.Drawing.Size(83, 13)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "NO OF LABLES"
         '
         'nolabtb
         '
-        Me.nolabtb.Location = New System.Drawing.Point(376, 285)
+        Me.nolabtb.Location = New System.Drawing.Point(307, 222)
+        Me.nolabtb.Margin = New System.Windows.Forms.Padding(2)
         Me.nolabtb.Name = "nolabtb"
-        Me.nolabtb.Size = New System.Drawing.Size(63, 22)
+        Me.nolabtb.Size = New System.Drawing.Size(48, 20)
         Me.nolabtb.TabIndex = 14
         '
         'PrintPreviewDialog1
@@ -76,46 +79,50 @@ Partial Class FREEFORM
         '
         'printbut
         '
-        Me.printbut.Location = New System.Drawing.Point(364, 374)
+        Me.printbut.Location = New System.Drawing.Point(272, 319)
+        Me.printbut.Margin = New System.Windows.Forms.Padding(2)
         Me.printbut.Name = "printbut"
-        Me.printbut.Size = New System.Drawing.Size(75, 23)
+        Me.printbut.Size = New System.Drawing.Size(83, 26)
         Me.printbut.TabIndex = 15
         Me.printbut.Text = "PRINT"
         Me.printbut.UseVisualStyleBackColor = True
         '
         'printpwbut
         '
-        Me.printpwbut.Location = New System.Drawing.Point(327, 330)
+        Me.printpwbut.Location = New System.Drawing.Point(247, 268)
+        Me.printpwbut.Margin = New System.Windows.Forms.Padding(2)
         Me.printpwbut.Name = "printpwbut"
-        Me.printpwbut.Size = New System.Drawing.Size(125, 29)
+        Me.printpwbut.Size = New System.Drawing.Size(110, 25)
         Me.printpwbut.TabIndex = 16
         Me.printpwbut.Text = "PRINT PREVIEW"
         Me.printpwbut.UseVisualStyleBackColor = True
         '
         'frrtb
         '
-        Me.frrtb.Location = New System.Drawing.Point(50, 36)
+        Me.frrtb.Location = New System.Drawing.Point(38, 29)
+        Me.frrtb.Margin = New System.Windows.Forms.Padding(2)
         Me.frrtb.Multiline = True
         Me.frrtb.Name = "frrtb"
-        Me.frrtb.Size = New System.Drawing.Size(389, 217)
+        Me.frrtb.Size = New System.Drawing.Size(317, 177)
         Me.frrtb.TabIndex = 17
         Me.frrtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(50, 364)
+        Me.Button1.Location = New System.Drawing.Point(38, 319)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 33)
+        Me.Button1.Size = New System.Drawing.Size(97, 26)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "MAIN MENU"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'FREEFORM
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PowderBlue
-        Me.ClientSize = New System.Drawing.Size(486, 438)
+        Me.ClientSize = New System.Drawing.Size(390, 367)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.frrtb)
         Me.Controls.Add(Me.printpwbut)
@@ -123,6 +130,7 @@ Partial Class FREEFORM
         Me.Controls.Add(Me.nolabtb)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.alighcb)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FREEFORM"
         Me.Text = "FREEFORM"
         Me.ResumeLayout(False)

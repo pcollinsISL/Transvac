@@ -81,13 +81,14 @@ Partial Class enqmain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(265, 283)
+        Me.ClientSize = New System.Drawing.Size(265, 295)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnneweq)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnexit)
         Me.Controls.Add(Me.btnfindeq)
         Me.Name = "enqmain"
+        Me.Opacity = 0.75R
         Me.Text = "Enquiries"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

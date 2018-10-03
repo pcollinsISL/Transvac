@@ -172,6 +172,7 @@ Partial Class Builddraftinv
         '
         'ListView2
         '
+        Me.ListView2.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.ListView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView2.Location = New System.Drawing.Point(0, 0)
         Me.ListView2.Name = "ListView2"
@@ -678,7 +679,7 @@ Partial Class Builddraftinv
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(850, 662)
+        Me.Button1.Location = New System.Drawing.Point(852, 657)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 23)
         Me.Button1.TabIndex = 182
